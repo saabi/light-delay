@@ -14,8 +14,12 @@ Light Delay intends to generate video on **Seedance 2.5** (Higgsfield). ByteDanc
 layer for those jobs.
 
 Treat published 2.5 numbers (duration, resolution, reference budget, start/end-frame roles) as
-**surface-dependent**. The repo snapshot in `provider-capabilities.json` is still `provisional` /
-`executable: false`. Confirm on the live Higgsfield catalog / MCP tools before a paid run.
+**surface-dependent**. The repo snapshot `provider:higgsfield:seedance-2.5:2026-08-29` is
+`executable: true` with `confidence: provisional` after the 2026-09-14 MCP catalog check.
+**Resolution policy:** always pass **`480p`** (`preferredResolution` on that snapshot / run
+`parameters.resolution`). The live MCP catalog defaults to **720p** if omitted — do not drift.
+Paid submit still requires `get_cost` plus human confirmation, and grouped stretch jobs also need
+`videoPromptFreeze.status: approved`.
 
 This document is **not** a substitute for preflight. MCP/CLI always spend credits even if web
 Unlimited is on (`docs/technical/HIGGSFIELD_MCP.md`).
@@ -83,8 +87,21 @@ actually fear (identity swap, burned-in captions, extra characters, wrong gravit
 
 ## 4. Map every reference, then stop adding files
 
+### Identity is a separate video input
+
+Ordered keyframes establish composition and blocking, but they are not a reliable
+speaker-identity map for a dialogue job. For every character who speaks anywhere in
+a grouped stretch, attach that character's current individual model sheet and map it
+to the canonical entity ID in the prompt (`@Image`); attach the corresponding approved
+voice sample as `@Audio`. The prompt must explicitly bind each cue to both references.
+Do not rely on filenames, keyframes, or the model's inference to decide which face
+delivers a line. Mute/off-frame characters do not receive identity or voice refs.
+
 2.5 documented ceilings (ByteDance / fal, 2026-08-07): up to **30 images**, **10 videos**, **10
-audio** (50 slots). Recommended stability is much smaller: **1–8 image-defined subjects**, **1–5**
+audio** (50 slots). **Hard cap:** combined duration of all audio references (and separately all
+video references) must stay **≤ 30 s**. Full ~12 s voice WAVs × four speakers ≈ 48 s → Higgsfield
+MCP `generate_video` returns **422**; truncate each sample to ~5 s (or fewer speakers) before
+upload. Recommended stability is much smaller: **1–8 image-defined subjects**, **1–5**
 video/audio subjects, **5–10 s** per motion-reference clip. Capacity is not a target.
 
 Higgsfield 2.0 snapshot in this repo: 9 / 3 / 3 / 12 total
@@ -123,6 +140,14 @@ real person). MCP/CLI do not read chat attachments; upload first, then name the 
 (`HIGGSFIELD_MCP.md` §5).
 
 ## 5. Direct time: stages first, timestamps when a beat must land
+
+For a multi-shot stretch, describe motion as a continuous state transition. Each stage
+must begin from the previous stage's settled end state and preserve momentum, screen
+direction, eyelines, camera axis, gravity/thrust, lighting, wardrobe, and carried props.
+State the camera move and the character action that changes between stages; do not let
+the model reset blocking, teleport a subject, or invent an unmotivated transition.
+If a job is partitioned, the next run starts from the prior segment's accepted end state
+and its first keyframe.
 
 Integer-second markers work in 2.5: `[0s]`, `[4s]`, or contiguous ranges `0–3 seconds, 3–7 seconds`.
 Start at zero, stay chronological, leave **no unexplained gaps**. Timestamps are pacing guidance, not
@@ -166,7 +191,9 @@ text and approved voice-sample `@Audio` references. The still-only scrub
 state, etc.) remains explicit in the prompt the same way as stills: the model does not inherit
 scene `setting.continuity` (`DIALOGUE_AND_PROMPT_LESSONS.md` §2c).
 
-2.5 generates native audio in the same pass. Optional explicit markup in some BytePlus/fal materials:
+2.5 generates native audio in the same pass. Light Delay MCP jobs pass `generate_audio: true` by
+default. Set `false` only when the author asks for a silent clip. Optional explicit markup in some
+BytePlus/fal materials:
 
 | Content | Markup | Example |
 | --- | --- | --- |
@@ -205,6 +232,9 @@ Attach:
   in that shot or grouped run.
 - One sample per speaker unless a second approved sample is required for a distinct register
   (do not dump the whole variant array “for luck”).
+- Keep **combined** voice-sample duration **≤ 30 s** for the job (Seedance hard cap). Prefer ~3–5 s
+  of clean timbre per speaker when four or more voices attach; do not upload full 12 s bank files
+  as-is.
 
 Do **not** attach:
 
@@ -338,7 +368,7 @@ MCP/CLI always charge.
 - English dialogue matches the cue; trailer omissions are intact.
 - Audio refs are approved `sampleAssetIds` for speakers in the job only — no generated cue WAVs.
 - Consecutive same-location, same-cast shots under 30 s are one job unless a split is required.
-- `compiledPrompt` stays `null` until editorial freeze unless this session explicitly overrides.
+- `compiledPrompt` stays `null` until that stretch's `videoPromptFreeze` is approved (and Seedance is executable). Preview handoffs never authorize submit.
 
 ## 11. Worked skeleton (engineering interior, non-spoiler)
 

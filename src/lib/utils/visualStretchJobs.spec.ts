@@ -467,6 +467,73 @@ describe('buildVisualStretchJobs integration', () => {
 				.every((j) => (j.durationMs ?? 0) <= EFFECTIVE_CEILING_MS)
 		).toBe(true);
 	});
+
+	function freezeScript(freeze: boolean) {
+		const file = makeStretchScript({ referenceCount: 0, withKeyframes: true });
+		const stretch = file.visualStretches[0];
+		stretch.physics = { en: '1g while thrusting' };
+		stretch.lighting = { en: 'bridge practicals' };
+		stretch.sharedDescription = { en: 'continuous bridge coverage' };
+		stretch.members = stretch.members.map((member: { shotId: string; order: number; takeScope: string }, index: number) => ({
+			...member,
+			startState: { en: `start ${index + 1}` },
+			event: { en: `event ${index + 1}` },
+			endState: { en: `end ${index + 1}` }
+		}));
+		if (freeze) {
+			stretch.videoPromptFreeze = {
+				status: 'approved',
+				approvedAt: '2026-09-14',
+				source: 'tmp/review-of-generated-stills.md'
+			};
+		}
+		for (const shot of file.shots) {
+			shot.description = { en: 'Voss holds the frame.' };
+			shot.camera = { movementDescription: { en: 'locked coverage' } };
+		}
+		return file;
+	}
+
+	it('keeps freeze and execution gates when neither is cleared', () => {
+		const jobs = buildVisualStretchJobs(freezeScript(false), {
+			maxSegmentMs: EFFECTIVE_CEILING_MS,
+			stillProvider: stillProviderFixture,
+			videoProvider: videoProviderFixture
+		});
+		const video = jobs.find((j) => j.medium === 'video');
+		expect(video?.blockers).toEqual(
+			expect.arrayContaining(['editorial_prompt_freeze_not_approved', 'seedance_execution_gated'])
+		);
+		expect(isStretchJobRunnable(video)).toBe(false);
+		expect(video?.compiledPrompt).toBeNull();
+	});
+
+	it('keeps seedance_execution_gated when freeze is approved but the snapshot is not executable', () => {
+		const jobs = buildVisualStretchJobs(freezeScript(true), {
+			maxSegmentMs: EFFECTIVE_CEILING_MS,
+			stillProvider: stillProviderFixture,
+			videoProvider: { ...videoProviderFixture, executable: false }
+		});
+		const video = jobs.find((j) => j.medium === 'video');
+		expect(video?.blockers).toContain('seedance_execution_gated');
+		expect(video?.blockers).not.toContain('editorial_prompt_freeze_not_approved');
+		expect(isStretchJobRunnable(video)).toBe(false);
+		expect(video?.compiledPrompt).toBeNull();
+	});
+
+	it('compiles a runnable video job when freeze is approved and Seedance is executable', () => {
+		const jobs = buildVisualStretchJobs(freezeScript(true), {
+			maxSegmentMs: EFFECTIVE_CEILING_MS,
+			stillProvider: stillProviderFixture,
+			videoProvider: { ...videoProviderFixture, executable: true }
+		});
+		const video = jobs.find((j) => j.medium === 'video');
+		expect(video?.blockers).toEqual([]);
+		expect(isStretchJobRunnable(video)).toBe(true);
+		expect(typeof video?.compiledPrompt).toBe('string');
+		expect(video?.compiledPrompt).toContain('style:');
+		expect(video?.compiledPrompt).toContain('physics: 1g while thrusting');
+	});
 });
 
 describe('visual stretch digest agreement', () => {

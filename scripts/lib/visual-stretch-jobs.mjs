@@ -11,6 +11,7 @@
  */
 
 import { checkReferenceBudget } from './generation-planning.mjs';
+import { compileStretchVideoPromptForPlan } from './visual-stretch-video-prompt.mjs';
 import {
 	collectStretchVisibleEntityIds,
 	evaluateReferenceBudget,
@@ -421,6 +422,98 @@ export function isStretchJobRunnable(job) {
 }
 
 /**
+ * @param {{ videoPromptFreeze?: { status?: string } } | null | undefined} stretch
+ */
+export function isVideoPromptFreezeApproved(stretch) {
+	return stretch?.videoPromptFreeze?.status === 'approved';
+}
+
+/**
+ * Authored identity sheets stay attached for Seedance speaker mapping even when
+ * keyframes already cover those entities in the budget-oriented effective list.
+ * @param {string[]} [collectedEffectiveIds]
+ * @param {string[]} [authoredVideoIds]
+ */
+export function mergeAuthoredIdentityVideoAssetIds(collectedEffectiveIds = [], authoredVideoIds = []) {
+	return [...new Set([...(collectedEffectiveIds || []), ...(authoredVideoIds || [])])];
+}
+
+/**
+ * @param {string} assetId
+ * @param {Map<string, any> | undefined} assetsById
+ * @param {Map<string, string[]> | undefined} entityReferenceIds
+ * @returns {string[]}
+ */
+export function entityIdsForAsset(assetId, assetsById, entityReferenceIds) {
+	if (!assetId) return [];
+	const ids = new Set();
+	const asset = assetsById?.get?.(assetId);
+	for (const id of asset?.metadata?.entityIds || []) {
+		if (id) ids.add(id);
+	}
+	if (asset?.metadata?.characterId) ids.add(asset.metadata.characterId);
+	if (entityReferenceIds) {
+		for (const [entityId, assetIds] of entityReferenceIds.entries()) {
+			if ((assetIds || []).includes(assetId)) ids.add(entityId);
+		}
+	}
+	return [...ids];
+}
+
+/**
+ * Ordered compile/handoff refs: keyframes → identity/visual extras → voice samples.
+ * @param {{
+ *   memberInputs?: Array<{ order?: number, keyframeAssetId?: string }>,
+ *   effectiveVisualIds?: string[],
+ *   voiceSampleAssetIds?: string[],
+ *   assetsById?: Map<string, any>,
+ *   entityReferenceIds?: Map<string, string[]>
+ * }} args
+ */
+export function buildVideoPromptReferences(args) {
+	const {
+		memberInputs = [],
+		effectiveVisualIds = [],
+		voiceSampleAssetIds = [],
+		assetsById,
+		entityReferenceIds
+	} = args;
+	/** @type {Array<{ role: string, assetId: string, id: string, kind: string, entityIds: string[] }>} */
+	const refs = [];
+	for (const mi of [...memberInputs].sort(
+		/** @param {any} a @param {any} b */ (a, b) => (a.order ?? 0) - (b.order ?? 0)
+	)) {
+		if (!mi.keyframeAssetId) continue;
+		refs.push({
+			role: 'keyframe',
+			assetId: mi.keyframeAssetId,
+			id: mi.keyframeAssetId,
+			kind: 'image',
+			entityIds: entityIdsForAsset(mi.keyframeAssetId, assetsById, entityReferenceIds)
+		});
+	}
+	for (const id of effectiveVisualIds) {
+		refs.push({
+			role: 'visual_reference',
+			assetId: id,
+			id,
+			kind: 'image',
+			entityIds: entityIdsForAsset(id, assetsById, entityReferenceIds)
+		});
+	}
+	for (const id of voiceSampleAssetIds) {
+		refs.push({
+			role: 'voice_sample',
+			assetId: id,
+			id,
+			kind: 'audio',
+			entityIds: entityIdsForAsset(id, assetsById, entityReferenceIds)
+		});
+	}
+	return refs;
+}
+
+/**
  * @param {Omit<VisualStretchJob, 'runnable' | 'blockers'> & { blockers?: string[] }} job
  * @param {{ maxOutputsPerRequest?: number | null }} [opts]
  * @returns {VisualStretchJob}
@@ -466,7 +559,9 @@ function finalizeStretchJob(job, opts = {}) {
  *   maxOutputsPerRequest?: number | null,
  *   takesById?: Map<string, any>,
  *   assetsById?: Map<string, any>,
- *   manifestById?: Map<string, any>
+ *   manifestById?: Map<string, any>,
+ *   videoProvider?: { id?: string, executable?: boolean, limits?: any },
+ *   script?: { shots?: any[], cues?: any[] }
  * }} [opts]
  * @returns {VisualStretchJob[]}
  */
@@ -542,14 +637,13 @@ export function partitionStretchVideoJobs(
 			assetsById: opts.assetsById
 		});
 		/** @type {string[]} */
-		const blockers = [
-			'editorial_prompt_freeze_not_approved',
-			'seedance_execution_gated',
-			...collected.blockers,
-			...evaluated.blockers,
-			...gate.blockers,
-			...extraBlockers
-		];
+		const blockers = [...collected.blockers, ...evaluated.blockers, ...gate.blockers, ...extraBlockers];
+		if (!isVideoPromptFreezeApproved(stretch)) {
+			blockers.push('editorial_prompt_freeze_not_approved');
+		}
+		if (opts.videoProvider?.executable !== true) {
+			blockers.push('seedance_execution_gated');
+		}
 		for (const mi of memberInputs) {
 			if (!mi.keyframeAssetId) blockers.push(`missing_keyframe:${mi.shotId}`);
 		}
@@ -557,6 +651,30 @@ export function partitionStretchVideoJobs(
 			blockers.push('member_exceeds_max_duration');
 		}
 		if (!providerSnapshotId) blockers.push('missing_provider_snapshot');
+		const uniqueSoFar = [...new Set(blockers)];
+		let compiledPrompt = null;
+		if (uniqueSoFar.length === 0) {
+			const identityVisualIds = mergeAuthoredIdentityVideoAssetIds(
+				effectiveVideoReferenceAssetIds,
+				stretch.videoReferenceAssetIds || []
+			);
+			const compileRefs = buildVideoPromptReferences({
+				memberInputs,
+				effectiveVisualIds: identityVisualIds,
+				voiceSampleAssetIds: collected.voiceSampleAssetIds,
+				assetsById: opts.assetsById,
+				entityReferenceIds
+			});
+			const promptResult = compileStretchVideoPromptForPlan({
+				stretch,
+				job: { memberInputs, blockers: uniqueSoFar },
+				script: opts.script || { shots: [...shotsById.values()], cues: [...cuesById.values()] },
+				effectiveReferences: compileRefs,
+				blockers: uniqueSoFar
+			});
+			blockers.push(...promptResult.blockers);
+			compiledPrompt = promptResult.compiled;
+		}
 		/** @type {Record<string, unknown>} */
 		const videoFields = {
 			stillReferenceAssetIds,
@@ -570,6 +688,7 @@ export function partitionStretchVideoJobs(
 		if (collected.videoReferencePolicy === 'explicit') {
 			videoFields.videoReferenceAssetIds = stretch.videoReferenceAssetIds || [];
 		}
+		const uniqueBlockers = [...new Set(blockers)];
 		return finalizeStretchJob({
 			id: `${stillJobId}:video-${part}`,
 			stretchId: stretch.id,
@@ -582,9 +701,9 @@ export function partitionStretchVideoJobs(
 			durationMs,
 			memberInputs,
 			...videoFields,
-			compiledPrompt: null,
+			compiledPrompt: uniqueBlockers.length === 0 ? compiledPrompt : null,
 			outputs: [{ order: 1, artifact: 'video' }],
-			blockers,
+			blockers: uniqueBlockers,
 			coherenceException: false,
 			...(gate.generationGate ? { generationGate: gate.generationGate } : {})
 		}, { maxOutputsPerRequest: opts.maxOutputsPerRequest });
@@ -669,8 +788,8 @@ export function buildVisualStretchJobs(
 			medium: 'still'
 		});
 		// Still-side editorial prompt freeze lifted for this cut per explicit session authorization
-		// (docs/production/AGENT_GENERATION_BRIEF.md's own "unless told otherwise" exception) —
-		// video/Seedance jobs keep their separate 'seedance_execution_gated' hold untouched.
+		// (docs/production/AGENT_GENERATION_BRIEF.md). Video jobs gate on stretch.videoPromptFreeze
+		// and the Seedance snapshot's executable flag instead.
 		/** @type {string[]} */
 		const blockers = [...stretchBlockingBlockers(stretch), ...gate.blockers];
 
@@ -858,7 +977,9 @@ export function buildVisualStretchJobs(
 					maxOutputsPerRequest: videoProvider?.limits?.maxOutputsPerRequest,
 					takesById,
 					assetsById,
-					manifestById
+					manifestById,
+					videoProvider,
+					script: file
 				}
 			);
 			jobs.push(...videoJobs);

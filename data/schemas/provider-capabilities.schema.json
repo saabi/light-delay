@@ -24,6 +24,10 @@
           "capturedAt": { "type": "string", "format": "date" },
           "confidence": { "enum": ["verified", "provisional", "unknown"] },
           "executable": { "type": "boolean" },
+          "preferredResolution": {
+            "type": "string",
+            "description": "Default MCP/API resolution for this video snapshot when emitting run files (e.g. 480p). Seedance 2.5 catalog default is 720p; Light Delay Festival smoke uses 480p."
+          },
           "limits": {
             "type": "object",
             "required": ["maxImages", "maxVideos", "maxAudios", "maxTotalReferences"],

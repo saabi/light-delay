@@ -16,7 +16,8 @@ is a disposable compiled artifact (see `DIALOGUE_AND_PROMPT_LESSONS.md` §1). Ea
 **stateless** — restate gravity and other load-bearing visual state in the prompt (or via attached
 refs); scene continuity is not visible to the image model (§2c). Still prompts must not paste spoken
 dialogue (`npm run scrub:still-prompts:check`); Seedance/video prompts intentionally include cue text
-and voice-sample `@Audio` refs instead.
+and voice-sample `@Audio` refs instead. Higgsfield Seedance jobs pass `generate_audio: true` (native
+sound) unless the author asks for a silent clip.
 
 ## 1. Authority chain (read in this order)
 
@@ -159,15 +160,16 @@ and project output paths. The manifest does not authorize a provider run.
 
 - **No `storyboard.schema.json` / no standalone "storyboard JSON" product.** It lives today in
   `Shot.composition` + PNG stills + plan `artifacts.animaticStill`.
-- **`run.schema.json` + preview handoffs** under `reports/runs/` (`npm run handoff:visual-stretch`). Tracked results: `data/production/runs/*-results.json` (`visual-stretch-result.schema.json`). Preview/`nonExecutable` runs must never be submitted; paid smoke needs a future freeze. Runbook: `HIGGSFIELD_MCP.md` §8b.
+- **`run.schema.json` + stretch handoffs** under `reports/runs/` (`npm run handoff:visual-stretch`). Ready runs (`status: ready`, `nonExecutable: false`) require a per-stretch `videoPromptFreeze.status: approved`, a compiled video prompt, and Seedance `executable: true`. Preview/`--allow-preview-prompt` runs must never be submitted. Tracked results: `data/production/runs/*-results.json` (`visual-stretch-result.schema.json`). Runbook: `HIGGSFIELD_MCP.md` §8b.
 - **`scripts/build-generation-plans.mjs`** regenerates deprecated cuts plus `light-delay-festival-master` (includes `visualStretchJobs` with pinned `providerSnapshotId`).
 - **`compiledPrompt` must stay `null`** on every real plan until editorial freeze for that cut,
   per `docs/ARQUITECTURA_GENERACION.md` — unless this conversation explicitly says otherwise.
-  Exercised once, session-scoped: on 2026-09-14 the author explicitly lifted this for
-  Festival-master's **still** visual-stretch jobs only (`compiledPrompt` now populated, all 29
-  `runnable: true`); video/Seedance jobs and per-shot `shots[]` blockers were left untouched. This
-  does not change the default rule for other cuts or for a fresh Festival-master freeze decision —
-  treat each instance as needing its own explicit instruction, not standing authorization.
+  Exercised: on 2026-09-14 the author lifted this for Festival-master **still** visual-stretch jobs
+  (all 29 `runnable: true`). Later the same day, `tmp/review-of-generated-stills.md` **OK to render**
+  approved a **per-stretch video freeze** on 11 Festival-master stretches only (`videoPromptFreeze`).
+  That is not a blanket Festival-master video lift: unlisted stretches keep
+  `editorial_prompt_freeze_not_approved`. Per-shot `shots[]` video segments stay untouched.
+  Treat each instance as needing its own explicit instruction.
 - **No catalog entries yet for the bomb/vault/jammer/wrist device.** `objects.json` has no
   entry for Proxima's geophysical impulse package, its radiological vault, Harlan's jammer, or his
   wrist device — all central to Festival-master's F03–F05, F09–F10 beats. `TODO.md` already flags
@@ -176,10 +178,15 @@ and project output paths. The manifest does not authorize a provider run.
 - **Result manifests record remote upload handles** per `assetId` when an MCP smoke completes; there is still no general asset↔remote registry beyond that.
 - **`shots_index.json` / `_shot_template.blend`** are documented in `ANIMATION_WORKFLOW.md` but
   incomplete.
-- **Seedance 2.5 stays `provisional` / `executable: false`** in `provider-capabilities.json` until
-  its catalog/CLI/MCP contract is confirmed against a live account.
+- **Seedance 2.5** snapshot `provider:higgsfield:seedance-2.5:2026-08-29` is `executable: true` with
+  `confidence: provisional` after the 2026-09-14 MCP catalog confirmation. **Always submit at
+  `480p`** (`preferredResolution` / run `parameters.resolution`); the MCP model default is 720p if
+  omitted. Paid submit still requires `generate_video` `get_cost: true` plus human confirmation.
+  Grouped video jobs also need `VisualStretch.videoPromptFreeze.status: approved`.
 - **`higgsfield-uploads/`** still indexes legacy cast sheets; `prepare:higgsfield` also stages stretch refs under `stretch/` in **handoff order** (keyframe slots → effective video visuals → voice), not arbitrary Set insertion order.
 - **Stretch still vs video refs:** keep `VisualStretch.referenceAssetIds` complete for still/keyframe jobs; optional `videoReferenceAssetIds` is a separate tri-state list for Seedance extras (`VISUAL_STRETCH_PIPELINE.md`, `SEEDANCE_PROMPTING.md` §6.2). Do not invent pilot `videoReferenceAssetIds` on Festival-master without author instruction.
+- **Seedance speaker identity:** ordered keyframes establish blocking, not reliable speaker identity. For every speaker in a grouped run, retain the current individual character sheet in the video handoff and map it to the canonical entity ID; map the matching approved voice sample as `@Audio`. The compiler must bind each dialogue cue to both references and report an unmapped identity/voice blocker rather than guessing.
+- **Stretch motion continuity:** every stage starts from the prior settled end state and preserves momentum, eyelines, screen direction, camera axis, gravity/thrust, lighting, wardrobe, and carried props. Partitioned jobs must carry the previous segment's accepted end state into the next prompt; no teleporting or reset blocking.
 - **Generation readiness UI:** `/generation/image|video|audio/[scriptId]` (default Festival-master) is read-only. **Prompt ready** is compiled prompt text (or **Text ready** for dialogue). **Refs present** is catalog/file presence; **Refs ready** requires those refs to be `current` (stale/review/regeneration refs are not generation-safe). **Can generate** means a replacement can be generated (prompt ready + refs ready + no blockers); existing output `needs_review` / `needs_regeneration` does not block it. Audio `missing_voice_sample` is a generation blocker even when dialogue text is ready. Handoff remains CLI/`reports/runs`.
 
 ## 7. Dialogue tone pass (harsh → human/colloquial)
@@ -297,7 +304,7 @@ negative: <what must not appear>
 > Do not submit anything to Higgsfield. Do not regenerate existing PNGs unless explicitly ordered.
 > Skip takes with `productionGate.status` of `deferred` or `blocked` (and any stretch job that lists them in `generationGate.takeIds`) until the author clears the gate — do not treat that as `imageStatus` debt. Respect the gate's `medium`: a `video`-scoped hold (`video_deferred_external_reference`) skips only Seedance/video work; generate the still/keyframe normally. `needs_regeneration` never blocks a still.
 > Never remove a stretch `referenceAssetIds` entry because video will depict the same subject; author Seedance-only static refs on optional `videoReferenceAssetIds` (absent = fallback from still list; present including `[]` = explicit). Generate keyframes from the full still list first; compile video refs only after keyframes are registered; refuse runnable video while `missing_keyframe:*` or `uncovered_video_entity:*` remains (`VISUAL_STRETCH_PIPELINE.md`). Refuse `reference_budget:*` without trimming; use pack `metadata.entityIds` for multi-entity still coverage and explicit video extras. Fallback Seedance jobs do **not** inherit `reference_pack_required` from keyframe panels lacking `entityIds` — read `keyframeCoveredEntityIds` / `uncoveredVideoEntityIds`. `reference_pack_required` vs `reference_consolidation_required` are distinct remediations.
-> Keep `compiledPrompt: null` until editorial freeze unless told otherwise for this session.
+> Keep `compiledPrompt: null` on video jobs until that stretch's `videoPromptFreeze` is approved (Festival-master still jobs were lifted 2026-09-14; OK stretches listed in `tmp/review-of-generated-stills.md` are frozen for Seedance). Do not submit ready runs until a human confirms `get_cost`.
 > When rewriting dialogue for tone, edit English only and consult that speaker's voice-profile
 > `dialogueStyle` first; never fix tone by adding exposition.
 > Read `docs/ARQUITECTURA_GENERACION.md`, `docs/technical/HIGGSFIELD_MCP.md`, and

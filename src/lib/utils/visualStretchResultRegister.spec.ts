@@ -60,6 +60,36 @@ describe('compileStretchVideoPrompt dialogue and camera', () => {
 		expect(result.preview).toContain('Slow tracking left across the table.');
 		expect(result.preview).not.toContain('No dialogue cues in this bucket');
 	});
+
+	it('binds spoken cues to character image and voice references and carries motion state', () => {
+		const result = compileStretchVideoPrompt({
+			stretch: {
+				id: 'stretch:x',
+				presentCharacterIds: ['character:zao'],
+				members: [
+					{ shotId: 'shot-a', order: 1, endState: { en: 'Zao settles at the console.' } },
+					{ shotId: 'shot-b', order: 2, startState: { en: 'Zao remains at the console.' }, event: { en: 'Zao turns.' } }
+				]
+			},
+			job: { memberInputs: [{ shotId: 'shot-a' }, { shotId: 'shot-b' }] },
+			script: {
+				shots: [
+					{ id: 'shot-a', durationMs: 4000, cuePlacements: [{ cueId: 'cue-1', atMs: 500 }] },
+					{ id: 'shot-b', durationMs: 4000, cuePlacements: [] }
+				],
+				cues: [{ id: 'cue-1', type: 'dialogue', speakerId: 'character:zao', content: { variants: { en: { spokenText: 'I see it.' } } } }]
+			},
+			effectiveReferences: [
+				{ role: 'visual_reference', assetId: 'asset:character-zao-sheet', kind: 'image', entityIds: ['character:zao'] },
+				{ role: 'voice_sample', assetId: 'asset:voice-ref-en-zao', kind: 'audio', entityIds: ['character:zao'] }
+			]
+		});
+		expect(result.preview).toContain('asset:character-zao-sheet');
+		expect(result.preview).toContain('asset:voice-ref-en-zao');
+		expect(result.preview).toContain('continue from prior settled state');
+		expect(result.blockers).not.toContain('unmapped_dialogue_character:character:zao');
+		expect(result.blockers).not.toContain('unmapped_dialogue_voice:character:zao');
+	});
 });
 
 describe('run schema validation', () => {

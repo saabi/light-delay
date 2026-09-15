@@ -33,7 +33,8 @@
       "limitSurface": ["api", "mcp", "ui", "model"],
       "capturedAt": "2026-09-13",
       "confidence": "provisional",
-      "executable": false,
+      "executable": true,
+      "preferredResolution": "480p",
       "limits": {
         "maxImages": null,
         "maxVideos": null,
@@ -45,8 +46,8 @@
       },
       "source": "https://higgsfield.ai/seedance-2.5",
       "notes": {
-        "es": "Techo de generación única: 30 s (FAQ Higgsfield; igual en 480p/720p/1080p). Más allá requiere extensión o corte. Concurrencia por cuenta/plan; preflight debe anotar el techo vivo.",
-        "en": "Single-pass ceiling: 30 s (Higgsfield FAQ; same at 480p/720p/1080p). Longer needs extension or edit. Concurrent slots are account/plan-specific and change (API 400 when hit; Concurrency Boost can raise). Record live concurrency in preflight; maxConcurrentRequests stays null until verified."
+        "es": "Techo de generación única: 30 s (FAQ Higgsfield). preferredResolution 480p (el catálogo MCP por defecto es 720p; Light Delay no debe derivar). Catálogo MCP confirmado 2026-09-14; executable true para tramos con videoPromptFreeze approved. Cada envío pagado sigue exigiendo get_cost + confirmación humana. Concurrencia por cuenta/plan; preflight debe anotar el techo vivo.",
+        "en": "Single-pass ceiling: 30 s (Higgsfield FAQ). preferredResolution 480p (MCP catalog default is 720p; Light Delay must pass 480p explicitly). MCP catalog confirmed 2026-09-14; executable true for stretches with videoPromptFreeze approved. Each paid submit still requires get_cost plus human confirmation. Concurrent slots are account/plan-specific and change (API 400 when hit; Concurrency Boost can raise). Record live concurrency in preflight; maxConcurrentRequests stays null until verified."
       }
     },
     {

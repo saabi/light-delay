@@ -1,6 +1,7 @@
 /**
- * Dry-run §8 run-file handoff for a visual-stretch plan job (preview / nonExecutable only).
+ * Dry-run §8 run-file handoff for a visual-stretch plan job (preview or ready).
  * Usage:
+ *   node scripts/handoff-visual-stretch-job.mjs --script light-delay-festival-master --job <jobId>
  *   node scripts/handoff-visual-stretch-job.mjs --script light-delay-festival-master --job <jobId> --allow-preview-prompt
  *   [--medium video|still] [--out reports/runs/<name>.json]
  */

@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { compileStretchVideoPrompt } from '../../../scripts/lib/visual-stretch-video-prompt.mjs';
 import {
 	AGENT_INSTRUCTIONS_PREVIEW,
+	AGENT_INSTRUCTIONS_READY,
 	DEFAULT_SMOKE_EXECUTION_POLICY,
 	buildVisualStretchRunHandoff,
 	stagingFilenameForAssetId
@@ -105,6 +106,8 @@ describe('visual stretch handoff', () => {
 		});
 		expect(run.nonExecutable).toBe(true);
 		expect(run.status).toBe('preview');
+		expect(run.parameters.generateAudio).toBe(true);
+		expect(run.parameters.resolution).toBe('480p');
 		expect(run.executionPolicy).toEqual(DEFAULT_SMOKE_EXECUTION_POLICY);
 		expect(run.agentInstructions).toContain('Do NOT submit');
 		expect(run.agentInstructions).toBe(AGENT_INSTRUCTIONS_PREVIEW);
@@ -134,5 +137,67 @@ describe('visual stretch handoff', () => {
 				mediumFlag: 'still'
 			})
 		).toThrow(/does not match/);
+	});
+
+	const readyJob = {
+		id: 'job:video-1',
+		stretchId: 'stretch:x',
+		medium: 'video',
+		providerSnapshotId: 'provider:higgsfield:seedance-2.5:test',
+		dependsOnStillJobId: 'job:still',
+		durationMs: 5000,
+		memberInputs: [],
+		blockers: [],
+		runnable: true,
+		compiledPrompt:
+			'style: cinematic\nactionTiming: hold\nsubjects: Voss\nlocation: bridge\ncamera: locked\nlighting: practicals\nphysics: 1g\ninterfaceVfx: none\ncontinuity: hold\naudio: ambient\nnegative: no logos'
+	};
+
+	it('emits a ready run when the plan job is frozen, compiled, and executable', () => {
+		const run = buildVisualStretchRunHandoff({
+			root: process.cwd(),
+			script: { shots: [], cues: [], visualStretches: [] },
+			plan: { plan: { scriptId: 'script:x', promptLanguage: 'en' } },
+			job: readyJob,
+			stretch: { id: 'stretch:x', members: [] },
+			snapshot: { provider: 'higgsfield', model: 'seedance-2.5', executable: true },
+			assetsById: new Map(),
+			allowPreviewPrompt: false
+		});
+		expect(run.nonExecutable).toBe(false);
+		expect(run.status).toBe('ready');
+		expect(run.runId).toBe('run:job:video-1:ready');
+		expect(run.prompt.compiledEn).toBe(readyJob.compiledPrompt);
+		expect(run.blockers).toEqual([]);
+		expect(run.agentInstructions).toBe(AGENT_INSTRUCTIONS_READY);
+		expect(run.agentInstructions).toContain('get_cost');
+		expect(run.executionPolicy).toEqual(DEFAULT_SMOKE_EXECUTION_POLICY);
+	});
+
+	it('keeps preview semantics when --allow-preview-prompt is set on a ready job', () => {
+		const run = buildVisualStretchRunHandoff({
+			root: process.cwd(),
+			script: {
+				shots: [{ id: 'shot-a', durationMs: 5000, description: { en: 'A' }, cuePlacements: [] }],
+				cues: [],
+				visualStretches: []
+			},
+			plan: { plan: { scriptId: 'script:x', promptLanguage: 'en' } },
+			job: { ...readyJob, memberInputs: [{ order: 1, shotId: 'shot-a', sourceTakeIds: [] }] },
+			stretch: {
+				id: 'stretch:x',
+				locationId: 'location:bridge',
+				presentCharacterIds: [],
+				physics: { en: '1g' },
+				lighting: { en: 'lit' },
+				members: [{ shotId: 'shot-a', order: 1, event: { en: 'beat' } }]
+			},
+			snapshot: { provider: 'higgsfield', model: 'seedance-2.5', executable: true },
+			assetsById: new Map(),
+			allowPreviewPrompt: true
+		});
+		expect(run.nonExecutable).toBe(true);
+		expect(run.status).toBe('preview');
+		expect(run.agentInstructions).toBe(AGENT_INSTRUCTIONS_PREVIEW);
 	});
 });

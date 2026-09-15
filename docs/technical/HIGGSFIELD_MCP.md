@@ -134,19 +134,21 @@ Seedance 2.5 figura con `maxDurationMs: 30000` en el mismo archivo; el snapshot 
 
 ---
 
-## 6. Superficie de herramientas (inferida; verificar con cuenta)
+## 6. Superficie de herramientas (verificada 2026-09-14)
 
-Higgsfield **no publica** un OpenAPI completo del MCP hospedado. La ayuda describe **capacidades**; blogs y servidores comunitarios agrupan herramientas así:
+Catálogo vivo tras OAuth en Cursor: [`data/production/higgsfield-mcp-catalog.snapshot.json`](../../data/production/higgsfield-mcp-catalog.snapshot.json). El servidor oficial sí publica nombres de tools al cliente MCP; no usar wrappers comunitarios.
 
-| Bucket | Comportamiento típico | Parámetros habituales (comunidad / blogs) |
-| --- | --- | --- |
-| Imagen | Síncrono o casi inmediato | `prompt`, `model`, `aspect_ratio`, referencias, calidad/resolución |
-| Video | **Asíncrono** (submit → poll → URL) | `prompt`, `model`, `duration`, `aspect_ratio`, `resolution`, `input_files` / `start_image` |
-| Marketing presets | Workflow acotado | URL o fotos de producto, preset (UGC, unboxing, etc.) |
-| Soul / personaje | Entrenar + reutilizar ID | fotos de referencia, nombre |
-| Historial / saldo | Lectura | — |
+| Bucket | Tools oficiales |
+| --- | --- |
+| Generación | `generate_image`, `generate_video`, `generate_audio` (+ `*_batch`, `jobs_wait`, `job_status`, `show_generation_by_ids`) |
+| Coste / saldo | `generate_video` / `generate_image` con `get_cost: true` (no envía job); `balance`; `transactions` |
+| Modelos | `models_explore` (`list` / `search` / `get` / `recommend`) |
+| Referencias | `media_upload_widget` (archivos locales; no adjuntar al chat); `media_import_url`; `show_medias`; `show_characters`; `show_reference_elements` |
+| Cuenta | `list_workspaces`, `select_workspace` |
 
-Nombres citados en wrappers **no oficiales** (solo referencia): `generate_image`, `generate_video`, `get_generation_status`, `create_character`, `list_characters`, `generate_raw`, `list_models`, `account_info`. **No asumir** que el servidor oficial expone los mismos nombres o campos hasta listar tools tras OAuth.
+**Seedance 2.5** (`seedance_2_5`): modos `t2v` / `omni_reference` / `video_edit` / `video_extension`; duración **4–30 s**; resolución `480p` / `720p` / `1080p`. Light Delay pasa **`generate_audio: true`** (sonido nativo) salvo clip mudo pedido por el autor, y **`resolution: 480p`** on every Festival Seedance job (snapshot `preferredResolution`; MCP catalog default is **720p** — never omit). Voice-sample `@Audio` refs: combined duration **≤ 30 s** (truncate long WAVs before upload; 2026-09-14 smoke: four ~12 s samples → MCP **422**, four × 5 s → accepted). Upload real **MP3** bytes when the signed URL expects `audio/mpeg` — do not PUT raw WAV under an `.mp3` key. Preflight 2026-09-14: 8 s, 480p, 16:9, `t2v` = **20 créditos** con audio on u off; sin job. Gallery smoke 23 s / 480p / omni ≈ **57.5 créditos**. Unlimited web **no** es gastable por MCP en esta cuenta.
+
+Nombres antiguos de wrappers no oficiales (`generate_raw`, `account_info`, `list_models`) **no** coinciden con el servidor hospedado.
 
 ### Flujo asíncrono recomendado para el agente ejecutor
 
@@ -206,7 +208,7 @@ Alineado con [`docs/ARQUITECTURA_GENERACION.md`](../ARQUITECTURA_GENERACION.md):
     "aspectRatio": "16:9",
     "durationSeconds": 30,
     "resolution": "1080p",
-    "generateAudio": false
+    "generateAudio": true
   },
   "references": [
     {
@@ -253,7 +255,7 @@ Hard gates:
 | Run artifact | `nonExecutable` | Submit to Higgsfield? |
 | --- | --- | --- |
 | `handoff:visual-stretch --allow-preview-prompt` | `true` | **Never** |
-| Future frozen run (`status: ready`) | `false` | Only after human cost confirmation |
+| Frozen ready run (`status: ready`) | `false` | Only after human cost confirmation |
 | Plan job with `runnable: false` or `generationGate` / `generation_deferred` / `generation_blocked` blockers | — | **Never** (author must clear `Take.productionGate` first; rebuild plan) |
 
 Authoring hold SoT is **`Take.productionGate`** on the script take (`deferred` / `blocked`), not `imageStatus` and not plan-hand-authored fields. Plans/stretch jobs only **derive** `generationGate` + blockers (`docs/production/VISUAL_STRETCH_PIPELINE.md`, `AGENT_GENERATION_BRIEF.md`). Agents must:
@@ -264,7 +266,7 @@ Authoring hold SoT is **`Take.productionGate`** on the script take (`deferred` /
 - Not treat a deferred take as regen debt (`imageStatus`).
 - Not trim stretch `referenceAssetIds` for Seedance; not invent `videoReferenceAssetIds` unless the author authored that tri-state list (`SEEDANCE_PROMPTING.md` §6.2).
 
-Agent steps for a **paid** smoke (after freeze exists):
+Agent steps for a **paid** smoke (after a stretch `videoPromptFreeze` is approved and the plan job is `runnable`):
 
 1. `node scripts/higgsfield-preflight.mjs --probe` — record live model catalog, credits, and **concurrency** (account/plan/model; API returns 400 when concurrent cap is hit; Concurrency Boost can raise it; caps change). Campaign `concurrency` is the project ceiling once verified (`null` until then). Smoke always uses `executionPolicy.maxJobs: 1`.
 2. `npm run prepare:higgsfield` — refresh staging; stretch refs under `higgsfield-uploads/stretch/` in handoff order (keyframes → effective visuals → voice).
@@ -276,7 +278,13 @@ Agent steps for a **paid** smoke (after freeze exists):
 8. Write `data/production/runs/<runId>-results.json` (`visual-stretch-result.schema.json`) with `sourceRunId`, `inputDigest`, `providerJobId` when returned, output hash/duration, upload handles, and `output.repoPath` / sha256 of the downloaded file.
 9. `npm run register:visual-stretch-video -- --from … --run <ready-run.json> [--video …]` — binds the clip at **job** level only; never changes `selectedTakeId`. Requires a `status: ready` / `nonExecutable: false` run whose digests match.
 
-Preview today:
+Ready (frozen, executable plan job):
+
+```bash
+npm run handoff:visual-stretch -- --script light-delay-festival-master --job <videoJobId>
+```
+
+Preview (never submit):
 
 ```bash
 npm run handoff:visual-stretch -- --script light-delay-festival-master --job <videoJobId> --allow-preview-prompt

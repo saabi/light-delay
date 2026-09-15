@@ -851,6 +851,7 @@ combined storyboard sheets. See `docs/production/VISUAL_STRETCH_PIPELINE.md`.
 - `videoReferenceAssetIds` — optional **video-only** static refs (tri-state):
   - **absent** → fallback: video extras derive from `referenceAssetIds` after per-keyframe coverage.
   - **present** (including `[]`) → explicit: video extras come only from this list after coverage.
+- `videoPromptFreeze` — optional per-stretch Seedance freeze. `{ status: "approved", approvedAt, source }` is required before a grouped video job can drop `editorial_prompt_freeze_not_approved` and receive `compiledPrompt`. Still jobs do not read this field.
 - Entity completeness for explicit video lists uses catalog entity sheets (`referenceAssetIds` on
   characters/locations/…); a custom orphan asset may attach but does not cover an entity.
 - Plan jobs expose `stillReferenceAssetIds`, `videoReferencePolicy`, `effectiveVideoReferenceAssetIds`,

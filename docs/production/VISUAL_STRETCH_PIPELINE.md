@@ -65,11 +65,11 @@ Plan job reference fields: `stillReferenceAssetIds` (complete still list, never 
 ### MCP handoff boundary
 
 ```text
-generation plan job → §8 run JSON (preview) → [future freeze → ready] → one MCP smoke → result manifest → job-level register
+generation plan job → §8 run JSON (preview or ready) → one MCP smoke (ready only, after cost confirm) → result manifest → job-level register
 ```
 
 - `npm run handoff:visual-stretch -- --script … --job … --allow-preview-prompt` writes `reports/runs/*.json` with `nonExecutable: true` / `status: preview`. **Never submit preview runs to Higgsfield.**
-- Paid smoke requires a future freeze that sets plan `compiledPrompt`, run `status: ready`, and `nonExecutable: false`, then human cost confirmation.
+- Ready handoff (no preview flag) requires plan `compiledPrompt`, `runnable: true`, stretch `videoPromptFreeze.status: approved`, and Seedance `executable: true`. It writes `status: ready` / `nonExecutable: false`. Human cost confirmation is still required before MCP submit.
 - `executionPolicy.smoke_test` forces `maxJobs: 1` regardless of platform parallel capacity (account concurrency is recorded separately; see `HIGGSFIELD_MCP.md`).
 - Keep the exact run file used for any future submit; do not re-handoff between submit and register (`inputDigest` covers the prompt).
 - After completion: download the generated video from Higgsfield Assets into the repo under `static/` (agreed stretch path), then register with `--run` pointing at the exact ready run file used for submit. Freeze must omit null keyframe slots from executable `references[]` while keeping `missing_keyframe:*` blockers until panels exist.
@@ -86,6 +86,7 @@ Reuse `imageStatus`: sheet `needs_review` after register; panel candidates `need
 npm run compile:visual-stretch -- --script light-delay-festival-master --stretch festival-master:stretch-bridge-meal-010-012
 npm run report:visual-stretches -- --script script:light-delay-festival-master
 npm run report:reference-budget -- --script=light-delay-festival-master
+npm run handoff:visual-stretch -- --script light-delay-festival-master --job <stretchJobId>
 npm run handoff:visual-stretch -- --script light-delay-festival-master --job <stretchJobId> --allow-preview-prompt
 npm run register:visual-stretch-sheet -- --script light-delay-festival-master --stretch <id> --from <generator-output.png>
 npm run split:visual-stretch -- --script light-delay-festival-master --stretch <id> [--dry-run]

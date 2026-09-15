@@ -51,7 +51,10 @@
         "durationSeconds": { "type": "number" },
         "durationMs": { "type": "integer", "minimum": 0 },
         "resolution": { "type": "string" },
-        "generateAudio": { "type": "boolean" }
+        "generateAudio": {
+          "type": "boolean",
+          "description": "Seedance native audio in the same pass. Light Delay default is true; set false only when the author asks for a silent clip."
+        }
       },
       "additionalProperties": false
     },

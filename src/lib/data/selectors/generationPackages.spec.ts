@@ -213,9 +213,17 @@ describe('generation packages selectors', () => {
 			true
 		);
 		expect(stretch!.refs.some((r) => r.category === 'visual')).toBe(true);
-		expect(stretch!.promptReady).toBe(false);
-		expect(stretch!.runnable).toBe(false);
 		expect(refCategoryFromRole('voice_sample')).toBe('voice_sample');
+		const ready = packages.find(
+			(p) => p.source === 'stretch_video' && p.id.includes('operations-gallery-001-003')
+		);
+		expect(ready?.promptReady).toBe(true);
+		expect(ready?.runnable).toBe(true);
+		const held = packages.find(
+			(p) => p.source === 'stretch_video' && p.blockers.includes('editorial_prompt_freeze_not_approved')
+		);
+		expect(held?.promptReady).toBe(false);
+		expect(held?.runnable).toBe(false);
 	});
 
 	it('lists dialogue audio packages with voice-sample refs and optional outputs', () => {

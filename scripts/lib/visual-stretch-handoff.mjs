@@ -1,12 +1,16 @@
 /**
- * Build §8 run-file handoffs for visual-stretch jobs (preview / nonExecutable only in this slice).
+ * Build §8 run-file handoffs for visual-stretch jobs (preview or ready).
  */
 import { createHash } from 'node:crypto';
 import { existsSync } from 'node:fs';
 import { join, normalize, relative, sep } from 'node:path';
 import { sha256 } from './generation-planning.mjs';
 import { compileStretchVideoPrompt } from './visual-stretch-video-prompt.mjs';
-import { collectVideoStretchReferences, isStretchJobRunnable } from './visual-stretch-jobs.mjs';
+import {
+	collectVideoStretchReferences,
+	isStretchJobRunnable,
+	mergeAuthoredIdentityVideoAssetIds
+} from './visual-stretch-jobs.mjs';
 
 export const DEFAULT_SMOKE_EXECUTION_POLICY = Object.freeze({
 	mode: 'smoke_test',
@@ -19,18 +23,48 @@ export const DEFAULT_SMOKE_EXECUTION_POLICY = Object.freeze({
 
 export const AGENT_INSTRUCTIONS_PREVIEW = [
 	'HARD GATE: nonExecutable is true. Do NOT submit this run to Higgsfield MCP or any paid API.',
-	'This file is a preview only. Paid smoke requires a future freeze CLI that sets status ready and nonExecutable false, then human cost confirmation immediately before submit.',
+	'This file is a preview only. Paid smoke requires a frozen plan job (compiledPrompt, runnable, Seedance executable) then handoff without --allow-preview-prompt, then human cost confirmation immediately before submit.',
 	'Also refuse submit when the source plan job has runnable false or generationGate / generation_deferred / generation_blocked blockers; clear Take.productionGate on the script take and rebuild plans first — do not hand-edit plan generationGate.',
 	'Refuse submit on reference_budget:* blockers. Prefer structured job.referenceBudget (required/covered/uncovered/attached/wouldOmit/violations) over reparsing strings.',
 	'reference_pack_required means uncovered entities — attach or author packs/sheets declaring those entityIds (compatiblePackAssetIds / packsNeeded). Do not add packs for pure covered overflow.',
 	'reference_consolidation_required means too many attached refs while fully covered — merge/consolidate consolidateCandidateAssetIds; do not add more packs.',
 	'Keep this exact run file if a future ready run is submitted; do not re-run handoff between submit and register (inputDigest covers the prompt).',
 	'Before any future paid submit: run node scripts/higgsfield-preflight.mjs --probe; confirm live concurrency and credits; ask for credit cost and wait for human confirmation.',
+	'Video jobs pass generate_audio true (Seedance native sound) unless the author asked for a silent clip.',
 	'executionPolicy.smoke_test: submit exactly one job, then stop. No retries, no queue continuation, no auto-accept.',
 	'Upload references ONLY in the order of references[] in this file. Do not reconstruct or reorder from the generation plan.',
 	'After completion: download the generated video from Higgsfield Assets into the repo under static/ (agreed stretch path), record remote upload handles per assetId, write data/production/runs/*-results.json, then npm run register:visual-stretch-video -- --from <results> --run <this-ready-run.json> [--video <downloaded>].',
 	'Register at job level only (no take binding).'
 ].join(' ');
+
+export const AGENT_INSTRUCTIONS_READY = [
+	'This run is status ready and nonExecutable false. Do NOT submit to Higgsfield MCP or any paid API until a human confirms the credit cost from generate_video get_cost:true immediately before submit.',
+	'Refuse submit when the source plan job has runnable false or generationGate / generation_deferred / generation_blocked blockers; clear Take.productionGate on the script take and rebuild plans first — do not hand-edit plan generationGate.',
+	'Refuse submit on reference_budget:* blockers. Prefer structured job.referenceBudget (required/covered/uncovered/attached/wouldOmit/violations) over reparsing strings.',
+	'Keep this exact run file for submit and register; do not re-run handoff between submit and register (inputDigest covers the prompt).',
+	'Before paid submit: run node scripts/higgsfield-preflight.mjs --probe; confirm live concurrency and credits; call generate_video with get_cost true; state the credit cost and wait for human confirmation.',
+	'Video jobs pass generate_audio true (Seedance native sound) unless the author asked for a silent clip.',
+	'executionPolicy.smoke_test: submit exactly one job, then stop. No retries, no queue continuation, no auto-accept.',
+	'Upload references ONLY in the order of references[] in this file. Do not reconstruct or reorder from the generation plan.',
+	'After completion: download the generated video from Higgsfield Assets into the repo under static/ (agreed stretch path), record remote upload handles per assetId, write data/production/runs/*-results.json, then npm run register:visual-stretch-video -- --from <results> --run <this-ready-run.json> [--video <downloaded>].',
+	'Register at job level only (no take binding).'
+].join(' ');
+
+/**
+ * Ready handoff requires a runnable frozen plan job, compiled prompt text, and an executable snapshot.
+ * --allow-preview-prompt always forces preview even when those are true.
+ * @param {any} job
+ * @param {any} snapshot
+ * @param {boolean} allowPreviewPrompt
+ */
+export function isReadyHandoffEligible(job, snapshot, allowPreviewPrompt = false) {
+	if (allowPreviewPrompt) return false;
+	const compiled =
+		typeof job?.compiledPrompt === 'string' ? job.compiledPrompt.trim() : '';
+	return (
+		isStretchJobRunnable(job) && compiled.length > 0 && snapshot?.executable === true
+	);
+}
 
 /**
  * @param {string} assetId
@@ -143,9 +177,18 @@ export function buildEffectiveReferences(job, stretch, script, assetsById, opts)
 	});
 
 	const storedEffective = job.effectiveVideoReferenceAssetIds;
-	const effectiveVisualIds = Array.isArray(storedEffective)
-		? storedEffective
-		: collected.effectiveVideoReferenceAssetIds;
+	const authoredVideoIds = Array.isArray(job.videoReferenceAssetIds)
+		? job.videoReferenceAssetIds
+		: Array.isArray(stretch.videoReferenceAssetIds)
+			? stretch.videoReferenceAssetIds
+			: [];
+	// The plan's effective list is budget-oriented and may omit entities already
+	// covered by keyframes. Spoken-character identity is a separate Seedance
+	// requirement, so retain explicit authored identity sheets in the handoff.
+	const effectiveVisualIds = mergeAuthoredIdentityVideoAssetIds(
+		Array.isArray(storedEffective) ? storedEffective : collected.effectiveVideoReferenceAssetIds,
+		authoredVideoIds
+	);
 	const voiceIds = Array.isArray(job.voiceSampleAssetIds)
 		? job.voiceSampleAssetIds
 		: collected.voiceSampleAssetIds;
@@ -204,11 +247,12 @@ export function buildEffectiveReferences(job, stretch, script, assetsById, opts)
 		} catch (err) {
 			missing.push(`path:${entry.assetId}:${err instanceof Error ? err.message : String(err)}`);
 		}
-		resolved.push({
-			role: entry.role,
-			assetId: entry.assetId,
-			kind: entry.kind,
-			repoPath,
+			resolved.push({
+				role: entry.role,
+				assetId: entry.assetId,
+				kind: entry.kind,
+				entityIds: asset.metadata?.entityIds || (asset.metadata?.characterId ? [asset.metadata.characterId] : []),
+				repoPath,
 			localStagingPath
 		});
 	}
@@ -253,14 +297,12 @@ export function buildVisualStretchRunHandoff(args) {
 		throw new Error(`--medium ${mediumFlag} does not match job.medium ${job.medium}`);
 	}
 
-	if (!allowPreviewPrompt) {
-		throw new Error(
-			'Refused: plan compiledPrompt is null and freeze is not available in this slice. Re-run with --allow-preview-prompt to emit a nonExecutable preview run (never submit to Higgsfield).'
-		);
-	}
+	const ready = isReadyHandoffEligible(job, snapshot, allowPreviewPrompt);
 
-	if (job.compiledPrompt) {
-		// Future: ready path. This slice still forces nonExecutable preview semantics when flag is used without freeze.
+	if (!ready && !allowPreviewPrompt) {
+		throw new Error(
+			'Refused: plan job is not ready for an executable run (need runnable compiledPrompt and an executable provider snapshot). Re-run with --allow-preview-prompt to emit a nonExecutable preview run (never submit to Higgsfield).'
+		);
 	}
 
 	const { references, missing } = buildEffectiveReferences(job, stretch, script, assetsById, {
@@ -270,30 +312,48 @@ export function buildVisualStretchRunHandoff(args) {
 		language: plan.plan?.promptLanguage || 'en'
 	});
 
+	const compiledPrompt =
+		typeof job.compiledPrompt === 'string' ? job.compiledPrompt.trim() : '';
 	const promptResult =
-		job.medium === 'video'
-			? compileStretchVideoPrompt({
-					stretch,
-					job,
-					script,
-					effectiveReferences: references.map((r) => ({
-						role: r.role,
-						assetId: r.assetId || undefined,
-						kind: r.kind
-					})),
-					blockers: job.blockers
-				})
-			: {
+		ready && compiledPrompt
+			? {
 					sections: {},
-					preview: '[still preview: use compile:visual-stretch stdout; not inlined here]',
-					blockers: job.blockers || [],
-					negativeEn: 'No logos, watermark, or redesigned sheets.'
-				};
+					preview: compiledPrompt,
+					compiled: compiledPrompt,
+					blockers: [],
+					negativeEn:
+						'No identity swaps, ambiguous speaker assignment, extra cast, discontinuous motion, camera-axis jump, teleporting, gravity error, zero-g drift during thrust, invented dialogue, spoken-line subtitle burn-in, logos, watermark, or background music.'
+				}
+			: job.medium === 'video'
+				? compileStretchVideoPrompt({
+						stretch,
+						job,
+						script,
+						effectiveReferences: references.map((r) => ({
+							role: r.role,
+							assetId: r.assetId || undefined,
+							kind: r.kind,
+							entityIds:
+								r.entityIds ||
+								assetsById.get(r.assetId)?.metadata?.entityIds ||
+								(assetsById.get(r.assetId)?.metadata?.characterId
+									? [assetsById.get(r.assetId).metadata.characterId]
+									: [])
+						})),
+						blockers: job.blockers
+					})
+				: {
+						sections: {},
+						preview: '[still preview: use compile:visual-stretch stdout; not inlined here]',
+						blockers: job.blockers || [],
+						negativeEn: 'No logos, watermark, or redesigned sheets.'
+					};
 
+	const promptText = ready ? compiledPrompt : promptResult.preview;
 	const durationMs = job.durationMs ?? 0;
 	const aspectRatio = '16:9';
 	const digestPayload = {
-		prompt: promptResult.preview,
+		prompt: promptText,
 		providerSnapshotId: job.providerSnapshotId,
 		references: references.map((r) => ({
 			role: r.role,
@@ -306,15 +366,25 @@ export function buildVisualStretchRunHandoff(args) {
 	};
 	const inputDigest = sha256(digestPayload);
 	const effectiveReferencesDigest = sha256(digestPayload.references);
-	const promptDigest = sha256(promptResult.preview);
+	const promptDigest = sha256(promptText);
 
-	const runId = `run:${job.id}:preview`;
+	const runId = ready ? `run:${job.id}:ready` : `run:${job.id}:preview`;
 	const blockers = [...new Set([...(job.blockers || []), ...missing, ...promptResult.blockers])];
+	if (ready && blockers.length) {
+		throw new Error(
+			`Refused ready handoff: remaining blockers ${blockers.join(', ')}. Re-run with --allow-preview-prompt for a nonExecutable preview.`
+		);
+	}
+	// Seedance 2.5 MCP catalog defaults to 720p; Festival smoke policy is 480p via
+	// snapshot.preferredResolution. Fail closed to 480p for Seedance video so omit
+	// never silently upgrades cost/quality.
 	const resolution =
 		snapshot?.preferredResolution ||
 		snapshot?.limits?.defaultResolution ||
 		snapshot?.defaultResolution ||
-		null;
+		(job.medium === 'video' && String(snapshot?.model || '').includes('seedance')
+			? '480p'
+			: null);
 
 	return {
 		schemaVersion: '1.0.0',
@@ -328,7 +398,7 @@ export function buildVisualStretchRunHandoff(args) {
 		providerSnapshotId: job.providerSnapshotId,
 		dependsOnStillJobId: job.dependsOnStillJobId,
 		prompt: {
-			compiledEn: promptResult.preview,
+			compiledEn: promptText,
 			negativeEn: promptResult.negativeEn
 		},
 		parameters: {
@@ -336,7 +406,7 @@ export function buildVisualStretchRunHandoff(args) {
 			durationSeconds: Math.round(durationMs / 1000),
 			durationMs,
 			...(resolution ? { resolution } : {}),
-			generateAudio: references.some((r) => r.kind === 'audio')
+			generateAudio: job.medium === 'video'
 		},
 		references: references.map((r) => ({
 			role: r.role,
@@ -353,14 +423,15 @@ export function buildVisualStretchRunHandoff(args) {
 			requiresHumanApproval: true,
 			requiresEntitlementPreflight: true,
 			maxCredits: null,
-			notes:
-				'MCP always spends credits. Preview runs must not be submitted. Confirm concurrency from account dashboard before any future paid batch.'
+			notes: ready
+				? 'MCP always spends credits. Confirm concurrency from the account dashboard. Call generate_video get_cost:true and wait for human confirmation before submit.'
+				: 'MCP always spends credits. Preview runs must not be submitted. Confirm concurrency from account dashboard before any future paid batch.'
 		},
-		nonExecutable: true,
-		status: 'preview',
+		nonExecutable: !ready,
+		status: ready ? 'ready' : 'preview',
 		blockers,
 		runnablePlanJob: isStretchJobRunnable(job),
-		agentInstructions: AGENT_INSTRUCTIONS_PREVIEW
+		agentInstructions: ready ? AGENT_INSTRUCTIONS_READY : AGENT_INSTRUCTIONS_PREVIEW
 	};
 }
 

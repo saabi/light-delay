@@ -207,6 +207,15 @@ export interface VisualStretch {
 	 * video-only list; never trim referenceAssetIds because video will depict the same subject.
 	 */
 	videoReferenceAssetIds?: AssetId[];
+	/**
+	 * Per-stretch Seedance prompt freeze. Absent or not `approved` keeps
+	 * `editorial_prompt_freeze_not_approved` on grouped video jobs.
+	 */
+	videoPromptFreeze?: {
+		status: 'approved';
+		approvedAt: string;
+		source: string;
+	};
 	notes?: Note[];
 	sourceRefs?: SourceReference[];
 }
