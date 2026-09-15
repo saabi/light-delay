@@ -96,7 +96,7 @@ npm run register:visual-stretch-video -- --from data/production/runs/<runId>-res
 npm run rebuild:higgsfield-media-ledger
 ```
 
-**Movie mode (animatic player):** After job-level video register, Movie mode builds **playback spans** from the generation plan’s video jobs + `assets.json`. A playable video (`needs_review` or `current`, file on disk) collapses that job’s `memberInputs` into one unmuted Seedance clip (duration = asset `durationMs`). Cue WAVs for those member shots are suppressed so Seedance audio is not doubled. Register still does **not** write `take.videoAssetId`; OTIO take bind remains a later editorial step.
+**Movie mode (animatic player):** After job-level video register, Movie mode builds **playback spans** from the generation plan’s video jobs + `assets.json`. A playable video (`needs_review` or `current`, file on disk) collapses that job’s `memberInputs` into one unmuted Seedance clip (duration = asset `durationMs`). Cue WAVs for those member shots are suppressed so Seedance audio is not doubled. Selected-take `videoAssetId`s also play as singleton spans when no stretch job covers that shot (Festival-master title sting). Stretch job register still does **not** write `take.videoAssetId`; OTIO take bind remains editorial.
 
 ## UI (v1)
 

@@ -211,6 +211,46 @@ describe('buildAnimaticPlaybackSpans', () => {
 		expect(spans[0]?.kind).toBe('still');
 	});
 
+	it('plays a selected take video when no stretch job covers the shot', () => {
+		const takeAssets: Record<string, Asset> = {
+			...assets,
+			'asset:title-vid': {
+				id: 'asset:title-vid',
+				kind: 'video',
+				role: 'production',
+				path: '/assets/title.mp4',
+				durationMs: 15050,
+				imageStatus: { status: 'needs_review', reasons: ['quality'] }
+			}
+		};
+		const shots = [shot('shot:title', 10000, 1), shot('shot:pre', 3000, 2)];
+		const scriptWithTake = {
+			...script,
+			shots,
+			takes: [
+				{
+					id: 'shot:title:take-01',
+					shotId: 'shot:title',
+					number: 1,
+					status: 'selected',
+					videoAssetId: 'asset:title-vid'
+				}
+			]
+		} as unknown as ScriptFile;
+		const spans = buildAnimaticPlaybackSpans(scriptWithTake, shots, plan, {
+			getAsset: (id) => takeAssets[id],
+			fileExists: (path) => existingFiles.has(path) || path === '/assets/title.mp4'
+		});
+		expect(spans[0]).toMatchObject({
+			kind: 'stretchVideo',
+			jobId: 'take-video:shot:title:take-01',
+			assetId: 'asset:title-vid',
+			durationMs: 15050,
+			shotIds: ['shot:title']
+		});
+		expect(spans[1]).toMatchObject({ kind: 'still', shotId: 'shot:pre' });
+	});
+
 	it('maps shot id to span index', () => {
 		const spans = buildAnimaticPlaybackSpans(script, orderedShots, plan, opts);
 		expect(spanIndexForShotId(spans, 'shot:pre')).toBe(0);

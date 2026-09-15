@@ -1,5 +1,9 @@
 # Estado del proyecto
 
+## 2026-09-15 — Festival-master title take Seedance sting (English source)
+
+- Earth→Jupiter title sting (job `d0602f1d-f9af-4651-bb06-38f321f3beae`) bound to `festival-master:shot-plan-title:take-01` as `videoAssetId`. Clip: `static/assets/animatic/frames/festival-master/shot-plan-title-rev-1-video-1.mp4`. Pending review; selected take and Blender video hold unchanged. Movie mode plays take-level videos on shots with no stretch cover.
+
 ## 2026-09-15 — Durable Seedance 5s voice clips (English source)
 
 - EN bank voice WAVs unchanged. Durable 5 s MP3 clips live at `static/assets/voices/en/seedance-5s/` and are staged for Seedance via `metadata.seedanceUploadPath` (`npm run prepare:seedance-voice-clips`).
@@ -14,7 +18,7 @@
 
 ## 2026-09-15 — Movie mode Seedance stretch spans (English source)
 
-- Movie mode plays job-level Seedance stretch videos (`needs_review` or `current`) as unmuted montage spans covering each video job’s member shots; dialogue WAVs are suppressed on those shots. Dual-video preload for the next span. Register still does not bind `take.videoAssetId`.
+- Movie mode plays job-level Seedance stretch videos (`needs_review` or `current`) as unmuted montage spans covering each video job’s member shots; dialogue WAVs are suppressed on those shots. Dual-video preload for the next span. Stretch register still does not bind `take.videoAssetId`; the Festival-master title take is an explicit singleton bind.
 
 ## 2026-09-15 — Murder stretch video-2 036 (English source)
 

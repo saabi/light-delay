@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-09-15 — Festival-master title take bound to Earth→Jupiter sting
+
+- Bound the one-off Seedance title sting (Higgsfield `d0602f1d-f9af-4651-bb06-38f321f3beae`) to `festival-master:shot-plan-title:take-01` as `videoAssetId` (`asset:festival-master-shot-plan-title-rev-1-video-1-video`). Copied to `static/assets/animatic/frames/festival-master/shot-plan-title-rev-1-video-1.mp4`. Selected take and video productionGate unchanged. Movie mode plays selected-take videos when no stretch job covers the shot.
+
 ## 2026-09-15 — Durable Seedance 5s voice clips
 
 - Keep approved EN bank WAVs under `static/assets/voices/en/*.wav`. Store one-time **5 s MP3** Seedance clips under `static/assets/voices/en/seedance-5s/` (`npm run prepare:seedance-voice-clips`).

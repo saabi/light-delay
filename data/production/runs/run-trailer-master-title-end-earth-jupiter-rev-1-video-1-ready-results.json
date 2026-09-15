@@ -27,5 +27,5 @@
     "mimeType": "video/mp4"
   },
   "declaredDurationMs": 15000,
-  "notes": "Author-requested trailer end title sting. Not a visual-stretch plan job; do not run register:visual-stretch-video. Earth opening still job cb003a61-2ce2-4975-bc8f-b9f9da82b52c (2 cr) kept on disk but not attached. First Seedance submit 115bb2a1-ddca-429f-b429-99207c7d26eb failed ip_detected with that still as start_image; 37.5 cr refunded. Recovery used end_image only (shot-plan-087). trailer-master shot-g-01 was not rewritten."
+  "notes": "Author-requested trailer end title sting. Not a visual-stretch plan job; do not run register:visual-stretch-video. Earth opening still job cb003a61-2ce2-4975-bc8f-b9f9da82b52c (2 cr) kept on disk but not attached. First Seedance submit 115bb2a1-ddca-429f-b429-99207c7d26eb failed ip_detected with that still as start_image; 37.5 cr refunded. Recovery used end_image only (shot-plan-087). trailer-master shot-g-01 was not rewritten. 2026-09-15: same clip copied to static/assets/animatic/frames/festival-master/shot-plan-title-rev-1-video-1.mp4 and bound as videoAssetId on festival-master:shot-plan-title:take-01 (asset:festival-master-shot-plan-title-rev-1-video-1-video). Festival selectedTakeId and productionGate unchanged."
 }

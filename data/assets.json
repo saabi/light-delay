@@ -15951,6 +15951,39 @@
           "es": "Video Seedance del stretch pendiente de revisión editorial (nivel job; no ligado a tomas miembro)."
         }
       }
+    },
+    {
+      "id": "asset:festival-master-shot-plan-title-rev-1-video-1-video",
+      "kind": "video",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/shot-plan-title-rev-1-video-1.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 15050,
+      "width": 854,
+      "height": 480,
+      "source": {
+        "provider": "higgsfield-mcp-official",
+        "model": "seedance-2.5",
+        "generatedAt": "2026-09-14T22:13:05Z",
+        "externalId": "d0602f1d-f9af-4651-bb06-38f321f3beae"
+      },
+      "metadata": {
+        "scriptId": "script:light-delay-festival-master",
+        "shotId": "festival-master:shot-plan-title",
+        "takeId": "festival-master:shot-plan-title:take-01",
+        "sourceRunId": "run:trailer-master:title-end-earth-jupiter:rev-1:video-1:ready",
+        "inputDigest": "f035bfd55e7ca03e75c978b8e69a1b0f8aac3bd9b1ee4a460b73bd12c63f5c91"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "One-off Seedance title sting (Earth → Jupiter, last frame locked to shot-plan-087) reused on the Festival-master title take. Pending editorial review. selectedTakeId unchanged.",
+          "es": "Picadura de título Seedance (Tierra → Júpiter, último fotograma bloqueado en shot-plan-087) reutilizada en la toma de título de Festival-master. Pendiente de revisión editorial. selectedTakeId sin cambios."
+        }
+      }
     }
   ]
 }

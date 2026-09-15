@@ -1,6 +1,6 @@
 import type { GenerationPlanFile } from '$lib/types/generated/production';
 import type { Asset } from '$lib/types/assets';
-import type { ScriptFile, Shot, ShotId } from '$lib/types/script';
+import type { ScriptFile, Shot, ShotId, Take } from '$lib/types/script';
 import { getAssetById } from '$lib/data/repositories/lookups';
 import { catalogFileExists, catalogPathIsSafe } from '$lib/data/repositories/generationPlans';
 import type { AnimaticDialogueTimelineCue } from './animaticDialogueTimeline';
@@ -105,6 +105,47 @@ export function collectPlayableStretchVideoJobs(
 	return out;
 }
 
+function selectedTakeForShot(script: ScriptFile, shot: Shot): Take | undefined {
+	if (!shot.selectedTakeId) return undefined;
+	return script.takes?.find((take) => take.id === shot.selectedTakeId);
+}
+
+/**
+ * Singleton take videos (not stretch jobs). Stretch covers win when both exist.
+ */
+export function collectPlayableTakeVideos(
+	script: ScriptFile,
+	orderedShots: Shot[],
+	options: Pick<BuildAnimaticPlaybackSpansOptions, 'getAsset' | 'fileExists'> = {}
+): VideoJobCover[] {
+	const getAsset = options.getAsset ?? getAssetById;
+	const fileExists = options.fileExists ?? catalogFileExists;
+	const out: VideoJobCover[] = [];
+
+	for (const shot of orderedShots) {
+		const take = selectedTakeForShot(script, shot);
+		if (!take?.videoAssetId) continue;
+		const asset = getAsset(take.videoAssetId);
+		if (!isPlayableVideoAsset(asset, fileExists)) continue;
+		const durationMs =
+			typeof asset.durationMs === 'number' && asset.durationMs > 0
+				? asset.durationMs
+				: Math.max(0, shot.durationMs || 0);
+		if (durationMs <= 0) continue;
+		out.push({
+			jobId: `take-video:${take.id}`,
+			stretchId: shot.id,
+			assetId: take.videoAssetId,
+			videoPath: asset.path,
+			durationMs,
+			shotIds: [shot.id],
+			imageStatus: asset.imageStatus
+		});
+	}
+
+	return out;
+}
+
 /**
  * Build ordered playback spans: still per uncovered shot, or one stretchVideo span
  * collapsing a Seedance job's member shots (duration = asset.durationMs).
@@ -118,10 +159,13 @@ export function buildAnimaticPlaybackSpans(
 	const shotDurationMs =
 		options.shotDurationMs ?? ((shot: Shot) => Math.max(0, shot.durationMs || 0));
 
-	const covers = collectPlayableStretchVideoJobs(plan, options);
+	const covers = [
+		...collectPlayableStretchVideoJobs(plan, options),
+		...collectPlayableTakeVideos(script, orderedShots, options)
+	];
 	const shotIndexById = new Map(orderedShots.map((s, i) => [s.id, i]));
 
-	/** shotId → cover that claims it (first claim wins if overlap). */
+	/** shotId → cover that claims it (first claim wins if overlap). Stretch jobs are listed first. */
 	const coverByShotId = new Map<ShotId, VideoJobCover>();
 	for (const cover of covers) {
 		for (const shotId of cover.shotIds) {
