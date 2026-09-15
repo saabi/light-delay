@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-09-15 — Scenes 18–19 still authorship fixed
+
+- Reauthored Festival-master stretch still packages for bridge fuel-audit (050–053) and central-vault obstruction (054–056): explicit 1 g / microgravity, identity locks vs pair sheets, non-placeholder blocking/member stages, vault location ref added (5/5). Shot descriptions and visibleRefs aligned so compiled sheet prompts are self-contained. Plans rebuilt; stills not regenerated (panels marked `needs_regeneration`).
+
 ## 2026-09-15 — Scene 16 Seedance 042–045b submitted
 
 - Submitted five Festival-master Seedance jobs in two parallel batches: 042/043/044 (**69 cr**) then 045/045b (**39 cr**) after prep. Codex/approved stills used as keyframes; BFL candidates remain under `tmp/bfl/` only.

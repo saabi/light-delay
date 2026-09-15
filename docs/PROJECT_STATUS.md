@@ -1,5 +1,9 @@
 # Estado del proyecto
 
+## 2026-09-15 — Scenes 18–19 still prompts fixed (English source)
+
+- Stretch still authorship for 050–053 and 054–056 corrected (gravity, identity, blocking, vault ref). Compiled prompts rebuilt. Wrong panels marked `needs_regeneration`; no image generation run.
+
 ## 2026-09-15 — Scene 16 Seedance 042–045b package (English source)
 
 - Submitted and registered five Seedance clips (042–045b): **108 cr** (27+27+15+27+12). Codex/approved stills as keyframes. 045b singleton stretch locked to service-cylinder + 026 continuity.
@@ -39,6 +43,10 @@
 ## 2026-09-15 — Seedance no-music rule (English source)
 
 - Seedance may generate dialogue; it must not generate music/score/BGM or dramatic instrumentation (post mix). Documented in `SEEDANCE_PROMPTING.md` §6 and agent policy cross-refs.
+
+## 2026-09-15 — Scenes 18–19 still prompts fixed (English source)
+
+- Stretch still authorship for 050–053 and 054–056 corrected (gravity, identity, blocking, vault ref). Compiled prompts rebuilt. Existing wrong panels remain `needs_review` until authorized regen.
 
 ## 2026-09-15 — Scenes 13–14 Seedance submitted (English source)
 

@@ -8801,12 +8801,14 @@
         "es": "Imagen de storyboard generada para festival-master:shot-plan-044; pendiente de revisión editorial.",
         "en": "Generated storyboard still for festival-master:shot-plan-044; pending editorial review."
       },
-      "width": 1672,
-      "height": 941,
+      "width": 2688,
+      "height": 1520,
       "source": {
         "provider": "OpenAI",
-        "model": "gpt-image-2",
-        "generatedAt": "2026-09-15T20:22:42.765Z"
+        "model": "gpt-image-2.5",
+        "generatedAt": "2026-09-15T21:44:43.251Z",
+        "jobId": "e54c1c83-6e4b-423f-b33f-31992ae60825",
+        "variant": "044-b0"
       },
       "metadata": {
         "scriptId": "script:light-delay-festival-master",
@@ -8819,7 +8821,11 @@
           "asset:location-celestial-ardor-service-cylinder-sheet",
           "asset:object-wired-comms-deck-patch-panel-sheet",
           "asset:festival-master-storyboard-026"
-        ]
+        ],
+        "visualStretchId": "festival-master:stretch-service-cylinder-harlan-044",
+        "stretchJobId": "festival-master:stretch-service-cylinder-harlan-044:rev-1",
+        "selectedVariant": "tmp/still-regen-review-044-045/044-pass2-bare-hands/044-b0.png",
+        "sha256": "934b71d40999849fa52b74b19d9db66397a6f219491537d6f499a5f5099463cf"
       },
       "imageStatus": {
         "status": "current",
@@ -8827,7 +8833,7 @@
           "quality"
         ],
         "explanation": {
-          "en": "Author accepted existing Codex still as Seedance keyframe (2026-09-15). Do not replace with BFL candidates under tmp/bfl/.",
+          "en": "Author-selected regen (044-b0 bare-hands pass). Landed for Seedance keyframe.",
           "es": "needs_revision"
         }
       }
@@ -8875,7 +8881,7 @@
           "quality"
         ],
         "explanation": {
-          "en": "Author approved still as Seedance keyframe (2026-09-15). Monitor feed reads as 043 outer bay.",
+          "en": "Codex still retained as keyframe. Display-directed surprise is Seedance-only direction.",
           "es": "needs_revision"
         }
       }
@@ -12930,13 +12936,14 @@
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "quality",
+          "continuity"
         ],
         "explanation": {
-          "en": "Combined visual-stretch storyboard sheet pending editorial review and split.",
-          "es": "Hoja storyboard combinada de visual stretch pendiente de revisión editorial y partición."
+          "en": "Prior still generated from hollow/placeholder stretch prompt (wrong identity or gravity/location). Reauthored prompt+refs 2026-09-15; regenerate when authorized.",
+          "es": "needs_revision"
         }
       }
     },
@@ -13226,13 +13233,14 @@
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "quality",
+          "continuity"
         ],
         "explanation": {
-          "en": "Combined visual-stretch storyboard sheet pending editorial review and split.",
-          "es": "Hoja storyboard combinada de visual stretch pendiente de revisión editorial y partición."
+          "en": "Prior still generated from hollow/placeholder stretch prompt (wrong identity or gravity/location). Reauthored prompt+refs 2026-09-15; regenerate when authorized.",
+          "es": "needs_revision"
         }
       }
     },
@@ -13919,13 +13927,14 @@
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "quality",
+          "continuity"
         ],
         "explanation": {
-          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Prior still generated from hollow/placeholder stretch prompt (wrong identity or gravity/location). Reauthored prompt+refs 2026-09-15; regenerate when authorized.",
+          "es": "needs_revision"
         }
       }
     },
@@ -13955,13 +13964,14 @@
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "quality",
+          "continuity"
         ],
         "explanation": {
-          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Prior still generated from hollow/placeholder stretch prompt (wrong identity or gravity/location). Reauthored prompt+refs 2026-09-15; regenerate when authorized.",
+          "es": "needs_revision"
         }
       }
     },
@@ -13991,13 +14001,14 @@
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "quality",
+          "continuity"
         ],
         "explanation": {
-          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Prior still generated from hollow/placeholder stretch prompt (wrong identity or gravity/location). Reauthored prompt+refs 2026-09-15; regenerate when authorized.",
+          "es": "needs_revision"
         }
       }
     },
@@ -15343,13 +15354,14 @@
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "quality",
+          "continuity"
         ],
         "explanation": {
-          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Prior still generated from hollow/placeholder stretch prompt (wrong identity or gravity/location). Reauthored prompt+refs 2026-09-15; regenerate when authorized.",
+          "es": "needs_revision"
         }
       }
     },
@@ -15379,13 +15391,14 @@
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "quality",
+          "continuity"
         ],
         "explanation": {
-          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Prior still generated from hollow/placeholder stretch prompt (wrong identity or gravity/location). Reauthored prompt+refs 2026-09-15; regenerate when authorized.",
+          "es": "needs_revision"
         }
       }
     },
@@ -15415,13 +15428,14 @@
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "quality",
+          "continuity"
         ],
         "explanation": {
-          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Prior still generated from hollow/placeholder stretch prompt (wrong identity or gravity/location). Reauthored prompt+refs 2026-09-15; regenerate when authorized.",
+          "es": "needs_revision"
         }
       }
     },
@@ -15451,13 +15465,14 @@
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "quality",
+          "continuity"
         ],
         "explanation": {
-          "en": "Derived panel 4 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 4 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Prior still generated from hollow/placeholder stretch prompt (wrong identity or gravity/location). Reauthored prompt+refs 2026-09-15; regenerate when authorized.",
+          "es": "needs_revision"
         }
       }
     },
