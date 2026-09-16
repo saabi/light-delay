@@ -1368,7 +1368,11 @@
         "es": "Tercer descenso de gravedad",
         "en": "Third gravity dip"
       },
-      "locationId": "location:celestial-ardor-reactor-service-bay",
+      "locationId": "location:celestial-ardor-central-access",
+      "secondaryLocationIds": [
+        "location:celestial-ardor-reactor-service-bay",
+        "location:celestial-ardor-inner-shielding-vault"
+      ],
       "setting": {
         "interiorExterior": "INT",
         "storyTime": {
@@ -1454,7 +1458,7 @@
         "festival-master:beat-20"
       ],
       "shotIds": [],
-      "targetDurationMs": 30460,
+      "targetDurationMs": 25039,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -1512,7 +1516,7 @@
         "festival-master:beat-21"
       ],
       "shotIds": [],
-      "targetDurationMs": 51400,
+      "targetDurationMs": 51540,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -8512,18 +8516,18 @@
         "sourceLanguage": "en",
         "variants": {
           "en": {
-            "spokenText": "Zao missed her aim. The signal's gone, unrecoverable — now they'll never know who saved them.",
+            "spokenText": "Now they'll never know who saved them.",
             "status": "source",
-            "delivery": "private grief, not triumph",
+            "delivery": "whispered under-breath, private grief, not for the room",
             "voiceProfileId": "voice:harlan-es",
-            "estimatedDurationMs": 6780,
+            "estimatedDurationMs": 1820,
             "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0120"
           },
           "es": {
             "spokenText": "Zao falló el tiro. La señal se fue, irrecuperable — ahora nunca van a saber quién los salvó.",
             "status": "needs_revision",
-            "delivery": "duelo privado, no triunfo",
-            "estimatedDurationMs": 6780,
+            "delivery": "susurro contención, duelo privado, no para la sala",
+            "estimatedDurationMs": 1820,
             "voiceProfileId": "voice:harlan-es"
           }
         }
@@ -15345,7 +15349,7 @@
       "number": 1,
       "order": 1,
       "description": {
-        "en": "Single continuous bridge take: Harlan presents the fuel-sabotage theory at the meal table; Rao checks the data and breaks the claim; Voss recognizes that the theory explains neither anomaly and Rao confirms.",
+        "en": "One continuous Celestial Ardor bridge take under steady 1 g: Harlan presents the fuel-sabotage theory at the meal table to Voss while Rao audits mixture and efficiency at her console; the theory fails the data and Voss recognizes the weakened case. Seedance may invent internal coverage; no external shot boundaries.",
         "es": "needs_revision"
       },
       "locationId": "location:celestial-ardor-bridge",
@@ -15362,26 +15366,36 @@
         },
         {
           "kind": "character",
+          "id": "character:sorell",
+          "role": "present, listening"
+        },
+        {
+          "kind": "character",
           "id": "character:rao",
-          "role": "present, working at data console"
+          "role": "present, listening"
+        },
+        {
+          "kind": "character",
+          "id": "character:okoye",
+          "role": "present, listening"
         }
       ],
       "composition": {
         "size": "MS",
         "aspectRatio": "16:9",
         "framing": {
-          "en": "Single continuous medium-wide take from the meal-table side; Harlan left of center, Voss at the captain-side table position on the right, Rao at the fixed data console in the left background; Seedance may reframe internally while preserving this geography.",
-          "es": "needs_revision"
+          "es": "needs_revision",
+          "en": "Medium shot on Harlan presenting to Voss, Sorell, Elin Rao, Okoye; Tracking; establishes geography and screen direction."
         }
       },
       "camera": {
-        "movement": "other",
+        "movement": "tracking",
         "movementDescription": {
-          "en": "One uninterrupted take; Seedance determines the internal reframing across the complete dialogue while preserving the fixed bridge geometry.",
+          "en": "Restrained internal coverage within one bridge geography; no forced panel cuts.",
           "es": "needs_revision"
         }
       },
-      "durationMs": 29042,
+      "durationMs": 28600,
       "cuePlacements": [
         {
           "cueId": "festival-master:cue-0099",
@@ -15421,21 +15435,19 @@
         {
           "cueId": "festival-master:cue-0106",
           "atMs": 27900,
-          "durationMs": 1142
+          "durationMs": 700
         }
       ],
       "takeIds": [
+        "festival-master:shot-plan-050:take-01",
+        "festival-master:shot-plan-050:take-02",
         "festival-master:shot-plan-050:take-03"
       ],
       "selectedTakeId": "festival-master:shot-plan-050:take-03",
       "purpose": {
-        "en": "Carry the complete Scene 18 dialogue in one continuous take: Harlan proposes the theory, Rao separates evidence from inference and disproves it, then Voss and Rao close the deduction.",
+        "en": "Hold the full Scene 18 audit argument in one Seedance envelope with continuous bridge geography.",
         "es": "needs_revision"
-      },
-      "offScreenCharacterIds": [
-        "character:okoye",
-        "character:sorell"
-      ]
+      }
     },
     {
       "id": "festival-master:shot-plan-054",
@@ -15446,10 +15458,14 @@
       "number": 1,
       "order": 1,
       "description": {
-        "en": "Midway to the station, thrust cuts for the third time; Elin Rao and Okoye float beside the sealed inner-shielding vault door in the outer reactor service bay at the bottom of the central-access shaft—microgravity, handholds, no planted footing.",
+        "en": "One continuous microgravity take in the Celestial Ardor central-access shaft: third thrust cutoff, Rao identifies the shielding bay as a neutron-source hide, Okoye reports local-lock only, Harlan turns suspicion toward Sorell. Seedance may invent internal coverage; no external shot boundaries.",
         "es": "needs_revision"
       },
-      "locationId": "location:celestial-ardor-reactor-service-bay",
+      "locationId": "location:celestial-ardor-central-access",
+      "secondaryLocationIds": [
+        "location:celestial-ardor-reactor-service-bay",
+        "location:celestial-ardor-inner-shielding-vault"
+      ],
       "visibleRefs": [
         {
           "kind": "character",
@@ -15471,8 +15487,8 @@
         "size": "MCU",
         "aspectRatio": "16:9",
         "framing": {
-          "en": "Medium close-up on Elin Rao and Okoye at the sealed vault door in the outer reactor service bay; Harlan soft on a rail; Tracking; establishes geography and screen direction. Voss not an on-body standing figure.",
-          "es": "needs_revision"
+          "es": "needs_revision",
+          "en": "Medium close-up on Elin Rao and Okoye at the sealed vault; Harlan soft on a rail; Tracking; establishes geography and screen direction. Voss not an on-body standing figure."
         }
       },
       "camera": {
@@ -15482,7 +15498,7 @@
           "en": "Tracking; establishes geography and screen direction."
         }
       },
-      "durationMs": 6100,
+      "durationMs": 14040,
       "cuePlacements": [
         {
           "cueId": "festival-master:cue-0107",
@@ -15498,79 +15514,27 @@
           "cueId": "festival-master:cue-0108",
           "atMs": 5300,
           "durationMs": 800
-        }
-      ],
-      "takeIds": [
-        "festival-master:shot-plan-054:take-01",
-        "festival-master:shot-plan-054:take-02"
-      ],
-      "selectedTakeId": "festival-master:shot-plan-054:take-02",
-      "purpose": {
-        "es": "Escena «Tercer descenso de gravedad»: .",
-        "en": "Scene \"Third gravity dip\": Elin Rao — state why the vault specifically, bridging back to the unresolved neutron source."
-      }
-    },
-    {
-      "id": "festival-master:shot-plan-055",
-      "sceneId": "festival-master:scene-19",
-      "beatIds": [
-        "festival-master:beat-19"
-      ],
-      "number": 2,
-      "order": 2,
-      "description": {
-        "en": "Okoye, wary, reports the vault’s local-lock obstruction over comm while floating at the door in the outer reactor service bay; Harlan (clean-shaven, younger—not Voss) floats nearby on a rail, deceptively steering suspicion toward Sorell.",
-        "es": "needs_revision"
-      },
-      "locationId": "location:celestial-ardor-reactor-service-bay",
-      "visibleRefs": [
-        {
-          "kind": "character",
-          "id": "character:okoye",
-          "role": "speaking, in focus"
         },
         {
-          "kind": "character",
-          "id": "character:harlan",
-          "role": "speaking, in focus"
-        }
-      ],
-      "composition": {
-        "size": "MS",
-        "aspectRatio": "16:9",
-        "framing": {
-          "en": "Medium shot on Okoye and Harlan floating at the vault door in the outer reactor service bay; Dolly; preserves eyeline and action-axis continuity.",
-          "es": "needs_revision"
-        }
-      },
-      "camera": {
-        "movement": "dolly",
-        "movementDescription": {
-          "es": "Dolly; mantiene la línea de mirada y la continuidad del eje de acción.",
-          "en": "Dolly; preserves eyeline and action-axis continuity."
-        }
-      },
-      "durationMs": 7940,
-      "cuePlacements": [
-        {
           "cueId": "festival-master:cue-0109",
-          "atMs": 0,
+          "atMs": 6100,
           "durationMs": 3100
         },
         {
           "cueId": "festival-master:cue-0110",
-          "atMs": 4200,
+          "atMs": 10300,
           "durationMs": 3740
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-055:take-01",
-        "festival-master:shot-plan-055:take-02"
+        "festival-master:shot-plan-054:take-01",
+        "festival-master:shot-plan-054:take-02",
+        "festival-master:shot-plan-054:take-03"
       ],
-      "selectedTakeId": "festival-master:shot-plan-055:take-02",
+      "selectedTakeId": "festival-master:shot-plan-054:take-03",
       "purpose": {
-        "es": "Escena «Tercer descenso de gravedad»: Okoye — exponer el bloqueo; Harlan — mantener la sospecha sin revelar lo que sabe.",
-        "en": "Scene \"Third gravity dip\": Okoye — state the obstruction; Harlan — preserve suspicion without exposing his knowledge."
+        "en": "Hold the combined 054–055 vault-access obstruction argument in one Seedance envelope.",
+        "es": "needs_revision"
       }
     },
     {
@@ -15579,10 +15543,10 @@
       "beatIds": [
         "festival-master:beat-19"
       ],
-      "number": 3,
-      "order": 3,
+      "number": 2,
+      "order": 2,
       "description": {
-        "en": "Elin Rao, skeptical, refuses the unsupported claim in microgravity in the outer reactor service bay, then magnetically clamps a small diagnostic instrument to a workbench beside the vault; Okoye and Harlan remain on handholds, no one standing on a floor.",
+        "en": "Independent outer reactor service bay take under microgravity: Rao refuses unsupported suspicion, clamps the diagnostic, and demands the burst record.",
         "es": "needs_revision"
       },
       "locationId": "location:celestial-ardor-reactor-service-bay",
@@ -15607,8 +15571,8 @@
         "size": "MS",
         "aspectRatio": "16:9",
         "framing": {
-          "en": "Medium shot on Elin Rao clamping the diagnostic at the bay workbench beside the vault door, with Okoye and Harlan on handholds; Pan; preserves eyeline and action-axis continuity. Voss not planted on deck.",
-          "es": "needs_revision"
+          "es": "needs_revision",
+          "en": "Medium shot on Elin Rao clamping the diagnostic with Okoye and Harlan on handholds; Pan; preserves eyeline and action-axis continuity. Voss not planted on deck."
         }
       },
       "camera": {
@@ -15655,7 +15619,7 @@
       "number": 1,
       "order": 1,
       "description": {
-        "en": "Thrust restores and weight settles Elin Rao at her station as she reads the display: only firing angles and ship attitude survive from Zao’s reconstructed burst; the plotted vector points at no planet, station, or beacon.",
+        "en": "One continuous Celestial Ardor bridge take under restoring 1 g: Rao reads the empty vector, crew debates what Zao hit, Harlan whispers that they will never know who saved them, then the optical signal returns and Rao realizes it found them. Seedance may invent internal coverage; no external shot boundaries.",
         "es": "needs_revision"
       },
       "locationId": "location:celestial-ardor-bridge",
@@ -15696,7 +15660,7 @@
           "en": "Locked; establishes geography and screen direction."
         }
       },
-      "durationMs": 9160,
+      "durationMs": 25039,
       "cuePlacements": [
         {
           "cueId": "festival-master:cue-0113b",
@@ -15717,176 +15681,52 @@
           "cueId": "festival-master:cue-0116",
           "atMs": 6940,
           "durationMs": 2220
+        },
+        {
+          "cueId": "festival-master:cue-0117",
+          "atMs": 9160,
+          "durationMs": 1820
+        },
+        {
+          "cueId": "festival-master:cue-0118",
+          "atMs": 11080,
+          "durationMs": 2380
+        },
+        {
+          "cueId": "festival-master:cue-0119",
+          "atMs": 13560,
+          "durationMs": 4200
+        },
+        {
+          "cueId": "festival-master:cue-0120",
+          "atMs": 17760,
+          "durationMs": 1820
+        },
+        {
+          "cueId": "festival-master:cue-0121",
+          "atMs": 19680,
+          "durationMs": 1839
+        },
+        {
+          "cueId": "festival-master:cue-0122",
+          "atMs": 21619,
+          "durationMs": 3420
         }
       ],
       "takeIds": [
         "festival-master:shot-plan-057:take-01",
         "festival-master:shot-plan-057:take-02",
-        "festival-master:shot-plan-057:take-03"
+        "festival-master:shot-plan-057:take-03",
+        "festival-master:shot-plan-057:take-04"
       ],
-      "selectedTakeId": "festival-master:shot-plan-057:take-03",
+      "selectedTakeId": "festival-master:shot-plan-057:take-04",
       "purpose": {
-        "es": "Escena «La dirección vacía»: Harlan — enterrar el estallido como una acusación fallida; Elin Rao — mantener el vector vivo como evidencia.",
-        "en": "Scene \"The empty direction\": Harlan — bury the burst as a failed accusation; Elin Rao — keep the vector alive as evidence."
+        "en": "Hold the full Scene 20 empty-direction argument in one Seedance envelope.",
+        "es": "needs_revision"
       },
       "offScreenCharacterIds": [
         "character:sorell"
       ]
-    },
-    {
-      "id": "festival-master:shot-plan-058",
-      "sceneId": "festival-master:scene-20",
-      "beatIds": [
-        "festival-master:beat-20"
-      ],
-      "number": 2,
-      "order": 2,
-      "description": {
-        "en": "Voss, curious, authorizes further comparison—what did the burst hit—while Rao stays ready to test a moving receiver.",
-        "es": "needs_revision"
-      },
-      "locationId": "location:celestial-ardor-bridge",
-      "visibleRefs": [
-        {
-          "kind": "character",
-          "id": "character:voss",
-          "role": "speaking, in focus"
-        },
-        {
-          "kind": "character",
-          "id": "character:rao",
-          "role": "at console, ready to compare"
-        },
-        {
-          "kind": "character",
-          "id": "character:harlan",
-          "role": "present, listening"
-        },
-        {
-          "kind": "character",
-          "id": "character:sorell",
-          "role": "present, listening"
-        },
-        {
-          "kind": "character",
-          "id": "character:okoye",
-          "role": "present, listening"
-        }
-      ],
-      "composition": {
-        "size": "OTS",
-        "aspectRatio": "16:9",
-        "framing": {
-          "es": "Plano por encima del hombro sobre Voss, Harlan, Sorell, Elin Rao, Okoye; Travelling; mantiene la línea de mirada y la continuidad del eje de acción.",
-          "en": "Over-the-shoulder on Voss toward Rao and the crew under 1 g; Tracking; preserves eyeline and action-axis continuity."
-        }
-      },
-      "camera": {
-        "movement": "tracking",
-        "movementDescription": {
-          "es": "Travelling; mantiene la línea de mirada y la continuidad del eje de acción.",
-          "en": "Tracking; preserves eyeline and action-axis continuity."
-        }
-      },
-      "durationMs": 8900,
-      "cuePlacements": [
-        {
-          "cueId": "festival-master:cue-0117",
-          "atMs": 0,
-          "durationMs": 1820
-        },
-        {
-          "cueId": "festival-master:cue-0118",
-          "atMs": 1920,
-          "durationMs": 2380
-        },
-        {
-          "cueId": "festival-master:cue-0119",
-          "atMs": 4400,
-          "durationMs": 4500
-        }
-      ],
-      "takeIds": [
-        "festival-master:shot-plan-058:take-01",
-        "festival-master:shot-plan-058:take-02",
-        "festival-master:shot-plan-058:take-03"
-      ],
-      "selectedTakeId": "festival-master:shot-plan-058:take-03",
-      "purpose": {
-        "es": "Escena «La dirección vacía»: Voss — autorizar la comparación con objetivo móvil; Elin Rao — probar un receptor en movimiento.",
-        "en": "Scene \"The empty direction\": Voss — authorize the moving-target comparison; Elin Rao — test a moving receiver."
-      },
-      "offScreenCharacterIds": []
-    },
-    {
-      "id": "festival-master:shot-plan-059",
-      "sceneId": "festival-master:scene-20",
-      "beatIds": [
-        "festival-master:beat-20"
-      ],
-      "number": 3,
-      "order": 3,
-      "description": {
-        "en": "Alone for a moment, Harlan watches the unrecoverable burst record, mourning that they will never know who saved them.",
-        "es": "needs_revision"
-      },
-      "locationId": "location:celestial-ardor-bridge",
-      "visibleRefs": [
-        {
-          "kind": "character",
-          "id": "character:harlan",
-          "role": "center, alone, at the console, hand to chin"
-        }
-      ],
-      "composition": {
-        "size": "MCU",
-        "aspectRatio": "16:9",
-        "framing": {
-          "es": "Plano medio corto sobre Harlan; Dolly; encuadre ortogonal y legible, de inserto.",
-          "en": "Medium close-up on Harlan alone; Dolly; orthogonal, legible insert framing."
-        }
-      },
-      "camera": {
-        "movement": "dolly",
-        "movementDescription": {
-          "es": "Dolly; encuadre ortogonal y legible, de inserto.",
-          "en": "Dolly; orthogonal, legible insert framing."
-        }
-      },
-      "durationMs": 12400,
-      "cuePlacements": [
-        {
-          "cueId": "festival-master:cue-0120",
-          "atMs": 0,
-          "durationMs": 6780
-        },
-        {
-          "cueId": "festival-master:cue-0121",
-          "atMs": 6880,
-          "durationMs": 2000
-        },
-        {
-          "cueId": "festival-master:cue-0122",
-          "atMs": 8980,
-          "durationMs": 3420
-        }
-      ],
-      "takeIds": [
-        "festival-master:shot-plan-059:take-01",
-        "festival-master:shot-plan-059:take-02",
-        "festival-master:shot-plan-059:take-03"
-      ],
-      "selectedTakeId": "festival-master:shot-plan-059:take-03",
-      "offScreenCharacterIds": [
-        "character:rao",
-        "character:voss",
-        "character:sorell",
-        "character:okoye"
-      ],
-      "purpose": {
-        "es": "Escena «La dirección vacía»: Harlan — revelar su necesidad de una vindicación futura; Elin Rao (fuera de cuadro) — identificar al Ardor como receptor.",
-        "en": "Scene \"The empty direction\": Harlan — reveal his need for eventual vindication; Elin Rao (off-frame) — identify the Ardor as receiver."
-      }
     },
     {
       "id": "festival-master:shot-plan-060",
@@ -15897,7 +15737,7 @@
       "number": 1,
       "order": 1,
       "description": {
-        "en": "An incoming optical signal resolves on Elin’s display; urgent, she identifies Zao’s packet format, personal signature, and pre-crossing send.",
+        "en": "One continuous bridge take under 1 g: Rao identifies Zao’s packet, Voss orders playback, and the pointing-solution realization begins without leaving bridge geography. Seedance may invent internal coverage; no external shot boundaries.",
         "es": "needs_revision"
       },
       "locationId": "location:celestial-ardor-bridge",
@@ -15933,7 +15773,7 @@
           "en": "Pan; establishes geography and screen direction."
         }
       },
-      "durationMs": 4300,
+      "durationMs": 11700,
       "cuePlacements": [
         {
           "cueId": "festival-master:cue-music-zao-01-change",
@@ -15943,14 +15783,25 @@
           "cueId": "festival-master:cue-0123",
           "atMs": 0,
           "durationMs": 4300
+        },
+        {
+          "cueId": "festival-master:cue-0124",
+          "atMs": 4300,
+          "durationMs": 380
+        },
+        {
+          "cueId": "festival-master:cue-0125",
+          "atMs": 5100,
+          "durationMs": 6600
         }
       ],
       "takeIds": [
         "festival-master:shot-plan-060:take-01",
         "festival-master:shot-plan-060:take-02",
-        "festival-master:shot-plan-060:take-03"
+        "festival-master:shot-plan-060:take-03",
+        "festival-master:shot-plan-060:take-04"
       ],
-      "selectedTakeId": "festival-master:shot-plan-060:take-02",
+      "selectedTakeId": "festival-master:shot-plan-060:take-04",
       "offScreenCharacterIds": [
         "character:harlan",
         "character:okoye"
@@ -15961,7 +15812,7 @@
       }
     },
     {
-      "id": "festival-master:shot-plan-061",
+      "id": "festival-master:shot-plan-062",
       "sceneId": "festival-master:scene-21",
       "beatIds": [
         "festival-master:beat-21"
@@ -15969,89 +15820,10 @@
       "number": 2,
       "order": 2,
       "description": {
-        "en": "Voss orders the authenticated packet opened at once while Rao stays at the console ready to play it.",
+        "en": "One continuous bridge take under 1 g: the crew watches Zao’s vault recording on a large English-only diegetic bridge monitor (vault microgravity and the impulse package appear only inside the monitor inset). Seedance may invent internal coverage and monitor reframes; no external shot boundaries.",
         "es": "needs_revision"
       },
       "locationId": "location:celestial-ardor-bridge",
-      "visibleRefs": [
-        {
-          "kind": "character",
-          "id": "character:voss",
-          "role": "speaking, in focus"
-        },
-        {
-          "kind": "character",
-          "id": "character:harlan",
-          "role": "present, listening"
-        },
-        {
-          "kind": "character",
-          "id": "character:sorell",
-          "role": "present, listening"
-        },
-        {
-          "kind": "character",
-          "id": "character:rao",
-          "role": "present, listening"
-        },
-        {
-          "kind": "character",
-          "id": "character:okoye",
-          "role": "present, listening"
-        }
-      ],
-      "composition": {
-        "size": "ELS",
-        "aspectRatio": "16:9",
-        "framing": {
-          "es": "Gran plano general sobre Voss, Harlan, Sorell, Elin Rao, Okoye; Fija; mantiene la línea de mirada y la continuidad del eje de acción.",
-          "en": "Extreme long shot on Voss, Harlan, Sorell, Elin Rao, Okoye; Locked; preserves eyeline and action-axis continuity."
-        }
-      },
-      "camera": {
-        "movement": "locked",
-        "movementDescription": {
-          "es": "Fija; mantiene la línea de mirada y la continuidad del eje de acción.",
-          "en": "Locked; preserves eyeline and action-axis continuity."
-        }
-      },
-      "durationMs": 7400,
-      "cuePlacements": [
-        {
-          "cueId": "festival-master:cue-0124",
-          "atMs": 0,
-          "durationMs": 380
-        },
-        {
-          "cueId": "festival-master:cue-0125",
-          "atMs": 800,
-          "durationMs": 6600
-        }
-      ],
-      "takeIds": [
-        "festival-master:shot-plan-061:take-01",
-        "festival-master:shot-plan-061:take-02",
-        "festival-master:shot-plan-061:take-03"
-      ],
-      "selectedTakeId": "festival-master:shot-plan-061:take-02",
-      "purpose": {
-        "es": "Escena «Llega el mensaje de Zao»: Voss — escuchar la advertencia retenida.",
-        "en": "Scene \"Zao’s message arrives\": Voss — hear the withheld warning."
-      }
-    },
-    {
-      "id": "festival-master:shot-plan-062",
-      "sceneId": "festival-master:scene-21",
-      "beatIds": [
-        "festival-master:beat-21"
-      ],
-      "number": 3,
-      "order": 3,
-      "description": {
-        "en": "Flashback: Zao, determined and braced in microgravity, records her warning beside the armed Proxima impulse package in the shielding vault—identifying mass, timer, neutron signature, and the protected controller.",
-        "es": "needs_revision"
-      },
-      "locationId": "location:celestial-ardor-inner-shielding-vault",
       "visibleRefs": [
         {
           "kind": "character",
@@ -16079,83 +15851,38 @@
           "en": "Tracking; preserves eyeline and action-axis continuity."
         }
       },
-      "durationMs": 14780,
+      "durationMs": 35640,
       "cuePlacements": [
         {
           "cueId": "festival-master:cue-0126",
           "atMs": 0,
           "durationMs": 14780
+        },
+        {
+          "cueId": "festival-master:cue-0127",
+          "atMs": 14780,
+          "durationMs": 12640
+        },
+        {
+          "cueId": "festival-master:cue-0128",
+          "atMs": 27420,
+          "durationMs": 8220
         }
       ],
       "takeIds": [
         "festival-master:shot-plan-062:take-01",
         "festival-master:shot-plan-062:take-02",
-        "festival-master:shot-plan-062:take-03"
+        "festival-master:shot-plan-062:take-03",
+        "festival-master:shot-plan-062:take-04"
       ],
-      "selectedTakeId": "festival-master:shot-plan-062:take-02",
+      "selectedTakeId": "festival-master:shot-plan-062:take-04",
       "purpose": {
         "es": "Escena «Llega el mensaje de Zao»: Zao — identificar el arma y evitar una respuesta fatal.",
         "en": "Scene \"Zao’s message arrives\": Zao — identify the weapon and prevent a fatal response."
-      }
-    },
-    {
-      "id": "festival-master:shot-plan-063",
-      "sceneId": "festival-master:scene-21",
-      "beatIds": [
-        "festival-master:beat-21"
-      ],
-      "number": 4,
-      "order": 4,
-      "description": {
-        "en": "Zao, resolved and still vault-braced in microgravity, continues the recorded explanation as a faint English-only diagram of the wormhole and a lead point ahead of it appears superimposed.",
-        "es": "needs_revision"
       },
-      "locationId": "location:celestial-ardor-inner-shielding-vault",
-      "visibleRefs": [
-        {
-          "kind": "character",
-          "id": "character:zao",
-          "role": "in focus, center frame"
-        }
-      ],
-      "composition": {
-        "size": "CU",
-        "aspectRatio": "16:9",
-        "framing": {
-          "es": "Primer plano sobre Zao; Dolly; mantiene la línea de mirada y la continuidad del eje de acción.",
-          "en": "Close-up on Zao; Dolly; preserves eyeline and action-axis continuity."
-        }
-      },
-      "camera": {
-        "movement": "dolly",
-        "movementDescription": {
-          "es": "Dolly; mantiene la línea de mirada y la continuidad del eje de acción.",
-          "en": "Dolly; preserves eyeline and action-axis continuity."
-        }
-      },
-      "durationMs": 20860,
-      "cuePlacements": [
-        {
-          "cueId": "festival-master:cue-0127",
-          "atMs": 0,
-          "durationMs": 12540
-        },
-        {
-          "cueId": "festival-master:cue-0128",
-          "atMs": 12640,
-          "durationMs": 8220
-        }
-      ],
-      "takeIds": [
-        "festival-master:shot-plan-063:take-01",
-        "festival-master:shot-plan-063:take-02",
-        "festival-master:shot-plan-063:take-03"
-      ],
-      "selectedTakeId": "festival-master:shot-plan-063:take-02",
-      "purpose": {
-        "es": "Escena «Llega el mensaje de Zao»: Zao — revelar por qué el intercepto complejo fue la única advertencia útil; Zao — dar una pista segura, señalar el peligro inmediato y despedirse.",
-        "en": "Scene \"Zao’s message arrives\": Zao — reveal why the complex intercept was the only useful warning; Zao — supply a safe lead, identify immediate danger, and say farewell."
-      }
+      "secondaryLocationIds": [
+        "location:celestial-ardor-inner-shielding-vault"
+      ]
     },
     {
       "id": "festival-master:shot-plan-064",
@@ -16163,8 +15890,8 @@
       "beatIds": [
         "festival-master:beat-21"
       ],
-      "number": 5,
-      "order": 5,
+      "number": 3,
+      "order": 3,
       "description": {
         "en": "Back on the bridge under 1 g, Voss urgently aborts the approach and orders Harlan held; Okoye moves to block him.",
         "es": "needs_revision"
@@ -16403,7 +16130,7 @@
       "number": 3,
       "order": 3,
       "description": {
-        "en": "Elin Rao, firm, sets the proportionate standard: enough to isolate Harlan, enough to release Sorell. Voss looks between Harlan and still-retained Sorell, seeing how much of his case came from his own first mistake.",
+        "en": "Elin Rao, firm, sets the proportionate standard: enough to isolate Harlan, enough to release Zao. Voss looks between Harlan and Sorell, seeing how much of his case came from his own first mistake.",
         "es": "needs_revision"
       },
       "locationId": "location:celestial-ardor-bridge",
@@ -16727,8 +16454,8 @@
       "number": 1,
       "order": 1,
       "description": {
-        "es": "Harlan extiende su dispositivo de muñeca hacia Okoye; ella lo alcanza sin aflojar la postura. Persuasivo, en voz baja: «Te conozco, Dara. Sé lo que te cuesta el deber».",
-        "en": "Harlan extends his wrist device toward Okoye; she reaches for it without relaxing her stance. Persuasive, quiet: \"I know you, Dara. I know what duty costs you.\"."
+        "en": "One continuous bridge take under 1 g: Harlan offers the wrist device, Okoye demands it as a revocation alert flashes, then Harlan shoves her and dives into the service shaft while Okoye and Voss react. Seedance may invent internal coverage; no external shot boundaries.",
+        "es": "needs_revision"
       },
       "locationId": "location:celestial-ardor-bridge",
       "secondaryLocationIds": [
@@ -16776,7 +16503,7 @@
           "en": "Dolly; establishes geography and screen direction."
         }
       },
-      "durationMs": 7480,
+      "durationMs": 23580,
       "cuePlacements": [
         {
           "cueId": "festival-master:cue-0144",
@@ -16787,170 +16514,42 @@
           "cueId": "festival-master:cue-0145",
           "atMs": 4300,
           "durationMs": 3180
-        }
-      ],
-      "takeIds": [
-        "festival-master:shot-plan-071:take-01",
-        "festival-master:shot-plan-071:take-02"
-      ],
-      "selectedTakeId": "festival-master:shot-plan-071:take-02",
-      "purpose": {
-        "es": "Escena «La muñeca ofrecida»: Harlan — comprar un instante de distracción.",
-        "en": "Scene \"The offered wrist\": Harlan — buy one distracted instant."
-      }
-    },
-    {
-      "id": "festival-master:shot-plan-072",
-      "sceneId": "festival-master:scene-24",
-      "beatIds": [
-        "festival-master:beat-24"
-      ],
-      "number": 2,
-      "order": 2,
-      "description": {
-        "es": "Okoye, firme, completa la sujeción: «Dame el dispositivo». Un aviso de revocación parpadea cerca; sus ojos se desvían hacia él por un instante.",
-        "en": "Okoye, firm, completes the restraint: \"Give me the device.\" A revocation alert flashes nearby; her eyes flick to it for one instant."
-      },
-      "locationId": "location:celestial-ardor-bridge",
-      "visibleRefs": [
-        {
-          "kind": "character",
-          "id": "character:harlan",
-          "role": "present, listening"
         },
-        {
-          "kind": "character",
-          "id": "character:okoye",
-          "role": "speaking, in focus"
-        },
-        {
-          "kind": "character",
-          "id": "character:voss",
-          "role": "present, listening"
-        },
-        {
-          "kind": "character",
-          "id": "character:sorell",
-          "role": "present, listening"
-        }
-      ],
-      "composition": {
-        "size": "MCU",
-        "aspectRatio": "16:9",
-        "framing": {
-          "es": "Plano medio corto sobre Harlan, Okoye, Voss, Sorell; Paneo; mantiene la línea de mirada y la continuidad del eje de acción.",
-          "en": "Medium close-up on Harlan, Okoye, Voss, Sorell; Pan; preserves eyeline and action-axis continuity."
-        }
-      },
-      "camera": {
-        "movement": "pan",
-        "movementDescription": {
-          "es": "Paneo; mantiene la línea de mirada y la continuidad del eje de acción.",
-          "en": "Pan; preserves eyeline and action-axis continuity."
-        }
-      },
-      "durationMs": 8000,
-      "cuePlacements": [
         {
           "cueId": "festival-master:cue-0146",
-          "atMs": 0,
+          "atMs": 7480,
           "durationMs": 1260
         },
         {
           "cueId": "festival-master:cue-0147",
-          "atMs": 1500,
+          "atMs": 8980,
           "durationMs": 6500
-        }
-      ],
-      "takeIds": [
-        "festival-master:shot-plan-072:take-01",
-        "festival-master:shot-plan-072:take-02"
-      ],
-      "selectedTakeId": "festival-master:shot-plan-072:take-02",
-      "purpose": {
-        "es": "Escena «La muñeca ofrecida»: Okoye — completar la sujeción.",
-        "en": "Scene \"The offered wrist\": Okoye — complete the restraint."
-      }
-    },
-    {
-      "id": "festival-master:shot-plan-073",
-      "sceneId": "festival-master:scene-24",
-      "beatIds": [
-        "festival-master:beat-24"
-      ],
-      "number": 3,
-      "order": 3,
-      "description": {
-        "es": "En ese instante, Harlan empuja a Okoye contra la consola y se zambulle en el conducto de servicio, cerrando la escotilla tras él. Okoye, furiosa, da la alarma: «¡Harlan!». Por radio, Voss advierte a Elin: «Elin, va hacia popa».",
-        "en": "In that instant Harlan drives Okoye into the console and dives into the service shaft, locking the hatch behind him. Okoye, angry, raises the alarm: \"Harlan!\" Over comm, Voss warns Elin: \"Elin, he's coming aft.\"."
-      },
-      "locationId": "location:celestial-ardor-bridge",
-      "secondaryLocationIds": [
-        "location:celestial-ardor-service-cylinder"
-      ],
-      "visibleRefs": [
-        {
-          "kind": "character",
-          "id": "character:harlan",
-          "role": "speaking, in focus"
         },
-        {
-          "kind": "character",
-          "id": "character:okoye",
-          "role": "speaking, in focus"
-        },
-        {
-          "kind": "character",
-          "id": "character:voss",
-          "role": "speaking, in focus"
-        },
-        {
-          "kind": "character",
-          "id": "character:sorell",
-          "role": "present, listening"
-        }
-      ],
-      "composition": {
-        "size": "ELS",
-        "aspectRatio": "16:9",
-        "framing": {
-          "es": "Gran plano general sobre Harlan, Okoye, Voss, Sorell; Fija; mantiene la línea de mirada y la continuidad del eje de acción.",
-          "en": "Extreme long shot on Harlan, Okoye, Voss, Sorell; Locked; preserves eyeline and action-axis continuity."
-        }
-      },
-      "camera": {
-        "movement": "locked",
-        "movementDescription": {
-          "es": "Fija; mantiene la línea de mirada y la continuidad del eje de acción.",
-          "en": "Locked; preserves eyeline and action-axis continuity."
-        }
-      },
-      "durationMs": 8100,
-      "cuePlacements": [
         {
           "cueId": "festival-master:cue-0148",
-          "atMs": 0,
+          "atMs": 15480,
           "durationMs": 380
         },
         {
           "cueId": "festival-master:cue-0149",
-          "atMs": 4200,
+          "atMs": 19680,
           "durationMs": 1900
         },
         {
           "cueId": "festival-master:cue-0150",
-          "atMs": 6200,
+          "atMs": 21680,
           "durationMs": 1900
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-073:take-01",
-        "festival-master:shot-plan-073:take-02"
+        "festival-master:shot-plan-071:take-01",
+        "festival-master:shot-plan-071:take-02",
+        "festival-master:shot-plan-071:take-03"
       ],
-      "selectedTakeId": "festival-master:shot-plan-073:take-02",
+      "selectedTakeId": "festival-master:shot-plan-071:take-03",
       "purpose": {
-        "es": "Escena «La muñeca ofrecida»: Okoye — dar la alarma; Voss — hacerle ver a Elin la amenaza que no ve; Harlan — decir su objetivo inmediato, no explicar el plan.",
-        "en": "Scene \"The offered wrist\": Okoye — raise the alarm; Voss — give Elin the threat she cannot see; Harlan — state his immediate goal, not explain the plot."
+        "en": "Hold the full Scene 24 device/escape beat in one Seedance envelope.",
+        "es": "needs_revision"
       }
     },
     {
@@ -20154,7 +19753,8 @@
           "en": "Generated storyboard still; pending editorial review."
         }
       },
-      "imageAssetId": "asset:festival-master-storyboard-040"
+      "imageAssetId": "asset:festival-master-storyboard-040",
+      "videoAssetId": "asset:festival-master-shot-plan-040-rev-1-video-1-video"
     },
     {
       "id": "festival-master:shot-plan-040b:take-01",
@@ -20216,7 +19816,8 @@
           "es": "Imagen de storyboard independiente regenerada; pendiente de revisión editorial."
         }
       },
-      "imageAssetId": "asset:festival-master-storyboard-041"
+      "imageAssetId": "asset:festival-master-storyboard-041",
+      "videoAssetId": "asset:festival-master-shot-plan-041-rev-1-video-1-video"
     },
     {
       "id": "festival-master:shot-plan-042:take-01",
@@ -20495,6 +20096,39 @@
       }
     },
     {
+      "id": "festival-master:shot-plan-050:take-01",
+      "shotId": "festival-master:shot-plan-050",
+      "number": 1,
+      "status": "candidate",
+      "generation": {
+        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Medium shot. Harlan, persuasive, presents a unified theory to the seated bridge crew:. Setting: the Celestial Ardor's compact circular bridge — six arc-mounted crew stations, a separate captain's chair, a six-seat meeting table, matte light-gray and warm off-white composite panels with muted slate-blue/teal accents, a helical stair ringing the central opening with continuous outer rails, curved pressure-hull wall with a few small reinforced windows, only the displays glowing blue. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. On frame: Voss, Harlan, Sorell, Elin Rao, Okoye; static appearance per the attached reference sheets. Frame implies a tracking move, establishing the space and holding consistent screen direction. Aspect ratio 16:9.",
+        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
+        "referenceAssetIds": [
+          "asset:character-voss-sheet",
+          "asset:character-harlan-sheet",
+          "asset:character-sorell-sheet",
+          "asset:character-rao-sheet",
+          "asset:character-okoye-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ],
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-12T00:00:00.000Z"
+      },
+      "imageAssetId": "asset:festival-master-storyboard-050",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "quality"
+        ],
+        "sourceShotId": "festival-master:shot-plan-050",
+        "explanation": {
+          "es": "Prompt depurado de apariencia restatada de referencias; regenerar con las hojas adjuntas.",
+          "en": "Prompt scrubbed of restated reference appearance; regenerate against the attached sheets."
+        }
+      }
+    },
+    {
       "id": "festival-master:shot-plan-054:take-01",
       "shotId": "festival-master:shot-plan-054",
       "number": 1,
@@ -20525,37 +20159,6 @@
         "explanation": {
           "es": "Cambió la lista de referencias o una hoja referenciada (conciliación en cuadro, retiro de exterior como interior, o hoja del cilindro central reemplazada el 2026-09-13); regenerar con las referencias vigentes.",
           "en": "Reference list or a referenced sheet changed (on-frame reconciliation, exterior-for-interior removal, or the central-access sheet replaced on 2026-09-13); regenerate against the current references."
-        }
-      }
-    },
-    {
-      "id": "festival-master:shot-plan-055:take-01",
-      "shotId": "festival-master:shot-plan-055",
-      "number": 1,
-      "status": "candidate",
-      "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Medium shot. Okoye, wary, reports the vault's obstruction over comm. Harlan, deceptive, floats nearby:. Setting: the ship's main axial access cylinder — a long handrail-lined trunk with rest landings and hatches, built for hand-over-hand movement. Microgravity: hair, loose straps, tools, and small debris drift freely; bodies move by handhold, not footing. On frame: Okoye, Harlan; static appearance per the attached reference sheets. Frame implies a dolly move, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
-        "referenceAssetIds": [
-          "asset:character-okoye-sheet",
-          "asset:character-harlan-sheet",
-          "asset:location-celestial-ardor-central-access-sheet"
-        ],
-        "provider": "OpenAI",
-        "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
-      },
-      "imageAssetId": "asset:festival-master-storyboard-055",
-      "imageStatus": {
-        "status": "needs_regeneration",
-        "reasons": [
-          "continuity_error",
-          "wrong_composition"
-        ],
-        "sourceShotId": "festival-master:shot-plan-055",
-        "explanation": {
-          "es": "Cambió la lista de referencias o una hoja referenciada (conciliación en cuadro, retiro de exterior como interior, o hoja del cilindro central reemplazada el 2026-09-13); regenerar con las referencias vigentes. Tamaño de plano placeholder reautorado para ajustarse a la acción en pantalla.",
-          "en": "Reference list or a referenced sheet changed (on-frame reconciliation, exterior-for-interior removal, or the central-access sheet replaced on 2026-09-13); regenerate against the current references. Placeholder composition size re-authored to fit the on-screen action."
         }
       }
     },
@@ -20625,68 +20228,6 @@
       "imageAssetId": "asset:festival-master-storyboard-057"
     },
     {
-      "id": "festival-master:shot-plan-058:take-01",
-      "shotId": "festival-master:shot-plan-058",
-      "number": 1,
-      "status": "candidate",
-      "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Over-the-shoulder shot. Voss, curious, authorizes further comparison:. Setting: the Celestial Ardor's compact circular bridge — six arc-mounted crew stations, a separate captain's chair, a six-seat meeting table, matte light-gray and warm off-white composite panels with muted slate-blue/teal accents, a helical stair ringing the central opening with continuous outer rails, curved pressure-hull wall with a few small reinforced windows, only the displays glowing blue. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. On frame: Voss, Harlan, Sorell, Elin Rao, Okoye; static appearance per the attached reference sheets. Frame implies a tracking move, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
-        "referenceAssetIds": [
-          "asset:character-voss-sheet",
-          "asset:character-harlan-sheet",
-          "asset:character-sorell-sheet",
-          "asset:character-rao-sheet",
-          "asset:character-okoye-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
-        ],
-        "provider": "OpenAI",
-        "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
-      },
-      "imageAssetId": "asset:festival-master-storyboard-058",
-      "imageStatus": {
-        "status": "needs_regeneration",
-        "reasons": [
-          "quality"
-        ],
-        "sourceShotId": "festival-master:shot-plan-058",
-        "explanation": {
-          "es": "Prompt depurado de apariencia restatada de referencias; regenerar con las hojas adjuntas.",
-          "en": "Prompt scrubbed of restated reference appearance; regenerate against the attached sheets."
-        }
-      }
-    },
-    {
-      "id": "festival-master:shot-plan-059:take-01",
-      "shotId": "festival-master:shot-plan-059",
-      "number": 1,
-      "status": "candidate",
-      "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Medium close-up. Alone for a moment, Harlan watches the unrecoverable burst record, mourning:. Setting: the Celestial Ardor's compact circular bridge — six arc-mounted crew stations, a separate captain's chair, a six-seat meeting table, matte light-gray and warm off-white composite panels with muted slate-blue/teal accents, a helical stair ringing the central opening with continuous outer rails, curved pressure-hull wall with a few small reinforced windows, only the displays glowing blue. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. On frame: Harlan; static appearance per the attached reference sheets. Frame implies a dolly move, a clean, orthogonal, legible insert framing. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
-        "referenceAssetIds": [
-          "asset:character-harlan-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
-        ],
-        "provider": "OpenAI",
-        "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
-      },
-      "imageAssetId": "asset:festival-master-storyboard-059",
-      "imageStatus": {
-        "status": "needs_regeneration",
-        "reasons": [
-          "wrong_composition"
-        ],
-        "sourceShotId": "festival-master:shot-plan-059",
-        "explanation": {
-          "es": "Tamaño de plano placeholder reautorado para ajustarse a la acción en pantalla.",
-          "en": "Placeholder composition size re-authored to fit the on-screen action."
-        }
-      }
-    },
-    {
       "id": "festival-master:shot-plan-060:take-01",
       "shotId": "festival-master:shot-plan-060",
       "number": 1,
@@ -20719,39 +20260,6 @@
       }
     },
     {
-      "id": "festival-master:shot-plan-061:take-01",
-      "shotId": "festival-master:shot-plan-061",
-      "number": 1,
-      "status": "candidate",
-      "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Extreme long shot. Voss, decisive, orders it opened at once:. Setting: the Celestial Ardor's compact circular bridge — six arc-mounted crew stations, a separate captain's chair, a six-seat meeting table, matte light-gray and warm off-white composite panels with muted slate-blue/teal accents, a helical stair ringing the central opening with continuous outer rails, curved pressure-hull wall with a few small reinforced windows, only the displays glowing blue. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. On frame: Voss, Harlan, Sorell, Elin Rao, Okoye; static appearance per the attached reference sheets. Locked, static frame, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
-        "referenceAssetIds": [
-          "asset:character-voss-sheet",
-          "asset:character-harlan-sheet",
-          "asset:character-sorell-sheet",
-          "asset:character-rao-sheet",
-          "asset:character-okoye-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
-        ],
-        "provider": "OpenAI",
-        "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
-      },
-      "imageAssetId": "asset:festival-master-storyboard-061",
-      "imageStatus": {
-        "status": "needs_regeneration",
-        "reasons": [
-          "canon_mismatch"
-        ],
-        "sourceShotId": "festival-master:shot-plan-061",
-        "explanation": {
-          "es": "Prompt o metadatos de presencia corregidos contra el canon maestro/técnico (gravedad, autoridad de ubicación o presencia de personajes); regenerar con las referencias vigentes.",
-          "en": "Prompt or presence metadata corrected against the master/technical canon (gravity, location authority, or character presence); regenerate against the current references."
-        }
-      }
-    },
-    {
       "id": "festival-master:shot-plan-062:take-01",
       "shotId": "festival-master:shot-plan-062",
       "number": 1,
@@ -20779,35 +20287,6 @@
         "explanation": {
           "es": "Cambió la lista de referencias o una hoja referenciada (conciliación en cuadro, retiro de exterior como interior, o hoja del cilindro central reemplazada el 2026-09-13); regenerar con las referencias vigentes. Prompt depurado de apariencia restatada de referencias; regenerar con las hojas adjuntas.",
           "en": "Reference list or a referenced sheet changed (on-frame reconciliation, exterior-for-interior removal, or the central-access sheet replaced on 2026-09-13); regenerate against the current references. Prompt scrubbed of restated reference appearance; regenerate against the attached sheets."
-        }
-      }
-    },
-    {
-      "id": "festival-master:shot-plan-063:take-01",
-      "shotId": "festival-master:shot-plan-063",
-      "number": 1,
-      "status": "candidate",
-      "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Close-up. Zao, resolved, continues her recorded explanation as a faint diagram of the wormhole and a lead point ahead of it appears superimposed:. Setting: the inner shielding vault — a recessed, radiation-shielded enclosure built to isolate hazardous research equipment, heavily shielded and restricted-access on every surface. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. On frame: Zao; static appearance per the attached reference sheets. Detail. A simple superimposed English-labeled diagram showing the wormhole mouth and a lead point ahead of the ship's post-crossing position — the only visual explanation of the intercept geometry. Frame implies a dolly move, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
-        "referenceAssetIds": [
-          "asset:character-zao-sheet",
-          "asset:location-celestial-ardor-inner-shielding-vault-sheet"
-        ],
-        "provider": "OpenAI",
-        "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
-      },
-      "imageAssetId": "asset:festival-master-storyboard-063",
-      "imageStatus": {
-        "status": "needs_regeneration",
-        "reasons": [
-          "quality"
-        ],
-        "sourceShotId": "festival-master:shot-plan-063",
-        "explanation": {
-          "es": "Prompt depurado de apariencia restatada de referencias; regenerar con las hojas adjuntas.",
-          "en": "Prompt scrubbed of restated reference appearance; regenerate against the attached sheets."
         }
       }
     },
@@ -21075,71 +20554,6 @@
         "explanation": {
           "es": "Cambió la lista de referencias o una hoja referenciada (conciliación en cuadro, retiro de exterior como interior, o hoja del cilindro central reemplazada el 2026-09-13); regenerar con las referencias vigentes. Tamaño de plano placeholder reautorado para ajustarse a la acción en pantalla.",
           "en": "Reference list or a referenced sheet changed (on-frame reconciliation, exterior-for-interior removal, or the central-access sheet replaced on 2026-09-13); regenerate against the current references. Placeholder composition size re-authored to fit the on-screen action."
-        }
-      }
-    },
-    {
-      "id": "festival-master:shot-plan-072:take-01",
-      "shotId": "festival-master:shot-plan-072",
-      "number": 1,
-      "status": "candidate",
-      "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Medium close-up. Okoye, firm, completes the restraint. A revocation alert flashes nearby; her eyes flick to it for one instant. Setting: the Celestial Ardor's compact circular bridge — six arc-mounted crew stations, a separate captain's chair, a six-seat meeting table, matte light-gray and warm off-white composite panels with muted slate-blue/teal accents, a helical stair ringing the central opening with continuous outer rails, curved pressure-hull wall with a few small reinforced windows, only the displays glowing blue. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. On frame: Harlan, Okoye, Voss, Sorell; static appearance per the attached reference sheets. Detail. A small alert indicator flashing on a nearby console, English text only. Frame implies a slow pan, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
-        "referenceAssetIds": [
-          "asset:character-harlan-sheet",
-          "asset:character-okoye-sheet",
-          "asset:character-voss-sheet",
-          "asset:character-sorell-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
-        ],
-        "provider": "OpenAI",
-        "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
-      },
-      "imageAssetId": "asset:festival-master-storyboard-072",
-      "imageStatus": {
-        "status": "needs_regeneration",
-        "reasons": [
-          "quality"
-        ],
-        "sourceShotId": "festival-master:shot-plan-072",
-        "explanation": {
-          "es": "Prompt depurado de apariencia restatada de referencias; regenerar con las hojas adjuntas.",
-          "en": "Prompt scrubbed of restated reference appearance; regenerate against the attached sheets."
-        }
-      }
-    },
-    {
-      "id": "festival-master:shot-plan-073:take-01",
-      "shotId": "festival-master:shot-plan-073",
-      "number": 1,
-      "status": "candidate",
-      "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Extreme long shot. In that instant Harlan drives Okoye into the console and dives into the service shaft, locking the hatch behind him. Okoye, angry, raises the alarm. Over comm, Voss warns Elin:. Setting: the Celestial Ardor's compact circular bridge — six arc-mounted crew stations, a separate captain's chair, a six-seat meeting table, matte light-gray and warm off-white composite panels with muted slate-blue/teal accents, a helical stair ringing the central opening with continuous outer rails, curved pressure-hull wall with a few small reinforced windows, only the displays glowing blue; secondary: the narrow, restricted service cylinder — peripheral technical trays, maintenance handholds, a dark rounded-corner hatch at bridge level beside a hinged tray exposing wired-communications couplers. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. On frame: Harlan, Okoye, Voss, Sorell; static appearance per the attached reference sheets. Locked, static frame, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
-        "referenceAssetIds": [
-          "asset:character-harlan-sheet",
-          "asset:character-okoye-sheet",
-          "asset:character-voss-sheet",
-          "asset:character-sorell-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:location-celestial-ardor-service-cylinder-sheet"
-        ],
-        "provider": "OpenAI",
-        "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
-      },
-      "imageAssetId": "asset:festival-master-storyboard-073",
-      "imageStatus": {
-        "status": "needs_regeneration",
-        "reasons": [
-          "quality"
-        ],
-        "sourceShotId": "festival-master:shot-plan-073",
-        "explanation": {
-          "es": "Prompt depurado de apariencia restatada de referencias; regenerar con las hojas adjuntas.",
-          "en": "Prompt scrubbed of restated reference appearance; regenerate against the attached sheets."
         }
       }
     },
@@ -22711,8 +22125,7 @@
           "asset:character-harlan-sheet",
           "asset:location-celestial-ardor-reactor-service-bay-sheet",
           "asset:object-optical-contingency-transmitter-sheet"
-        ],
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Medium shot in the Celestial Ardor outer reactor service bay. Microgravity: bodies and tools drift; Zao braces at the optical console; Harlan closes distance from the service-hatch approach by controlled pushes. Static appearance per attached character and location sheets. No burned-in spoken dialogue or subtitles; English-only diegetic UI if any readout is visible. Frame holds consistent screen direction. Aspect ratio 16:9."
+        ]
       }
     },
     {
@@ -22843,15 +22256,16 @@
       "id": "festival-master:shot-plan-054:take-02",
       "shotId": "festival-master:shot-plan-054",
       "number": 2,
-      "status": "selected",
+      "status": "candidate",
       "imageAssetId": "asset:festival-master-stretch-central-vault-obstruction-054-056-panel-01",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-054",
         "explanation": {
-          "en": "Scene 19 staged in outer reactor service bay (bottom of central-access shaft). Still location sheet: reactor-service-bay only.",
+          "en": "Still regenerated from the authored scene prompt and reference set; editorial review pending.",
           "es": "needs_revision"
         }
       },
@@ -22859,42 +22273,17 @@
         "provider": "OpenAI",
         "model": "gpt-image-2",
         "generatedAt": "2026-09-15T22:10:45.564Z",
+        "visualStretchId": "festival-master:stretch-central-vault-obstruction-054-056",
+        "stretchJobId": "festival-master:stretch-central-vault-obstruction-054-056:rev-1",
+        "stretchDigest": "923ecef3a9b080bbae5990dcc1210310092b689a77023c459b049b461f14ef4b",
         "referenceAssetIds": [
           "asset:character-pair-okoye-voss-bridge-sheet",
           "asset:character-pair-voss-harlan-bridge-sheet",
           "asset:character-rao-sheet",
-          "asset:location-celestial-ardor-reactor-service-bay-sheet"
+          "asset:location-celestial-ardor-central-access-sheet",
+          "asset:location-celestial-ardor-inner-shielding-vault-sheet"
         ],
-        "prompt": "Use the supplied Okoye-Voss, Voss-Harlan, and Rao character sheets plus the Celestial Ardor outer reactor service bay location sheet as authoritative; ignore pair-sheet backgrounds. Generate one single grounded cinematic hard-science-fiction storyboard still, 16:9 landscape, photorealistic VFX render quality. At the third thrust cutoff, the outer reactor service bay at the bottom of the central-access shaft is in microgravity. Elin Rao and Okoye float beside the heavy sealed inner-shielding vault door here; Rao is screen left, the East-Asian scientist, and Okoye is center, the Black security officer with short natural hair. They use handholds or restrained tethers, with hair, loose straps, and small debris drifting; no planted footing. Show the bay's engineering workspace, the sealed vault door with local-lock panel, and handholds clearly; not the bridge, not the open helical central-access shaft as the primary volume, not a generic airlock, and not the vault interior. Harlan may appear soft in depth on an upper rail, younger, clean-shaven, dark-haired; Voss is remote only if suggested by a small comm inset, never a standing body. Cool bay practicals and door indicators, worn maintainable spacecraft. English-only diegetic UI if any, no spoken dialogue text. Independent still for this shot only — not a multi-panel combined sheet.",
-        "negativePrompt": "No subtitles, captions, logos, watermark, collage, contact sheet, multi-panel grid, non-English text, standing on a deck, planted footing, bridge interior, service cylinder, generic airlock, extra characters, Earth, Jupiter, Proxima, any planet."
-      }
-    },
-    {
-      "id": "festival-master:shot-plan-055:take-02",
-      "shotId": "festival-master:shot-plan-055",
-      "number": 2,
-      "status": "selected",
-      "imageAssetId": "asset:festival-master-stretch-central-vault-obstruction-054-056-panel-02",
-      "imageStatus": {
-        "status": "needs_regeneration",
-        "reasons": [
-          "continuity_error"
-        ],
-        "explanation": {
-          "en": "Scene 19 staged in outer reactor service bay (bottom of central-access shaft). Still location sheet: reactor-service-bay only.",
-          "es": "needs_revision"
-        }
-      },
-      "generation": {
-        "provider": "OpenAI",
-        "model": "gpt-image-2",
-        "generatedAt": "2026-09-15T22:10:45.564Z",
-        "referenceAssetIds": [
-          "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:character-pair-voss-harlan-bridge-sheet",
-          "asset:location-celestial-ardor-reactor-service-bay-sheet"
-        ],
-        "prompt": "Use the supplied Okoye-Voss and Voss-Harlan character sheets plus the Celestial Ardor outer reactor service bay location sheet as authoritative; ignore pair-sheet backgrounds. Generate one single grounded cinematic hard-science-fiction storyboard still, 16:9 landscape, photorealistic VFX render quality. In the outer reactor service bay at the bottom of the central-access shaft during microgravity, Okoye is the Black security officer with short natural hair, floating at the sealed vault-door handhold in the foreground/center, wary as she reports the local-lock obstruction over a handheld comm. Harlan is nearby on an upper rail, the younger clean-shaven dark-haired officer, deceptively steering suspicion toward Sorell; floating or braced by handhold, never standing. Keep bay workspace, sealed vault door, local-lock panel, and handholds clearly readable; not the bridge, not the open helical shaft as primary volume, not a generic airlock, not vault interior. Microgravity explicit: hair, straps, debris drift. Cool bay practicals and door indicators. English-only diegetic UI if any, no spoken dialogue text. Independent still for this shot only — not a multi-panel combined sheet.",
+        "prompt": "Use the supplied Okoye-Voss, Voss-Harlan, Rao character sheets, Celestial Ardor central-access location sheet, and inner-shielding vault sheet as authoritative; ignore pair-sheet backgrounds. Generate one single grounded cinematic hard-science-fiction storyboard still, 16:9 landscape, photorealistic VFX render quality. At the third thrust cutoff, the central-access trunk is in microgravity at the sealed inner-shielding vault door. Elin Rao and Okoye have just reached the heavy sealed vault door; Rao is screen left, the East-Asian scientist, and Okoye is center, the Black security officer with short natural hair. They float beside the door using handholds or restrained tethers, with hair, loose straps, and small debris drifting; no planted footing and no usable floor orientation. Show the massive circular shielding vault, local-lock panel, radial handholds, and central-access geometry clearly; it is not a generic airlock, bridge, or service cylinder. Harlan may appear soft in depth on an upper rail, younger, clean-shaven, dark-haired; Voss is remote only if suggested by a small comm inset, never a standing body. Establish the sealed vault as the immediate obstacle. Cool central-access practical strips and vault indicators, physically plausible worn spacecraft hardware. English-only diegetic UI if any, no spoken dialogue text.",
         "negativePrompt": "No subtitles, captions, logos, watermark, collage, contact sheet, multi-panel grid, non-English text, standing on a deck, planted footing, bridge interior, service cylinder, generic airlock, extra characters, Earth, Jupiter, Proxima, any planet."
       }
     },
@@ -22905,28 +22294,28 @@
       "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-central-vault-obstruction-054-056-panel-03",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "explanation": {
-          "en": "Scene 19 staged in outer reactor service bay (bottom of central-access shaft). Still location sheet: reactor-service-bay only.",
+          "en": "Scene 19 shot 056 opening frame from prior stretch panel-03; editorial review pending.",
           "es": "needs_revision"
         }
       },
       "generation": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-15T22:10:45.564Z",
         "referenceAssetIds": [
-          "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:location-celestial-ardor-reactor-service-bay-sheet",
           "asset:character-rao-sheet",
-          "asset:location-celestial-ardor-reactor-service-bay-sheet"
+          "asset:character-okoye-sheet",
+          "asset:character-harlan-sheet"
         ],
-        "prompt": "Use the supplied Okoye-Voss, Voss-Harlan, and Rao character sheets plus the Celestial Ardor outer reactor service bay location sheet as authoritative; ignore pair-sheet backgrounds. Generate one single grounded cinematic hard-science-fiction storyboard still, 16:9 landscape, photorealistic VFX render quality. In the outer reactor service bay at the bottom of the central-access shaft during the third thrust cutoff and microgravity, Rao is the East-Asian scientist, floating screen left at the bay workbench beside the sealed vault door, skeptical as she refuses an unsupported claim; Okoye is the Black security officer with short natural hair, floating at a handhold; Harlan is the younger clean-shaven dark-haired officer floating nearby on an upper rail. Rao has just magnetically clamped a compact diagnostic instrument to the workbench beside the vault door; make the clamped device visibly secured and prominent enough to recur later. Keep bodies on handholds or tether, never standing; hair, straps, debris drift. Show bay workbench, sealed vault door, local-lock panel, handholds, and diagnostic instrument clearly — not vault interior, not the open helical shaft as primary volume. Cool bay practicals and door indicators. English-only diegetic UI if any, no spoken dialogue text. Independent still for this shot only — not a multi-panel combined sheet.",
-        "negativePrompt": "No subtitles, captions, logos, watermark, collage, contact sheet, multi-panel grid, non-English text, standing on a deck, planted footing, bridge interior, service cylinder, generic airlock, unsecured instrument, extra characters, Earth, Jupiter, Proxima, any planet."
-      }
+        "prompt": "Single 16:9 microgravity outer reactor service bay still for shot 056 with diagnostic at workbench. No spoken dialogue.",
+        "videoPrompt": "Task: image-to-video (I2V). Generate one continuous 8.12-second Festival-master Scene 19 video for shot 056 from the attached single 16:9 still as the opening frame. Use attached identity references for Elin Rao, Dara Okoye, and Harlan plus the Celestial Ardor outer reactor service bay location sheet for continuity; ignore pair-sheet backgrounds. This is one continuous generation envelope; Seedance may choose restrained internal coverage and pacing. Do not force external shot boundaries.\n\nReference-role map:\n- asset:festival-master-stretch-central-vault-obstruction-054-056-panel-03: approved 16:9 opening frame; preserve its cast placement, screen direction, vault/local-lock geography, workbench/diagnostic presence, lighting, and microgravity state.\n- asset:character-rao-sheet / Okoye–Voss and Voss–Harlan pair sheets: identity and wardrobe for Rao (screen-left at the bay workbench/diagnostic), Okoye (handhold near vault), and Harlan (upper rail); ignore pair-sheet bridge backgrounds.\n- asset:location-celestial-ardor-reactor-service-bay-sheet: architecture language for the outer reactor service bay at the bottom of the central-access shaft; keep the sealed vault door and local-lock panel readable; do not open the vault interior as the primary volume.\nAudio-role map: use asset:voice-ref-en-elin for Rao only. Ignore any words in the sample; speak only the cue text below.\n\nContinuity and staging locks: remain in the outer reactor service bay / vault-access alcove. Explicit microgravity throughout — no planted feet, no walking, no 1 g standing; bodies move by handholds, controlled pushes, and slight inertial drift. Only Rao, Okoye, and Harlan appear. Sorell and Voss stay offscreen. Preserve the approved still's relative positions while adding the action beats.\n\nSuggested chronological beats (guidance; Seedance controls coverage):\n[0.0–1.66 seconds] From the approved still, Rao refuses the unsupported suspicion. Elin/Rao speaks with the attached Elin voice sample, saying exactly: {Could have doesn't mean did.}. Delivery dry and impatient.\n[1.66–5.50 seconds] Action only (no dialogue): the data beat lands as Rao finishes magnetically clamping / securing the compact time-reference diagnostic on the bay workbench beside the vault, then turns attention toward optical traces / logging displays. Keep the clamped diagnostic readable. Okoye and Harlan hold stations on handholds with small micro-g corrections.\n[5.50–8.12 seconds] Rao, already moving, speaks with the attached Elin voice sample, saying exactly: {Leave this logging. I want the burst.}. End on the three-person bay composition with the secured diagnostic and sealed local-lock vault access.\n\nCamera and finish: grounded hard-science-fiction photorealistic VFX; restrained pan allowed that preserves eyelines and action axis. No identity morphing, gravity reset, teleportation, or extra bodies. Generate native diegetic bay ambience plus the two spoken cues if enabled; no music, score, underscore, melody, BGM, tension pad, dramatic instrumentation, or trailer hit. No subtitles, captions, burned-in dialogue text, logos, watermarks, or non-English UI. Aspect ratio 16:9.\n"
+      },
+      "videoAssetId": "asset:festival-master-shot-plan-056-rev-1-video-1-video"
     },
     {
       "id": "festival-master:shot-plan-057:take-02",
@@ -22942,68 +22331,6 @@
         "explanation": {
           "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
           "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
-        }
-      },
-      "generation": {
-        "provider": "OpenAI",
-        "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T16:23:24.609Z",
-        "visualStretchId": "festival-master:stretch-bridge-vector-057-059",
-        "stretchJobId": "festival-master:stretch-bridge-vector-057-059:rev-1",
-        "stretchDigest": "5a7df708c225091b06035aacbefae084ddb11bb731619784592ad34a2da7d0aa",
-        "referenceAssetIds": [
-          "asset:character-pair-voss-harlan-bridge-sheet",
-          "asset:character-pair-rao-sorell-bridge-sheet",
-          "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
-        ]
-      }
-    },
-    {
-      "id": "festival-master:shot-plan-058:take-02",
-      "shotId": "festival-master:shot-plan-058",
-      "number": 2,
-      "status": "candidate",
-      "imageAssetId": "asset:festival-master-stretch-bridge-vector-057-059-panel-02",
-      "imageStatus": {
-        "status": "needs_review",
-        "reasons": [
-          "quality"
-        ],
-        "explanation": {
-          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
-        }
-      },
-      "generation": {
-        "provider": "OpenAI",
-        "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T16:23:24.609Z",
-        "visualStretchId": "festival-master:stretch-bridge-vector-057-059",
-        "stretchJobId": "festival-master:stretch-bridge-vector-057-059:rev-1",
-        "stretchDigest": "5a7df708c225091b06035aacbefae084ddb11bb731619784592ad34a2da7d0aa",
-        "referenceAssetIds": [
-          "asset:character-pair-voss-harlan-bridge-sheet",
-          "asset:character-pair-rao-sorell-bridge-sheet",
-          "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
-        ]
-      }
-    },
-    {
-      "id": "festival-master:shot-plan-059:take-02",
-      "shotId": "festival-master:shot-plan-059",
-      "number": 2,
-      "status": "candidate",
-      "imageAssetId": "asset:festival-master-stretch-bridge-vector-057-059-panel-03",
-      "imageStatus": {
-        "status": "needs_review",
-        "reasons": [
-          "quality"
-        ],
-        "explanation": {
-          "en": "Manually replaced scene 10 still with visible fixed-seat belts; approved for video reference.",
-          "es": "Imagen reemplazada manualmente de la escena 10 con cinturones visibles en los asientos fijos; aprobada para referencia de video."
         }
       },
       "generation": {
@@ -23053,37 +22380,6 @@
       }
     },
     {
-      "id": "festival-master:shot-plan-061:take-02",
-      "shotId": "festival-master:shot-plan-061",
-      "number": 2,
-      "status": "candidate",
-      "imageAssetId": "asset:festival-master-stretch-bridge-packet-open-060-061-panel-02",
-      "imageStatus": {
-        "status": "needs_review",
-        "reasons": [
-          "quality"
-        ],
-        "explanation": {
-          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
-        }
-      },
-      "generation": {
-        "provider": "OpenAI",
-        "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T16:23:24.854Z",
-        "visualStretchId": "festival-master:stretch-bridge-packet-open-060-061",
-        "stretchJobId": "festival-master:stretch-bridge-packet-open-060-061:rev-1",
-        "stretchDigest": "f102a11bbc337aa8073fabb9de9951d537614b35417248cf7f1d0da760b72488",
-        "referenceAssetIds": [
-          "asset:character-pair-voss-harlan-bridge-sheet",
-          "asset:character-pair-rao-sorell-bridge-sheet",
-          "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
-        ]
-      }
-    },
-    {
       "id": "festival-master:shot-plan-062:take-02",
       "shotId": "festival-master:shot-plan-062",
       "number": 2,
@@ -23114,11 +22410,43 @@
       }
     },
     {
-      "id": "festival-master:shot-plan-063:take-02",
-      "shotId": "festival-master:shot-plan-063",
+      "id": "festival-master:shot-plan-083:take-02",
+      "shotId": "festival-master:shot-plan-083",
       "number": 2,
-      "status": "candidate",
-      "imageAssetId": "asset:festival-master-stretch-vault-flashback-062-063-panel-02",
+      "status": "selected",
+      "imageAssetId": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-01",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T19:46:35.435Z",
+        "visualStretchId": "festival-master:stretch-bridge-greeting-prep-083-085",
+        "stretchJobId": "festival-master:stretch-bridge-greeting-prep-083-085:rev-1",
+        "stretchDigest": "5b6b8a999b7ef1160f91c1cc6073393a6650fe97e435d34e99352fb9743d2420",
+        "referenceAssetIds": [
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-velari-station-sheet"
+        ]
+      },
+      "videoAssetId": "asset:festival-master-shot-plan-083-rev-1-video-1-video"
+    },
+    {
+      "id": "festival-master:shot-plan-084:take-02",
+      "shotId": "festival-master:shot-plan-084",
+      "number": 2,
+      "status": "selected",
+      "imageAssetId": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-02",
       "imageStatus": {
         "status": "needs_review",
         "reasons": [
@@ -23132,104 +22460,18 @@
       "generation": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T16:23:25.082Z",
-        "visualStretchId": "festival-master:stretch-vault-flashback-062-063",
-        "stretchJobId": "festival-master:stretch-vault-flashback-062-063:rev-1",
-        "stretchDigest": "426322d30f1240322e4fb605608da7e3dd785d798563c12f7fd71069eb1d8ff4",
+        "generatedAt": "2026-09-14T19:46:35.435Z",
+        "visualStretchId": "festival-master:stretch-bridge-greeting-prep-083-085",
+        "stretchJobId": "festival-master:stretch-bridge-greeting-prep-083-085:rev-1",
+        "stretchDigest": "5b6b8a999b7ef1160f91c1cc6073393a6650fe97e435d34e99352fb9743d2420",
         "referenceAssetIds": [
-          "asset:character-zao-sheet",
-          "asset:location-celestial-ardor-inner-shielding-vault-sheet",
-          "asset:object-proxima-geophysical-impulse-package-sheet"
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-velari-station-sheet"
         ]
-      }
-    },
-    {
-      "id": "festival-master:shot-plan-083:take-02",
-      "shotId": "festival-master:shot-plan-083",
-      "number": 2,
-      "status": "selected",
-      "imageAssetId": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-01",
-      "imageStatus": {
-        "status": "current",
-        "reasons": [
-          "quality"
-        ],
-        "explanation": {
-          "en": "Author approved Festival-master scene 28 greeting-prep stills (2026-09-16).",
-          "es": "needs_revision"
-        }
       },
-      "generation": {
-        "provider": "OpenAI",
-        "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T19:46:35.435Z",
-        "referenceAssetIds": [
-          "asset:character-pair-rao-sorell-bridge-sheet",
-          "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:location-velari-station-sheet"
-        ],
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Medium shot on the Celestial Ardor bridge under steady 1 g: feet planted, normal weight, no floating debris. Sorell is free and working the translator/greeting preparation at her station; Voss at command; Rao at analysis; Okoye at security. Hull greeting display readable as English-only diegetic light geometry through the bridge view if framed. Static appearance per attached pair/location sheets. No burned-in spoken dialogue or subtitles. Aspect ratio 16:9.",
-        "videoPrompt": "Generate one 6.67-second Festival-master Scene 28 video from the attached single 16:9 bridge still as the opening frame (I2V). Use attached identity sheets for Sorell, Voss, Elin Rao, and Okoye, and the Celestial Ardor bridge location reference for architecture; ignore sheet backgrounds. Steady artificial 1 g: feet planted, normal weight, no floating debris or drifting hair. Sorell (free, released) finishes translating the Velari primer geometry into branching hull-light patterns readable through the bridge view as English-only diegetic light geometry—not spoken-line text. Voss remains at command; Rao stays on the bomb-feed / analysis station; Okoye holds security watch. Preserve the approved still's geography, wardrobe, eyelines, and blocking while adding small work motion and a slow dolly that keeps faces and the hull-light work readable. No spoken dialogue in this clip. Generate native scene audio if enabled (bridge ambience / console work only), but no music, score, underscore, BGM, or dramatic instrumentation. No subtitles or burned-in spoken-line text. Aspect ratio 16:9.",
-        "negativePrompt": "No storyboard sheet, contact sheet, collage, split screen, panel labels, text balloons, subtitles, captions, logos, watermark, burned-in dialogue, music, score, BGM, underscore, dramatic instrumentation, floating bodies, drifting hair, microgravity, EVA suits, Velari envoy body, transport sphere interior, Harlan, extra crew, duplicate people, identity swap, planets, Earth, Jupiter, Proxima, horror styling.",
-        "videoReferenceAssetIds": [
-          "asset:character-sorell-sheet",
-          "asset:character-voss-sheet",
-          "asset:character-rao-sheet",
-          "asset:character-okoye-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
-        ],
-        "videoPromptFreeze": {
-          "status": "approved",
-          "approvedAt": "2026-09-16",
-          "source": "author approved scene 28 stills; Seedance prompts prepared 2026-09-16"
-        }
-      }
-    },
-    {
-      "id": "festival-master:shot-plan-084:take-02",
-      "shotId": "festival-master:shot-plan-084",
-      "number": 2,
-      "status": "selected",
-      "imageAssetId": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-02",
-      "imageStatus": {
-        "status": "current",
-        "reasons": [
-          "quality"
-        ],
-        "explanation": {
-          "en": "Author approved Festival-master scene 28 greeting-prep stills (2026-09-16).",
-          "es": "needs_revision"
-        }
-      },
-      "generation": {
-        "provider": "OpenAI",
-        "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T19:46:35.435Z",
-        "referenceAssetIds": [
-          "asset:character-pair-rao-sorell-bridge-sheet",
-          "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:location-velari-station-sheet"
-        ],
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Medium shot on the Celestial Ardor bridge under steady 1 g. Voss addresses Sorell after her release—apology beat readable in posture and eyeline—while she remains at translator work; Rao and Okoye present at stations. Feet planted; no floating debris. Static appearance per attached references. No burned-in spoken dialogue or subtitles; English-only diegetic UI. Aspect ratio 16:9.",
-        "videoPrompt": "Generate one 12.70-second Festival-master Scene 28 video from the attached single 16:9 bridge still as the opening frame (I2V). Use attached Sorell and Voss identity sheets plus voice samples for the spoken cues; use Rao and Okoye identity sheets and the Celestial Ardor bridge location reference for continuity; ignore sheet backgrounds. Steady artificial 1 g: feet planted, normal weight, no floating debris. Preserve the approved still: Sorell at translator work after release; Voss addressing her; Rao and Okoye present at stations. Perform the existing dialogue cues in order with the attached voice samples (ignore any words in the samples; speak only the cue text): Sorell, awed — {They wrote the primer. This is the first time they'll hear us read it back.}; then Voss, quiet remorse — {Lian… I mistook caution for refusal. I sent you alone, then decided too quickly what that meant. I'm sorry.}. Camera may pan gently to hold the apology beat without leaving the bridge geography. No subtitles or burned-in spoken-line text. Generate native scene audio if enabled, but no music, score, underscore, BGM, or dramatic instrumentation. Aspect ratio 16:9.",
-        "negativePrompt": "No storyboard sheet, contact sheet, collage, split screen, panel labels, text balloons, subtitles, captions, logos, watermark, burned-in dialogue, music, score, BGM, underscore, dramatic instrumentation, floating bodies, drifting hair, microgravity, EVA suits, Velari envoy body, transport sphere interior, Harlan, extra crew, duplicate people, identity swap, planets, Earth, Jupiter, Proxima, horror styling.",
-        "videoReferenceAssetIds": [
-          "asset:character-sorell-sheet",
-          "asset:character-voss-sheet",
-          "asset:character-rao-sheet",
-          "asset:character-okoye-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:voice-ref-en-sorell",
-          "asset:voice-ref-en-voss"
-        ],
-        "videoPromptFreeze": {
-          "status": "approved",
-          "approvedAt": "2026-09-16",
-          "source": "author approved scene 28 stills; Seedance prompts prepared 2026-09-16"
-        }
-      }
+      "videoAssetId": "asset:festival-master-shot-plan-084-rev-1-video-1-video"
     },
     {
       "id": "festival-master:shot-plan-085:take-02",
@@ -23238,43 +22480,30 @@
       "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-03",
       "imageStatus": {
-        "status": "current",
+        "status": "needs_review",
         "reasons": [
           "quality"
         ],
         "explanation": {
-          "en": "Author approved Festival-master scene 28 greeting-prep stills (2026-09-16).",
-          "es": "needs_revision"
+          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
         }
       },
       "generation": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
         "generatedAt": "2026-09-14T19:46:35.435Z",
+        "visualStretchId": "festival-master:stretch-bridge-greeting-prep-083-085",
+        "stretchJobId": "festival-master:stretch-bridge-greeting-prep-083-085:rev-1",
+        "stretchDigest": "5b6b8a999b7ef1160f91c1cc6073393a6650fe97e435d34e99352fb9743d2420",
         "referenceAssetIds": [
           "asset:character-pair-rao-sorell-bridge-sheet",
           "asset:character-pair-okoye-voss-bridge-sheet",
           "asset:location-celestial-ardor-bridge-realistic-reference",
           "asset:location-velari-station-sheet"
-        ],
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Medium shot on the Celestial Ardor bridge under steady 1 g. Sorell completes greeting preparation at the translator station; Voss authorizes the send from command; Rao and Okoye hold stations. Feet planted; no floating debris. Static appearance per attached references. No burned-in spoken dialogue or subtitles; English-only diegetic UI when visible. Aspect ratio 16:9.",
-        "videoPrompt": "Generate one 7.23-second Festival-master Scene 28 video from the attached single 16:9 bridge still as the opening frame (I2V). Use attached Sorell and Voss identity sheets plus voice samples for the spoken cues; use Rao and Okoye identity sheets and the Celestial Ardor bridge location reference for continuity; ignore sheet backgrounds. Steady artificial 1 g: feet planted, normal weight, no floating debris. Preserve the approved still geography: Sorell at the translator/greeting station; Voss at command authorizing the send; Rao and Okoye holding stations. Perform the existing dialogue cues in order with the attached voice samples (ignore any words in the samples; speak only the cue text): Sorell, pressed but not cruel — {We can be sorry later. Right now, I need to be right.}; then Voss, decisive — {One greeting. Nothing else. Send.}. Keep camera mostly locked / wide enough that the send authorization reads; do not invent hull transmission FX beyond subtle English-only diegetic light if already implied. No subtitles or burned-in spoken-line text. Generate native scene audio if enabled, but no music, score, underscore, BGM, or dramatic instrumentation. Aspect ratio 16:9.",
-        "negativePrompt": "No storyboard sheet, contact sheet, collage, split screen, panel labels, text balloons, subtitles, captions, logos, watermark, burned-in dialogue, music, score, BGM, underscore, dramatic instrumentation, floating bodies, drifting hair, microgravity, EVA suits, Velari envoy body, transport sphere interior, Harlan, extra crew, duplicate people, identity swap, planets, Earth, Jupiter, Proxima, horror styling.",
-        "videoReferenceAssetIds": [
-          "asset:character-sorell-sheet",
-          "asset:character-voss-sheet",
-          "asset:character-rao-sheet",
-          "asset:character-okoye-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:voice-ref-en-sorell",
-          "asset:voice-ref-en-voss"
-        ],
-        "videoPromptFreeze": {
-          "status": "approved",
-          "approvedAt": "2026-09-16",
-          "source": "author approved scene 28 stills; Seedance prompts prepared 2026-09-16"
-        }
-      }
+        ]
+      },
+      "videoAssetId": "asset:festival-master-shot-plan-085-rev-1-video-1-video"
     },
     {
       "id": "festival-master:shot-plan-086:take-02",
@@ -23296,13 +22525,15 @@
         "provider": "OpenAI",
         "model": "gpt-image-2",
         "generatedAt": "2026-09-14T19:46:35.435Z",
+        "visualStretchId": "festival-master:stretch-bridge-greeting-086",
+        "stretchJobId": "festival-master:stretch-bridge-greeting-086:rev-1",
+        "stretchDigest": "5b6b8a999b7ef1160f91c1cc6073393a6650fe97e435d34e99352fb9743d2420",
         "referenceAssetIds": [
           "asset:character-pair-rao-sorell-bridge-sheet",
           "asset:character-pair-okoye-voss-bridge-sheet",
           "asset:location-celestial-ardor-bridge-realistic-reference",
           "asset:location-velari-station-sheet"
-        ],
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Medium shot on the Celestial Ardor bridge under steady 1 g as the greeting transmits—structured light branching readable on/near the hull through bridge windows or displays. Voss, Sorell, Rao, and Okoye at their stations watching the send. Feet planted; no floating debris. Static appearance per attached references. No burned-in spoken dialogue or subtitles; English-only diegetic UI. Aspect ratio 16:9."
+        ]
       }
     },
     {
@@ -24086,36 +23317,69 @@
       }
     },
     {
+      "id": "festival-master:shot-plan-050:take-02",
+      "shotId": "festival-master:shot-plan-050",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-fuel-audit-050-053-panel-01",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "sourceShotId": "festival-master:shot-plan-050",
+        "explanation": {
+          "en": "Still regenerated from the authored scene prompt and reference set; editorial review pending.",
+          "es": "needs_revision"
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-15T22:10:45.564Z",
+        "visualStretchId": "festival-master:stretch-bridge-fuel-audit-050-053",
+        "stretchJobId": "festival-master:stretch-bridge-fuel-audit-050-053:rev-1",
+        "stretchDigest": "517cdec3b4a8b54e3b327fc2d295d0885d96983f80d4105330d3cf9f4e8a020c",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ],
+        "prompt": "Use the supplied Voss-Harlan, Rao-Sorell, Okoye-Voss character pair sheets and Celestial Ardor bridge location reference as authoritative; ignore pair-sheet backgrounds. Generate one single grounded cinematic hard-science-fiction storyboard still, 16:9 landscape, photorealistic VFX render quality. The compact circular Celestial Ardor bridge is under steady artificial 1 g. Harlan is the younger clean-shaven dark-haired officer, standing at the meeting table near camera left of center, persuasive and controlled, presenting a unified theory with open-handed gestures. Voss is the older silver-bearded captain, seated at the captain-side table position; Rao, Sorell, and Okoye are seated at their bridge stations listening. Keep all five identities distinct and correctly assigned. Rao is the East-Asian woman in the lighter gray jacket, Sorell is the other woman from her pair sheet, Okoye is the Black woman with short natural hair. Feet are planted or seated normally under 1 g; no floating hair, straps, debris, or microgravity. Medium-wide bridge composition with Harlan clearly the speaker and the crew readable behind him. Worn maintainable spacecraft, cool graphite and slate-blue consoles with restrained amber practicals. English-only diegetic UI if any, no spoken dialogue text.",
+        "negativePrompt": "No subtitles, captions, logos, watermark, collage, contact sheet, multi-panel grid, non-English text, floating bodies, drifting hair, drifting debris, EVA suits, extra characters, wrong identities, Earth, Jupiter, Proxima, any planet."
+      }
+    },
+    {
       "id": "festival-master:shot-plan-064:take-02",
       "shotId": "festival-master:shot-plan-064",
       "number": 2,
-      "status": "candidate",
-      "imageAssetId": "asset:festival-master-stretch-bridge-command-break-064-067-panel-01",
+      "status": "selected",
+      "imageAssetId": "asset:festival-master-scene-21-shot-064-still",
       "imageStatus": {
         "status": "needs_review",
         "reasons": [
           "quality"
         ],
         "explanation": {
-          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Scene 21 shot 064 still; editorial review pending.",
+          "es": "needs_revision"
         }
       },
       "generation": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T16:23:27.993Z",
-        "visualStretchId": "festival-master:stretch-bridge-command-break-064",
-        "stretchJobId": "festival-master:stretch-bridge-command-break-064:rev-1",
-        "stretchDigest": "f5b0f1895cdeb02025303ae9e396d12b64e69cc797908171b3398b2c91a81fbc",
         "referenceAssetIds": [
           "asset:character-pair-voss-harlan-bridge-sheet",
           "asset:character-pair-rao-sorell-bridge-sheet",
           "asset:character-pair-okoye-voss-bridge-sheet",
           "asset:location-celestial-ardor-bridge-realistic-reference",
           "asset:object-harlan-wrist-device-sheet"
-        ]
-      }
+        ],
+        "prompt": "Single 16:9 bridge still for shot 064 abort/hold. No spoken dialogue. Steady 1 g.",
+        "videoPrompt": "Task: image-to-video (I2V). Generate one continuous 4.20-second Festival-master Scene 21 video for shot 064 from the attached single 16:9 bridge still as the opening frame. Use attached Voss–Harlan, Rao–Sorell, and Okoye–Voss bridge pair sheets, the Celestial Ardor bridge realistic location reference, and the Harlan wrist-device prop sheet for continuity; ignore pair-sheet backgrounds. Use attached Voss and Okoye voice samples for the spoken cues.\n\nReference-role map:\n- Attached bridge still: approved 16:9 opening frame; preserve cast placement, eyelines, bridge landmarks, lighting, and 1 g weight.\n- Pair sheets: identity locks for Voss, Harlan, Rao, Sorell, Okoye; Sorell remains retained under watch.\n- asset:location-celestial-ardor-bridge-realistic-reference: bridge architecture.\n- asset:object-harlan-wrist-device-sheet: Harlan wrist device continuity if visible.\nAudio-role map: asset:voice-ref-en-voss for Voss; asset:voice-ref-en-okoye for Okoye. Speak only the cue text below.\n\nContinuity: Celestial Ardor bridge under steady artificial 1 g — planted feet, normal weight, no floating debris. Immediately after Zao's message: Voss urgently aborts the approach and orders Harlan held; Okoye moves to block him without attacking. Rao stays at analysis; Sorell remains retained in depth.\n\nSuggested beats:\n[0.0–2.38 seconds] Voss speaks with the Voss voice sample, saying exactly: {Abort approach. Hold Harlan.}. Delivery urgent command.\n[2.48–4.20 seconds] Okoye blocks Harlan's exit path and speaks with the Okoye voice sample, saying exactly: {Commander, stay where you are.}.\n\nCamera and finish: grounded hard-science-fiction photorealistic VFX; restrained pan preserving eyelines. No music/BGM/score. No subtitles, burned-in dialogue, logos, watermarks, or non-English UI. Aspect ratio 16:9.\n"
+      },
+      "videoAssetId": "asset:festival-master-shot-plan-064-rev-1-video-1-video"
     },
     {
       "id": "festival-master:shot-plan-065:take-02",
@@ -24227,70 +23491,6 @@
         "explanation": {
           "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
           "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
-        }
-      },
-      "generation": {
-        "provider": "OpenAI",
-        "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T16:23:28.196Z",
-        "visualStretchId": "festival-master:stretch-bridge-device-071-073",
-        "stretchJobId": "festival-master:stretch-bridge-device-071-073:rev-1",
-        "stretchDigest": "760d61b1b6060e895c98d780afb8a3757a1c8ef5743bb558738b988862c1e221",
-        "referenceAssetIds": [
-          "asset:character-pair-voss-harlan-bridge-sheet",
-          "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:character-sorell-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:object-harlan-wrist-device-sheet"
-        ]
-      }
-    },
-    {
-      "id": "festival-master:shot-plan-072:take-02",
-      "shotId": "festival-master:shot-plan-072",
-      "number": 2,
-      "status": "candidate",
-      "imageAssetId": "asset:festival-master-stretch-bridge-device-071-073-panel-02",
-      "imageStatus": {
-        "status": "needs_review",
-        "reasons": [
-          "quality"
-        ],
-        "explanation": {
-          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
-        }
-      },
-      "generation": {
-        "provider": "OpenAI",
-        "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T16:23:28.196Z",
-        "visualStretchId": "festival-master:stretch-bridge-device-071-073",
-        "stretchJobId": "festival-master:stretch-bridge-device-071-073:rev-1",
-        "stretchDigest": "760d61b1b6060e895c98d780afb8a3757a1c8ef5743bb558738b988862c1e221",
-        "referenceAssetIds": [
-          "asset:character-pair-voss-harlan-bridge-sheet",
-          "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:character-sorell-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:object-harlan-wrist-device-sheet"
-        ]
-      }
-    },
-    {
-      "id": "festival-master:shot-plan-073:take-02",
-      "shotId": "festival-master:shot-plan-073",
-      "number": 2,
-      "status": "candidate",
-      "imageAssetId": "asset:festival-master-stretch-bridge-device-071-073-panel-03",
-      "imageStatus": {
-        "status": "needs_review",
-        "reasons": [
-          "quality"
-        ],
-        "explanation": {
-          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
         }
       },
       "generation": {
@@ -24513,79 +23713,17 @@
           "quality"
         ],
         "explanation": {
-          "en": "Registered custody-fixed scene 20 stretch regen (Higgsfield fdf24b0a…); pending editorial review.",
-          "es": "needs_revision"
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
         }
       },
       "generation": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-15T23:14:48.564Z",
+        "generatedAt": "2026-09-15T22:25:21.867Z",
         "visualStretchId": "festival-master:stretch-bridge-vector-057-059",
         "stretchJobId": "festival-master:stretch-bridge-vector-057-059:rev-2",
-        "stretchDigest": "0b7139ce5fb387b75705705c460fb4a3e84c5aa3dacc187691bf02c93138effa",
-        "referenceAssetIds": [
-          "asset:character-pair-voss-harlan-bridge-sheet",
-          "asset:character-pair-rao-sorell-bridge-sheet",
-          "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
-        ]
-      }
-    },
-    {
-      "id": "festival-master:shot-plan-058:take-03",
-      "shotId": "festival-master:shot-plan-058",
-      "number": 3,
-      "status": "candidate",
-      "imageAssetId": "asset:festival-master-stretch-bridge-vector-057-059-panel-02",
-      "imageStatus": {
-        "status": "needs_review",
-        "reasons": [
-          "quality"
-        ],
-        "explanation": {
-          "en": "Registered custody-fixed scene 20 stretch regen (Higgsfield fdf24b0a…); pending editorial review.",
-          "es": "needs_revision"
-        }
-      },
-      "generation": {
-        "provider": "OpenAI",
-        "model": "gpt-image-2",
-        "generatedAt": "2026-09-15T23:14:48.564Z",
-        "visualStretchId": "festival-master:stretch-bridge-vector-057-059",
-        "stretchJobId": "festival-master:stretch-bridge-vector-057-059:rev-2",
-        "stretchDigest": "0b7139ce5fb387b75705705c460fb4a3e84c5aa3dacc187691bf02c93138effa",
-        "referenceAssetIds": [
-          "asset:character-pair-voss-harlan-bridge-sheet",
-          "asset:character-pair-rao-sorell-bridge-sheet",
-          "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
-        ]
-      }
-    },
-    {
-      "id": "festival-master:shot-plan-059:take-03",
-      "shotId": "festival-master:shot-plan-059",
-      "number": 3,
-      "status": "candidate",
-      "imageAssetId": "asset:festival-master-stretch-bridge-vector-057-059-panel-03",
-      "imageStatus": {
-        "status": "needs_review",
-        "reasons": [
-          "quality"
-        ],
-        "explanation": {
-          "en": "Registered custody-fixed scene 20 stretch regen (Higgsfield fdf24b0a…); pending editorial review.",
-          "es": "needs_revision"
-        }
-      },
-      "generation": {
-        "provider": "OpenAI",
-        "model": "gpt-image-2",
-        "generatedAt": "2026-09-15T23:14:48.564Z",
-        "visualStretchId": "festival-master:stretch-bridge-vector-057-059",
-        "stretchJobId": "festival-master:stretch-bridge-vector-057-059:rev-2",
-        "stretchDigest": "0b7139ce5fb387b75705705c460fb4a3e84c5aa3dacc187691bf02c93138effa",
+        "stretchDigest": "8ed56a64b2c128e2639c2d1f3aa079f69539af4dc73d65641ade1f4d333a8ca9",
         "referenceAssetIds": [
           "asset:character-pair-voss-harlan-bridge-sheet",
           "asset:character-pair-rao-sorell-bridge-sheet",
@@ -24626,37 +23764,6 @@
       }
     },
     {
-      "id": "festival-master:shot-plan-061:take-03",
-      "shotId": "festival-master:shot-plan-061",
-      "number": 3,
-      "status": "candidate",
-      "imageAssetId": "asset:festival-master-stretch-bridge-packet-open-060-061-panel-02",
-      "imageStatus": {
-        "status": "needs_review",
-        "reasons": [
-          "quality"
-        ],
-        "explanation": {
-          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
-        }
-      },
-      "generation": {
-        "provider": "OpenAI",
-        "model": "gpt-image-2",
-        "generatedAt": "2026-09-15T22:25:31.829Z",
-        "visualStretchId": "festival-master:stretch-bridge-packet-open-060-061",
-        "stretchJobId": "festival-master:stretch-bridge-packet-open-060-061:rev-2",
-        "stretchDigest": "df7ac8c6e9f0e5a0565144d6d035429f5615f73df63600deb48a7d10e182ad7f",
-        "referenceAssetIds": [
-          "asset:character-pair-voss-harlan-bridge-sheet",
-          "asset:character-pair-rao-sorell-bridge-sheet",
-          "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
-        ]
-      }
-    },
-    {
       "id": "festival-master:shot-plan-062:take-03",
       "shotId": "festival-master:shot-plan-062",
       "number": 3,
@@ -24670,36 +23777,6 @@
         "explanation": {
           "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
           "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
-        }
-      },
-      "generation": {
-        "provider": "OpenAI",
-        "model": "gpt-image-2",
-        "generatedAt": "2026-09-15T22:25:43.560Z",
-        "visualStretchId": "festival-master:stretch-vault-flashback-062-063",
-        "stretchJobId": "festival-master:stretch-vault-flashback-062-063:rev-2",
-        "stretchDigest": "f7d46ca316f093d7c59ae2cdeb0ea209e3828280e78158f0dae29ed7eab10f00",
-        "referenceAssetIds": [
-          "asset:character-zao-sheet",
-          "asset:location-celestial-ardor-inner-shielding-vault-sheet",
-          "asset:object-proxima-geophysical-impulse-package-sheet"
-        ]
-      }
-    },
-    {
-      "id": "festival-master:shot-plan-063:take-03",
-      "shotId": "festival-master:shot-plan-063",
-      "number": 3,
-      "status": "candidate",
-      "imageAssetId": "asset:festival-master-stretch-vault-flashback-062-063-panel-02",
-      "imageStatus": {
-        "status": "needs_review",
-        "reasons": [
-          "quality"
-        ],
-        "explanation": {
-          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
         }
       },
       "generation": {
@@ -24856,7 +23933,7 @@
           "quality"
         ],
         "explanation": {
-          "en": "Author approved single-take Scene 18 still as Seedance keyframe (send as-is).",
+          "en": "Author approved single-take Scene 18 still as Seedance keyframe.",
           "es": "needs_revision"
         }
       },
@@ -24871,11 +23948,165 @@
           "asset:character-harlan-sheet",
           "asset:character-rao-sheet"
         ],
-        "prompt": "Generate one single 16:9 landscape cinematic storyboard still for a continuous 28.60-second Seedance 2.5 take covering the entire Scene 18 dialogue. Use the authoritative Celestial Ardor bridge location and meal-table environment references for architecture and use the solo Voss, Harlan, and Elin Rao sheets for identity. This is one coherent bridge composition, not a storyboard sheet or collage. Preserve the fixed compact circular bridge geometry: cream cylindrical central core and helical stair behind the action, curved crew-station console arc along the hull, and six-seat meal table beside the central opening at the same orientation and relation to the stairs and stations. Harlan is the younger clean-shaven dark-haired officer standing at the meal-table speaker position left of center, addressing Voss. Voss is the older silver-bearded captain seated at the captain-side position on the right side of the same table. Elin Rao is analytically composed at the fixed science/data console in the left background, hands near the controls. Keep the table visibly between Harlan and Voss. Only Harlan, Voss, and Rao appear; Sorell and Okoye are absent. Medium-wide readable depth with clear eyelines and room for Seedance to reframe toward Rao and back to Voss. Steady artificial 1 g, worn maintainable human spacecraft, cool graphite and slate-blue consoles, restrained amber practicals, realistic brushed metal. Imply the full dialogue arc without printed dialogue: Harlan presents the fuel-sabotage theory; Voss tests it; Rao checks the data and finds normal mixture, no leak, no efficiency loss; Voss recognizes the theory explains neither anomaly; Rao confirms. No spoken words or subtitles; any interface text is minimal English-only diegetic UI.",
+        "prompt": "Generate one single 16:9 landscape cinematic storyboard still for a continuous 28.60-second Seedance 2.5 take covering the entire Scene 18 dialogue. Use the authoritative Celestial Ardor bridge location and meal-table environment references for architecture and use the solo Voss, Harlan, and Elin Rao sheets for identity. This is one coherent bridge composition, not a storyboard sheet or collage. Preserve the fixed compact circular bridge geometry: cream cylindrical central core and helical stair behind the action, curved crew-station console arc along the hull, and six-seat meal table beside the central opening at the same orientation and relation to the stairs and stations. Harlan is the younger clean-shaven dark-haired officer standing at the meal-table speaker position left of center, addressing Voss. Voss is the older silver-bearded captain seated at the captain-side position on the right side of the same table. Elin Rao is analytically composed at the fixed science/data console in the left background, hands near the controls. Keep the table visibly between Harlan and Voss. Only Harlan, Voss, and Rao appear; Sorell and Okoye are absent. Medium-wide readable depth with clear eyelines and room for Seedance to reframe toward Rao and back to Voss. Steady artificial 1 g, worn maintainable human spacecraft, cool graphite and slate-blue consoles, restrained amber practicals, realistic brushed metal. Imply the full dialogue arc without printed dialogue. Harlan presents the fuel-sabotage theory; Voss tests it; Rao checks the data and finds normal mixture, no leak, no efficiency loss; Voss recognizes the theory explains neither anomaly; Rao confirms. No spoken words or subtitles; any interface text is minimal English-only diegetic UI.",
         "negativePrompt": "No storyboard sheet, contact sheet, collage, split screen, panel labels, text balloons, subtitles, logos, watermark, Sorell, Okoye, extra crew, duplicate people, changed furniture, shifted table, altered stair/core geometry, floating bodies, drifting hair, microgravity, EVA suits, planets, Earth, Jupiter, Proxima, horror styling.",
         "videoPrompt": "Generate one 28.60-second Festival-master Scene 18 video from the attached single 16:9 bridge still. Use the attached visual references for continuity: the Celestial Ardor bridge realistic location sheet, the bridge meal-table environment sheet, and the solo Voss, Harlan, and Elin Rao identity sheets. Use the attached Harlan, Voss, and Elin/Rao voice samples for the spoken cues. Treat this as one generation envelope for the complete scene; Seedance may decide its own internal coverage, reframing, pacing, and any internal transitions needed to carry the performance. Do not force external shot boundaries or prescribe a fixed camera path. Preserve the single bridge geography while rendering the scene: the cream cylindrical central core and helical stair, curved console arc, and six-seat meal table stay physically coherent; Harlan begins at the meal-table speaker position left of center, Voss remains the older silver-bearded captain at the captain-side table position, and Rao remains at the science/data console in the left background. Only Harlan, Voss, and Rao are visible; Sorell and Okoye are offscreen. Preserve identity, eyelines, wardrobe, normal 1 g weight, table/stair/core/console relationships, and readable English-only diegetic diagnostics as the action develops. Perform the existing dialogue cues in order: Harlan presents the deuterium-rich fuel/neutron theory; Voss asks for Elin; Rao calls it a hypothesis; the audit compresses through sample checks and engine history; Rao states that mixture is normal, there is no leak, and there is no efficiency loss; she explains the extra fuel through ship mass and separates the neutron source; Voss realizes the explanation explains neither anomaly; Rao says “Correct.” Use the attached voice samples plus the cue text for delivery and timing. No subtitles or spoken-line text burned into the image. Generate native scene audio if enabled, but no music, score, underscore, BGM, or dramatic instrumentation."
       },
       "videoAssetId": "asset:festival-master-shot-plan-050-rev-1-video-1"
+    },
+    {
+      "id": "festival-master:shot-plan-054:take-03",
+      "shotId": "festival-master:shot-plan-054",
+      "number": 3,
+      "status": "selected",
+      "imageAssetId": "asset:festival-master-scene-19-054-055-central-shaft-single-take-still",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Combined Scene 19 054–055 central-shaft still; editorial review pending.",
+          "es": "needs_revision"
+        }
+      },
+      "videoAssetId": "asset:festival-master-shot-plan-054-rev-1-video-1-video",
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "referenceAssetIds": [
+          "asset:location-celestial-ardor-central-access-sheet",
+          "asset:character-rao-sheet",
+          "asset:character-okoye-sheet",
+          "asset:character-harlan-sheet"
+        ],
+        "prompt": "Single 16:9 microgravity central-access shaft still for combined 054–055. Rao, Okoye, and Harlan at shaft-side vault access. No spoken dialogue. English-only diegetic UI only.",
+        "videoPrompt": "Task: image-to-video (I2V). Generate one continuous 14.04-second Festival-master Scene 19 take for the combined 054–055 material. Use the attached combined still as the opening frame and primary composition anchor. This is one continuous generation envelope; Seedance may choose its own internal coverage, reframing, pacing, rack focus, and internal transitions as needed. Do not force external shot boundaries, do not split this into separately generated shots, and do not prescribe a fixed camera path.\n\nReference-role map — use every visual reference below, and keep the visual reference set identical to the still prompt, with the combined still added as the I2V opening image:\n- asset:location-celestial-ardor-central-access-sheet: authoritative architecture and spatial language for the main axial central-access shaft; ignore any sheet background outside the shaft design.\n- asset:character-rao-sheet: Elin Rao identity and wardrobe; she is the screen-left scientist at the shaft-side sealed vault access.\n- asset:character-okoye-sheet: Dara Okoye identity and wardrobe; she is the central security officer at a shaft handhold.\n- asset:character-harlan-sheet: Harlan identity and wardrobe; he is the upper/right officer braced on the shaft rail.\n- asset:festival-master-scene-19-054-055-central-shaft-single-take-still: approved 16:9 opening frame; preserve its initial cast placement, screen direction, shaft landmarks, lighting, and microgravity state. Treat it as the shot image, not as a storyboard sheet or collage.\nAudio-role map — use the attached approved voice samples only for the speakers named here: asset:voice-ref-en-elin for Rao, asset:voice-ref-en-okoye for Okoye, and asset:voice-ref-en-harlan for Harlan. Ignore any words in the samples and speak only the cue text supplied below.\n\nContinuity and staging locks: the entire take remains in the Celestial Ardor main central-access shaft, a long axial cylindrical circulation trunk with handrails, rest landings, hatches, service conduits, open vertical volume, and the shaft-side sealed inner-shielding vault door/local-lock panel. Preserve the still's spatial relationships and geometry as Seedance moves through its internal coverage: Rao screen-left beside the sealed access, Okoye near center at a handhold, Harlan upper/right on the rail. Explicit microgravity continues throughout: no planted feet, no walking, no normal deck gravity; bodies move by controlled pushes, handholds, restrained tethers, and slight inertial drift. Keep identities, faces, wardrobe, tether logic, lighting, and shaft architecture stable. Only Rao, Okoye, and Harlan appear as bodies. Sorell is not visible. Voss is only an offscreen comm presence and never appears as a body. Do not show a diagnostic unit or workbench in this take; that visible prop belongs to the independent third Scene 19 take. Do not substitute the outer reactor service bay, a generic airlock, a bridge, a meal table, or the vault interior.\n\nSuggested chronological beats — timing is guidance, while Seedance controls its internal coverage:\n[0.0–2.5 seconds] Begin from the approved still. The third thrust cutoff is felt and the Celestial Ardor begins the braking turn. Engine tone drains away; the three crew members make small controlled corrections against the shaft handholds/rail, with restrained tether and loose-material motion only. Keep the shaft-side vault access readable.\n[2.5–6.1 seconds] Let coverage move naturally to Rao's screen-left position and the sealed shielding access. Rao identifies the shielding bay as the place where she would hide a neutron source. Elin/Rao speaks with the attached Elin voice sample, saying exactly: {The shielding bay. That's where I'd hide a neutron source.}. Her delivery is focused, technical, and urgent without theatricality.\n[5.3–6.1 seconds] The engine tone continues to fall away. If native diegetic audio is enabled, a brief restrained mechanical/magnetic clamp sound may be heard offscreen, but do not introduce a visible diagnostic instrument or change the location.\n[6.1–9.6 seconds] Preserve the same shaft geometry and screen direction as the coverage shifts to Okoye near center. Okoye reports the access result with the attached Okoye voice sample, saying exactly: {Captain's authority is rejected. Local lock only.}. Her delivery is a precise field report; the lock panel may show restrained English-only diegetic interface indicators, never subtitles or paragraph text.\n[9.6–14.04 seconds] Continue without a reset. Hold Harlan on the upper/right rail as he turns suspicion toward Sorell. Harlan speaks with the attached Harlan voice sample, saying exactly: {Sorell had the blackout. She could have rekeyed it then.}. Sorell remains offscreen; do not visualize her, a flashback, or an extra body. Let the final beat settle on the three-person shaft composition, the sealed local-lock access, and the unresolved suspicion.\n\nCamera and finish: grounded hard-science-fiction photorealistic VFX. Allow Seedance to create its own restrained internal coverage and transitions while preserving the approved still's axis, relative positions, handhold logic, and architectural landmarks. No abrupt teleportation, identity morphing, geometry reset, or unexplained gravity change. Keep practical cool shaft lighting and access indicators consistent. Generate native diegetic interior audio and the three spoken cues if enabled; no music, score, underscore, melody, BGM, tension pad, dramatic instrumentation, or trailer hit. No subtitles, captions, burned-in dialogue text, logos, watermarks, or non-English UI. Aspect ratio 16:9.\n"
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-057:take-04",
+      "shotId": "festival-master:shot-plan-057",
+      "number": 4,
+      "status": "selected",
+      "imageAssetId": "asset:festival-master-scene-20-single-take-still",
+      "imageStatus": {
+        "status": "current",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Registered Scene 20 single-take still used as Seedance opening frame.",
+          "es": "needs_revision"
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "referenceAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet"
+        ],
+        "prompt": "Single 16:9 bridge still for Scene 20 continuous take: thrust restoring, empty-vector read. No spoken dialogue. Steady 1 g.",
+        "videoPrompt": "Task: image-to-video (I2V). Generate one continuous 29.999-second Festival-master Scene 20 video from the attached single 16:9 bridge still. Use the attached visual references for continuity: the Celestial Ardor bridge realistic location sheet and the Voss–Harlan, Rao–Sorell, and Okoye–Voss bridge pair sheets (ignore pair-sheet backgrounds). Use the attached Harlan, Rao/Elin, and Voss voice samples for the spoken cues. Treat this as one generation envelope for the complete scene; Seedance may decide its own internal coverage, reframing, pacing, and any internal transitions needed to carry the performance. Do not force external shot boundaries or prescribe a fixed camera path.\n\nReference-role map — use every visual reference below:\n- asset:festival-master-scene-20-single-take-still: approved 16:9 opening frame (registered Scene 20 single-take still); preserve its initial cast placement, screen direction, bridge landmarks, lighting, and restoring 1 g weight. Treat it as the shot image, not as a storyboard sheet or collage.\n- asset:location-celestial-ardor-bridge-realistic-reference: authoritative bridge architecture (cream cylindrical core, helical stair, curved console arc); ignore sheet backgrounds that conflict with the opening still.\n- asset:character-pair-voss-harlan-bridge-sheet: Voss and Harlan identity/wardrobe lock; ignore pair-sheet backgrounds.\n- asset:character-pair-rao-sorell-bridge-sheet: Rao and Sorell identity/wardrobe lock; ignore pair-sheet backgrounds.\n- asset:character-pair-okoye-voss-bridge-sheet: Okoye and Voss identity/wardrobe lock; ignore pair-sheet backgrounds.\nAudio-role map — use attached approved voice samples only for the speakers named here: asset:voice-ref-en-harlan for Harlan, asset:voice-ref-en-elin for Rao, and asset:voice-ref-en-voss for Voss. Ignore any words in the samples and speak only the cue text supplied below.\n\nContinuity and staging locks: the entire take remains on the Celestial Ardor bridge. Thrust has just restored — steady 1 g artificial gravity throughout: planted feet, normal weight, no floating debris. Preserve the opening still's spatial relationships as Seedance moves through internal coverage: Rao at science/analysis console screen-left reading the empty-vector plot; Voss at command; Harlan screen-right at a secondary console; Okoye deep left security watch; Sorell retained under watch in depth (not free crew). Keep identities, faces, wardrobe, eyelines, bridge geometry, and English-only diegetic UI stable. Only Voss, Harlan, Rao, Okoye, and Sorell appear as bodies. No music, score, underscore, BGM, or dramatic instrumentation.\n\nSuggested chronological beats — timing is guidance, while Seedance controls its internal coverage:\n[0.0–9.16 seconds] Begin from the approved still. The engine relights and weight settles as the Ardor resumes approach. Rao reads that only firing angles and ship attitude survive from Zao's burst; the plotted vector points at no planet, station, or beacon. Harlan speaks with the attached Harlan voice sample, saying exactly: {She tried to finish the warning to Earth. Under pressure, she missed.}. Rao answers with the attached Elin voice sample, saying exactly: {Zao didn't miss like that.}.\n[9.16–17.76 seconds] Same bridge geography. Voss asks with the attached Voss voice sample, saying exactly: {Then what did she hit?}. Rao replies with the attached Elin voice sample, saying exactly: {Nothing fixed. Give me trajectories.}. Coverage may then isolate Harlan for a moment as he watches the unrecoverable burst record.\n[17.76–29.999 seconds] Harlan, alone at the console for a beat, whispers under-breath with the attached Harlan voice sample, saying exactly: {Now they'll never know who saved them.}. Thirteen minutes before contact, an optical signal appears on the same corridor. Rao turns with urgency and speaks with the attached Elin voice sample, saying exactly: {Captain. It didn't miss. It found us.}. Let the beat settle on the returning optical contact and the crew's recognition.\n\nCamera and finish: grounded hard-science-fiction photorealistic VFX. Allow Seedance to create its own restrained internal coverage and transitions while preserving the approved still's axis, relative positions, and architectural landmarks. No abrupt teleportation, identity morphing, or unexplained gravity change. Generate native diegetic interior audio and the spoken cues if enabled; no music, score, underscore, melody, BGM, tension pad, dramatic instrumentation, or trailer hit. No subtitles, captions, burned-in dialogue text, logos, watermarks, or non-English UI. Aspect ratio 16:9.\n"
+      },
+      "videoAssetId": "asset:festival-master-shot-plan-057-rev-1-video-1-video"
+    },
+    {
+      "id": "festival-master:shot-plan-060:take-04",
+      "shotId": "festival-master:shot-plan-060",
+      "number": 4,
+      "status": "selected",
+      "imageAssetId": "asset:festival-master-scene-21-shot-060-still",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Scene 21 packet-open still; editorial review pending.",
+          "es": "needs_revision"
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ],
+        "prompt": "Single 16:9 bridge still for Scene 21 packet-open join. No spoken dialogue. Steady 1 g.",
+        "videoPrompt": "Task: image-to-video (I2V). Generate one continuous 11.70-second Festival-master Scene 21 video (packet-open join) from the attached single 16:9 bridge still. Use the attached visual references for continuity: the Celestial Ardor bridge realistic location sheet and the Voss–Harlan, Rao–Sorell, and Okoye–Voss bridge pair sheets (ignore pair-sheet backgrounds). Use the attached Rao/Elin, Voss, and Harlan voice samples only if those speakers appear; this beat uses Rao and Voss. Treat this as one generation envelope; Seedance may decide its own internal coverage, reframing, pacing, and any internal transitions. Do not force external shot boundaries or prescribe a fixed camera path.\n\nReference-role map:\n- asset:festival-master-scene-21-shot-060-still: approved opening frame; preserve cast placement, bridge landmarks, lighting, and 1 g weight. Treat as the shot image, not a storyboard sheet.\n- asset:location-celestial-ardor-bridge-realistic-reference: authoritative bridge architecture.\n- asset:character-pair-voss-harlan-bridge-sheet: Voss and Harlan identity lock; ignore pair-sheet backgrounds.\n- asset:character-pair-rao-sorell-bridge-sheet: Rao and Sorell identity lock; ignore pair-sheet backgrounds. Sorell remains retained under watch, not free collaborating crew.\n- asset:character-pair-okoye-voss-bridge-sheet: Okoye and Voss identity lock; ignore pair-sheet backgrounds.\nAudio-role map: asset:voice-ref-en-elin for Rao; asset:voice-ref-en-voss for Voss. Speak only the cue text below.\n\nContinuity: Celestial Ardor bridge under steady 1 g throughout. Rao at analysis console; Voss at command; Harlan, Okoye, and retained Sorell present. English-only diegetic packet/UI only. No music, score, underscore, BGM, or dramatic instrumentation in the Seedance render (editorial soundtrack is mixed in post).\n\nSuggested beats (guidance only):\n[0.0–4.3 seconds] Incoming optical signal resolves. Rao speaks with the Elin voice sample, saying exactly: {Zao's packet format. Personal signature. Sent before the crossing.}.\n[4.3–11.7 seconds] Voss orders playback with the Voss voice sample, saying exactly: {Play it.}. Hold readiness at the console as the authenticated packet is opened; the pointing-solution realization may begin without leaving the bridge geography.\n\nCamera and finish: grounded hard-science-fiction photorealistic VFX. Native diegetic audio and spoken cues if enabled; no music/BGM. No subtitles, burned-in dialogue, logos, watermarks, or non-English UI. Aspect ratio 16:9.\n"
+      },
+      "videoAssetId": "asset:festival-master-shot-plan-060-rev-1-video-1-video"
+    },
+    {
+      "id": "festival-master:shot-plan-062:take-04",
+      "shotId": "festival-master:shot-plan-062",
+      "number": 4,
+      "status": "selected",
+      "imageAssetId": "asset:festival-master-scene-21-shot-062-still",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "wrong_composition"
+        ],
+        "explanation": {
+          "en": "Bridge+monitor framing still used for Seedance; may need regen for cleaner monitor inset.",
+          "es": "needs_revision"
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "referenceAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-inner-shielding-vault-sheet",
+          "asset:character-zao-sheet",
+          "asset:object-proxima-geophysical-impulse-package-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet"
+        ],
+        "videoReferenceAssetIds": [
+          "asset:festival-master-stretch-vault-flashback-062-063-panel-01"
+        ],
+        "prompt": "Single 16:9 bridge still with readable diegetic monitor inset of vault/Zao/package. No spoken dialogue. Bridge stays 1 g.",
+        "videoPrompt": "Task: image-to-video (I2V). Generate one continuous 35.64-second Festival-master Scene 21 video (Zao message on bridge monitor) from the attached bridge still. The camera stays on the Celestial Ardor bridge under steady 1 g; Zao’s vault recording plays on a large English-only diegetic bridge monitor (vault microgravity and the impulse package are visible inside the monitor inset only — not as a full-scene location swap). Use the attached references: bridge realistic location sheet; inner-shielding-vault sheet and Zao sheet and Proxima package sheet for monitor-content identity; Rao–Sorell bridge pair sheet for watching-crew identity. Optional recording-content still asset:festival-master-stretch-vault-flashback-062-063-panel-01 may reinforce monitor inset identity only. Use asset:voice-ref-en-zao for Zao’s recorded lines. Treat this as one generation envelope; Seedance may decide its own internal coverage, reframing, pacing, monitor close-ups, and transitions. Do not force external shot boundaries.\n\nReference-role map:\n- Attached bridge still: opening composition — bridge geography + readable monitor inset; preserve 1 g bridge staging.\n- asset:location-celestial-ardor-bridge-realistic-reference: bridge architecture.\n- asset:location-celestial-ardor-inner-shielding-vault-sheet: vault architecture inside the monitor only.\n- asset:character-zao-sheet: Zao identity inside the monitor recording.\n- asset:object-proxima-geophysical-impulse-package-sheet: package identity inside the monitor.\n- asset:character-pair-rao-sorell-bridge-sheet: Rao/Sorell (and pair-lock) for bridge watchers; Sorell under watch.\nAudio-role map: asset:voice-ref-en-zao for Zao. Speak only the recorded cue text below. Ignore sample words.\n\nContinuity: Bridge remains 1 g (planted feet). Monitor content may show microgravity vault bracing. Crew watches the display. No music, score, underscore, BGM, or dramatic instrumentation.\n\nSuggested beats (guidance only; Seedance controls coverage):\n[0.0–14.78 seconds] Monitor plays Zao’s recording. Zao speaks with the Zao voice sample, saying exactly: {If this reaches you, I found a Proxima geophysical impulse package in the shielded vault: one point three tonnes, multi-megaton, timer set to arrival time. The neutron signature is real. The controller is protected; don't cut power or damage it.}.\n[14.78–27.32 seconds] Recording continues. Zao speaks exactly: {I couldn't reach Proxima through Jupiter. Earth could hear me, but no answer could catch you. The pilot throat won't receive us, and I had no confirmed Velari target. So I aimed at where the Ardor would be after the jump.}.\n[27.42–35.64 seconds] Recording closes. Zao speaks exactly: {The vault's local. Use its scientific service timing input if you can. Just in case: goodbye. Harlan's at the door.}.\n\nCamera and finish: grounded hard-science-fiction photorealistic VFX. Allow monitor reframes while keeping bridge geography coherent. Native diegetic audio and spoken recording if enabled; no music/BGM. No subtitles, burned-in dialogue, logos, watermarks, or non-English UI. Aspect ratio 16:9.\n\nNOTE: This take is 35.64s and exceeds Seedance’s 30s ceiling — do not submit until trimmed or split.\n"
+      },
+      "videoAssetId": "asset:festival-master-shot-plan-062-rev-1-video-1-video"
+    },
+    {
+      "id": "festival-master:shot-plan-071:take-03",
+      "shotId": "festival-master:shot-plan-071",
+      "number": 3,
+      "status": "selected",
+      "imageAssetId": "asset:festival-master-stretch-bridge-device-071-073-panel-01",
+      "imageStatus": {
+        "status": "current",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Approved Scene 24 panel-01 reused as singleton Seedance keyframe.",
+          "es": "needs_revision"
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "referenceAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:object-harlan-wrist-device-sheet"
+        ],
+        "prompt": "Single 16:9 bridge still for Scene 24 device beat. No spoken dialogue. Steady 1 g.",
+        "videoPrompt": "Task: image-to-video (I2V). Generate one continuous 23.58-second Festival-master Scene 24 video from the attached single 16:9 bridge still. Use the Celestial Ardor bridge realistic location sheet, Voss–Harlan / Rao–Sorell / Okoye–Voss bridge pair sheets, and the Harlan wrist-device prop sheet for continuity; ignore pair-sheet backgrounds. Use Harlan, Okoye, and Voss voice samples for spoken cues. Treat this as one generation envelope; Seedance may decide its own internal coverage, reframing, pacing, and any internal transitions. Do not force external shot boundaries or prescribe a fixed camera path.\n\nContinuity: Celestial Ardor bridge under steady artificial 1 g throughout. Harlan, Okoye, Sorell (retained), and Voss as required by the beat. Wrist device when framed. No music, score, underscore, BGM, or dramatic instrumentation.\n\nSuggested beats (guidance only): perform cues 0144–0150 in order (device offer → demand/alert → shove/dive/hatch/alarms).\n\nCamera and finish: grounded hard-science-fiction photorealistic VFX. Native diegetic audio and spoken cues if enabled; no music/BGM. No subtitles, burned-in dialogue, logos, watermarks, or non-English UI. Aspect ratio 16:9.\n"
+      }
     }
   ],
   "visualStretches": [
@@ -26549,399 +25780,256 @@
       }
     },
     {
-      "id": "festival-master:stretch-bridge-vector-057-059",
+      "id": "festival-master:stretch-bridge-greeting-prep-083-085",
       "title": {
-        "en": "Reconstructed vector and Harlan alone (057–059)",
-        "es": "Vector reconstruido y Harlan a solas (057–059)"
+        "en": "Greeting prep (083–085)",
+        "es": "Preparación del saludo (083–085)"
       },
       "status": "draft",
-      "revision": 2,
+      "revision": 1,
       "members": [
         {
-          "shotId": "festival-master:shot-plan-057",
+          "shotId": "festival-master:shot-plan-083",
           "order": 1,
           "takeScope": "selected",
           "keyframeRole": "establish",
           "startState": {
-            "en": "Thrust has restored steady 1 g; Rao is planted at her analysis console reading the reconstructed firing-angle display.",
-            "es": "needs_revision"
+            "en": "Sorell and the bridge crew work around the hull-display translation.",
+            "es": "Sorell y la tripulación trabajan alrededor de la traducción en la pantalla del casco."
           },
           "event": {
-            "en": "On the English-only display, the plotted vector aims at empty future intercept space—no planet, station, or beacon—while Voss listens center-frame and Harlan watches from screen right.",
-            "es": "needs_revision"
+            "en": "She finishes converting the Velari primer into branching light.",
+            "es": "Termina de convertir el primer Velari en luz ramificada."
           },
           "endState": {
-            "en": "The empty-direction problem is readable on Rao’s console; Sorell remains under watch in deep right; Okoye keeps supervisory awareness.",
-            "es": "needs_revision"
+            "en": "The clean greeting is ready for review.",
+            "es": "El saludo limpio queda listo para revisión."
           }
         },
         {
-          "shotId": "festival-master:shot-plan-058",
+          "shotId": "festival-master:shot-plan-084",
           "order": 2,
           "takeScope": "selected",
           "keyframeRole": "develop",
           "startState": {
-            "en": "Same 1 g bridge geography; Sorell still retained under watch; Okoye’s watch unbroken.",
-            "es": "needs_revision"
+            "en": "The same bridge stations and display remain active.",
+            "es": "Los mismos puestos y pantalla del puente siguen activos."
           },
           "event": {
-            "en": "Voss (silver beard—never Harlan) leans in and authorizes further comparison—curious, decisive—while Rao stays ready at the console to test a moving-receiver hypothesis.",
-            "es": "needs_revision"
+            "en": "Sorell explains the primer's significance and Voss acknowledges his earlier mistake.",
+            "es": "Sorell explica la importancia del primer y Voss reconoce su error anterior."
           },
           "endState": {
-            "en": "The bridge is primed to chase the unexplained optical packet; Sorell remains supervised, not free crew.",
-            "es": "needs_revision"
+            "en": "The crew treats the greeting as a first answer, not a test.",
+            "es": "La tripulación trata el saludo como una primera respuesta, no como una prueba."
           }
         },
         {
-          "shotId": "festival-master:shot-plan-059",
+          "shotId": "festival-master:shot-plan-085",
           "order": 3,
           "takeScope": "selected",
-          "keyframeRole": "payoff",
+          "keyframeRole": "develop",
           "startState": {
-            "en": "Brief insert: Harlan alone at the secondary console under 1 g; other crew out of frame.",
-            "es": "needs_revision"
+            "en": "Sorell and Voss remain at the greeting console.",
+            "es": "Sorell y Voss permanecen en la consola del saludo."
           },
           "event": {
-            "en": "Harlan (younger, clean-shaven) watches the unrecoverable burst record with private mourning, hand near chin—no floating, feet planted.",
-            "es": "needs_revision"
+            "en": "Voss authorizes one clean greeting and Sorell prepares the send.",
+            "es": "Voss autoriza un solo saludo limpio y Sorell prepara el envío."
           },
           "endState": {
-            "en": "His private reaction closes the vector beat before the incoming packet.",
-            "es": "needs_revision"
+            "en": "The crew is committed to the limited transmission.",
+            "es": "La tripulación queda comprometida con la transmisión limitada."
           }
         }
       ],
       "locationId": "location:celestial-ardor-bridge",
       "presentCharacterIds": [
-        "character:voss",
-        "character:harlan",
-        "character:rao",
-        "character:okoye",
-        "character:sorell"
-      ],
-      "absentCharacterIds": [
-        "character:zao"
-      ],
-      "physics": {
-        "en": "Steady 1 g artificial gravity on the bridge after thrust restore: feet planted, normal weight, seated or standing as blocked, no floating debris or drifting hair.",
-        "es": "needs_revision"
-      },
-      "lighting": {
-        "en": "Bridge practicals with the reconstructed vector display glowing English-only; no smoke.",
-        "es": "needs_revision"
-      },
-      "blocking": [
-        {
-          "characterId": "character:voss",
-          "zoneOrSeat": "command station / meeting-table captain side",
-          "screenSide": "center",
-          "facing": "the active exchange and displays",
-          "posture": "standing or braced at command",
-          "eyelineTarget": "the active exchange"
-        },
-        {
-          "characterId": "character:rao",
-          "zoneOrSeat": "science/analysis console along the station arc",
-          "screenSide": "left",
-          "facing": "her display and the crew",
-          "posture": "standing or seated at console",
-          "eyelineTarget": "the display"
-        },
-        {
-          "characterId": "character:harlan",
-          "zoneOrSeat": "secondary console / aft security approach, screen right",
-          "screenSide": "right",
-          "facing": "the displays and command",
-          "posture": "standing",
-          "eyelineTarget": "the display"
-        },
-        {
-          "characterId": "character:okoye",
-          "zoneOrSeat": "security watch deep left; still responsible for retained Sorell until Harlan is held",
-          "screenSide": "left",
-          "facing": "Sorell and Harlan",
-          "posture": "standing, guarding",
-          "eyelineTarget": "character:sorell"
-        },
-        {
-          "characterId": "character:sorell",
-          "zoneOrSeat": "retained under watch, deep right near translator station (not free duty)",
-          "screenSide": "right",
-          "facing": "the active exchange, supervised",
-          "posture": "standing or seated under watch, hands visible, not collaborating as free crew",
-          "eyelineTarget": "the active exchange"
-        }
-      ],
-      "sharedDescription": {
-        "en": "Continuous bridge vector beat under steady 1 g. Sorell remains provisionally retained under watch (deep right)—not free translator crew. Okoye’s blocking keeps supervisory watch on her. Harlan is the younger clean-shaven dark-haired officer; Voss older silver beard; Rao East-Asian lighter gray jacket. Ignore pair-sheet backgrounds. No burned-in spoken dialogue; English-only diegetic UI.",
-        "es": "needs_revision"
-      },
-      "generationProfile": {
-        "stillMode": "combined_storyboard_sheet",
-        "videoMode": "grouped_seedance",
-        "gridLayout": {
-          "rows": 2,
-          "cols": 2,
-          "gutterFraction": 0.02,
-          "panelAspect": "16:9",
-          "blankCells": [
-            4
-          ]
-        },
-        "maxMembersPerVideoJob": 1
-      },
-      "referenceAssetIds": [
-        "asset:character-pair-voss-harlan-bridge-sheet",
-        "asset:character-pair-rao-sorell-bridge-sheet",
-        "asset:character-pair-okoye-voss-bridge-sheet",
-        "asset:location-celestial-ardor-bridge-realistic-reference"
-      ],
-      "combinedStillAssetId": "asset:festival-master-stretch-bridge-vector-057-059-sheet",
-      "videoPromptFreeze": {
-        "status": "approved",
-        "approvedAt": "2026-09-15",
-        "source": "agent authorship prep scenes 20-22; submit Seedance only after still regen + human go"
-      }
-    },
-    {
-      "id": "festival-master:stretch-bridge-packet-open-060-061",
-      "title": {
-        "en": "Incoming Zao packet (060–061)",
-        "es": "Paquete entrante de Zao (060–061)"
-      },
-      "status": "draft",
-      "revision": 2,
-      "members": [
-        {
-          "shotId": "festival-master:shot-plan-060",
-          "order": 1,
-          "takeScope": "selected",
-          "keyframeRole": "establish",
-          "startState": {
-            "en": "Same 1 g bridge; Rao at analysis left, Voss center, Sorell near-right; Harlan and Okoye readable in depth.",
-            "es": "needs_revision"
-          },
-          "event": {
-            "en": "An incoming optical packet resolves on Rao’s English-only display; she urgently identifies Zao’s personal format and pre-crossing signature.",
-            "es": "needs_revision"
-          },
-          "endState": {
-            "en": "Voss attends; Sorell remains retained under watch near-right—present, supervised, not free collaborating crew.",
-            "es": "needs_revision"
-          }
-        },
-        {
-          "shotId": "festival-master:shot-plan-061",
-          "order": 2,
-          "takeScope": "selected",
-          "keyframeRole": "payoff",
-          "startState": {
-            "en": "Crew still planted under 1 g, attention on Rao’s packet display.",
-            "es": "needs_revision"
-          },
-          "event": {
-            "en": "Voss orders the packet opened/played at once—decisive, no floating—while Rao confirms readiness at the console.",
-            "es": "needs_revision"
-          },
-          "endState": {
-            "en": "The bridge is ready for Zao’s recorded vault flashback.",
-            "es": "needs_revision"
-          }
-        }
-      ],
-      "locationId": "location:celestial-ardor-bridge",
-      "presentCharacterIds": [
-        "character:rao",
         "character:voss",
         "character:sorell",
-        "character:harlan",
+        "character:rao",
         "character:okoye"
       ],
       "absentCharacterIds": [
+        "character:harlan",
         "character:zao"
       ],
       "physics": {
-        "en": "Steady 1 g on the bridge; crew at blocked stations with feet planted; Sorell remains under watch (not free duty).",
-        "es": "needs_revision"
+        "en": "Steady approach conditions with apparent 1 g on the bridge; the hull display remains visible through the reinforced windows.",
+        "es": "Condiciones estables de aproximación con 1 g aparente en el puente; la pantalla del casco se ve por las ventanas reforzadas."
       },
       "lighting": {
-        "en": "Bridge practicals with the incoming optical packet bright on Rao’s English-only display.",
-        "es": "needs_revision"
+        "en": "Bridge practicals balanced against the branching greeting light.",
+        "es": "Luces prácticas del puente equilibradas con la luz ramificada del saludo."
       },
       "blocking": [
         {
-          "characterId": "character:rao",
-          "zoneOrSeat": "analysis station",
-          "screenSide": "left",
-          "facing": "her display",
-          "posture": "standing at console",
-          "eyelineTarget": "the incoming packet"
-        },
-        {
           "characterId": "character:voss",
           "zoneOrSeat": "command station",
-          "screenSide": "center",
-          "facing": "Rao",
+          "screenSide": "left",
+          "facing": "Sorell and hull display",
           "posture": "standing",
-          "eyelineTarget": "character:rao"
+          "eyelineTarget": "character:sorell"
         },
         {
           "characterId": "character:sorell",
-          "zoneOrSeat": "retained under watch near translator station (not free duty)",
-          "screenSide": "right",
-          "facing": "Rao’s display",
-          "posture": "standing or seated under watch, hands visible, not collaborating as free crew",
-          "eyelineTarget": "character:rao"
+          "zoneOrSeat": "translator station",
+          "screenSide": "center",
+          "facing": "Voss and display",
+          "posture": "standing",
+          "eyelineTarget": "character:voss"
         },
         {
-          "characterId": "character:harlan",
-          "zoneOrSeat": "aft secondary console, far right depth",
+          "characterId": "character:rao",
+          "zoneOrSeat": "analysis station",
           "screenSide": "right",
-          "facing": "Rao and the packet",
+          "facing": "the display",
           "posture": "standing",
-          "eyelineTarget": "character:rao"
+          "eyelineTarget": "the display"
         },
         {
           "characterId": "character:okoye",
-          "zoneOrSeat": "security watch, far left depth; Sorell still under her responsibility",
-          "screenSide": "left",
-          "facing": "Sorell and command",
-          "posture": "standing, guarding",
-          "eyelineTarget": "character:sorell"
+          "zoneOrSeat": "security station",
+          "screenSide": "off",
+          "facing": "the bridge",
+          "posture": "standing",
+          "eyelineTarget": "the crew"
         }
       ],
       "sharedDescription": {
-        "en": "Incoming Zao packet on the bridge under steady 1 g. Sorell stays provisionally retained under watch near the translator station—she may look toward the display but is not free collaborating crew. Okoye maintains supervisory watch. Identity locks vs pair sheets; ignore pair-sheet backgrounds. No burned-in dialogue; English-only diegetic UI.",
+        "en": "Bridge greeting preparation for shots 083–085 (scene 28). One Seedance job per shot.",
         "es": "needs_revision"
       },
       "generationProfile": {
-        "stillMode": "combined_storyboard_sheet",
+        "stillMode": "independent_shared_authority",
         "videoMode": "grouped_seedance",
-        "gridLayout": {
-          "rows": 2,
-          "cols": 2,
-          "gutterFraction": 0.02,
-          "panelAspect": "16:9",
-          "blankCells": [
-            3,
-            4
-          ]
-        },
         "maxMembersPerVideoJob": 1
       },
       "referenceAssetIds": [
-        "asset:character-pair-voss-harlan-bridge-sheet",
         "asset:character-pair-rao-sorell-bridge-sheet",
         "asset:character-pair-okoye-voss-bridge-sheet",
-        "asset:location-celestial-ardor-bridge-realistic-reference"
+        "asset:location-celestial-ardor-bridge-realistic-reference",
+        "asset:location-velari-station-sheet"
       ],
-      "combinedStillAssetId": "asset:festival-master-stretch-bridge-packet-open-060-061-sheet",
-      "videoPromptFreeze": {
-        "status": "approved",
-        "approvedAt": "2026-09-15",
-        "source": "agent authorship prep scenes 20-22; submit Seedance only after still regen + human go"
-      }
+      "notes": [
+        {
+          "id": "note:greeting-prep-scene-split",
+          "type": "production",
+          "status": "resolved",
+          "text": {
+            "en": "Split from stretch-bridge-greeting-prep-083-086: scene 28 only.",
+            "es": "needs_revision"
+          }
+        }
+      ]
     },
     {
-      "id": "festival-master:stretch-vault-flashback-062-063",
+      "id": "festival-master:stretch-bridge-greeting-086",
       "title": {
-        "en": "Zao's vault flashback (062–063)",
-        "es": "Flashback de Zao en la bóveda (062–063)"
+        "en": "Greeting send (086)",
+        "es": "Envío del saludo (086)"
       },
       "status": "draft",
-      "revision": 2,
+      "revision": 1,
       "members": [
         {
-          "shotId": "festival-master:shot-plan-062",
+          "shotId": "festival-master:shot-plan-086",
           "order": 1,
           "takeScope": "selected",
           "keyframeRole": "establish",
           "startState": {
-            "en": "Delayed flashback: microgravity vault; Zao braced/handhold beside the armed impulse package and controller.",
-            "es": "needs_revision"
+            "en": "The bridge windows and hull display carry the prepared greeting.",
+            "es": "Las ventanas del puente y la pantalla del casco muestran el saludo preparado."
           },
           "event": {
-            "en": "She records the warning beside the device—determined, secured to structure—identifying the Proxima geophysical impulse package as the threat.",
-            "es": "needs_revision"
+            "en": "Structured light branches across the Ardor while the station remains dark.",
+            "es": "La luz estructurada se ramifica por el Ardor mientras la estación permanece oscura."
           },
           "endState": {
-            "en": "Package and Zao remain vault-anchored; no bridge architecture.",
-            "es": "needs_revision"
-          }
-        },
-        {
-          "shotId": "festival-master:shot-plan-063",
-          "order": 2,
-          "takeScope": "selected",
-          "keyframeRole": "payoff",
-          "startState": {
-            "en": "Same MG vault footing; Zao still secured beside the package.",
-            "es": "needs_revision"
-          },
-          "event": {
-            "en": "She explains Jupiter occlusion and forward intercept; a faint English-only diagram of the wormhole and a lead point ahead may superimpose near her.",
-            "es": "needs_revision"
-          },
-          "endState": {
-            "en": "The aimed-ahead optical warning is visually motivated; still microgravity, still vault only.",
-            "es": "needs_revision"
+            "en": "The ship waits for the Velari answer.",
+            "es": "La nave espera la respuesta Velari."
           }
         }
       ],
-      "locationId": "location:celestial-ardor-inner-shielding-vault",
+      "locationId": "location:celestial-ardor-bridge",
       "presentCharacterIds": [
+        "character:voss",
+        "character:sorell",
+        "character:rao",
+        "character:okoye"
+      ],
+      "absentCharacterIds": [
+        "character:harlan",
         "character:zao"
       ],
-      "absentCharacterIds": [],
       "physics": {
-        "en": "Microgravity flashback in the inner shielding vault: no usable floor; Zao and the package are secured to vault structure with handholds—nothing rests as if under 1 g.",
-        "es": "needs_revision"
+        "en": "Steady approach conditions with apparent 1 g on the bridge; the hull display remains visible through the reinforced windows.",
+        "es": "Condiciones estables de aproximación con 1 g aparente en el puente; la pantalla del casco se ve por las ventanas reforzadas."
       },
       "lighting": {
-        "en": "Vault service lighting and the package controller’s diagnostic glow; English-only diegetic UI if any.",
-        "es": "needs_revision"
+        "en": "Bridge practicals balanced against the branching greeting light.",
+        "es": "Luces prácticas del puente equilibradas con la luz ramificada del saludo."
       },
       "blocking": [
         {
-          "characterId": "character:zao",
-          "zoneOrSeat": "package service panel, handhold braced",
+          "characterId": "character:voss",
+          "zoneOrSeat": "command station",
+          "screenSide": "left",
+          "facing": "Sorell and hull display",
+          "posture": "standing",
+          "eyelineTarget": "character:sorell"
+        },
+        {
+          "characterId": "character:sorell",
+          "zoneOrSeat": "translator station",
           "screenSide": "center",
-          "facing": "the package and recorder",
-          "posture": "braced / handhold in microgravity",
-          "eyelineTarget": "the package"
+          "facing": "Voss and display",
+          "posture": "standing",
+          "eyelineTarget": "character:voss"
+        },
+        {
+          "characterId": "character:rao",
+          "zoneOrSeat": "analysis station",
+          "screenSide": "right",
+          "facing": "the display",
+          "posture": "standing",
+          "eyelineTarget": "the display"
+        },
+        {
+          "characterId": "character:okoye",
+          "zoneOrSeat": "security station",
+          "screenSide": "off",
+          "facing": "the bridge",
+          "posture": "standing",
+          "eyelineTarget": "the crew"
         }
       ],
       "sharedDescription": {
-        "en": "Two-panel delayed vault flashback in microgravity only—ignore any bridge background. Zao alone with the armed Proxima geophysical impulse package per the attached sheets. No burned-in spoken dialogue or subtitles; English-only diegetic diagram/UI if shown.",
+        "en": "Scene 29 greeting send for shot 086. One Seedance job.",
         "es": "needs_revision"
       },
       "generationProfile": {
-        "stillMode": "combined_storyboard_sheet",
+        "stillMode": "independent_shared_authority",
         "videoMode": "grouped_seedance",
-        "gridLayout": {
-          "rows": 2,
-          "cols": 2,
-          "gutterFraction": 0.02,
-          "panelAspect": "16:9",
-          "blankCells": [
-            3,
-            4
-          ]
-        },
         "maxMembersPerVideoJob": 1
       },
       "referenceAssetIds": [
-        "asset:character-zao-sheet",
-        "asset:location-celestial-ardor-inner-shielding-vault-sheet",
-        "asset:object-proxima-geophysical-impulse-package-sheet"
+        "asset:character-pair-rao-sorell-bridge-sheet",
+        "asset:character-pair-okoye-voss-bridge-sheet",
+        "asset:location-celestial-ardor-bridge-realistic-reference",
+        "asset:location-velari-station-sheet"
       ],
-      "combinedStillAssetId": "asset:festival-master-stretch-vault-flashback-062-063-sheet",
-      "videoPromptFreeze": {
-        "status": "approved",
-        "approvedAt": "2026-09-15",
-        "source": "agent authorship prep scenes 20-22; submit Seedance only after still regen + human go"
-      }
+      "notes": [
+        {
+          "id": "note:greeting-086-scene-split",
+          "type": "production",
+          "status": "resolved",
+          "text": {
+            "en": "Peeled from stretch-bridge-greeting-prep-083-086 into scene 29.",
+            "es": "needs_revision"
+          }
+        }
+      ]
     },
     {
       "id": "festival-master:stretch-velari-answer-087-088",
@@ -28265,8 +27353,8 @@
       ],
       "absentCharacterIds": [],
       "physics": {
-        "en": "Steady 1 g artificial gravity returning on the bridge: feet planted, loose tools settle to the deck, no floating debris.",
-        "es": "needs_revision"
+        "en": "Continuous established geometry and physics from the Festival-master shot descriptions.",
+        "es": "Continuous established geometry and physics from the Festival-master shot descriptions."
       },
       "lighting": {
         "en": "Established practical lighting for this location.",
@@ -28275,48 +27363,48 @@
       "blocking": [
         {
           "characterId": "character:harlan",
-          "zoneOrSeat": "meeting-table / command approach, accusing toward Sorell",
+          "zoneOrSeat": "established-1",
           "screenSide": "left",
-          "facing": "character:sorell",
-          "posture": "standing under restored 1 g, planted, accusing",
-          "eyelineTarget": "character:sorell"
+          "facing": "toward the active exchange or console",
+          "posture": "other",
+          "eyelineTarget": "the active action"
         },
         {
           "characterId": "character:okoye",
-          "zoneOrSeat": "security watch; hands-where-I-can-see-them control of Sorell and the scene",
+          "zoneOrSeat": "established-2",
           "screenSide": "center",
-          "facing": "Sorell and the command exchange",
-          "posture": "standing, guarding",
-          "eyelineTarget": "character:sorell"
+          "facing": "toward the active exchange or console",
+          "posture": "other",
+          "eyelineTarget": "the active action"
         },
         {
           "characterId": "character:rao",
-          "zoneOrSeat": "analysis / science station along the arc",
+          "zoneOrSeat": "established-3",
           "screenSide": "right",
-          "facing": "Harlan and Sorell",
-          "posture": "standing or seated at console, skeptical",
-          "eyelineTarget": "character:harlan"
+          "facing": "toward the active exchange or console",
+          "posture": "other",
+          "eyelineTarget": "the active action"
         },
         {
           "characterId": "character:sorell",
-          "zoneOrSeat": "retained under watch on the bridge (no brig); supervised position",
+          "zoneOrSeat": "established-4",
           "screenSide": "left",
-          "facing": "the active exchange, supervised",
-          "posture": "standing or seated under watch, hands visible, not collaborating as free crew",
-          "eyelineTarget": "the active exchange"
+          "facing": "toward the active exchange or console",
+          "posture": "other",
+          "eyelineTarget": "the active action"
         },
         {
           "characterId": "character:voss",
-          "zoneOrSeat": "command station / meeting-table captain side",
+          "zoneOrSeat": "established-5",
           "screenSide": "center",
-          "facing": "the accusation exchange",
-          "posture": "standing under restored 1 g",
-          "eyelineTarget": "character:harlan"
+          "facing": "toward the active exchange or console",
+          "posture": "other",
+          "eyelineTarget": "the active action"
         }
       ],
       "sharedDescription": {
-        "en": "Continuous bridge investigation under restored thrust. Sorell is provisionally retained under watch (no brig)—not free crew. Okoye keeps her under supervision. Harlan argues suspicion; Rao separates disagreement from proof. Identity locks: Harlan younger clean-shaven; Voss older silver beard; Rao East-Asian lighter jacket; Sorell the other woman on the Rao–Sorell pair sheet; Okoye Black woman short natural hair. Ignore pair-sheet backgrounds.",
-        "es": "needs_revision"
+        "en": "Continuous visual stretch for shots 046–047–048–049, preserving location, cast, blocking, and physical continuity.",
+        "es": "Tramo visual continuo para las tomas 046–047–048–049, que conserva ubicación, elenco, puesta y continuidad física."
       },
       "generationProfile": {
         "stillMode": "combined_storyboard_sheet",
@@ -28405,10 +27493,10 @@
         },
         {
           "characterId": "character:okoye",
-          "zoneOrSeat": "between Harlan and the exit / hatch line (now holding Harlan)",
+          "zoneOrSeat": "between Harlan and the exit / hatch line",
           "screenSide": "left",
           "facing": "Harlan",
-          "posture": "standing, blocking and securing Harlan",
+          "posture": "standing, blocking",
           "eyelineTarget": "character:harlan"
         },
         {
@@ -28429,15 +27517,15 @@
         },
         {
           "characterId": "character:sorell",
-          "zoneOrSeat": "still retained under watch in depth (not released); clear of the Harlan hold",
+          "zoneOrSeat": "translator station depth",
           "screenSide": "right",
           "facing": "the confrontation",
-          "posture": "standing or seated under watch, hands visible, not collaborating as free crew",
+          "posture": "standing",
           "eyelineTarget": "character:harlan"
         }
       ],
       "sharedDescription": {
-        "en": "Command break under steady 1 g: Voss aborts approach and orders Harlan held; Okoye interposes on Harlan. Sorell remains provisionally retained under watch in depth—not free, not released—until the later release beat. Identity locks vs pair sheets; ignore backgrounds. No burned-in dialogue.",
+        "en": "Single-panel command-break under steady 1 g. Harlan is the younger clean-shaven dark-haired officer (right panel of the Voss–Harlan pair sheet); Voss is the older silver-bearded captain (left panel of that sheet)—never swap them. Rao is the East-Asian woman in the lighter gray jacket (Rao–Sorell pair sheet); Sorell is the other woman on that sheet; Okoye is the Black woman with short natural hair (Okoye–Voss pair sheet). Ignore studio/pair-sheet backgrounds; use only the bridge location reference for architecture. No burned-in spoken dialogue or subtitles; English-only diegetic UI when visible. Okoye physically interposes to hold Harlan; Harlan’s wrist device matches the prop sheet. Ignore pair-sheet backgrounds.",
         "es": "needs_revision"
       },
       "generationProfile": {
@@ -28536,11 +27624,11 @@
             "es": "needs_revision"
           },
           "event": {
-            "en": "Rao sets the proportionate standard—enough to isolate Harlan, enough to release Sorell; Voss looks between Harlan and still-retained Sorell, recognizing how much of his case came from his own first mistake.",
+            "en": "Rao sets the proportionate standard—enough to isolate Harlan, enough to release Zao; Voss looks between Harlan and Sorell, recognizing how much of his case came from his own first mistake.",
             "es": "needs_revision"
           },
           "endState": {
-            "en": "Isolation of Harlan and the path to releasing Sorell are established; Sorell is not yet free in this beat.",
+            "en": "Isolation of Harlan and the path to releasing Zao are established.",
             "es": "needs_revision"
           }
         }
@@ -28589,7 +27677,7 @@
         },
         {
           "characterId": "character:okoye",
-          "zoneOrSeat": "interposed near Harlan, securing him",
+          "zoneOrSeat": "interposed near Harlan",
           "screenSide": "right",
           "facing": "Harlan",
           "posture": "standing, securing",
@@ -28597,15 +27685,15 @@
         },
         {
           "characterId": "character:sorell",
-          "zoneOrSeat": "still retained under watch in depth (awaiting release; not free crew)",
+          "zoneOrSeat": "depth near translator station",
           "screenSide": "left",
           "facing": "Voss and Harlan",
-          "posture": "standing or seated under watch, hands visible, not collaborating as free crew",
+          "posture": "standing",
           "eyelineTarget": "character:voss"
         }
       ],
       "sharedDescription": {
-        "en": "Three-panel command-break argument under steady 1 g. Harlan is held; Okoye secures him. Sorell remains provisionally retained under watch in depth until the later release line—do not stage her as free collaborating crew. Identity locks vs pair sheets; wrist device on Harlan when framed. Ignore pair-sheet backgrounds.",
+        "en": "Three-panel command-break argument under steady 1 g. Harlan is the younger clean-shaven dark-haired officer (right panel of the Voss–Harlan pair sheet); Voss is the older silver-bearded captain (left panel of that sheet)—never swap them. Rao is the East-Asian woman in the lighter gray jacket (Rao–Sorell pair sheet); Sorell is the other woman on that sheet; Okoye is the Black woman with short natural hair (Okoye–Voss pair sheet). Ignore studio/pair-sheet backgrounds; use only the bridge location reference for architecture. No burned-in spoken dialogue or subtitles; English-only diegetic UI when visible. Harlan remains held; Okoye stays interposed; Rao drives the evidence; Voss absorbs the cost of his first mistake. Wrist device visible on Harlan when framed. Ignore pair-sheet backgrounds.",
         "es": "needs_revision"
       },
       "generationProfile": {
@@ -28646,147 +27734,6 @@
         "approvedAt": "2026-09-15",
         "source": "agent authorship prep scenes 20-22; submit Seedance only after still regen + human go"
       }
-    },
-    {
-      "id": "festival-master:stretch-bridge-device-071-073",
-      "title": {
-        "en": "Harlan device and escape (071–073)",
-        "es": "Harlan device and escape (071–073)"
-      },
-      "status": "draft",
-      "revision": 1,
-      "members": [
-        {
-          "shotId": "festival-master:shot-plan-071",
-          "order": 1,
-          "takeScope": "selected",
-          "keyframeRole": "establish",
-          "startState": {
-            "en": "Harlan held on the bridge under 1 g; Okoye interposed; Sorell free at depth after release; Voss at command.",
-            "es": "needs_revision"
-          },
-          "event": {
-            "en": "Harlan extends the wrist device toward Okoye; she reaches without relaxing her stance.",
-            "es": "needs_revision"
-          },
-          "endState": {
-            "en": "Device offered; Okoye still firm; hatch/service path readable in depth for the escape beat.",
-            "es": "needs_revision"
-          }
-        },
-        {
-          "shotId": "festival-master:shot-plan-072",
-          "order": 2,
-          "takeScope": "selected",
-          "keyframeRole": "develop",
-          "startState": {
-            "en": "Same 1 g hold geography; Okoye completing restraint on Harlan.",
-            "es": "needs_revision"
-          },
-          "event": {
-            "en": "Okoye demands the device; a revocation alert flashes nearby and draws her eyes for one instant.",
-            "es": "needs_revision"
-          },
-          "endState": {
-            "en": "Attention flickers to the alert—opening for Harlan’s move.",
-            "es": "needs_revision"
-          }
-        },
-        {
-          "shotId": "festival-master:shot-plan-073",
-          "order": 3,
-          "takeScope": "selected",
-          "keyframeRole": "payoff",
-          "startState": {
-            "en": "Same bridge; Okoye briefly diverted; service hatch line available.",
-            "es": "needs_revision"
-          },
-          "event": {
-            "en": "Harlan drives Okoye into the console and dives into the service shaft, locking the hatch.",
-            "es": "needs_revision"
-          },
-          "endState": {
-            "en": "Hatch sealed; Okoye raising the alarm; Voss warning aft over comm.",
-            "es": "needs_revision"
-          }
-        }
-      ],
-      "locationId": "location:celestial-ardor-bridge",
-      "presentCharacterIds": [
-        "character:harlan",
-        "character:okoye",
-        "character:sorell",
-        "character:voss"
-      ],
-      "absentCharacterIds": [],
-      "physics": {
-        "en": "Steady 1 g artificial gravity on the bridge: feet planted, normal weight, no floating debris.",
-        "es": "needs_revision"
-      },
-      "lighting": {
-        "en": "Established practical lighting for this location.",
-        "es": "Iluminación práctica establecida para esta ubicación."
-      },
-      "blocking": [
-        {
-          "characterId": "character:harlan",
-          "zoneOrSeat": "held position screen-left / center, wrist device extended toward Okoye",
-          "screenSide": "left",
-          "facing": "character:okoye",
-          "posture": "standing under restraint pressure, offering the wrist device",
-          "eyelineTarget": "character:okoye"
-        },
-        {
-          "characterId": "character:okoye",
-          "zoneOrSeat": "interposed at Harlan, reaching for the wrist device without relaxing",
-          "screenSide": "center",
-          "facing": "character:harlan",
-          "posture": "standing, firm, securing",
-          "eyelineTarget": "character:harlan"
-        },
-        {
-          "characterId": "character:sorell",
-          "zoneOrSeat": "translator station depth (released; free crew again)",
-          "screenSide": "right",
-          "facing": "the Harlan–Okoye exchange",
-          "posture": "standing, watching",
-          "eyelineTarget": "character:harlan"
-        },
-        {
-          "characterId": "character:voss",
-          "zoneOrSeat": "command station",
-          "screenSide": "left",
-          "facing": "Harlan and Okoye",
-          "posture": "standing",
-          "eyelineTarget": "character:harlan"
-        }
-      ],
-      "sharedDescription": {
-        "en": "Three-panel bridge device/escape beat under steady 1 g. Harlan remains under hold and offers his wrist device; Okoye reaches without relaxing; Sorell is already released and watches from translator depth as free crew; Voss holds command. Wrist device visible when framed. Identity locks vs pair sheets; ignore pair-sheet backgrounds. No burned-in spoken dialogue; English-only diegetic UI.",
-        "es": "needs_revision"
-      },
-      "generationProfile": {
-        "stillMode": "combined_storyboard_sheet",
-        "videoMode": "grouped_seedance",
-        "gridLayout": {
-          "rows": 2,
-          "cols": 2,
-          "gutterFraction": 0.02,
-          "panelAspect": "16:9",
-          "blankCells": [
-            4
-          ]
-        },
-        "maxMembersPerVideoJob": 1
-      },
-      "referenceAssetIds": [
-        "asset:character-pair-voss-harlan-bridge-sheet",
-        "asset:character-pair-okoye-voss-bridge-sheet",
-        "asset:character-sorell-sheet",
-        "asset:location-celestial-ardor-bridge-realistic-reference",
-        "asset:object-harlan-wrist-device-sheet"
-      ],
-      "combinedStillAssetId": "asset:festival-master-stretch-bridge-device-071-073-sheet"
     },
     {
       "id": "festival-master:stretch-reactor-confrontation-077-079",

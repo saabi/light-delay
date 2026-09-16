@@ -6021,7 +6021,7 @@
         "es": "festival-master:cue-0120",
         "en": "festival-master:cue-0120"
       },
-      "durationMs": 6780,
+      "durationMs": 1820,
       "metadata": {
         "scriptCueId": "festival-master:cue-0120",
         "lang": "en",
@@ -8657,13 +8657,13 @@
         "storyboardEligible": true
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
         "explanation": {
-          "es": "Imagen generada; la aceptación editorial está pendiente.",
-          "en": "Regenerated storyboard still; editorial review pending."
+          "en": "Author approved Festival-master scene 15 shots 040 and 041 stills (2026-09-16).",
+          "es": "needs_revision"
         }
       }
     },
@@ -8695,13 +8695,13 @@
         "storyboardEligible": true
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
         "explanation": {
-          "en": "Regenerated independent storyboard still; pending editorial review.",
-          "es": "Imagen de storyboard independiente regenerada; pendiente de revisión editorial."
+          "en": "Author approved Festival-master scene 15 shots 040 and 041 stills (2026-09-16).",
+          "es": "needs_revision"
         }
       }
     },
@@ -12981,6 +12981,16 @@
           "en": "Registered custody-fixed scene 20 stretch regen; pending editorial review.",
           "es": "needs_revision"
         }
+      },
+      "status": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Scene 20 stretch panel/sheet retained for recovery after single-take compact; inactive.",
+          "es": "needs_revision"
+        }
       }
     },
     {
@@ -13298,13 +13308,13 @@
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
         "explanation": {
-          "en": "Combined visual-stretch storyboard sheet pending editorial review and split.",
-          "es": "Hoja storyboard combinada de visual stretch pendiente de revisión editorial y partición."
+          "en": "Author approved Scene 24 bridge-device stretch panels as Seedance keyframes.",
+          "es": "needs_revision"
         }
       }
     },
@@ -14026,12 +14036,12 @@
         ]
       },
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "current",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "explanation": {
-          "en": "Stretch festival-master:stretch-central-vault-obstruction-054-056 dissolved (multi-location still authority). Not a live stretch package.",
+          "en": "Author approved as independent Scene 19 shot 056 keyframe after stretch dissolve (2026-09-16).",
           "es": "needs_revision"
         }
       }
@@ -14070,6 +14080,16 @@
           "en": "Registered custody-fixed scene 20 stretch regen; pending editorial review.",
           "es": "needs_revision"
         }
+      },
+      "status": {
+        "status": "current",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Scene 20 single-take keyframe (former stretch panel-01); approved for Seedance I2V.",
+          "es": "needs_revision"
+        }
       }
     },
     {
@@ -14106,6 +14126,16 @@
           "en": "Registered custody-fixed scene 20 stretch regen; pending editorial review.",
           "es": "needs_revision"
         }
+      },
+      "status": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Scene 20 stretch panel/sheet retained for recovery after single-take compact; inactive.",
+          "es": "needs_revision"
+        }
       }
     },
     {
@@ -14140,6 +14170,16 @@
         ],
         "explanation": {
           "en": "Registered custody-fixed scene 20 stretch regen; pending editorial review.",
+          "es": "needs_revision"
+        }
+      },
+      "status": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Scene 20 stretch panel/sheet retained for recovery after single-take compact; inactive.",
           "es": "needs_revision"
         }
       }
@@ -15697,13 +15737,13 @@
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
         "explanation": {
-          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Author approved Scene 24 bridge-device stretch panels as Seedance keyframes.",
+          "es": "needs_revision"
         }
       }
     },
@@ -15733,13 +15773,13 @@
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
         "explanation": {
-          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Author approved Scene 24 bridge-device stretch panels as Seedance keyframes.",
+          "es": "needs_revision"
         }
       }
     },
@@ -15769,13 +15809,13 @@
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
         "explanation": {
-          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Author approved Scene 24 bridge-device stretch panels as Seedance keyframes.",
+          "es": "needs_revision"
         }
       }
     },
@@ -17598,6 +17638,651 @@
         ],
         "explanation": {
           "en": "Scene 18 singleton Seedance clip pending editorial review.",
+          "es": "needs_revision"
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-shot-plan-083-rev-1-video-1-video",
+      "kind": "video",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/shot-plan-083-rev-1-video-1.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 7050,
+      "width": 854,
+      "height": 480,
+      "source": {
+        "provider": "higgsfield-mcp-official",
+        "model": "seedance-2.5",
+        "generatedAt": "2026-09-16T18:17:42.981Z",
+        "externalId": "3dcab16a-da98-4ef9-98cd-d2f02bce9cd1"
+      },
+      "metadata": {
+        "scriptId": "script:light-delay-festival-master",
+        "shotId": "festival-master:shot-plan-083",
+        "takeId": "festival-master:shot-plan-083:take-02",
+        "sceneId": "festival-master:scene-28",
+        "providerJobId": "3dcab16a-da98-4ef9-98cd-d2f02bce9cd1",
+        "creditsSpent": 21,
+        "resolution": "480p",
+        "mode": "omni_reference"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Singleton Seedance I2V for Scene 28 shot 083 pending editorial review.",
+          "es": "needs_revision"
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-shot-plan-084-rev-1-video-1-video",
+      "kind": "video",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/shot-plan-084-rev-1-video-1.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13050,
+      "width": 854,
+      "height": 480,
+      "source": {
+        "provider": "higgsfield-mcp-official",
+        "model": "seedance-2.5",
+        "generatedAt": "2026-09-16T18:17:42.981Z",
+        "externalId": "105a24ff-9024-48fc-a3c2-d7e3c62dbcdf"
+      },
+      "metadata": {
+        "scriptId": "script:light-delay-festival-master",
+        "shotId": "festival-master:shot-plan-084",
+        "takeId": "festival-master:shot-plan-084:take-02",
+        "sceneId": "festival-master:scene-28",
+        "providerJobId": "105a24ff-9024-48fc-a3c2-d7e3c62dbcdf",
+        "creditsSpent": 39,
+        "resolution": "480p",
+        "mode": "omni_reference"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Singleton Seedance I2V for Scene 28 shot 084 pending editorial review.",
+          "es": "needs_revision"
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-shot-plan-085-rev-1-video-1-video",
+      "kind": "video",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/shot-plan-085-rev-1-video-1.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 8042,
+      "width": 854,
+      "height": 480,
+      "source": {
+        "provider": "higgsfield-mcp-official",
+        "model": "seedance-2.5",
+        "generatedAt": "2026-09-16T18:17:42.981Z",
+        "externalId": "23d7cdd2-624d-4ac3-b69e-06524790338a"
+      },
+      "metadata": {
+        "scriptId": "script:light-delay-festival-master",
+        "shotId": "festival-master:shot-plan-085",
+        "takeId": "festival-master:shot-plan-085:take-02",
+        "sceneId": "festival-master:scene-28",
+        "providerJobId": "23d7cdd2-624d-4ac3-b69e-06524790338a",
+        "creditsSpent": 24,
+        "resolution": "480p",
+        "mode": "omni_reference"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Singleton Seedance I2V for Scene 28 shot 085 pending editorial review.",
+          "es": "needs_revision"
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-scene-19-054-055-single-take-still",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/scene-19-054-055-single-take.png",
+      "mimeType": "image/png",
+      "width": 1672,
+      "height": 941,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-16T18:24:41.129Z"
+      },
+      "metadata": {
+        "scriptId": "script:light-delay-festival-master",
+        "shotId": "festival-master:shot-plan-054",
+        "mergedSourceShotIds": [
+          "festival-master:shot-plan-054",
+          "festival-master:shot-plan-055"
+        ],
+        "sceneId": "festival-master:scene-19",
+        "singleTake": true,
+        "referenceAssetIds": [
+          "asset:location-celestial-ardor-reactor-service-bay-sheet",
+          "asset:character-rao-sheet",
+          "asset:character-okoye-sheet",
+          "asset:character-harlan-sheet"
+        ]
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "sourceShotId": "festival-master:shot-plan-054",
+        "explanation": {
+          "en": "Combined Scene 19 054–055 still generated from the fixed outer reactor service-bay and solo character references; editorial review pending.",
+          "es": "needs_revision"
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-scene-19-054-055-central-shaft-single-take-still",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/scene-19-054-055-central-shaft-single-take.png",
+      "mimeType": "image/png",
+      "width": 1672,
+      "height": 941,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-16T18:39:30.518Z"
+      },
+      "metadata": {
+        "scriptId": "script:light-delay-festival-master",
+        "shotId": "festival-master:shot-plan-054",
+        "mergedSourceShotIds": [
+          "festival-master:shot-plan-054",
+          "festival-master:shot-plan-055"
+        ],
+        "sceneId": "festival-master:scene-19",
+        "singleTake": true,
+        "referenceAssetIds": [
+          "asset:location-celestial-ardor-central-access-sheet",
+          "asset:character-rao-sheet",
+          "asset:character-okoye-sheet",
+          "asset:character-harlan-sheet"
+        ]
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "sourceShotId": "festival-master:shot-plan-054",
+        "explanation": {
+          "en": "Corrected combined Scene 19 054–055 still using the central-access shaft reference; editorial review pending.",
+          "es": "needs_revision"
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-shot-plan-040-rev-1-video-1-video",
+      "kind": "video",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/shot-plan-040-rev-1-video-1.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 9050,
+      "width": 854,
+      "height": 480,
+      "source": {
+        "provider": "higgsfield-mcp-official",
+        "model": "seedance-2.5",
+        "generatedAt": "2026-09-16T18:49:49.701Z",
+        "externalId": "55f87e46-b461-4406-8240-b9f185c1940d"
+      },
+      "metadata": {
+        "scriptId": "script:light-delay-festival-master",
+        "shotId": "festival-master:shot-plan-040",
+        "takeId": "festival-master:shot-plan-040:take-01",
+        "sceneId": "festival-master:scene-15",
+        "providerJobId": "55f87e46-b461-4406-8240-b9f185c1940d",
+        "creditsSpent": 27,
+        "resolution": "480p",
+        "mode": "omni_reference"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Singleton Seedance I2V for Scene 15 shot 040 pending editorial review.",
+          "es": "needs_revision"
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-shot-plan-041-rev-1-video-1-video",
+      "kind": "video",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/shot-plan-041-rev-1-video-1.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 8050,
+      "width": 854,
+      "height": 480,
+      "source": {
+        "provider": "higgsfield-mcp-official",
+        "model": "seedance-2.5",
+        "generatedAt": "2026-09-16T18:49:49.701Z",
+        "externalId": "d1699fd4-71dc-40fc-869f-9fc15290b3d4"
+      },
+      "metadata": {
+        "scriptId": "script:light-delay-festival-master",
+        "shotId": "festival-master:shot-plan-041",
+        "takeId": "festival-master:shot-plan-041:take-01",
+        "sceneId": "festival-master:scene-15",
+        "providerJobId": "d1699fd4-71dc-40fc-869f-9fc15290b3d4",
+        "creditsSpent": 24,
+        "resolution": "480p",
+        "mode": "omni_reference"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Singleton Seedance I2V for Scene 15 shot 041 pending editorial review.",
+          "es": "needs_revision"
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-shot-plan-054-rev-1-video-1-video",
+      "kind": "video",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/shot-plan-054-rev-1-video-1.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 15050,
+      "width": 854,
+      "height": 480,
+      "source": {
+        "provider": "higgsfield-mcp-official",
+        "model": "seedance-2.5",
+        "generatedAt": "2026-09-16T19:13:05.271Z",
+        "externalId": "9e3f71cb-eb53-4162-85a4-dc6456dc2280"
+      },
+      "metadata": {
+        "scriptId": "script:light-delay-festival-master",
+        "shotId": "festival-master:shot-plan-054",
+        "takeId": "festival-master:shot-plan-054:take-03",
+        "sceneId": "festival-master:scene-19",
+        "providerJobId": "9e3f71cb-eb53-4162-85a4-dc6456dc2280",
+        "creditsSpent": 45,
+        "resolution": "480p",
+        "mode": "omni_reference",
+        "creditsNote": "estimated from prior Seedance 480p rate (~3 cr/s); not from get_cost on this submit"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Singleton Seedance I2V for Scene 19 combined 054–055 take pending editorial review.",
+          "es": "needs_revision"
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-scene-20-single-take-still",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/scene-20-single-take.png",
+      "mimeType": "image/png",
+      "width": 1672,
+      "height": 941,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-16T19:27:38.017Z"
+      },
+      "metadata": {
+        "scriptId": "script:light-delay-festival-master",
+        "shotId": "festival-master:shot-plan-057",
+        "sceneId": "festival-master:scene-20",
+        "singleTake": true,
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ]
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "sourceShotId": "festival-master:shot-plan-057",
+        "explanation": {
+          "en": "Scene 20 single-take still registered from the reviewed private generation; editorial review pending.",
+          "es": "needs_revision"
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-shot-plan-056-rev-1-video-1-video",
+      "kind": "video",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/shot-plan-056-rev-1-video-1.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 9050,
+      "width": 854,
+      "height": 480,
+      "source": {
+        "provider": "higgsfield-mcp-official",
+        "model": "seedance-2.5",
+        "generatedAt": "2026-09-16T19:40:34.932Z",
+        "externalId": "5fd9599e-4db1-47d0-b0e4-2f82b879c271"
+      },
+      "metadata": {
+        "scriptId": "script:light-delay-festival-master",
+        "shotId": "festival-master:shot-plan-056",
+        "takeId": "festival-master:shot-plan-056:take-02",
+        "sceneId": "festival-master:scene-19",
+        "providerJobId": "5fd9599e-4db1-47d0-b0e4-2f82b879c271",
+        "creditsSpent": 27,
+        "resolution": "480p",
+        "mode": "omni_reference",
+        "creditsNote": "estimated from prior Seedance 480p rate (~3 cr/s); not from get_cost on this submit"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Singleton Seedance I2V for Scene 19 shot 056 pending editorial review.",
+          "es": "needs_revision"
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-scene-21-shot-060-still",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/scene-21-shot-060.png",
+      "mimeType": "image/png",
+      "width": 1672,
+      "height": 941,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-16T19:49:50.030Z"
+      },
+      "metadata": {
+        "scriptId": "script:light-delay-festival-master",
+        "shotId": "festival-master:shot-plan-060",
+        "sceneId": "festival-master:scene-21",
+        "singleTake": true,
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ]
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "sourceShotId": "festival-master:shot-plan-060",
+        "explanation": {
+          "en": "Scene 21 still registered from private generation for festival-master:shot-plan-060; editorial review pending.",
+          "es": "needs_revision"
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-scene-21-shot-062-still",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/scene-21-shot-062.png",
+      "mimeType": "image/png",
+      "width": 1672,
+      "height": 941,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-16T19:49:50.030Z"
+      },
+      "metadata": {
+        "scriptId": "script:light-delay-festival-master",
+        "shotId": "festival-master:shot-plan-062",
+        "sceneId": "festival-master:scene-21",
+        "singleTake": true,
+        "referenceAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-inner-shielding-vault-sheet",
+          "asset:character-zao-sheet",
+          "asset:object-proxima-geophysical-impulse-package-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet"
+        ]
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "sourceShotId": "festival-master:shot-plan-062",
+        "explanation": {
+          "en": "Scene 21 still registered from private generation for festival-master:shot-plan-062; editorial review pending.",
+          "es": "needs_revision"
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-scene-21-shot-064-still",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/scene-21-shot-064.png",
+      "mimeType": "image/png",
+      "width": 1672,
+      "height": 941,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-16T19:49:50.030Z"
+      },
+      "metadata": {
+        "scriptId": "script:light-delay-festival-master",
+        "shotId": "festival-master:shot-plan-064",
+        "sceneId": "festival-master:scene-21",
+        "singleTake": true,
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:object-harlan-wrist-device-sheet"
+        ]
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "sourceShotId": "festival-master:shot-plan-064",
+        "explanation": {
+          "en": "Scene 21 still registered from private generation for festival-master:shot-plan-064; editorial review pending.",
+          "es": "needs_revision"
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-shot-plan-057-rev-1-video-1-video",
+      "kind": "video",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/shot-plan-057-rev-1-video-1.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 29999,
+      "width": 854,
+      "height": 480,
+      "source": {
+        "provider": "higgsfield-mcp-official",
+        "model": "seedance-2.5",
+        "generatedAt": "2026-09-16T21:26:28.339Z",
+        "externalId": "43411b8c-6f9c-4054-8548-677a2545bc9f"
+      },
+      "metadata": {
+        "scriptId": "script:light-delay-festival-master",
+        "shotId": "festival-master:shot-plan-057",
+        "takeId": "festival-master:shot-plan-057:take-04",
+        "sceneId": "festival-master:scene-20",
+        "providerJobId": "43411b8c-6f9c-4054-8548-677a2545bc9f",
+        "creditsSpent": 90,
+        "resolution": "480p",
+        "mode": "omni_reference",
+        "sha256": "5de697ec1b2afafc5f5d110b8516ada27c8638b84379b0f64bfea96614158a29",
+        "bytes": 4744913,
+        "registrationNotes": "Scene 20 Seedance registered from private inventory. Picture still has pre-whisper long Harlan alone line; script/WAV use short whisper — provisional mute/trim debt on that beat."
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Scene 20 Seedance registered from private inventory. Picture still has pre-whisper long Harlan alone line; script/WAV use short whisper — provisional mute/trim debt on that beat.",
+          "es": "needs_revision"
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-shot-plan-060-rev-1-video-1-video",
+      "kind": "video",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/shot-plan-060-rev-1-video-1.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 11700,
+      "width": 854,
+      "height": 480,
+      "source": {
+        "provider": "higgsfield-mcp-official",
+        "model": "seedance-2.5",
+        "generatedAt": "2026-09-16T21:26:28.345Z",
+        "externalId": "0af863a9-1075-4325-9378-513eae5cff21"
+      },
+      "metadata": {
+        "scriptId": "script:light-delay-festival-master",
+        "shotId": "festival-master:shot-plan-060",
+        "takeId": "festival-master:shot-plan-060:take-04",
+        "sceneId": "festival-master:scene-21",
+        "providerJobId": "0af863a9-1075-4325-9378-513eae5cff21",
+        "creditsSpent": 36,
+        "resolution": "480p",
+        "mode": "omni_reference",
+        "sha256": "06fa7bbf147a39a3aeda3299a88a61cd18c6165a4ce716f7fb06d3edf2685a16",
+        "bytes": 2178681
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Singleton Seedance I2V pending editorial review.",
+          "es": "needs_revision"
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-shot-plan-062-rev-1-video-1-video",
+      "kind": "video",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/shot-plan-062-rev-1-video-1.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 35640,
+      "width": 854,
+      "height": 480,
+      "source": {
+        "provider": "higgsfield-mcp-official",
+        "model": "seedance-2.5",
+        "generatedAt": "2026-09-16T21:26:28.356Z",
+        "externalId": "302cf2ec-9e2d-4033-90b9-466aae5cb9b3"
+      },
+      "metadata": {
+        "scriptId": "script:light-delay-festival-master",
+        "shotId": "festival-master:shot-plan-062",
+        "takeId": "festival-master:shot-plan-062:take-04",
+        "sceneId": "festival-master:scene-21",
+        "providerJobId": "302cf2ec-9e2d-4033-90b9-466aae5cb9b3",
+        "creditsSpent": 111,
+        "resolution": "480p",
+        "mode": "omni_reference",
+        "sha256": "79de87d149d22de61677baf8fb744bb0e544bca4d3be335025723781c32751f0",
+        "bytes": 5719273,
+        "registrationNotes": "Concat of Seedance I2V 302cf2ec… (27.42s) + forward extension 71e70f93… (8.22s) for full 35.64s monitor take.",
+        "extensionJobId": "71e70f93-b25c-4dc6-b250-deb0dffc26b5",
+        "providerJobIds": [
+          "302cf2ec-9e2d-4033-90b9-466aae5cb9b3",
+          "71e70f93-b25c-4dc6-b250-deb0dffc26b5"
+        ]
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Concat of Seedance I2V 302cf2ec… (27.42s) + forward extension 71e70f93… (8.22s) for full 35.64s monitor take.",
+          "es": "needs_revision"
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-shot-plan-064-rev-1-video-1-video",
+      "kind": "video",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/shot-plan-064-rev-1-video-1.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 4200,
+      "width": 854,
+      "height": 480,
+      "source": {
+        "provider": "higgsfield-mcp-official",
+        "model": "seedance-2.5",
+        "generatedAt": "2026-09-16T21:26:28.359Z",
+        "externalId": "c4ebbdfa-cae3-441b-a883-e5121808ba5d"
+      },
+      "metadata": {
+        "scriptId": "script:light-delay-festival-master",
+        "shotId": "festival-master:shot-plan-064",
+        "takeId": "festival-master:shot-plan-064:take-02",
+        "sceneId": "festival-master:scene-21",
+        "providerJobId": "c4ebbdfa-cae3-441b-a883-e5121808ba5d",
+        "creditsSpent": 15,
+        "resolution": "480p",
+        "mode": "omni_reference",
+        "sha256": "6908eeabb9f18baba21a11ac2ff99ca403c858dce4316dac39b38506fee21877",
+        "bytes": 1003581
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Singleton Seedance I2V pending editorial review.",
           "es": "needs_revision"
         }
       }

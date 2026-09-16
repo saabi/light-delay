@@ -4,7 +4,7 @@
     "id": "generation-plan:light-delay-festival-master",
     "scriptId": "script:light-delay-festival-master",
     "scriptVersion": "0.2.0-wip",
-    "sourceDigest": "a3742af727332a794f525e7b61eb18e13c3488f0a83bc5eded8aed687256d3f1",
+    "sourceDigest": "6c4d68e616caa0491c60fbeaa56abc0d16ef14fca2aed6fbca152a396fbb18bf",
     "campaignId": "campaign:higgsfield-trial-24h",
     "status": "blocked",
     "promptLanguage": "en",
@@ -5925,8 +5925,12 @@
     },
     {
       "shotId": "festival-master:shot-plan-050",
-      "status": "ready",
-      "blockers": [],
+      "status": "blocked",
+      "blockers": [
+        "reference_pack_required:packsNeeded:1",
+        "uncovered_entity:character:okoye",
+        "uncovered_entity:character:sorell"
+      ],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
@@ -6008,7 +6012,9 @@
       "referenceBudget": {
         "requiredEntityIds": [
           "character:harlan",
+          "character:okoye",
           "character:rao",
+          "character:sorell",
           "character:voss",
           "location:celestial-ardor-bridge"
         ],
@@ -6018,7 +6024,10 @@
           "character:voss",
           "location:celestial-ardor-bridge"
         ],
-        "uncoveredEntityIds": [],
+        "uncoveredEntityIds": [
+          "character:okoye",
+          "character:sorell"
+        ],
         "attachedAssetIds": [
           "asset:location-celestial-ardor-bridge-realistic-reference",
           "asset:location-celestial-ardor-bridge-meal-table-sheet",
@@ -6041,14 +6050,33 @@
         },
         "violations": []
       },
+      "remediation": [
+        {
+          "code": "reference_pack_required",
+          "uncoveredEntityIds": [
+            "character:okoye",
+            "character:sorell"
+          ],
+          "compatiblePackAssetIds": [
+            "asset:character-okoye-sheet",
+            "asset:character-pair-harlan-okoye-bridge-sheet",
+            "asset:character-pair-okoye-voss-bridge-sheet",
+            "asset:character-pair-rao-sorell-bridge-sheet",
+            "asset:character-pair-sorell-okoye-meal-sheet",
+            "asset:character-sorell-sheet",
+            "asset:visual-pack-proxima-axial-dock-crew-sheet"
+          ],
+          "packsNeeded": 1
+        }
+      ],
       "segments": [
         {
           "id": "festival-master:shot-plan-050:segment-01",
           "startMs": 0,
-          "endMs": 29042,
+          "endMs": 28600,
           "continuation": "none",
-          "promptStatus": "draft",
-          "compiledPrompt": "Generate one 28.60-second Festival-master Scene 18 video from the attached single 16:9 bridge still. Use the attached visual references for continuity: the Celestial Ardor bridge realistic location sheet, the bridge meal-table environment sheet, and the solo Voss, Harlan, and Elin Rao identity sheets. Use the attached Harlan, Voss, and Elin/Rao voice samples for the spoken cues. Treat this as one generation envelope for the complete scene; Seedance may decide its own internal coverage, reframing, pacing, and any internal transitions needed to carry the performance. Do not force external shot boundaries or prescribe a fixed camera path. Preserve the single bridge geography while rendering the scene: the cream cylindrical central core and helical stair, curved console arc, and six-seat meal table stay physically coherent; Harlan begins at the meal-table speaker position left of center, Voss remains the older silver-bearded captain at the captain-side table position, and Rao remains at the science/data console in the left background. Only Harlan, Voss, and Rao are visible; Sorell and Okoye are offscreen. Preserve identity, eyelines, wardrobe, normal 1 g weight, table/stair/core/console relationships, and readable English-only diegetic diagnostics as the action develops. Perform the existing dialogue cues in order: Harlan presents the deuterium-rich fuel/neutron theory; Voss asks for Elin; Rao calls it a hypothesis; the audit compresses through sample checks and engine history; Rao states that mixture is normal, there is no leak, and there is no efficiency loss; she explains the extra fuel through ship mass and separates the neutron source; Voss realizes the explanation explains neither anomaly; Rao says “Correct.” Use the attached voice samples plus the cue text for delivery and timing. No subtitles or spoken-line text burned into the image. Generate native scene audio if enabled, but no music, score, underscore, BGM, or dramatic instrumentation."
+          "promptStatus": "blocked",
+          "compiledPrompt": null
         }
       ]
     },
@@ -6061,7 +6089,7 @@
         "animaticStill": {
           "required": true,
           "status": "generated",
-          "assetId": "asset:festival-master-stretch-central-vault-obstruction-054-056-panel-01"
+          "assetId": "asset:festival-master-scene-19-054-055-central-shaft-single-take-still"
         },
         "firstFrame": {
           "required": false,
@@ -6079,17 +6107,10 @@
       "requiredReferences": [
         {
           "kind": "image",
-          "id": "asset:character-pair-okoye-voss-bridge-sheet",
-          "path": "/assets/characters/pairs/okoye-voss-bridge-reference-sheet-v1.png",
+          "id": "asset:location-celestial-ardor-central-access-sheet",
+          "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v4.png",
           "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
-          "id": "asset:character-pair-voss-harlan-bridge-sheet",
-          "path": "/assets/characters/pairs/voss-harlan-bridge-reference-sheet-v1.png",
-          "required": true,
-          "role": "character"
+          "role": "location"
         },
         {
           "kind": "image",
@@ -6100,10 +6121,17 @@
         },
         {
           "kind": "image",
-          "id": "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v4.png",
+          "id": "asset:character-okoye-sheet",
+          "path": "/assets/characters/okoye/model-sheet.png",
           "required": true,
-          "role": "location"
+          "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:character-harlan-sheet",
+          "path": "/assets/characters/harlan/model-sheet-v2.png",
+          "required": true,
+          "role": "character"
         },
         {
           "kind": "audio",
@@ -6111,99 +6139,6 @@
           "path": "/assets/voices/en/Elin.wav",
           "required": true,
           "role": "voice_sample"
-        }
-      ],
-      "referenceBudget": {
-        "requiredEntityIds": [
-          "character:harlan",
-          "character:okoye",
-          "character:rao",
-          "location:celestial-ardor-reactor-service-bay"
-        ],
-        "coveredEntityIds": [
-          "character:harlan",
-          "character:okoye",
-          "character:rao",
-          "location:celestial-ardor-reactor-service-bay"
-        ],
-        "uncoveredEntityIds": [],
-        "attachedAssetIds": [
-          "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:character-pair-voss-harlan-bridge-sheet",
-          "asset:character-rao-sheet",
-          "asset:location-celestial-ardor-reactor-service-bay-sheet"
-        ],
-        "coveringAssetByEntity": {
-          "character:harlan": "asset:character-pair-voss-harlan-bridge-sheet",
-          "character:okoye": "asset:character-pair-okoye-voss-bridge-sheet",
-          "character:rao": "asset:character-rao-sheet",
-          "location:celestial-ardor-reactor-service-bay": "asset:location-celestial-ardor-reactor-service-bay-sheet"
-        },
-        "wouldOmitEntityIds": [],
-        "limits": {
-          "maxImages": 5,
-          "maxVideos": 0,
-          "maxAudios": 0,
-          "maxTotalReferences": 5
-        },
-        "violations": []
-      },
-      "segments": [
-        {
-          "id": "festival-master:shot-plan-054:segment-01",
-          "startMs": 0,
-          "endMs": 6100,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        }
-      ]
-    },
-    {
-      "shotId": "festival-master:shot-plan-055",
-      "status": "ready",
-      "blockers": [],
-      "diegeticText": [],
-      "artifacts": {
-        "animaticStill": {
-          "required": true,
-          "status": "generated",
-          "assetId": "asset:festival-master-stretch-central-vault-obstruction-054-056-panel-02"
-        },
-        "firstFrame": {
-          "required": false,
-          "status": "missing"
-        },
-        "lastFrame": {
-          "required": false,
-          "status": "missing"
-        },
-        "finalAudio": {
-          "required": true,
-          "status": "missing"
-        }
-      },
-      "requiredReferences": [
-        {
-          "kind": "image",
-          "id": "asset:character-pair-okoye-voss-bridge-sheet",
-          "path": "/assets/characters/pairs/okoye-voss-bridge-reference-sheet-v1.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
-          "id": "asset:character-pair-voss-harlan-bridge-sheet",
-          "path": "/assets/characters/pairs/voss-harlan-bridge-reference-sheet-v1.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
-          "id": "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v4.png",
-          "required": true,
-          "role": "location"
         },
         {
           "kind": "audio",
@@ -6224,23 +6159,27 @@
         "requiredEntityIds": [
           "character:harlan",
           "character:okoye",
-          "location:celestial-ardor-reactor-service-bay"
+          "character:rao",
+          "location:celestial-ardor-central-access"
         ],
         "coveredEntityIds": [
           "character:harlan",
           "character:okoye",
-          "location:celestial-ardor-reactor-service-bay"
+          "character:rao",
+          "location:celestial-ardor-central-access"
         ],
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
-          "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:character-pair-voss-harlan-bridge-sheet",
-          "asset:location-celestial-ardor-reactor-service-bay-sheet"
+          "asset:location-celestial-ardor-central-access-sheet",
+          "asset:character-rao-sheet",
+          "asset:character-okoye-sheet",
+          "asset:character-harlan-sheet"
         ],
         "coveringAssetByEntity": {
-          "character:harlan": "asset:character-pair-voss-harlan-bridge-sheet",
-          "character:okoye": "asset:character-pair-okoye-voss-bridge-sheet",
-          "location:celestial-ardor-reactor-service-bay": "asset:location-celestial-ardor-reactor-service-bay-sheet"
+          "character:harlan": "asset:character-harlan-sheet",
+          "character:okoye": "asset:character-okoye-sheet",
+          "character:rao": "asset:character-rao-sheet",
+          "location:celestial-ardor-central-access": "asset:location-celestial-ardor-central-access-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
@@ -6253,9 +6192,9 @@
       },
       "segments": [
         {
-          "id": "festival-master:shot-plan-055:segment-01",
+          "id": "festival-master:shot-plan-054:segment-01",
           "startMs": 0,
-          "endMs": 7940,
+          "endMs": 14040,
           "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
@@ -6289,17 +6228,10 @@
       "requiredReferences": [
         {
           "kind": "image",
-          "id": "asset:character-pair-okoye-voss-bridge-sheet",
-          "path": "/assets/characters/pairs/okoye-voss-bridge-reference-sheet-v1.png",
+          "id": "asset:location-celestial-ardor-reactor-service-bay-sheet",
+          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v4.png",
           "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
-          "id": "asset:character-pair-voss-harlan-bridge-sheet",
-          "path": "/assets/characters/pairs/voss-harlan-bridge-reference-sheet-v1.png",
-          "required": true,
-          "role": "character"
+          "role": "location"
         },
         {
           "kind": "image",
@@ -6310,10 +6242,17 @@
         },
         {
           "kind": "image",
-          "id": "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v4.png",
+          "id": "asset:character-okoye-sheet",
+          "path": "/assets/characters/okoye/model-sheet.png",
           "required": true,
-          "role": "location"
+          "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:character-harlan-sheet",
+          "path": "/assets/characters/harlan/model-sheet-v2.png",
+          "required": true,
+          "role": "character"
         },
         {
           "kind": "audio",
@@ -6338,14 +6277,14 @@
         ],
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
-          "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:location-celestial-ardor-reactor-service-bay-sheet",
           "asset:character-rao-sheet",
-          "asset:location-celestial-ardor-reactor-service-bay-sheet"
+          "asset:character-okoye-sheet",
+          "asset:character-harlan-sheet"
         ],
         "coveringAssetByEntity": {
-          "character:harlan": "asset:character-pair-voss-harlan-bridge-sheet",
-          "character:okoye": "asset:character-pair-okoye-voss-bridge-sheet",
+          "character:harlan": "asset:character-harlan-sheet",
+          "character:okoye": "asset:character-okoye-sheet",
           "character:rao": "asset:character-rao-sheet",
           "location:celestial-ardor-reactor-service-bay": "asset:location-celestial-ardor-reactor-service-bay-sheet"
         },
@@ -6377,8 +6316,8 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "generated",
-          "assetId": "asset:festival-master-stretch-bridge-vector-057-059-panel-01"
+          "status": "accepted",
+          "assetId": "asset:festival-master-scene-20-single-take-still"
         },
         "firstFrame": {
           "required": false,
@@ -6394,6 +6333,13 @@
         }
       },
       "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
+        },
         {
           "kind": "image",
           "id": "asset:character-pair-voss-harlan-bridge-sheet",
@@ -6416,13 +6362,6 @@
           "role": "character"
         },
         {
-          "kind": "image",
-          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
-          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
-          "required": true,
-          "role": "location"
-        },
-        {
           "kind": "audio",
           "id": "asset:voice-ref-en-harlan",
           "path": "/assets/voices/en/Harlan.wav",
@@ -6433,6 +6372,13 @@
           "kind": "audio",
           "id": "asset:voice-ref-en-elin",
           "path": "/assets/voices/en/Elin.wav",
+          "required": true,
+          "role": "voice_sample"
+        },
+        {
+          "kind": "audio",
+          "id": "asset:voice-ref-en-voss",
+          "path": "/assets/voices/en/Voss.wav",
           "required": true,
           "role": "voice_sample"
         }
@@ -6454,10 +6400,10 @@
         ],
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
           "asset:character-pair-voss-harlan-bridge-sheet",
           "asset:character-pair-rao-sorell-bridge-sheet",
-          "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
+          "asset:character-pair-okoye-voss-bridge-sheet"
         ],
         "coveringAssetByEntity": {
           "character:harlan": "asset:character-pair-voss-harlan-bridge-sheet",
@@ -6479,235 +6425,7 @@
         {
           "id": "festival-master:shot-plan-057:segment-01",
           "startMs": 0,
-          "endMs": 9160,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        }
-      ]
-    },
-    {
-      "shotId": "festival-master:shot-plan-058",
-      "status": "ready",
-      "blockers": [],
-      "diegeticText": [],
-      "artifacts": {
-        "animaticStill": {
-          "required": true,
-          "status": "generated",
-          "assetId": "asset:festival-master-stretch-bridge-vector-057-059-panel-02"
-        },
-        "firstFrame": {
-          "required": false,
-          "status": "missing"
-        },
-        "lastFrame": {
-          "required": false,
-          "status": "missing"
-        },
-        "finalAudio": {
-          "required": true,
-          "status": "missing"
-        }
-      },
-      "requiredReferences": [
-        {
-          "kind": "image",
-          "id": "asset:character-pair-voss-harlan-bridge-sheet",
-          "path": "/assets/characters/pairs/voss-harlan-bridge-reference-sheet-v1.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
-          "id": "asset:character-pair-rao-sorell-bridge-sheet",
-          "path": "/assets/characters/pairs/rao-sorell-bridge-reference-sheet-v1.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
-          "id": "asset:character-pair-okoye-voss-bridge-sheet",
-          "path": "/assets/characters/pairs/okoye-voss-bridge-reference-sheet-v1.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
-          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
-          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
-          "required": true,
-          "role": "location"
-        },
-        {
-          "kind": "audio",
-          "id": "asset:voice-ref-en-voss",
-          "path": "/assets/voices/en/Voss.wav",
-          "required": true,
-          "role": "voice_sample"
-        },
-        {
-          "kind": "audio",
-          "id": "asset:voice-ref-en-elin",
-          "path": "/assets/voices/en/Elin.wav",
-          "required": true,
-          "role": "voice_sample"
-        }
-      ],
-      "referenceBudget": {
-        "requiredEntityIds": [
-          "character:harlan",
-          "character:okoye",
-          "character:rao",
-          "character:sorell",
-          "character:voss",
-          "location:celestial-ardor-bridge"
-        ],
-        "coveredEntityIds": [
-          "character:harlan",
-          "character:okoye",
-          "character:rao",
-          "character:sorell",
-          "character:voss",
-          "location:celestial-ardor-bridge"
-        ],
-        "uncoveredEntityIds": [],
-        "attachedAssetIds": [
-          "asset:character-pair-voss-harlan-bridge-sheet",
-          "asset:character-pair-rao-sorell-bridge-sheet",
-          "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
-        ],
-        "coveringAssetByEntity": {
-          "character:harlan": "asset:character-pair-voss-harlan-bridge-sheet",
-          "character:okoye": "asset:character-pair-okoye-voss-bridge-sheet",
-          "character:rao": "asset:character-pair-rao-sorell-bridge-sheet",
-          "character:sorell": "asset:character-pair-rao-sorell-bridge-sheet",
-          "character:voss": "asset:character-pair-okoye-voss-bridge-sheet",
-          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
-        },
-        "wouldOmitEntityIds": [],
-        "limits": {
-          "maxImages": 5,
-          "maxVideos": 0,
-          "maxAudios": 0,
-          "maxTotalReferences": 5
-        },
-        "violations": []
-      },
-      "segments": [
-        {
-          "id": "festival-master:shot-plan-058:segment-01",
-          "startMs": 0,
-          "endMs": 8900,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        }
-      ]
-    },
-    {
-      "shotId": "festival-master:shot-plan-059",
-      "status": "ready",
-      "blockers": [],
-      "diegeticText": [],
-      "artifacts": {
-        "animaticStill": {
-          "required": true,
-          "status": "generated",
-          "assetId": "asset:festival-master-stretch-bridge-vector-057-059-panel-03"
-        },
-        "firstFrame": {
-          "required": false,
-          "status": "missing"
-        },
-        "lastFrame": {
-          "required": false,
-          "status": "missing"
-        },
-        "finalAudio": {
-          "required": true,
-          "status": "missing"
-        }
-      },
-      "requiredReferences": [
-        {
-          "kind": "image",
-          "id": "asset:character-pair-voss-harlan-bridge-sheet",
-          "path": "/assets/characters/pairs/voss-harlan-bridge-reference-sheet-v1.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
-          "id": "asset:character-pair-rao-sorell-bridge-sheet",
-          "path": "/assets/characters/pairs/rao-sorell-bridge-reference-sheet-v1.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
-          "id": "asset:character-pair-okoye-voss-bridge-sheet",
-          "path": "/assets/characters/pairs/okoye-voss-bridge-reference-sheet-v1.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
-          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
-          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
-          "required": true,
-          "role": "location"
-        },
-        {
-          "kind": "audio",
-          "id": "asset:voice-ref-en-harlan",
-          "path": "/assets/voices/en/Harlan.wav",
-          "required": true,
-          "role": "voice_sample"
-        },
-        {
-          "kind": "audio",
-          "id": "asset:voice-ref-en-elin",
-          "path": "/assets/voices/en/Elin.wav",
-          "required": true,
-          "role": "voice_sample"
-        }
-      ],
-      "referenceBudget": {
-        "requiredEntityIds": [
-          "character:harlan",
-          "location:celestial-ardor-bridge"
-        ],
-        "coveredEntityIds": [
-          "character:harlan",
-          "location:celestial-ardor-bridge"
-        ],
-        "uncoveredEntityIds": [],
-        "attachedAssetIds": [
-          "asset:character-pair-voss-harlan-bridge-sheet",
-          "asset:character-pair-rao-sorell-bridge-sheet",
-          "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
-        ],
-        "coveringAssetByEntity": {
-          "character:harlan": "asset:character-pair-voss-harlan-bridge-sheet",
-          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
-        },
-        "wouldOmitEntityIds": [],
-        "limits": {
-          "maxImages": 5,
-          "maxVideos": 0,
-          "maxAudios": 0,
-          "maxTotalReferences": 5
-        },
-        "violations": []
-      },
-      "segments": [
-        {
-          "id": "festival-master:shot-plan-059:segment-01",
-          "startMs": 0,
-          "endMs": 12400,
+          "endMs": 25039,
           "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
@@ -6723,7 +6441,7 @@
         "animaticStill": {
           "required": true,
           "status": "generated",
-          "assetId": "asset:festival-master-stretch-bridge-packet-open-060-061-panel-01"
+          "assetId": "asset:festival-master-scene-21-shot-060-still"
         },
         "firstFrame": {
           "required": false,
@@ -6771,6 +6489,13 @@
           "kind": "audio",
           "id": "asset:voice-ref-en-elin",
           "path": "/assets/voices/en/Elin.wav",
+          "required": true,
+          "role": "voice_sample"
+        },
+        {
+          "kind": "audio",
+          "id": "asset:voice-ref-en-voss",
+          "path": "/assets/voices/en/Voss.wav",
           "required": true,
           "role": "voice_sample"
         }
@@ -6814,120 +6539,7 @@
         {
           "id": "festival-master:shot-plan-060:segment-01",
           "startMs": 0,
-          "endMs": 4300,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        }
-      ]
-    },
-    {
-      "shotId": "festival-master:shot-plan-061",
-      "status": "ready",
-      "blockers": [],
-      "diegeticText": [],
-      "artifacts": {
-        "animaticStill": {
-          "required": true,
-          "status": "generated",
-          "assetId": "asset:festival-master-stretch-bridge-packet-open-060-061-panel-02"
-        },
-        "firstFrame": {
-          "required": false,
-          "status": "missing"
-        },
-        "lastFrame": {
-          "required": false,
-          "status": "missing"
-        },
-        "finalAudio": {
-          "required": true,
-          "status": "missing"
-        }
-      },
-      "requiredReferences": [
-        {
-          "kind": "image",
-          "id": "asset:character-pair-voss-harlan-bridge-sheet",
-          "path": "/assets/characters/pairs/voss-harlan-bridge-reference-sheet-v1.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
-          "id": "asset:character-pair-rao-sorell-bridge-sheet",
-          "path": "/assets/characters/pairs/rao-sorell-bridge-reference-sheet-v1.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
-          "id": "asset:character-pair-okoye-voss-bridge-sheet",
-          "path": "/assets/characters/pairs/okoye-voss-bridge-reference-sheet-v1.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
-          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
-          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
-          "required": true,
-          "role": "location"
-        },
-        {
-          "kind": "audio",
-          "id": "asset:voice-ref-en-voss",
-          "path": "/assets/voices/en/Voss.wav",
-          "required": true,
-          "role": "voice_sample"
-        }
-      ],
-      "referenceBudget": {
-        "requiredEntityIds": [
-          "character:harlan",
-          "character:okoye",
-          "character:rao",
-          "character:sorell",
-          "character:voss",
-          "location:celestial-ardor-bridge"
-        ],
-        "coveredEntityIds": [
-          "character:harlan",
-          "character:okoye",
-          "character:rao",
-          "character:sorell",
-          "character:voss",
-          "location:celestial-ardor-bridge"
-        ],
-        "uncoveredEntityIds": [],
-        "attachedAssetIds": [
-          "asset:character-pair-voss-harlan-bridge-sheet",
-          "asset:character-pair-rao-sorell-bridge-sheet",
-          "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
-        ],
-        "coveringAssetByEntity": {
-          "character:harlan": "asset:character-pair-voss-harlan-bridge-sheet",
-          "character:okoye": "asset:character-pair-okoye-voss-bridge-sheet",
-          "character:rao": "asset:character-pair-rao-sorell-bridge-sheet",
-          "character:sorell": "asset:character-pair-rao-sorell-bridge-sheet",
-          "character:voss": "asset:character-pair-okoye-voss-bridge-sheet",
-          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
-        },
-        "wouldOmitEntityIds": [],
-        "limits": {
-          "maxImages": 5,
-          "maxVideos": 0,
-          "maxAudios": 0,
-          "maxTotalReferences": 5
-        },
-        "violations": []
-      },
-      "segments": [
-        {
-          "id": "festival-master:shot-plan-061:segment-01",
-          "startMs": 0,
-          "endMs": 7400,
+          "endMs": 11700,
           "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
@@ -6943,14 +6555,14 @@
         "animaticStill": {
           "required": true,
           "status": "generated",
-          "assetId": "asset:festival-master-stretch-vault-flashback-062-063-panel-01"
+          "assetId": "asset:festival-master-scene-21-shot-062-still"
         },
         "firstFrame": {
           "required": false,
           "status": "missing"
         },
         "lastFrame": {
-          "required": false,
+          "required": true,
           "status": "missing"
         },
         "finalAudio": {
@@ -6961,10 +6573,10 @@
       "requiredReferences": [
         {
           "kind": "image",
-          "id": "asset:character-zao-sheet",
-          "path": "/assets/characters/zao/model-sheet.png",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
-          "role": "character"
+          "role": "location"
         },
         {
           "kind": "image",
@@ -6975,10 +6587,24 @@
         },
         {
           "kind": "image",
+          "id": "asset:character-zao-sheet",
+          "path": "/assets/characters/zao/model-sheet.png",
+          "required": true,
+          "role": "character"
+        },
+        {
+          "kind": "image",
           "id": "asset:object-proxima-geophysical-impulse-package-sheet",
           "path": "/assets/props/proxima-geophysical-impulse-package/prop-sheet-v2.png",
           "required": true,
           "role": "object"
+        },
+        {
+          "kind": "image",
+          "id": "asset:character-pair-rao-sorell-bridge-sheet",
+          "path": "/assets/characters/pairs/rao-sorell-bridge-reference-sheet-v1.png",
+          "required": true,
+          "role": "character"
         },
         {
           "kind": "audio",
@@ -6991,23 +6617,25 @@
       "referenceBudget": {
         "requiredEntityIds": [
           "character:zao",
-          "location:celestial-ardor-inner-shielding-vault",
+          "location:celestial-ardor-bridge",
           "object:proxima-geophysical-impulse-package"
         ],
         "coveredEntityIds": [
           "character:zao",
-          "location:celestial-ardor-inner-shielding-vault",
+          "location:celestial-ardor-bridge",
           "object:proxima-geophysical-impulse-package"
         ],
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
-          "asset:character-zao-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
           "asset:location-celestial-ardor-inner-shielding-vault-sheet",
-          "asset:object-proxima-geophysical-impulse-package-sheet"
+          "asset:character-zao-sheet",
+          "asset:object-proxima-geophysical-impulse-package-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet"
         ],
         "coveringAssetByEntity": {
           "character:zao": "asset:character-zao-sheet",
-          "location:celestial-ardor-inner-shielding-vault": "asset:location-celestial-ardor-inner-shielding-vault-sheet",
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference",
           "object:proxima-geophysical-impulse-package": "asset:object-proxima-geophysical-impulse-package-sheet"
         },
         "wouldOmitEntityIds": [],
@@ -7023,101 +6651,16 @@
         {
           "id": "festival-master:shot-plan-062:segment-01",
           "startMs": 0,
-          "endMs": 14780,
+          "endMs": 27420,
           "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
-        }
-      ]
-    },
-    {
-      "shotId": "festival-master:shot-plan-063",
-      "status": "ready",
-      "blockers": [],
-      "diegeticText": [],
-      "artifacts": {
-        "animaticStill": {
-          "required": true,
-          "status": "generated",
-          "assetId": "asset:festival-master-stretch-vault-flashback-062-063-panel-02"
-        },
-        "firstFrame": {
-          "required": false,
-          "status": "missing"
-        },
-        "lastFrame": {
-          "required": false,
-          "status": "missing"
-        },
-        "finalAudio": {
-          "required": true,
-          "status": "missing"
-        }
-      },
-      "requiredReferences": [
-        {
-          "kind": "image",
-          "id": "asset:character-zao-sheet",
-          "path": "/assets/characters/zao/model-sheet.png",
-          "required": true,
-          "role": "character"
         },
         {
-          "kind": "image",
-          "id": "asset:location-celestial-ardor-inner-shielding-vault-sheet",
-          "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet-v2.png",
-          "required": true,
-          "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:object-proxima-geophysical-impulse-package-sheet",
-          "path": "/assets/props/proxima-geophysical-impulse-package/prop-sheet-v2.png",
-          "required": true,
-          "role": "object"
-        },
-        {
-          "kind": "audio",
-          "id": "asset:voice-ref-en-zao",
-          "path": "/assets/voices/en/Zao.wav",
-          "required": true,
-          "role": "voice_sample"
-        }
-      ],
-      "referenceBudget": {
-        "requiredEntityIds": [
-          "character:zao",
-          "location:celestial-ardor-inner-shielding-vault"
-        ],
-        "coveredEntityIds": [
-          "character:zao",
-          "location:celestial-ardor-inner-shielding-vault"
-        ],
-        "uncoveredEntityIds": [],
-        "attachedAssetIds": [
-          "asset:character-zao-sheet",
-          "asset:location-celestial-ardor-inner-shielding-vault-sheet",
-          "asset:object-proxima-geophysical-impulse-package-sheet"
-        ],
-        "coveringAssetByEntity": {
-          "character:zao": "asset:character-zao-sheet",
-          "location:celestial-ardor-inner-shielding-vault": "asset:location-celestial-ardor-inner-shielding-vault-sheet"
-        },
-        "wouldOmitEntityIds": [],
-        "limits": {
-          "maxImages": 5,
-          "maxVideos": 0,
-          "maxAudios": 0,
-          "maxTotalReferences": 5
-        },
-        "violations": []
-      },
-      "segments": [
-        {
-          "id": "festival-master:shot-plan-063:segment-01",
-          "startMs": 0,
-          "endMs": 20860,
-          "continuation": "none",
+          "id": "festival-master:shot-plan-062:segment-02",
+          "startMs": 27420,
+          "endMs": 35640,
+          "continuation": "accepted_video_and_last_frame",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -7132,7 +6675,7 @@
         "animaticStill": {
           "required": true,
           "status": "generated",
-          "assetId": "asset:festival-master-stretch-bridge-command-break-064-067-panel-01"
+          "assetId": "asset:festival-master-scene-21-shot-064-still"
         },
         "firstFrame": {
           "required": false,
@@ -7952,7 +7495,7 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "generated",
+          "status": "accepted",
           "assetId": "asset:festival-master-stretch-bridge-device-071-073-panel-01"
         },
         "firstFrame": {
@@ -7971,8 +7514,22 @@
       "requiredReferences": [
         {
           "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
           "id": "asset:character-pair-voss-harlan-bridge-sheet",
           "path": "/assets/characters/pairs/voss-harlan-bridge-reference-sheet-v1.png",
+          "required": true,
+          "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:character-pair-rao-sorell-bridge-sheet",
+          "path": "/assets/characters/pairs/rao-sorell-bridge-reference-sheet-v1.png",
           "required": true,
           "role": "character"
         },
@@ -7985,20 +7542,6 @@
         },
         {
           "kind": "image",
-          "id": "asset:character-sorell-sheet",
-          "path": "/assets/characters/sorell/model-sheet.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
-          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
-          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
-          "required": true,
-          "role": "location"
-        },
-        {
-          "kind": "image",
           "id": "asset:object-harlan-wrist-device-sheet",
           "path": "/assets/props/harlan-wrist-device/prop-sheet-v2.png",
           "required": true,
@@ -8008,6 +7551,20 @@
           "kind": "audio",
           "id": "asset:voice-ref-en-harlan",
           "path": "/assets/voices/en/Harlan.wav",
+          "required": true,
+          "role": "voice_sample"
+        },
+        {
+          "kind": "audio",
+          "id": "asset:voice-ref-en-okoye",
+          "path": "/assets/voices/en/Okoye.wav",
+          "required": true,
+          "role": "voice_sample"
+        },
+        {
+          "kind": "audio",
+          "id": "asset:voice-ref-en-voss",
+          "path": "/assets/voices/en/Voss.wav",
           "required": true,
           "role": "voice_sample"
         }
@@ -8031,16 +7588,16 @@
         ],
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
-          "asset:character-pair-voss-harlan-bridge-sheet",
-          "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:character-sorell-sheet",
           "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
           "asset:object-harlan-wrist-device-sheet"
         ],
         "coveringAssetByEntity": {
           "character:harlan": "asset:character-pair-voss-harlan-bridge-sheet",
           "character:okoye": "asset:character-pair-okoye-voss-bridge-sheet",
-          "character:sorell": "asset:character-sorell-sheet",
+          "character:sorell": "asset:character-pair-rao-sorell-bridge-sheet",
           "character:voss": "asset:character-pair-okoye-voss-bridge-sheet",
           "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference",
           "object:harlan-wrist-device": "asset:object-harlan-wrist-device-sheet"
@@ -8058,257 +7615,7 @@
         {
           "id": "festival-master:shot-plan-071:segment-01",
           "startMs": 0,
-          "endMs": 7480,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        }
-      ]
-    },
-    {
-      "shotId": "festival-master:shot-plan-072",
-      "status": "ready",
-      "blockers": [],
-      "diegeticText": [],
-      "artifacts": {
-        "animaticStill": {
-          "required": true,
-          "status": "generated",
-          "assetId": "asset:festival-master-stretch-bridge-device-071-073-panel-02"
-        },
-        "firstFrame": {
-          "required": false,
-          "status": "missing"
-        },
-        "lastFrame": {
-          "required": false,
-          "status": "missing"
-        },
-        "finalAudio": {
-          "required": true,
-          "status": "missing"
-        }
-      },
-      "requiredReferences": [
-        {
-          "kind": "image",
-          "id": "asset:character-pair-voss-harlan-bridge-sheet",
-          "path": "/assets/characters/pairs/voss-harlan-bridge-reference-sheet-v1.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
-          "id": "asset:character-pair-okoye-voss-bridge-sheet",
-          "path": "/assets/characters/pairs/okoye-voss-bridge-reference-sheet-v1.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
-          "id": "asset:character-sorell-sheet",
-          "path": "/assets/characters/sorell/model-sheet.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
-          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
-          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
-          "required": true,
-          "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:object-harlan-wrist-device-sheet",
-          "path": "/assets/props/harlan-wrist-device/prop-sheet-v2.png",
-          "required": true,
-          "role": "object"
-        },
-        {
-          "kind": "audio",
-          "id": "asset:voice-ref-en-okoye",
-          "path": "/assets/voices/en/Okoye.wav",
-          "required": true,
-          "role": "voice_sample"
-        }
-      ],
-      "referenceBudget": {
-        "requiredEntityIds": [
-          "character:harlan",
-          "character:okoye",
-          "character:sorell",
-          "character:voss",
-          "location:celestial-ardor-bridge"
-        ],
-        "coveredEntityIds": [
-          "character:harlan",
-          "character:okoye",
-          "character:sorell",
-          "character:voss",
-          "location:celestial-ardor-bridge"
-        ],
-        "uncoveredEntityIds": [],
-        "attachedAssetIds": [
-          "asset:character-pair-voss-harlan-bridge-sheet",
-          "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:character-sorell-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:object-harlan-wrist-device-sheet"
-        ],
-        "coveringAssetByEntity": {
-          "character:harlan": "asset:character-pair-voss-harlan-bridge-sheet",
-          "character:okoye": "asset:character-pair-okoye-voss-bridge-sheet",
-          "character:sorell": "asset:character-sorell-sheet",
-          "character:voss": "asset:character-pair-okoye-voss-bridge-sheet",
-          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
-        },
-        "wouldOmitEntityIds": [],
-        "limits": {
-          "maxImages": 5,
-          "maxVideos": 0,
-          "maxAudios": 0,
-          "maxTotalReferences": 5
-        },
-        "violations": []
-      },
-      "segments": [
-        {
-          "id": "festival-master:shot-plan-072:segment-01",
-          "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        }
-      ]
-    },
-    {
-      "shotId": "festival-master:shot-plan-073",
-      "status": "ready",
-      "blockers": [],
-      "diegeticText": [],
-      "artifacts": {
-        "animaticStill": {
-          "required": true,
-          "status": "generated",
-          "assetId": "asset:festival-master-stretch-bridge-device-071-073-panel-03"
-        },
-        "firstFrame": {
-          "required": false,
-          "status": "missing"
-        },
-        "lastFrame": {
-          "required": false,
-          "status": "missing"
-        },
-        "finalAudio": {
-          "required": true,
-          "status": "missing"
-        }
-      },
-      "requiredReferences": [
-        {
-          "kind": "image",
-          "id": "asset:character-pair-voss-harlan-bridge-sheet",
-          "path": "/assets/characters/pairs/voss-harlan-bridge-reference-sheet-v1.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
-          "id": "asset:character-pair-okoye-voss-bridge-sheet",
-          "path": "/assets/characters/pairs/okoye-voss-bridge-reference-sheet-v1.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
-          "id": "asset:character-sorell-sheet",
-          "path": "/assets/characters/sorell/model-sheet.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
-          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
-          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
-          "required": true,
-          "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:object-harlan-wrist-device-sheet",
-          "path": "/assets/props/harlan-wrist-device/prop-sheet-v2.png",
-          "required": true,
-          "role": "object"
-        },
-        {
-          "kind": "audio",
-          "id": "asset:voice-ref-en-okoye",
-          "path": "/assets/voices/en/Okoye.wav",
-          "required": true,
-          "role": "voice_sample"
-        },
-        {
-          "kind": "audio",
-          "id": "asset:voice-ref-en-voss",
-          "path": "/assets/voices/en/Voss.wav",
-          "required": true,
-          "role": "voice_sample"
-        },
-        {
-          "kind": "audio",
-          "id": "asset:voice-ref-en-harlan",
-          "path": "/assets/voices/en/Harlan.wav",
-          "required": true,
-          "role": "voice_sample"
-        }
-      ],
-      "referenceBudget": {
-        "requiredEntityIds": [
-          "character:harlan",
-          "character:okoye",
-          "character:sorell",
-          "character:voss",
-          "location:celestial-ardor-bridge"
-        ],
-        "coveredEntityIds": [
-          "character:harlan",
-          "character:okoye",
-          "character:sorell",
-          "character:voss",
-          "location:celestial-ardor-bridge"
-        ],
-        "uncoveredEntityIds": [],
-        "attachedAssetIds": [
-          "asset:character-pair-voss-harlan-bridge-sheet",
-          "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:character-sorell-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:object-harlan-wrist-device-sheet"
-        ],
-        "coveringAssetByEntity": {
-          "character:harlan": "asset:character-pair-voss-harlan-bridge-sheet",
-          "character:okoye": "asset:character-pair-okoye-voss-bridge-sheet",
-          "character:sorell": "asset:character-sorell-sheet",
-          "character:voss": "asset:character-pair-okoye-voss-bridge-sheet",
-          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
-        },
-        "wouldOmitEntityIds": [],
-        "limits": {
-          "maxImages": 5,
-          "maxVideos": 0,
-          "maxAudios": 0,
-          "maxTotalReferences": 5
-        },
-        "violations": []
-      },
-      "segments": [
-        {
-          "id": "festival-master:shot-plan-073:segment-01",
-          "startMs": 0,
-          "endMs": 8100,
+          "endMs": 23580,
           "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
@@ -9347,7 +8654,7 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "accepted",
+          "status": "generated",
           "assetId": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-01"
         },
         "firstFrame": {
@@ -9437,8 +8744,8 @@
           "startMs": 0,
           "endMs": 6670,
           "continuation": "none",
-          "promptStatus": "draft",
-          "compiledPrompt": "Generate one 6.67-second Festival-master Scene 28 video from the attached single 16:9 bridge still as the opening frame (I2V). Use attached identity sheets for Sorell, Voss, Elin Rao, and Okoye, and the Celestial Ardor bridge location reference for architecture; ignore sheet backgrounds. Steady artificial 1 g: feet planted, normal weight, no floating debris or drifting hair. Sorell (free, released) finishes translating the Velari primer geometry into branching hull-light patterns readable through the bridge view as English-only diegetic light geometry—not spoken-line text. Voss remains at command; Rao stays on the bomb-feed / analysis station; Okoye holds security watch. Preserve the approved still's geography, wardrobe, eyelines, and blocking while adding small work motion and a slow dolly that keeps faces and the hull-light work readable. No spoken dialogue in this clip. Generate native scene audio if enabled (bridge ambience / console work only), but no music, score, underscore, BGM, or dramatic instrumentation. No subtitles or burned-in spoken-line text. Aspect ratio 16:9."
+          "promptStatus": "blocked",
+          "compiledPrompt": null
         }
       ]
     },
@@ -9450,7 +8757,7 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "accepted",
+          "status": "generated",
           "assetId": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-02"
         },
         "firstFrame": {
@@ -9554,8 +8861,8 @@
           "startMs": 0,
           "endMs": 12700,
           "continuation": "none",
-          "promptStatus": "draft",
-          "compiledPrompt": "Generate one 12.70-second Festival-master Scene 28 video from the attached single 16:9 bridge still as the opening frame (I2V). Use attached Sorell and Voss identity sheets plus voice samples for the spoken cues; use Rao and Okoye identity sheets and the Celestial Ardor bridge location reference for continuity; ignore sheet backgrounds. Steady artificial 1 g: feet planted, normal weight, no floating debris. Preserve the approved still: Sorell at translator work after release; Voss addressing her; Rao and Okoye present at stations. Perform the existing dialogue cues in order with the attached voice samples (ignore any words in the samples; speak only the cue text): Sorell, awed — {They wrote the primer. This is the first time they'll hear us read it back.}; then Voss, quiet remorse — {Lian… I mistook caution for refusal. I sent you alone, then decided too quickly what that meant. I'm sorry.}. Camera may pan gently to hold the apology beat without leaving the bridge geography. No subtitles or burned-in spoken-line text. Generate native scene audio if enabled, but no music, score, underscore, BGM, or dramatic instrumentation. Aspect ratio 16:9."
+          "promptStatus": "blocked",
+          "compiledPrompt": null
         }
       ]
     },
@@ -9567,7 +8874,7 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "accepted",
+          "status": "generated",
           "assetId": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-03"
         },
         "firstFrame": {
@@ -9671,8 +8978,8 @@
           "startMs": 0,
           "endMs": 7230,
           "continuation": "none",
-          "promptStatus": "draft",
-          "compiledPrompt": "Generate one 7.23-second Festival-master Scene 28 video from the attached single 16:9 bridge still as the opening frame (I2V). Use attached Sorell and Voss identity sheets plus voice samples for the spoken cues; use Rao and Okoye identity sheets and the Celestial Ardor bridge location reference for continuity; ignore sheet backgrounds. Steady artificial 1 g: feet planted, normal weight, no floating debris. Preserve the approved still geography: Sorell at the translator/greeting station; Voss at command authorizing the send; Rao and Okoye holding stations. Perform the existing dialogue cues in order with the attached voice samples (ignore any words in the samples; speak only the cue text): Sorell, pressed but not cruel — {We can be sorry later. Right now, I need to be right.}; then Voss, decisive — {One greeting. Nothing else. Send.}. Keep camera mostly locked / wide enough that the send authorization reads; do not invent hull transmission FX beyond subtle English-only diegetic light if already implied. No subtitles or burned-in spoken-line text. Generate native scene audio if enabled, but no music, score, underscore, BGM, or dramatic instrumentation. Aspect ratio 16:9."
+          "promptStatus": "blocked",
+          "compiledPrompt": null
         }
       ]
     },
@@ -15199,51 +14506,50 @@
       "runnable": true
     },
     {
-      "id": "festival-master:stretch-bridge-vector-057-059:rev-2",
-      "stretchId": "festival-master:stretch-bridge-vector-057-059",
-      "revision": 2,
+      "id": "festival-master:stretch-bridge-greeting-prep-083-085:rev-1",
+      "stretchId": "festival-master:stretch-bridge-greeting-prep-083-085",
+      "revision": 1,
       "medium": "still",
-      "mode": "combined_storyboard_sheet",
+      "mode": "independent_shared_authority",
       "providerSnapshotId": "provider:openai:gpt-image-2:2026-09-13",
       "outputTakePolicy": "new_candidate",
       "memberInputs": [
         {
           "order": 1,
-          "shotId": "festival-master:shot-plan-057",
+          "shotId": "festival-master:shot-plan-083",
           "sourceTakeIds": [
-            "festival-master:shot-plan-057:take-03"
+            "festival-master:shot-plan-083:take-02"
           ]
         },
         {
           "order": 2,
-          "shotId": "festival-master:shot-plan-058",
+          "shotId": "festival-master:shot-plan-084",
           "sourceTakeIds": [
-            "festival-master:shot-plan-058:take-03"
+            "festival-master:shot-plan-084:take-02"
           ]
         },
         {
           "order": 3,
-          "shotId": "festival-master:shot-plan-059",
+          "shotId": "festival-master:shot-plan-085",
           "sourceTakeIds": [
-            "festival-master:shot-plan-059:take-03"
+            "festival-master:shot-plan-085:take-02"
           ]
         }
       ],
       "stillReferenceAssetIds": [
-        "asset:character-pair-voss-harlan-bridge-sheet",
         "asset:character-pair-rao-sorell-bridge-sheet",
         "asset:character-pair-okoye-voss-bridge-sheet",
-        "asset:location-celestial-ardor-bridge-realistic-reference"
+        "asset:location-celestial-ardor-bridge-realistic-reference",
+        "asset:location-velari-station-sheet"
       ],
       "sharedReferenceAssetIds": [
-        "asset:character-pair-voss-harlan-bridge-sheet",
         "asset:character-pair-rao-sorell-bridge-sheet",
         "asset:character-pair-okoye-voss-bridge-sheet",
-        "asset:location-celestial-ardor-bridge-realistic-reference"
+        "asset:location-celestial-ardor-bridge-realistic-reference",
+        "asset:location-velari-station-sheet"
       ],
       "referenceBudget": {
         "requiredEntityIds": [
-          "character:harlan",
           "character:okoye",
           "character:rao",
           "character:sorell",
@@ -15251,7 +14557,6 @@
           "location:celestial-ardor-bridge"
         ],
         "coveredEntityIds": [
-          "character:harlan",
           "character:okoye",
           "character:rao",
           "character:sorell",
@@ -15260,13 +14565,12 @@
         ],
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
-          "asset:character-pair-voss-harlan-bridge-sheet",
           "asset:character-pair-rao-sorell-bridge-sheet",
           "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-velari-station-sheet"
         ],
         "coveringAssetByEntity": {
-          "character:harlan": "asset:character-pair-voss-harlan-bridge-sheet",
           "character:okoye": "asset:character-pair-okoye-voss-bridge-sheet",
           "character:rao": "asset:character-pair-rao-sorell-bridge-sheet",
           "character:sorell": "asset:character-pair-rao-sorell-bridge-sheet",
@@ -15282,327 +14586,133 @@
         },
         "violations": []
       },
-      "gridLayout": {
-        "rows": 2,
-        "cols": 2,
-        "gutterFraction": 0.02,
-        "panelAspect": "16:9",
-        "blankCells": [
-          4
-        ]
-      },
-      "computedMargins": {
-        "top": 0.078125,
-        "right": 0,
-        "bottom": 0.078125,
-        "left": 0
-      },
-      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-bridge.\nPhysics: Steady 1 g artificial gravity on the bridge after thrust restore: feet planted, normal weight, seated or standing as blocked, no floating debris or drifting hair.\nLighting: Bridge practicals with the reconstructed vector display glowing English-only; no smoke.\nShared: Continuous bridge vector beat under steady 1 g. Sorell remains provisionally retained under watch (deep right)—not free translator crew. Okoye’s blocking keeps supervisory watch on her. Harlan is the younger clean-shaven dark-haired officer; Voss older silver beard; Rao East-Asian lighter gray jacket. Ignore pair-sheet backgrounds. No burned-in spoken dialogue; English-only diegetic UI.\nPresent cast: character:voss, character:harlan, character:rao, character:okoye, character:sorell.\nBlocking:\ncharacter:voss; zoneOrSeat=command station / meeting-table captain side; screenSide=center; facing=the active exchange and displays; posture=standing or braced at command; eyelineTarget=the active exchange\ncharacter:rao; zoneOrSeat=science/analysis console along the station arc; screenSide=left; facing=her display and the crew; posture=standing or seated at console; eyelineTarget=the display\ncharacter:harlan; zoneOrSeat=secondary console / aft security approach, screen right; screenSide=right; facing=the displays and command; posture=standing; eyelineTarget=the display\ncharacter:okoye; zoneOrSeat=security watch deep left; still responsible for retained Sorell until Harlan is held; screenSide=left; facing=Sorell and Harlan; posture=standing, guarding; eyelineTarget=character:sorell\ncharacter:sorell; zoneOrSeat=retained under watch, deep right near translator station (not free duty); screenSide=right; facing=the active exchange, supervised; posture=standing or seated under watch, hands visible, not collaborating as free crew; eyelineTarget=the active exchange\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-057. Start: Thrust has restored steady 1 g; Rao is planted at her analysis console reading the reconstructed firing-angle display. Event: On the English-only display, the plotted vector aims at empty future intercept space—no planet, station, or beacon—while Voss listens center-frame and Harlan watches from screen right. End: The empty-direction problem is readable on Rao’s console; Sorell remains under watch in deep right; Okoye keeps supervisory awareness. Delta/description: Thrust restores and weight settles Elin Rao at her station as she reads the display: only firing angles and ship attitude survive from Zao's reconstructed burst; the plotted vector points at no planet, station, or beacon. Composition size: MCU. Visible: character:rao, character:voss, character:harlan, character:okoye.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-058. Start: Same 1 g bridge geography; Sorell still retained under watch; Okoye’s watch unbroken. Event: Voss (silver beard—never Harlan) leans in and authorizes further comparison—curious, decisive—while Rao stays ready at the console to test a moving-receiver hypothesis. End: The bridge is primed to chase the unexplained optical packet; Sorell remains supervised, not free crew. Delta/description: Voss, curious, authorizes further comparison—what did the burst hit—while Rao stays ready to test a moving receiver. Composition size: OTS. Visible: character:voss, character:rao, character:harlan, character:sorell, character:okoye.\n\nPanel 3 (cell 3, region {\"x\":0,\"y\":0.51,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-059. Start: Brief insert: Harlan alone at the secondary console under 1 g; other crew out of frame. Event: Harlan (younger, clean-shaven) watches the unrecoverable burst record with private mourning, hand near chin—no floating, feet planted. End: His private reaction closes the vector beat before the incoming packet. Delta/description: Alone for a moment, Harlan watches the unrecoverable burst record, mourning that they will never know who saved them. Composition size: MCU. Visible: character:harlan.",
+      "compiledPrompt": null,
       "outputs": [
         {
           "order": 1,
-          "artifact": "combinedStoryboard",
-          "assetId": "asset:festival-master-stretch-bridge-vector-057-059-sheet",
+          "artifact": "animaticStill",
           "panels": [
             {
               "order": 1,
-              "shotId": "festival-master:shot-plan-057",
+              "shotId": "festival-master:shot-plan-083",
               "sourceTakeIds": [
-                "festival-master:shot-plan-057:take-03"
+                "festival-master:shot-plan-083:take-02"
               ],
               "frameRegion": {
                 "x": 0,
-                "y": 0.078125,
-                "w": 0.49,
-                "h": 0.411875
-              },
-              "derivedTakeId": "festival-master:shot-plan-057:take-03",
-              "derivedAssetId": "asset:festival-master-stretch-bridge-vector-057-059-panel-01"
-            },
+                "y": 0,
+                "w": 1,
+                "h": 1
+              }
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "artifact": "animaticStill",
+          "panels": [
             {
               "order": 2,
-              "shotId": "festival-master:shot-plan-058",
+              "shotId": "festival-master:shot-plan-084",
               "sourceTakeIds": [
-                "festival-master:shot-plan-058:take-03"
+                "festival-master:shot-plan-084:take-02"
               ],
               "frameRegion": {
-                "x": 0.51,
-                "y": 0.078125,
-                "w": 0.49,
-                "h": 0.411875
-              },
-              "derivedTakeId": "festival-master:shot-plan-058:take-03",
-              "derivedAssetId": "asset:festival-master-stretch-bridge-vector-057-059-panel-02"
-            },
+                "x": 0,
+                "y": 0,
+                "w": 1,
+                "h": 1
+              }
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "artifact": "animaticStill",
+          "panels": [
             {
               "order": 3,
-              "shotId": "festival-master:shot-plan-059",
+              "shotId": "festival-master:shot-plan-085",
               "sourceTakeIds": [
-                "festival-master:shot-plan-059:take-03"
+                "festival-master:shot-plan-085:take-02"
               ],
               "frameRegion": {
                 "x": 0,
-                "y": 0.51,
-                "w": 0.49,
-                "h": 0.411875
-              },
-              "derivedTakeId": "festival-master:shot-plan-059:take-03",
-              "derivedAssetId": "asset:festival-master-stretch-bridge-vector-057-059-panel-03"
+                "y": 0,
+                "w": 1,
+                "h": 1
+              }
             }
           ]
         }
       ],
-      "blockers": [],
-      "coherenceException": false,
-      "runnable": true
-    },
-    {
-      "id": "festival-master:stretch-bridge-vector-057-059:rev-2:video-1",
-      "stretchId": "festival-master:stretch-bridge-vector-057-059",
-      "revision": 2,
-      "medium": "video",
-      "mode": "grouped_seedance",
-      "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
-      "outputTakePolicy": "new_candidate",
-      "dependsOnStillJobId": "festival-master:stretch-bridge-vector-057-059:rev-2",
-      "durationMs": 9160,
-      "memberInputs": [
-        {
-          "order": 1,
-          "shotId": "festival-master:shot-plan-057",
-          "sourceTakeIds": [
-            "festival-master:shot-plan-057:take-03"
-          ],
-          "keyframeAssetId": "asset:festival-master-stretch-bridge-vector-057-059-panel-01"
-        }
-      ],
-      "stillReferenceAssetIds": [
-        "asset:character-pair-voss-harlan-bridge-sheet",
-        "asset:character-pair-rao-sorell-bridge-sheet",
-        "asset:character-pair-okoye-voss-bridge-sheet",
-        "asset:location-celestial-ardor-bridge-realistic-reference"
-      ],
-      "videoReferencePolicy": "fallback",
-      "effectiveVideoReferenceAssetIds": [],
-      "voiceSampleAssetIds": [
-        "asset:voice-ref-en-harlan",
-        "asset:voice-ref-en-elin"
-      ],
-      "sharedReferenceAssetIds": [],
-      "referenceBudget": {
-        "requiredEntityIds": [
-          "character:harlan",
-          "character:okoye",
-          "character:rao",
-          "character:voss",
-          "location:celestial-ardor-bridge"
-        ],
-        "coveredEntityIds": [
-          "character:harlan",
-          "character:okoye",
-          "character:rao",
-          "character:voss",
-          "location:celestial-ardor-bridge"
-        ],
-        "uncoveredEntityIds": [],
-        "attachedAssetIds": [
-          "asset:festival-master-stretch-bridge-vector-057-059-panel-01",
-          "asset:voice-ref-en-harlan",
-          "asset:voice-ref-en-elin"
-        ],
-        "coveringAssetByEntity": {
-          "location:celestial-ardor-bridge": "asset:festival-master-stretch-bridge-vector-057-059-panel-01",
-          "character:rao": "asset:festival-master-stretch-bridge-vector-057-059-panel-01",
-          "character:voss": "asset:festival-master-stretch-bridge-vector-057-059-panel-01",
-          "character:harlan": "asset:festival-master-stretch-bridge-vector-057-059-panel-01",
-          "character:okoye": "asset:festival-master-stretch-bridge-vector-057-059-panel-01"
-        },
-        "wouldOmitEntityIds": [],
-        "limits": {
-          "maxImages": null,
-          "maxVideos": null,
-          "maxAudios": null,
-          "maxTotalReferences": 50
-        },
-        "violations": [],
-        "keyframeCoveredEntityIds": [
-          "character:harlan",
-          "character:okoye",
-          "character:rao",
-          "character:voss",
-          "location:celestial-ardor-bridge"
-        ],
-        "videoExtraCoveredEntityIds": [],
-        "uncoveredVideoEntityIds": []
-      },
-      "compiledPrompt": null,
-      "outputs": [
-        {
-          "order": 1,
-          "artifact": "video"
-        }
-      ],
       "blockers": [
-        "stale_image_asset:asset:festival-master-stretch-bridge-vector-057-059-panel-01"
+        "coherence_exception",
+        "outputs:3>1"
       ],
-      "coherenceException": false,
+      "coherenceException": true,
       "runnable": false
     },
     {
-      "id": "festival-master:stretch-bridge-vector-057-059:rev-2:video-2",
-      "stretchId": "festival-master:stretch-bridge-vector-057-059",
-      "revision": 2,
+      "id": "festival-master:stretch-bridge-greeting-prep-083-085:rev-1:video-1",
+      "stretchId": "festival-master:stretch-bridge-greeting-prep-083-085",
+      "revision": 1,
       "medium": "video",
       "mode": "grouped_seedance",
       "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
       "outputTakePolicy": "new_candidate",
-      "dependsOnStillJobId": "festival-master:stretch-bridge-vector-057-059:rev-2",
-      "durationMs": 8900,
+      "dependsOnStillJobId": "festival-master:stretch-bridge-greeting-prep-083-085:rev-1",
+      "durationMs": 6670,
       "memberInputs": [
-        {
-          "order": 2,
-          "shotId": "festival-master:shot-plan-058",
-          "sourceTakeIds": [
-            "festival-master:shot-plan-058:take-03"
-          ],
-          "keyframeAssetId": "asset:festival-master-stretch-bridge-vector-057-059-panel-02"
-        }
-      ],
-      "stillReferenceAssetIds": [
-        "asset:character-pair-voss-harlan-bridge-sheet",
-        "asset:character-pair-rao-sorell-bridge-sheet",
-        "asset:character-pair-okoye-voss-bridge-sheet",
-        "asset:location-celestial-ardor-bridge-realistic-reference"
-      ],
-      "videoReferencePolicy": "fallback",
-      "effectiveVideoReferenceAssetIds": [],
-      "voiceSampleAssetIds": [
-        "asset:voice-ref-en-elin",
-        "asset:voice-ref-en-voss"
-      ],
-      "sharedReferenceAssetIds": [],
-      "referenceBudget": {
-        "requiredEntityIds": [
-          "character:harlan",
-          "character:okoye",
-          "character:rao",
-          "character:sorell",
-          "character:voss",
-          "location:celestial-ardor-bridge"
-        ],
-        "coveredEntityIds": [
-          "character:harlan",
-          "character:okoye",
-          "character:rao",
-          "character:sorell",
-          "character:voss",
-          "location:celestial-ardor-bridge"
-        ],
-        "uncoveredEntityIds": [],
-        "attachedAssetIds": [
-          "asset:festival-master-stretch-bridge-vector-057-059-panel-02",
-          "asset:voice-ref-en-elin",
-          "asset:voice-ref-en-voss"
-        ],
-        "coveringAssetByEntity": {
-          "location:celestial-ardor-bridge": "asset:festival-master-stretch-bridge-vector-057-059-panel-02",
-          "character:voss": "asset:festival-master-stretch-bridge-vector-057-059-panel-02",
-          "character:rao": "asset:festival-master-stretch-bridge-vector-057-059-panel-02",
-          "character:harlan": "asset:festival-master-stretch-bridge-vector-057-059-panel-02",
-          "character:sorell": "asset:festival-master-stretch-bridge-vector-057-059-panel-02",
-          "character:okoye": "asset:festival-master-stretch-bridge-vector-057-059-panel-02"
-        },
-        "wouldOmitEntityIds": [],
-        "limits": {
-          "maxImages": null,
-          "maxVideos": null,
-          "maxAudios": null,
-          "maxTotalReferences": 50
-        },
-        "violations": [],
-        "keyframeCoveredEntityIds": [
-          "character:harlan",
-          "character:okoye",
-          "character:rao",
-          "character:sorell",
-          "character:voss",
-          "location:celestial-ardor-bridge"
-        ],
-        "videoExtraCoveredEntityIds": [],
-        "uncoveredVideoEntityIds": []
-      },
-      "compiledPrompt": null,
-      "outputs": [
         {
           "order": 1,
-          "artifact": "video"
-        }
-      ],
-      "blockers": [
-        "stale_image_asset:asset:festival-master-stretch-bridge-vector-057-059-panel-02"
-      ],
-      "coherenceException": false,
-      "runnable": false
-    },
-    {
-      "id": "festival-master:stretch-bridge-vector-057-059:rev-2:video-3",
-      "stretchId": "festival-master:stretch-bridge-vector-057-059",
-      "revision": 2,
-      "medium": "video",
-      "mode": "grouped_seedance",
-      "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
-      "outputTakePolicy": "new_candidate",
-      "dependsOnStillJobId": "festival-master:stretch-bridge-vector-057-059:rev-2",
-      "durationMs": 12400,
-      "memberInputs": [
-        {
-          "order": 3,
-          "shotId": "festival-master:shot-plan-059",
+          "shotId": "festival-master:shot-plan-083",
           "sourceTakeIds": [
-            "festival-master:shot-plan-059:take-03"
+            "festival-master:shot-plan-083:take-02"
           ],
-          "keyframeAssetId": "asset:festival-master-stretch-bridge-vector-057-059-panel-03"
+          "keyframeAssetId": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-01"
         }
       ],
       "stillReferenceAssetIds": [
-        "asset:character-pair-voss-harlan-bridge-sheet",
         "asset:character-pair-rao-sorell-bridge-sheet",
         "asset:character-pair-okoye-voss-bridge-sheet",
-        "asset:location-celestial-ardor-bridge-realistic-reference"
+        "asset:location-celestial-ardor-bridge-realistic-reference",
+        "asset:location-velari-station-sheet"
       ],
       "videoReferencePolicy": "fallback",
       "effectiveVideoReferenceAssetIds": [
-        "asset:character-pair-rao-sorell-bridge-sheet",
-        "asset:character-pair-okoye-voss-bridge-sheet"
+        "asset:location-velari-station-sheet"
       ],
-      "voiceSampleAssetIds": [
-        "asset:voice-ref-en-harlan",
-        "asset:voice-ref-en-elin"
-      ],
+      "voiceSampleAssetIds": [],
       "sharedReferenceAssetIds": [
-        "asset:character-pair-rao-sorell-bridge-sheet",
-        "asset:character-pair-okoye-voss-bridge-sheet"
+        "asset:location-velari-station-sheet"
       ],
       "referenceBudget": {
         "requiredEntityIds": [
-          "character:harlan",
+          "character:okoye",
+          "character:rao",
+          "character:sorell",
+          "character:voss",
           "location:celestial-ardor-bridge"
         ],
         "coveredEntityIds": [
-          "character:harlan",
+          "character:okoye",
+          "character:rao",
+          "character:sorell",
+          "character:voss",
           "location:celestial-ardor-bridge"
         ],
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
-          "asset:festival-master-stretch-bridge-vector-057-059-panel-03",
-          "asset:character-pair-rao-sorell-bridge-sheet",
-          "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:voice-ref-en-harlan",
-          "asset:voice-ref-en-elin"
+          "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-01",
+          "asset:location-velari-station-sheet"
         ],
         "coveringAssetByEntity": {
-          "location:celestial-ardor-bridge": "asset:festival-master-stretch-bridge-vector-057-059-panel-03",
-          "character:harlan": "asset:festival-master-stretch-bridge-vector-057-059-panel-03"
+          "location:celestial-ardor-bridge": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-01",
+          "character:voss": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-01",
+          "character:sorell": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-01",
+          "character:rao": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-01",
+          "character:okoye": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-01"
         },
         "wouldOmitEntityIds": [],
         "limits": {
@@ -15613,7 +14723,10 @@
         },
         "violations": [],
         "keyframeCoveredEntityIds": [
-          "character:harlan",
+          "character:okoye",
+          "character:rao",
+          "character:sorell",
+          "character:voss",
           "location:celestial-ardor-bridge"
         ],
         "videoExtraCoveredEntityIds": [],
@@ -15627,78 +14740,265 @@
         }
       ],
       "blockers": [
-        "stale_image_asset:asset:festival-master-stretch-bridge-vector-057-059-panel-03"
+        "editorial_prompt_freeze_not_approved"
       ],
       "coherenceException": false,
       "runnable": false
     },
     {
-      "id": "festival-master:stretch-bridge-packet-open-060-061:rev-2",
-      "stretchId": "festival-master:stretch-bridge-packet-open-060-061",
-      "revision": 2,
+      "id": "festival-master:stretch-bridge-greeting-prep-083-085:rev-1:video-2",
+      "stretchId": "festival-master:stretch-bridge-greeting-prep-083-085",
+      "revision": 1,
+      "medium": "video",
+      "mode": "grouped_seedance",
+      "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
+      "outputTakePolicy": "new_candidate",
+      "dependsOnStillJobId": "festival-master:stretch-bridge-greeting-prep-083-085:rev-1",
+      "durationMs": 12700,
+      "memberInputs": [
+        {
+          "order": 2,
+          "shotId": "festival-master:shot-plan-084",
+          "sourceTakeIds": [
+            "festival-master:shot-plan-084:take-02"
+          ],
+          "keyframeAssetId": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-02"
+        }
+      ],
+      "stillReferenceAssetIds": [
+        "asset:character-pair-rao-sorell-bridge-sheet",
+        "asset:character-pair-okoye-voss-bridge-sheet",
+        "asset:location-celestial-ardor-bridge-realistic-reference",
+        "asset:location-velari-station-sheet"
+      ],
+      "videoReferencePolicy": "fallback",
+      "effectiveVideoReferenceAssetIds": [
+        "asset:location-velari-station-sheet"
+      ],
+      "voiceSampleAssetIds": [
+        "asset:voice-ref-en-sorell",
+        "asset:voice-ref-en-voss"
+      ],
+      "sharedReferenceAssetIds": [
+        "asset:location-velari-station-sheet"
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:okoye",
+          "character:rao",
+          "character:sorell",
+          "character:voss",
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "character:okoye",
+          "character:rao",
+          "character:sorell",
+          "character:voss",
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-02",
+          "asset:location-velari-station-sheet",
+          "asset:voice-ref-en-sorell",
+          "asset:voice-ref-en-voss"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-02",
+          "character:voss": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-02",
+          "character:sorell": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-02",
+          "character:rao": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-02",
+          "character:okoye": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-02"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": null,
+          "maxVideos": null,
+          "maxAudios": null,
+          "maxTotalReferences": 50
+        },
+        "violations": [],
+        "keyframeCoveredEntityIds": [
+          "character:okoye",
+          "character:rao",
+          "character:sorell",
+          "character:voss",
+          "location:celestial-ardor-bridge"
+        ],
+        "videoExtraCoveredEntityIds": [],
+        "uncoveredVideoEntityIds": []
+      },
+      "compiledPrompt": null,
+      "outputs": [
+        {
+          "order": 1,
+          "artifact": "video"
+        }
+      ],
+      "blockers": [
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "coherenceException": false,
+      "runnable": false
+    },
+    {
+      "id": "festival-master:stretch-bridge-greeting-prep-083-085:rev-1:video-3",
+      "stretchId": "festival-master:stretch-bridge-greeting-prep-083-085",
+      "revision": 1,
+      "medium": "video",
+      "mode": "grouped_seedance",
+      "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
+      "outputTakePolicy": "new_candidate",
+      "dependsOnStillJobId": "festival-master:stretch-bridge-greeting-prep-083-085:rev-1",
+      "durationMs": 7230,
+      "memberInputs": [
+        {
+          "order": 3,
+          "shotId": "festival-master:shot-plan-085",
+          "sourceTakeIds": [
+            "festival-master:shot-plan-085:take-02"
+          ],
+          "keyframeAssetId": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-03"
+        }
+      ],
+      "stillReferenceAssetIds": [
+        "asset:character-pair-rao-sorell-bridge-sheet",
+        "asset:character-pair-okoye-voss-bridge-sheet",
+        "asset:location-celestial-ardor-bridge-realistic-reference",
+        "asset:location-velari-station-sheet"
+      ],
+      "videoReferencePolicy": "fallback",
+      "effectiveVideoReferenceAssetIds": [
+        "asset:location-velari-station-sheet"
+      ],
+      "voiceSampleAssetIds": [
+        "asset:voice-ref-en-sorell",
+        "asset:voice-ref-en-voss"
+      ],
+      "sharedReferenceAssetIds": [
+        "asset:location-velari-station-sheet"
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:okoye",
+          "character:rao",
+          "character:sorell",
+          "character:voss",
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "character:okoye",
+          "character:rao",
+          "character:sorell",
+          "character:voss",
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-03",
+          "asset:location-velari-station-sheet",
+          "asset:voice-ref-en-sorell",
+          "asset:voice-ref-en-voss"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-03",
+          "character:voss": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-03",
+          "character:sorell": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-03",
+          "character:rao": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-03",
+          "character:okoye": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-03"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": null,
+          "maxVideos": null,
+          "maxAudios": null,
+          "maxTotalReferences": 50
+        },
+        "violations": [],
+        "keyframeCoveredEntityIds": [
+          "character:okoye",
+          "character:rao",
+          "character:sorell",
+          "character:voss",
+          "location:celestial-ardor-bridge"
+        ],
+        "videoExtraCoveredEntityIds": [],
+        "uncoveredVideoEntityIds": []
+      },
+      "compiledPrompt": null,
+      "outputs": [
+        {
+          "order": 1,
+          "artifact": "video"
+        }
+      ],
+      "blockers": [
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "coherenceException": false,
+      "runnable": false
+    },
+    {
+      "id": "festival-master:stretch-bridge-greeting-086:rev-1",
+      "stretchId": "festival-master:stretch-bridge-greeting-086",
+      "revision": 1,
       "medium": "still",
-      "mode": "combined_storyboard_sheet",
+      "mode": "independent_shared_authority",
       "providerSnapshotId": "provider:openai:gpt-image-2:2026-09-13",
       "outputTakePolicy": "new_candidate",
       "memberInputs": [
         {
           "order": 1,
-          "shotId": "festival-master:shot-plan-060",
+          "shotId": "festival-master:shot-plan-086",
           "sourceTakeIds": [
-            "festival-master:shot-plan-060:take-02"
-          ]
-        },
-        {
-          "order": 2,
-          "shotId": "festival-master:shot-plan-061",
-          "sourceTakeIds": [
-            "festival-master:shot-plan-061:take-02"
+            "festival-master:shot-plan-086:take-02"
           ]
         }
       ],
       "stillReferenceAssetIds": [
-        "asset:character-pair-voss-harlan-bridge-sheet",
         "asset:character-pair-rao-sorell-bridge-sheet",
         "asset:character-pair-okoye-voss-bridge-sheet",
-        "asset:location-celestial-ardor-bridge-realistic-reference"
+        "asset:location-celestial-ardor-bridge-realistic-reference",
+        "asset:location-velari-station-sheet"
       ],
       "sharedReferenceAssetIds": [
-        "asset:character-pair-voss-harlan-bridge-sheet",
         "asset:character-pair-rao-sorell-bridge-sheet",
         "asset:character-pair-okoye-voss-bridge-sheet",
-        "asset:location-celestial-ardor-bridge-realistic-reference"
+        "asset:location-celestial-ardor-bridge-realistic-reference",
+        "asset:location-velari-station-sheet"
       ],
       "referenceBudget": {
         "requiredEntityIds": [
-          "character:harlan",
           "character:okoye",
           "character:rao",
           "character:sorell",
           "character:voss",
-          "location:celestial-ardor-bridge"
+          "location:celestial-ardor-bridge",
+          "location:velari-station"
         ],
         "coveredEntityIds": [
-          "character:harlan",
           "character:okoye",
           "character:rao",
           "character:sorell",
           "character:voss",
-          "location:celestial-ardor-bridge"
+          "location:celestial-ardor-bridge",
+          "location:velari-station"
         ],
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
-          "asset:character-pair-voss-harlan-bridge-sheet",
           "asset:character-pair-rao-sorell-bridge-sheet",
           "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-velari-station-sheet"
         ],
         "coveringAssetByEntity": {
-          "character:harlan": "asset:character-pair-voss-harlan-bridge-sheet",
           "character:okoye": "asset:character-pair-okoye-voss-bridge-sheet",
           "character:rao": "asset:character-pair-rao-sorell-bridge-sheet",
           "character:sorell": "asset:character-pair-rao-sorell-bridge-sheet",
           "character:voss": "asset:character-pair-okoye-voss-bridge-sheet",
-          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "location:velari-station": "asset:location-velari-station-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
@@ -15709,121 +15009,89 @@
         },
         "violations": []
       },
-      "gridLayout": {
-        "rows": 2,
-        "cols": 2,
-        "gutterFraction": 0.02,
-        "panelAspect": "16:9",
-        "blankCells": [
-          3,
-          4
-        ]
-      },
-      "computedMargins": {
-        "top": 0.078125,
-        "right": 0,
-        "bottom": 0.078125,
-        "left": 0
-      },
-      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [3,4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-bridge.\nPhysics: Steady 1 g on the bridge; crew at blocked stations with feet planted; Sorell remains under watch (not free duty).\nLighting: Bridge practicals with the incoming optical packet bright on Rao’s English-only display.\nShared: Incoming Zao packet on the bridge under steady 1 g. Sorell stays provisionally retained under watch near the translator station—she may look toward the display but is not free collaborating crew. Okoye maintains supervisory watch. Identity locks vs pair sheets; ignore pair-sheet backgrounds. No burned-in dialogue; English-only diegetic UI.\nPresent cast: character:rao, character:voss, character:sorell, character:harlan, character:okoye.\nBlocking:\ncharacter:rao; zoneOrSeat=analysis station; screenSide=left; facing=her display; posture=standing at console; eyelineTarget=the incoming packet\ncharacter:voss; zoneOrSeat=command station; screenSide=center; facing=Rao; posture=standing; eyelineTarget=character:rao\ncharacter:sorell; zoneOrSeat=retained under watch near translator station (not free duty); screenSide=right; facing=Rao’s display; posture=standing or seated under watch, hands visible, not collaborating as free crew; eyelineTarget=character:rao\ncharacter:harlan; zoneOrSeat=aft secondary console, far right depth; screenSide=right; facing=Rao and the packet; posture=standing; eyelineTarget=character:rao\ncharacter:okoye; zoneOrSeat=security watch, far left depth; Sorell still under her responsibility; screenSide=left; facing=Sorell and command; posture=standing, guarding; eyelineTarget=character:sorell\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-060. Start: Same 1 g bridge; Rao at analysis left, Voss center, Sorell near-right; Harlan and Okoye readable in depth. Event: An incoming optical packet resolves on Rao’s English-only display; she urgently identifies Zao’s personal format and pre-crossing signature. End: Voss attends; Sorell remains retained under watch near-right—present, supervised, not free collaborating crew. Delta/description: An incoming optical signal resolves on Elin's display; urgent, she identifies Zao's packet format, personal signature, and pre-crossing send. Composition size: MCU. Visible: character:rao, character:voss, character:sorell.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-061. Start: Crew still planted under 1 g, attention on Rao’s packet display. Event: Voss orders the packet opened/played at once—decisive, no floating—while Rao confirms readiness at the console. End: The bridge is ready for Zao’s recorded vault flashback. Delta/description: Voss orders the authenticated packet opened at once while Rao stays at the console ready to play it. Composition size: ELS. Visible: character:voss, character:harlan, character:sorell, character:rao, character:okoye.",
+      "compiledPrompt": null,
       "outputs": [
         {
           "order": 1,
-          "artifact": "combinedStoryboard",
-          "assetId": "asset:festival-master-stretch-bridge-packet-open-060-061-sheet",
+          "artifact": "animaticStill",
           "panels": [
             {
               "order": 1,
-              "shotId": "festival-master:shot-plan-060",
+              "shotId": "festival-master:shot-plan-086",
               "sourceTakeIds": [
-                "festival-master:shot-plan-060:take-02"
+                "festival-master:shot-plan-086:take-02"
               ],
               "frameRegion": {
                 "x": 0,
-                "y": 0.078125,
-                "w": 0.49,
-                "h": 0.411875
-              },
-              "derivedTakeId": "festival-master:shot-plan-060:take-03",
-              "derivedAssetId": "asset:festival-master-stretch-bridge-packet-open-060-061-panel-01"
-            },
-            {
-              "order": 2,
-              "shotId": "festival-master:shot-plan-061",
-              "sourceTakeIds": [
-                "festival-master:shot-plan-061:take-02"
-              ],
-              "frameRegion": {
-                "x": 0.51,
-                "y": 0.078125,
-                "w": 0.49,
-                "h": 0.411875
-              },
-              "derivedTakeId": "festival-master:shot-plan-061:take-03",
-              "derivedAssetId": "asset:festival-master-stretch-bridge-packet-open-060-061-panel-02"
+                "y": 0,
+                "w": 1,
+                "h": 1
+              }
             }
           ]
         }
       ],
-      "blockers": [],
-      "coherenceException": false,
-      "runnable": true
+      "blockers": [
+        "coherence_exception"
+      ],
+      "coherenceException": true,
+      "runnable": false
     },
     {
-      "id": "festival-master:stretch-bridge-packet-open-060-061:rev-2:video-1",
-      "stretchId": "festival-master:stretch-bridge-packet-open-060-061",
-      "revision": 2,
+      "id": "festival-master:stretch-bridge-greeting-086:rev-1:video-1",
+      "stretchId": "festival-master:stretch-bridge-greeting-086",
+      "revision": 1,
       "medium": "video",
       "mode": "grouped_seedance",
       "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
       "outputTakePolicy": "new_candidate",
-      "dependsOnStillJobId": "festival-master:stretch-bridge-packet-open-060-061:rev-2",
-      "durationMs": 4300,
+      "dependsOnStillJobId": "festival-master:stretch-bridge-greeting-086:rev-1",
+      "durationMs": 6670,
       "memberInputs": [
         {
           "order": 1,
-          "shotId": "festival-master:shot-plan-060",
+          "shotId": "festival-master:shot-plan-086",
           "sourceTakeIds": [
-            "festival-master:shot-plan-060:take-02"
+            "festival-master:shot-plan-086:take-02"
           ],
-          "keyframeAssetId": "asset:festival-master-stretch-bridge-packet-open-060-061-panel-01"
+          "keyframeAssetId": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-04"
         }
       ],
       "stillReferenceAssetIds": [
-        "asset:character-pair-voss-harlan-bridge-sheet",
         "asset:character-pair-rao-sorell-bridge-sheet",
         "asset:character-pair-okoye-voss-bridge-sheet",
-        "asset:location-celestial-ardor-bridge-realistic-reference"
+        "asset:location-celestial-ardor-bridge-realistic-reference",
+        "asset:location-velari-station-sheet"
       ],
       "videoReferencePolicy": "fallback",
       "effectiveVideoReferenceAssetIds": [],
-      "voiceSampleAssetIds": [
-        "asset:voice-ref-en-elin"
-      ],
+      "voiceSampleAssetIds": [],
       "sharedReferenceAssetIds": [],
       "referenceBudget": {
         "requiredEntityIds": [
           "character:rao",
           "character:sorell",
           "character:voss",
-          "location:celestial-ardor-bridge"
+          "location:celestial-ardor-bridge",
+          "location:velari-station"
         ],
         "coveredEntityIds": [
           "character:rao",
           "character:sorell",
           "character:voss",
-          "location:celestial-ardor-bridge"
+          "location:celestial-ardor-bridge",
+          "location:velari-station"
         ],
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
-          "asset:festival-master-stretch-bridge-packet-open-060-061-panel-01",
-          "asset:voice-ref-en-elin"
+          "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-04"
         ],
         "coveringAssetByEntity": {
-          "location:celestial-ardor-bridge": "asset:festival-master-stretch-bridge-packet-open-060-061-panel-01",
-          "character:rao": "asset:festival-master-stretch-bridge-packet-open-060-061-panel-01",
-          "character:voss": "asset:festival-master-stretch-bridge-packet-open-060-061-panel-01",
-          "character:sorell": "asset:festival-master-stretch-bridge-packet-open-060-061-panel-01"
+          "location:celestial-ardor-bridge": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-04",
+          "character:voss": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-04",
+          "character:sorell": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-04",
+          "character:rao": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-04",
+          "location:velari-station": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-04"
         },
         "wouldOmitEntityIds": [],
         "limits": {
@@ -15837,7 +15105,8 @@
           "character:rao",
           "character:sorell",
           "character:voss",
-          "location:celestial-ardor-bridge"
+          "location:celestial-ardor-bridge",
+          "location:velari-station"
         ],
         "videoExtraCoveredEntityIds": [],
         "uncoveredVideoEntityIds": []
@@ -15850,389 +15119,8 @@
         }
       ],
       "blockers": [
-        "stale_image_asset:asset:festival-master-stretch-bridge-packet-open-060-061-panel-01"
-      ],
-      "coherenceException": false,
-      "runnable": false
-    },
-    {
-      "id": "festival-master:stretch-bridge-packet-open-060-061:rev-2:video-2",
-      "stretchId": "festival-master:stretch-bridge-packet-open-060-061",
-      "revision": 2,
-      "medium": "video",
-      "mode": "grouped_seedance",
-      "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
-      "outputTakePolicy": "new_candidate",
-      "dependsOnStillJobId": "festival-master:stretch-bridge-packet-open-060-061:rev-2",
-      "durationMs": 7400,
-      "memberInputs": [
-        {
-          "order": 2,
-          "shotId": "festival-master:shot-plan-061",
-          "sourceTakeIds": [
-            "festival-master:shot-plan-061:take-02"
-          ],
-          "keyframeAssetId": "asset:festival-master-stretch-bridge-packet-open-060-061-panel-02"
-        }
-      ],
-      "stillReferenceAssetIds": [
-        "asset:character-pair-voss-harlan-bridge-sheet",
-        "asset:character-pair-rao-sorell-bridge-sheet",
-        "asset:character-pair-okoye-voss-bridge-sheet",
-        "asset:location-celestial-ardor-bridge-realistic-reference"
-      ],
-      "videoReferencePolicy": "fallback",
-      "effectiveVideoReferenceAssetIds": [],
-      "voiceSampleAssetIds": [
-        "asset:voice-ref-en-voss"
-      ],
-      "sharedReferenceAssetIds": [],
-      "referenceBudget": {
-        "requiredEntityIds": [
-          "character:harlan",
-          "character:okoye",
-          "character:rao",
-          "character:sorell",
-          "character:voss",
-          "location:celestial-ardor-bridge"
-        ],
-        "coveredEntityIds": [
-          "character:harlan",
-          "character:okoye",
-          "character:rao",
-          "character:sorell",
-          "character:voss",
-          "location:celestial-ardor-bridge"
-        ],
-        "uncoveredEntityIds": [],
-        "attachedAssetIds": [
-          "asset:festival-master-stretch-bridge-packet-open-060-061-panel-02",
-          "asset:voice-ref-en-voss"
-        ],
-        "coveringAssetByEntity": {
-          "location:celestial-ardor-bridge": "asset:festival-master-stretch-bridge-packet-open-060-061-panel-02",
-          "character:voss": "asset:festival-master-stretch-bridge-packet-open-060-061-panel-02",
-          "character:harlan": "asset:festival-master-stretch-bridge-packet-open-060-061-panel-02",
-          "character:sorell": "asset:festival-master-stretch-bridge-packet-open-060-061-panel-02",
-          "character:rao": "asset:festival-master-stretch-bridge-packet-open-060-061-panel-02",
-          "character:okoye": "asset:festival-master-stretch-bridge-packet-open-060-061-panel-02"
-        },
-        "wouldOmitEntityIds": [],
-        "limits": {
-          "maxImages": null,
-          "maxVideos": null,
-          "maxAudios": null,
-          "maxTotalReferences": 50
-        },
-        "violations": [],
-        "keyframeCoveredEntityIds": [
-          "character:harlan",
-          "character:okoye",
-          "character:rao",
-          "character:sorell",
-          "character:voss",
-          "location:celestial-ardor-bridge"
-        ],
-        "videoExtraCoveredEntityIds": [],
-        "uncoveredVideoEntityIds": []
-      },
-      "compiledPrompt": null,
-      "outputs": [
-        {
-          "order": 1,
-          "artifact": "video"
-        }
-      ],
-      "blockers": [
-        "stale_image_asset:asset:festival-master-stretch-bridge-packet-open-060-061-panel-02"
-      ],
-      "coherenceException": false,
-      "runnable": false
-    },
-    {
-      "id": "festival-master:stretch-vault-flashback-062-063:rev-2",
-      "stretchId": "festival-master:stretch-vault-flashback-062-063",
-      "revision": 2,
-      "medium": "still",
-      "mode": "combined_storyboard_sheet",
-      "providerSnapshotId": "provider:openai:gpt-image-2:2026-09-13",
-      "outputTakePolicy": "new_candidate",
-      "memberInputs": [
-        {
-          "order": 1,
-          "shotId": "festival-master:shot-plan-062",
-          "sourceTakeIds": [
-            "festival-master:shot-plan-062:take-02"
-          ]
-        },
-        {
-          "order": 2,
-          "shotId": "festival-master:shot-plan-063",
-          "sourceTakeIds": [
-            "festival-master:shot-plan-063:take-02"
-          ]
-        }
-      ],
-      "stillReferenceAssetIds": [
-        "asset:character-zao-sheet",
-        "asset:location-celestial-ardor-inner-shielding-vault-sheet",
-        "asset:object-proxima-geophysical-impulse-package-sheet"
-      ],
-      "sharedReferenceAssetIds": [
-        "asset:character-zao-sheet",
-        "asset:location-celestial-ardor-inner-shielding-vault-sheet",
-        "asset:object-proxima-geophysical-impulse-package-sheet"
-      ],
-      "referenceBudget": {
-        "requiredEntityIds": [
-          "character:zao",
-          "location:celestial-ardor-inner-shielding-vault",
-          "object:proxima-geophysical-impulse-package"
-        ],
-        "coveredEntityIds": [
-          "character:zao",
-          "location:celestial-ardor-inner-shielding-vault",
-          "object:proxima-geophysical-impulse-package"
-        ],
-        "uncoveredEntityIds": [],
-        "attachedAssetIds": [
-          "asset:character-zao-sheet",
-          "asset:location-celestial-ardor-inner-shielding-vault-sheet",
-          "asset:object-proxima-geophysical-impulse-package-sheet"
-        ],
-        "coveringAssetByEntity": {
-          "character:zao": "asset:character-zao-sheet",
-          "location:celestial-ardor-inner-shielding-vault": "asset:location-celestial-ardor-inner-shielding-vault-sheet",
-          "object:proxima-geophysical-impulse-package": "asset:object-proxima-geophysical-impulse-package-sheet"
-        },
-        "wouldOmitEntityIds": [],
-        "limits": {
-          "maxImages": 5,
-          "maxVideos": 0,
-          "maxAudios": 0,
-          "maxTotalReferences": 5
-        },
-        "violations": []
-      },
-      "gridLayout": {
-        "rows": 2,
-        "cols": 2,
-        "gutterFraction": 0.02,
-        "panelAspect": "16:9",
-        "blankCells": [
-          3,
-          4
-        ]
-      },
-      "computedMargins": {
-        "top": 0.078125,
-        "right": 0,
-        "bottom": 0.078125,
-        "left": 0
-      },
-      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [3,4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-inner-shielding-vault.\nPhysics: Microgravity flashback in the inner shielding vault: no usable floor; Zao and the package are secured to vault structure with handholds—nothing rests as if under 1 g.\nLighting: Vault service lighting and the package controller’s diagnostic glow; English-only diegetic UI if any.\nShared: Two-panel delayed vault flashback in microgravity only—ignore any bridge background. Zao alone with the armed Proxima geophysical impulse package per the attached sheets. No burned-in spoken dialogue or subtitles; English-only diegetic diagram/UI if shown.\nPresent cast: character:zao.\nBlocking:\ncharacter:zao; zoneOrSeat=package service panel, handhold braced; screenSide=center; facing=the package and recorder; posture=braced / handhold in microgravity; eyelineTarget=the package\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-062. Start: Delayed flashback: microgravity vault; Zao braced/handhold beside the armed impulse package and controller. Event: She records the warning beside the device—determined, secured to structure—identifying the Proxima geophysical impulse package as the threat. End: Package and Zao remain vault-anchored; no bridge architecture. Delta/description: Flashback. Zao, determined and braced in microgravity, records her warning beside the armed Proxima impulse package in the shielding vault—identifying mass, timer, neutron signature, and the protected controller. Composition size: MS. Visible: character:zao.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-063. Start: Same MG vault footing; Zao still secured beside the package. Event: She explains Jupiter occlusion and forward intercept; a faint English-only diagram of the wormhole and a lead point ahead may superimpose near her. End: The aimed-ahead optical warning is visually motivated; still microgravity, still vault only. Delta/description: Zao, resolved and still vault-braced in microgravity, continues the recorded explanation as a faint English-only diagram of the wormhole and a lead point ahead of it appears superimposed. Composition size: CU. Visible: character:zao.",
-      "outputs": [
-        {
-          "order": 1,
-          "artifact": "combinedStoryboard",
-          "assetId": "asset:festival-master-stretch-vault-flashback-062-063-sheet",
-          "panels": [
-            {
-              "order": 1,
-              "shotId": "festival-master:shot-plan-062",
-              "sourceTakeIds": [
-                "festival-master:shot-plan-062:take-02"
-              ],
-              "frameRegion": {
-                "x": 0,
-                "y": 0.078125,
-                "w": 0.49,
-                "h": 0.411875
-              },
-              "derivedTakeId": "festival-master:shot-plan-062:take-03",
-              "derivedAssetId": "asset:festival-master-stretch-vault-flashback-062-063-panel-01"
-            },
-            {
-              "order": 2,
-              "shotId": "festival-master:shot-plan-063",
-              "sourceTakeIds": [
-                "festival-master:shot-plan-063:take-02"
-              ],
-              "frameRegion": {
-                "x": 0.51,
-                "y": 0.078125,
-                "w": 0.49,
-                "h": 0.411875
-              },
-              "derivedTakeId": "festival-master:shot-plan-063:take-03",
-              "derivedAssetId": "asset:festival-master-stretch-vault-flashback-062-063-panel-02"
-            }
-          ]
-        }
-      ],
-      "blockers": [],
-      "coherenceException": false,
-      "runnable": true
-    },
-    {
-      "id": "festival-master:stretch-vault-flashback-062-063:rev-2:video-1",
-      "stretchId": "festival-master:stretch-vault-flashback-062-063",
-      "revision": 2,
-      "medium": "video",
-      "mode": "grouped_seedance",
-      "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
-      "outputTakePolicy": "new_candidate",
-      "dependsOnStillJobId": "festival-master:stretch-vault-flashback-062-063:rev-2",
-      "durationMs": 14780,
-      "memberInputs": [
-        {
-          "order": 1,
-          "shotId": "festival-master:shot-plan-062",
-          "sourceTakeIds": [
-            "festival-master:shot-plan-062:take-02"
-          ],
-          "keyframeAssetId": "asset:festival-master-stretch-vault-flashback-062-063-panel-01"
-        }
-      ],
-      "stillReferenceAssetIds": [
-        "asset:character-zao-sheet",
-        "asset:location-celestial-ardor-inner-shielding-vault-sheet",
-        "asset:object-proxima-geophysical-impulse-package-sheet"
-      ],
-      "videoReferencePolicy": "fallback",
-      "effectiveVideoReferenceAssetIds": [],
-      "voiceSampleAssetIds": [
-        "asset:voice-ref-en-zao"
-      ],
-      "sharedReferenceAssetIds": [],
-      "referenceBudget": {
-        "requiredEntityIds": [
-          "character:zao",
-          "location:celestial-ardor-inner-shielding-vault",
-          "object:proxima-geophysical-impulse-package"
-        ],
-        "coveredEntityIds": [
-          "character:zao",
-          "location:celestial-ardor-inner-shielding-vault",
-          "object:proxima-geophysical-impulse-package"
-        ],
-        "uncoveredEntityIds": [],
-        "attachedAssetIds": [
-          "asset:festival-master-stretch-vault-flashback-062-063-panel-01",
-          "asset:voice-ref-en-zao"
-        ],
-        "coveringAssetByEntity": {
-          "location:celestial-ardor-inner-shielding-vault": "asset:festival-master-stretch-vault-flashback-062-063-panel-01",
-          "character:zao": "asset:festival-master-stretch-vault-flashback-062-063-panel-01",
-          "object:proxima-geophysical-impulse-package": "asset:festival-master-stretch-vault-flashback-062-063-panel-01"
-        },
-        "wouldOmitEntityIds": [],
-        "limits": {
-          "maxImages": null,
-          "maxVideos": null,
-          "maxAudios": null,
-          "maxTotalReferences": 50
-        },
-        "violations": [],
-        "keyframeCoveredEntityIds": [
-          "character:zao",
-          "location:celestial-ardor-inner-shielding-vault",
-          "object:proxima-geophysical-impulse-package"
-        ],
-        "videoExtraCoveredEntityIds": [],
-        "uncoveredVideoEntityIds": []
-      },
-      "compiledPrompt": null,
-      "outputs": [
-        {
-          "order": 1,
-          "artifact": "video"
-        }
-      ],
-      "blockers": [
-        "stale_image_asset:asset:festival-master-stretch-vault-flashback-062-063-panel-01"
-      ],
-      "coherenceException": false,
-      "runnable": false
-    },
-    {
-      "id": "festival-master:stretch-vault-flashback-062-063:rev-2:video-2",
-      "stretchId": "festival-master:stretch-vault-flashback-062-063",
-      "revision": 2,
-      "medium": "video",
-      "mode": "grouped_seedance",
-      "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
-      "outputTakePolicy": "new_candidate",
-      "dependsOnStillJobId": "festival-master:stretch-vault-flashback-062-063:rev-2",
-      "durationMs": 20860,
-      "memberInputs": [
-        {
-          "order": 2,
-          "shotId": "festival-master:shot-plan-063",
-          "sourceTakeIds": [
-            "festival-master:shot-plan-063:take-02"
-          ],
-          "keyframeAssetId": "asset:festival-master-stretch-vault-flashback-062-063-panel-02"
-        }
-      ],
-      "stillReferenceAssetIds": [
-        "asset:character-zao-sheet",
-        "asset:location-celestial-ardor-inner-shielding-vault-sheet",
-        "asset:object-proxima-geophysical-impulse-package-sheet"
-      ],
-      "videoReferencePolicy": "fallback",
-      "effectiveVideoReferenceAssetIds": [
-        "asset:object-proxima-geophysical-impulse-package-sheet"
-      ],
-      "voiceSampleAssetIds": [
-        "asset:voice-ref-en-zao"
-      ],
-      "sharedReferenceAssetIds": [
-        "asset:object-proxima-geophysical-impulse-package-sheet"
-      ],
-      "referenceBudget": {
-        "requiredEntityIds": [
-          "character:zao",
-          "location:celestial-ardor-inner-shielding-vault"
-        ],
-        "coveredEntityIds": [
-          "character:zao",
-          "location:celestial-ardor-inner-shielding-vault"
-        ],
-        "uncoveredEntityIds": [],
-        "attachedAssetIds": [
-          "asset:festival-master-stretch-vault-flashback-062-063-panel-02",
-          "asset:object-proxima-geophysical-impulse-package-sheet",
-          "asset:voice-ref-en-zao"
-        ],
-        "coveringAssetByEntity": {
-          "location:celestial-ardor-inner-shielding-vault": "asset:festival-master-stretch-vault-flashback-062-063-panel-02",
-          "character:zao": "asset:festival-master-stretch-vault-flashback-062-063-panel-02"
-        },
-        "wouldOmitEntityIds": [],
-        "limits": {
-          "maxImages": null,
-          "maxVideos": null,
-          "maxAudios": null,
-          "maxTotalReferences": 50
-        },
-        "violations": [],
-        "keyframeCoveredEntityIds": [
-          "character:zao",
-          "location:celestial-ardor-inner-shielding-vault"
-        ],
-        "videoExtraCoveredEntityIds": [],
-        "uncoveredVideoEntityIds": []
-      },
-      "compiledPrompt": null,
-      "outputs": [
-        {
-          "order": 1,
-          "artifact": "video"
-        }
-      ],
-      "blockers": [
-        "stale_image_asset:asset:festival-master-stretch-vault-flashback-062-063-panel-02"
+        "stale_image_asset:asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-04",
+        "editorial_prompt_freeze_not_approved"
       ],
       "coherenceException": false,
       "runnable": false
@@ -19588,7 +18476,7 @@
         "bottom": 0.078125,
         "left": 0
       },
-      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-bridge.\nPhysics: Steady 1 g artificial gravity returning on the bridge: feet planted, loose tools settle to the deck, no floating debris.\nLighting: Established practical lighting for this location.\nShared: Continuous bridge investigation under restored thrust. Sorell is provisionally retained under watch (no brig)—not free crew. Okoye keeps her under supervision. Harlan argues suspicion; Rao separates disagreement from proof. Identity locks: Harlan younger clean-shaven; Voss older silver beard; Rao East-Asian lighter jacket; Sorell the other woman on the Rao–Sorell pair sheet; Okoye Black woman short natural hair. Ignore pair-sheet backgrounds.\nPresent cast: character:harlan, character:okoye, character:rao, character:sorell, character:voss.\nBlocking:\ncharacter:harlan; zoneOrSeat=meeting-table / command approach, accusing toward Sorell; screenSide=left; facing=character:sorell; posture=standing under restored 1 g, planted, accusing; eyelineTarget=character:sorell\ncharacter:okoye; zoneOrSeat=security watch; hands-where-I-can-see-them control of Sorell and the scene; screenSide=center; facing=Sorell and the command exchange; posture=standing, guarding; eyelineTarget=character:sorell\ncharacter:rao; zoneOrSeat=analysis / science station along the arc; screenSide=right; facing=Harlan and Sorell; posture=standing or seated at console, skeptical; eyelineTarget=character:harlan\ncharacter:sorell; zoneOrSeat=retained under watch on the bridge (no brig); supervised position; screenSide=left; facing=the active exchange, supervised; posture=standing or seated under watch, hands visible, not collaborating as free crew; eyelineTarget=the active exchange\ncharacter:voss; zoneOrSeat=command station / meeting-table captain side; screenSide=center; facing=the accusation exchange; posture=standing under restored 1 g; eyelineTarget=character:harlan\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-046. Start: The established state continues from the previous panel. Event: The shot action proceeds without changing the shared spatial arrangement. End: The next panel inherits the same continuity. Delta/description: After Voss has sent Harlan and Okoye to retrieve her, Sorell is back on the bridge under their supervision. As thrust restores, loose tools and sheets settle to the deck; Harlan's stance shifts from braced-at-a-handhold to firmly planted as he turns accusing toward Sorell:. No image of Zao's body appears in this bridge shot. Composition size: OTS. Visible: character:voss, character:harlan, character:sorell, character:rao, character:okoye.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-047. Start: The established state continues from the previous panel. Event: The shot action proceeds without changing the shared spatial arrangement. End: The next panel inherits the same continuity. Delta/description: Sorell, devastated, states only what she knows:. Composition size: MS. Visible: character:voss, character:harlan, character:sorell, character:rao, character:okoye.\n\nPanel 3 (cell 3, region {\"x\":0,\"y\":0.51,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-048. Start: The established state continues from the previous panel. Event: The shot action proceeds without changing the shared spatial arrangement. End: The next panel inherits the same continuity. Delta/description: Okoye, alert but neutral, secures the scene without assigning guilt. With no brig aboard, Sorell is held under watch on the bridge as normal 1 g thrust resumes for the long station leg. Composition size: MCU. Visible: character:voss, character:harlan, character:sorell, character:rao, character:okoye.\n\nPanel 4 (cell 4, region {\"x\":0.51,\"y\":0.51,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-049. Start: The established state continues from the previous panel. Event: The shot action proceeds without changing the shared spatial arrangement. End: The next panel inherits the same continuity. Delta/description: Elin Rao, skeptical, resists the too-neat accusation:. Composition size: ELS. Visible: character:voss, character:harlan, character:sorell, character:rao, character:okoye.",
+      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-bridge.\nPhysics: Continuous established geometry and physics from the Festival-master shot descriptions.\nLighting: Established practical lighting for this location.\nShared: Continuous visual stretch for shots 046–047–048–049, preserving location, cast, blocking, and physical continuity.\nPresent cast: character:harlan, character:okoye, character:rao, character:sorell, character:voss.\nBlocking:\ncharacter:harlan; zoneOrSeat=established-1; screenSide=left; facing=toward the active exchange or console; posture=other; eyelineTarget=the active action\ncharacter:okoye; zoneOrSeat=established-2; screenSide=center; facing=toward the active exchange or console; posture=other; eyelineTarget=the active action\ncharacter:rao; zoneOrSeat=established-3; screenSide=right; facing=toward the active exchange or console; posture=other; eyelineTarget=the active action\ncharacter:sorell; zoneOrSeat=established-4; screenSide=left; facing=toward the active exchange or console; posture=other; eyelineTarget=the active action\ncharacter:voss; zoneOrSeat=established-5; screenSide=center; facing=toward the active exchange or console; posture=other; eyelineTarget=the active action\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-046. Start: The established state continues from the previous panel. Event: The shot action proceeds without changing the shared spatial arrangement. End: The next panel inherits the same continuity. Delta/description: After Voss has sent Harlan and Okoye to retrieve her, Sorell is back on the bridge under their supervision. As thrust restores, loose tools and sheets settle to the deck; Harlan's stance shifts from braced-at-a-handhold to firmly planted as he turns accusing toward Sorell:. No image of Zao's body appears in this bridge shot. Composition size: OTS. Visible: character:voss, character:harlan, character:sorell, character:rao, character:okoye.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-047. Start: The established state continues from the previous panel. Event: The shot action proceeds without changing the shared spatial arrangement. End: The next panel inherits the same continuity. Delta/description: Sorell, devastated, states only what she knows:. Composition size: MS. Visible: character:voss, character:harlan, character:sorell, character:rao, character:okoye.\n\nPanel 3 (cell 3, region {\"x\":0,\"y\":0.51,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-048. Start: The established state continues from the previous panel. Event: The shot action proceeds without changing the shared spatial arrangement. End: The next panel inherits the same continuity. Delta/description: Okoye, alert but neutral, secures the scene without assigning guilt. With no brig aboard, Sorell is held under watch on the bridge as normal 1 g thrust resumes for the long station leg. Composition size: MCU. Visible: character:voss, character:harlan, character:sorell, character:rao, character:okoye.\n\nPanel 4 (cell 4, region {\"x\":0.51,\"y\":0.51,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-049. Start: The established state continues from the previous panel. Event: The shot action proceeds without changing the shared spatial arrangement. End: The next panel inherits the same continuity. Delta/description: Elin Rao, skeptical, resists the too-neat accusation:. Composition size: ELS. Visible: character:voss, character:harlan, character:sorell, character:rao, character:okoye.",
       "outputs": [
         {
           "order": 1,
@@ -20161,7 +19049,7 @@
         "bottom": 0.078125,
         "left": 0
       },
-      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [2,3,4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-bridge.\nPhysics: Steady 1 g artificial gravity on the bridge after thrust restore: feet planted, normal weight, seated or standing as blocked, no floating debris or drifting hair.\nLighting: Bridge practicals and English-only console glow; matte panels; no smoke or haze.\nShared: Command break under steady 1 g: Voss aborts approach and orders Harlan held; Okoye interposes on Harlan. Sorell remains provisionally retained under watch in depth—not free, not released—until the later release beat. Identity locks vs pair sheets; ignore backgrounds. No burned-in dialogue.\nPresent cast: character:harlan, character:okoye, character:rao, character:sorell, character:voss.\nBlocking:\ncharacter:voss; zoneOrSeat=command station; screenSide=center; facing=Harlan and Okoye; posture=standing, urgent; eyelineTarget=character:harlan\ncharacter:okoye; zoneOrSeat=between Harlan and the exit / hatch line (now holding Harlan); screenSide=left; facing=Harlan; posture=standing, blocking and securing Harlan; eyelineTarget=character:harlan\ncharacter:harlan; zoneOrSeat=aft approach, stopped; screenSide=right; facing=Voss / Okoye; posture=standing, halted; eyelineTarget=character:voss\ncharacter:rao; zoneOrSeat=analysis console; screenSide=left; facing=the confrontation; posture=standing; eyelineTarget=character:voss\ncharacter:sorell; zoneOrSeat=still retained under watch in depth (not released); clear of the Harlan hold; screenSide=right; facing=the confrontation; posture=standing or seated under watch, hands visible, not collaborating as free crew; eyelineTarget=character:harlan\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-064. Start: Back on the 1 g bridge after the flashback; five crew in the shared geography. Event: Voss urgently aborts the approach and orders Harlan held; Okoye moves in to block Harlan’s exit while Harlan’s wrist device remains visible on his arm. End: Harlan is stopped in place; Okoye interposed; command break begins. Delta/description: Back on the bridge under 1 g, Voss urgently aborts the approach and orders Harlan held; Okoye moves to block him. Composition size: OTS. Visible: character:voss, character:harlan, character:sorell, character:rao, character:okoye.",
+      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [2,3,4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-bridge.\nPhysics: Steady 1 g artificial gravity on the bridge after thrust restore: feet planted, normal weight, seated or standing as blocked, no floating debris or drifting hair.\nLighting: Bridge practicals and English-only console glow; matte panels; no smoke or haze.\nShared: Single-panel command-break under steady 1 g. Harlan is the younger clean-shaven dark-haired officer (right panel of the Voss–Harlan pair sheet); Voss is the older silver-bearded captain (left panel of that sheet)—never swap them. Rao is the East-Asian woman in the lighter gray jacket (Rao–Sorell pair sheet); Sorell is the other woman on that sheet; Okoye is the Black woman with short natural hair (Okoye–Voss pair sheet). Ignore studio/pair-sheet backgrounds; use only the bridge location reference for architecture. No burned-in spoken dialogue or subtitles; English-only diegetic UI when visible. Okoye physically interposes to hold Harlan; Harlan’s wrist device matches the prop sheet. Ignore pair-sheet backgrounds.\nPresent cast: character:harlan, character:okoye, character:rao, character:sorell, character:voss.\nBlocking:\ncharacter:voss; zoneOrSeat=command station; screenSide=center; facing=Harlan and Okoye; posture=standing, urgent; eyelineTarget=character:harlan\ncharacter:okoye; zoneOrSeat=between Harlan and the exit / hatch line; screenSide=left; facing=Harlan; posture=standing, blocking; eyelineTarget=character:harlan\ncharacter:harlan; zoneOrSeat=aft approach, stopped; screenSide=right; facing=Voss / Okoye; posture=standing, halted; eyelineTarget=character:voss\ncharacter:rao; zoneOrSeat=analysis console; screenSide=left; facing=the confrontation; posture=standing; eyelineTarget=character:voss\ncharacter:sorell; zoneOrSeat=translator station depth; screenSide=right; facing=the confrontation; posture=standing; eyelineTarget=character:harlan\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-064. Start: Back on the 1 g bridge after the flashback; five crew in the shared geography. Event: Voss urgently aborts the approach and orders Harlan held; Okoye moves in to block Harlan’s exit while Harlan’s wrist device remains visible on his arm. End: Harlan is stopped in place; Okoye interposed; command break begins. Delta/description: Back on the bridge under 1 g, Voss urgently aborts the approach and orders Harlan held; Okoye moves to block him. Composition size: OTS. Visible: character:voss, character:harlan, character:sorell, character:rao, character:okoye.",
       "outputs": [
         {
           "order": 1,
@@ -20394,7 +19282,7 @@
         "bottom": 0.078125,
         "left": 0
       },
-      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-bridge.\nPhysics: Steady 1 g artificial gravity on the bridge after thrust restore: feet planted, normal weight, seated or standing as blocked, no floating debris or drifting hair.\nLighting: Bridge practicals and English-only console glow; matte panels; no smoke or haze.\nShared: Three-panel command-break argument under steady 1 g. Harlan is held; Okoye secures him. Sorell remains provisionally retained under watch in depth until the later release line—do not stage her as free collaborating crew. Identity locks vs pair sheets; wrist device on Harlan when framed. Ignore pair-sheet backgrounds.\nPresent cast: character:harlan, character:okoye, character:rao, character:sorell, character:voss.\nBlocking:\ncharacter:harlan; zoneOrSeat=held position screen-right; screenSide=right; facing=Rao and Voss; posture=standing, defensive; eyelineTarget=character:rao\ncharacter:rao; zoneOrSeat=analysis / confrontation mid-left; screenSide=left; facing=Harlan; posture=standing, analytical then firm; eyelineTarget=character:harlan\ncharacter:voss; zoneOrSeat=command center; screenSide=center; facing=Harlan and Sorell; posture=standing; eyelineTarget=character:harlan\ncharacter:okoye; zoneOrSeat=interposed near Harlan, securing him; screenSide=right; facing=Harlan; posture=standing, securing; eyelineTarget=character:harlan\ncharacter:sorell; zoneOrSeat=still retained under watch in depth (awaiting release; not free crew); screenSide=left; facing=Voss and Harlan; posture=standing or seated under watch, hands visible, not collaborating as free crew; eyelineTarget=character:voss\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-065. Start: Same 1 g bridge confrontation geography; Okoye still interposed near Harlan. Event: Harlan, defensive, tries to separate accusation from proof—voice and face could be built from ship archives—while Rao listens ready to deny the premise. End: Doubt is planted; Harlan remains held in place. Delta/description: Harlan, defensive and still held, tries to separate accusation from proof—arguing a voice and face could be built from ship archives. Composition size: MS. Visible: character:voss, character:harlan, character:sorell, character:rao, character:okoye.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-066. Start: Continuous 1 g blocking; Rao steps the evidence forward at her console / toward Harlan. Event: Rao, analytical, lists converging independent evidence (signature, timestamp, mass, neutrons, vector, lock, missing location, accusation) without relying on the voice; Harlan counters that agreement is not proof. End: The case against Harlan is stronger but not closed. Delta/description: Elin Rao, analytical, denies his premise and lists converging evidence—signature, timestamp, mass, neutrons, vector, lock, missing location, accusation—while Harlan counters that agreement is not proof. Composition size: MCU. Visible: character:voss, character:harlan, character:sorell, character:rao, character:okoye.\n\nPanel 3 (cell 3, region {\"x\":0,\"y\":0.51,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-067. Start: Wide bridge under 1 g; five still in the same geography. Event: Rao sets the proportionate standard—enough to isolate Harlan, enough to release Sorell; Voss looks between Harlan and still-retained Sorell, recognizing how much of his case came from his own first mistake. End: Isolation of Harlan and the path to releasing Sorell are established; Sorell is not yet free in this beat. Delta/description: Elin Rao, firm, sets the proportionate standard: enough to isolate Harlan, enough to release Sorell. Voss looks between Harlan and still-retained Sorell, seeing how much of his case came from his own first mistake. Composition size: ELS. Visible: character:voss, character:harlan, character:sorell, character:rao, character:okoye.",
+      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-bridge.\nPhysics: Steady 1 g artificial gravity on the bridge after thrust restore: feet planted, normal weight, seated or standing as blocked, no floating debris or drifting hair.\nLighting: Bridge practicals and English-only console glow; matte panels; no smoke or haze.\nShared: Three-panel command-break argument under steady 1 g. Harlan is the younger clean-shaven dark-haired officer (right panel of the Voss–Harlan pair sheet); Voss is the older silver-bearded captain (left panel of that sheet)—never swap them. Rao is the East-Asian woman in the lighter gray jacket (Rao–Sorell pair sheet); Sorell is the other woman on that sheet; Okoye is the Black woman with short natural hair (Okoye–Voss pair sheet). Ignore studio/pair-sheet backgrounds; use only the bridge location reference for architecture. No burned-in spoken dialogue or subtitles; English-only diegetic UI when visible. Harlan remains held; Okoye stays interposed; Rao drives the evidence; Voss absorbs the cost of his first mistake. Wrist device visible on Harlan when framed. Ignore pair-sheet backgrounds.\nPresent cast: character:harlan, character:okoye, character:rao, character:sorell, character:voss.\nBlocking:\ncharacter:harlan; zoneOrSeat=held position screen-right; screenSide=right; facing=Rao and Voss; posture=standing, defensive; eyelineTarget=character:rao\ncharacter:rao; zoneOrSeat=analysis / confrontation mid-left; screenSide=left; facing=Harlan; posture=standing, analytical then firm; eyelineTarget=character:harlan\ncharacter:voss; zoneOrSeat=command center; screenSide=center; facing=Harlan and Sorell; posture=standing; eyelineTarget=character:harlan\ncharacter:okoye; zoneOrSeat=interposed near Harlan; screenSide=right; facing=Harlan; posture=standing, securing; eyelineTarget=character:harlan\ncharacter:sorell; zoneOrSeat=depth near translator station; screenSide=left; facing=Voss and Harlan; posture=standing; eyelineTarget=character:voss\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-065. Start: Same 1 g bridge confrontation geography; Okoye still interposed near Harlan. Event: Harlan, defensive, tries to separate accusation from proof—voice and face could be built from ship archives—while Rao listens ready to deny the premise. End: Doubt is planted; Harlan remains held in place. Delta/description: Harlan, defensive and still held, tries to separate accusation from proof—arguing a voice and face could be built from ship archives. Composition size: MS. Visible: character:voss, character:harlan, character:sorell, character:rao, character:okoye.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-066. Start: Continuous 1 g blocking; Rao steps the evidence forward at her console / toward Harlan. Event: Rao, analytical, lists converging independent evidence (signature, timestamp, mass, neutrons, vector, lock, missing location, accusation) without relying on the voice; Harlan counters that agreement is not proof. End: The case against Harlan is stronger but not closed. Delta/description: Elin Rao, analytical, denies his premise and lists converging evidence—signature, timestamp, mass, neutrons, vector, lock, missing location, accusation—while Harlan counters that agreement is not proof. Composition size: MCU. Visible: character:voss, character:harlan, character:sorell, character:rao, character:okoye.\n\nPanel 3 (cell 3, region {\"x\":0,\"y\":0.51,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-067. Start: Wide bridge under 1 g; five still in the same geography. Event: Rao sets the proportionate standard—enough to isolate Harlan, enough to release Zao; Voss looks between Harlan and Sorell, recognizing how much of his case came from his own first mistake. End: Isolation of Harlan and the path to releasing Zao are established. Delta/description: Elin Rao, firm, sets the proportionate standard: enough to isolate Harlan, enough to release Zao. Voss looks between Harlan and Sorell, seeing how much of his case came from his own first mistake. Composition size: ELS. Visible: character:voss, character:harlan, character:sorell, character:rao, character:okoye.",
       "outputs": [
         {
           "order": 1,
@@ -20753,461 +19641,6 @@
       ],
       "blockers": [
         "stale_image_asset:asset:festival-master-stretch-bridge-command-break-065-067-panel-03"
-      ],
-      "coherenceException": false,
-      "runnable": false
-    },
-    {
-      "id": "festival-master:stretch-bridge-device-071-073:rev-1",
-      "stretchId": "festival-master:stretch-bridge-device-071-073",
-      "revision": 1,
-      "medium": "still",
-      "mode": "combined_storyboard_sheet",
-      "providerSnapshotId": "provider:openai:gpt-image-2:2026-09-13",
-      "outputTakePolicy": "new_candidate",
-      "memberInputs": [
-        {
-          "order": 1,
-          "shotId": "festival-master:shot-plan-071",
-          "sourceTakeIds": [
-            "festival-master:shot-plan-071:take-02"
-          ]
-        },
-        {
-          "order": 2,
-          "shotId": "festival-master:shot-plan-072",
-          "sourceTakeIds": [
-            "festival-master:shot-plan-072:take-02"
-          ]
-        },
-        {
-          "order": 3,
-          "shotId": "festival-master:shot-plan-073",
-          "sourceTakeIds": [
-            "festival-master:shot-plan-073:take-02"
-          ]
-        }
-      ],
-      "stillReferenceAssetIds": [
-        "asset:character-pair-voss-harlan-bridge-sheet",
-        "asset:character-pair-okoye-voss-bridge-sheet",
-        "asset:character-sorell-sheet",
-        "asset:location-celestial-ardor-bridge-realistic-reference",
-        "asset:object-harlan-wrist-device-sheet"
-      ],
-      "sharedReferenceAssetIds": [
-        "asset:character-pair-voss-harlan-bridge-sheet",
-        "asset:character-pair-okoye-voss-bridge-sheet",
-        "asset:character-sorell-sheet",
-        "asset:location-celestial-ardor-bridge-realistic-reference",
-        "asset:object-harlan-wrist-device-sheet"
-      ],
-      "referenceBudget": {
-        "requiredEntityIds": [
-          "character:harlan",
-          "character:okoye",
-          "character:sorell",
-          "character:voss",
-          "location:celestial-ardor-bridge",
-          "object:harlan-wrist-device"
-        ],
-        "coveredEntityIds": [
-          "character:harlan",
-          "character:okoye",
-          "character:sorell",
-          "character:voss",
-          "location:celestial-ardor-bridge",
-          "object:harlan-wrist-device"
-        ],
-        "uncoveredEntityIds": [],
-        "attachedAssetIds": [
-          "asset:character-pair-voss-harlan-bridge-sheet",
-          "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:character-sorell-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:object-harlan-wrist-device-sheet"
-        ],
-        "coveringAssetByEntity": {
-          "character:harlan": "asset:character-pair-voss-harlan-bridge-sheet",
-          "character:okoye": "asset:character-pair-okoye-voss-bridge-sheet",
-          "character:sorell": "asset:character-sorell-sheet",
-          "character:voss": "asset:character-pair-okoye-voss-bridge-sheet",
-          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference",
-          "object:harlan-wrist-device": "asset:object-harlan-wrist-device-sheet"
-        },
-        "wouldOmitEntityIds": [],
-        "limits": {
-          "maxImages": 5,
-          "maxVideos": 0,
-          "maxAudios": 0,
-          "maxTotalReferences": 5
-        },
-        "violations": []
-      },
-      "gridLayout": {
-        "rows": 2,
-        "cols": 2,
-        "gutterFraction": 0.02,
-        "panelAspect": "16:9",
-        "blankCells": [
-          4
-        ]
-      },
-      "computedMargins": {
-        "top": 0.078125,
-        "right": 0,
-        "bottom": 0.078125,
-        "left": 0
-      },
-      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-bridge.\nPhysics: Steady 1 g artificial gravity on the bridge: feet planted, normal weight, no floating debris.\nLighting: Established practical lighting for this location.\nShared: Three-panel bridge device/escape beat under steady 1 g. Harlan remains under hold and offers his wrist device; Okoye reaches without relaxing; Sorell is already released and watches from translator depth as free crew; Voss holds command. Wrist device visible when framed. Identity locks vs pair sheets; ignore pair-sheet backgrounds. No burned-in spoken dialogue; English-only diegetic UI.\nPresent cast: character:harlan, character:okoye, character:sorell, character:voss.\nBlocking:\ncharacter:harlan; zoneOrSeat=held position screen-left / center, wrist device extended toward Okoye; screenSide=left; facing=character:okoye; posture=standing under restraint pressure, offering the wrist device; eyelineTarget=character:okoye\ncharacter:okoye; zoneOrSeat=interposed at Harlan, reaching for the wrist device without relaxing; screenSide=center; facing=character:harlan; posture=standing, firm, securing; eyelineTarget=character:harlan\ncharacter:sorell; zoneOrSeat=translator station depth (released; free crew again); screenSide=right; facing=the Harlan–Okoye exchange; posture=standing, watching; eyelineTarget=character:harlan\ncharacter:voss; zoneOrSeat=command station; screenSide=left; facing=Harlan and Okoye; posture=standing; eyelineTarget=character:harlan\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-071. Start: Harlan held on the bridge under 1 g; Okoye interposed; Sorell free at depth after release; Voss at command. Event: Harlan extends the wrist device toward Okoye; she reaches without relaxing her stance. End: Device offered; Okoye still firm; hatch/service path readable in depth for the escape beat. Delta/description: Harlan extends his wrist device toward Okoye; she reaches for it without relaxing her stance. Persuasive, quiet:. Composition size: MS. Visible: character:harlan, character:okoye, character:voss, character:sorell.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-072. Start: Same 1 g hold geography; Okoye completing restraint on Harlan. Event: Okoye demands the device; a revocation alert flashes nearby and draws her eyes for one instant. End: Attention flickers to the alert—opening for Harlan’s move. Delta/description: Okoye, firm, completes the restraint. A revocation alert flashes nearby; her eyes flick to it for one instant. Composition size: MCU. Visible: character:harlan, character:okoye, character:voss, character:sorell.\n\nPanel 3 (cell 3, region {\"x\":0,\"y\":0.51,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-073. Start: Same bridge; Okoye briefly diverted; service hatch line available. Event: Harlan drives Okoye into the console and dives into the service shaft, locking the hatch. End: Hatch sealed; Okoye raising the alarm; Voss warning aft over comm. Delta/description: In that instant Harlan drives Okoye into the console and dives into the service shaft, locking the hatch behind him. Okoye, angry, raises the alarm. Over comm, Voss warns Elin:. Composition size: ELS. Visible: character:harlan, character:okoye, character:voss, character:sorell.",
-      "outputs": [
-        {
-          "order": 1,
-          "artifact": "combinedStoryboard",
-          "assetId": "asset:festival-master-stretch-bridge-device-071-073-sheet",
-          "panels": [
-            {
-              "order": 1,
-              "shotId": "festival-master:shot-plan-071",
-              "sourceTakeIds": [
-                "festival-master:shot-plan-071:take-02"
-              ],
-              "frameRegion": {
-                "x": 0,
-                "y": 0.078125,
-                "w": 0.49,
-                "h": 0.411875
-              },
-              "derivedTakeId": "festival-master:shot-plan-071:take-02",
-              "derivedAssetId": "asset:festival-master-stretch-bridge-device-071-073-panel-01"
-            },
-            {
-              "order": 2,
-              "shotId": "festival-master:shot-plan-072",
-              "sourceTakeIds": [
-                "festival-master:shot-plan-072:take-02"
-              ],
-              "frameRegion": {
-                "x": 0.51,
-                "y": 0.078125,
-                "w": 0.49,
-                "h": 0.411875
-              },
-              "derivedTakeId": "festival-master:shot-plan-072:take-02",
-              "derivedAssetId": "asset:festival-master-stretch-bridge-device-071-073-panel-02"
-            },
-            {
-              "order": 3,
-              "shotId": "festival-master:shot-plan-073",
-              "sourceTakeIds": [
-                "festival-master:shot-plan-073:take-02"
-              ],
-              "frameRegion": {
-                "x": 0,
-                "y": 0.51,
-                "w": 0.49,
-                "h": 0.411875
-              },
-              "derivedTakeId": "festival-master:shot-plan-073:take-02",
-              "derivedAssetId": "asset:festival-master-stretch-bridge-device-071-073-panel-03"
-            }
-          ]
-        }
-      ],
-      "blockers": [],
-      "coherenceException": false,
-      "runnable": true
-    },
-    {
-      "id": "festival-master:stretch-bridge-device-071-073:rev-1:video-1",
-      "stretchId": "festival-master:stretch-bridge-device-071-073",
-      "revision": 1,
-      "medium": "video",
-      "mode": "grouped_seedance",
-      "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
-      "outputTakePolicy": "new_candidate",
-      "dependsOnStillJobId": "festival-master:stretch-bridge-device-071-073:rev-1",
-      "durationMs": 7480,
-      "memberInputs": [
-        {
-          "order": 1,
-          "shotId": "festival-master:shot-plan-071",
-          "sourceTakeIds": [
-            "festival-master:shot-plan-071:take-02"
-          ],
-          "keyframeAssetId": "asset:festival-master-stretch-bridge-device-071-073-panel-01"
-        }
-      ],
-      "stillReferenceAssetIds": [
-        "asset:character-pair-voss-harlan-bridge-sheet",
-        "asset:character-pair-okoye-voss-bridge-sheet",
-        "asset:character-sorell-sheet",
-        "asset:location-celestial-ardor-bridge-realistic-reference",
-        "asset:object-harlan-wrist-device-sheet"
-      ],
-      "videoReferencePolicy": "fallback",
-      "effectiveVideoReferenceAssetIds": [],
-      "voiceSampleAssetIds": [
-        "asset:voice-ref-en-harlan"
-      ],
-      "sharedReferenceAssetIds": [],
-      "referenceBudget": {
-        "requiredEntityIds": [
-          "character:harlan",
-          "character:okoye",
-          "character:sorell",
-          "character:voss",
-          "location:celestial-ardor-bridge",
-          "object:harlan-wrist-device"
-        ],
-        "coveredEntityIds": [
-          "character:harlan",
-          "character:okoye",
-          "character:sorell",
-          "character:voss",
-          "location:celestial-ardor-bridge",
-          "object:harlan-wrist-device"
-        ],
-        "uncoveredEntityIds": [],
-        "attachedAssetIds": [
-          "asset:festival-master-stretch-bridge-device-071-073-panel-01",
-          "asset:voice-ref-en-harlan"
-        ],
-        "coveringAssetByEntity": {
-          "location:celestial-ardor-bridge": "asset:festival-master-stretch-bridge-device-071-073-panel-01",
-          "character:harlan": "asset:festival-master-stretch-bridge-device-071-073-panel-01",
-          "character:okoye": "asset:festival-master-stretch-bridge-device-071-073-panel-01",
-          "character:voss": "asset:festival-master-stretch-bridge-device-071-073-panel-01",
-          "character:sorell": "asset:festival-master-stretch-bridge-device-071-073-panel-01",
-          "object:harlan-wrist-device": "asset:festival-master-stretch-bridge-device-071-073-panel-01"
-        },
-        "wouldOmitEntityIds": [],
-        "limits": {
-          "maxImages": null,
-          "maxVideos": null,
-          "maxAudios": null,
-          "maxTotalReferences": 50
-        },
-        "violations": [],
-        "keyframeCoveredEntityIds": [
-          "character:harlan",
-          "character:okoye",
-          "character:sorell",
-          "character:voss",
-          "location:celestial-ardor-bridge",
-          "object:harlan-wrist-device"
-        ],
-        "videoExtraCoveredEntityIds": [],
-        "uncoveredVideoEntityIds": []
-      },
-      "compiledPrompt": null,
-      "outputs": [
-        {
-          "order": 1,
-          "artifact": "video"
-        }
-      ],
-      "blockers": [
-        "stale_image_asset:asset:festival-master-stretch-bridge-device-071-073-panel-01",
-        "editorial_prompt_freeze_not_approved"
-      ],
-      "coherenceException": false,
-      "runnable": false
-    },
-    {
-      "id": "festival-master:stretch-bridge-device-071-073:rev-1:video-2",
-      "stretchId": "festival-master:stretch-bridge-device-071-073",
-      "revision": 1,
-      "medium": "video",
-      "mode": "grouped_seedance",
-      "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
-      "outputTakePolicy": "new_candidate",
-      "dependsOnStillJobId": "festival-master:stretch-bridge-device-071-073:rev-1",
-      "durationMs": 8000,
-      "memberInputs": [
-        {
-          "order": 2,
-          "shotId": "festival-master:shot-plan-072",
-          "sourceTakeIds": [
-            "festival-master:shot-plan-072:take-02"
-          ],
-          "keyframeAssetId": "asset:festival-master-stretch-bridge-device-071-073-panel-02"
-        }
-      ],
-      "stillReferenceAssetIds": [
-        "asset:character-pair-voss-harlan-bridge-sheet",
-        "asset:character-pair-okoye-voss-bridge-sheet",
-        "asset:character-sorell-sheet",
-        "asset:location-celestial-ardor-bridge-realistic-reference",
-        "asset:object-harlan-wrist-device-sheet"
-      ],
-      "videoReferencePolicy": "fallback",
-      "effectiveVideoReferenceAssetIds": [
-        "asset:object-harlan-wrist-device-sheet"
-      ],
-      "voiceSampleAssetIds": [
-        "asset:voice-ref-en-okoye"
-      ],
-      "sharedReferenceAssetIds": [
-        "asset:object-harlan-wrist-device-sheet"
-      ],
-      "referenceBudget": {
-        "requiredEntityIds": [
-          "character:harlan",
-          "character:okoye",
-          "character:sorell",
-          "character:voss",
-          "location:celestial-ardor-bridge"
-        ],
-        "coveredEntityIds": [
-          "character:harlan",
-          "character:okoye",
-          "character:sorell",
-          "character:voss",
-          "location:celestial-ardor-bridge"
-        ],
-        "uncoveredEntityIds": [],
-        "attachedAssetIds": [
-          "asset:festival-master-stretch-bridge-device-071-073-panel-02",
-          "asset:object-harlan-wrist-device-sheet",
-          "asset:voice-ref-en-okoye"
-        ],
-        "coveringAssetByEntity": {
-          "location:celestial-ardor-bridge": "asset:festival-master-stretch-bridge-device-071-073-panel-02",
-          "character:harlan": "asset:festival-master-stretch-bridge-device-071-073-panel-02",
-          "character:okoye": "asset:festival-master-stretch-bridge-device-071-073-panel-02",
-          "character:voss": "asset:festival-master-stretch-bridge-device-071-073-panel-02",
-          "character:sorell": "asset:festival-master-stretch-bridge-device-071-073-panel-02"
-        },
-        "wouldOmitEntityIds": [],
-        "limits": {
-          "maxImages": null,
-          "maxVideos": null,
-          "maxAudios": null,
-          "maxTotalReferences": 50
-        },
-        "violations": [],
-        "keyframeCoveredEntityIds": [
-          "character:harlan",
-          "character:okoye",
-          "character:sorell",
-          "character:voss",
-          "location:celestial-ardor-bridge"
-        ],
-        "videoExtraCoveredEntityIds": [],
-        "uncoveredVideoEntityIds": []
-      },
-      "compiledPrompt": null,
-      "outputs": [
-        {
-          "order": 1,
-          "artifact": "video"
-        }
-      ],
-      "blockers": [
-        "stale_image_asset:asset:festival-master-stretch-bridge-device-071-073-panel-02",
-        "editorial_prompt_freeze_not_approved"
-      ],
-      "coherenceException": false,
-      "runnable": false
-    },
-    {
-      "id": "festival-master:stretch-bridge-device-071-073:rev-1:video-3",
-      "stretchId": "festival-master:stretch-bridge-device-071-073",
-      "revision": 1,
-      "medium": "video",
-      "mode": "grouped_seedance",
-      "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
-      "outputTakePolicy": "new_candidate",
-      "dependsOnStillJobId": "festival-master:stretch-bridge-device-071-073:rev-1",
-      "durationMs": 8100,
-      "memberInputs": [
-        {
-          "order": 3,
-          "shotId": "festival-master:shot-plan-073",
-          "sourceTakeIds": [
-            "festival-master:shot-plan-073:take-02"
-          ],
-          "keyframeAssetId": "asset:festival-master-stretch-bridge-device-071-073-panel-03"
-        }
-      ],
-      "stillReferenceAssetIds": [
-        "asset:character-pair-voss-harlan-bridge-sheet",
-        "asset:character-pair-okoye-voss-bridge-sheet",
-        "asset:character-sorell-sheet",
-        "asset:location-celestial-ardor-bridge-realistic-reference",
-        "asset:object-harlan-wrist-device-sheet"
-      ],
-      "videoReferencePolicy": "fallback",
-      "effectiveVideoReferenceAssetIds": [
-        "asset:object-harlan-wrist-device-sheet"
-      ],
-      "voiceSampleAssetIds": [
-        "asset:voice-ref-en-harlan",
-        "asset:voice-ref-en-okoye",
-        "asset:voice-ref-en-voss"
-      ],
-      "sharedReferenceAssetIds": [
-        "asset:object-harlan-wrist-device-sheet"
-      ],
-      "referenceBudget": {
-        "requiredEntityIds": [
-          "character:harlan",
-          "character:okoye",
-          "character:sorell",
-          "character:voss",
-          "location:celestial-ardor-bridge"
-        ],
-        "coveredEntityIds": [
-          "character:harlan",
-          "character:okoye",
-          "character:sorell",
-          "character:voss",
-          "location:celestial-ardor-bridge"
-        ],
-        "uncoveredEntityIds": [],
-        "attachedAssetIds": [
-          "asset:festival-master-stretch-bridge-device-071-073-panel-03",
-          "asset:object-harlan-wrist-device-sheet",
-          "asset:voice-ref-en-harlan",
-          "asset:voice-ref-en-okoye",
-          "asset:voice-ref-en-voss"
-        ],
-        "coveringAssetByEntity": {
-          "location:celestial-ardor-bridge": "asset:festival-master-stretch-bridge-device-071-073-panel-03",
-          "character:harlan": "asset:festival-master-stretch-bridge-device-071-073-panel-03",
-          "character:okoye": "asset:festival-master-stretch-bridge-device-071-073-panel-03",
-          "character:voss": "asset:festival-master-stretch-bridge-device-071-073-panel-03",
-          "character:sorell": "asset:festival-master-stretch-bridge-device-071-073-panel-03"
-        },
-        "wouldOmitEntityIds": [],
-        "limits": {
-          "maxImages": null,
-          "maxVideos": null,
-          "maxAudios": null,
-          "maxTotalReferences": 50
-        },
-        "violations": [],
-        "keyframeCoveredEntityIds": [
-          "character:harlan",
-          "character:okoye",
-          "character:sorell",
-          "character:voss",
-          "location:celestial-ardor-bridge"
-        ],
-        "videoExtraCoveredEntityIds": [],
-        "uncoveredVideoEntityIds": []
-      },
-      "compiledPrompt": null,
-      "outputs": [
-        {
-          "order": 1,
-          "artifact": "video"
-        }
-      ],
-      "blockers": [
-        "stale_image_asset:asset:festival-master-stretch-bridge-device-071-073-panel-03",
-        "editorial_prompt_freeze_not_approved"
       ],
       "coherenceException": false,
       "runnable": false

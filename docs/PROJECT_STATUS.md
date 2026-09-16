@@ -1,5 +1,65 @@
 # Estado del proyecto
 
+## 2026-09-16 - Recover zero-filled / truncated production JSON (English source)
+
+- Festival-master script recovered to 104 shots / 36 stretches; locations hierarchy rebuilt (reactor bay → engineering); stretch ancestry no longer unifies sibling facility rooms. Run results `083`–`085` normalized. `validate:data`, `generated:check`, `validate:docs`, unit tests green.
+
+## 2026-09-16 - Scene 20 Harlan vindication line restored as whisper (English source)
+
+- Restored short whispered `cue-0120` on Festival-master Scene 20; EN WAV regenerated (~1.82 s); `shot-plan-057` prompt/description updated; placements refit (~26.18 s). Private Seedance clip not registered (still holds the prior long spoken line).
+
+## 2026-09-16 - Scene 21 stills registered (English source)
+
+- Registered new standalone stills for Festival-master shots `060`, `062`, and `064`, bound to their selected takes with the verified bridge, identity, monitor-content, package, and wrist-device references. Prior stretch assets remain recoverable; no video data changed.
+
+## 2026-09-16 - Scene 19 shot 056 Seedance clip bound (English source)
+
+- `056` still marked `current`; Seedance I2V submitted and bound (`needs_review`): job `5fd9599e…`, **~27 cr**, 480p. Movie mode plays the new clip on the selected take. Scene 19 combined `054`/`055` and independent `056` both have video pending review.
+
+## 2026-09-16 - Scene 21 dual join (English source)
+
+- Scene 21: `060–061` joined (11.70s bridge packet-open); `062–063` joined (35.64s bridge + monitor playback of Zao’s vault recording). Stretches dissolved except `064`. Plan packages `ready` (062 still missing / needs regen; exceeds 30s until trim). No Seedance submit.
+
+## 2026-09-16 - Scene 20 single-take still registered (English source)
+
+- Registered the reviewed private 16:9 bridge still as `asset:festival-master-scene-20-single-take-still` and bound it to selected take `festival-master:shot-plan-057:take-04`. The former stretch panel remains recoverable; no video data changed.
+
+## 2026-09-16 - Scene 20 compacted to one continuous take (English source)
+
+- Scene 20 (`057–059`) dissolved into one 29.999-second singleton shot/take on `shot-plan-057` with panel-01 as keyframe and a Seedance envelope that allows internal cuts (−461 ms action slack for the 30 s ceiling). Plan package `ready` / segment `draft`. Awaiting human go before submit.
+
+## 2026-09-16 - Scene 19 shot 054 Seedance clip bound (English source)
+
+- Combined `054`/`055` Seedance I2V submitted and bound (`needs_review`): job `9e3f71cb…`, **~45 cr**, 480p. Movie mode plays the new clip on the selected take. `056` remains without video.
+
+## 2026-09-16 - Scene 24 compacted to one continuous take (English source)
+
+- Scene 24 (`071–073`) dissolved into one 23.58-second singleton shot/take on `shot-plan-071` with panel-01 as keyframe and a Seedance envelope that allows internal cuts. Plan package `ready` / segment `draft`. Awaiting human go before submit.
+
+## 2026-09-16 - Scene 15 shots 040/041 Seedance clips bound (English source)
+
+- `040` / `041` Seedance I2V submitted and bound (`needs_review`): jobs `55f87e46…` / `d1699fd4…`, **51 cr** (27+24), 480p. Movie mode plays the new clips on selected takes.
+
+## 2026-09-16 - Scene 19 combined-take video handoff prepared (English source)
+
+- Prepared the detailed 14.04-second Seedance I2V prompt for combined 054–055 coverage in the central access shaft. The four still-generation refs remain unchanged; the approved combined still is exposed separately as the video-only opening-frame ref, with Rao/Okoye/Harlan voice samples. No video was submitted.
+
+## 2026-09-16 - Scene 19 central-shaft correction (English source)
+
+- Corrected the combined 054-055 take to the central access shaft. Independent shot 056 remains in the reactor service bay, with no changes to its take or assets.
+
+## 2026-09-16 - Scene 15 shots 040/041 stills approved; video prompts ready (English source)
+
+- `040` and `041` stills marked `current`; Seedance I2V prompts authored (plan `draft`, microgravity + Sorell off-bridge). Awaiting cost preflight / human go before submit.
+
+## 2026-09-16 - Scene 19 first two beats compacted (English source)
+
+- Scene 19 shots 054-055 now use one 14.04-second shot/take and one still with Rao, Okoye, and Harlan in the outer reactor service bay. Shot 056 remains an independent take; its data and assets were not changed.
+
+## 2026-09-16 - Scene 28 Seedance clips bound (English source)
+
+- `083–085` Seedance I2V submitted and bound (`needs_review`): jobs `3dcab16a…` / `105a24ff…` / `23d7cdd2…`, **84 cr**, 480p. Movie mode plays the new clips on selected takes.
+
 ## 2026-09-16 - Scene 18 Seedance registered (English source)
 
 - Scene 18 singleton clip submitted (**87 cr**) and bound to `festival-master:shot-plan-050:take-03` (`needs_review`). Still marked `current`.

@@ -1,5 +1,75 @@
 # Changelog
 
+## 2026-09-16 - Restore Festival-master joined takes and Seedance registration
+
+- Reconstructed single-take / dual-join storyboard coverage for scenes 18, 19, 20, 21, and 24 (104 to 94 shots); dissolved the matching visual stretches.
+- Restored Higgsfield-submitted videoPrompts and still reference maps; rebound opening stills and continuity sheets on the joined takes.
+- Rebound shared Seedance clips (040/041/054/056/083-085, 013b rev-2) and registered Scene 20-21 private inventory MP4s (062 = seg1+extension concat). Scene 20 clip noted for pre-whisper Harlan-line picture debt.
+- Restored short whispered cue-0120; trailer-master source ref retargeted from removed 058 to 057.
+
+## 2026-09-16 - Recover zero-filled / truncated production JSON
+
+- Restored Festival-master script integrity (104 shots / 199 takes / 36 stretches, including Scene 18 video take and shots 051-053).
+- Rebuilt `data/locations.json` hierarchy (`schemaVersion` 2.0.0) with reactor bay parented under engineering; tightened stretch ancestry so facility roots do not merge unrelated rooms.
+- Normalized Seedance run results 083-085 to `visual-stretch-result.schema.json`; stripped illegal ledger `resultUrl` fields.
+- Extended `Location` / `LocationsFile` TypeScript types for spatial hierarchy fields.
+
+## 2026-09-16 - Scene 20 Harlan vindication line restored as whisper
+
+- Restored `festival-master:cue-0120` EN to the short line `Now they'll never know who saved them.` with under-breath whisper delivery (ES `needs_revision`). Regenerated the EN WAV (~1.82 s), updated `shot-plan-057` description / Seedance `videoPrompt`, and refit placements (scene ~26.18 s). Private Seedance MP4 remains unregistered (generated with the prior long spoken line).
+
+## 2026-09-16 - Scene 21 stills registered
+
+- Registered new standalone stills for Festival-master shots `060`, `062`, and `064`, bound to their selected takes with the verified bridge, identity, monitor-content, package, and wrist-device references. Prior stretch assets remain recoverable; no video data changed.
+
+## 2026-09-16 - Scene 19 shot 056 Seedance clip bound
+
+- Author-approved Festival-master `056` still (`current`). Submitted singleton Seedance 2.5 I2V (**~27 cr**, 9s / 480p). Registered MP4, authored `videoPrompt`, and bound `videoAssetId` on `take-02` (`needs_review`).
+
+## 2026-09-16 - Scene 21 dual join (packet + bridge monitor)
+
+- Joined Festival-master Scene 21 `060–061` into one 11.70-second bridge shot/take and `062–063` into one 35.64-second bridge take that plays Zao’s vault recording on a diegetic monitor (not a vault cutaway). Dissolved packet-open and vault-flashback stretches; left `064` unchanged. Still refs ≤5 per join; monitor still `needs_regeneration`; no image gen or Seedance submit.
+
+## 2026-09-16 - Scene 20 single-take still registered
+
+- Registered the reviewed private 16:9 bridge still as `asset:festival-master-scene-20-single-take-still` and bound it to selected take `festival-master:shot-plan-057:take-04`. The former stretch panel remains recoverable; no video data changed.
+
+## 2026-09-16 - Scene 20 compacted to one continuous take
+
+- Replaced Festival-master Scene 20 stretch `057–059` with one 29.999-second shot/take (`shot-plan-057` / `take-04`) carrying all ten cues. Trimmed 461 ms of action slack to fit Seedance’s 30 s ceiling. Reused panel-01 as the singleton Seedance keyframe; authored a continuous `videoPrompt` that lets Seedance invent internal coverage. Stretch assets remain recoverable but inactive. No Seedance submit.
+
+## 2026-09-16 - Scene 19 shot 054 Seedance clip bound
+
+- Submitted singleton Seedance 2.5 I2V for Festival-master combined `054`/`055` (**~45 cr**, 15s / 480p). Registered MP4 and bound `videoAssetId` on `take-03` (`needs_review`). Shot `056` not submitted.
+
+## 2026-09-16 - Scene 24 compacted to one continuous take
+
+- Replaced Festival-master Scene 24 stretch `071–073` with one 23.58-second shot/take (`shot-plan-071` / `take-03`) carrying all seven cues. Reused approved panel-01 as the singleton Seedance keyframe; authored a continuous `videoPrompt` that lets Seedance invent internal coverage. Stretch assets remain recoverable but inactive. No Seedance submit.
+
+## 2026-09-16 - Scene 15 shots 040/041 Seedance clips bound
+
+- Submitted singleton Seedance 2.5 I2V for Festival-master `040` and `041` (**51 cr**: 27+24). Registered MP4s and bound `videoAssetId` on selected takes (`needs_review`).
+
+## 2026-09-16 - Scene 19 combined-take video handoff prepared
+
+- Authored the detailed 14.04-second Seedance prompt for the central-access-shaft 054–055 take. The selected take retains its four still-generation refs, while the approved combined still is added as a video-only I2V opening-frame ref; voice samples remain attached for Rao, Okoye, and Harlan. No video was submitted.
+
+## 2026-09-16 - Scene 19 central-shaft correction
+
+- Corrected the combined 054-055 Scene 19 take back to the central access shaft, matching the original take references. The reactor service bay is now recorded as the secondary location for independent shot 056; the corrected still and Seedance references use the shaft sheet.
+
+## 2026-09-16 - Scene 15 shots 040/041 stills approved; Seedance prompts prepared
+
+- Marked Festival-master `040` and `041` stills `current` / takes `selected`. Authored per-shot Seedance `videoPrompt`s (microgravity; plan segments `draft`). No submit.
+
+## 2026-09-16 - Scene 19 first two beats compacted
+
+- Combined Scene 19 shots 054-055 into one 14.04-second selected shot/take with one reactor-service-bay still and a dedicated Seedance prompt. Shot 056 remains independent and unchanged; prior assets remain recoverable.
+
+## 2026-09-16 - Scene 28 Seedance clips bound
+
+- Submitted three singleton Seedance 2.5 I2V jobs for Festival-master `083–085` (**84 cr** total). Registered MP4s and bound `videoAssetId` on selected takes (`needs_review`).
+
 ## 2026-09-16 - Scene 18 Seedance submitted and registered
 
 - Author-approved Scene 18 single-take still (`current`). Submitted singleton Seedance I2V (**87 cr**, 29s / 480p); landed `shot-plan-050-rev-1-video-1.mp4` and bound `take-03.videoAssetId`. Not a visual-stretch job.

@@ -13081,7 +13081,7 @@
         "avoid": "No subtitles, captions, logos, watermark, collage, contact sheet, multi-panel grid, non-English text, floating bodies, drifting hair, drifting debris, EVA suits, extra characters, wrong identities, Earth, Jupiter, Proxima, any planet."
       },
       "review": {
-        "notes": "Approved custody-staged still registered independently on 2026-09-15T23:24:43.593Z; editorial review pending.",
+        "notes": "Scene 18 still regenerated from corrected labeled composite references on 2026-09-16T15:59:01.137Z; editorial review pending.",
         "regenerationRequired": false
       }
     },
@@ -13103,20 +13103,24 @@
       ],
       "references": [
         {
-          "assetId": "asset:character-pair-voss-harlan-bridge-sheet",
-          "role": "visual continuity reference"
-        },
-        {
-          "assetId": "asset:character-pair-rao-sorell-bridge-sheet",
-          "role": "visual continuity reference"
-        },
-        {
-          "assetId": "asset:character-pair-okoye-voss-bridge-sheet",
-          "role": "visual continuity reference"
-        },
-        {
           "assetId": "asset:location-celestial-ardor-bridge-realistic-reference",
           "role": "location / environment reference"
+        },
+        {
+          "assetId": "asset:location-celestial-ardor-bridge-crew-stations-reference",
+          "role": "location / environment reference"
+        },
+        {
+          "assetId": "asset:character-voss-sheet",
+          "role": "single-character identity reference"
+        },
+        {
+          "assetId": "asset:character-harlan-sheet",
+          "role": "single-character identity reference"
+        },
+        {
+          "assetId": "asset:character-rao-sheet",
+          "role": "single-character identity reference"
         }
       ],
       "prompt": {
@@ -13141,7 +13145,7 @@
         "avoid": "No subtitles, captions, logos, watermark, collage, contact sheet, multi-panel grid, non-English text, floating bodies, drifting hair, drifting debris, EVA suits, wrong identities, extra characters, Earth, Jupiter, Proxima, any planet."
       },
       "review": {
-        "notes": "Approved custody-staged still registered independently on 2026-09-15T23:25:44.122Z; editorial review pending.",
+        "notes": "Scene 18 still regenerated with individual character references and reduced three-person blocking on 2026-09-16T16:58:21.375Z; editorial review pending.",
         "regenerationRequired": false
       }
     },
@@ -13163,20 +13167,24 @@
       ],
       "references": [
         {
-          "assetId": "asset:character-pair-voss-harlan-bridge-sheet",
-          "role": "visual continuity reference"
-        },
-        {
-          "assetId": "asset:character-pair-rao-sorell-bridge-sheet",
-          "role": "visual continuity reference"
-        },
-        {
-          "assetId": "asset:character-pair-okoye-voss-bridge-sheet",
-          "role": "visual continuity reference"
-        },
-        {
           "assetId": "asset:location-celestial-ardor-bridge-realistic-reference",
           "role": "location / environment reference"
+        },
+        {
+          "assetId": "asset:location-celestial-ardor-bridge-crew-stations-reference",
+          "role": "location / environment reference"
+        },
+        {
+          "assetId": "asset:character-voss-sheet",
+          "role": "single-character identity reference"
+        },
+        {
+          "assetId": "asset:character-harlan-sheet",
+          "role": "single-character identity reference"
+        },
+        {
+          "assetId": "asset:character-rao-sheet",
+          "role": "single-character identity reference"
         }
       ],
       "prompt": {
@@ -13201,7 +13209,7 @@
         "avoid": "No subtitles, captions, logos, watermark, collage, contact sheet, multi-panel grid, non-English UI, spoken dialogue text, floating bodies, drifting hair, drifting debris, EVA suits, wrong identities, extra characters, Earth, Jupiter, Proxima, any planet."
       },
       "review": {
-        "notes": "Approved custody-staged still registered independently on 2026-09-15T23:26:47.137Z; editorial review pending.",
+        "notes": "Scene 18 still regenerated with individual character references and reduced three-person blocking on 2026-09-16T16:58:21.375Z; editorial review pending.",
         "regenerationRequired": false
       }
     },
@@ -13223,20 +13231,24 @@
       ],
       "references": [
         {
-          "assetId": "asset:character-pair-voss-harlan-bridge-sheet",
-          "role": "visual continuity reference"
-        },
-        {
-          "assetId": "asset:character-pair-rao-sorell-bridge-sheet",
-          "role": "visual continuity reference"
-        },
-        {
-          "assetId": "asset:character-pair-okoye-voss-bridge-sheet",
-          "role": "visual continuity reference"
-        },
-        {
           "assetId": "asset:location-celestial-ardor-bridge-realistic-reference",
           "role": "location / environment reference"
+        },
+        {
+          "assetId": "asset:location-celestial-ardor-bridge-crew-stations-reference",
+          "role": "location / environment reference"
+        },
+        {
+          "assetId": "asset:character-voss-sheet",
+          "role": "single-character identity reference"
+        },
+        {
+          "assetId": "asset:character-harlan-sheet",
+          "role": "single-character identity reference"
+        },
+        {
+          "assetId": "asset:character-rao-sheet",
+          "role": "single-character identity reference"
         }
       ],
       "prompt": {
@@ -13261,7 +13273,7 @@
         "avoid": "No subtitles, captions, logos, watermark, collage, contact sheet, multi-panel grid, non-English text, floating bodies, drifting hair, drifting debris, EVA suits, wrong identities, extra characters, Earth, Jupiter, Proxima, any planet."
       },
       "review": {
-        "notes": "Approved custody-staged still registered independently on 2026-09-15T23:27:46.127Z; editorial review pending.",
+        "notes": "Scene 18 still regenerated with individual character references and reduced three-person blocking on 2026-09-16T16:58:21.375Z; editorial review pending.",
         "regenerationRequired": false
       }
     },
@@ -14384,6 +14396,444 @@
       },
       "review": {
         "notes": "Derived panel 3 from visual-stretch sheet asset:festival-master-stretch-vault-recovery-080-082-sheet; pending editorial review.",
+        "regenerationRequired": false
+      }
+    },
+    {
+      "assetId": "asset:festival-master-scene-18-single-take-still",
+      "entityId": "festival-master:shot-plan-050",
+      "kind": "animaticStill",
+      "status": "generated",
+      "outputPath": "/assets/animatic/frames/festival-master/scene-18-single-take.png",
+      "dimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "styleAnchorAssetIds": [
+        "asset:location-celestial-ardor-bridge-realistic-reference",
+        "asset:location-celestial-ardor-bridge-meal-table-sheet",
+        "asset:character-voss-sheet",
+        "asset:character-harlan-sheet",
+        "asset:character-rao-sheet"
+      ],
+      "references": [
+        {
+          "assetId": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "role": "location / environment reference"
+        },
+        {
+          "assetId": "asset:location-celestial-ardor-bridge-meal-table-sheet",
+          "role": "location / environment reference"
+        },
+        {
+          "assetId": "asset:character-voss-sheet",
+          "role": "character identity reference"
+        },
+        {
+          "assetId": "asset:character-harlan-sheet",
+          "role": "character identity reference"
+        },
+        {
+          "assetId": "asset:character-rao-sheet",
+          "role": "character identity reference"
+        }
+      ],
+      "prompt": {
+        "useCase": "stylized-concept",
+        "assetType": "Festival-master single-take storyboard still",
+        "primaryRequest": "Generate one single 16:9 landscape cinematic storyboard still for a continuous 28.60-second Seedance 2.5 take covering the entire Scene 18 dialogue. Use the authoritative Celestial Ardor bridge location and meal-table environment references for architecture and use the solo Voss, Harlan, and Elin Rao sheets for identity. This is one coherent bridge composition, not a storyboard sheet or collage. Preserve the fixed compact circular bridge geometry: cream cylindrical central core and helical stair behind the action, curved crew-station console arc along the hull, and six-seat meal table beside the central opening at the same orientation and relation to the stairs and stations. Harlan is the younger clean-shaven dark-haired officer standing at the meal-table speaker position left of center, addressing Voss. Voss is the older silver-bearded captain seated at the captain-side position on the right side of the same table. Elin Rao is analytically composed at the fixed science/data console in the left background, hands near the controls. Keep the table visibly between Harlan and Voss. Only Harlan, Voss, and Rao appear; Sorell and Okoye are absent. Medium-wide readable depth with clear eyelines and room for Seedance to reframe toward Rao and back to Voss. Steady artificial 1 g, worn maintainable human spacecraft, cool graphite and slate-blue consoles, restrained amber practicals, realistic brushed metal. Imply the full dialogue arc without printed dialogue: Harlan presents the fuel-sabotage theory; Voss tests it; Rao checks the data and finds normal mixture, no leak, no efficiency loss; Voss recognizes the theory explains neither anomaly; Rao confirms. No spoken words or subtitles; any interface text is minimal English-only diegetic UI.",
+        "inputImages": [
+          "Reference asset: asset:location-celestial-ardor-bridge-realistic-reference",
+          "Reference asset: asset:location-celestial-ardor-bridge-meal-table-sheet",
+          "Reference asset: asset:character-voss-sheet",
+          "Reference asset: asset:character-harlan-sheet",
+          "Reference asset: asset:character-rao-sheet"
+        ],
+        "sceneBackdrop": "Continuity setting location:celestial-ardor-bridge; meal-table sublocation beside the central opening.",
+        "subject": "character:harlan, character:voss, character:rao",
+        "styleMedium": "Grounded cinematic hard-science-fiction storyboard concept art matching the attached Light Delay references.",
+        "compositionFraming": "Medium-wide 16:9 single-take composition.",
+        "lightingMood": "Steady artificial 1 g bridge practical lighting.",
+        "colorPalette": "Graphite, slate blue, brushed metal, cream core, restrained amber practicals.",
+        "materialsTextures": "Worn maintainable spacecraft surfaces and realistic hardware.",
+        "textVerbatim": "No spoken words or subtitles; minimal English-only diegetic UI if present.",
+        "constraints": "Only Harlan, Voss, and Rao are visible; preserve fixed bridge and meal-table geometry; no watermark.",
+        "avoid": "No storyboard sheet, contact sheet, collage, split screen, panel labels, text balloons, subtitles, logos, watermark, Sorell, Okoye, extra crew, duplicate people, changed furniture, shifted table, altered stair/core geometry, floating bodies, drifting hair, microgravity, EVA suits, planets, Earth, Jupiter, Proxima, horror styling."
+      },
+      "review": {
+        "notes": "Generated 2026-09-16T17:52:52.188Z; editorial review pending.",
+        "regenerationRequired": false
+      }
+    },
+    {
+      "assetId": "asset:festival-master-scene-19-054-055-single-take-still",
+      "entityId": "festival-master:shot-plan-054",
+      "kind": "animaticStill",
+      "status": "generated",
+      "outputPath": "/assets/animatic/frames/festival-master/scene-19-054-055-single-take.png",
+      "dimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "styleAnchorAssetIds": [
+        "asset:location-celestial-ardor-reactor-service-bay-sheet",
+        "asset:character-rao-sheet",
+        "asset:character-okoye-sheet",
+        "asset:character-harlan-sheet"
+      ],
+      "references": [
+        {
+          "assetId": "asset:location-celestial-ardor-reactor-service-bay-sheet",
+          "role": "location / environment reference"
+        },
+        {
+          "assetId": "asset:character-rao-sheet",
+          "role": "character identity reference"
+        },
+        {
+          "assetId": "asset:character-okoye-sheet",
+          "role": "character identity reference"
+        },
+        {
+          "assetId": "asset:character-harlan-sheet",
+          "role": "character identity reference"
+        }
+      ],
+      "prompt": {
+        "useCase": "stylized-concept",
+        "assetType": "Festival-master combined 054–055 storyboard still",
+        "primaryRequest": "Generate one single 16:9 landscape cinematic storyboard still for the combined first two Scene 19 beats. Use the authoritative Celestial Ardor outer reactor service-bay location sheet for architecture and the solo Elin Rao, Okoye, and Harlan sheets for identity. Show the outer reactor service bay at the bottom of the central-access shaft during the third thrust cutoff in microgravity. The sealed inner-shielding vault door and its local-lock panel are dominant, with dense utilitarian reactor-service hardware, handholds, rails, work lights, and physically plausible service-bay geometry. Elin Rao is the East-Asian scientist floating screen-left beside the sealed vault, composed but alert, secured by handhold or restrained tether. Okoye is the Black security officer with short natural hair floating near center at the vault-door handhold, wary and ready to report the local-lock obstruction over comm. Harlan is the younger clean-shaven dark-haired officer floating or braced on an upper rail in the background, steering suspicion toward Sorell. No one stands on a deck; bodies are supported by handholds or restrained tethers; hair, loose straps, and small debris drift naturally. Keep the sealed door, local-lock panel, handholds, and screen direction readable. Do not include the time-reference diagnostic unit; it belongs to the separate third Scene 19 take. Do not show Voss as a body; he may only be implied by comm context. No spoken dialogue text, subtitles, logos, or watermark.",
+        "inputImages": [
+          "Reference asset: asset:location-celestial-ardor-reactor-service-bay-sheet",
+          "Reference asset: asset:character-rao-sheet",
+          "Reference asset: asset:character-okoye-sheet",
+          "Reference asset: asset:character-harlan-sheet"
+        ],
+        "sceneBackdrop": "Outer reactor service bay at the bottom of the central-access shaft.",
+        "subject": "character:rao, character:okoye, character:harlan",
+        "styleMedium": "Grounded cinematic hard-science-fiction storyboard concept art matching the attached Light Delay references.",
+        "compositionFraming": "Medium-wide 16:9 single-take composition.",
+        "lightingMood": "Cool reactor-bay practicals and local-lock indicators.",
+        "colorPalette": "Industrial graphite, brushed metal, hazard yellow, cool white work lights.",
+        "materialsTextures": "Worn maintainable spacecraft service hardware, rails, handholds, and tether gear.",
+        "textVerbatim": "No spoken dialogue text; minimal English-only diegetic UI if present.",
+        "constraints": "Microgravity with no planted footing; only Rao, Okoye, and Harlan visible; preserve the sealed vault and local-lock geography; no watermark.",
+        "avoid": "No storyboard sheet, contact sheet, split screen, panel labels, collage, bridge interior, generic airlock, service cylinder, vault interior, standing on a deck, planted footing, unsecured floating bodies, extra characters, Voss body, Sorell visible, time-reference diagnostic unit, non-English text, logos, watermark, Earth, Jupiter, Proxima."
+      },
+      "review": {
+        "notes": "Generated 2026-09-16T18:24:41.129Z; editorial review pending.",
+        "regenerationRequired": false
+      }
+    },
+    {
+      "assetId": "asset:festival-master-scene-19-054-055-central-shaft-single-take-still",
+      "entityId": "festival-master:shot-plan-054",
+      "kind": "animaticStill",
+      "status": "generated",
+      "outputPath": "/assets/animatic/frames/festival-master/scene-19-054-055-central-shaft-single-take.png",
+      "dimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "styleAnchorAssetIds": [
+        "asset:location-celestial-ardor-central-access-sheet",
+        "asset:character-rao-sheet",
+        "asset:character-okoye-sheet",
+        "asset:character-harlan-sheet"
+      ],
+      "references": [
+        {
+          "assetId": "asset:location-celestial-ardor-central-access-sheet",
+          "role": "location / environment reference"
+        },
+        {
+          "assetId": "asset:character-rao-sheet",
+          "role": "character identity reference"
+        },
+        {
+          "assetId": "asset:character-okoye-sheet",
+          "role": "character identity reference"
+        },
+        {
+          "assetId": "asset:character-harlan-sheet",
+          "role": "character identity reference"
+        }
+      ],
+      "prompt": {
+        "useCase": "stylized-concept",
+        "assetType": "Festival-master corrected combined 054–055 storyboard still",
+        "primaryRequest": "Generate one single 16:9 landscape cinematic storyboard still for the combined first two Scene 19 beats. Use the authoritative Celestial Ardor central-access shaft location sheet for architecture and the solo Elin Rao, Okoye, and Harlan sheets for identity. The entire composition takes place in the ship's main central-access shaft: a long axial cylindrical trunk with handrails, rest landings, hatches, service conduits, and the open vertical circulation volume. Do not substitute the outer reactor service bay, a generic airlock, or the vault interior. The sealed inner-shielding vault door and local-lock panel may be visible as the destination at the shaft-side access point, but the central access shaft must be the dominant location and geometry. This is during the third thrust cutoff and braking turn, explicit microgravity. Elin Rao is the East-Asian scientist floating screen-left beside the shaft-side sealed vault access, secured by a handhold or restrained tether. Okoye is the Black security officer with short natural hair floating near center at a handhold, wary as she reports that captain authority is rejected and only the local lock responds. Harlan is the younger clean-shaven dark-haired officer floating or braced on an upper rail in the background, steering suspicion toward Sorell. No one stands on a deck; hair, straps, and small debris drift naturally. Only Rao, Okoye, and Harlan are visible. Voss may be implied by comm context but must not appear as a body. Do not show the time-reference diagnostic unit; it belongs to the separate third Scene 19 take. Keep the shaft's long axial perspective, rail/landing relationships, screen direction, and handhold continuity readable. Grounded hard-science-fiction photorealistic VFX storyboard render, worn maintainable spacecraft, cool shaft practicals and access indicators, restrained contrast. No spoken dialogue text, subtitles, logos, or watermark.",
+        "inputImages": [
+          "Reference asset: asset:location-celestial-ardor-central-access-sheet",
+          "Reference asset: asset:character-rao-sheet",
+          "Reference asset: asset:character-okoye-sheet",
+          "Reference asset: asset:character-harlan-sheet"
+        ],
+        "sceneBackdrop": "Celestial Ardor main central-access shaft at the shaft-side sealed vault access.",
+        "subject": "character:rao, character:okoye, character:harlan",
+        "styleMedium": "Grounded cinematic hard-science-fiction storyboard concept art matching the attached Light Delay references.",
+        "compositionFraming": "Medium-wide 16:9 single-take composition in the axial shaft.",
+        "lightingMood": "Cool central-shaft practicals and access indicators.",
+        "colorPalette": "Industrial graphite, brushed metal, hazard yellow, cool white work lights.",
+        "materialsTextures": "Worn maintainable spacecraft shaft structure, rails, handholds, and tether gear.",
+        "textVerbatim": "No spoken dialogue text; minimal English-only diegetic UI if present.",
+        "constraints": "Central access shaft is dominant; microgravity with no planted footing; only Rao, Okoye, and Harlan visible; no watermark.",
+        "avoid": "No outer reactor service bay as primary location, generic airlock, vault interior, bridge interior, service cylinder, storyboard sheet, contact sheet, split screen, panel labels, collage, standing on a deck, planted footing, unsecured floating bodies, extra characters, Voss body, Sorell visible, time-reference diagnostic unit, non-English text, logos, watermark, Earth, Jupiter, Proxima."
+      },
+      "review": {
+        "notes": "Corrected and generated 2026-09-16T18:39:30.518Z; editorial review pending.",
+        "regenerationRequired": false
+      }
+    },
+    {
+      "assetId": "asset:festival-master-scene-20-single-take-still",
+      "entityId": "festival-master:shot-plan-057",
+      "kind": "animaticStill",
+      "status": "generated",
+      "outputPath": "/assets/animatic/frames/festival-master/scene-20-single-take.png",
+      "dimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "styleAnchorAssetIds": [
+        "asset:character-pair-voss-harlan-bridge-sheet",
+        "asset:character-pair-rao-sorell-bridge-sheet",
+        "asset:character-pair-okoye-voss-bridge-sheet",
+        "asset:location-celestial-ardor-bridge-realistic-reference"
+      ],
+      "references": [
+        {
+          "assetId": "asset:character-pair-voss-harlan-bridge-sheet",
+          "role": "character identity reference"
+        },
+        {
+          "assetId": "asset:character-pair-rao-sorell-bridge-sheet",
+          "role": "character identity reference"
+        },
+        {
+          "assetId": "asset:character-pair-okoye-voss-bridge-sheet",
+          "role": "character identity reference"
+        },
+        {
+          "assetId": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "role": "location / environment reference"
+        }
+      ],
+      "prompt": {
+        "useCase": "stylized-concept",
+        "assetType": "Festival-master single-take storyboard still",
+        "primaryRequest": "Generate one single 16:9 landscape cinematic storyboard still for Festival-master Scene 20 opening state (thrust restores; empty vector). Use the Celestial Ardor bridge realistic location sheet for architecture and the Voss–Harlan, Rao–Sorell, and Okoye–Voss bridge pair sheets for identity (ignore pair-sheet backgrounds). Steady 1 g artificial gravity as thrust restores: planted feet, normal weight settling, no floating debris. Elin Rao at the science/analysis console reading the display; Voss at command; Harlan screen-right watching the vector plot; Okoye deep background left; Sorell retained under watch in depth. English-only diegetic vector/attitude readouts only — no spoken dialogue text. Grounded hard-science-fiction photorealistic VFX, worn maintainable spacecraft, restrained contrast. No subtitles, logos, watermark, storyboard sheet, collage, or panel labels.",
+        "inputImages": [
+          "Reference asset: asset:character-pair-voss-harlan-bridge-sheet",
+          "Reference asset: asset:character-pair-rao-sorell-bridge-sheet",
+          "Reference asset: asset:character-pair-okoye-voss-bridge-sheet",
+          "Reference asset: asset:location-celestial-ardor-bridge-realistic-reference"
+        ],
+        "sceneBackdrop": "Continuity setting location:celestial-ardor-bridge.",
+        "subject": "character:rao, character:voss, character:harlan, character:okoye, character:sorell",
+        "styleMedium": "Grounded cinematic hard-science-fiction storyboard concept art matching the attached Light Delay references.",
+        "compositionFraming": "Medium-wide 16:9 single-take composition.",
+        "lightingMood": "Steady artificial 1 g bridge practical lighting.",
+        "colorPalette": "Cool graphite, off-white, slate-blue and restrained practical amber accents.",
+        "materialsTextures": "Worn maintainable spacecraft surfaces and realistic hardware.",
+        "textVerbatim": "English-only diegetic vector/attitude readouts; no spoken dialogue text.",
+        "constraints": "Preserve current bridge geography, character identity, custody state, and thrust-restoration settling state; no watermark.",
+        "avoid": "Character swaps, extra people, changed bridge geometry, microgravity, collage, split screen, subtitles, logos, watermark."
+      },
+      "review": {
+        "notes": "Registered from private Scene 20 single-take generation on 2026-09-16T19:27:38.017Z; editorial review pending.",
+        "regenerationRequired": false
+      }
+    },
+    {
+      "assetId": "asset:festival-master-scene-21-shot-060-still",
+      "entityId": "festival-master:shot-plan-060",
+      "kind": "animaticStill",
+      "status": "generated",
+      "outputPath": "/assets/animatic/frames/festival-master/scene-21-shot-060.png",
+      "dimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "styleAnchorAssetIds": [
+        "asset:character-pair-voss-harlan-bridge-sheet",
+        "asset:character-pair-rao-sorell-bridge-sheet",
+        "asset:character-pair-okoye-voss-bridge-sheet",
+        "asset:location-celestial-ardor-bridge-realistic-reference"
+      ],
+      "references": [
+        {
+          "assetId": "asset:character-pair-voss-harlan-bridge-sheet",
+          "role": "visual continuity reference"
+        },
+        {
+          "assetId": "asset:character-pair-rao-sorell-bridge-sheet",
+          "role": "visual continuity reference"
+        },
+        {
+          "assetId": "asset:character-pair-okoye-voss-bridge-sheet",
+          "role": "visual continuity reference"
+        },
+        {
+          "assetId": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "role": "location / environment reference"
+        }
+      ],
+      "prompt": {
+        "useCase": "stylized-concept",
+        "assetType": "Festival-master single-take storyboard still",
+        "primaryRequest": "Generate one coherent 16:9 cinematic still on the Celestial Ardor bridge as an incoming optical packet resolves and Elin Rao recognizes Zao’s personal packet signature. Rao is at analysis, Voss at command, Sorell remains under watch in depth, and the bridge geometry stays consistent.",
+        "inputImages": [
+          "Reference asset: asset:character-pair-voss-harlan-bridge-sheet",
+          "Reference asset: asset:character-pair-rao-sorell-bridge-sheet",
+          "Reference asset: asset:character-pair-okoye-voss-bridge-sheet",
+          "Reference asset: asset:location-celestial-ardor-bridge-realistic-reference"
+        ],
+        "sceneBackdrop": "Continuity setting location:celestial-ardor-bridge.",
+        "subject": "character:rao, character:voss, character:sorell, with Harlan and Okoye only as distant listeners if visible",
+        "styleMedium": "Grounded cinematic hard-science-fiction storyboard concept art matching the attached Light Delay references.",
+        "compositionFraming": "Single continuous medium bridge composition; Rao at analysis, Voss at command, Harlan/Okoye/retained Sorell in shared geography; Seedance may reframe internally.",
+        "lightingMood": "Restrained practical bridge lighting with cool cyan console spill.",
+        "colorPalette": "Cool graphite, off-white, slate-blue and restrained practical amber accents.",
+        "materialsTextures": "Worn maintainable spacecraft surfaces and realistic hardware.",
+        "textVerbatim": "English-only diegetic UI where required; no spoken dialogue text.",
+        "constraints": "Preserve current bridge geography, identity, custody state, gravity, and declared monitor/prop boundaries; no watermark.",
+        "avoid": "Character swaps, extra people, wrong location, changed bridge geometry, microgravity, subtitles, logos, watermark, collage, split screen, storyboard panels."
+      },
+      "review": {
+        "notes": "Registered from private Scene 21 generation on 2026-09-16T19:49:50.030Z; editorial review pending.",
+        "regenerationRequired": false
+      }
+    },
+    {
+      "assetId": "asset:festival-master-scene-21-shot-062-still",
+      "entityId": "festival-master:shot-plan-062",
+      "kind": "animaticStill",
+      "status": "generated",
+      "outputPath": "/assets/animatic/frames/festival-master/scene-21-shot-062.png",
+      "dimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "styleAnchorAssetIds": [
+        "asset:location-celestial-ardor-bridge-realistic-reference",
+        "asset:location-celestial-ardor-inner-shielding-vault-sheet",
+        "asset:character-zao-sheet",
+        "asset:object-proxima-geophysical-impulse-package-sheet",
+        "asset:character-pair-rao-sorell-bridge-sheet"
+      ],
+      "references": [
+        {
+          "assetId": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "role": "location / environment reference"
+        },
+        {
+          "assetId": "asset:location-celestial-ardor-inner-shielding-vault-sheet",
+          "role": "location / environment reference"
+        },
+        {
+          "assetId": "asset:character-zao-sheet",
+          "role": "visual continuity reference"
+        },
+        {
+          "assetId": "asset:object-proxima-geophysical-impulse-package-sheet",
+          "role": "visual continuity reference"
+        },
+        {
+          "assetId": "asset:character-pair-rao-sorell-bridge-sheet",
+          "role": "visual continuity reference"
+        }
+      ],
+      "prompt": {
+        "useCase": "stylized-concept",
+        "assetType": "Festival-master single-take storyboard still",
+        "primaryRequest": "Generate one coherent 16:9 cinematic still of the Celestial Ardor bridge crew watching Zao’s vault recording on a large diegetic bridge monitor. Rao and Sorell watch on the bridge; Zao and the Proxima impulse package appear only inside the monitor inset.",
+        "inputImages": [
+          "Reference asset: asset:location-celestial-ardor-bridge-realistic-reference",
+          "Reference asset: asset:location-celestial-ardor-inner-shielding-vault-sheet",
+          "Reference asset: asset:character-zao-sheet",
+          "Reference asset: asset:object-proxima-geophysical-impulse-package-sheet",
+          "Reference asset: asset:character-pair-rao-sorell-bridge-sheet"
+        ],
+        "sceneBackdrop": "Continuity setting location:celestial-ardor-bridge.",
+        "subject": "character:rao, character:sorell on bridge; character:zao and object:proxima-geophysical-impulse-package inside monitor playback only",
+        "styleMedium": "Grounded cinematic hard-science-fiction storyboard concept art matching the attached Light Delay references.",
+        "compositionFraming": "Bridge medium-wide with a large readable monitor; vault/Zao/package visible only as monitor content; Seedance may push into the display without leaving bridge staging as the scene’s location.",
+        "lightingMood": "Restrained practical bridge lighting with cool cyan console spill.",
+        "colorPalette": "Cool graphite, off-white, slate-blue and restrained practical amber accents.",
+        "materialsTextures": "Worn maintainable spacecraft surfaces and realistic hardware.",
+        "textVerbatim": "English-only diegetic UI where required; no spoken dialogue text.",
+        "constraints": "Preserve current bridge geography, identity, custody state, gravity, and declared monitor/prop boundaries; no watermark.",
+        "avoid": "Character swaps, extra people, wrong location, changed bridge geometry, microgravity, subtitles, logos, watermark, collage, split screen, storyboard panels."
+      },
+      "review": {
+        "notes": "Registered from private Scene 21 generation on 2026-09-16T19:49:50.030Z; editorial review pending.",
+        "regenerationRequired": false
+      }
+    },
+    {
+      "assetId": "asset:festival-master-scene-21-shot-064-still",
+      "entityId": "festival-master:shot-plan-064",
+      "kind": "animaticStill",
+      "status": "generated",
+      "outputPath": "/assets/animatic/frames/festival-master/scene-21-shot-064.png",
+      "dimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "styleAnchorAssetIds": [
+        "asset:character-pair-voss-harlan-bridge-sheet",
+        "asset:character-pair-rao-sorell-bridge-sheet",
+        "asset:character-pair-okoye-voss-bridge-sheet",
+        "asset:location-celestial-ardor-bridge-realistic-reference",
+        "asset:object-harlan-wrist-device-sheet"
+      ],
+      "references": [
+        {
+          "assetId": "asset:character-pair-voss-harlan-bridge-sheet",
+          "role": "visual continuity reference"
+        },
+        {
+          "assetId": "asset:character-pair-rao-sorell-bridge-sheet",
+          "role": "visual continuity reference"
+        },
+        {
+          "assetId": "asset:character-pair-okoye-voss-bridge-sheet",
+          "role": "visual continuity reference"
+        },
+        {
+          "assetId": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "role": "location / environment reference"
+        },
+        {
+          "assetId": "asset:object-harlan-wrist-device-sheet",
+          "role": "visual continuity reference"
+        }
+      ],
+      "prompt": {
+        "useCase": "stylized-concept",
+        "assetType": "Festival-master single-take storyboard still",
+        "primaryRequest": "Generate one coherent 16:9 over-the-shoulder still on the Celestial Ardor bridge immediately after Voss understands Zao’s message. Voss commands the abort, Okoye blocks Harlan without attacking, Rao remains at analysis, and Sorell remains retained under watch in the bridge depth. Preserve 1 g footing and the actual bridge geometry.",
+        "inputImages": [
+          "Reference asset: asset:character-pair-voss-harlan-bridge-sheet",
+          "Reference asset: asset:character-pair-rao-sorell-bridge-sheet",
+          "Reference asset: asset:character-pair-okoye-voss-bridge-sheet",
+          "Reference asset: asset:location-celestial-ardor-bridge-realistic-reference",
+          "Reference asset: asset:object-harlan-wrist-device-sheet"
+        ],
+        "sceneBackdrop": "Continuity setting location:celestial-ardor-bridge.",
+        "subject": "character:voss, character:harlan, character:okoye, character:rao, character:sorell",
+        "styleMedium": "Grounded cinematic hard-science-fiction storyboard concept art matching the attached Light Delay references.",
+        "compositionFraming": "Over-the-shoulder shot on Voss, Harlan, Sorell, Elin Rao, Okoye; Pan; preserves eyeline and action-axis continuity.",
+        "lightingMood": "Restrained practical bridge lighting with cool cyan console spill.",
+        "colorPalette": "Cool graphite, off-white, slate-blue and restrained practical amber accents.",
+        "materialsTextures": "Worn maintainable spacecraft surfaces and realistic hardware.",
+        "textVerbatim": "English-only diegetic UI where required; no spoken dialogue text.",
+        "constraints": "Preserve current bridge geography, identity, custody state, gravity, and declared monitor/prop boundaries; no watermark.",
+        "avoid": "Character swaps, extra people, wrong location, changed bridge geometry, microgravity, subtitles, logos, watermark, collage, split screen, storyboard panels."
+      },
+      "review": {
+        "notes": "Registered from private Scene 21 generation on 2026-09-16T19:49:50.030Z; editorial review pending.",
         "regenerationRequired": false
       }
     }
