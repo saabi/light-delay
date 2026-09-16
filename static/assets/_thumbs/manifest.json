@@ -1,6 +1,6 @@
 {
 	"schemaVersion": "1.0.0",
-	"generatedAt": "2026-09-16T15:24:40.969Z",
+	"generatedAt": "2026-09-16T22:09:20.137Z",
 	"entries": {
 		"characters/zao/model-sheet.png.webp": {
 			"source": "/assets/characters/zao/model-sheet.png",
@@ -2025,6 +2025,13 @@
 			"size": 616388,
 			"hash": "b69627fef9a4c09b"
 		},
+		"characters/pairs/voss-harlan-bridge-reference-sheet-v1.png.webp": {
+			"source": "/assets/characters/pairs/voss-harlan-bridge-reference-sheet-v1.png",
+			"thumb": "/assets/_thumbs/characters/pairs/voss-harlan-bridge-reference-sheet-v1.png.webp",
+			"mtimeMs": 1789572389503.3037,
+			"size": 2179636,
+			"hash": "d90ce147170ea735"
+		},
 		"characters/pairs/rao-sorell-bridge-reference-sheet-v1.png.webp": {
 			"source": "/assets/characters/pairs/rao-sorell-bridge-reference-sheet-v1.png",
 			"thumb": "/assets/_thumbs/characters/pairs/rao-sorell-bridge-reference-sheet-v1.png.webp",
@@ -2144,6 +2151,13 @@
 			"size": 2203926,
 			"hash": "ee322011640b3dec"
 		},
+		"animatic/frames/festival-master/stretches/festival-master-stretch-bridge-comms-cut-023-025/sheet.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-comms-cut-023-025/sheet.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-comms-cut-023-025/sheet.png.webp",
+			"mtimeMs": 1789414405956.006,
+			"size": 1938806,
+			"hash": "2a2eed3f9f1b0100"
+		},
 		"animatic/frames/festival-master/stretches/festival-master-stretch-service-cylinder-route-026-028/sheet.png.webp": {
 			"source": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-service-cylinder-route-026-028/sheet.png",
 			"thumb": "/assets/_thumbs/animatic/frames/festival-master/stretches/festival-master-stretch-service-cylinder-route-026-028/sheet.png.webp",
@@ -2178,6 +2192,27 @@
 			"mtimeMs": 1789400278445.1165,
 			"size": 2256498,
 			"hash": "5f6e1993efe14dd5"
+		},
+		"animatic/frames/festival-master/stretches/festival-master-stretch-bridge-greeting-prep-083-086/sheet.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-greeting-prep-083-086/sheet.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-greeting-prep-083-086/sheet.png.webp",
+			"mtimeMs": 1789414643658.6143,
+			"size": 2261516,
+			"hash": "54928ba534a5d21b"
+		},
+		"animatic/frames/festival-master/stretches/festival-master-stretch-velari-answer-087-088/sheet.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-velari-answer-087-088/sheet.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/stretches/festival-master-stretch-velari-answer-087-088/sheet.png.webp",
+			"mtimeMs": 1789414734238.3315,
+			"size": 1801436,
+			"hash": "9068860193399ccd"
+		},
+		"animatic/frames/festival-master/stretches/festival-master-stretch-velari-envoy-091-092/sheet.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-velari-envoy-091-092/sheet.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/stretches/festival-master-stretch-velari-envoy-091-092/sheet.png.webp",
+			"mtimeMs": 1789414843970.2737,
+			"size": 1963407,
+			"hash": "7b416aec88a16bdb"
 		},
 		"animatic/frames/festival-master/stretches/festival-master-stretch-bridge-watch-093-094/sheet.png.webp": {
 			"source": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-watch-093-094/sheet.png",
@@ -2567,7 +2602,7 @@
 		"animatic/frames/festival-master/stretches/festival-master-stretch-vault-recovery-080-082/panel-02.png.webp": {
 			"source": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-vault-recovery-080-082/panel-02.png",
 			"thumb": "/assets/_thumbs/animatic/frames/festival-master/stretches/festival-master-stretch-vault-recovery-080-082/panel-02.png.webp",
-			"mtimeMs": 1789402965503,
+			"mtimeMs": 1789573628236,
 			"size": 715410,
 			"hash": "aaa429d7d83bf323"
 		},
@@ -2612,6 +2647,34 @@
 			"mtimeMs": 1789511147475,
 			"size": 2052081,
 			"hash": "89a3ce478c104732"
+		},
+		"animatic/frames/festival-master/scene-18-single-take.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/scene-18-single-take.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/scene-18-single-take.png.webp",
+			"mtimeMs": 1789580879241.4092,
+			"size": 2122096,
+			"hash": "0262ea94660fc66a"
+		},
+		"animatic/frames/festival-master/scene-19-054-055-single-take.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/scene-19-054-055-single-take.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/scene-19-054-055-single-take.png.webp",
+			"mtimeMs": 1789582962796.7627,
+			"size": 2435948,
+			"hash": "2d2974775ef04da0"
+		},
+		"animatic/frames/festival-master/scene-19-054-055-central-shaft-single-take.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/scene-19-054-055-central-shaft-single-take.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/scene-19-054-055-central-shaft-single-take.png.webp",
+			"mtimeMs": 1789583862567.6936,
+			"size": 2392938,
+			"hash": "67793240808a5003"
+		},
+		"animatic/frames/festival-master/scene-20-single-take.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/scene-20-single-take.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/scene-20-single-take.png.webp",
+			"mtimeMs": 1789586602612.4424,
+			"size": 1972205,
+			"hash": "f5bb0282f67564e2"
 		}
 	}
 }
