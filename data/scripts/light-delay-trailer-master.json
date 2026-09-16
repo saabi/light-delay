@@ -1938,15 +1938,15 @@
       "sourceRefs": [
         {
           "scriptId": "script:light-delay-festival-master",
-          "shotId": "festival-master:shot-plan-058"
+          "shotId": "festival-master:shot-plan-057"
         }
       ],
       "notes": [
         {
           "type": "editorial",
           "text": {
-            "es": "Reutiliza el frame de festival-master:shot-plan-058 (asset asset:festival-master-storyboard-058).",
-            "en": "Reuses the frame from festival-master:shot-plan-058 (asset asset:festival-master-storyboard-058)."
+            "es": "Reutiliza el frame de festival-master:shot-plan-057 (asset asset:festival-master-scene-20-single-take-still).",
+            "en": "Reuses the frame from festival-master:shot-plan-057 (asset asset:festival-master-scene-20-single-take-still)."
           }
         }
       ]
@@ -2598,7 +2598,7 @@
       "shotId": "trailer-master:shot-d-03",
       "number": 1,
       "status": "candidate",
-      "imageAssetId": "asset:festival-master-storyboard-058"
+      "imageAssetId": "asset:festival-master-scene-20-single-take-still"
     },
     {
       "id": "trailer-master:shot-e-01:take-01",

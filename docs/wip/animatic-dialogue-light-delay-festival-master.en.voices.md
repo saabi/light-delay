@@ -406,8 +406,8 @@ Speaker tags: [Narrator], [Zao], [Voss], [Harlan], [Elin], [Sorell], [Okoye], [R
 
 <!-- audience-dialogue-id: festival-master:cue-0120 -->
 [Harlan]
-[QwenInstruct] Speak English. Performance and delivery: private grief, not triumph
-"Zao missed her aim. The signal's gone, unrecoverable — now they'll never know who saved them."
+[QwenInstruct] Speak English. Performance and delivery: whispered under-breath, private grief, not for the room
+"Now they'll never know who saved them."
 
 <!-- audience-dialogue-id: festival-master:cue-0122 -->
 [Elin]

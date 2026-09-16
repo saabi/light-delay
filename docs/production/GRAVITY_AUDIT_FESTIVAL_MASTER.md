@@ -230,12 +230,8 @@ image work. No gravity *state* `MISMATCH` remains after the fixes above.
 | shot-plan-060 | scene-21 | cue-music-zao-01-change, cue-0123–cue-0125 | 1g | story-15 / after resume | ardor-thrust-gravity + zao-optical-transmission + ardor-operational-displays | none | 1g | rich | OK |
 | shot-plan-062 | scene-21 | cue-0126–cue-0128 | 1g bridge; MG in monitor inset | story-15 / after resume | ardor-thrust-gravity + zao-optical-transmission + ardor-operational-displays | none | 1g bridge | rich | OK |
 | shot-plan-064 | scene-21 | cue-0129, cue-0130 | 1g | story-15 / after resume | ardor-thrust-gravity + zao-optical-transmission + ardor-operational-displays | none | 1g | rich | OK |
-| shot-plan-065 | scene-22 | cue-0131, cue-0132 | 1g | story-16 / after resume | ardor-thrust-gravity | none | 1g | rich | OK |
-| shot-plan-066 | scene-22 | cue-0133, cue-0134 | 1g | story-16 / after resume | ardor-thrust-gravity | none | 1g | rich | OK |
-| shot-plan-067 | scene-22 | cue-0135, cue-0136 | 1g | story-16 / after resume | ardor-thrust-gravity | none | 1g | rich | OK |
-| shot-plan-068 | scene-23 | cue-0137, cue-0138 | 1g | story-17 / after resume | ardor-thrust-gravity + ardor-operational-displays | none | 1g | rich | OK |
-| shot-plan-069 | scene-23 | cue-0139, cue-0140 | 1g | story-17 / after resume | ardor-thrust-gravity + ardor-operational-displays | none | 1g | rich | OK |
-| shot-plan-070 | scene-23 | cue-0141, cue-0142, cue-0143 | 1g | story-17 / after resume | ardor-thrust-gravity + ardor-operational-displays | none | 1g | rich | OK |
+| shot-plan-065 | scene-22 | cue-0131–cue-0136 | 1g | story-16 / after resume | ardor-thrust-gravity | none | 1g | rich | OK |
+| shot-plan-068 | scene-23 | cue-music-sabotage-04-change, cue-0137–cue-0143 | 1g | story-17 / after resume | ardor-thrust-gravity + ardor-operational-displays | none | 1g | rich | OK |
 | shot-plan-071 | scene-24 | cue-0144–cue-0150 | 1g | story-18 / after resume | ardor-thrust-gravity | none | 1g | rich | OK |
 | shot-plan-074 | scene-25 | cue-0151, cue-0152 | 1g | story-19 / master:f2 "faster, but far more dangerous under thrust" | ardor-thrust-gravity | none | 1g | rich | OK |
 | shot-plan-075 | scene-25 | cue-0153, cue-0154 | 1g | story-19 / master:f2 "faster, but far more dangerous under thrust" | ardor-thrust-gravity | none | 1g | rich | OK |

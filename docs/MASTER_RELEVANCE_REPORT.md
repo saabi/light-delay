@@ -98,7 +98,7 @@ Gates: `master_outline_complete` (open), `salvage_review_complete` (open), `repl
 | voice_profile | `voice:voss-es` | explicit | retain |
 | voice_profile | `voice:zao-es` | explicit | retain |
 
-## Revisión requerida (544)
+## Revisión requerida (558)
 
 | Tipo | ID | Base | Disposición |
 | --- | --- | --- | --- |
@@ -352,8 +352,17 @@ Gates: `master_outline_complete` (open), `salvage_review_complete` (open), `repl
 | asset | `asset:dialogue-light-delay-main-short-en-main-cue-17-01` | default-review | retain |
 | asset | `asset:dialogue-light-delay-main-short-en-main-cue-17-02` | default-review | retain |
 | asset | `asset:dialogue-light-delay-main-short-en-main-cue-17-03` | default-review | retain |
+| asset | `asset:festival-master-shot-plan-013b-rev-2-video-1-video` | default-review | retain |
 | asset | `asset:festival-master-shot-plan-039-rev-1-video-1-video` | default-review | retain |
+| asset | `asset:festival-master-shot-plan-040-rev-1-video-1-video` | default-review | retain |
 | asset | `asset:festival-master-shot-plan-040b-rev-2-video-1-video` | default-review | retain |
+| asset | `asset:festival-master-shot-plan-041-rev-1-video-1-video` | default-review | retain |
+| asset | `asset:festival-master-shot-plan-050-rev-1-video-1` | default-review | retain |
+| asset | `asset:festival-master-shot-plan-054-rev-1-video-1-video` | default-review | retain |
+| asset | `asset:festival-master-shot-plan-056-rev-1-video-1-video` | default-review | retain |
+| asset | `asset:festival-master-shot-plan-083-rev-1-video-1-video` | default-review | retain |
+| asset | `asset:festival-master-shot-plan-084-rev-1-video-1-video` | default-review | retain |
+| asset | `asset:festival-master-shot-plan-085-rev-1-video-1-video` | default-review | retain |
 | asset | `asset:festival-master-shot-plan-title-rev-1-video-1-video` | default-review | retain |
 | asset | `asset:festival-master-shot-plan-title-rev-2-video-1-video` | default-review | retain |
 | asset | `asset:festival-master-storyboard-001` | default-review | retain |
@@ -576,9 +585,13 @@ Gates: `master_outline_complete` (open), `salvage_review_complete` (open), `repl
 | entity | `character:proxima-technician` | explicit | retain |
 | entity | `character:velari-envoy` | default-review | retain |
 | entity | `faction:acheron` | explicit | retain |
+| entity | `location:celestial-ardor` | default-review | retain |
 | entity | `location:celestial-ardor-bridge-meal-table` | default-review | retain |
 | entity | `location:celestial-ardor-command-vestibule` | default-review | retain |
 | entity | `location:jupiter-periapsis` | default-review | retain |
+| entity | `location:region-sol-jupiter` | default-review | retain |
+| entity | `location:region-velari-space` | default-review | retain |
+| entity | `location:universe-root` | default-review | retain |
 | entity | `object:harlan-wrist-device` | default-review | retain |
 | entity | `object:proxima-geophysical-impulse-package` | default-review | retain |
 | entity | `object:time-reference-diagnostic-unit` | default-review | retain |
@@ -623,6 +636,7 @@ Gates: `master_outline_complete` (open), `salvage_review_complete` (open), `repl
 | static_file | `docs/production/DIALOGUE_CLARITY_GUIDE.md` | default-review | retain |
 | static_file | `docs/production/FESTIVAL_MASTER_REFERENCE_RECONCILIATION_2026-09-13.md` | default-review | retain |
 | static_file | `docs/production/GRAVITY_AUDIT_FESTIVAL_MASTER.md` | default-review | retain |
+| static_file | `docs/production/LOCATION_HIERARCHY_DRAFT.en.md` | default-review | retain |
 | static_file | `docs/production/MASTER_FACT_MIGRATION_MAP.md` | default-review | retain |
 | static_file | `docs/production/MASTER_FACT_MIGRATION_NOTES.md` | default-review | retain |
 | static_file | `docs/production/OUTLINE_FIDELITY_AUDIT_FESTIVAL_MASTER.md` | default-review | retain |
@@ -678,7 +692,7 @@ Gates: `master_outline_complete` (open), `salvage_review_complete` (open), `repl
 | static_file | `docs/SVELTEKIT_SETUP.md` | explicit | retain_for_salvage |
 | static_file | `legacy-site/` | explicit | retain_for_salvage |
 
-## Obsoleto (265)
+## Obsoleto (278)
 
 | Tipo | ID | Base | Disposición |
 | --- | --- | --- | --- |
@@ -794,6 +808,13 @@ Gates: `master_outline_complete` (open), `salvage_review_complete` (open), `repl
 | asset | `asset:character-cael-sheet` | obsolete-entity-only | delete_after_gates |
 | asset | `asset:character-medical-officer-sheet` | obsolete-entity-only | delete_after_gates |
 | asset | `asset:character-security-crew-sheet` | obsolete-entity-only | delete_after_gates |
+| asset | `asset:festival-master-scene-18-single-take-still` | deprecated-animatic | delete_after_gates |
+| asset | `asset:festival-master-scene-19-054-055-central-shaft-single-take-still` | deprecated-animatic | delete_after_gates |
+| asset | `asset:festival-master-scene-19-054-055-single-take-still` | deprecated-animatic | delete_after_gates |
+| asset | `asset:festival-master-scene-20-single-take-still` | deprecated-animatic | delete_after_gates |
+| asset | `asset:festival-master-scene-21-shot-060-still` | deprecated-animatic | delete_after_gates |
+| asset | `asset:festival-master-scene-21-shot-062-still` | deprecated-animatic | delete_after_gates |
+| asset | `asset:festival-master-scene-21-shot-064-still` | deprecated-animatic | delete_after_gates |
 | asset | `asset:festival-master-stretch-axial-dock-006-009-panel-01` | deprecated-animatic | delete_after_gates |
 | asset | `asset:festival-master-stretch-axial-dock-006-009-panel-02` | deprecated-animatic | delete_after_gates |
 | asset | `asset:festival-master-stretch-axial-dock-006-009-panel-03` | deprecated-animatic | delete_after_gates |
@@ -804,6 +825,12 @@ Gates: `master_outline_complete` (open), `salvage_review_complete` (open), `repl
 | asset | `asset:festival-master-stretch-bridge-command-break-064-067-panel-03` | deprecated-animatic | delete_after_gates |
 | asset | `asset:festival-master-stretch-bridge-command-break-064-067-panel-04` | deprecated-animatic | delete_after_gates |
 | asset | `asset:festival-master-stretch-bridge-command-break-064-067-sheet` | deprecated-animatic | delete_after_gates |
+| asset | `asset:festival-master-stretch-bridge-command-break-064-panel-01` | deprecated-animatic | delete_after_gates |
+| asset | `asset:festival-master-stretch-bridge-command-break-064-sheet` | deprecated-animatic | delete_after_gates |
+| asset | `asset:festival-master-stretch-bridge-command-break-065-067-panel-01` | deprecated-animatic | delete_after_gates |
+| asset | `asset:festival-master-stretch-bridge-command-break-065-067-panel-02` | deprecated-animatic | delete_after_gates |
+| asset | `asset:festival-master-stretch-bridge-command-break-065-067-panel-03` | deprecated-animatic | delete_after_gates |
+| asset | `asset:festival-master-stretch-bridge-command-break-065-067-sheet` | deprecated-animatic | delete_after_gates |
 | asset | `asset:festival-master-stretch-bridge-comms-cut-023-025-panel-01` | deprecated-animatic | delete_after_gates |
 | asset | `asset:festival-master-stretch-bridge-comms-cut-023-025-panel-02` | deprecated-animatic | delete_after_gates |
 | asset | `asset:festival-master-stretch-bridge-comms-cut-023-025-panel-03` | deprecated-animatic | delete_after_gates |

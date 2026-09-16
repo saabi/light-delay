@@ -24,10 +24,10 @@ describe('master-derived Festival screenplay', () => {
 
 	it('implements the storyboard as Shot/Take records with still-image prompts', () => {
 		const script = getScript(scriptId);
-		expect(script.shots).toHaveLength(94);
-		expect(script.takes.length).toBeGreaterThanOrEqual(94);
+		expect(script.shots).toHaveLength(90);
+		expect(script.takes.length).toBeGreaterThanOrEqual(90);
 		const shotIds = new Set(script.shots.map((shot) => shot.id));
-		expect(shotIds.size).toBe(94);
+		expect(shotIds.size).toBe(90);
 		for (const shot of script.shots) {
 			expect(shot.cuePlacements.length, shot.id).toBeGreaterThan(0);
 			const span = shot.cuePlacements.reduce(

@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-09-16 - Catalog thumbs regenerated from intact sources
+
+- Deleted 222 zero-filled WebP thumbs under `static/assets/_thumbs/` whose source images were still readable, then ran `thumbs:generate` (`created=231`).
+- Six thumbs remain zero-filled because their sources are also wiped (fuel-audit 050–053 panels, vault-recovery panel-01, rao-sorell pair sheet). Twenty-nine catalog sources are still unreadable for thumb rebuild until those stills are restored.
+
+## 2026-09-16 - Scenes 22 and 23 compacted to one continuous take each
+
+- Joined Festival-master Scene 22 `065–067` into one 24.76-second bridge shot/take (`shot-plan-065` / `take-04`); dissolved stretch `065–067`. Reused stretch panel-01 as keyframe (custody `needs_regeneration`); 5 still refs; Seedance `videoPrompt` authored.
+- Joined Scene 23 `068–070` into one 29.46-second bridge shot/take (`shot-plan-068` / `take-02`); reused storyboard-068; same 5-ref pair+location+wrist set. Shot count 94 → 90. No image gen or Seedance submit.
+
 ## 2026-09-16 - Restore Festival-master joined takes and Seedance registration
 
 - Reconstructed single-take / dual-join storyboard coverage for scenes 18, 19, 20, 21, and 24 (104 to 94 shots); dissolved the matching visual stretches.

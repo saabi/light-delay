@@ -11,7 +11,7 @@ Notas archivadas para rescate: **167**
 ### medium
 
 - **note:celestial-ardor-command-vestibule-visual-reference** [visual · open · review_required] — Falta una referencia visual para el vestíbulo axial de mando; usado en varias escenas del Festival.
-  - Origen: `data/locations.json` · `$.locations[3].notes[0]`
+  - Origen: `data/locations.json` · `$.locations[11].notes[0]`
 - **note:festival-master-shot-plan-023-zao-radio-j-cut** [sound · open · active] — needs_revision
   - Origen: `data/scripts/light-delay-festival-master.json` · `$.shots[25].notes[0]`
 - **note:festival-master-shot-plan-024-zao-audio-from-023** [sound · open · active] — needs_revision

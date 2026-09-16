@@ -1,5 +1,13 @@
 # Estado del proyecto
 
+## 2026-09-16 - Catalog thumbs regenerated from intact sources (English source)
+
+- Regenerated catalog WebP thumbs from intact sources (`thumbs:generate`: 231 created). Six thumbs still blocked by zero-filled sources; 29 catalog stills remain unreadable for thumb rebuild until restored.
+
+## 2026-09-16 - Scenes 22 and 23 compacted to one continuous take each (English source)
+
+- Scene 22 (`065–067`) dissolved into one 24.76-second singleton on `shot-plan-065` (panel-01 keyframe; custody still `needs_regeneration`). Scene 23 (`068–070`) joined into one 29.46-second singleton on `shot-plan-068`. Both under Seedance 30 s with ≤5 still refs and authored `videoPrompt`s. Shot count 94 → 90. Awaiting human go before submit.
+
 ## 2026-09-16 - Recover zero-filled / truncated production JSON (English source)
 
 - Festival-master script recovered to 104 shots / 36 stretches; locations hierarchy rebuilt (reactor bay → engineering); stretch ancestry no longer unifies sibling facility rooms. Run results `083`–`085` normalized. `validate:data`, `generated:check`, `validate:docs`, unit tests green.

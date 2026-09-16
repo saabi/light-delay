@@ -15972,53 +15972,58 @@
       "number": 1,
       "order": 1,
       "description": {
-        "en": "Harlan, defensive and still held, tries to separate accusation from proof—arguing a voice and face could be built from ship archives.",
+        "en": "Single continuous bridge take: Harlan argues voice and face can be forged from archives; Rao lists converging independent evidence and sets the proportionate standard—enough to isolate Harlan, enough to release Sorell—while Voss looks between them.",
         "es": "needs_revision"
       },
       "locationId": "location:celestial-ardor-bridge",
       "visibleRefs": [
         {
           "kind": "character",
-          "id": "character:voss",
-          "role": "present, listening"
-        },
-        {
-          "kind": "character",
           "id": "character:harlan",
-          "role": "speaking, in focus"
-        },
-        {
-          "kind": "character",
-          "id": "character:sorell",
-          "role": "present, listening"
+          "role": "speaking, held, defensive"
         },
         {
           "kind": "character",
           "id": "character:rao",
-          "role": "speaking, in focus"
+          "role": "speaking, at analysis"
+        },
+        {
+          "kind": "character",
+          "id": "character:voss",
+          "role": "present, listening then looking between Harlan and Sorell"
         },
         {
           "kind": "character",
           "id": "character:okoye",
           "role": "present, listening"
+        },
+        {
+          "kind": "character",
+          "id": "character:sorell",
+          "role": "present, retained under watch"
+        },
+        {
+          "kind": "object",
+          "id": "object:harlan-wrist-device",
+          "role": "visible when framed on Harlan"
         }
       ],
       "composition": {
         "size": "MS",
         "aspectRatio": "16:9",
         "framing": {
-          "es": "Plano medio sobre Voss, Harlan, Sorell, Elin Rao, Okoye; Fija; encuadre ortogonal y legible, de inserto.",
-          "en": "Medium shot on Voss, Harlan, Sorell, Elin Rao, Okoye; Locked; orthogonal, legible insert framing."
+          "en": "Single continuous medium bridge composition; Harlan held, Rao at analysis, Voss at command, Okoye and retained Sorell in shared geography.",
+          "es": "needs_revision"
         }
       },
       "camera": {
-        "movement": "locked",
+        "movement": "other",
         "movementDescription": {
-          "es": "Fija; encuadre ortogonal y legible, de inserto.",
-          "en": "Locked; orthogonal, legible insert framing."
+          "en": "One uninterrupted take; Seedance determines internal reframing across the debate while preserving bridge geography.",
+          "es": "needs_revision"
         }
       },
-      "durationMs": 5580,
+      "durationMs": 24760,
       "cuePlacements": [
         {
           "cueId": "festival-master:cue-0131",
@@ -16029,175 +16034,35 @@
           "cueId": "festival-master:cue-0132",
           "atMs": 4160,
           "durationMs": 1420
-        }
-      ],
-      "takeIds": [
-        "festival-master:shot-plan-065:take-01",
-        "festival-master:shot-plan-065:take-02",
-        "festival-master:shot-plan-065:take-03"
-      ],
-      "selectedTakeId": "festival-master:shot-plan-065:take-02",
-      "purpose": {
-        "es": "Escena «No era la voz»: Harlan — separar la acusación de la prueba; Elin Rao — negar su premisa.",
-        "en": "Scene \"Not the voice\": Harlan — separate the accusation from proof; Elin Rao — deny his premise."
-      }
-    },
-    {
-      "id": "festival-master:shot-plan-066",
-      "sceneId": "festival-master:scene-22",
-      "beatIds": [
-        "festival-master:beat-22"
-      ],
-      "number": 2,
-      "order": 2,
-      "description": {
-        "en": "Elin Rao, analytical, denies his premise and lists converging evidence—signature, timestamp, mass, neutrons, vector, lock, missing location, accusation—while Harlan counters that agreement is not proof.",
-        "es": "needs_revision"
-      },
-      "locationId": "location:celestial-ardor-bridge",
-      "visibleRefs": [
-        {
-          "kind": "character",
-          "id": "character:voss",
-          "role": "present, listening"
         },
-        {
-          "kind": "character",
-          "id": "character:harlan",
-          "role": "speaking, in focus"
-        },
-        {
-          "kind": "character",
-          "id": "character:sorell",
-          "role": "present, listening"
-        },
-        {
-          "kind": "character",
-          "id": "character:rao",
-          "role": "speaking, in focus"
-        },
-        {
-          "kind": "character",
-          "id": "character:okoye",
-          "role": "present, listening"
-        }
-      ],
-      "composition": {
-        "size": "MCU",
-        "aspectRatio": "16:9",
-        "framing": {
-          "es": "Plano medio corto sobre Voss, Harlan, Sorell, Elin Rao, Okoye; Travelling; mantiene la línea de mirada y la continuidad del eje de acción.",
-          "en": "Medium close-up on Voss, Harlan, Sorell, Elin Rao, Okoye; Tracking; preserves eyeline and action-axis continuity."
-        }
-      },
-      "camera": {
-        "movement": "tracking",
-        "movementDescription": {
-          "es": "Travelling; mantiene la línea de mirada y la continuidad del eje de acción.",
-          "en": "Tracking; preserves eyeline and action-axis continuity."
-        }
-      },
-      "durationMs": 11180,
-      "cuePlacements": [
         {
           "cueId": "festival-master:cue-0133",
-          "atMs": 0,
+          "atMs": 5580,
           "durationMs": 9580
         },
         {
           "cueId": "festival-master:cue-0134",
-          "atMs": 9680,
+          "atMs": 15260,
           "durationMs": 1500
-        }
-      ],
-      "takeIds": [
-        "festival-master:shot-plan-066:take-01",
-        "festival-master:shot-plan-066:take-02",
-        "festival-master:shot-plan-066:take-03"
-      ],
-      "selectedTakeId": "festival-master:shot-plan-066:take-02",
-      "purpose": {
-        "es": "Escena «No era la voz»: Elin Rao — mostrar evidencia independiente que converge; Harlan — preservar la duda razonable.",
-        "en": "Scene \"Not the voice\": Elin Rao — show converging independent evidence; Harlan — preserve reasonable doubt."
-      }
-    },
-    {
-      "id": "festival-master:shot-plan-067",
-      "sceneId": "festival-master:scene-22",
-      "beatIds": [
-        "festival-master:beat-22"
-      ],
-      "number": 3,
-      "order": 3,
-      "description": {
-        "en": "Elin Rao, firm, sets the proportionate standard: enough to isolate Harlan, enough to release Zao. Voss looks between Harlan and Sorell, seeing how much of his case came from his own first mistake.",
-        "es": "needs_revision"
-      },
-      "locationId": "location:celestial-ardor-bridge",
-      "visibleRefs": [
-        {
-          "kind": "character",
-          "id": "character:voss",
-          "role": "present, listening"
         },
-        {
-          "kind": "character",
-          "id": "character:harlan",
-          "role": "present, listening"
-        },
-        {
-          "kind": "character",
-          "id": "character:sorell",
-          "role": "present, listening"
-        },
-        {
-          "kind": "character",
-          "id": "character:rao",
-          "role": "speaking, in focus"
-        },
-        {
-          "kind": "character",
-          "id": "character:okoye",
-          "role": "present, listening"
-        }
-      ],
-      "composition": {
-        "size": "ELS",
-        "aspectRatio": "16:9",
-        "framing": {
-          "es": "Gran plano general sobre Voss, Harlan, Sorell, Elin Rao, Okoye; Dolly; mantiene la línea de mirada y la continuidad del eje de acción.",
-          "en": "Extreme long shot on Voss, Harlan, Sorell, Elin Rao, Okoye; Dolly; preserves eyeline and action-axis continuity."
-        }
-      },
-      "camera": {
-        "movement": "dolly",
-        "movementDescription": {
-          "es": "Dolly; mantiene la línea de mirada y la continuidad del eje de acción.",
-          "en": "Dolly; preserves eyeline and action-axis continuity."
-        }
-      },
-      "durationMs": 8000,
-      "cuePlacements": [
         {
           "cueId": "festival-master:cue-0135",
-          "atMs": 0,
+          "atMs": 16760,
           "durationMs": 4060
         },
         {
           "cueId": "festival-master:cue-0136",
-          "atMs": 4900,
+          "atMs": 21660,
           "durationMs": 3100
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-067:take-01",
-        "festival-master:shot-plan-067:take-02",
-        "festival-master:shot-plan-067:take-03"
+        "festival-master:shot-plan-065:take-04"
       ],
-      "selectedTakeId": "festival-master:shot-plan-067:take-02",
+      "selectedTakeId": "festival-master:shot-plan-065:take-04",
       "purpose": {
-        "es": "Escena «No era la voz»: Elin Rao — actuar con proporción sin exagerar la certeza.",
-        "en": "Scene \"Not the voice\": Elin Rao — act proportionately without overstating certainty."
+        "en": "Carry Scene 22 in one take: accusation vs proof, converging evidence, isolate/release.",
+        "es": "needs_revision"
       }
     },
     {
@@ -16209,53 +16074,58 @@
       "number": 1,
       "order": 1,
       "description": {
-        "es": "Voss, decidido, restablece el orden: «La autoridad de red de Harlan queda revocada. Sorell, estás liberada. Necesito el saludo listo». Sorell, concentrada, vuelve al trabajo: «Lo tendrás».",
-        "en": "Voss, decisive, restores order: \"Harlan's network authority is revoked. Sorell, you are released. I need the greeting ready.\" Sorell, focused, returns to work: \"You'll have it.\"."
+        "en": "Single continuous bridge take: Voss revokes Harlan and releases Sorell; Rao reports failed aborts that never reach the autopilot; they commit to the aft local console while Okoye secures Harlan and the wrist device.",
+        "es": "needs_revision"
       },
       "locationId": "location:celestial-ardor-bridge",
       "visibleRefs": [
         {
           "kind": "character",
           "id": "character:voss",
-          "role": "speaking, in focus"
-        },
-        {
-          "kind": "character",
-          "id": "character:harlan",
-          "role": "present, listening"
-        },
-        {
-          "kind": "character",
-          "id": "character:sorell",
-          "role": "speaking, in focus"
+          "role": "speaking, at command"
         },
         {
           "kind": "character",
           "id": "character:rao",
-          "role": "present, listening"
+          "role": "speaking, at console"
+        },
+        {
+          "kind": "character",
+          "id": "character:sorell",
+          "role": "speaking then released, on approach duty"
+        },
+        {
+          "kind": "character",
+          "id": "character:harlan",
+          "role": "held, then secured"
         },
         {
           "kind": "character",
           "id": "character:okoye",
-          "role": "present, listening"
+          "role": "secures Harlan and wrist device"
+        },
+        {
+          "kind": "object",
+          "id": "object:harlan-wrist-device",
+          "role": "taken from Harlan at the close"
         }
       ],
       "composition": {
         "size": "MS",
         "aspectRatio": "16:9",
         "framing": {
-          "es": "Plano medio sobre Voss, Harlan, Sorell, Elin Rao, Okoye; Paneo; establece la geografía y la dirección en pantalla.",
-          "en": "Medium shot on Voss, Harlan, Sorell, Elin Rao, Okoye; Pan; establishes geography and screen direction."
+          "en": "Single continuous medium bridge composition; Voss at command, Rao at console, released Sorell, Okoye securing held Harlan.",
+          "es": "needs_revision"
         }
       },
       "camera": {
-        "movement": "pan",
+        "movement": "other",
         "movementDescription": {
-          "es": "Paneo; establece la geografía y la dirección en pantalla.",
-          "en": "Pan; establishes geography and screen direction."
+          "en": "One uninterrupted take; Seedance determines internal reframing across the eleven-minute pressure beat while preserving bridge geography.",
+          "es": "needs_revision"
         }
       },
-      "durationMs": 7260,
+      "durationMs": 29460,
       "cuePlacements": [
         {
           "cueId": "festival-master:cue-music-sabotage-04-change",
@@ -16270,179 +16140,40 @@
           "cueId": "festival-master:cue-0138",
           "atMs": 5840,
           "durationMs": 1420
-        }
-      ],
-      "takeIds": [
-        "festival-master:shot-plan-068:take-01"
-      ],
-      "selectedTakeId": "festival-master:shot-plan-068:take-01",
-      "purpose": {
-        "es": "Escena «Once minutos»: Voss — restaurar a la gente y los roles necesarios para sobrevivir; Sorell — volver al trabajo antes de procesar la injusticia.",
-        "en": "Scene \"Eleven minutes\": Voss — restore the people and roles needed to survive; Sorell — return to work before processing the injustice."
-      }
-    },
-    {
-      "id": "festival-master:shot-plan-069",
-      "sceneId": "festival-master:scene-23",
-      "beatIds": [
-        "festival-master:beat-23"
-      ],
-      "number": 2,
-      "order": 2,
-      "description": {
-        "es": "Durante ocho minutos comprimidos, Elin Rao, urgente, trabaja en una consola que muestra abortos fallidos repetidos: «Los comandos llegan. El plan nunca los ve. La ruta del puente está físicamente abierta».",
-        "en": "For eight compressed minutes, Elin Rao, urgent, works a console showing repeated failed abort attempts: \"Commands arrive. The autopilot never sees them. The bridge path is physically open.\"."
-      },
-      "locationId": "location:celestial-ardor-bridge",
-      "visibleRefs": [
-        {
-          "kind": "character",
-          "id": "character:voss",
-          "role": "present, listening"
         },
-        {
-          "kind": "character",
-          "id": "character:harlan",
-          "role": "present, listening"
-        },
-        {
-          "kind": "character",
-          "id": "character:sorell",
-          "role": "present, listening"
-        },
-        {
-          "kind": "character",
-          "id": "character:rao",
-          "role": "speaking, in focus"
-        },
-        {
-          "kind": "character",
-          "id": "character:okoye",
-          "role": "present, listening"
-        }
-      ],
-      "composition": {
-        "size": "CU",
-        "aspectRatio": "16:9",
-        "framing": {
-          "es": "Primer plano sobre Voss, Harlan, Sorell, Elin Rao, Okoye; Fija; mantiene la línea de mirada y la continuidad del eje de acción.",
-          "en": "Close-up on Voss, Harlan, Sorell, Elin Rao, Okoye; Locked; preserves eyeline and action-axis continuity."
-        }
-      },
-      "camera": {
-        "movement": "locked",
-        "movementDescription": {
-          "es": "Fija; mantiene la línea de mirada y la continuidad del eje de acción.",
-          "en": "Locked; preserves eyeline and action-axis continuity."
-        }
-      },
-      "durationMs": 9980,
-      "cuePlacements": [
         {
           "cueId": "festival-master:cue-0139",
-          "atMs": 0,
+          "atMs": 7260,
           "durationMs": 3900
         },
         {
           "cueId": "festival-master:cue-0140",
-          "atMs": 4000,
+          "atMs": 11260,
           "durationMs": 5980
-        }
-      ],
-      "takeIds": [
-        "festival-master:shot-plan-069:take-01"
-      ],
-      "selectedTakeId": "festival-master:shot-plan-069:take-01",
-      "purpose": {
-        "es": "Escena «Once minutos»: Elin Rao — ubicar la falla más allá del software.",
-        "en": "Scene \"Eleven minutes\": Elin Rao — locate the failure beyond software authority."
-      }
-    },
-    {
-      "id": "festival-master:shot-plan-070",
-      "sceneId": "festival-master:scene-23",
-      "beatIds": [
-        "festival-master:beat-23"
-      ],
-      "number": 3,
-      "order": 3,
-      "description": {
-        "es": "Voss, acorralado: «¿Dónde podemos romperlo?» Elin Rao, concentrada: «Consola local de popa. Tres minutos si el ascensor está libre». Voss, urgente, divide las tareas finales: «Ve. Sorell, mantén la aproximación. Okoye, asegúralo y toma ese dispositivo de muñeca».",
-        "en": "Voss, pressed: \"Where can we break it?\" Elin Rao, focused: \"Aft local console. Three minutes if the elevator is clear.\" Voss, urgent, divides the final tasks: \"Go. Sorell, stay on approach. Okoye, secure him and take that wrist device.\"."
-      },
-      "locationId": "location:celestial-ardor-bridge",
-      "visibleRefs": [
-        {
-          "kind": "character",
-          "id": "character:voss",
-          "role": "speaking, in focus"
         },
-        {
-          "kind": "character",
-          "id": "character:harlan",
-          "role": "present, listening"
-        },
-        {
-          "kind": "character",
-          "id": "character:sorell",
-          "role": "present, listening"
-        },
-        {
-          "kind": "character",
-          "id": "character:rao",
-          "role": "speaking, in focus"
-        },
-        {
-          "kind": "character",
-          "id": "character:okoye",
-          "role": "present, listening"
-        },
-        {
-          "kind": "object",
-          "id": "object:harlan-wrist-device",
-          "role": "on Harlan’s wrist as Voss orders it taken"
-        }
-      ],
-      "composition": {
-        "size": "OTS",
-        "aspectRatio": "16:9",
-        "framing": {
-          "es": "Plano por encima del hombro sobre Voss, Harlan, Sorell, Elin Rao, Okoye; Travelling; mantiene la línea de mirada y la continuidad del eje de acción.",
-          "en": "Over-the-shoulder shot on Voss, Harlan, Sorell, Elin Rao, Okoye; Tracking; preserves eyeline and action-axis continuity."
-        }
-      },
-      "camera": {
-        "movement": "tracking",
-        "movementDescription": {
-          "es": "Travelling; mantiene la línea de mirada y la continuidad del eje de acción.",
-          "en": "Tracking; preserves eyeline and action-axis continuity."
-        }
-      },
-      "durationMs": 12220,
-      "cuePlacements": [
         {
           "cueId": "festival-master:cue-0141",
-          "atMs": 0,
+          "atMs": 17240,
           "durationMs": 1260
         },
         {
           "cueId": "festival-master:cue-0142",
-          "atMs": 1360,
+          "atMs": 18600,
           "durationMs": 4060
         },
         {
           "cueId": "festival-master:cue-0143",
-          "atMs": 5520,
+          "atMs": 22760,
           "durationMs": 6700
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-070:take-01"
+        "festival-master:shot-plan-068:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-070:take-01",
+      "selectedTakeId": "festival-master:shot-plan-068:take-02",
       "purpose": {
-        "es": "Escena «Once minutos»: Voss — encontrar una intervención física; Elin Rao — comprometerse con la única ruta; Voss — repartir las tareas finales.",
-        "en": "Scene \"Eleven minutes\": Voss — find a physical intervention; Elin Rao — commit to the only route; Voss — divide the final tasks."
+        "en": "Carry Scene 23 in one take: release/order, abort failure, break-point decision.",
+        "es": "needs_revision"
       }
     },
     {
@@ -20324,205 +20055,6 @@
       }
     },
     {
-      "id": "festival-master:shot-plan-065:take-01",
-      "shotId": "festival-master:shot-plan-065",
-      "number": 1,
-      "status": "candidate",
-      "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Medium shot. Harlan, defensive, tries to separate accusation from proof:. Setting: the Celestial Ardor's compact circular bridge — six arc-mounted crew stations, a separate captain's chair, a six-seat meeting table, matte light-gray and warm off-white composite panels with muted slate-blue/teal accents, a helical stair ringing the central opening with continuous outer rails, curved pressure-hull wall with a few small reinforced windows, only the displays glowing blue. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. On frame: Voss, Harlan, Sorell, Elin Rao, Okoye; static appearance per the attached reference sheets. Locked, static frame, a clean, orthogonal, legible insert framing. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
-        "referenceAssetIds": [
-          "asset:character-voss-sheet",
-          "asset:character-harlan-sheet",
-          "asset:character-sorell-sheet",
-          "asset:character-rao-sheet",
-          "asset:character-okoye-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
-        ],
-        "provider": "OpenAI",
-        "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
-      },
-      "imageAssetId": "asset:festival-master-storyboard-065",
-      "imageStatus": {
-        "status": "needs_regeneration",
-        "reasons": [
-          "wrong_composition"
-        ],
-        "sourceShotId": "festival-master:shot-plan-065",
-        "explanation": {
-          "es": "Tamaño de plano placeholder reautorado para ajustarse a la acción en pantalla.",
-          "en": "Placeholder composition size re-authored to fit the on-screen action."
-        }
-      }
-    },
-    {
-      "id": "festival-master:shot-plan-066:take-01",
-      "shotId": "festival-master:shot-plan-066",
-      "number": 1,
-      "status": "candidate",
-      "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Medium close-up. Elin Rao, analytical, denies his premise and lists converging evidence. Harlan, cornered, counters:. Setting: the Celestial Ardor's compact circular bridge — six arc-mounted crew stations, a separate captain's chair, a six-seat meeting table, matte light-gray and warm off-white composite panels with muted slate-blue/teal accents, a helical stair ringing the central opening with continuous outer rails, curved pressure-hull wall with a few small reinforced windows, only the displays glowing blue. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. On frame: Voss, Harlan, Sorell, Elin Rao, Okoye; static appearance per the attached reference sheets. Frame implies a tracking move, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
-        "referenceAssetIds": [
-          "asset:character-voss-sheet",
-          "asset:character-harlan-sheet",
-          "asset:character-sorell-sheet",
-          "asset:character-rao-sheet",
-          "asset:character-okoye-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
-        ],
-        "provider": "OpenAI",
-        "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
-      },
-      "imageAssetId": "asset:festival-master-storyboard-066",
-      "imageStatus": {
-        "status": "needs_regeneration",
-        "reasons": [
-          "quality"
-        ],
-        "sourceShotId": "festival-master:shot-plan-066",
-        "explanation": {
-          "es": "Prompt depurado de apariencia restatada de referencias; regenerar con las hojas adjuntas.",
-          "en": "Prompt scrubbed of restated reference appearance; regenerate against the attached sheets."
-        }
-      }
-    },
-    {
-      "id": "festival-master:shot-plan-067:take-01",
-      "shotId": "festival-master:shot-plan-067",
-      "number": 1,
-      "status": "candidate",
-      "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Extreme long shot. Elin Rao, firm, sets the proportionate standard. Voss looks between Harlan and Sorell, seeing how much of his case came from his own first mistake. Setting: the Celestial Ardor's compact circular bridge — six arc-mounted crew stations, a separate captain's chair, a six-seat meeting table, matte light-gray and warm off-white composite panels with muted slate-blue/teal accents, a helical stair ringing the central opening with continuous outer rails, curved pressure-hull wall with a few small reinforced windows, only the displays glowing blue. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. On frame: Voss, Harlan, Sorell, Elin Rao, Okoye; static appearance per the attached reference sheets. Frame implies a dolly move, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
-        "referenceAssetIds": [
-          "asset:character-voss-sheet",
-          "asset:character-harlan-sheet",
-          "asset:character-sorell-sheet",
-          "asset:character-rao-sheet",
-          "asset:character-okoye-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
-        ],
-        "provider": "OpenAI",
-        "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
-      },
-      "imageAssetId": "asset:festival-master-storyboard-067",
-      "imageStatus": {
-        "status": "needs_regeneration",
-        "reasons": [
-          "quality"
-        ],
-        "sourceShotId": "festival-master:shot-plan-067",
-        "explanation": {
-          "es": "Prompt depurado de apariencia restatada de referencias; regenerar con las hojas adjuntas.",
-          "en": "Prompt scrubbed of restated reference appearance; regenerate against the attached sheets."
-        }
-      }
-    },
-    {
-      "id": "festival-master:shot-plan-068:take-01",
-      "shotId": "festival-master:shot-plan-068",
-      "number": 1,
-      "status": "selected",
-      "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Medium shot. Voss, decisive, restores order. Sorell, focused, returns to work:. Setting: the Celestial Ardor's compact circular bridge — six arc-mounted crew stations, a separate captain's chair, a six-seat meeting table, matte light-gray and warm off-white composite panels with muted slate-blue/teal accents, a helical stair ringing the central opening with continuous outer rails, curved pressure-hull wall with a few small reinforced windows, only the displays glowing blue. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. On frame: Voss, Harlan, Sorell, Elin Rao, Okoye; static appearance per the attached reference sheets. Frame implies a slow pan, establishing the space and holding consistent screen direction. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
-        "referenceAssetIds": [
-          "asset:character-voss-sheet",
-          "asset:character-harlan-sheet",
-          "asset:character-sorell-sheet",
-          "asset:character-rao-sheet",
-          "asset:character-okoye-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
-        ],
-        "provider": "OpenAI",
-        "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T17:01:44.431Z"
-      },
-      "imageAssetId": "asset:festival-master-storyboard-068",
-      "imageStatus": {
-        "status": "needs_review",
-        "reasons": [
-          "quality"
-        ],
-        "sourceShotId": "festival-master:shot-plan-068",
-        "explanation": {
-          "en": "Regenerated independent storyboard still; pending editorial review.",
-          "es": "Imagen de storyboard independiente regenerada; pendiente de revisión editorial."
-        }
-      }
-    },
-    {
-      "id": "festival-master:shot-plan-069:take-01",
-      "shotId": "festival-master:shot-plan-069",
-      "number": 1,
-      "status": "selected",
-      "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Close-up. For eight compressed minutes, Elin Rao, urgent, works a console showing repeated failed abort attempts:. Setting: the Celestial Ardor's compact circular bridge — six arc-mounted crew stations, a separate captain's chair, a six-seat meeting table, matte light-gray and warm off-white composite panels with muted slate-blue/teal accents, a helical stair ringing the central opening with continuous outer rails, curved pressure-hull wall with a few small reinforced windows, only the displays glowing blue. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. On frame: Voss, Harlan, Sorell, Elin Rao, Okoye; static appearance per the attached reference sheets. Detail. Console showing repeated abort-command attempts against an unresponsive flight-plan status, English labels only. Locked, static frame, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
-        "referenceAssetIds": [
-          "asset:character-voss-sheet",
-          "asset:character-harlan-sheet",
-          "asset:character-sorell-sheet",
-          "asset:character-rao-sheet",
-          "asset:character-okoye-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
-        ],
-        "provider": "OpenAI",
-        "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T17:03:41.542Z"
-      },
-      "imageAssetId": "asset:festival-master-storyboard-069",
-      "imageStatus": {
-        "status": "needs_review",
-        "reasons": [
-          "quality"
-        ],
-        "sourceShotId": "festival-master:shot-plan-069",
-        "explanation": {
-          "en": "Regenerated independent storyboard still; pending editorial review.",
-          "es": "Imagen de storyboard independiente regenerada; pendiente de revisión editorial."
-        }
-      }
-    },
-    {
-      "id": "festival-master:shot-plan-070:take-01",
-      "shotId": "festival-master:shot-plan-070",
-      "number": 1,
-      "status": "selected",
-      "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Over-the-shoulder shot. Voss, pressed. Elin Rao, focused. Voss, urgent, divides the final tasks:. Setting: the Celestial Ardor's compact circular bridge — six arc-mounted crew stations, a separate captain's chair, a six-seat meeting table, matte light-gray and warm off-white composite panels with muted slate-blue/teal accents, a helical stair ringing the central opening with continuous outer rails, curved pressure-hull wall with a few small reinforced windows, only the displays glowing blue. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. On frame: Voss, Harlan, Sorell, Elin Rao, Okoye; static appearance per the attached reference sheets. Frame implies a tracking move, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
-        "referenceAssetIds": [
-          "asset:character-voss-sheet",
-          "asset:character-harlan-sheet",
-          "asset:character-sorell-sheet",
-          "asset:character-rao-sheet",
-          "asset:character-okoye-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:object-harlan-wrist-device-sheet"
-        ],
-        "provider": "OpenAI",
-        "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T17:05:35.198Z"
-      },
-      "imageAssetId": "asset:festival-master-storyboard-070",
-      "imageStatus": {
-        "status": "needs_review",
-        "reasons": [
-          "quality"
-        ],
-        "sourceShotId": "festival-master:shot-plan-070",
-        "explanation": {
-          "en": "Regenerated independent storyboard still; pending editorial review.",
-          "es": "Imagen de storyboard independiente regenerada; pendiente de revisión editorial."
-        }
-      }
-    },
-    {
       "id": "festival-master:shot-plan-071:take-01",
       "shotId": "festival-master:shot-plan-071",
       "number": 1,
@@ -23382,102 +22914,6 @@
       "videoAssetId": "asset:festival-master-shot-plan-064-rev-1-video-1-video"
     },
     {
-      "id": "festival-master:shot-plan-065:take-02",
-      "shotId": "festival-master:shot-plan-065",
-      "number": 2,
-      "status": "candidate",
-      "imageAssetId": "asset:festival-master-stretch-bridge-command-break-064-067-panel-02",
-      "imageStatus": {
-        "status": "needs_review",
-        "reasons": [
-          "quality"
-        ],
-        "explanation": {
-          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
-        }
-      },
-      "generation": {
-        "provider": "OpenAI",
-        "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T16:23:27.993Z",
-        "visualStretchId": "festival-master:stretch-bridge-command-break-065-067",
-        "stretchJobId": "festival-master:stretch-bridge-command-break-065-067:rev-1",
-        "stretchDigest": "f5b0f1895cdeb02025303ae9e396d12b64e69cc797908171b3398b2c91a81fbc",
-        "referenceAssetIds": [
-          "asset:character-pair-voss-harlan-bridge-sheet",
-          "asset:character-pair-rao-sorell-bridge-sheet",
-          "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:object-harlan-wrist-device-sheet"
-        ]
-      }
-    },
-    {
-      "id": "festival-master:shot-plan-066:take-02",
-      "shotId": "festival-master:shot-plan-066",
-      "number": 2,
-      "status": "candidate",
-      "imageAssetId": "asset:festival-master-stretch-bridge-command-break-064-067-panel-03",
-      "imageStatus": {
-        "status": "needs_review",
-        "reasons": [
-          "quality"
-        ],
-        "explanation": {
-          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
-        }
-      },
-      "generation": {
-        "provider": "OpenAI",
-        "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T16:23:27.993Z",
-        "visualStretchId": "festival-master:stretch-bridge-command-break-065-067",
-        "stretchJobId": "festival-master:stretch-bridge-command-break-065-067:rev-1",
-        "stretchDigest": "f5b0f1895cdeb02025303ae9e396d12b64e69cc797908171b3398b2c91a81fbc",
-        "referenceAssetIds": [
-          "asset:character-pair-voss-harlan-bridge-sheet",
-          "asset:character-pair-rao-sorell-bridge-sheet",
-          "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:object-harlan-wrist-device-sheet"
-        ]
-      }
-    },
-    {
-      "id": "festival-master:shot-plan-067:take-02",
-      "shotId": "festival-master:shot-plan-067",
-      "number": 2,
-      "status": "candidate",
-      "imageAssetId": "asset:festival-master-stretch-bridge-command-break-064-067-panel-04",
-      "imageStatus": {
-        "status": "needs_review",
-        "reasons": [
-          "quality"
-        ],
-        "explanation": {
-          "en": "Derived panel 4 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 4 derivado de la hoja visual-stretch; pendiente de revisión editorial."
-        }
-      },
-      "generation": {
-        "provider": "OpenAI",
-        "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T16:23:27.993Z",
-        "visualStretchId": "festival-master:stretch-bridge-command-break-065-067",
-        "stretchJobId": "festival-master:stretch-bridge-command-break-065-067:rev-1",
-        "stretchDigest": "f5b0f1895cdeb02025303ae9e396d12b64e69cc797908171b3398b2c91a81fbc",
-        "referenceAssetIds": [
-          "asset:character-pair-voss-harlan-bridge-sheet",
-          "asset:character-pair-rao-sorell-bridge-sheet",
-          "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:object-harlan-wrist-device-sheet"
-        ]
-      }
-    },
-    {
       "id": "festival-master:shot-plan-071:take-02",
       "shotId": "festival-master:shot-plan-071",
       "number": 2,
@@ -23826,102 +23262,6 @@
       }
     },
     {
-      "id": "festival-master:shot-plan-065:take-03",
-      "shotId": "festival-master:shot-plan-065",
-      "number": 3,
-      "status": "candidate",
-      "imageAssetId": "asset:festival-master-stretch-bridge-command-break-065-067-panel-01",
-      "imageStatus": {
-        "status": "needs_review",
-        "reasons": [
-          "quality"
-        ],
-        "explanation": {
-          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
-        }
-      },
-      "generation": {
-        "provider": "OpenAI",
-        "model": "gpt-image-2",
-        "generatedAt": "2026-09-15T22:25:48.124Z",
-        "visualStretchId": "festival-master:stretch-bridge-command-break-065-067",
-        "stretchJobId": "festival-master:stretch-bridge-command-break-065-067:rev-2",
-        "stretchDigest": "39e7154ac30a9453c9003dbd07dc7c0b6d3f34fd774707485fee8d9db8110dba",
-        "referenceAssetIds": [
-          "asset:character-pair-voss-harlan-bridge-sheet",
-          "asset:character-pair-rao-sorell-bridge-sheet",
-          "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:object-harlan-wrist-device-sheet"
-        ]
-      }
-    },
-    {
-      "id": "festival-master:shot-plan-066:take-03",
-      "shotId": "festival-master:shot-plan-066",
-      "number": 3,
-      "status": "candidate",
-      "imageAssetId": "asset:festival-master-stretch-bridge-command-break-065-067-panel-02",
-      "imageStatus": {
-        "status": "needs_review",
-        "reasons": [
-          "quality"
-        ],
-        "explanation": {
-          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
-        }
-      },
-      "generation": {
-        "provider": "OpenAI",
-        "model": "gpt-image-2",
-        "generatedAt": "2026-09-15T22:25:48.124Z",
-        "visualStretchId": "festival-master:stretch-bridge-command-break-065-067",
-        "stretchJobId": "festival-master:stretch-bridge-command-break-065-067:rev-2",
-        "stretchDigest": "39e7154ac30a9453c9003dbd07dc7c0b6d3f34fd774707485fee8d9db8110dba",
-        "referenceAssetIds": [
-          "asset:character-pair-voss-harlan-bridge-sheet",
-          "asset:character-pair-rao-sorell-bridge-sheet",
-          "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:object-harlan-wrist-device-sheet"
-        ]
-      }
-    },
-    {
-      "id": "festival-master:shot-plan-067:take-03",
-      "shotId": "festival-master:shot-plan-067",
-      "number": 3,
-      "status": "candidate",
-      "imageAssetId": "asset:festival-master-stretch-bridge-command-break-065-067-panel-03",
-      "imageStatus": {
-        "status": "needs_review",
-        "reasons": [
-          "quality"
-        ],
-        "explanation": {
-          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
-        }
-      },
-      "generation": {
-        "provider": "OpenAI",
-        "model": "gpt-image-2",
-        "generatedAt": "2026-09-15T22:25:48.124Z",
-        "visualStretchId": "festival-master:stretch-bridge-command-break-065-067",
-        "stretchJobId": "festival-master:stretch-bridge-command-break-065-067:rev-2",
-        "stretchDigest": "39e7154ac30a9453c9003dbd07dc7c0b6d3f34fd774707485fee8d9db8110dba",
-        "referenceAssetIds": [
-          "asset:character-pair-voss-harlan-bridge-sheet",
-          "asset:character-pair-rao-sorell-bridge-sheet",
-          "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:object-harlan-wrist-device-sheet"
-        ]
-      }
-    },
-    {
       "id": "festival-master:shot-plan-050:take-03",
       "shotId": "festival-master:shot-plan-050",
       "number": 1,
@@ -24106,6 +23446,76 @@
         ],
         "prompt": "Single 16:9 bridge still for Scene 24 device beat. No spoken dialogue. Steady 1 g.",
         "videoPrompt": "Task: image-to-video (I2V). Generate one continuous 23.58-second Festival-master Scene 24 video from the attached single 16:9 bridge still. Use the Celestial Ardor bridge realistic location sheet, Voss–Harlan / Rao–Sorell / Okoye–Voss bridge pair sheets, and the Harlan wrist-device prop sheet for continuity; ignore pair-sheet backgrounds. Use Harlan, Okoye, and Voss voice samples for spoken cues. Treat this as one generation envelope; Seedance may decide its own internal coverage, reframing, pacing, and any internal transitions. Do not force external shot boundaries or prescribe a fixed camera path.\n\nContinuity: Celestial Ardor bridge under steady artificial 1 g throughout. Harlan, Okoye, Sorell (retained), and Voss as required by the beat. Wrist device when framed. No music, score, underscore, BGM, or dramatic instrumentation.\n\nSuggested beats (guidance only): perform cues 0144–0150 in order (device offer → demand/alert → shove/dive/hatch/alarms).\n\nCamera and finish: grounded hard-science-fiction photorealistic VFX. Native diegetic audio and spoken cues if enabled; no music/BGM. No subtitles, burned-in dialogue, logos, watermarks, or non-English UI. Aspect ratio 16:9.\n"
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-065:take-04",
+      "shotId": "festival-master:shot-plan-065",
+      "number": 4,
+      "status": "selected",
+      "imageAssetId": "asset:festival-master-stretch-bridge-command-break-065-067-panel-01",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "continuity_error"
+        ],
+        "explanation": {
+          "en": "Joined 065–067 reuses stretch panel-01; keep needs_regeneration for Sorell custody staging until replaced. Do not treat as Seedance-current.",
+          "es": "needs_revision"
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-15T00:00:00.000Z",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:object-harlan-wrist-device-sheet"
+        ],
+        "prompt": "Generate one single 16:9 landscape cinematic storyboard still for Festival-master Scene 22 opening state (Not the voice). Use the Celestial Ardor bridge realistic location sheet, the Voss-Harlan, Rao-Sorell, and Okoye-Voss bridge pair sheets (ignore pair-sheet backgrounds), and the Harlan wrist-device prop sheet. Steady 1 g: planted feet, normal weight. Harlan held/defensive at secondary console; Rao at analysis; Voss at command; Okoye watching; Sorell retained under watch in depth. No spoken dialogue text, subtitles, logos, watermark, storyboard sheet, or collage.",
+        "negativePrompt": "storyboard sheet, collage, floating debris, microgravity, free Sorell as collaborating crew, non-English text, logos, watermark",
+        "videoPrompt": "Task: image-to-video (I2V). Generate one continuous 24.76-second Festival-master Scene 22 video from the attached single 16:9 bridge still. Use the attached bridge location sheet, three bridge pair sheets (ignore pair backgrounds), and wrist-device sheet. Use asset:voice-ref-en-harlan and asset:voice-ref-en-elin for spoken cues. Treat this as one generation envelope; Seedance may decide its own internal coverage, reframing, pacing, and transitions. Do not force external shot boundaries.\n\nReference-role map:\n- asset:festival-master-stretch-bridge-command-break-065-067-panel-01: opening frame; preserve cast placement, bridge landmarks, 1 g weight.\n- asset:location-celestial-ardor-bridge-realistic-reference: bridge architecture.\n- asset:character-pair-voss-harlan-bridge-sheet: Voss/Harlan identity.\n- asset:character-pair-rao-sorell-bridge-sheet: Rao/Sorell identity; Sorell remains under watch.\n- asset:character-pair-okoye-voss-bridge-sheet: Okoye/Voss identity.\n- asset:object-harlan-wrist-device-sheet: wrist device when framed.\nAudio-role map: asset:voice-ref-en-harlan for Harlan; asset:voice-ref-en-elin for Rao. Speak only cue text below.\n\nContinuity: Celestial Ardor bridge under steady 1 g. Harlan held; Sorell retained under watch. No music, score, underscore, BGM, or dramatic instrumentation.\n\nSuggested beats (guidance only):\n[0.0–5.58 seconds] Harlan speaks with Harlan voice, saying exactly: {A voice and a face can be built from ship archives. You know that.}. Rao answers with Elin voice, saying exactly: {I'm not using the voice.}.\n[5.58–16.76 seconds] Rao lists converging evidence with Elin voice, saying exactly: {Her personal signature and timestamp are valid. All agree with her: the mass, neutrons, vector, lock, your missing location, and that accusation.}. Harlan replies with Harlan voice, saying exactly: {Agreement isn't proof.}.\n[16.76–24.76 seconds] Rao sets the standard with Elin voice, saying exactly: {No. It is enough to isolate you. It is enough to release her.}. Then Voss looks from Harlan to retained Sorell and sees how much of his case came from his first mistake (action only; no invented dialogue).\n\nCamera and finish: grounded hard-science-fiction photorealistic VFX. Native diegetic audio and spoken cues if enabled; no music/BGM. No subtitles, burned-in dialogue, logos, watermarks, or non-English UI. Aspect ratio 16:9.",
+        "videoReferenceAssetIds": [
+          "asset:festival-master-stretch-bridge-command-break-065-067-panel-01"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-068:take-02",
+      "shotId": "festival-master:shot-plan-068",
+      "number": 2,
+      "status": "selected",
+      "imageAssetId": "asset:festival-master-storyboard-068",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Joined 068–070 reuses storyboard-068 as single-take keyframe; editorial review pending. No image regen in this pass.",
+          "es": "needs_revision"
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-16T00:00:00.000Z",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:object-harlan-wrist-device-sheet"
+        ],
+        "prompt": "Generate one single 16:9 landscape cinematic storyboard still for Festival-master Scene 23 opening state (Eleven minutes). Use the Celestial Ardor bridge realistic location sheet, the Voss-Harlan, Rao-Sorell, and Okoye-Voss bridge pair sheets (ignore pair-sheet backgrounds), and the Harlan wrist-device prop sheet. Steady 1 g. Voss at command restoring order; Harlan held; Sorell present (about to be released); Rao and Okoye on the bridge. No spoken dialogue text, subtitles, logos, watermark, storyboard sheet, or collage.",
+        "negativePrompt": "storyboard sheet, collage, floating debris, microgravity, non-English text, logos, watermark",
+        "videoPrompt": "Task: image-to-video (I2V). Generate one continuous 29.46-second Festival-master Scene 23 video from the attached single 16:9 bridge still. Use the attached bridge location sheet, three bridge pair sheets (ignore pair backgrounds), and wrist-device sheet. Use asset:voice-ref-en-voss, asset:voice-ref-en-elin, and asset:voice-ref-en-sorell for spoken cues. Treat this as one generation envelope; Seedance may decide its own internal coverage, reframing, pacing, and transitions. Do not force external shot boundaries.\n\nReference-role map:\n- asset:festival-master-storyboard-068: opening frame; preserve cast placement, bridge landmarks, 1 g weight.\n- asset:location-celestial-ardor-bridge-realistic-reference: bridge architecture.\n- asset:character-pair-voss-harlan-bridge-sheet: Voss/Harlan identity.\n- asset:character-pair-rao-sorell-bridge-sheet: Rao/Sorell identity.\n- asset:character-pair-okoye-voss-bridge-sheet: Okoye/Voss identity.\n- asset:object-harlan-wrist-device-sheet: wrist device for the secure-him beat.\nAudio-role map: asset:voice-ref-en-voss for Voss; asset:voice-ref-en-elin for Rao; asset:voice-ref-en-sorell for Sorell. Speak only cue text below.\n\nContinuity: Celestial Ardor bridge under steady 1 g throughout. After Voss's order, Sorell is released (no longer under watch). Editorial soundtrack cue stays in post — no music/BGM in the Seedance render.\n\nSuggested beats (guidance only):\n[0.0–7.26 seconds] Voss speaks with Voss voice, saying exactly: {Harlan's network authority is revoked. Sorell, you are released. I need the greeting ready.}. Sorell answers with Sorell voice, saying exactly: {You'll have it.}. After this order, Sorell is released (no longer under watch).\n[7.26–11.26 seconds] Eight compressed minutes of failed aborts: normal aborts and the remote cutoff reach the system but not the autonomous plan (action/time compression only; no invented dialogue).\n[11.26–17.24 seconds] Rao speaks with Elin voice, saying exactly: {Commands arrive. The autopilot never sees them. The bridge path is physically open.}.\n[17.24–29.46 seconds] Voss asks with Voss voice, saying exactly: {Where can we break it?}. Rao answers with Elin voice, saying exactly: {Aft local console. Three minutes if the elevator is clear.}. Voss divides labor with Voss voice, saying exactly: {Go. Sorell, stay on approach. Okoye, secure him and take that wrist device.}.\n\nCamera and finish: grounded hard-science-fiction photorealistic VFX. Native diegetic audio and spoken cues if enabled; no music/BGM. No subtitles, burned-in dialogue, logos, watermarks, or non-English UI. Aspect ratio 16:9.",
+        "videoReferenceAssetIds": [
+          "asset:festival-master-storyboard-068"
+        ]
       }
     }
   ],
@@ -27563,172 +26973,6 @@
         }
       ],
       "combinedStillAssetId": "asset:festival-master-stretch-bridge-command-break-064-sheet",
-      "videoPromptFreeze": {
-        "status": "approved",
-        "approvedAt": "2026-09-15",
-        "source": "agent authorship prep scenes 20-22; submit Seedance only after still regen + human go"
-      }
-    },
-    {
-      "id": "festival-master:stretch-bridge-command-break-065-067",
-      "title": {
-        "en": "Command break (065–067)",
-        "es": "Ruptura de mando (065–067)"
-      },
-      "status": "draft",
-      "revision": 2,
-      "members": [
-        {
-          "shotId": "festival-master:shot-plan-065",
-          "order": 1,
-          "takeScope": "selected",
-          "keyframeRole": "establish",
-          "startState": {
-            "en": "Same 1 g bridge confrontation geography; Okoye still interposed near Harlan.",
-            "es": "needs_revision"
-          },
-          "event": {
-            "en": "Harlan, defensive, tries to separate accusation from proof—voice and face could be built from ship archives—while Rao listens ready to deny the premise.",
-            "es": "needs_revision"
-          },
-          "endState": {
-            "en": "Doubt is planted; Harlan remains held in place.",
-            "es": "needs_revision"
-          }
-        },
-        {
-          "shotId": "festival-master:shot-plan-066",
-          "order": 2,
-          "takeScope": "selected",
-          "keyframeRole": "develop",
-          "startState": {
-            "en": "Continuous 1 g blocking; Rao steps the evidence forward at her console / toward Harlan.",
-            "es": "needs_revision"
-          },
-          "event": {
-            "en": "Rao, analytical, lists converging independent evidence (signature, timestamp, mass, neutrons, vector, lock, missing location, accusation) without relying on the voice; Harlan counters that agreement is not proof.",
-            "es": "needs_revision"
-          },
-          "endState": {
-            "en": "The case against Harlan is stronger but not closed.",
-            "es": "needs_revision"
-          }
-        },
-        {
-          "shotId": "festival-master:shot-plan-067",
-          "order": 3,
-          "takeScope": "selected",
-          "keyframeRole": "payoff",
-          "startState": {
-            "en": "Wide bridge under 1 g; five still in the same geography.",
-            "es": "needs_revision"
-          },
-          "event": {
-            "en": "Rao sets the proportionate standard—enough to isolate Harlan, enough to release Zao; Voss looks between Harlan and Sorell, recognizing how much of his case came from his own first mistake.",
-            "es": "needs_revision"
-          },
-          "endState": {
-            "en": "Isolation of Harlan and the path to releasing Zao are established.",
-            "es": "needs_revision"
-          }
-        }
-      ],
-      "locationId": "location:celestial-ardor-bridge",
-      "presentCharacterIds": [
-        "character:harlan",
-        "character:okoye",
-        "character:rao",
-        "character:sorell",
-        "character:voss"
-      ],
-      "absentCharacterIds": [],
-      "physics": {
-        "en": "Steady 1 g artificial gravity on the bridge after thrust restore: feet planted, normal weight, seated or standing as blocked, no floating debris or drifting hair.",
-        "es": "needs_revision"
-      },
-      "lighting": {
-        "en": "Bridge practicals and English-only console glow; matte panels; no smoke or haze.",
-        "es": "needs_revision"
-      },
-      "blocking": [
-        {
-          "characterId": "character:harlan",
-          "zoneOrSeat": "held position screen-right",
-          "screenSide": "right",
-          "facing": "Rao and Voss",
-          "posture": "standing, defensive",
-          "eyelineTarget": "character:rao"
-        },
-        {
-          "characterId": "character:rao",
-          "zoneOrSeat": "analysis / confrontation mid-left",
-          "screenSide": "left",
-          "facing": "Harlan",
-          "posture": "standing, analytical then firm",
-          "eyelineTarget": "character:harlan"
-        },
-        {
-          "characterId": "character:voss",
-          "zoneOrSeat": "command center",
-          "screenSide": "center",
-          "facing": "Harlan and Sorell",
-          "posture": "standing",
-          "eyelineTarget": "character:harlan"
-        },
-        {
-          "characterId": "character:okoye",
-          "zoneOrSeat": "interposed near Harlan",
-          "screenSide": "right",
-          "facing": "Harlan",
-          "posture": "standing, securing",
-          "eyelineTarget": "character:harlan"
-        },
-        {
-          "characterId": "character:sorell",
-          "zoneOrSeat": "depth near translator station",
-          "screenSide": "left",
-          "facing": "Voss and Harlan",
-          "posture": "standing",
-          "eyelineTarget": "character:voss"
-        }
-      ],
-      "sharedDescription": {
-        "en": "Three-panel command-break argument under steady 1 g. Harlan is the younger clean-shaven dark-haired officer (right panel of the Voss–Harlan pair sheet); Voss is the older silver-bearded captain (left panel of that sheet)—never swap them. Rao is the East-Asian woman in the lighter gray jacket (Rao–Sorell pair sheet); Sorell is the other woman on that sheet; Okoye is the Black woman with short natural hair (Okoye–Voss pair sheet). Ignore studio/pair-sheet backgrounds; use only the bridge location reference for architecture. No burned-in spoken dialogue or subtitles; English-only diegetic UI when visible. Harlan remains held; Okoye stays interposed; Rao drives the evidence; Voss absorbs the cost of his first mistake. Wrist device visible on Harlan when framed. Ignore pair-sheet backgrounds.",
-        "es": "needs_revision"
-      },
-      "generationProfile": {
-        "stillMode": "combined_storyboard_sheet",
-        "videoMode": "grouped_seedance",
-        "gridLayout": {
-          "rows": 2,
-          "cols": 2,
-          "gutterFraction": 0.02,
-          "panelAspect": "16:9",
-          "blankCells": [
-            4
-          ]
-        },
-        "maxMembersPerVideoJob": 1
-      },
-      "referenceAssetIds": [
-        "asset:character-pair-voss-harlan-bridge-sheet",
-        "asset:character-pair-rao-sorell-bridge-sheet",
-        "asset:character-pair-okoye-voss-bridge-sheet",
-        "asset:location-celestial-ardor-bridge-realistic-reference",
-        "asset:object-harlan-wrist-device-sheet"
-      ],
-      "notes": [
-        {
-          "id": "note:command-break-scene-split",
-          "type": "production",
-          "status": "resolved",
-          "text": {
-            "en": "Split from stretch-bridge-command-break-064-067: scene 22 only.",
-            "es": "needs_revision"
-          }
-        }
-      ],
-      "combinedStillAssetId": "asset:festival-master-stretch-bridge-command-break-065-067-sheet",
       "videoPromptFreeze": {
         "status": "approved",
         "approvedAt": "2026-09-15",
