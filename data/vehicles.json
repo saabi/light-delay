@@ -12,6 +12,7 @@
         "en": "An 80–100 m, ~300 t axial ship with D–³He torch, liquid-metal radiators, and two-week endurance. Transverse decks connect through a central cylinder, lift, and service cylinder. Its off-axis diplomatic core was retrofitted at Proxima after Earth construction."
       },
       "factionId": "faction:human",
+      "homeLocationId": "location:celestial-ardor",
       "referenceAssetIds": [
         "asset:vehicle-celestial-ardor-jupiter",
         "asset:vehicle-celestial-ardor-model-sheet-v2"

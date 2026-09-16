@@ -1,6 +1,122 @@
 {
-  "schemaVersion": "1.1.0",
+  "schemaVersion": "2.0.0",
+  "distanceUnit": "abstract",
   "locations": [
+    {
+      "name": {
+        "en": "Universe",
+        "es": "needs_revision"
+      },
+      "description": {
+        "en": "Synthetic root of the location containment tree. Not a shootable set.",
+        "es": "needs_revision"
+      },
+      "spatialKind": "universe",
+      "shootable": false,
+      "referenceAssetIds": [],
+      "atmosphere": {
+        "en": "Cosmographic root",
+        "es": "needs_revision"
+      },
+      "id": "location:universe-root"
+    },
+    {
+      "name": {
+        "en": "Sol — Jupiter region",
+        "es": "needs_revision"
+      },
+      "description": {
+        "en": "Story region around Jupiter: Proxima Station, periapsis flybys, and the near-side Velari tunnel mouth.",
+        "es": "needs_revision"
+      },
+      "spatialKind": "region",
+      "shootable": false,
+      "parentLocationId": "location:universe-root",
+      "parentRelation": "region_of",
+      "referenceAssetIds": [],
+      "atmosphere": {
+        "en": "Jupiter-space operations",
+        "es": "needs_revision"
+      },
+      "id": "location:region-sol-jupiter"
+    },
+    {
+      "name": {
+        "en": "Velari space",
+        "es": "needs_revision"
+      },
+      "description": {
+        "en": "Far-side region beyond the Velari tunnel gate, hosting the Velari Station destination.",
+        "es": "needs_revision"
+      },
+      "spatialKind": "region",
+      "shootable": false,
+      "parentLocationId": "location:universe-root",
+      "parentRelation": "region_of",
+      "referenceAssetIds": [],
+      "atmosphere": {
+        "en": "Beyond the gate",
+        "es": "needs_revision"
+      },
+      "id": "location:region-velari-space"
+    },
+    {
+      "name": {
+        "en": "Celestial Ardor",
+        "es": "needs_revision"
+      },
+      "description": {
+        "en": "Hull host for all Celestial Ardor interior volumes. Mirrors vehicle:celestial-ardor for containment; rooms and spines are aboard this location.",
+        "es": "needs_revision"
+      },
+      "spatialKind": "vessel",
+      "shootable": false,
+      "parentLocationId": "location:region-sol-jupiter",
+      "parentRelation": "stationed_in",
+      "referenceAssetIds": [
+        "asset:vehicle-celestial-ardor-model-sheet-v2",
+        "asset:vehicle-celestial-ardor-jupiter"
+      ],
+      "atmosphere": {
+        "en": "Ship hull host",
+        "es": "needs_revision"
+      },
+      "notes": [
+        {
+          "id": "note:celestial-ardor-location-host",
+          "type": "technical",
+          "status": "resolved",
+          "priority": "medium",
+          "text": {
+            "en": "Structural location for hierarchy; prefer deck/room locationIds on shots. Vehicle entity remains vehicle:celestial-ardor.",
+            "es": "needs_revision"
+          }
+        }
+      ],
+      "id": "location:celestial-ardor"
+    },
+    {
+      "id": "location:jupiter-periapsis",
+      "name": {
+        "es": "Periapsis de Júpiter",
+        "en": "Jupiter Periapsis"
+      },
+      "description": {
+        "es": "El Ardor pasa junto a Júpiter en la periapsis cerca de ~1.000 km/s, retroiluminado por las bandas nubosas del planeta y los arcos tenues de su anillo mientras inicia el giro de punta a punta de prógrada a retrógrada; radiadores recogidos para la maniobra.",
+        "en": "The Ardor passes Jupiter at periapsis near ~1,000 km/s, backlit by the planet's banded cloud tops and faint ring arcs as it begins the end-for-end turn from prograde to retrograde; radiators retracted for the maneuver."
+      },
+      "referenceAssetIds": [
+        "asset:vehicle-celestial-ardor-jupiter"
+      ],
+      "atmosphere": {
+        "es": "Umbral de la primera caída de gravedad",
+        "en": "Threshold of the first gravity dip"
+      },
+      "spatialKind": "exterior",
+      "shootable": true,
+      "parentLocationId": "location:region-sol-jupiter",
+      "parentRelation": "in_space_of"
+    },
     {
       "id": "location:proxima-station",
       "name": {
@@ -18,7 +134,11 @@
       "atmosphere": {
         "es": "Exterior y silueta orbital",
         "en": "Orbital exterior and silhouette"
-      }
+      },
+      "spatialKind": "facility",
+      "shootable": true,
+      "parentLocationId": "location:region-sol-jupiter",
+      "parentRelation": "stationed_in"
     },
     {
       "id": "location:proxima-dock",
@@ -37,7 +157,55 @@
       "atmosphere": {
         "es": "Partida del Celestial Ardor",
         "en": "Celestial Ardor departure"
-      }
+      },
+      "spatialKind": "room",
+      "shootable": true,
+      "parentLocationId": "location:proxima-station",
+      "parentRelation": "contained_in"
+    },
+    {
+      "id": "location:velari-wormhole-mouth",
+      "name": {
+        "es": "Boca Velari del túnel",
+        "en": "Velari Tunnel Mouth"
+      },
+      "description": {
+        "es": "Campo distribuido de nodos negros separados por kilómetros; nunca un aro. La apertura de 150–200 m sólo existe durante el pulso energético.",
+        "en": "Distributed field of black nodes separated by kilometres, never a ring. The 150–200 m opening exists only during the energy pulse."
+      },
+      "referenceAssetIds": [
+        "asset:location-velari-wormhole-mouth-sheet"
+      ],
+      "atmosphere": {
+        "es": "Umbral y ventana única",
+        "en": "Threshold and single window"
+      },
+      "spatialKind": "exterior",
+      "shootable": true,
+      "parentLocationId": "location:region-sol-jupiter",
+      "parentRelation": "in_space_of"
+    },
+    {
+      "id": "location:velari-station",
+      "name": {
+        "es": "Estación Velari",
+        "en": "Velari Station"
+      },
+      "description": {
+        "es": "Hábitat orgánico continuo de varios kilómetros. La escala, la piel viva y los ecosistemas internos sugieren una civilización muy anterior a la humana.",
+        "en": "Continuous organic habitat several kilometres across. Its scale, living skin, and internal ecosystems imply a civilization far older than humanity."
+      },
+      "referenceAssetIds": [
+        "asset:location-velari-station-sheet"
+      ],
+      "atmosphere": {
+        "es": "Destino del primer contacto",
+        "en": "First-contact destination"
+      },
+      "spatialKind": "facility",
+      "shootable": true,
+      "parentLocationId": "location:region-velari-space",
+      "parentRelation": "stationed_in"
     },
     {
       "id": "location:celestial-ardor-bridge",
@@ -57,7 +225,49 @@
       "atmosphere": {
         "es": "Centro de mando",
         "en": "Command center"
-      }
+      },
+      "spatialKind": "room",
+      "shootable": true,
+      "parentLocationId": "location:celestial-ardor",
+      "parentRelation": "aboard",
+      "portals": [
+        {
+          "id": "portal:bridge-service-hatch",
+          "kind": "door",
+          "towardLocationId": "location:celestial-ardor-service-cylinder",
+          "bidirectional": true,
+          "notes": "Dark rounded-corner service hatch beside stations (hidden from normal console sightline)."
+        },
+        {
+          "id": "portal:bridge-central-access-opening",
+          "kind": "door",
+          "towardLocationId": "location:celestial-ardor-central-access",
+          "bidirectional": true,
+          "notes": "Helical stair / central opening between bridge deck and axial trunk."
+        }
+      ]
+    },
+    {
+      "id": "location:celestial-ardor-bridge-meal-table",
+      "name": {
+        "es": "Mesa de comida del puente del Celestial Ardor",
+        "en": "Celestial Ardor Bridge Meal Table"
+      },
+      "description": {
+        "es": "Sububicación de la mesa de reunión de seis plazas junto a la abertura central y la escalera helicoidal del puente. Conserva la orientación, los tres asientos por lado largo, el display de la pared del casco y la gravedad aparente de 1 g bajo empuje del puente principal.",
+        "en": "Six-seat meeting-table sublocation beside the bridge's central opening and helical stair. It preserves the orientation, three seats on each long side, the hull-wall display, and the bridge's apparent 1 g under thrust."
+      },
+      "parentLocationId": "location:celestial-ardor-bridge",
+      "referenceAssetIds": [
+        "asset:location-celestial-ardor-bridge-meal-table-sheet"
+      ],
+      "atmosphere": {
+        "es": "Comida y conversación en el puente",
+        "en": "Bridge meal and conversation"
+      },
+      "spatialKind": "sublocation",
+      "shootable": true,
+      "parentRelation": "sublocation_of"
     },
     {
       "id": "location:celestial-ardor-command-vestibule",
@@ -87,26 +297,27 @@
             "en": "A visual reference for the command axial vestibule is pending; used across several Festival scenes."
           }
         }
-      ]
-    },
-    {
-      "id": "location:celestial-ardor-bridge-meal-table",
-      "name": {
-        "es": "Mesa de comida del puente del Celestial Ardor",
-        "en": "Celestial Ardor Bridge Meal Table"
-      },
-      "description": {
-        "es": "Sububicación de la mesa de reunión de seis plazas junto a la abertura central y la escalera helicoidal del puente. Conserva la orientación, los tres asientos por lado largo, el display de la pared del casco y la gravedad aparente de 1 g bajo empuje del puente principal.",
-        "en": "Six-seat meeting-table sublocation beside the bridge's central opening and helical stair. It preserves the orientation, three seats on each long side, the hull-wall display, and the bridge's apparent 1 g under thrust."
-      },
-      "parentLocationId": "location:celestial-ardor-bridge",
-      "referenceAssetIds": [
-        "asset:location-celestial-ardor-bridge-meal-table-sheet"
       ],
-      "atmosphere": {
-        "es": "Comida y conversación en el puente",
-        "en": "Bridge meal and conversation"
-      }
+      "spatialKind": "sublocation",
+      "shootable": true,
+      "parentLocationId": "location:celestial-ardor-bridge",
+      "parentRelation": "sublocation_of",
+      "portals": [
+        {
+          "id": "portal:vestibule-service-cylinder",
+          "kind": "door",
+          "towardLocationId": "location:celestial-ardor-service-cylinder",
+          "bidirectional": true,
+          "notes": "Landing beside service cylinder railing opening."
+        },
+        {
+          "id": "portal:vestibule-central-access",
+          "kind": "door",
+          "towardLocationId": "location:celestial-ardor-central-access",
+          "bidirectional": true,
+          "notes": "Landing toward central-access / lift heads."
+        }
+      ]
     },
     {
       "id": "location:celestial-ardor-central-access",
@@ -136,6 +347,30 @@
             "es": "La referencia visual del cilindro central de acceso ya está generada y conectada; queda pendiente la revisión editorial.",
             "en": "The central access cylinder reference was editorially approved on 2026-09-14 and remains wired to the master-derived location."
           }
+        }
+      ],
+      "spatialKind": "axial_spine",
+      "shootable": true,
+      "parentLocationId": "location:celestial-ardor",
+      "parentRelation": "aboard",
+      "connects": [
+        {
+          "deckLocationId": "location:celestial-ardor-bridge",
+          "relation": "opens_onto",
+          "levelId": "bridge",
+          "notes": "Helical opening / command vestibule"
+        },
+        {
+          "deckLocationId": "location:celestial-ardor-engineering",
+          "relation": "opens_onto",
+          "levelId": "engineering",
+          "notes": "Mid/aft landings as authored"
+        },
+        {
+          "deckLocationId": "location:celestial-ardor-reactor-service-bay",
+          "relation": "terminus_at",
+          "levelId": "aft-reactor",
+          "notes": "Bottom of the shaft — scene 19 geography"
         }
       ]
     },
@@ -167,6 +402,30 @@
             "en": "The service cylinder reference is generated and wired to the master-derived location; editorial review remains pending."
           }
         }
+      ],
+      "spatialKind": "axial_spine",
+      "shootable": true,
+      "parentLocationId": "location:celestial-ardor",
+      "parentRelation": "aboard",
+      "connects": [
+        {
+          "deckLocationId": "location:celestial-ardor-bridge",
+          "relation": "hatch_into",
+          "levelId": "bridge",
+          "notes": "Bridge service hatch"
+        },
+        {
+          "deckLocationId": "location:celestial-ardor-command-vestibule",
+          "relation": "hatch_into",
+          "levelId": "bridge",
+          "notes": "Vestibule landing beside service cylinder"
+        },
+        {
+          "deckLocationId": "location:diplomatic-core-room",
+          "relation": "opens_onto",
+          "levelId": "diplomatic-core",
+          "notes": "Technical branch per location description"
+        }
       ]
     },
     {
@@ -185,7 +444,11 @@
       "atmosphere": {
         "es": "Diagnóstico y cuarentena",
         "en": "Diagnostics and quarantine"
-      }
+      },
+      "spatialKind": "room",
+      "shootable": true,
+      "parentLocationId": "location:celestial-ardor",
+      "parentRelation": "aboard"
     },
     {
       "id": "location:celestial-ardor-reactor-service-bay",
@@ -215,6 +478,18 @@
             "es": "La referencia visual derivada del master para este espacio ya está generada y conectada; queda pendiente la revisión editorial.",
             "en": "The master-derived visual reference for this space is generated and wired; editorial review remains pending."
           }
+        }
+      ],
+      "spatialKind": "room",
+      "shootable": true,
+      "parentRelation": "contained_in",
+      "portals": [
+        {
+          "id": "portal:bay-vault-door",
+          "kind": "door",
+          "towardLocationId": "location:celestial-ardor-inner-shielding-vault",
+          "bidirectional": true,
+          "notes": "Sealed local-lock vault door; walkable only when open/unlocked in world state."
         }
       ]
     },
@@ -247,7 +522,10 @@
             "en": "The master-derived visual reference for the vault and its local lock is generated and wired; editorial review remains pending."
           }
         }
-      ]
+      ],
+      "spatialKind": "room",
+      "shootable": true,
+      "parentRelation": "recessed_in"
     },
     {
       "id": "location:diplomatic-core-room",
@@ -265,61 +543,119 @@
       "atmosphere": {
         "es": "Escenario del sabotaje",
         "en": "Sabotage site"
-      }
+      },
+      "spatialKind": "room",
+      "shootable": true,
+      "parentLocationId": "location:celestial-ardor",
+      "parentRelation": "aboard"
+    }
+  ],
+  "navNodes": [
+    {
+      "id": "nav:bridge-crew-stations",
+      "hostLocationId": "location:celestial-ardor-bridge",
+      "navOnly": true,
+      "name": {
+        "en": "Bridge crew stations arc",
+        "es": "needs_revision"
+      },
+      "notes": "Waypoint for pathfinding meal-table ↔ stations without a separate catalog room."
+    }
+  ],
+  "proximityEdges": [
+    {
+      "a": "location:proxima-station",
+      "b": "location:proxima-dock",
+      "distance": 0,
+      "notes": "Dock is on-station; colocated for transporter/site tests."
     },
     {
-      "id": "location:velari-wormhole-mouth",
-      "name": {
-        "es": "Boca Velari del túnel",
-        "en": "Velari Tunnel Mouth"
-      },
-      "description": {
-        "es": "Campo distribuido de nodos negros separados por kilómetros; nunca un aro. La apertura de 150–200 m sólo existe durante el pulso energético.",
-        "en": "Distributed field of black nodes separated by kilometres, never a ring. The 150–200 m opening exists only during the energy pulse."
-      },
-      "referenceAssetIds": [
-        "asset:location-velari-wormhole-mouth-sheet"
-      ],
-      "atmosphere": {
-        "es": "Umbral y ventana única",
-        "en": "Threshold and single window"
-      }
+      "a": "location:jupiter-periapsis",
+      "b": "location:velari-wormhole-mouth",
+      "distance": 40,
+      "notes": "Same Jupiter-region operations neighborhood (illustrative abstract units)."
     },
     {
-      "id": "location:jupiter-periapsis",
-      "name": {
-        "es": "Periapsis de Júpiter",
-        "en": "Jupiter Periapsis"
-      },
-      "description": {
-        "es": "El Ardor pasa junto a Júpiter en la periapsis cerca de ~1.000 km/s, retroiluminado por las bandas nubosas del planeta y los arcos tenues de su anillo mientras inicia el giro de punta a punta de prógrada a retrógrada; radiadores recogidos para la maniobra.",
-        "en": "The Ardor passes Jupiter at periapsis near ~1,000 km/s, backlit by the planet's banded cloud tops and faint ring arcs as it begins the end-for-end turn from prograde to retrograde; radiators retracted for the maneuver."
-      },
-      "referenceAssetIds": [
-        "asset:vehicle-celestial-ardor-jupiter"
-      ],
-      "atmosphere": {
-        "es": "Umbral de la primera caída de gravedad",
-        "en": "Threshold of the first gravity dip"
-      }
+      "a": "location:velari-wormhole-mouth",
+      "b": "location:region-velari-space",
+      "distance": 1000,
+      "notes": "Gate crossing scale — far side is a different region."
     },
     {
-      "id": "location:velari-station",
-      "name": {
-        "es": "Estación Velari",
-        "en": "Velari Station"
-      },
-      "description": {
-        "es": "Hábitat orgánico continuo de varios kilómetros. La escala, la piel viva y los ecosistemas internos sugieren una civilización muy anterior a la humana.",
-        "en": "Continuous organic habitat several kilometres across. Its scale, living skin, and internal ecosystems imply a civilization far older than humanity."
-      },
-      "referenceAssetIds": [
-        "asset:location-velari-station-sheet"
+      "a": "location:celestial-ardor",
+      "b": "location:proxima-dock",
+      "distance": 0,
+      "notes": "When berthed; continuity presence may override while underway."
+    }
+  ],
+  "navEdges": [
+    {
+      "id": "nav-edge:meal-table-around-to-stations",
+      "from": "location:celestial-ardor-bridge-meal-table",
+      "to": "nav:bridge-crew-stations",
+      "via": "around-central-opening-rail",
+      "cost": 1,
+      "tags": [
+        "around-central-opening"
       ],
-      "atmosphere": {
-        "es": "Destino del primer contacto",
-        "en": "First-contact destination"
-      }
+      "bidirectional": true,
+      "notes": "1g-safe walk around the helical opening."
+    },
+    {
+      "id": "nav-edge:meal-table-across-shaft-to-stations",
+      "from": "location:celestial-ardor-bridge-meal-table",
+      "to": "nav:bridge-crew-stations",
+      "via": "across-open-shaft",
+      "requires": [
+        {
+          "key": "gravity",
+          "eq": "microgravity"
+        }
+      ],
+      "cost": 1,
+      "tags": [
+        "crosses-open-shaft"
+      ],
+      "bidirectional": true,
+      "notes": "Only valid in microgravity; falling risk under 1g."
+    },
+    {
+      "id": "nav-edge:stations-to-service-hatch",
+      "from": "nav:bridge-crew-stations",
+      "to": "location:celestial-ardor-service-cylinder",
+      "via": "portal:bridge-service-hatch",
+      "requires": [
+        {
+          "key": "door:service-hatch-bridge",
+          "eq": "open"
+        }
+      ],
+      "cost": 1,
+      "tags": [
+        "service-cylinder"
+      ],
+      "bidirectional": true
+    },
+    {
+      "id": "nav-edge:stations-to-central-access",
+      "from": "nav:bridge-crew-stations",
+      "to": "location:celestial-ardor-central-access",
+      "via": "portal:bridge-central-access-opening",
+      "requires": [
+        {
+          "key": "gravity",
+          "in": [
+            "microgravity",
+            "1g"
+          ]
+        }
+      ],
+      "cost": 1,
+      "tags": [
+        "central-access"
+      ],
+      "bidirectional": true,
+      "notes": "Deck interface; open-shaft crossing elsewhere may still be MG-gated."
     }
   ]
 }

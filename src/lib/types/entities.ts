@@ -68,17 +68,87 @@ export interface VoiceProfile {
 	variants: VoiceProfileVariant[];
 }
 
+export type LocationSpatialKind =
+	| 'universe'
+	| 'region'
+	| 'exterior'
+	| 'facility'
+	| 'vessel'
+	| 'room'
+	| 'sublocation'
+	| 'axial_spine';
+
+export type LocationParentRelation =
+	| 'region_of'
+	| 'in_space_of'
+	| 'stationed_in'
+	| 'contained_in'
+	| 'aboard'
+	| 'sublocation_of'
+	| 'opens_from'
+	| 'recessed_in';
+
+export interface LocationPortal {
+	id: string;
+	kind: string;
+	towardLocationId?: LocationId;
+	maxRange?: number;
+	bidirectional?: boolean;
+	notes?: string;
+}
+
+export interface LocationSpineConnect {
+	deckLocationId: LocationId;
+	relation: string;
+	levelId?: string;
+	notes?: string;
+}
+
+export interface LocationNavNode {
+	id: string;
+	hostLocationId: LocationId;
+	name: StoryText;
+	navOnly?: true;
+	notes?: string;
+}
+
+export interface LocationProximityEdge {
+	a: LocationId;
+	b: LocationId;
+	distance: number;
+	notes?: string;
+}
+
+export interface LocationNavEdge {
+	id: string;
+	from: LocationId | string;
+	to: LocationId | string;
+	via?: string;
+	requires?: unknown[];
+	cost?: number;
+	tags?: string[];
+}
+
 export interface LocationsFile {
 	schemaVersion: string;
+	distanceUnit?: string;
 	locations: Location[];
+	navNodes?: LocationNavNode[];
+	proximityEdges?: LocationProximityEdge[];
+	navEdges?: LocationNavEdge[];
 }
 
 export interface Location {
 	id: LocationId;
 	name: StoryText;
 	description: StoryText;
+	spatialKind?: LocationSpatialKind;
 	parentLocationId?: LocationId;
+	parentRelation?: LocationParentRelation;
+	shootable?: boolean;
 	referenceAssetIds: AssetId[];
+	connects?: LocationSpineConnect[];
+	portals?: LocationPortal[];
 	atmosphere?: StoryText;
 	lighting?: StoryText;
 	scale?: StoryText;

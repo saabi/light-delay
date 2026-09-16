@@ -1,0 +1,245 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://light-delay.local/schemas/locations.schema.json",
+  "title": "LocationsFile",
+  "description": "Catalog locations with containment hierarchy, axial-spine circulation, portals, proximity, and navigation edges. See docs/production/LOCATION_HIERARCHY_DRAFT.en.md.",
+  "type": "object",
+  "required": ["schemaVersion", "locations"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "type": "string", "minLength": 1 },
+    "distanceUnit": {
+      "type": "string",
+      "description": "Label for proximityEdges[].distance and portal maxRange (e.g. abstract).",
+      "default": "abstract"
+    },
+    "locations": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/location" }
+    },
+    "navNodes": {
+      "type": "array",
+      "description": "Pathfinding waypoints that are not shootable catalog rooms.",
+      "items": { "$ref": "#/$defs/navNode" }
+    },
+    "proximityEdges": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/proximityEdge" }
+    },
+    "navEdges": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/navEdge" }
+    }
+  },
+  "$defs": {
+    "localizedString": {
+      "$ref": "common.schema.json#/$defs/localizedString"
+    },
+    "note": {
+      "$ref": "common.schema.json#/$defs/note"
+    },
+    "locationId": {
+      "type": "string",
+      "pattern": "^location:[a-z0-9-]+$"
+    },
+    "navNodeId": {
+      "type": "string",
+      "pattern": "^nav:[a-z0-9-]+$"
+    },
+    "portalId": {
+      "type": "string",
+      "pattern": "^portal:[a-z0-9-]+$"
+    },
+    "navEdgeId": {
+      "type": "string",
+      "pattern": "^nav-edge:[a-z0-9-]+$"
+    },
+    "spatialKind": {
+      "type": "string",
+      "enum": [
+        "universe",
+        "region",
+        "exterior",
+        "facility",
+        "vessel",
+        "room",
+        "sublocation",
+        "axial_spine"
+      ]
+    },
+    "parentRelation": {
+      "type": "string",
+      "enum": [
+        "region_of",
+        "in_space_of",
+        "stationed_in",
+        "contained_in",
+        "aboard",
+        "sublocation_of",
+        "opens_from",
+        "recessed_in"
+      ]
+    },
+    "circulationRelation": {
+      "type": "string",
+      "enum": ["opens_onto", "terminus_at", "hatch_into"]
+    },
+    "portalKind": {
+      "type": "string",
+      "enum": ["view", "door", "corridor", "transporter", "wormhole"]
+    },
+    "worldStatePredicate": {
+      "type": "object",
+      "required": ["key"],
+      "additionalProperties": false,
+      "properties": {
+        "key": { "type": "string", "minLength": 1 },
+        "eq": {
+          "oneOf": [{ "type": "string" }, { "type": "boolean" }, { "type": "number" }]
+        },
+        "neq": {
+          "oneOf": [{ "type": "string" }, { "type": "boolean" }, { "type": "number" }]
+        },
+        "in": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "oneOf": [{ "type": "string" }, { "type": "boolean" }, { "type": "number" }]
+          }
+        }
+      }
+    },
+    "spineConnect": {
+      "type": "object",
+      "required": ["deckLocationId", "relation"],
+      "additionalProperties": false,
+      "properties": {
+        "deckLocationId": { "$ref": "#/$defs/locationId" },
+        "relation": { "$ref": "#/$defs/circulationRelation" },
+        "levelId": { "type": "string", "minLength": 1 },
+        "notes": { "type": "string" }
+      }
+    },
+    "portal": {
+      "type": "object",
+      "required": ["id", "kind"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "$ref": "#/$defs/portalId" },
+        "kind": { "$ref": "#/$defs/portalKind" },
+        "towardLocationId": { "$ref": "#/$defs/locationId" },
+        "maxRange": { "type": "number", "minimum": 0 },
+        "bidirectional": { "type": "boolean", "default": true },
+        "notes": { "type": "string" }
+      }
+    },
+    "location": {
+      "type": "object",
+      "required": ["id", "name", "description", "spatialKind", "referenceAssetIds"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "$ref": "#/$defs/locationId" },
+        "name": { "$ref": "#/$defs/localizedString" },
+        "description": { "$ref": "#/$defs/localizedString" },
+        "spatialKind": { "$ref": "#/$defs/spatialKind" },
+        "parentLocationId": { "$ref": "#/$defs/locationId" },
+        "parentRelation": { "$ref": "#/$defs/parentRelation" },
+        "shootable": {
+          "type": "boolean",
+          "description": "If false, not a valid Shot.locationId (universe/region hosts).",
+          "default": true
+        },
+        "referenceAssetIds": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "uniqueItems": true
+        },
+        "connects": {
+          "type": "array",
+          "description": "Axial-spine deck interfaces (SoT on the spine).",
+          "items": { "$ref": "#/$defs/spineConnect" }
+        },
+        "portals": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/portal" }
+        },
+        "atmosphere": { "$ref": "#/$defs/localizedString" },
+        "lighting": { "$ref": "#/$defs/localizedString" },
+        "scale": { "$ref": "#/$defs/localizedString" },
+        "notes": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/note" }
+        }
+      },
+      "dependentRequired": {
+        "parentLocationId": ["parentRelation"],
+        "parentRelation": ["parentLocationId"]
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": { "spatialKind": { "const": "axial_spine" } },
+            "required": ["spatialKind"]
+          },
+          "then": {
+            "required": ["connects"],
+            "properties": {
+              "connects": { "type": "array", "minItems": 1 }
+            }
+          }
+        }
+      ]
+    },
+    "navNode": {
+      "type": "object",
+      "required": ["id", "hostLocationId", "name"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "$ref": "#/$defs/navNodeId" },
+        "hostLocationId": { "$ref": "#/$defs/locationId" },
+        "name": { "$ref": "#/$defs/localizedString" },
+        "navOnly": { "type": "boolean", "const": true, "default": true },
+        "notes": { "type": "string" }
+      }
+    },
+    "proximityEdge": {
+      "type": "object",
+      "required": ["a", "b", "distance"],
+      "additionalProperties": false,
+      "properties": {
+        "a": { "$ref": "#/$defs/locationId" },
+        "b": { "$ref": "#/$defs/locationId" },
+        "distance": { "type": "number", "minimum": 0 },
+        "notes": { "type": "string" }
+      }
+    },
+    "navEdge": {
+      "type": "object",
+      "required": ["id", "from", "to"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "$ref": "#/$defs/navEdgeId" },
+        "from": {
+          "oneOf": [{ "$ref": "#/$defs/locationId" }, { "$ref": "#/$defs/navNodeId" }]
+        },
+        "to": {
+          "oneOf": [{ "$ref": "#/$defs/locationId" }, { "$ref": "#/$defs/navNodeId" }]
+        },
+        "via": { "type": "string" },
+        "requires": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/worldStatePredicate" }
+        },
+        "cost": { "type": "number", "minimum": 0 },
+        "tags": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "uniqueItems": true
+        },
+        "bidirectional": { "type": "boolean", "default": true },
+        "notes": { "type": "string" }
+      }
+    }
+  }
+}
