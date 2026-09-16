@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0.0",
+  "jobId": "festival-master:shot-plan-085:rev-1:video-1",
+  "scriptId": "script:light-delay-festival-master",
+  "stretchId": "festival-master:shot-plan-085",
+  "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
+  "inputDigest": "665512bc5ac06a7c92cd8492e84ac6a7a404f59830f35b9fcde59e0e63388514",
+  "sourceRunId": "run:festival-master:shot-plan-085:rev-1:video-1:ready",
+  "sourceRunPath": "reports/runs/run-festival-master-shot-plan-085-rev-1-video-1-ready.json",
+  "providerJobId": "23d7cdd2-624d-4ac3-b69e-06524790338a",
+  "provider": "higgsfield-mcp-official",
+  "model": "seedance-2.5",
+  "artifact": "video",
+  "status": "pending_review",
+  "creditsSpent": 24,
+  "completedAt": "2026-09-16T18:17:42.981Z",
+  "output": {
+    "repoPath": "static/assets/animatic/frames/festival-master/shot-plan-085-rev-1-video-1.mp4",
+    "sha256": "e57b666131224a31009fefc5c299ccce9f9e4c8660c96c6d5c6e311690e6f8a6",
+    "durationMs": 8042,
+    "mimeType": "video/mp4"
+  },
+  "declaredDurationMs": 8042,
+  "registeredAssetId": "asset:festival-master-shot-plan-085-rev-1-video-1-video",
+  "notes": "Normalized from ad-hoc results shape to visual-stretch-result.schema.json during corruption recovery.",
+  "uploadHandles": {
+    "startImage": "63af3798-74c7-47f3-930b-161d9b68a3eb"
+  }
+}

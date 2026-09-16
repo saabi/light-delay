@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0.0",
+  "jobId": "festival-master:shot-plan-013b:rev-1:video-1",
+  "scriptId": "script:light-delay-festival-master",
+  "stretchId": "festival-master:shot-plan-013b",
+  "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
+  "inputDigest": "d54e541eae7fb95de4481a73c6d38135be9f2fd6121ca6a307e7b147772ac5fa",
+  "sourceRunId": "run:festival-master:shot-plan-013b:rev-1:video-1:ready",
+  "sourceRunPath": "reports/runs/run-festival-master-shot-plan-013b-rev-1-video-1-ready.json",
+  "providerJobId": "93938721-0967-4e49-801d-c8db9ae41259",
+  "provider": "higgsfield-mcp-official",
+  "model": "seedance-2.5",
+  "artifact": "video",
+  "status": "rejected",
+  "creditsSpent": 15,
+  "submittedAt": "2026-09-15T22:06:52Z",
+  "completedAt": "2026-09-15T22:11:55.202Z",
+  "uploadHandles": {
+    "asset:festival-master-storyboard-013b": "edd66a75-d918-4948-90cc-5fe11f00129a",
+    "asset:vehicle-celestial-ardor-model-sheet-v2": "d06a5a0a-65cf-4991-b5f7-0c58dc104ca2"
+  },
+  "output": {
+    "repoPath": "static/assets/animatic/frames/festival-master/shot-plan-013b-rev-1-video-1.mp4",
+    "sha256": "ce5a00aceb5e1ecc8ef70f9bce96fc2ccca71d929e90f981c6cb651a335ac8db",
+    "durationMs": 5050,
+    "width": 854,
+    "height": 480,
+    "mimeType": "video/mp4"
+  },
+  "declaredDurationMs": 5000,
+  "notes": "Singleton I2V rejected: Jupiter spun/scrolled too fast. Superseded by rev-2 (slow flyby + calm Jupiter). Do not bind. Declined preset 24bae836-2c4a-48e0-89b6-49fcc0b21612."
+}

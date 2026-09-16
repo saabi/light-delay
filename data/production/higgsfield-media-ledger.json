@@ -836,6 +836,86 @@
       "uploadedAt": "2026-09-16T18:05:35.677Z",
       "localPath": "static/assets/locations/celestial-ardor-bridge/meal-table-environment-sheet-v1.png",
       "seedConfidence": "assumed_current_bytes"
+    },
+    {
+      "assetId": "asset:festival-master-shot-plan-054-rev-1-video-1-video",
+      "sha256": "092bacfe99c688afdb2ab6c96845d32598fb5c67b67c148ac0b77e348b93d28d",
+      "mediaId": "9e3f71cb-eb53-4162-85a4-dc6456dc2280",
+      "kind": "video",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:shot-plan-054:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-16T19:13:05.271Z",
+      "localPath": "static/assets/animatic/frames/festival-master/shot-plan-054-rev-1-video-1.mp4"
+    },
+    {
+      "assetId": "asset:festival-master-scene-19-054-055-central-shaft-single-take-still",
+      "sha256": "67793240808a5003b36f1c9ec9fb0fa82290dc7a227ba9a7f246a05fd76adb15",
+      "mediaId": "539b650a-521b-4613-a566-f1908db7d2b2",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:shot-plan-054:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-16T19:13:05.271Z",
+      "localPath": "static/assets/animatic/frames/festival-master/scene-19-054-055-central-shaft-single-take.png"
+    },
+    {
+      "assetId": "asset:location-celestial-ardor-central-access-sheet",
+      "sha256": "2f7957db25972b17e6ded35dbfe18473a445f84875daa0f1e114dad956bea4e1",
+      "mediaId": "54a99487-61dd-4639-8d1f-ea9495a18cd4",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:shot-plan-054:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-16T19:13:05.271Z",
+      "localPath": "static/assets/locations/celestial-ardor-central-access/concept-sheet-v4.png"
+    },
+    {
+      "assetId": "asset:voice-ref-en-okoye",
+      "sha256": "13a1d5e9c23a123198571abdacaf31e4e92f6a297a5dce034fd982e49719fc22",
+      "mediaId": "dd257e6b-0084-47b6-83a1-2ae5b9b37abd",
+      "kind": "audio",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:shot-plan-054:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-16T19:13:05.271Z",
+      "localPath": "static/assets/voices/en/seedance-5s/Okoye.mp3"
+    },
+    {
+      "assetId": "asset:festival-master-shot-plan-056-rev-1-video-1-video",
+      "sha256": "0fbe7fa7062de5ce9764307889db72df91e8ba5f535028f66d753d2392beb43a",
+      "mediaId": "5fd9599e-4db1-47d0-b0e4-2f82b879c271",
+      "kind": "video",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:shot-plan-056:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-16T19:40:34.932Z",
+      "localPath": "static/assets/animatic/frames/festival-master/shot-plan-056-rev-1-video-1.mp4"
+    },
+    {
+      "assetId": "asset:festival-master-stretch-central-vault-obstruction-054-056-panel-03",
+      "sha256": "a91509c3a5689c4a6a5b711bfd684ec924d6b0a04c9eee2f2e71f270bdf2f2b8",
+      "mediaId": "4b36b5bc-c45e-400b-b30f-a33a7a8a353b",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:shot-plan-056:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-16T19:40:34.932Z",
+      "localPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-central-vault-obstruction-054-056/panel-03.png"
+    },
+    {
+      "assetId": "asset:character-pair-okoye-voss-bridge-sheet",
+      "sha256": "887c8dad1e020944ec181a4f38a521722e87846da3791630699f1d7291e8036b",
+      "mediaId": "9a791d77-aa62-4062-8ca3-7b96978313d6",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:shot-plan-056:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-16T19:40:34.932Z",
+      "localPath": "static/assets/characters/pairs/okoye-voss-bridge-reference-sheet-v1.png"
+    },
+    {
+      "assetId": "asset:character-pair-voss-harlan-bridge-sheet",
+      "sha256": "d90ce147170ea735e40fdf2e0dccf2957673b3c2df2ab4f02cf0ef94eec35c70",
+      "mediaId": "104c4dc8-21ee-4625-82b2-0fe10232269a",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:shot-plan-056:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-16T19:40:34.932Z",
+      "localPath": "static/assets/characters/pairs/voss-harlan-bridge-reference-sheet-v1.png"
     }
   ]
 }

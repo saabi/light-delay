@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0.0",
+  "jobId": "festival-master:shot-plan-013b:rev-2:video-1",
+  "scriptId": "script:light-delay-festival-master",
+  "stretchId": "festival-master:shot-plan-013b",
+  "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
+  "inputDigest": "3f36ba3939040ae5fc29e7c9159bf5849a8c1b91f8737bd1b9e0703435665622",
+  "sourceRunId": "run:festival-master:shot-plan-013b:rev-2:video-1:ready",
+  "sourceRunPath": "reports/runs/run-festival-master-shot-plan-013b-rev-2-video-1-ready.json",
+  "providerJobId": "9686a980-f8a4-400d-90de-e79117f94cb5",
+  "provider": "higgsfield-mcp-official",
+  "model": "seedance-2.5",
+  "artifact": "video",
+  "status": "pending_review",
+  "creditsSpent": 15,
+  "submittedAt": "2026-09-15T22:27:23Z",
+  "completedAt": "2026-09-15T22:34:47.513Z",
+  "uploadHandles": {
+    "asset:festival-master-storyboard-013b": "4305f845-d021-4102-bc32-64deaced00cb",
+    "asset:vehicle-celestial-ardor-model-sheet-v2": "d06a5a0a-65cf-4991-b5f7-0c58dc104ca2"
+  },
+  "output": {
+    "repoPath": "static/assets/animatic/frames/festival-master/shot-plan-013b-rev-2-video-1.mp4",
+    "sha256": "f5dd1eeb12a70160271670baed68600c3563e1f1b1864ab2c8ee7e064ea47a20",
+    "durationMs": 5050,
+    "width": 854,
+    "height": 480,
+    "mimeType": "video/mp4"
+  },
+  "declaredDurationMs": 5000,
+  "notes": "Singleton I2V rev-2 (not stretch). Replaces rejected rev-1 (fast Jupiter spin). Slow flyby past Ardor + slow turn start; Jupiter nearly fixed. Declined IN THE DARK. Bound videoAssetId on selected take. Author-approved 2026-09-15 (asset imageStatus: current)."
+}
