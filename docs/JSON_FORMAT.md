@@ -986,25 +986,41 @@ referencias al outline declarado y derivados TTS actualizados para toda lengua i
 
 ## Locations, objects, vehicles and factions
 
+Containment hierarchy, axial-spine `connects[]`, portals, proximity, and nav edges: see `docs/production/LOCATION_HIERARCHY_DRAFT.en.md` and `data/schemas/locations.schema.json`.
+
 ```ts
+export type LocationSpatialKind =
+  | 'universe' | 'region' | 'exterior' | 'facility' | 'vessel'
+  | 'room' | 'sublocation' | 'axial_spine';
+
+export type LocationParentRelation =
+  | 'region_of' | 'in_space_of' | 'stationed_in' | 'contained_in'
+  | 'aboard' | 'sublocation_of' | 'opens_from' | 'recessed_in';
+
 export interface LocationsFile {
   schemaVersion: string;
+  distanceUnit?: string;
   locations: Location[];
+  navNodes?: NavNode[];
+  proximityEdges?: ProximityEdge[];
+  navEdges?: NavEdge[];
 }
 
 export interface Location {
   id: LocationId;
-  name: string;
-  description: string;
-
+  name: StoryText;
+  description: StoryText;
+  spatialKind: LocationSpatialKind;
   parentLocationId?: LocationId;
-
+  parentRelation?: LocationParentRelation;
+  /** If false, not a valid Shot.locationId (universe / region / vessel hosts). */
+  shootable?: boolean;
   referenceAssetIds: AssetId[];
-
-  atmosphere?: string;
-  lighting?: string;
-  scale?: string;
-
+  connects?: SpineConnect[];
+  portals?: LocationPortal[];
+  atmosphere?: StoryText;
+  lighting?: StoryText;
+  scale?: StoryText;
   notes?: Note[];
 }
 

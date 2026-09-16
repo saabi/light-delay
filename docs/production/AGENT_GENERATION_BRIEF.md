@@ -124,6 +124,52 @@ take. Generation-plan references include the resolved asset path as well as the 
 asset ID so an image adapter can attach the actual file. Props and vehicles should be
 listed in `visibleRefs` when they are visible; prose mentions alone do not authorize an
 image attachment.
+
+**Authoring still `referenceAssetIds` is not the same as “whatever the last stretch left behind.”**
+Follow §4.1 before attaching or removing location/character/prop sheets.
+
+### 4.1 Still reference audit (per take)
+
+Use this whenever editing still refs, dissolving stretches, approving generation, or when a
+package shows unexpected location/character sheets. Complements `DIALOGUE_AND_PROMPT_LESSONS.md`
+§2c (stateless stills) and §5–§6 (catalog naming / sheet economy). The **location hierarchy**
+schema is planned to make spatial decisions more deterministic; until then, apply this audit by hand.
+
+1. **Start from this take’s shot text** — `Shot.description` (+ composition framing). Who is on
+   frame? Where are bodies and camera? What must look correct? Attach only sheets that serve
+   **this** still.
+2. **Primary space = `Shot.locationId`** — Attach that location’s catalog sheet as the load-bearing
+   environment ref unless the shot text clearly places the action in a different entity (then fix
+   `locationId` / description first; do not paper over with extra sheets).
+3. **Escalate when thin or ambiguous** — beat → scene → cut outline → master outline. Prefer the
+   higher layer that names a concrete place when script staging is vague or wrong
+   (e.g. master `D3` outer reactor service bay vs a mistaken central-access tag). Conflicting
+   lower-vs-higher story facts use the **upward-propagation gate** in `AGENTS.md`.
+4. **One camera space ≠ every noun in the prose** — “Beside the vault door” does **not** by itself
+   require the vault location sheet. A door, hatch, or lock can be prompt detail *inside* the
+   staged space. Attach a **second** location sheet only if that other **space** must drive the
+   image (bodies/camera move into it, or its interior identity is the frame).
+5. **`secondaryLocationIds` are not automatic still attachments** — They record related geography
+   for editorial/plan tooling. Do not copy every secondary into `Take.generation.referenceAssetIds`
+   “just in case.” Extra location sheets recreate multi-location package drift (the reason
+   multi-location no-video stretches were dissolved).
+6. **Do not inherit stretch leftovers** — After dissolve or split, re-derive refs per take from
+   steps 1–5. Old stretch `referenceAssetIds` are not authority.
+7. **Check the catalog** — Confirm a sheet exists for the staged place (`locations.json` →
+   `referenceAssetIds`). Missing sheet for the correct place = **asset gap** (mark / request sheet).
+   Wrong or underspecific `locationId` with only a parent-space sheet available = **staging error**,
+   not a reason to attach two locations.
+8. **Characters and props the same way** — Match `visibleRefs` / on-frame action. Drop stretch-era
+   extras not in the shot. Off-screen characters stay excluded. Props/vehicles need `visibleRefs`
+   when visible (§ Festival-master reference rule above).
+9. **Prompt vs sheet** — Appearance locked by an attached sheet need not be re-litigated in prose
+   (`DIALOGUE_AND_PROMPT_LESSONS.md` §6). State the sheet does **not** show (gravity, this-moment
+   pose, which prop is in hand, diegetic English UI) still belongs in the prompt (§2c).
+
+**Rule of thumb:** one load-bearing location sheet for the space the camera is in; escalate when
+text and higher layers disagree; never attach sheets prophylactically. Spatial containment draft:
+`docs/production/LOCATION_HIERARCHY_DRAFT.en.md` plus `data/locations.json` / `data/schemas/locations.schema.json` (universe-rooted tree, spines, portals, proximity, nav).
+
 - `artifacts.firstFrame` / `lastFrame` — Seedance boundaries / extension anchors
 - `artifacts.finalAudio` — when the shot carries dialogue (later mix/lock; **not** a Seedance
   attachment). Seedance jobs attach `sampleAssetIds` only (`SEEDANCE_PROMPTING.md` §6.1)

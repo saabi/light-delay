@@ -14,7 +14,7 @@ Status: English source. Not narrative authority.
 6. Lifecycle / authorized derivatives: `data/editorial-lifecycle.json`.
 7. Edit English first; Spanish may be `needs_revision`.
 8. Higher layers win. Conflicting lower-layer story fixes → **notify → first approval → repercussion proposal → second approval → edit top-down** (`AGENTS.md`).
-9. Edit `Shot.description` before / with `Take.generation.prompt`. Still prompts: no spoken dialogue (`npm run scrub:still-prompts:check`).
+9. Edit `Shot.description` before / with `Take.generation.prompt`. Still prompts: no spoken dialogue (`npm run scrub:still-prompts:check`). Still **reference audit** (location/character/prop sheets): [`AGENT_GENERATION_BRIEF.md`](production/AGENT_GENERATION_BRIEF.md) §4.1.
 10. Do not regenerate images unless asked; `imageStatus` records debt only. Generation holds use `Take.productionGate` (skip deferred/blocked until cleared; plan `generationGate` is derived). Stretch still refs stay complete; optional `videoReferenceAssetIds` is separate. After Seedance, register/attach the clip so Movie mode replaces stills (`AGENT_GENERATION_BRIEF.md` §8.5).
 11. After material edits: `CHANGELOG.md`, `docs/PROJECT_STATUS.md`, `npm run validate:data`.
 

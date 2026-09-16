@@ -55,16 +55,16 @@ if (main.shots.length !== 128)
 	errors.push(`main script: expected 128 shots, got ${main.shots.length}`);
 if (main.takes.length !== 128)
 	errors.push(`main script: expected 128 takes, got ${main.takes.length}`);
-if (animaticAssets !== 216)
-	errors.push(`assets: expected 216 animatic images (Festival-master production set), got ${animaticAssets}`);
+if (animaticAssets !== 229)
+	errors.push(`assets: expected 229 animatic images (Festival-master production set), got ${animaticAssets}`);
 if (referenceAssets !== 62)
 	errors.push(`assets: expected 62 reference images, got ${referenceAssets}`);
 if (placeholders !== 1) errors.push(`assets: expected 1 animatic placeholder, got ${placeholders}`);
-if (assets.length !== 670) errors.push(`assets: expected current total 670, got ${assets.length}`);
+if (assets.length !== 696) errors.push(`assets: expected current total 696, got ${assets.length}`);
 if (withoutSource !== 374)
 	errors.push(`assets: expected 374 records without source, got ${withoutSource}`);
-if (withExactModel !== 295)
-	errors.push(`assets: expected 295 records with exact model metadata, got ${withExactModel}`);
+if (withExactModel !== 321)
+	errors.push(`assets: expected 321 records with exact model metadata, got ${withExactModel}`);
 
 requireText('AGENTS.md', 'deprecated animatic **128** takes');
 requireText('README.md', 'animatic anterior de 128 tomas');
@@ -75,7 +75,7 @@ requireText('AGENTS.md', 'Upward-propagation gate');
 requireText('docs/AGENT_ONBOARDING.md', 'Day-one checklist');
 requireText('README.md', 'El inglés es la fuente editorial vigente');
 requireText('docs/CANON_DECISIONS.md', 'DEPRECADO — CONTINUIDAD ANTERIOR');
-requireText('docs/ASSET_PROVENANCE.md', '**670 assets registrados**');
+requireText('docs/ASSET_PROVENANCE.md', '**696 assets registrados**');
 requireText('docs/ASSET_PROVENANCE.md', '62 imágenes de referencia');
 requireText('docs/PROJECT_STATUS.md', '**128** tomas y ~30:50,5');
 requireText(

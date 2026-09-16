@@ -726,11 +726,35 @@ export function locationAncestryRoot(locationId, locationsById) {
 }
 
 /**
+ * Stretch / adjacency compatibility: exact match, or nested containment under a
+ * shootable room/spine — not merely sharing a distant facility/vessel/region root
+ * (e.g. Proxima dock must not unify with Operations Gallery).
  * @param {string} a
  * @param {string} b
- * @param {Map<string, { id?: string, parentLocationId?: string }>} locationsById
+ * @param {Map<string, { id?: string, parentLocationId?: string, spatialKind?: string }>} locationsById
  */
 export function locationsShareAncestry(a, b, locationsById) {
+	if (!a || !b) return false;
 	if (a === b) return true;
-	return locationAncestryRoot(a, locationsById) === locationAncestryRoot(b, locationsById);
+	const nonUnifying = new Set(['facility', 'vessel', 'region', 'universe', 'exterior']);
+	/**
+	 * @param {string} ancestor
+	 * @param {string} descendant
+	 */
+	function isNestedUnder(ancestor, descendant) {
+		const ancestorLoc = locationsById.get(ancestor);
+		if (ancestorLoc?.spatialKind && nonUnifying.has(ancestorLoc.spatialKind)) return false;
+		/** @type {Set<string>} */
+		const seen = new Set();
+		let current = descendant;
+		while (current && !seen.has(current)) {
+			seen.add(current);
+			const loc = locationsById.get(current);
+			if (!loc?.parentLocationId) return false;
+			if (loc.parentLocationId === ancestor) return true;
+			current = loc.parentLocationId;
+		}
+		return false;
+	}
+	return isNestedUnder(a, b) || isNestedUnder(b, a);
 }

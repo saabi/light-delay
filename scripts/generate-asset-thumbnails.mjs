@@ -153,6 +153,7 @@ async function run({ dryRun, prune }) {
 	let updated = 0;
 	let skipped = 0;
 	let missingSource = 0;
+	let unreadableSource = 0;
 	let deleted = 0;
 
 	/** @type {Set<string>} */
@@ -198,16 +199,26 @@ async function run({ dryRun, prune }) {
 		if (dryRun) {
 			console.log(`[dry-run] ${action}: ${thumbPublic} ← ${asset.path}`);
 		} else {
-			mkdirSync(dirname(thumbDisk), { recursive: true });
-			await sharp(sourceDisk)
-				.resize({
-					width: THUMB_MAX_EDGE,
-					height: THUMB_MAX_EDGE,
-					fit: 'inside',
-					withoutEnlargement: true
-				})
-				.webp({ quality: THUMB_WEBP_QUALITY })
-				.toFile(thumbDisk);
+			try {
+				mkdirSync(dirname(thumbDisk), { recursive: true });
+				await sharp(sourceDisk)
+					.resize({
+						width: THUMB_MAX_EDGE,
+						height: THUMB_MAX_EDGE,
+						fit: 'inside',
+						withoutEnlargement: true
+					})
+					.webp({ quality: THUMB_WEBP_QUALITY })
+					.toFile(thumbDisk);
+			} catch (err) {
+				unreadableSource += 1;
+				const reason = err instanceof Error ? err.message : String(err);
+				console.warn(`unreadable source: ${asset.path} (${asset.id}) — ${reason}`);
+				if (thumbExists && prev) {
+					nextEntries[thumbRel] = prev;
+				}
+				continue;
+			}
 		}
 
 		if (action === 'created') created += 1;
@@ -252,7 +263,8 @@ async function run({ dryRun, prune }) {
 	console.log(
 		`thumbs:${prune ? 'sync' : 'generate'} ${dryRun ? '(dry-run) ' : ''}— ` +
 			`created=${created} updated=${updated} skipped=${skipped} ` +
-			`deleted=${deleted} missing-source=${missingSource} catalog=${catalog.length}`
+			`deleted=${deleted} missing-source=${missingSource} ` +
+			`unreadable-source=${unreadableSource} catalog=${catalog.length}`
 	);
 }
 
