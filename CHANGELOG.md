@@ -1,5 +1,97 @@
 # Changelog
 
+## 2026-09-16 - Scene 18 Seedance submitted and registered
+
+- Author-approved Scene 18 single-take still (`current`). Submitted singleton Seedance I2V (**87 cr**, 29s / 480p); landed `shot-plan-050-rev-1-video-1.mp4` and bound `take-03.videoAssetId`. Not a visual-stretch job.
+
+## 2026-09-16 - Scene 28 stills approved; Seedance prompts prepared
+
+- Marked Festival-master greeting-prep `083–085` stills `current` and takes `selected`. Authored per-shot Seedance `videoPrompt`s (plan segments `draft`). Cost preflight only — no submit (**84 cr** for three 480p I2V jobs).
+
+## 2026-09-16 - Scene 18 Seedance prompt prepared
+
+- Added a dedicated singleton-shot video prompt for Scene 18. It carries the existing dialogue sequence, attaches the five visual refs and three voice refs, and leaves internal Seedance coverage/reframing decisions unconstrained. The still prompt remains separate.
+
+## 2026-09-16 - Scene 18 compacted to one continuous take
+
+- Replaced the four-shot Scene 18 stretch with one 28.60-second shot/take carrying all eight existing cues. Added the private-generated single bridge still using the fixed meal-table geometry and Harlan, Voss, and Rao only; legacy stretch assets remain in place for recovery but are no longer active.
+
+## 2026-09-16 - Scene 18 video stretch grouped
+
+- Switched Festival-master Scene 18 shots 050-053 to one grouped Seedance video job totaling 28.60 seconds, retaining the four ordered still-panel keyframes. The in-progress 044/045 video jobs were preserved.
+
+## 2026-09-16 - Scene 18 reduced-cast stills registered
+
+- Registered the approved private regenerated stills for Festival-master shots 051-053 using individual Voss, Harlan, and Rao references and the fixed bridge sublocations. Authored shot descriptions/prompts were preserved; no video assets changed.
+
+## 2026-09-16 — Location hierarchy schema + rebuild
+
+- Added `data/schemas/locations.schema.json` (containment tree, axial-spine `connects`, portals, proximityEdges, navEdges + WorldState predicates) and registered it in `schema-manifest.json`.
+- Rebuilt `data/locations.json` to schemaVersion 2.0.0: synthetic universe/regions, non-shootable hull host `location:celestial-ardor`, all prior shootable rooms reparented (`aboard` / `recessed_in` / etc.), spines with circulation edges, seed portals/proximity/nav. Types + `validateLocations` + Festival-master parent expectations updated. Linked `vehicle:celestial-ardor.homeLocationId` to the hull host.
+
+## 2026-09-16 — Location hierarchy draft
+
+- Added `docs/production/LOCATION_HIERARCHY_DRAFT.en.md`: universe root + all 14 catalog locations with proposed parent relations. Later wired into schema + rebuild (see above).
+
+## 2026-09-16 — Still reference audit documented
+
+- Added `AGENT_GENERATION_BRIEF.md` §4.1 (per-take still reference audit). Pointers from `AGENTS.md` and `AGENT_ONBOARDING.md`. Location-hierarchy schema noted as planned follow-on.
+
+## 2026-09-16 - Scene 18 stills regenerated with corrected labeled composites
+
+- Registered replacement visual-stretch panels for Festival-master shots 050-053 into the existing panel paths; selected takes and the asset-generation manifest were updated. Stills remain `needs_review`. No video assets changed.
+
+## 2026-09-16 — Scene 19 still location refs corrected (careful)
+
+- Scene 19 (`054–056`) restaged to **outer reactor service bay** (bottom of the central-access shaft), matching master `D3` and author geography. Still location sheet: reactor-service-bay only. Shot EN descriptions/prompts updated; plans rebuilt. No image regen.
+
+## 2026-09-16 — Catalog thumbnail sync
+
+- Ran `npm run thumbs:sync`: 109 created, 121 updated, 11 orphan WebPs removed. Catalog 395 image assets.
+- Thumbnail generator now skips unreadable sources instead of aborting. 25 catalog PNGs are all-zero Git LFS blobs (not decodable); prior thumbs kept where they existed. Sources were not regenerated.
+
+## 2026-09-15 - Second approved scene 18 still registration
+
+- Registered the second approved private generations for Festival-master shots 050-053 with explicit Sorell under-watch staging; no scene 19 or video assets were changed.
+
+## 2026-09-15 — Dissolved multi-location no-video stretches
+
+- Removed stretch packages that had no video and more than one location sheet: `054–056` (central-access + vault), greeting `083–085`, and `086` (bridge + Velari station). Shots are now independent `shot_still` packages.
+- Scene 19 (`054–056`) approved for still generation (`needs_regeneration` + runnable refs/prompts). Plans rebuilt. No image regen.
+
+## 2026-09-15 - Registered scene 20 custody-fixed stills
+
+- Landed Higgsfield regen for `stretch-bridge-vector-057-059` (job `fdf24b0a…`) into sheet/panels; selected `take-03` on shots 057–059 (`needs_review`). Repo private inventory only until this register pass.
+
+## 2026-09-15 - Approved scene 18 still registration
+
+- Registered the approved private generations for Festival-master shots 050-053; no scene 19 or video assets were changed.
+
+## 2026-09-15 — Scene 19 stills split to independent generations
+
+- Converted `stretch-central-vault-obstruction-054-056` to `independent_shared_authority` (`:rev-2`): central-access + inner-shielding vault location sheets must not share one combined storyboard. One still prompt/refs per shot (054–056); old sheet/panels marked `needs_regeneration`. Plans rebuilt.
+
+## 2026-09-15 — No-video still prompts fixed
+
+- Replaced `established-N` blocking on investigation `046–049` and device `071–073`; compiled stretch still prompts no longer contain placeholders.
+- Patched selected-take still prompts for fuel-audit `050–053` with Sorell under-watch custody language; authored missing independent still prompts for `036` and greeting `083–086`.
+- Ran `scrub:still-prompts --write` on Festival-master (14 takes). No image regen.
+
+## 2026-09-15 — No-video integrity audit + Sorell custody staging
+
+- Added reproducible audit `npm run report:festival-master-no-video-integrity` → `reports/festival-master-no-video-integrity.md` (no-video inventory, Sorell custody checks, orphan video ledger).
+- Authorship: Sorell provisional custody / under-watch staging on stretches 046–049 and 050–067 (release still at 068). Marked related stills `needs_regeneration` + `continuity_error` (no image regen; `selectedTakeId` unchanged). See `reports/festival-master-sorell-custody-remediation.md`.
+- Orphans: keep superseded 033–036 / title-rev-1 / 040b-rev-1 / 013b-rev-1 / preamble-raw; wrong-range bound videos: none.
+
+## 2026-09-15 — Approve periapsis 013b Seedance rev-2
+
+- Author-approved `asset:festival-master-shot-plan-013b-rev-2-video-1-video` (`imageStatus: current`). Rev-1 run marked `rejected` (fast Jupiter spin). Selected take remains bound to rev-2 for Movie mode.
+
+## 2026-09-15 — Periapsis 013b Seedance rev-2 (calm Jupiter flyby)
+
+- Rejected rev-1 (Jupiter spun too fast). Updated shot/cue/camera/location copy to a slow flyby past the Ardor with a slow prograde→retrograde turn start and nearly fixed Jupiter.
+- Submitted `…:rev-2:video-1` (Higgsfield `9686a980-f8a4-400d-90de-e79117f94cb5`), **15 cr**, ~5 s / 480p → `…/shot-plan-013b-rev-2-video-1.mp4`. Bound `videoAssetId` on the selected take (rev-1 retained on disk). Pending review.
+
 ## 2026-09-15 — Scenes 20–22 stretch stills registered (rev-2 candidates)
 
 - Generated five Festival-master combined storyboard sheets in Higgsfield (`gpt_image_2`) for stretches 057–059, 060–061, 062–063, 064, and 065–067; split and registered as `take-03` candidates (`:rev-2`). `selectedTakeId` unchanged pending approval. Restored null-corrupted `scripts/register-visual-stretch-panels.mjs` from `cd4958c`.

@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-  "updatedAt": "2026-09-15T21:46:00.069Z",
+  "updatedAt": "2026-09-16T18:05:35.677Z",
   "notes": "Seeded from data/production/runs/*-results.json uploadHandles. Key is assetId + sha256 of current staging bytes (resolveStretchStagingSource). Voice assets with seedanceUploadPath are not seeded from historical handles (often full WAV).",
   "entries": [
     {
@@ -803,6 +803,38 @@
       "sourceRunId": "run:festival-master:stretch-service-cylinder-harlan-044:rev-1:video-1:ready",
       "uploadedAt": "2026-09-15T21:46:00.069Z",
       "localPath": "static/assets/animatic/frames/festival-master/shot-plan-044.png",
+      "seedConfidence": "assumed_current_bytes"
+    },
+    {
+      "assetId": "asset:festival-master-storyboard-013b",
+      "sha256": "c9e9123b9a0630f642bc8979ab53580fbb2c7eb4190dd1c07a8e86ce2da85aa3",
+      "mediaId": "4305f845-d021-4102-bc32-64deaced00cb",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:shot-plan-013b:rev-2:video-1:ready",
+      "uploadedAt": "2026-09-15T22:34:47.513Z",
+      "localPath": "static/assets/animatic/frames/festival-master/shot-plan-013b.png"
+    },
+    {
+      "assetId": "asset:festival-master-scene-18-single-take-still",
+      "sha256": "0262ea94660fc66a5908302b5ed7528ead12df9cbaa09ec38a505b85e5439a8d",
+      "mediaId": "b4ef4645-f692-4ab3-81b4-0ae87e6416bd",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:shot-plan-050:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-16T18:05:35.677Z",
+      "localPath": "static/assets/animatic/frames/festival-master/scene-18-single-take.png",
+      "seedConfidence": "assumed_current_bytes"
+    },
+    {
+      "assetId": "asset:location-celestial-ardor-bridge-meal-table-sheet",
+      "sha256": "6d02b4e3da6ba757c8aa6712acf69c0c53b4c88742f7f946605638079239d3d4",
+      "mediaId": "3ed22e44-8aad-4f79-ba1f-53bd5cadc8aa",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:shot-plan-050:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-16T18:05:35.677Z",
+      "localPath": "static/assets/locations/celestial-ardor-bridge/meal-table-environment-sheet-v1.png",
       "seedConfidence": "assumed_current_bytes"
     }
   ]

@@ -1,5 +1,91 @@
 # Estado del proyecto
 
+## 2026-09-16 - Scene 18 Seedance registered (English source)
+
+- Scene 18 singleton clip submitted (**87 cr**) and bound to `festival-master:shot-plan-050:take-03` (`needs_review`). Still marked `current`.
+
+## 2026-09-16 - Scene 28 stills approved; video prompts ready (English source)
+
+- `083–085` stills marked `current`; Seedance I2V prompts authored (plan `draft`). Awaiting human go before submit. Preflight: **84 cr** for three 480p jobs (7s / 13s / 8s). Optional single 27s grouped job preflight: **81 cr**.
+
+## 2026-09-16 - Scene 18 Seedance prompt prepared (English source)
+
+- The single Scene 18 take now exposes a dedicated Seedance video prompt with the complete dialogue, five visual references, and three voice samples. Seedance may choose its internal coverage and reframing; no external shot boundaries are imposed.
+
+## 2026-09-16 - Scene 18 compacted to one continuous take (English source)
+
+- Scene 18 now uses one 28.60-second shot/take containing the complete existing dialogue sequence and one single bridge still. The active frame shows Harlan, Voss, and Rao only; the former visual stretch is removed from the active production plan while its assets remain recoverable.
+
+## 2026-09-16 - Scene 18 video stretch grouped (English source)
+
+- Festival-master shots 050-053 now form one grouped Seedance candidate of 28.60 seconds, using the four ordered still-panel keyframes. Regenerating video jobs for shots 044 and 045 were not changed.
+
+## 2026-09-16 - Scene 18 reduced-cast stills registered (English source)
+
+- Registered approved private regenerated stills for Festival-master shots 051-053 using individual Voss, Harlan, and Rao references and the fixed bridge sublocations. Authored shot descriptions/prompts were preserved; no video assets changed.
+
+## 2026-09-16 — Location hierarchy schema + rebuild (English source)
+
+- `locations.schema.json` + full `locations.json` rebuild (v2): universe root, Sol/Velari regions, hull host `location:celestial-ardor`, axial spines with `connects`, portals/proximity/nav. Reactor service bay is `aboard` the hull (shaft terminus), not under engineering. Draft doc kept as rationale.
+
+## 2026-09-16 — Location hierarchy draft (English source)
+
+- Draft tree: `docs/production/LOCATION_HIERARCHY_DRAFT.en.md` (universe root → all catalog locations + parent relations). Superseded as “next step” by the schema + rebuild above.
+
+## 2026-09-16 — Still reference audit documented (English source)
+
+- Durable still-ref procedure: `docs/production/AGENT_GENERATION_BRIEF.md` §4.1. Next: location hierarchy + schema for deterministic spatial decisions.
+
+## 2026-09-16 - Scene 18 stills regenerated with corrected labeled composites (English source)
+
+- Replacement visual-stretch panels for Festival-master shots 050-053 are registered in the existing panel paths; selected takes and the asset-generation manifest are updated. Stills remain `needs_review`. No video assets changed.
+
+## 2026-09-16 — Scene 19 still location refs (English source)
+
+- Scene 19 takes place in the **outer reactor service bay** (bottom of the central-access shaft). Still packages use that location sheet only. Private dual-ref stills remain stale pending regen.
+
+## 2026-09-16 — Catalog thumbnails synced (English source)
+
+- `thumbs:sync` refreshed catalog WebPs (109 created, 121 updated, 11 orphans deleted). 25 all-zero LFS PNGs could not be decoded; generator now warns and continues. No source-image regen.
+
+## 2026-09-15 - Second approved scene 18 still registration (English source)
+
+- Registered the second approved private generations for Festival-master shots 050-053 with explicit Sorell under-watch staging. Scene 19 and all video assets were left unchanged.
+
+## 2026-09-15 — Multi-location no-video stretches dissolved (English source)
+
+- Dissolved stretches with no video + multiple location refs: scene 19 `054–056`, greeting `083–085` / `086`. `/generation` now shows per-shot still packages. Scene 19 approved for still regen. Zero multi-location no-video stretches remain.
+
+## 2026-09-15 - Scene 20 stills registered (English source)
+
+- Custody-fixed Higgsfield sheet for `stretch-bridge-vector-057-059` registered and split; selected `take-03` on 057–059 (`needs_review`). Video still waits on editorial still approval / Seedance go.
+
+## 2026-09-15 - Approved scene 18 still registration (English source)
+
+- Registered approved private generations for Festival-master shots 050-053. Scene 19 and all video assets were left unchanged.
+
+## 2026-09-15 — Scene 19 independent stills (English source)
+
+- Scene 19 (`054–056`) dissolved from stretch (not merely independent_shared_authority): dual location sheets cannot share one stretch package. Per-shot stills approved for generation.
+
+## 2026-09-15 — No-video still prompts fixed (English source)
+
+- Still prompt authorship fixed for no-video debt: investigation/device blocking, fuel-audit take custody lines, independent prompts for 036 and 083–086. Scrub clean. Stills still await regen approval where marked `needs_regeneration`.
+
+## 2026-09-15 — No-video integrity + Sorell custody (English source)
+
+- Audit: `reports/festival-master-no-video-integrity.md` (68 shots without playable video; 0 Sorell custody blockers after authorship).
+- Custody staging fixed on bridge stretches through 067; stills marked `needs_regeneration` — await approval before regen/Seedance.
+- Intentional video orphans left alone (including superseded 013b rev-1 on disk).
+
+## 2026-09-15 — Periapsis 013b Seedance rev-2 approved (English source)
+
+- Author approved the rev-2 periapsis flyby clip (`imageStatus: current`). Rev-1 rejected. Movie mode stays on rev-2.
+
+## 2026-09-15 — Periapsis 013b Seedance rev-2 bound (English source)
+
+- Rev-2 I2V submitted and bound: job `9686a980-f8a4-400d-90de-e79117f94cb5`, **15 cr**, ~5.05 s / 480p → `…/shot-plan-013b-rev-2-video-1.mp4`. Prompt: slow flyby + slow turn; calm Jupiter (rev-1 rejected). Later author-approved (`current`).
+
 ## 2026-09-15 — Scenes 20–22 stills registered; awaiting approval (English source)
 
 - Higgsfield sheets landed and split for 057–067; new panels registered as `take-03` candidates on stretch `:rev-2`. Do not bind `selectedTakeId` until author approves. Video still waits on that approval.

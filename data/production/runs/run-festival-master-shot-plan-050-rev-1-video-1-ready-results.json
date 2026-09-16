@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "jobId": "festival-master:shot-plan-050:rev-1:video-1",
+  "scriptId": "script:light-delay-festival-master",
+  "stretchId": "festival-master:shot-plan-050",
+  "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
+  "inputDigest": "5a5376d9dd33a3d9b7eddeea7f24bdff8562221262f242e7d9866c0c5c69fcff",
+  "sourceRunId": "run:festival-master:shot-plan-050:rev-1:video-1:ready",
+  "sourceRunPath": "reports/runs/run-festival-master-shot-plan-050-rev-1-video-1-ready.json",
+  "providerJobId": "d6abb1ba-169f-4e4b-bbf7-8be7569f675c",
+  "provider": "higgsfield-mcp-official",
+  "model": "seedance-2.5",
+  "artifact": "video",
+  "status": "pending_review",
+  "creditsSpent": 87,
+  "submittedAt": "2026-09-16T18:06:00Z",
+  "completedAt": "2026-09-16T18:13:53.146Z",
+  "uploadHandles": {
+    "asset:festival-master-scene-18-single-take-still": "b4ef4645-f692-4ab3-81b4-0ae87e6416bd",
+    "asset:location-celestial-ardor-bridge-meal-table-sheet": "3ed22e44-8aad-4f79-ba1f-53bd5cadc8aa",
+    "asset:character-voss-sheet": "88fed050-c15b-4950-a779-d67ec203a29f",
+    "asset:character-harlan-sheet": "a4cfc514-9708-4a76-80d8-a8b38979eec9",
+    "asset:character-rao-sheet": "b33b42f4-3abf-457e-af8c-3f769025cbc1",
+    "asset:voice-ref-en-harlan": "5a68b791-75e3-49ec-9924-1294a27df1b8",
+    "asset:voice-ref-en-voss": "a53f345b-1044-408c-91e2-e0d37ea9a6d8",
+    "asset:voice-ref-en-elin": "0938dded-f8bd-4fb2-9145-566f50b3eabc"
+  },
+  "output": {
+    "repoPath": "static/assets/animatic/frames/festival-master/shot-plan-050-rev-1-video-1.mp4",
+    "sha256": "eb0d4b8b2824c9e8f846ef262757e4579c9e5e7f5fe9fb28883c34b1842c9d46",
+    "durationMs": 29042,
+    "width": 854,
+    "height": 480,
+    "mimeType": "video/mp4"
+  },
+  "declaredDurationMs": 29042,
+  "notes": "Scene 18 singleton Seedance. Author approved still + send-as-is. Declined IN THE DARK. Not a visual-stretch job."
+}

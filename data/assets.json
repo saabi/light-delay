@@ -121,6 +121,12 @@
         "entityIds": [
           "character:rao"
         ]
+      },
+      "imageStatus": {
+        "status": "current",
+        "reasons": [
+          "quality"
+        ]
       }
     },
     {
@@ -12940,11 +12946,10 @@
       "imageStatus": {
         "status": "needs_regeneration",
         "reasons": [
-          "quality",
           "continuity_error"
         ],
         "explanation": {
-          "en": "Prior still generated from hollow/placeholder stretch prompt (wrong identity or gravity/location). Reauthored prompt+refs 2026-09-15; regenerate when authorized.",
+          "en": "Stretch festival-master:stretch-central-vault-obstruction-054-056 dissolved (multi-location still authority). Not a live stretch package.",
           "es": "needs_revision"
         }
       }
@@ -12960,7 +12965,7 @@
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-15T22:25:20.199Z"
+        "generatedAt": "2026-09-15T23:15:28.959Z"
       },
       "metadata": {
         "visualStretchId": "festival-master:stretch-bridge-vector-057-059",
@@ -12973,8 +12978,8 @@
           "quality"
         ],
         "explanation": {
-          "en": "Combined visual-stretch storyboard sheet pending editorial review and split.",
-          "es": "Hoja storyboard combinada de visual stretch pendiente de revisión editorial y partición."
+          "en": "Registered custody-fixed scene 20 stretch regen; pending editorial review.",
+          "es": "needs_revision"
         }
       }
     },
@@ -12997,13 +13002,13 @@
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "explanation": {
-          "en": "Combined visual-stretch storyboard sheet pending editorial review and split.",
-          "es": "Hoja storyboard combinada de visual stretch pendiente de revisión editorial y partición."
+          "en": "Stale: Sorell staged as free/collaborating crew while still provisionally retained under watch (046–067). Needs regeneration after custody authorship fix; do not use for Seedance until replaced.",
+          "es": "needs_revision"
         }
       }
     },
@@ -13206,13 +13211,13 @@
         "approvedAt": "2026-09-14"
       },
       "imageStatus": {
-        "status": "current",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "explanation": {
-          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14.",
-          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14."
+          "en": "Stale: Sorell staged as free/collaborating crew while still provisionally retained under watch (046–067). Needs regeneration after custody authorship fix; do not use for Seedance until replaced.",
+          "es": "needs_revision"
         }
       }
     },
@@ -13237,11 +13242,10 @@
       "imageStatus": {
         "status": "needs_regeneration",
         "reasons": [
-          "quality",
           "continuity_error"
         ],
         "explanation": {
-          "en": "Prior still generated from hollow/placeholder stretch prompt (wrong identity or gravity/location). Reauthored prompt+refs 2026-09-15; regenerate when authorized.",
+          "en": "Stale: Sorell staged as free/collaborating crew while still provisionally retained under watch (046–067). Needs regeneration after custody authorship fix; do not use for Seedance until replaced.",
           "es": "needs_revision"
         }
       }
@@ -13265,13 +13269,13 @@
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "explanation": {
-          "en": "Combined visual-stretch storyboard sheet pending editorial review and split.",
-          "es": "Hoja storyboard combinada de visual stretch pendiente de revisión editorial y partición."
+          "en": "Stale: Sorell staged as free/collaborating crew while still provisionally retained under watch (046–067). Needs regeneration after custody authorship fix; do not use for Seedance until replaced.",
+          "es": "needs_revision"
         }
       }
     },
@@ -13323,13 +13327,13 @@
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
         "explanation": {
-          "en": "Combined visual-stretch storyboard sheet pending editorial review and split.",
-          "es": "Hoja storyboard combinada de visual stretch pendiente de revisión editorial y partición."
+          "en": "Author approved Festival-master scene 28 greeting-prep stills (2026-09-16).",
+          "es": "needs_revision"
         }
       }
     },
@@ -13936,13 +13940,12 @@
         ]
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
-        "sourceShotId": "festival-master:shot-plan-054",
         "explanation": {
-          "en": "Still regenerated from the authored scene prompt and reference set; editorial review pending.",
+          "en": "Stretch festival-master:stretch-central-vault-obstruction-054-056 dissolved (multi-location still authority). Not a live stretch package.",
           "es": "needs_revision"
         }
       }
@@ -13980,13 +13983,12 @@
         ]
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
-        "sourceShotId": "festival-master:shot-plan-055",
         "explanation": {
-          "en": "Still regenerated from the authored scene prompt and reference set; editorial review pending.",
+          "en": "Stretch festival-master:stretch-central-vault-obstruction-054-056 dissolved (multi-location still authority). Not a live stretch package.",
           "es": "needs_revision"
         }
       }
@@ -14024,13 +14026,12 @@
         ]
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
-        "sourceShotId": "festival-master:shot-plan-056",
         "explanation": {
-          "en": "Still regenerated from the authored scene prompt and reference set; editorial review pending.",
+          "en": "Stretch festival-master:stretch-central-vault-obstruction-054-056 dissolved (multi-location still authority). Not a live stretch package.",
           "es": "needs_revision"
         }
       }
@@ -14046,7 +14047,7 @@
       "source": {
         "provider": "local",
         "model": "sharp-split",
-        "generatedAt": "2026-09-15T22:25:21.867Z",
+        "generatedAt": "2026-09-15T23:15:28.959Z",
         "originalAssetId": "asset:festival-master-stretch-bridge-vector-057-059-sheet"
       },
       "metadata": {
@@ -14066,8 +14067,8 @@
           "quality"
         ],
         "explanation": {
-          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Registered custody-fixed scene 20 stretch regen; pending editorial review.",
+          "es": "needs_revision"
         }
       }
     },
@@ -14082,7 +14083,7 @@
       "source": {
         "provider": "local",
         "model": "sharp-split",
-        "generatedAt": "2026-09-15T22:25:21.867Z",
+        "generatedAt": "2026-09-15T23:15:28.959Z",
         "originalAssetId": "asset:festival-master-stretch-bridge-vector-057-059-sheet"
       },
       "metadata": {
@@ -14102,8 +14103,8 @@
           "quality"
         ],
         "explanation": {
-          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Registered custody-fixed scene 20 stretch regen; pending editorial review.",
+          "es": "needs_revision"
         }
       }
     },
@@ -14118,7 +14119,7 @@
       "source": {
         "provider": "local",
         "model": "sharp-split",
-        "generatedAt": "2026-09-15T22:25:21.867Z",
+        "generatedAt": "2026-09-15T23:15:28.959Z",
         "originalAssetId": "asset:festival-master-stretch-bridge-vector-057-059-sheet"
       },
       "metadata": {
@@ -14138,8 +14139,8 @@
           "quality"
         ],
         "explanation": {
-          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Registered custody-fixed scene 20 stretch regen; pending editorial review.",
+          "es": "needs_revision"
         }
       }
     },
@@ -14169,13 +14170,13 @@
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "explanation": {
-          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Stale: Sorell staged as free/collaborating crew while still provisionally retained under watch (046–067). Needs regeneration after custody authorship fix; do not use for Seedance until replaced.",
+          "es": "needs_revision"
         }
       }
     },
@@ -14205,13 +14206,13 @@
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "explanation": {
-          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Stale: Sorell staged as free/collaborating crew while still provisionally retained under watch (046–067). Needs regeneration after custody authorship fix; do not use for Seedance until replaced.",
+          "es": "needs_revision"
         }
       }
     },
@@ -14313,13 +14314,13 @@
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
         "explanation": {
-          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Author approved Festival-master scene 28 greeting-prep stills (2026-09-16).",
+          "es": "needs_revision"
         }
       }
     },
@@ -14349,13 +14350,13 @@
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
         "explanation": {
-          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Author approved Festival-master scene 28 greeting-prep stills (2026-09-16).",
+          "es": "needs_revision"
         }
       }
     },
@@ -14385,13 +14386,13 @@
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
         "explanation": {
-          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Author approved Festival-master scene 28 greeting-prep stills (2026-09-16).",
+          "es": "needs_revision"
         }
       }
     },
@@ -15227,13 +15228,13 @@
         "approvedAt": "2026-09-14"
       },
       "imageStatus": {
-        "status": "current",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "explanation": {
-          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14.",
-          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14."
+          "en": "Stale: Sorell staged as free/collaborating crew while still provisionally retained under watch (046–067). Needs regeneration after custody authorship fix; do not use for Seedance until replaced.",
+          "es": "needs_revision"
         }
       }
     },
@@ -15265,13 +15266,13 @@
         "approvedAt": "2026-09-14"
       },
       "imageStatus": {
-        "status": "current",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "explanation": {
-          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14.",
-          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14."
+          "en": "Stale: Sorell staged as free/collaborating crew while still provisionally retained under watch (046–067). Needs regeneration after custody authorship fix; do not use for Seedance until replaced.",
+          "es": "needs_revision"
         }
       }
     },
@@ -15303,13 +15304,13 @@
         "approvedAt": "2026-09-14"
       },
       "imageStatus": {
-        "status": "current",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "explanation": {
-          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14.",
-          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14."
+          "en": "Stale: Sorell staged as free/collaborating crew while still provisionally retained under watch (046–067). Needs regeneration after custody authorship fix; do not use for Seedance until replaced.",
+          "es": "needs_revision"
         }
       }
     },
@@ -15341,13 +15342,13 @@
         "approvedAt": "2026-09-14"
       },
       "imageStatus": {
-        "status": "current",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "explanation": {
-          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14.",
-          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14."
+          "en": "Stale: Sorell staged as free/collaborating crew while still provisionally retained under watch (046–067). Needs regeneration after custody authorship fix; do not use for Seedance until replaced.",
+          "es": "needs_revision"
         }
       }
     },
@@ -15362,7 +15363,7 @@
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-15T23:24:43.593Z"
+        "generatedAt": "2026-09-16T15:59:01.137Z"
       },
       "metadata": {
         "visualStretchId": "festival-master:stretch-bridge-fuel-audit-050-053",
@@ -15374,7 +15375,7 @@
         "panelRegionW": 0.49,
         "panelRegionH": 0.411875,
         "scriptId": "script:light-delay-festival-master",
-        "regeneratedAt": "2026-09-15T23:24:43.593Z",
+        "regeneratedAt": "2026-09-16T15:59:01.137Z",
         "referenceAssetIds": [
           "asset:character-pair-voss-harlan-bridge-sheet",
           "asset:character-pair-rao-sorell-bridge-sheet",
@@ -15389,7 +15390,7 @@
         ],
         "sourceShotId": "festival-master:shot-plan-050",
         "explanation": {
-          "en": "Approved custody-staged still registered; editorial review pending.",
+          "en": "Scene 18 still regenerated from the corrected labeled composite references; editorial review pending.",
           "es": "needs_revision"
         }
       }
@@ -15405,7 +15406,7 @@
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-15T23:25:44.122Z"
+        "generatedAt": "2026-09-16T16:58:21.375Z"
       },
       "metadata": {
         "visualStretchId": "festival-master:stretch-bridge-fuel-audit-050-053",
@@ -15417,12 +15418,13 @@
         "panelRegionW": 0.49,
         "panelRegionH": 0.411875,
         "scriptId": "script:light-delay-festival-master",
-        "regeneratedAt": "2026-09-15T23:25:44.122Z",
+        "regeneratedAt": "2026-09-16T16:58:21.375Z",
         "referenceAssetIds": [
-          "asset:character-pair-voss-harlan-bridge-sheet",
-          "asset:character-pair-rao-sorell-bridge-sheet",
-          "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-crew-stations-reference",
+          "asset:character-voss-sheet",
+          "asset:character-harlan-sheet",
+          "asset:character-rao-sheet"
         ]
       },
       "imageStatus": {
@@ -15432,7 +15434,7 @@
         ],
         "sourceShotId": "festival-master:shot-plan-051",
         "explanation": {
-          "en": "Approved custody-staged still registered; editorial review pending.",
+          "en": "Scene 18 still regenerated with individual character references and reduced three-person blocking; editorial review pending.",
           "es": "needs_revision"
         }
       }
@@ -15448,7 +15450,7 @@
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-15T23:26:47.137Z"
+        "generatedAt": "2026-09-16T16:58:21.375Z"
       },
       "metadata": {
         "visualStretchId": "festival-master:stretch-bridge-fuel-audit-050-053",
@@ -15460,12 +15462,13 @@
         "panelRegionW": 0.49,
         "panelRegionH": 0.411875,
         "scriptId": "script:light-delay-festival-master",
-        "regeneratedAt": "2026-09-15T23:26:47.137Z",
+        "regeneratedAt": "2026-09-16T16:58:21.375Z",
         "referenceAssetIds": [
-          "asset:character-pair-voss-harlan-bridge-sheet",
-          "asset:character-pair-rao-sorell-bridge-sheet",
-          "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-crew-stations-reference",
+          "asset:character-voss-sheet",
+          "asset:character-harlan-sheet",
+          "asset:character-rao-sheet"
         ]
       },
       "imageStatus": {
@@ -15475,7 +15478,7 @@
         ],
         "sourceShotId": "festival-master:shot-plan-052",
         "explanation": {
-          "en": "Approved custody-staged still registered; editorial review pending.",
+          "en": "Scene 18 still regenerated with individual character references and reduced three-person blocking; editorial review pending.",
           "es": "needs_revision"
         }
       }
@@ -15491,7 +15494,7 @@
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-15T23:27:46.127Z"
+        "generatedAt": "2026-09-16T16:58:21.375Z"
       },
       "metadata": {
         "visualStretchId": "festival-master:stretch-bridge-fuel-audit-050-053",
@@ -15503,12 +15506,13 @@
         "panelRegionW": 0.49,
         "panelRegionH": 0.411875,
         "scriptId": "script:light-delay-festival-master",
-        "regeneratedAt": "2026-09-15T23:27:46.127Z",
+        "regeneratedAt": "2026-09-16T16:58:21.375Z",
         "referenceAssetIds": [
-          "asset:character-pair-voss-harlan-bridge-sheet",
-          "asset:character-pair-rao-sorell-bridge-sheet",
-          "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-crew-stations-reference",
+          "asset:character-voss-sheet",
+          "asset:character-harlan-sheet",
+          "asset:character-rao-sheet"
         ]
       },
       "imageStatus": {
@@ -15518,7 +15522,7 @@
         ],
         "sourceShotId": "festival-master:shot-plan-053",
         "explanation": {
-          "en": "Approved custody-staged still registered; editorial review pending.",
+          "en": "Scene 18 still regenerated with individual character references and reduced three-person blocking; editorial review pending.",
           "es": "needs_revision"
         }
       }
@@ -15554,7 +15558,7 @@
           "continuity_error"
         ],
         "explanation": {
-          "en": "Stale after scenes 20–22 stretch authorship fix (gravity/identity/blocking/scrub-safe). Needs regeneration; do not use for Seedance until replaced.",
+          "en": "Stale: Sorell staged as free/collaborating crew while still provisionally retained under watch (046–067). Needs regeneration after custody authorship fix; do not use for Seedance until replaced.",
           "es": "needs_revision"
         }
       }
@@ -15590,7 +15594,7 @@
           "continuity_error"
         ],
         "explanation": {
-          "en": "Stale after scenes 20–22 stretch authorship fix (gravity/identity/blocking/scrub-safe). Needs regeneration; do not use for Seedance until replaced.",
+          "en": "Stale: Sorell staged as free/collaborating crew while still provisionally retained under watch (046–067). Needs regeneration after custody authorship fix; do not use for Seedance until replaced.",
           "es": "needs_revision"
         }
       }
@@ -15626,7 +15630,7 @@
           "continuity_error"
         ],
         "explanation": {
-          "en": "Stale after scenes 20–22 stretch authorship fix (gravity/identity/blocking/scrub-safe). Needs regeneration; do not use for Seedance until replaced.",
+          "en": "Stale: Sorell staged as free/collaborating crew while still provisionally retained under watch (046–067). Needs regeneration after custody authorship fix; do not use for Seedance until replaced.",
           "es": "needs_revision"
         }
       }
@@ -15662,7 +15666,7 @@
           "continuity_error"
         ],
         "explanation": {
-          "en": "Stale after scenes 20–22 stretch authorship fix (gravity/identity/blocking/scrub-safe). Needs regeneration; do not use for Seedance until replaced.",
+          "en": "Stale: Sorell staged as free/collaborating crew while still provisionally retained under watch (046–067). Needs regeneration after custody authorship fix; do not use for Seedance until replaced.",
           "es": "needs_revision"
         }
       }
@@ -17308,13 +17312,13 @@
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "explanation": {
-          "en": "Combined visual-stretch storyboard sheet pending editorial review and split.",
-          "es": "Hoja storyboard combinada de visual stretch pendiente de revisión editorial y partición."
+          "en": "Stale: Sorell staged as free/collaborating crew while still provisionally retained under watch (046–067). Needs regeneration after custody authorship fix; do not use for Seedance until replaced.",
+          "es": "needs_revision"
         }
       }
     },
@@ -17344,13 +17348,13 @@
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "explanation": {
-          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Stale: Sorell staged as free/collaborating crew while still provisionally retained under watch (046–067). Needs regeneration after custody authorship fix; do not use for Seedance until replaced.",
+          "es": "needs_revision"
         }
       }
     },
@@ -17373,13 +17377,13 @@
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "explanation": {
-          "en": "Combined visual-stretch storyboard sheet pending editorial review and split.",
-          "es": "Hoja storyboard combinada de visual stretch pendiente de revisión editorial y partición."
+          "en": "Stale: Sorell staged as free/collaborating crew while still provisionally retained under watch (046–067). Needs regeneration after custody authorship fix; do not use for Seedance until replaced.",
+          "es": "needs_revision"
         }
       }
     },
@@ -17409,13 +17413,13 @@
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "explanation": {
-          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Stale: Sorell staged as free/collaborating crew while still provisionally retained under watch (046–067). Needs regeneration after custody authorship fix; do not use for Seedance until replaced.",
+          "es": "needs_revision"
         }
       }
     },
@@ -17445,13 +17449,13 @@
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "explanation": {
-          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Stale: Sorell staged as free/collaborating crew while still provisionally retained under watch (046–067). Needs regeneration after custody authorship fix; do not use for Seedance until replaced.",
+          "es": "needs_revision"
         }
       }
     },
@@ -17481,13 +17485,120 @@
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "continuity_error"
+        ],
+        "explanation": {
+          "en": "Stale: Sorell staged as free/collaborating crew while still provisionally retained under watch (046–067). Needs regeneration after custody authorship fix; do not use for Seedance until replaced.",
+          "es": "needs_revision"
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-shot-plan-013b-rev-2-video-1-video",
+      "kind": "video",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/shot-plan-013b-rev-2-video-1.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 5050,
+      "width": 854,
+      "height": 480,
+      "source": {
+        "provider": "higgsfield-mcp-official",
+        "model": "seedance-2.5",
+        "generatedAt": "2026-09-15T22:34:47.513Z",
+        "externalId": "9686a980-f8a4-400d-90de-e79117f94cb5"
+      },
+      "metadata": {
+        "scriptId": "script:light-delay-festival-master",
+        "shotId": "festival-master:shot-plan-013b",
+        "takeId": "festival-master:shot-plan-013b:take-01",
+        "sourceRunId": "run:festival-master:shot-plan-013b:rev-2:video-1:ready",
+        "inputDigest": "3f36ba3939040ae5fc29e7c9159bf5849a8c1b91f8737bd1b9e0703435665622",
+        "supersedesAssetId": "asset:festival-master-shot-plan-013b-rev-1-video-1-video",
+        "approvedBy": "author",
+        "approvedAt": "2026-09-15"
+      },
+      "imageStatus": {
+        "status": "current",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Author-approved singleton Seedance I2V rev-2: slow flyby + slow prograde→retrograde turn start; calm Jupiter (2026-09-15).",
+          "es": "I2V Seedance rev-2 aprobado por el autor: flyby lento + inicio lento del giro prógrada→retrógrada; Júpiter calmado (2026-09-15)."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-scene-18-single-take-still",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/scene-18-single-take.png",
+      "mimeType": "image/png",
+      "width": 1672,
+      "height": 941,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-16T17:52:52.188Z"
+      },
+      "metadata": {
+        "scriptId": "script:light-delay-festival-master",
+        "shotId": "festival-master:shot-plan-050",
+        "sceneId": "festival-master:scene-18",
+        "singleTake": true,
+        "referenceAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-meal-table-sheet",
+          "asset:character-voss-sheet",
+          "asset:character-harlan-sheet",
+          "asset:character-rao-sheet"
+        ]
+      },
+      "imageStatus": {
+        "status": "current",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Author approved single-take Scene 18 still as Seedance keyframe (send as-is).",
+          "es": "needs_revision"
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-shot-plan-050-rev-1-video-1",
+      "kind": "video",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/shot-plan-050-rev-1-video-1.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 29042,
+      "width": 854,
+      "height": 480,
+      "source": {
+        "provider": "higgsfield-mcp-official",
+        "model": "seedance-2.5",
+        "generatedAt": "2026-09-16T18:13:53.169Z",
+        "externalId": "d6abb1ba-169f-4e4b-bbf7-8be7569f675c"
+      },
+      "metadata": {
+        "scriptId": "script:light-delay-festival-master",
+        "shotId": "festival-master:shot-plan-050",
+        "takeId": "festival-master:shot-plan-050:take-03",
+        "sourceRunId": "run:festival-master:shot-plan-050:rev-1:video-1:ready",
+        "inputDigest": "5a5376d9dd33a3d9b7eddeea7f24bdff8562221262f242e7d9866c0c5c69fcff",
+        "singleton": true
+      },
+      "imageStatus": {
         "status": "needs_review",
         "reasons": [
           "quality"
         ],
         "explanation": {
-          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Scene 18 singleton Seedance clip pending editorial review.",
+          "es": "needs_revision"
         }
       }
     }
