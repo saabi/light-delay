@@ -102,11 +102,36 @@ export const CausalRelationSchema = Type.Object({
 	kind: Type.Optional(Type.String())
 }, { [X_DOMAIN]: 'core:causal-relation' });
 
-export const ExperienceRelationSchema = Type.Object({
-	subjectEntityId: ref('core:entity'),
+export const EntityContinuityRelationSchema = Type.Object({
+	entityId: ref('core:entity'),
 	fromEventId: ref('core:story-event'),
-	toEventId: ref('core:story-event')
-}, { [X_DOMAIN]: 'core:experience-relation' });
+	toEventId: ref('core:story-event'),
+	transitionKind: Type.Optional(Type.String())
+}, { [X_DOMAIN]: 'core:entity-continuity-relation' });
+
+export const EpistemicOperationSchema = Type.Union([
+	Type.Literal('learn'),
+	Type.Literal('observe'),
+	Type.Literal('infer'),
+	Type.Literal('believe'),
+	Type.Literal('suspect'),
+	Type.Literal('remember'),
+	Type.Literal('doubt'),
+	Type.Literal('reject'),
+	Type.Literal('forget'),
+	Type.Literal('revise')
+]);
+
+export const EpistemicEventSchema = Type.Object({
+	id: id('core:epistemic-event'),
+	subjectEntityId: ref('core:entity'),
+	informationRef: ref('core:information'),
+	operation: EpistemicOperationSchema,
+	experiencedAtEventId: ref('core:story-event'),
+	sourceEventId: Type.Optional(ref('core:story-event')),
+	sourceHistoryContextId: Type.Optional(ref('core:history-context')),
+	confidence: Type.Optional(Type.Number({ minimum: 0, maximum: 1 }))
+}, { [X_DOMAIN]: 'core:epistemic-event' });
 
 export const StoryEventSchema = Type.Object({
 	id: id('core:story-event'),
