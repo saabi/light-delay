@@ -5,7 +5,7 @@
 - **Decision owners:** project maintainers
 - **Extends:** `ADR-0001-MULTI-SCRIPT-CONTINUITIES.md`
 - **Preserves:** `ADR-0002-MASTER-NARRATIVE-AUTHORITY.md` for the current Light Delay project during migration
-- **Related:** `docs/V2_DOMAIN_MODEL.md`, `docs/V2_MIGRATION_PLAN.md`, `docs/V2_ACCEPTANCE_SCENARIOS.md`, `docs/V2_RUNTIME_CONTRACTS.md`, `docs/V2_CONTEXT_ENGINE.md`, `docs/V2_TEMPORAL_AND_EPISTEMIC.md`, `docs/V2_UI_AND_VERTICAL_SLICE.md`, `docs/STUDIO_DESIGN_SYSTEM.md`, `docs/production/LOCATION_HIERARCHY_DRAFT.en.md`
+- **Related:** `docs/V2_DOMAIN_MODEL.md`, `docs/V2_MIGRATION_PLAN.md`, `docs/V2_ACCEPTANCE_SCENARIOS.md`, `docs/V2_RUNTIME_CONTRACTS.md`, `docs/V2_CONTEXT_ENGINE.md`, `docs/V2_TEMPORAL_AND_EPISTEMIC.md`, `docs/V2_UI_AND_VERTICAL_SLICE.md`, `docs/STUDIO_DESIGN_SYSTEM.md`, `docs/V2_SCALABILITY_AND_STORAGE.md`, `docs/production/LOCATION_HIERARCHY_DRAFT.en.md`
 
 ## Context
 
@@ -220,7 +220,17 @@ Studio uses artifact-first lenses — Write, Story, World, Navigate, Direct, Pro
 
 UI components consume application query/view-model contracts and issue semantic commands rather than reading/writing persisted domain JSON directly. This permits the new interface to develop in parallel against fixtures while domain services migrate. See `docs/V2_UI_AND_VERTICAL_SLICE.md`.
 
-### 19. Import arbitrary projects through staged proposals
+### 19. Preserve a shardable persistence and authorization boundary
+
+Workspace is the collaboration/tenancy boundary; Project is the primary authoritative data-locality and future sharding boundary. A project belongs to one authoritative project-data shard at a time.
+
+At scale, global identity/workspace membership/project routing may live in a control-plane database while project domain/history lives on project-data shards. PostgreSQL RLS on a project shard must be enforceable from **shard-local authorization projections** plus transaction-local request identity; normal RLS policies must not synchronously query the control database.
+
+Control-plane membership remains the source of truth. Authorization changes propagate durably to shard-local grants with explicit versioning/revocation semantics. Application authorization and RLS provide defense in depth.
+
+Application servers remain stateless; heavy derived work is asynchronous through durable jobs/outbox events. Search/vector indexes are rebuildable projections and media bytes live in object storage. See `docs/V2_SCALABILITY_AND_STORAGE.md`.
+
+### 20. Import arbitrary projects through staged proposals
 
 Import is not a trusted direct write. Deterministic adapters may parse known formats; AI-assisted interpretation may map unknown formats. Both produce an `ImportProposal` containing source provenance, extracted objects, mappings, confidence/ambiguities, unresolved references and proposed ChangeSets.
 
