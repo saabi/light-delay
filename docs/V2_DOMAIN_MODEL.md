@@ -106,7 +106,16 @@ interface WorldContext {
 
 Context is orthogonal to reliability/truth claims. Contexts may nest.
 
-## 4. Story events and time
+## 4. Story events and temporal systems
+
+Temporal semantics distinguish four independent orders:
+
+1. **world/calendar time** — where an event lies in a world's clock/calendar;
+2. **causal order** — what causes or enables what;
+3. **experienced continuity** — the order experienced by a particular entity;
+4. **narrative order** — the order presented to the audience.
+
+Ordinary linear stories can let these coincide without authoring extra structures. Flashbacks usually change only narrative order. Time travel may make experienced/causal order run backward through world time.
 
 ```ts
 interface StoryEvent {
@@ -114,22 +123,42 @@ interface StoryEvent {
   worldContextId: WorldContextId;
   participantIds: EntityId[];
   locationRef?: SpatialRef;
-  temporal: TemporalPlacement;
-  causes?: StoryEventId[];
-  consequences?: StoryEventId[];
+  temporal: {
+    worldTime?: TimeCoordinate;
+    historyContextId?: HistoryContextId;
+    relations?: TemporalRelation[];
+  };
   stateTransitionIds?: StateTransitionId[];
   createsArtifactIds?: ArtifactId[];
 }
-
-type TemporalPlacement =
-  | { kind: "absolute"; value: string }
-  | { kind: "ordinal"; order: number }
-  | { kind: "interval"; start?: string; end?: string }
-  | { kind: "relative"; relation: "before"|"after"|"during"|"simultaneous-with"; eventId: StoryEventId; offset?: number }
-  | { kind: "unknown" };
 ```
 
-Chronology is a graph/order derived from these relations, not scene order.
+Causality and experienced continuity are graph relations rather than being inferred from timestamps:
+
+```text
+CausalRelation:      event A -> event B
+ExperienceRelation: subject + event A -> event B
+NarrativeOrder:      NarrativePresentation ordering
+```
+
+Thus a traveler can experience 1985 departure -> 1955 arrival while the two events retain their world/calendar placements.
+
+### Optional history contexts
+
+Multiple histories/timelines are not mandatory. Projects that need temporal-history semantics may introduce `HistoryContext` and a temporal model:
+
+```text
+linear
+fixed-loop
+mutable-history
+branching
+multiple-timelines
+custom
+```
+
+A HistoryContext may identify a parent history and divergence event. Validators interpret paradox/consistency rules according to the active temporal model rather than assuming one theory of time travel.
+
+`WorldContext` and `HistoryContext` remain distinct: WorldContext describes reality/ontological context (actual, imagined, simulation, dream, etc.); HistoryContext describes temporal-history identity. Either may be absent when unnecessary.
 
 ## 5. Artifacts, information and representation
 
