@@ -22,13 +22,21 @@ Status: **proposed**. No v2 runtime migration is authorized by this document alo
    - mobile Ardor host;
    - existing master facts/knowledge/action requirements;
    - generation reference-budget examples.
-4. Do not redesign production UI yet.
+4. Start the new v2 UI shell and first vertical-slice fixtures in parallel; do not bind it to raw v2 persistence shapes.
 
 Exit: acceptance scenarios are unambiguous enough to reject bad schemas.
 
-## Phase 1 — Introduce semantic core alongside existing files
+## Phase 1 — Runtime-contract proof + new UI shell
 
-Add machine contracts for stable references, Entity, Role, Capability, Relationship, WorldContext, StoryEvent, TemporalPlacement, NarrativePresentation, ChangeSet and Finding.
+Implement the small TypeBox-based contract proof described in `V2_RUNTIME_CONTRACTS.md` and the new application shell described in `V2_UI_AND_VERTICAL_SLICE.md`.
+
+Prove serialize/deserialize/introspect/validate behavior before expanding the contract library. Build UI against application query/view-model fixtures rather than raw persistence.
+
+Exit: the contract proof passes its hard cases and the new v2 shell can render the first spatial fixture without depending on the legacy component hierarchy.
+
+## Phase 2 — Introduce semantic core alongside existing files
+
+Using the proven contract layer, add machine contracts for stable references, Entity, Role, Capability, Relationship, WorldContext, StoryEvent, TemporalPlacement, NarrativePresentation, ChangeSet and Finding.
 
 Do not move shots/takes or delete current catalogs.
 
@@ -36,7 +44,7 @@ Build adapters that expose current characters/locations/vehicles/objects as cand
 
 Exit: current data can be projected into the new core without changing existing routes.
 
-## Phase 2 — Import Light Delay world and story
+## Phase 3 — Import Light Delay world and story
 
 Build an importer that reads current authoritative/compatible sources and emits an `ImportProposal`.
 
@@ -51,7 +59,7 @@ Ambiguities remain explicit proposals. Do not silently reconcile contradictory l
 
 Exit: accepted import reconstructs a v2 Light Delay project with traceable source provenance.
 
-## Phase 3 — Chronology and narrative presentation
+## Phase 4 — Chronology and narrative presentation
 
 Introduce Story Timeline and Narrative Order projections.
 
@@ -59,7 +67,7 @@ Convert/associate master and authorized derivative scenes with StoryEvents and N
 
 Exit: the system can answer chronology versus presentation queries without relying on scene order.
 
-## Phase 4 — Spatial runtime and navigation
+## Phase 5 — Spatial runtime and navigation
 
 Generalize current location v2 into role/capability-based spatial hosting.
 
@@ -76,7 +84,7 @@ Keep compatibility with current location IDs and still-reference rules.
 
 Exit: Light Delay navigation fixtures pass, including 1g/microgravity and Harlan blocking.
 
-## Phase 5 — Documents and narrative products
+## Phase 6 — Documents and narrative products
 
 Represent authored documents as first-class artifacts and migrate current outline/script products without forcing live inheritance.
 
@@ -86,7 +94,7 @@ ADR-0002 remains the Light Delay authority rule until an explicit ChangeSet migr
 
 Exit: master, Festival-master, trailer-master and archived products have explicit v2 status/provenance.
 
-## Phase 6 — Production boundary
+## Phase 7 — Production boundary
 
 Introduce ProductionScene/Setup/Shot/Take links while providing a compatibility projection to current ScriptFile consumers.
 
@@ -99,7 +107,7 @@ Move conceptually, not necessarily physically in one release:
 
 Exit: current animatic/movie/generation behavior works through compatibility selectors with no asset-ID churn.
 
-## Phase 7 — GenerationSpec compilation
+## Phase 8 — GenerationSpec compilation
 
 Wrap current prompt/reference planning behind provider-neutral GenerationSpec.
 
@@ -116,7 +124,7 @@ Raw provider prompts become derived artifacts.
 
 Exit: at least one current generation plan round-trips through GenerationSpec without semantic loss.
 
-## Phase 8 — Integrity engine
+## Phase 9 — Integrity engine
 
 Wrap existing validators in common Finding output before replacing them.
 
@@ -131,7 +139,7 @@ Do not convert stylistic preferences into hard errors.
 
 Exit: existing validation coverage is retained and new acceptance scenarios produce deterministic findings.
 
-## Phase 9 — Mutation history and collaboration
+## Phase 10 — Mutation history and collaboration
 
 Route authoritative writes through semantic commands/ChangeSets.
 
@@ -141,7 +149,7 @@ Initially, Git remains repository history; project ChangeSets become product/dom
 
 Exit: two concurrent edits can be classified as commuting or conflicting, and any project revision can be reconstructed.
 
-## Phase 10 — Multi-user/multi-project persistence
+## Phase 11 — Multi-user/multi-project persistence
 
 Introduce Workspace/Project tenancy and authorization without embedding tenant concerns in story IDs.
 
@@ -153,7 +161,7 @@ Separate:
 
 Exit: a user can belong to multiple projects/workspaces without data leakage; project history remains attributable.
 
-## Phase 11 — Import UX and agent runtimes
+## Phase 12 — Import UX and agent runtimes
 
 Expose staged import:
 source -> parser/AI interpretation -> ImportProposal -> review -> ChangeSet.
@@ -167,7 +175,7 @@ Agents do not mutate persistence directly.
 
 Exit: Light Delay can be imported through the same public mechanism intended for arbitrary projects.
 
-## Phase 12 — Progressive authoring UX
+## Phase 13 — Progressive authoring UX
 
 Build familiar artifact-first surfaces:
 - idea/logline/treatment/screenplay;
