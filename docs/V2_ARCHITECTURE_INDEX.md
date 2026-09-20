@@ -23,6 +23,7 @@ Core UX principle:
 - `STUDIO_DESIGN_SYSTEM.md` — professional/minimal visual system and intrusion budget.
 - `V2_ACCEPTANCE_SCENARIOS.md` — hard cases schemas/services must survive.
 - `V2_MIGRATION_PLAN.md` — staged migration.
+- `V2_IMPLEMENTATION_ROADMAP.md` — active build sequence, milestone exit criteria and architecture checkpoints.
 - `V2_SCALABILITY_AND_STORAGE.md` — scaling, sharding, Postgres/pgvector, control/data planes and shard-local RLS.
 
 Earlier ADR-0001/0002 remain relevant to Light Delay products/authority during migration.
@@ -103,7 +104,7 @@ Regenerate/commit `package-lock.json` after workspace installation if it changes
 
 ## Immediate next milestone
 
-Implement authoritative mutation/history for the vertical slice:
+Follow `V2_IMPLEMENTATION_ROADMAP.md`. First verify the current workspace from a checked-out branch, then implement authoritative mutation/history for the vertical slice:
 
 ```text
 ChangeSet / project revision
