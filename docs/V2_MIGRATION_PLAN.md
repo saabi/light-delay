@@ -22,7 +22,8 @@ Status: **proposed**. No v2 runtime migration is authorized by this document alo
    - mobile Ardor host;
    - existing master facts/knowledge/action requirements;
    - generation reference-budget examples.
-4. Start the new v2 UI shell and first vertical-slice fixtures in parallel; do not bind it to raw v2 persistence shapes.
+4. Treat the existing `/v2` route as a disposable design prototype. Scaffold the production Studio client as a separate app in the same repository, sharing application/domain packages rather than legacy product UI.
+5. Start the Studio shell and first vertical-slice fixtures in parallel; do not bind it to raw v2 persistence shapes.
 
 Exit: acceptance scenarios are unambiguous enough to reject bad schemas.
 
@@ -30,7 +31,7 @@ Exit: acceptance scenarios are unambiguous enough to reject bad schemas.
 
 Implement the small TypeBox-based contract proof described in `V2_RUNTIME_CONTRACTS.md` and the new application shell described in `V2_UI_AND_VERTICAL_SLICE.md`.
 
-Prove serialize/deserialize/introspect/validate behavior before expanding the contract library. Build UI against application query/view-model fixtures rather than raw persistence.
+Prove serialize/deserialize/introspect/validate behavior before expanding the contract library. Build UI against application query/view-model fixtures rather than raw persistence. The production target is `apps/studio`; legacy Light Delay remains independently runnable during migration. Follow `STUDIO_DESIGN_SYSTEM.md`.
 
 Exit: the contract proof passes its hard cases and the new v2 shell can render the first spatial fixture without depending on the legacy component hierarchy.
 
