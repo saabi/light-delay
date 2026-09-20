@@ -127,6 +127,7 @@
 		"@eslint/js": "^10.0.1",
 		"@inlang/paraglide-js": "^2.24.1",
 		"@playwright/test": "^1.60.0",
+		"@sinclair/typebox": "^0.34.49",
 		"@sveltejs/adapter-static": "^3.0.10",
 		"@sveltejs/kit": "^2.63.0",
 		"@sveltejs/vite-plugin-svelte": "^7.1.2",
