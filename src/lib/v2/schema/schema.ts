@@ -47,7 +47,7 @@ export const WorldContextSchema = Type.Object({
 	profileRefs: Type.Array(ref('core:profile'))
 }, { [X_DOMAIN]: 'core:world-context' });
 
-export const TemporalPlacementSchema = Type.Union([
+export const TimeCoordinateSchema = Type.Union([
 	Type.Object({ kind: Type.Literal('absolute'), value: Type.String() }),
 	Type.Object({ kind: Type.Literal('ordinal'), order: Type.Number() }),
 	Type.Object({
@@ -55,19 +55,58 @@ export const TemporalPlacementSchema = Type.Union([
 		start: Type.Optional(Type.String()),
 		end: Type.Optional(Type.String())
 	}),
-	Type.Object({
-		kind: Type.Literal('relative'),
-		relation: Type.Union([
-			Type.Literal('before'),
-			Type.Literal('after'),
-			Type.Literal('during'),
-			Type.Literal('simultaneous-with')
-		]),
-		eventId: ref('core:story-event'),
-		offset: Type.Optional(Type.Number())
-	}),
 	Type.Object({ kind: Type.Literal('unknown') })
-], { [X_DOMAIN]: 'core:temporal-placement' });
+], { [X_DOMAIN]: 'core:time-coordinate' });
+
+export const TemporalRelationSchema = Type.Object({
+	relation: Type.Union([
+		Type.Literal('before'),
+		Type.Literal('after'),
+		Type.Literal('during'),
+		Type.Literal('simultaneous-with')
+	]),
+	eventId: ref('core:story-event'),
+	offset: Type.Optional(Type.Number())
+}, { [X_DOMAIN]: 'core:temporal-relation' });
+
+/**
+ * World/calendar placement is intentionally independent from causal order,
+ * participant-experienced continuity, and narrative presentation order.
+ */
+export const TemporalPlacementSchema = Type.Object({
+	worldTime: Type.Optional(TimeCoordinateSchema),
+	historyContextId: Type.Optional(ref('core:history-context')),
+	relations: Type.Optional(Type.Array(TemporalRelationSchema))
+}, { [X_DOMAIN]: 'core:temporal-placement' });
+
+export const TemporalModelSchema = Type.Union([
+	Type.Literal('linear'),
+	Type.Literal('fixed-loop'),
+	Type.Literal('mutable-history'),
+	Type.Literal('branching'),
+	Type.Literal('multiple-timelines'),
+	Type.Literal('custom')
+]);
+
+export const HistoryContextSchema = Type.Object({
+	id: id('core:history-context'),
+	label: Type.String(),
+	parentHistoryContextId: Type.Optional(ref('core:history-context')),
+	divergesAtEventId: Type.Optional(ref('core:story-event')),
+	temporalModel: TemporalModelSchema
+}, { [X_DOMAIN]: 'core:history-context' });
+
+export const CausalRelationSchema = Type.Object({
+	fromEventId: ref('core:story-event'),
+	toEventId: ref('core:story-event'),
+	kind: Type.Optional(Type.String())
+}, { [X_DOMAIN]: 'core:causal-relation' });
+
+export const ExperienceRelationSchema = Type.Object({
+	subjectEntityId: ref('core:entity'),
+	fromEventId: ref('core:story-event'),
+	toEventId: ref('core:story-event')
+}, { [X_DOMAIN]: 'core:experience-relation' });
 
 export const StoryEventSchema = Type.Object({
 	id: id('core:story-event'),
