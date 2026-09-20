@@ -8,9 +8,120 @@ V2 gets a new interface. The existing Light Delay UI remains operational as a co
 
 The new UI is artifact-first and progressively reveals semantic machinery.
 
-Core principle:
+Core principles:
 
 > Develop the film normally. The model emerges underneath it.
+
+> Content first; model second.
+
+> Quiet by default, explicit on demand.
+
+The application should minimize persistent chrome around the author's primary task. Semantic intelligence is ambient infrastructure, not a dashboard that competes with the work.
+
+## Intrusion budget
+
+Every persistent UI element consumes an **intrusion budget**. A control earns permanent screen space only when the current task needs it continuously.
+
+For Write, the default intrusion budget is extremely low:
+
+- document/page;
+- caret and selection;
+- minimal document identity/status;
+- optionally a compact lens/project affordance.
+
+The following should normally be transient or summonable:
+
+- AI actions;
+- semantic-model changes;
+- continuity findings;
+- character/location metadata;
+- revision/history detail;
+- generated alternatives;
+- advanced formatting controls;
+- full assistant conversation.
+
+Other lenses may legitimately use denser UI. Navigate can show a graph; Produce can show tables; Review can show findings. Switching lenses is an intentional change of working mode.
+
+## Write lens
+
+Write should feel as close as practical to a high-quality text/screenplay editor.
+
+### Resting state
+
+When the author is simply typing:
+
+- center the text, not the application;
+- avoid a permanently open inspector;
+- avoid persistent AI chat;
+- avoid cards around every semantic unit;
+- avoid visible graph terminology;
+- use typography/whitespace rather than boxes to communicate screenplay structure;
+- keep model/validation activity visually quiet.
+
+### Selection interaction
+
+Selecting text may reveal a compact contextual floater near the selection with actions such as:
+
+```text
+Continue
+Rewrite
+Shorter
+Longer
+Dialogue
+Describe
+Ask…
+```
+
+The exact actions depend on context. The floater disappears when no longer relevant.
+
+### Inline completion
+
+AI continuation should behave like editor completion rather than chat:
+
+- faint/ghost continuation after the caret;
+- accept all or by word/phrase;
+- dismiss immediately with normal typing/Escape;
+- no mutation of authoritative text until accepted;
+- provenance can be retained below the UI surface.
+
+### Rewriting
+
+For a selected passage, AI may propose an inline replacement/diff. The original remains recoverable. Prefer a small accept/reject/alternate control over opening a conversation.
+
+### Ambient semantic feedback
+
+When writing implies a model change, use subtle margin/gutter indicators rather than interrupting prose.
+
+Examples:
+
+- new inferred character;
+- possible new location;
+- movement inferred;
+- chronology clue;
+- knowledge/revelation change;
+- contradiction;
+- consequential ambiguity.
+
+A marker can open a small card:
+
+```text
+Inferred
+Sorell moves: Bridge → Central Access
+
+[Confirm] [Adjust] [Ignore]
+```
+
+Low-consequence inference may accumulate quietly for later review. Consequential ambiguity can ask for confirmation.
+
+### Contextual inspector
+
+An inspector may slide/fade in when the user explicitly asks for details or selects a semantic object. Closing it returns the document to the same visual position; the editor should not permanently shrink merely because an inspector was once opened.
+
+### Assistant
+
+The full assistant is summonable through a shortcut/button/command and may appear as a temporary drawer, overlay or focused mode. It is not permanent Write chrome.
+
+The assistant should understand selection, cursor location, nearby document context and relevant project semantics without requiring the author to copy/paste them into chat.
 
 ## Primary lenses
 
