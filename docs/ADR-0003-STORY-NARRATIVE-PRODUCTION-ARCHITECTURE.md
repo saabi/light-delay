@@ -5,7 +5,7 @@
 - **Decision owners:** project maintainers
 - **Extends:** `ADR-0001-MULTI-SCRIPT-CONTINUITIES.md`
 - **Preserves:** `ADR-0002-MASTER-NARRATIVE-AUTHORITY.md` for the current Light Delay project during migration
-- **Related:** `docs/V2_DOMAIN_MODEL.md`, `docs/V2_MIGRATION_PLAN.md`, `docs/V2_ACCEPTANCE_SCENARIOS.md`, `docs/V2_RUNTIME_CONTRACTS.md`, `docs/V2_CONTEXT_ENGINE.md`, `docs/V2_UI_AND_VERTICAL_SLICE.md`, `docs/production/LOCATION_HIERARCHY_DRAFT.en.md`
+- **Related:** `docs/V2_DOMAIN_MODEL.md`, `docs/V2_MIGRATION_PLAN.md`, `docs/V2_ACCEPTANCE_SCENARIOS.md`, `docs/V2_RUNTIME_CONTRACTS.md`, `docs/V2_CONTEXT_ENGINE.md`, `docs/V2_TEMPORAL_AND_EPISTEMIC.md`, `docs/V2_UI_AND_VERTICAL_SLICE.md`, `docs/STUDIO_DESIGN_SYSTEM.md`, `docs/production/LOCATION_HIERARCHY_DRAFT.en.md`
 
 ## Context
 
@@ -212,11 +212,11 @@ The commercial model is multi-user and multi-project. Workspace/project membersh
 
 ChangeSets identify the acting principal and, for agents, the execution that produced the proposal.
 
-### 18. Build a new v2 interface in parallel with migration
+### 18. Build Studio as a separate application in the same repository
 
-The existing Light Delay UI remains operational as a compatibility/reference client, but it does not define v2 information architecture.
+The existing Light Delay UI remains operational as a compatibility/reference client, but it does not define v2 information architecture. The production Studio client lives under `apps/studio`; the legacy `/v2` route is a disposable prototype. Shared domain/application logic remains UI-framework-independent below both clients. Package boundaries should be extracted conservatively as dependency boundaries become proven.
 
-V2 uses artifact-first lenses — Write, Story, World, Navigate, Direct, Produce and Review — with progressive disclosure. Specialized filmmaking surfaces remain purpose-built; schema-generated controls serve generic inspectors, extensions and advanced metadata.
+Studio uses artifact-first lenses — Write, Story, World, Navigate, Direct, Produce and Review — with progressive disclosure. Specialized filmmaking surfaces remain purpose-built; schema-generated controls serve generic inspectors, extensions and advanced metadata.
 
 UI components consume application query/view-model contracts and issue semantic commands rather than reading/writing persisted domain JSON directly. This permits the new interface to develop in parallel against fixtures while domain services migrate. See `docs/V2_UI_AND_VERTICAL_SLICE.md`.
 
