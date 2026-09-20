@@ -23,6 +23,7 @@ Core UX principle:
 - `STUDIO_DESIGN_SYSTEM.md` — professional/minimal visual system and intrusion budget.
 - `V2_ACCEPTANCE_SCENARIOS.md` — hard cases schemas/services must survive.
 - `V2_MIGRATION_PLAN.md` — staged migration.
+- `V2_SCALABILITY_AND_STORAGE.md` — scaling, sharding, Postgres/pgvector, control/data planes and shard-local RLS.
 
 Earlier ADR-0001/0002 remain relevant to Light Delay products/authority during migration.
 
@@ -140,4 +141,4 @@ Database/storage technology is intentionally not yet fixed by ADR-0003. Required
 - rebuildable vector/embedding index;
 - blob/media storage.
 
-A database decision should preserve the rule that vector retrieval is a derived index, never project authority.
+Current direction: PostgreSQL + pgvector + object storage initially. Design for a future control-plane DB plus project-data shards. Shard RLS uses locally projected grants; it does not synchronously join/query the control database. Vector retrieval is a derived index, never project authority.
