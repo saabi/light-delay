@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { EntitySchema, ExperienceRelationSchema, HistoryContextSchema, StoryEventSchema, annotationsOf, check } from './schema';
+import { EntityContinuityRelationSchema, EntitySchema, EpistemicEventSchema, HistoryContextSchema, StoryEventSchema, annotationsOf, check } from './schema';
 
 describe('v2 runtime contract proof', () => {
 	it('keeps domain annotations introspectable', () => {
@@ -39,10 +39,21 @@ describe('v2 runtime contract proof', () => {
 			stateTransitionIds: [],
 			createsArtifactIds: []
 		})).toBe(true);
-		expect(check(ExperienceRelationSchema, {
-			subjectEntityId: 'entity:traveler',
+		expect(check(EntityContinuityRelationSchema, {
+			entityId: 'entity:traveler',
 			fromEventId: 'event:traveler-leaves-1985',
 			toEventId: 'event:traveler-arrives-1955'
+		})).toBe(true);
+	});
+
+	it('allows knowledge from a prior history to follow entity continuity', () => {
+		expect(check(EpistemicEventSchema, {
+			id: 'epistemic:traveler-remembers-original-1985',
+			subjectEntityId: 'entity:traveler',
+			informationRef: 'information:original-family-history',
+			operation: 'remember',
+			experiencedAtEventId: 'event:traveler-returns-altered-1985',
+			sourceHistoryContextId: 'history:original'
 		})).toBe(true);
 	});
 
