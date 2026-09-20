@@ -127,7 +127,8 @@
     "check:legacy": "npm run i18n:compile && svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "dev:studio": "npm run dev --workspace @light-delay/studio",
     "build:studio": "npm run build --workspace @light-delay/studio",
-    "check:studio": "npm run check --workspace @light-delay/studio"
+    "check:studio": "npm run check --workspace @light-delay/studio",
+    "test:v2-core": "vitest run packages/v2-core/src/**/*.test.ts"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
