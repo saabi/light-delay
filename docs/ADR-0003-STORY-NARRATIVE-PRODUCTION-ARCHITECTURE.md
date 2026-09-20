@@ -5,7 +5,7 @@
 - **Decision owners:** project maintainers
 - **Extends:** `ADR-0001-MULTI-SCRIPT-CONTINUITIES.md`
 - **Preserves:** `ADR-0002-MASTER-NARRATIVE-AUTHORITY.md` for the current Light Delay project during migration
-- **Related:** `docs/V2_DOMAIN_MODEL.md`, `docs/V2_MIGRATION_PLAN.md`, `docs/V2_ACCEPTANCE_SCENARIOS.md`, `docs/production/LOCATION_HIERARCHY_DRAFT.en.md`
+- **Related:** `docs/V2_DOMAIN_MODEL.md`, `docs/V2_MIGRATION_PLAN.md`, `docs/V2_ACCEPTANCE_SCENARIOS.md`, `docs/V2_RUNTIME_CONTRACTS.md`, `docs/V2_CONTEXT_ENGINE.md`, `docs/V2_UI_AND_VERTICAL_SLICE.md`, `docs/production/LOCATION_HIERARCHY_DRAFT.en.md`
 
 ## Context
 
@@ -196,13 +196,23 @@ Human UI actions, API clients, MCP clients, hosted LLMs and spawned local agents
 
 Agent runtime is pluggable: hosted API, MCP-assisted client, local process/CLI adapter or future providers. The semantic application API is authoritative; no agent should require direct database mutation.
 
-### 16. Design tenancy and authorization into identity from the start
+### 16. Make the Context Engine a core application subsystem
+
+The LLM is not authoritative project memory. Project state, documents, history and deterministic indexes are.
+
+AI/model/agent calls receive bounded, task-specific `ContextPackage` values assembled by a provider-independent Context Engine. It combines immediate editor context, structural queries, dependency traversal, exact lexical retrieval and semantic/vector retrieval as appropriate.
+
+RAG is one retrieval strategy, not the authority for facts that can be resolved structurally. Retrieval is task-specific, revision-aware, authorized, inspectable and budgeted. Agent hidden/session state is temporary working memory; durable conclusions become explicit project artifacts, Findings or ChangeSets.
+
+See `docs/V2_CONTEXT_ENGINE.md`.
+
+### 17. Design tenancy and authorization into identity from the start
 
 The commercial model is multi-user and multi-project. Workspace/project membership, principals, roles and authorization belong at the application boundary. Stable project-domain IDs are distinct from tenant/database keys where useful.
 
 ChangeSets identify the acting principal and, for agents, the execution that produced the proposal.
 
-### 17. Build a new v2 interface in parallel with migration
+### 18. Build a new v2 interface in parallel with migration
 
 The existing Light Delay UI remains operational as a compatibility/reference client, but it does not define v2 information architecture.
 
@@ -210,7 +220,7 @@ V2 uses artifact-first lenses — Write, Story, World, Navigate, Direct, Produce
 
 UI components consume application query/view-model contracts and issue semantic commands rather than reading/writing persisted domain JSON directly. This permits the new interface to develop in parallel against fixtures while domain services migrate. See `docs/V2_UI_AND_VERTICAL_SLICE.md`.
 
-### 18. Import arbitrary projects through staged proposals
+### 19. Import arbitrary projects through staged proposals
 
 Import is not a trusted direct write. Deterministic adapters may parse known formats; AI-assisted interpretation may map unknown formats. Both produce an `ImportProposal` containing source provenance, extracted objects, mappings, confidence/ambiguities, unresolved references and proposed ChangeSets.
 
