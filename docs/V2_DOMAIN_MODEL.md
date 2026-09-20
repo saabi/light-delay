@@ -39,6 +39,11 @@ Workspace
       Representations
       Edits
     Profiles
+    ContextEngine
+      ContextPolicies
+      ContextPackages
+      RetrievalIndexes
+      AgentExecutions
     History
       ChangeSets
       Revisions
@@ -417,7 +422,19 @@ Known-format adapters and AI interpreters both produce `ImportProposal`, never d
 
 Agents interact through the same command/query application API as the UI. Runtime adapters may call hosted APIs, MCP clients or local CLI processes such as coding/agent CLIs. Execution mechanism does not change domain authority.
 
-## 17. UX principle
+## 17. Context and agent memory
+
+Project state is durable memory; model context is an assembled view.
+
+The Context Engine resolves task anchors (cursor/selection, document range, entity, event, presentation, location, shot, asset, Finding or revision) into bounded `ContextPackage` values. It prefers exact structural queries for world/story facts and uses lexical/semantic retrieval for prose and fuzzy similarity.
+
+Context packages identify their project revision, sources, retrieval reasons, authority/inference status and dependencies. Vector indexes, summaries and embeddings are rebuildable projections.
+
+An `AgentExecution` may keep temporary plans, notes, query results and retrieved packages, but durable conclusions must be committed as explicit artifacts, Findings, relationships/decisions or ChangeSets. Provider session memory is never required to reconstruct project meaning.
+
+See `docs/V2_CONTEXT_ENGINE.md`.
+
+## 18. UX principle
 
 The domain model is not the default user interface.
 
