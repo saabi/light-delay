@@ -45,7 +45,9 @@ Concrete concepts such as character, vehicle, dragon, transporter, recording, sp
 
 An entity may therefore simultaneously be a character, vehicle, carrier and spatial host. A person may carry inventory without becoming a location. A dragon may be an agent, character, mobile carrier, rideable vehicle and spatial host where appropriate.
 
-Core schemas remain strict. Extensions are namespaced, versioned and may carry declarative validation rules and UI hints. Unknown extensions must remain round-trippable.
+Runtime contracts remain strict. Extensions are namespaced, versioned and may carry declarative validation rules and UI hints. Unknown extensions must remain round-trippable.
+
+V2 adopts the **World-Lab schema pattern** as its proposed contract architecture: TypeBox provides JSON-Schema-shaped runtime contracts plus TypeScript static inference, while a thin project-owned annotation/factory layer adds domain semantics. One contract should be reusable for static typing, runtime structural validation, serialization, introspection, generic inspectors/documentation and selected agent/tool contracts. Do not introduce Zod as a parallel source of truth. See `docs/V2_RUNTIME_CONTRACTS.md`.
 
 ### 2. Separate world, story, narrative presentation, documents, cinematic language, production and media
 
@@ -200,7 +202,15 @@ The commercial model is multi-user and multi-project. Workspace/project membersh
 
 ChangeSets identify the acting principal and, for agents, the execution that produced the proposal.
 
-### 17. Import arbitrary projects through staged proposals
+### 17. Build a new v2 interface in parallel with migration
+
+The existing Light Delay UI remains operational as a compatibility/reference client, but it does not define v2 information architecture.
+
+V2 uses artifact-first lenses — Write, Story, World, Navigate, Direct, Produce and Review — with progressive disclosure. Specialized filmmaking surfaces remain purpose-built; schema-generated controls serve generic inspectors, extensions and advanced metadata.
+
+UI components consume application query/view-model contracts and issue semantic commands rather than reading/writing persisted domain JSON directly. This permits the new interface to develop in parallel against fixtures while domain services migrate. See `docs/V2_UI_AND_VERTICAL_SLICE.md`.
+
+### 18. Import arbitrary projects through staged proposals
 
 Import is not a trusted direct write. Deterministic adapters may parse known formats; AI-assisted interpretation may map unknown formats. Both produce an `ImportProposal` containing source provenance, extracted objects, mappings, confidence/ambiguities, unresolved references and proposed ChangeSets.
 
@@ -224,4 +234,4 @@ ADR-0002 remains authoritative for the current Light Delay repository until its 
 
 ## Deferred implementation choices
 
-This ADR deliberately does not select the database, event-store product, queue, object store, CRDT library, agent provider, deployment platform or exact schema language. Those choices follow domain acceptance and machine-contract design.
+This ADR deliberately does not select the database, event-store product, queue, object store, CRDT library, agent provider or deployment platform. For runtime contracts it selects the World-Lab **TypeBox + project-owned serializable annotation layer pattern** as the implementation direction, subject to the proof gate in `V2_RUNTIME_CONTRACTS.md`. The proof must resolve serialized-schema validation/rehydration before broad adoption.
