@@ -1,4 +1,4 @@
-# V2 UI and first vertical slice
+# Studio UI and first vertical slice
 
 Status: **implementation brief**.
 
@@ -331,3 +331,10 @@ The answer may expose:
 - story consequence.
 
 It should not require the user to inspect a `NavEdge` or `WorldStatePredicate` unless they choose an engineering/advanced view.
+
+
+## Application boundary
+
+Production UI lives in `apps/studio`. Shared schema/domain/context logic lives below the app boundary and must not depend on Svelte. Begin with a small shared surface rather than prematurely creating many packages. Generic UI primitives may later move to a shared UI package when reuse is demonstrated.
+
+Visual implementation follows `docs/STUDIO_DESIGN_SYSTEM.md`: low visual noise, typography/spacing before borders, cards only for genuinely discrete objects, and density appropriate to each lens.
