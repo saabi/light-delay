@@ -137,7 +137,7 @@ Causality and experienced continuity are graph relations rather than being infer
 
 ```text
 CausalRelation:      event A -> event B
-ExperienceRelation: subject + event A -> event B
+EntityContinuity:  entity + event A -> event B
 NarrativeOrder:      NarrativePresentation ordering
 ```
 
@@ -334,17 +334,41 @@ Deck 1 -- segment 1/2 -- Deck 2 -- segment 2/3 -- Deck 3
 
 A blocked Deck-3 doorway need not block an elevator passing Deck 3; a blocked shaft segment does. This is represented in traversal topology/state, not inferred from hierarchy.
 
-## 9. Facts and knowledge
+## 9. Facts, information and epistemic state
 
-Facts describe propositions within a context/continuity. Knowledge events describe when an agent learns, believes, doubts or loses access to information.
+World truth and character epistemic state are separate.
 
-The existing Light Delay master `facts`, `knowledgeEvents` and `actionRequirements` are migration inputs, not discarded data.
+- **Facts/assertions** describe propositions and the contexts/history intervals in which the project treats them as true, false or unresolved.
+- **Information** is proposition/content that may be represented, communicated or remembered.
+- **Epistemic events** record changes in a subject's knowledge/belief state: learn, observe, infer, believe, suspect, remember, doubt, reject, forget or revise.
+
+Epistemic state is projected along **entity continuity**, not merely world/calendar time. This matters in ordinary stories and becomes essential when an entity crosses history contexts.
+
+A traveler arriving in an altered 1985 may therefore retain memories sourced from the original history while residents of altered 1985 have epistemic states accumulated entirely within the altered history. These are not contradictions in world truth.
+
+```ts
+interface EpistemicEvent {
+  id: EpistemicEventId;
+  subjectEntityId: EntityId;
+  informationRef: InformationRef;
+  operation: EpistemicOperation;
+  experiencedAtEventId: StoryEventId;
+  sourceEventId?: StoryEventId;
+  sourceHistoryContextId?: HistoryContextId;
+  confidence?: number;
+}
+```
 
 Queries should support:
-- what has actually happened by story time T?
+- what is asserted true in this world/history context?
+- what has actually happened by a world-time point?
 - what has the audience learned by narrative position N?
-- what does Rao know that Voss does not?
-- which action requires a fact/knowledge state?
+- what does Rao know/believe that Voss does not?
+- what does a time traveler remember from a predecessor history?
+- by what observation/message/inference did a character acquire information?
+- which action requires a fact or epistemic state?
+
+The existing Light Delay master `facts`, `knowledgeEvents` and `actionRequirements` are migration inputs, not discarded data.
 
 ## 10. Cinematic language
 
