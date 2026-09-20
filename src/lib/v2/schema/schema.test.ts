@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { EntitySchema, StoryEventSchema, annotationsOf, check } from './schema';
+import { EntitySchema, ExperienceRelationSchema, HistoryContextSchema, StoryEventSchema, annotationsOf, check } from './schema';
 
 describe('v2 runtime contract proof', () => {
 	it('keeps domain annotations introspectable', () => {
@@ -21,9 +21,38 @@ describe('v2 runtime contract proof', () => {
 			id: 'event:crew-plays-zao-warning',
 			worldContextId: 'context:actual',
 			participantIds: ['entity:sorell'],
-			temporal: { kind: 'relative', relation: 'after', eventId: 'event:zao-records-warning' },
+			temporal: { relations: [{ relation: 'after', eventId: 'event:zao-records-warning' }] },
 			stateTransitionIds: [],
 			createsArtifactIds: []
+		})).toBe(true);
+	});
+
+	it('allows experienced order to run backward through world time', () => {
+		expect(check(StoryEventSchema, {
+			id: 'event:traveler-arrives-1955',
+			worldContextId: 'context:actual',
+			participantIds: ['entity:traveler'],
+			temporal: {
+				worldTime: { kind: 'absolute', value: '1955-11-12T06:00:00' },
+				historyContextId: 'history:primary'
+			},
+			stateTransitionIds: [],
+			createsArtifactIds: []
+		})).toBe(true);
+		expect(check(ExperienceRelationSchema, {
+			subjectEntityId: 'entity:traveler',
+			fromEventId: 'event:traveler-leaves-1985',
+			toEventId: 'event:traveler-arrives-1955'
+		})).toBe(true);
+	});
+
+	it('supports optional branching history without imposing it on linear stories', () => {
+		expect(check(HistoryContextSchema, {
+			id: 'history:altered-1985',
+			label: 'Altered history',
+			parentHistoryContextId: 'history:original',
+			divergesAtEventId: 'event:past-intervention',
+			temporalModel: 'branching'
 		})).toBe(true);
 	});
 
