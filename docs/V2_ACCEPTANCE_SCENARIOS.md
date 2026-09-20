@@ -64,7 +64,19 @@ Expected:
 - entities/events retain provenance across history contexts where identity continuity is meaningful;
 - ordinary linear projects need not create HistoryContext objects.
 
-## G. Ardor bridge: gravity-dependent crossing
+## G. Knowledge carried across altered history
+
+A traveler from original history H0 enters the past, causes H1, and later reaches H1's 1985. Residents have memories formed along H1; the traveler remembers H0 plus their own subsequent experiences.
+
+Expected:
+- epistemic state follows entity continuity rather than destination world chronology;
+- traveler may remember facts that were true only in H0;
+- H1 residents need not acquire H0 memories;
+- incompatible memories are not automatically world-truth contradictions;
+- validator can flag dialogue that requires information for which a character has no acquisition path;
+- artifacts/entities crossing histories can retain their own continuity subject to project temporal rules.
+
+## H. Ardor bridge: gravity-dependent crossing
 
 Meal table and crew stations have a safe around-rail route. A direct route crosses the central opening and is safe only in microgravity.
 
@@ -74,7 +86,7 @@ Expected:
 - containment under the same Bridge does not itself establish reachability;
 - camera/still location semantics remain independent of nav waypoints.
 
-## H. Harlan blocks the route
+## I. Harlan blocks the route
 
 Harlan occupies a required waypoint/edge with hostile stance.
 
@@ -84,7 +96,7 @@ Expected:
 - moving Harlan changes navigation without changing permanent geography;
 - an unexplained story movement through the blocker can produce a validation finding.
 
-## I. Multi-level elevator/shaft
+## J. Multi-level elevator/shaft
 
 Deck 1 to Deck 5 normally traverses intermediate segments/interfaces.
 
@@ -94,7 +106,7 @@ Expected:
 - levels need not all be shootable locations;
 - traversal state is not inferred from containment.
 
-## J. Mobile host
+## K. Mobile host
 
 Sorell is aboard the Celestial Ardor while the Ardor leaves Proxima.
 
@@ -105,7 +117,7 @@ Expected:
 - contained ship inventory follows the ship;
 - movement does not require rewriting every contained entity's absolute location.
 
-## K. Dragon with multiple roles
+## L. Dragon with multiple roles
 
 A dragon is a speaking character and can carry/rider-transport another character.
 
@@ -115,7 +127,7 @@ Expected:
 - carried inventory is supported;
 - no duplicate "dragon character" and "dragon vehicle" identity is required.
 
-## L. Range-limited transporter without XYZ
+## M. Range-limited transporter without XYZ
 
 Enterprise-like vessel A is proximity-distance 50 from location B. Its transporter range is 60.
 
@@ -125,7 +137,7 @@ Expected:
 - no Cartesian coordinates are required;
 - moving the vessel can alter effective proximity/reachability.
 
-## M. Fantasy inside an otherwise realistic film
+## N. Fantasy inside an otherwise realistic film
 
 Two friends imagine a dragon battle during one presentation/sequence.
 
@@ -135,7 +147,7 @@ Expected:
 - actual-world events remain separate;
 - cinematic fantasy treatment is optional and separate from ontology.
 
-## N. Medieval letter
+## O. Medieval letter
 
 A messenger carries a letter between towns.
 
@@ -144,7 +156,7 @@ Expected:
 - no screen/recording-specific core concept is required;
 - travel and carrier movement can validate delivery chronology.
 
-## O. Prophecy
+## P. Prophecy
 
 A prophecy describes a possible future that may never occur.
 
@@ -152,7 +164,7 @@ Expected:
 - represented/proposed future is not automatically an established StoryEvent in the actual world;
 - later fulfillment may link to it without retroactively making every detail true.
 
-## P. Linear drama
+## Q. Linear drama
 
 A user writes a simple short film with no nonlinear time, portals or complex world simulation.
 
@@ -161,13 +173,13 @@ Expected:
 - defaults/inference produce valid minimal semantic state;
 - advanced fields remain optional until needed.
 
-## Q. Live-action production without AI generation
+## R. Live-action production without AI generation
 
 Expected:
 - shots, setups, takes, continuity and assets work without GenerationSpec;
 - AI-generation validation does not produce irrelevant errors.
 
-## R. AI-heavy production
+## S. AI-heavy production
 
 Expected:
 - identity/location/object references can be required by policy;
@@ -175,7 +187,7 @@ Expected:
 - reference-budget constraints are provider-specific derived concerns;
 - generated output retains provenance to semantic inputs and provider adapter/version.
 
-## S. Hybrid production
+## T. Hybrid production
 
 An AI previs shot is later replaced by a live-action take.
 
@@ -185,7 +197,7 @@ Expected:
 - previs can be superseded without deletion;
 - downstream dependencies can distinguish selected/current realization.
 
-## T. Arbitrary import
+## U. Arbitrary import
 
 A user imports an unknown project format containing prose, character tables and shot notes.
 
@@ -196,7 +208,7 @@ Expected:
 - ambiguous mappings have confidence/notes and require review;
 - import produces proposed semantic ChangeSets rather than direct database writes.
 
-## U. Concurrent collaborators
+## V. Concurrent collaborators
 
 Two users edit from revision 1842. One changes Rao's costume; another moves Harlan.
 
@@ -207,7 +219,7 @@ If both change the same portal state or one invalidates the other's assumptions:
 - conflict is surfaced for resolution;
 - neither edit silently overwrites the other.
 
-## V. Agent against stale revision
+## W. Agent against stale revision
 
 An agent prepares a ChangeSet from revision 2100 while project is now 2107.
 
@@ -217,7 +229,7 @@ Expected:
 - semantically stale proposals are revalidated or rejected for review;
 - agent cannot bypass application authorization by writing storage directly.
 
-## W. Staleness from upstream change
+## X. Staleness from upstream change
 
 A generated shot depends on Sorell identity reference and Ardor geometry. Ardor geometry changes.
 
@@ -227,7 +239,7 @@ Expected:
 - unaffected dependencies remain valid;
 - user can inspect the mutation that caused staleness.
 
-## X. Narrative product versus history branch
+## Y. Narrative product versus history branch
 
 A Festival Cut is an intentional authored narrative product. Separately, an editor creates an experimental branch for a different third act.
 
@@ -236,7 +248,7 @@ Expected:
 - experimental branch is project-history state, not automatically another cut;
 - branch may merge without creating a narrative product.
 
-## Y. Restore history
+## Z. Restore history
 
 User views revision 500 and chooses to restore it.
 
@@ -245,7 +257,7 @@ Expected:
 - system creates a new ChangeSet whose result resembles revision 500;
 - attribution and rationale remain inspectable.
 
-## Z. Light Delay migration
+## AA. Light Delay migration
 
 Expected imported project can answer, with provenance:
 - Where is Sorell at a selected story/narrative point?
