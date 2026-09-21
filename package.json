@@ -128,7 +128,7 @@
     "dev:studio": "npm run dev --workspace @light-delay/studio",
     "build:studio": "npm run build --workspace @light-delay/studio",
     "check:studio": "npm run check --workspace @light-delay/studio",
-    "test:v2-core": "vitest run packages/v2-core/src/world.test.ts"
+    "test:v2-core": "vitest run packages/v2-core/src/world.test.ts packages/v2-core/src/history.test.ts"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
