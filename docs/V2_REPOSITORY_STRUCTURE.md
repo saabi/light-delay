@@ -127,7 +127,19 @@ It owns:
 
 It consumes Light Delay project data through an explicit adapter/path contract during migration. Moving it does **not** make its current data model the Studio model.
 
-Long term this application may be retired. Its directory boundary should make retirement straightforward.
+### Festival preservation constraint
+
+The legacy application is not merely a migration aid. While the film-festival submission is being judged, it is a **protected deployable artifact**.
+
+Until the judging/preservation window is explicitly closed:
+- the legacy app must remain independently runnable, checkable and buildable;
+- changes to shared data, tooling, packages or repository structure that can affect it must run the legacy compatibility gate;
+- the existing public festival deployment must remain available and must not depend on Studio being deployable;
+- cleanup must preserve public routes/assets unless an intentional compatibility migration is verified;
+- a failed Studio build must not prevent rebuilding/deploying the legacy festival app;
+- retirement, replacement or destructive simplification of the legacy app requires an explicit post-festival decision.
+
+Long term, after that constraint is explicitly lifted, this application may be retired. Its directory boundary should make retirement straightforward.
 
 ## Project boundary
 
@@ -287,6 +299,8 @@ After the app move it should explicitly build `apps/light-delay` and upload that
 
 Studio should have a distinct CI/build job even before it has a production deployment.
 
+During festival judging, CI must treat the legacy app as a protected compatibility target. Prefer separate jobs so Studio failure is distinguishable from legacy failure. Deployment of the festival site remains sourced only from the verified legacy build artifact.
+
 Target CI shape:
 
 ```text
@@ -316,7 +330,7 @@ Correct relative imports to root project data/scripts through a temporary explic
 
 Keep canonical `data/`, `static/`, and project production scripts at root for this stage.
 
-**Gate:** legacy check, unit tests, build and representative Pages build remain equivalent.
+**Gate:** legacy check, unit tests, build and representative Pages build remain equivalent. During festival judging this gate is mandatory, not advisory.
 
 ### Stage R2 — Move app-local i18n and browser configuration
 
