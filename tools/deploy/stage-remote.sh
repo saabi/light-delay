@@ -40,7 +40,7 @@ npm ci --omit=dev --ignore-scripts --audit=false --fund=false --prefix "$tempora
 mv "$temporary_dir" "$release_dir"
 sudo -n /usr/local/sbin/studio-stage-activate "$release_dir" "$sha"
 
-health=$(/usr/bin/curl --fail --silent --show-error --retry 15 --retry-delay 1 http://127.0.0.1:5100/health)
+health=$(/usr/bin/curl --fail --silent --show-error --retry 15 --retry-delay 1 --retry-connrefused http://127.0.0.1:5100/health)
 node - "$sha" "$health" <<'NODE'
 const [expected, body] = process.argv.slice(2);
 const payload = JSON.parse(body);
