@@ -14836,6 +14836,204 @@
         "notes": "Registered from private Scene 21 generation on 2026-09-16T19:49:50.030Z; editorial review pending.",
         "regenerationRequired": false
       }
+    },
+    {
+      "assetId": "asset:festival-master-scene-22-single-take-still",
+      "entityId": "festival-master:shot-plan-065",
+      "kind": "animaticStill",
+      "status": "generated",
+      "outputPath": "/assets/animatic/frames/festival-master/scene-22-single-take.png",
+      "dimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "styleAnchorAssetIds": [
+        "asset:character-pair-voss-harlan-bridge-sheet",
+        "asset:character-pair-okoye-voss-bridge-sheet",
+        "asset:character-rao-sheet",
+        "asset:character-sorell-sheet",
+        "asset:location-celestial-ardor-bridge-realistic-reference"
+      ],
+      "references": [
+        {
+          "assetId": "asset:character-pair-voss-harlan-bridge-sheet",
+          "role": "character identity reference"
+        },
+        {
+          "assetId": "asset:character-pair-okoye-voss-bridge-sheet",
+          "role": "character identity reference"
+        },
+        {
+          "assetId": "asset:character-rao-sheet",
+          "role": "character identity reference"
+        },
+        {
+          "assetId": "asset:character-sorell-sheet",
+          "role": "character identity reference"
+        },
+        {
+          "assetId": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "role": "location / environment reference"
+        }
+      ],
+      "prompt": {
+        "useCase": "stylized-concept",
+        "assetType": "Festival-master Scene 22 single-take storyboard still",
+        "primaryRequest": "Use case: illustration-story\nAsset type. Festival-master storyboard keyframe still\nPrimary request. Regenerate one single 16:9 landscape cinematic storyboard still for Light Delay Festival-master Scene 22, Not the voice, as a coherent physical scene on the Celestial Ardor bridge. This is the moment when Harlan argues that a voice and face can be forged from archives, Rao presents converging independent evidence, and Voss looks between Harlan and Sorell.\nInput images. Image 1 is the authoritative Celestial Ardor bridge architecture and geometry; Image 2 is an identity reference only, with Elias Voss on the left and Rylen Harlan on the right; Image 3 is an identity reference only, with Dara Okoye on the left and Elias Voss on the right; Image 4 is Rao's solo identity reference; Image 5 is Sorell's solo identity reference. Ignore all pair-sheet backgrounds and use Image 1 for the actual room.\nScene/backdrop: the real Celestial Ardor bridge from Image 1, with its cream cylindrical central core, central opening, spiral/helical stair and rails, curved hull console arc, windows, fixed crew stations, and practical engineered materials. No service cylinder, service shaft, vault, or alternate room.\nSubject and blocking: steady 1 g, planted feet and normal weight. Voss is at the command station in the foreground/right, alert and looking between Harlan and Sorell. Harlan is near the secondary bridge console, defensive and visibly being held/guarded by Okoye; he is not free to collaborate. Okoye stands close enough to control Harlan without attacking him. Rao is at the left-side analysis/data console, focused and presenting evidence through the console. Sorell is a distinct, separate woman in the background/depth under watch, clearly retained in custody and not participating as a free crew member. Exactly these five named characters appear once each. Voss, Harlan, Okoye, Rao, and Sorell.\nStyle/medium: grounded hard-science-fiction photorealistic cinematic VFX storyboard still, practical human spacecraft, restrained cyan/blue working displays, natural facial identity and believable anatomy.\nComposition/framing: wide 16:9 three-quarter bridge coverage that makes the central cylindrical core, spiral stair/rails, curved console arc, crew stations, and eyelines readable. Preserve stable bridge geography and clear relative positions; no collage or split screen.\nLighting/mood: restrained warm practical overhead lights balanced with cool cyan instrumentation; tense investigative atmosphere, controlled rather than melodramatic.\nMaterials/textures: worn but maintained metal, dark engineered flooring, fixed seats and consoles, physically plausible handrails and station hardware.\nText: no spoken dialogue text, subtitles, captions, labels, logos, or watermark; interface graphics may be present but must be minimal, diegetic, and not legible prose.\nConstraints: use the attached identity references for exact character faces, hair, uniforms, and proportions; Image 4 is Rao and Image 5 is Sorell; do not confuse them. Maintain one continuous 1 g bridge space. Sorell remains under watch. Harlan remains controlled by Okoye. No extra people, duplicates, silhouettes, reflections resembling people, or floating bodies.\nAvoid: microgravity, free Sorell, free Harlan, service shaft, service cylinder, inner shielding vault, alternate bridge geometry, pair-sheet backgrounds, collage, storyboard panels, text-heavy screens, non-English text, logos, watermark, extra characters.",
+        "inputImages": [
+          "Reference asset: asset:character-pair-voss-harlan-bridge-sheet",
+          "Reference asset: asset:character-pair-okoye-voss-bridge-sheet",
+          "Reference asset: asset:character-rao-sheet",
+          "Reference asset: asset:character-sorell-sheet",
+          "Reference asset: asset:location-celestial-ardor-bridge-realistic-reference"
+        ],
+        "sceneBackdrop": "Continuity setting location:celestial-ardor-bridge.",
+        "subject": "character:voss, character:harlan, character:okoye, character:rao, character:sorell",
+        "styleMedium": "Grounded cinematic hard-science-fiction storyboard concept art matching the attached Light Delay references.",
+        "compositionFraming": "Wide three-quarter 16:9 single-take bridge composition with stable geography and readable eyelines.",
+        "lightingMood": "Steady artificial 1 g bridge practical lighting with restrained cyan console spill.",
+        "colorPalette": "Cool graphite, off-white, slate-blue and restrained practical amber accents.",
+        "materialsTextures": "Worn maintainable spacecraft surfaces and realistic hardware.",
+        "textVerbatim": "No spoken dialogue text, subtitles, captions, logos, or watermark.",
+        "constraints": "Preserve bridge geography, identity, Harlan custody, Sorell custody, steady 1 g, and no extra characters.",
+        "avoid": "Character swaps, free Harlan, free Sorell, changed bridge geometry, microgravity, service shaft, vault, collage, split screen, subtitles, logos, watermark."
+      },
+      "review": {
+        "notes": "Scene 22 still regenerated and registered from private output on 2026-09-16T22:49:58.428Z; editorial review pending.",
+        "regenerationRequired": false
+      }
+    },
+    {
+      "assetId": "asset:festival-master-scene-23-single-take-still",
+      "entityId": "festival-master:shot-plan-068",
+      "kind": "animaticStill",
+      "status": "generated",
+      "outputPath": "/assets/animatic/frames/festival-master/scene-23-single-take.png",
+      "dimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "styleAnchorAssetIds": [
+        "asset:character-pair-voss-harlan-bridge-sheet",
+        "asset:character-pair-okoye-voss-bridge-sheet",
+        "asset:character-rao-sheet",
+        "asset:character-sorell-sheet",
+        "asset:location-celestial-ardor-bridge-realistic-reference"
+      ],
+      "references": [
+        {
+          "assetId": "asset:character-pair-voss-harlan-bridge-sheet",
+          "role": "character identity reference"
+        },
+        {
+          "assetId": "asset:character-pair-okoye-voss-bridge-sheet",
+          "role": "character identity reference"
+        },
+        {
+          "assetId": "asset:character-rao-sheet",
+          "role": "character identity reference"
+        },
+        {
+          "assetId": "asset:character-sorell-sheet",
+          "role": "character identity reference"
+        },
+        {
+          "assetId": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "role": "location / environment reference"
+        }
+      ],
+      "prompt": {
+        "useCase": "stylized-concept",
+        "assetType": "Festival-master Scene 23 single-take storyboard still",
+        "primaryRequest": "Use case: illustration-story\nAsset type. Festival-master storyboard keyframe still\nPrimary request. Generate one single 16:9 landscape cinematic storyboard still for Light Delay Festival-master Scene 23, Eleven minutes, as one coherent physical scene on the Celestial Ardor bridge. This is the opening state of the compacted continuous take. Voss restores order, Harlan is still held, Sorell is present and about to be released, Rao is ready to report the failed aborts, and Okoye is positioned to secure Harlan and take his wrist device.\nInput images. Image 1 is the authoritative Celestial Ardor bridge architecture and geometry; Image 2 is an identity reference only, with Elias Voss on the left and Rylen Harlan on the right; Image 3 is an identity reference only, with Dara Okoye on the left and Elias Voss on the right; Image 4 is Rao's solo identity reference; Image 5 is Sorell's solo identity reference. Ignore all pair-sheet backgrounds and use Image 1 for the actual room.\nScene/backdrop: the real Celestial Ardor bridge from Image 1, with the cream cylindrical central core, central opening, spiral/helical stair and rails, curved hull console arc, windows, fixed crew stations, and practical engineered materials. No service cylinder, service shaft, vault, or alternate room.\nSubject and blocking: steady 1 g, planted feet and normal weight. Voss is at the command station in the foreground/right, authoritative and looking across the bridge. Rao is at the left-side analysis/data console, focused and ready to report. Harlan is near the secondary console, visibly held and controlled by Okoye; Okoye stands close to secure him without attacking him, with Harlan's wrist device visible on his arm. Sorell is a distinct, separate woman in the background/depth, still under watch but visibly at the threshold of release; she is not free yet and is not collaborating. Exactly these five named characters appear once each. Voss, Harlan, Okoye, Rao, and Sorell.\nStyle/medium: grounded hard-science-fiction photorealistic cinematic VFX storyboard still, practical human spacecraft, restrained cyan/blue working displays, natural facial identity and believable anatomy.\nComposition/framing: wide 16:9 three-quarter bridge coverage that makes the central cylindrical core, spiral stair/rails, curved console arc, crew stations, and eyelines readable. Preserve stable bridge geography and clear relative positions; no collage or split screen.\nLighting/mood: restrained warm practical overhead lights balanced with cool cyan instrumentation; tense but controlled command atmosphere immediately before the crew divides labor.\nMaterials/textures: worn but maintained metal, dark engineered flooring, fixed seats and consoles, physically plausible handrails and station hardware.\nText: no spoken dialogue text, subtitles, captions, labels, logos, or watermark; interface graphics may be present but must be minimal, diegetic, and not legible prose.\nConstraints: use the attached identity references for exact faces, hair, uniforms, and proportions; Image 4 is Rao and Image 5 is Sorell; do not confuse them. Maintain one continuous 1 g bridge space. Harlan remains held. Sorell remains under watch until Voss's release order later in the take. No extra people, duplicates, silhouettes, reflections resembling people, or floating bodies.\nAvoid: microgravity, free Sorell, free Harlan, alternate bridge geometry, service shaft, service cylinder, inner shielding vault, pair-sheet backgrounds, collage, storyboard panels, text-heavy screens, non-English text, logos, watermark, extra characters.",
+        "inputImages": [
+          "Reference asset: asset:character-pair-voss-harlan-bridge-sheet",
+          "Reference asset: asset:character-pair-okoye-voss-bridge-sheet",
+          "Reference asset: asset:character-rao-sheet",
+          "Reference asset: asset:character-sorell-sheet",
+          "Reference asset: asset:location-celestial-ardor-bridge-realistic-reference"
+        ],
+        "sceneBackdrop": "Continuity setting location:celestial-ardor-bridge.",
+        "subject": "character:voss, character:harlan, character:okoye, character:rao, character:sorell",
+        "styleMedium": "Grounded cinematic hard-science-fiction storyboard concept art matching the attached Light Delay references.",
+        "compositionFraming": "Wide three-quarter 16:9 single-take bridge composition with stable geography and readable eyelines.",
+        "lightingMood": "Steady artificial 1 g bridge practical lighting with restrained cyan console spill.",
+        "colorPalette": "Cool graphite, off-white, slate-blue and restrained practical amber accents.",
+        "materialsTextures": "Worn maintainable spacecraft surfaces and realistic hardware.",
+        "textVerbatim": "No spoken dialogue text, subtitles, captions, logos, or watermark.",
+        "constraints": "Preserve bridge geography, identity, Harlan custody, Sorell custody until the later release order, steady 1 g, and no extra characters.",
+        "avoid": "Character swaps, free Harlan, free Sorell, changed bridge geometry, microgravity, service shaft, vault, collage, split screen, subtitles, logos, watermark."
+      },
+      "review": {
+        "notes": "Scene 23 still regenerated and registered from private output on 2026-09-16T23:01:43.323Z; editorial review pending.",
+        "regenerationRequired": false
+      }
+    },
+    {
+      "assetId": "asset:festival-master-scene-24-single-take-still",
+      "entityId": "festival-master:shot-plan-071",
+      "kind": "animaticStill",
+      "status": "generated",
+      "outputPath": "/assets/animatic/frames/festival-master/scene-24-single-take.png",
+      "dimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "styleAnchorAssetIds": [
+        "asset:character-pair-voss-harlan-bridge-sheet",
+        "asset:character-pair-okoye-voss-bridge-sheet",
+        "asset:character-sorell-sheet",
+        "asset:object-harlan-wrist-device-sheet",
+        "asset:location-celestial-ardor-bridge-realistic-reference"
+      ],
+      "references": [
+        {
+          "assetId": "asset:character-pair-voss-harlan-bridge-sheet",
+          "role": "character identity reference"
+        },
+        {
+          "assetId": "asset:character-pair-okoye-voss-bridge-sheet",
+          "role": "character identity reference"
+        },
+        {
+          "assetId": "asset:character-sorell-sheet",
+          "role": "character identity reference"
+        },
+        {
+          "assetId": "asset:object-harlan-wrist-device-sheet",
+          "role": "prop reference"
+        },
+        {
+          "assetId": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "role": "location / environment reference"
+        }
+      ],
+      "prompt": {
+        "useCase": "stylized-concept",
+        "assetType": "Festival-master Scene 24 single-take storyboard still",
+        "primaryRequest": "Use case: illustration-story\nAsset type. Festival-master storyboard keyframe still\nPrimary request. Generate one single 16:9 landscape cinematic storyboard still for Light Delay Festival-master Scene 24, The offered wrist, as the opening frame of the compacted 23.58-second continuous take. Harlan offers his wrist device, Okoye demands it while maintaining control, Voss reacts from command, and Sorell remains under watch in the bridge depth before the later service-shaft escape.\nInput images. Image 1 is the authoritative Celestial Ardor bridge architecture and geometry; Image 2 is an identity reference only, with Elias Voss on the left and Rylen Harlan on the right; Image 3 is an identity reference only, with Dara Okoye on the left and Elias Voss on the right; Image 4 is Sorell's solo identity reference; Image 5 is the Harlan wrist-device prop reference. Ignore pair-sheet backgrounds and use Image 1 for the actual room.\nScene/backdrop: the real Celestial Ardor bridge from Image 1, with the cream cylindrical central core, central opening, spiral/helical stair and continuous rails, curved hull console arc, windows, fixed crew stations, and practical engineered materials. The opening frame is on the bridge, not in the service cylinder and not in the service shaft.\nSubject and blocking: steady artificial 1 g, planted feet and normal weight. Harlan stands near the secondary bridge console, extending his wrist device toward Okoye as an apparent offer while remaining under her physical control. Okoye stands close beside him with a firm guarded posture, one hand ready to take the device without attacking him. Voss is at the command station on the right/foreground, watching the exchange and ready to react. Sorell is a distinct, separate woman in the background/depth under watch, not free and not collaborating. Exactly these four named characters appear once each. Harlan, Okoye, Voss, and Sorell.\nStyle/medium: grounded hard-science-fiction photorealistic cinematic VFX storyboard still, practical human spacecraft, restrained cyan/blue working displays, natural facial identity and believable anatomy.\nComposition/framing: wide 16:9 three-quarter bridge coverage with Harlan and Okoye's offered-device exchange readable in the middle ground, Voss anchored at command on the right, Sorell clearly visible under watch in depth, and the central core, spiral stair, rails, curved console arc, and crew stations establishing stable geography. No collage or split screen.\nLighting/mood: restrained warm practical overhead lights balanced with cool cyan instrumentation; tense controlled negotiation moments before sudden violence.\nMaterials/textures: worn but maintained metal, dark engineered flooring, fixed seats and consoles, plausible handrails, uniform fabric, and a discreet digital wrist controller.\nText: no spoken dialogue text, subtitles, captions, labels, logos, or watermark; any interface graphics are minimal, diegetic, and not legible prose.\nConstraints: use the attached identity references for exact faces, hair, uniforms, proportions, and wrist-device design; Image 4 is Sorell and must not be confused with anyone else. Preserve bridge geometry and steady 1 g. Harlan remains under control. Sorell remains under watch. The wrist device is visible between Harlan and Okoye, with no large literal text on its screen. No extra people, duplicates, silhouettes, reflections resembling people, or floating bodies.\nAvoid: microgravity, free Harlan, free Sorell, service shaft as the opening location, service cylinder as the opening location, inner shielding vault, Rao, alternate bridge geometry, pair-sheet backgrounds, collage, storyboard panels, text-heavy screens, literal JAMMER or VAULT LOCK labels, non-English text, logos, watermark, extra characters.",
+        "inputImages": [
+          "Reference asset: asset:character-pair-voss-harlan-bridge-sheet",
+          "Reference asset: asset:character-pair-okoye-voss-bridge-sheet",
+          "Reference asset: asset:character-sorell-sheet",
+          "Reference asset: asset:object-harlan-wrist-device-sheet",
+          "Reference asset: asset:location-celestial-ardor-bridge-realistic-reference"
+        ],
+        "sceneBackdrop": "Continuity setting location:celestial-ardor-bridge.",
+        "subject": "character:harlan, character:okoye, character:voss, character:sorell",
+        "styleMedium": "Grounded cinematic hard-science-fiction storyboard concept art matching the attached Light Delay references.",
+        "compositionFraming": "Wide three-quarter 16:9 single-take bridge composition with stable geography and readable offered-device exchange.",
+        "lightingMood": "Steady artificial 1 g bridge practical lighting with restrained cyan console spill.",
+        "colorPalette": "Cool graphite, off-white, slate-blue and restrained practical amber accents.",
+        "materialsTextures": "Worn maintainable spacecraft surfaces, realistic uniforms, handrails, consoles, and a discreet wrist controller.",
+        "textVerbatim": "No spoken dialogue text, subtitles, captions, logos, or watermark.",
+        "constraints": "Preserve bridge geography, identity, Harlan control, Sorell custody, steady 1 g, and the wrist-device exchange.",
+        "avoid": "Character swaps, free Harlan, free Sorell, changed bridge geometry, microgravity, service shaft, vault, Rao, collage, split screen, literal JAMMER or VAULT LOCK labels, subtitles, logos, watermark."
+      },
+      "review": {
+        "notes": "Scene 24 still regenerated and registered from private output on 2026-09-16T23:18:33.279Z; editorial review pending.",
+        "regenerationRequired": false
+      }
     }
   ]
 }

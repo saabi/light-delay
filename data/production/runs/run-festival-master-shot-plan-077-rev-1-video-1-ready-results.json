@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "jobId": "festival-master:shot-plan-077:rev-1:video-1",
+  "scriptId": "script:light-delay-festival-master",
+  "stretchId": "festival-master:shot-plan-077",
+  "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
+  "sourceRunId": "run:festival-master:shot-plan-077:rev-1:video-1:ready",
+  "providerJobId": "689507db-0d86-4e0d-a048-f19abd593512",
+  "provider": "higgsfield-mcp-official",
+  "model": "seedance-2.5",
+  "artifact": "video",
+  "status": "pending_review",
+  "creditsSpent": 90,
+  "submittedAt": "2026-09-16T23:39:44.000Z",
+  "completedAt": "2026-09-16T23:48:23.739Z",
+  "uploadHandles": {
+    "asset:festival-master-stretch-reactor-confrontation-077-079-panel-01": "a7fb5d4a-2ac1-4473-988f-395a52a24a28",
+    "asset:location-celestial-ardor-reactor-service-bay-sheet": "b52b8526-2b44-4f98-accc-449648d56e06",
+    "asset:character-pair-voss-harlan-bridge-sheet": "104c4dc8-21ee-4625-82b2-0fe10232269a",
+    "asset:character-pair-okoye-voss-bridge-sheet": "9a791d77-aa62-4062-8ca3-7b96978313d6",
+    "asset:character-rao-sheet": "b33b42f4-3abf-457e-af8c-3f769025cbc1",
+    "asset:prop-pack-reactor-communications-sheet": "4a7aad82-6eae-4d6e-b6ea-26e3d9071ef3",
+    "asset:voice-ref-en-okoye": "dd257e6b-0084-47b6-83a1-2ae5b9b37abd",
+    "asset:voice-ref-en-harlan": "5a68b791-75e3-49ec-9924-1294a27df1b8",
+    "asset:voice-ref-en-voss": "a53f345b-1044-408c-91e2-e0d37ea9a6d8"
+  },
+  "output": {
+    "repoPath": "static/assets/animatic/frames/festival-master/shot-plan-077-rev-1-video-1.mp4",
+    "sha256": "df5cfb9762a02ad567115ec16a975293070e3a27f495945cec1157019210189d",
+    "durationMs": 30042,
+    "width": 854,
+    "height": 480,
+    "mimeType": "video/mp4"
+  },
+  "declaredDurationMs": 29999,
+  "notes": "Scene 26 singleton Seedance. Still approved current; declined IN THE DARK. Bound to take-02. Not a visual-stretch job. Reconciled to job 689507db after concurrent duplicate submit 57ef7d23."
+}

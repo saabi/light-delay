@@ -2,7 +2,7 @@
 
 ## Inventario actual
 
-- **696 assets registrados** en `data/assets.json` (incluidos 104 frames de animatic archivados, stills y clips de storyboard del Festival Master, 1 fotograma negro del tráiler-master, 62 referencias, 1 placeholder y los recursos de voz registrados).
+- **702 assets registrados** en `data/assets.json` (incluidos 104 frames de animatic archivados, stills y clips de storyboard del Festival Master, 1 fotograma negro del tráiler-master, 62 referencias, 1 placeholder y los recursos de voz registrados).
 - 100 fotogramas legacy del animatic en 17 escenas.
 - 1 fotograma nuevo de escena 5 toma 7 (Harlan / COM A/B) en `static/assets/animatic/frames/scene-05/shot-07.png`.
 - La hoja de referencia de Harlan fue regenerada como `static/assets/characters/harlan/model-sheet-v2.png` para separar su identidad visual de Voss; la hoja anterior permanece como procedencia histórica.

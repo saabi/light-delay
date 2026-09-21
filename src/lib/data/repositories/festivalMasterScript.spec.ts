@@ -17,17 +17,17 @@ describe('master-derived Festival screenplay', () => {
 		expect(script.scenes).toHaveLength(33);
 		expect(script.scenes.filter((scene) => scene.sequenceId)).toHaveLength(31);
 		expect(script.scenes.reduce((total, scene) => total + (scene.targetDurationMs ?? 0), 0)).toBe(
-			811_488
+			811_327
 		);
 		expect(script.cues.filter((cue) => cue.type === 'dialogue').length).toBeGreaterThan(100);
 	});
 
 	it('implements the storyboard as Shot/Take records with still-image prompts', () => {
 		const script = getScript(scriptId);
-		expect(script.shots).toHaveLength(90);
-		expect(script.takes.length).toBeGreaterThanOrEqual(90);
+		expect(script.shots).toHaveLength(85);
+		expect(script.takes.length).toBeGreaterThanOrEqual(85);
 		const shotIds = new Set(script.shots.map((shot) => shot.id));
-		expect(shotIds.size).toBe(90);
+		expect(shotIds.size).toBe(85);
 		for (const shot of script.shots) {
 			expect(shot.cuePlacements.length, shot.id).toBeGreaterThan(0);
 			const span = shot.cuePlacements.reduce(
