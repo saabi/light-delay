@@ -28,7 +28,7 @@ case "$release_dir" in
 	*) printf 'release must be exactly under %s/<sha>\n' "$release_root" >&2; exit 1 ;;
 esac
 
-[[ -d "$release_dir/build" ]] || { printf 'missing Studio build in %s\n' "$release_dir" >&2; exit 1; }
+[[ -f "$release_dir/apps/studio/build/index.js" ]] || { printf 'missing Studio build in %s\n' "$release_dir" >&2; exit 1; }
 [[ -f "$release_dir/release.json" ]] || { printf 'missing release metadata in %s\n' "$release_dir" >&2; exit 1; }
 grep -Fq "\"revision\":\"$sha\"" "$release_dir/release.json" || {
 	printf 'release metadata does not match %s\n' "$sha" >&2
