@@ -37,9 +37,14 @@ If `npm install` changes `package-lock.json`, inspect and commit the regenerated
 - Studio production build succeeds.
 - v2-core tests succeed.
 - Legacy check/build behavior is not unintentionally broken.
+- The festival-facing legacy application remains independently runnable/buildable and its deployment path remains intact.
 - Any failures are recorded/fixed before treating later milestones as mechanically proven.
 
 ---
+
+## Festival compatibility gate
+
+Until film-festival judging is explicitly complete, the legacy Light Delay application is a protected deployable artifact. Every milestone or cleanup change that can affect shared data, paths, assets, tooling or dependencies must preserve and verify the legacy app independently. Studio deployment must not become a prerequisite for the festival site.
 
 ## Root cleanup checkpoint
 
