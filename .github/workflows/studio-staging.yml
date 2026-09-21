@@ -118,8 +118,10 @@ jobs:
           remote_archive="/srv/studio/releases/.incoming/studio-${TARGET_SHA}.tgz"
           remote_helper="/srv/studio/releases/.incoming/stage-remote-${TARGET_SHA}.sh"
           ssh_args=(-i "$RUNNER_TEMP/staging_key" -p "$STAGING_SSH_PORT" -o BatchMode=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile="$RUNNER_TEMP/staging_known_hosts")
-          scp "${ssh_args[@]}" "$archive" "$STAGING_USER@$STAGING_HOST:$remote_archive"
-          scp "${ssh_args[@]}" tools/deploy/stage-remote.sh "$STAGING_USER@$STAGING_HOST:$remote_helper"
+          scp_args=(-i "$RUNNER_TEMP/staging_key" -P "$STAGING_SSH_PORT" -o BatchMode=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile="$RUNNER_TEMP/staging_known_hosts")
+          test -f "$archive"
+          scp "${scp_args[@]}" "$archive" "$STAGING_USER@$STAGING_HOST:$remote_archive"
+          scp "${scp_args[@]}" tools/deploy/stage-remote.sh "$STAGING_USER@$STAGING_HOST:$remote_helper"
           ssh "${ssh_args[@]}" "$STAGING_USER@$STAGING_HOST" "chmod 700 '$remote_helper' && bash '$remote_helper' --archive '$remote_archive' --sha '$TARGET_SHA'"
 
       - name: Verify public HTTPS endpoint and exact revision
