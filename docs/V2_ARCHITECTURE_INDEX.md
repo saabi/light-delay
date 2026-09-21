@@ -28,6 +28,7 @@ Core UX principle:
 - `V2_DOCUMENTATION_STRUCTURE.md` — target separation of Studio V2, repository-wide, Light Delay project and legacy/archive documentation.
 - `V2_DEPLOYMENT_AND_ENVIRONMENTS.md` — local/staging/festival environment separation and opt-in Linode staging deployments.
 - `V2_SCALABILITY_AND_STORAGE.md` — scaling, sharding, Postgres/pgvector, control/data planes and shard-local RLS.
+- `V2_MEDIA_AND_AGENT_RUNTIME.md` — M0.5 media identity/storage/export and Agent Runtime/CLI contracts.
 
 Earlier ADR-0001/0002 remain relevant to Light Delay products/authority during migration.
 
@@ -67,7 +68,9 @@ Implemented on branch `architecture/v2-domain-model`:
 - Context Package assembly for navigation;
 - Studio view model consuming shared core;
 - Studio Context inspector showing Sorell → Engineering reachability;
-- test cases for 1g safe route, microgravity direct crossing, and Harlan blocker.
+- test cases for 1g safe route, microgravity direct crossing, and Harlan blocker;
+- semantic ChangeSet/revision proof with immutable projections, preconditions, conflicts and restore-as-new-history;
+- Studio prototype controls routed through the in-memory revision engine.
 
 ## Important transitional debt
 
@@ -91,7 +94,7 @@ The Central Access → Engineering edge in the fixture is explicitly derived fro
 
 ## Verification status
 
-The new workspace and Studio Node deployment path have been build-verified in a checked-out working tree. The remote staging host has not been deployed by this task.
+The workspace and Studio Node deployment path have been build-verified in a checked-out working tree. Studio staging has now been exercised on the Linode host through the protected staging workflow; the festival Pages deployment remains independent.
 
 Before considering the scaffold mechanically verified:
 
@@ -107,7 +110,7 @@ Regenerate/commit `package-lock.json` after workspace installation if it changes
 
 ## Immediate next milestone
 
-Follow `V2_IMPLEMENTATION_ROADMAP.md`. First verify the current workspace from a checked-out branch, then implement authoritative mutation/history for the vertical slice:
+Follow `V2_IMPLEMENTATION_ROADMAP.md`. M0.5 contracts are recorded in `V2_MEDIA_AND_AGENT_RUNTIME.md`; the current implementation begins the authoritative mutation/history vertical slice:
 
 ```text
 ChangeSet / project revision

@@ -35,9 +35,12 @@ Workspace
       GenerationSpecs
       Plans
     Media
-      Assets
-      Representations
-      Edits
+      MediaAssets
+      AssetBlobs
+      StorageLocations
+      Generation/Provenance
+      Representations/Derivatives
+      Exports
     Profiles
     ContextEngine
       ContextPolicies
@@ -447,6 +450,22 @@ Profiles are composable and scoped. Hard-SF defaults should normally be assumpti
 
 ## 15. History and collaboration
 
+The authoritative mutation invariant is:
+
+> Every authoritative mutation is attributable, ordered, immutable and reconstructible.
+
+The conceptual flow is:
+
+```text
+Command
+  -> semantic validation and preconditions
+  -> ChangeSet
+  -> immutable ProjectRevision
+  -> deterministic projection/current state
+```
+
+`ChangeSet.operations` contains domain operations such as `SetWorldState` and `SetOccupancy`; it is not an arbitrary JSON Patch document. Every accepted ChangeSet records its project, base revision, resulting revision, principal, intent, timestamp, operation schema/version and relevant provenance. A stale base revision or failed precondition is a reviewable conflict and does not append history.
+
 ```ts
 interface ChangeSet {
   id: ChangeSetId;
@@ -465,7 +484,7 @@ interface ChangeSet {
 }
 ```
 
-Snapshots accelerate reconstruction but are not history. Binary media lives in blob storage. Derived caches/reports are rebuildable.
+Restoration/reversion appends a new ChangeSet whose operations produce the selected historical projection. It never rewrites or deletes prior history. Snapshots accelerate reconstruction but are not history. Binary media lives in blob storage. Derived caches/reports are rebuildable.
 
 Concurrent ChangeSets may be automatically rebased only when their semantic operations commute and preconditions still hold; otherwise the system produces a reviewable conflict.
 
@@ -473,7 +492,7 @@ Concurrent ChangeSets may be automatically rebased only when their semantic oper
 
 Known-format adapters and AI interpreters both produce `ImportProposal`, never direct authoritative writes.
 
-Agents interact through the same command/query application API as the UI. Runtime adapters may call hosted APIs, MCP clients or local CLI processes such as coding/agent CLIs. Execution mechanism does not change domain authority.
+Agents interact through the same command/query application API as the UI. Runtime adapters may call hosted APIs, MCP clients or local CLI processes such as coding/agent CLIs. Execution mechanism does not change domain authority. See `docs/V2_MEDIA_AND_AGENT_RUNTIME.md` for the isolated runtime and CLI registry contract.
 
 ## 17. Context and agent memory
 

@@ -245,9 +245,11 @@ If scale later warrants a dedicated vector/search cluster, project-local authori
 
 Large image/video/audio bytes live in object storage/CDN, not PostgreSQL.
 
-PostgreSQL stores asset identity, hash, provenance, metadata, authorization relationship and object-store reference.
+PostgreSQL stores Studio `MediaAsset` identity, `AssetBlob` checksum/metadata, provenance, authorization relationship and `StorageLocation` records. Provider IDs/URLs and object-store keys identify provenance or availability, never the canonical creative asset.
 
 Prefer direct/presigned transfers so large media need not transit Node instances.
+
+Linked and portable editing exports are distinct packaging operations. Portable exports resolve required blobs asynchronously into object storage and expose a time-limited signed download rather than proxying large payloads through the web process. See `V2_MEDIA_AND_AGENT_RUNTIME.md` for the full M0.5 contract.
 
 ## Availability implications
 

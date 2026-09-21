@@ -214,6 +214,21 @@ Migration rules:
 - make migrations deterministic;
 - test replay from old snapshots/history into the current projection.
 
+### ChangeSet operation contracts
+
+Authoritative mutation contracts are semantic operations, not arbitrary JSON Patch. The first runtime proof uses versionable operations such as:
+
+```text
+SetWorldState(key, value)
+SetOccupancy(entityId, occupancy)
+```
+
+Each ChangeSet carries its base revision, principal, intent, preconditions and operation schema/version. Structural schema validation is followed by semantic validation against the current projection. Historical operation meaning is preserved through explicit migrations/upcasters rather than silently rewriting old payloads.
+
+### Agent task/result contracts
+
+Agent tasks and results are also typed runtime contracts. An agent receives an authorized, revisioned context package and task input; a result may contain proposed semantic ChangeSets, artifacts, diagnostics, usage and execution provenance. Provider/CLI authentication and execution details remain outside the public Studio process. See `V2_MEDIA_AND_AGENT_RUNTIME.md`.
+
 ## Generic UI contract
 
 Introspection should expose a normalized field description similar to World-Lab's `fields()` / `annotationsOf()`.

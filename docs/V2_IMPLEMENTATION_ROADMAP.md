@@ -12,9 +12,13 @@ Read `V2_ARCHITECTURE_INDEX.md` first for the architecture/document map.
 
 New abstractions should normally be introduced only when a milestone or acceptance case demonstrates the need.
 
+## Deployment feedback loop
+
+Meaningful completed vertical increments should be exercised on the real Studio staging deployment when safe and when the established staging workflow permits it. Do not deploy incomplete or knowingly broken intermediate states merely to satisfy deployment frequency. Studio staging remains strictly independent from the protected festival deployment.
+
 ## Milestone 0 — Verify the current branch
 
-The Studio/workspace scaffold and first shared-core slice have now been executed in a checked-out working tree. The staging deployment implementation is present, but the Linode/GitHub Environment setup is still operational work.
+The Studio/workspace scaffold and first shared-core slice have now been executed in a checked-out working tree. The staging deployment implementation has been exercised against the real Linode environment; the workflow, host verification, immutable release activation and public health check are operational.
 
 After pulling `architecture/v2-domain-model`:
 
@@ -48,11 +52,31 @@ Until film-festival judging is explicitly complete, the legacy Light Delay appli
 
 ## Staging deployment checkpoint
 
-Implemented in `.github/workflows/studio-staging.yml` and `tools/deploy/`. The preferred commit directive is `[deploy:stage]`, with manual workflow dispatch also supported. Staging deploys the exact tested SHA and remains independent of the protected festival deployment. Remaining work is the one-time Linode permissions/unit setup and GitHub `staging` Environment configuration documented in `V2_DEPLOYMENT_AND_ENVIRONMENTS.md`.
+Implemented and exercised in `.github/workflows/studio-staging.yml` and `tools/deploy/`. The preferred commit directive is `[deploy:stage]`, with manual workflow dispatch supported where the workflow is available. Staging deploys the exact tested SHA and remains independent of the protected festival deployment. Operational details are documented in `V2_DEPLOYMENT_AND_ENVIRONMENTS.md`.
 
 ## Root cleanup checkpoint
 
 After Milestone 0 establishes a known-good baseline, execute the staged repository cleanup in `V2_REPOSITORY_STRUCTURE.md`, beginning with the legacy application move. Keep semantic/model migration separate from filesystem relocation and re-run the Milestone 0 gates after each material stage.
+
+## Milestone 0.5 — Architecture contracts
+
+The M0.5 checkpoint is recorded in `V2_MEDIA_AND_AGENT_RUNTIME.md` and covers the contracts that must exist before media and agent implementation expands:
+
+- `MediaAsset` logical creative identity is separate from `AssetBlob` byte identity and `StorageLocation` availability;
+- provider IDs/URLs are provenance/location data, never canonical Studio asset IDs;
+- provider-only, mirrored and Studio-managed materialization are explicit lifecycle concepts;
+- S3-compatible managed storage is an abstraction, not a vendor decision or app-server filesystem;
+- linked and portable exports are distinct packaging modes, with large portable exports asynchronous and object-storage-backed;
+- `Studio -> AgentTask -> Agent Runtime/Worker -> Provider Adapter` is the provider-independent execution boundary;
+- agent runtime identity/configuration is separate from the public Studio process and immutable releases;
+- an explicit, pinned Agent CLI registry exists conceptually without `postinstall` installation or GitHub Actions authentication.
+
+### Exit criteria
+
+- The media/storage and Agent Runtime boundaries are discoverable from the architecture index.
+- Media identity, byte identity, availability, provenance, rights and export responsibilities are not conflated.
+- Future CLI, API, service-credential and local-model adapters remain possible.
+- No object-storage vendor, external AI CLI or durable execution infrastructure is introduced prematurely.
 
 ## Milestone 1 — ChangeSet and revision engine
 
@@ -93,6 +117,10 @@ Studio action
  -> revision N+1
  -> current projection
 ```
+
+### Current implementation checkpoint
+
+`packages/v2-core/src/history.ts` now provides an in-memory proof for the first vertical slice. It includes semantic `SetWorldState` and `SetOccupancy` operations, principal attribution, base-revision conflict detection, preconditions, immutable ordered projections and restore-as-new-ChangeSet behavior. The Studio prototype controls submit these operations locally; persistence remains deferred to M2/M4.
 
 ### Exit criteria
 
@@ -462,14 +490,16 @@ Project remains the primary authoritative sharding/data-locality unit.
 The active queue is therefore:
 
 1. local build/test verification;
-2. ChangeSet/revision engine;
+2. finish/checkpoint ChangeSet/revision integration;
 3. in-memory ProjectStore/application boundary;
 4. dependency invalidation + Context re-resolution;
-5. PostgreSQL adapter + migrations + outbox;
-6. RLS/shardable authorization;
-7. Light Delay importer replacing fixture authority;
-8. Zao temporal/epistemic slice;
-9. architectural checkpoint;
-10. broaden Studio.
+5. first isolated Agent Runtime integration;
+6. PostgreSQL adapter + migrations + outbox;
+7. media/blob/location persistence and S3-compatible materialization;
+8. RLS/shardable authorization;
+9. Light Delay importer replacing fixture authority;
+10. Zao temporal/epistemic slice;
+11. architectural checkpoint;
+12. broaden Studio.
 
 If a new architectural question arises before these are complete, document only what is necessary to unblock or protect this sequence.
