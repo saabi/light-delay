@@ -370,9 +370,10 @@ Do not move provenance-sensitive outputs until their references are understood.
 
 ### Stage R7 — Documentation cleanup
 
+Execute the taxonomy and move plan in `V2_DOCUMENTATION_STRUCTURE.md`. V2 documentation can be grouped earlier once Milestone 0 is green; active Light Delay documentation should move in coordination with `projects/light-delay/` so it moves directly to its final project-owned location.
+
 Once paths are stable:
 - update `README.md`, `AGENTS.md`, setup docs and production docs;
-- optionally group architecture/development docs;
 - remove transitional path aliases;
 - document final root contract.
 
