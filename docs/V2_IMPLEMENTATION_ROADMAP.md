@@ -46,6 +46,10 @@ If `npm install` changes `package-lock.json`, inspect and commit the regenerated
 
 Until film-festival judging is explicitly complete, the legacy Light Delay application is a protected deployable artifact. Every milestone or cleanup change that can affect shared data, paths, assets, tooling or dependencies must preserve and verify the legacy app independently. Studio deployment must not become a prerequisite for the festival site.
 
+## Staging deployment checkpoint
+
+After the CI/app boundaries are explicit, implement the opt-in Linode staging path described in `V2_DEPLOYMENT_AND_ENVIRONMENTS.md`. The preferred commit directive is `[deploy:stage]`, with manual workflow dispatch also supported. Staging deploys the exact tested SHA and remains independent of the protected festival deployment.
+
 ## Root cleanup checkpoint
 
 After Milestone 0 establishes a known-good baseline, execute the staged repository cleanup in `V2_REPOSITORY_STRUCTURE.md`, beginning with the legacy application move. Keep semantic/model migration separate from filesystem relocation and re-run the Milestone 0 gates after each material stage.
