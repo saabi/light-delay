@@ -25,6 +25,7 @@ Core UX principle:
 - `V2_MIGRATION_PLAN.md` — staged migration.
 - `V2_IMPLEMENTATION_ROADMAP.md` — active build sequence, milestone exit criteria and architecture checkpoints.
 - `V2_REPOSITORY_STRUCTURE.md` — target monorepo/root structure and staged cleanup after the Milestone 0 baseline.
+- `V2_DOCUMENTATION_STRUCTURE.md` — target separation of Studio V2, repository-wide, Light Delay project and legacy/archive documentation.
 - `V2_SCALABILITY_AND_STORAGE.md` — scaling, sharding, Postgres/pgvector, control/data planes and shard-local RLS.
 
 Earlier ADR-0001/0002 remain relevant to Light Delay products/authority during migration.
