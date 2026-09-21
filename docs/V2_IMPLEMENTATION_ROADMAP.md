@@ -14,7 +14,7 @@ New abstractions should normally be introduced only when a milestone or acceptan
 
 ## Milestone 0 — Verify the current branch
 
-The Studio/workspace scaffold and first shared-core slice were created through the GitHub connector and have not yet been executed in a checked-out working tree.
+The Studio/workspace scaffold and first shared-core slice have now been executed in a checked-out working tree. The staging deployment implementation is present, but the Linode/GitHub Environment setup is still operational work.
 
 After pulling `architecture/v2-domain-model`:
 
@@ -48,7 +48,7 @@ Until film-festival judging is explicitly complete, the legacy Light Delay appli
 
 ## Staging deployment checkpoint
 
-After the CI/app boundaries are explicit, implement the opt-in Linode staging path described in `V2_DEPLOYMENT_AND_ENVIRONMENTS.md`. The preferred commit directive is `[deploy:stage]`, with manual workflow dispatch also supported. Staging deploys the exact tested SHA and remains independent of the protected festival deployment.
+Implemented in `.github/workflows/studio-staging.yml` and `tools/deploy/`. The preferred commit directive is `[deploy:stage]`, with manual workflow dispatch also supported. Staging deploys the exact tested SHA and remains independent of the protected festival deployment. Remaining work is the one-time Linode permissions/unit setup and GitHub `staging` Environment configuration documented in `V2_DEPLOYMENT_AND_ENVIRONMENTS.md`.
 
 ## Root cleanup checkpoint
 

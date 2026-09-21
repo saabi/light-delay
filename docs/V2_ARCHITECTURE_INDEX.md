@@ -91,7 +91,7 @@ The Central Access → Engineering edge in the fixture is explicitly derived fro
 
 ## Verification status
 
-GitHub connector work has created/updated files, but the new workspace has **not yet been build-verified in a checked-out working tree**.
+The new workspace and Studio Node deployment path have been build-verified in a checked-out working tree. The remote staging host has not been deployed by this task.
 
 Before considering the scaffold mechanically verified:
 
