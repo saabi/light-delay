@@ -41,6 +41,10 @@ If `npm install` changes `package-lock.json`, inspect and commit the regenerated
 
 ---
 
+## Root cleanup checkpoint
+
+After Milestone 0 establishes a known-good baseline, execute the staged repository cleanup in `V2_REPOSITORY_STRUCTURE.md`, beginning with the legacy application move. Keep semantic/model migration separate from filesystem relocation and re-run the Milestone 0 gates after each material stage.
+
 ## Milestone 1 — ChangeSet and revision engine
 
 Implement the smallest authoritative mutation/history path.
