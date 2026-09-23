@@ -100,7 +100,9 @@ The M1 history proof also exposed a semantic boundary that must be corrected bef
 
 The workspace and Studio Node deployment path have been build-verified in a checked-out working tree. Studio staging has now been exercised on the Linode host through the protected staging workflow; the festival Pages deployment remains independent.
 
-Before considering the scaffold mechanically verified:
+Before considering a code/path/config change mechanically verified, run the applicable Studio/shared checks and an explicit legacy application check/build gate. Report Light Delay project-data validation separately because known data loss can make repository-wide validation fail independently of application compatibility.
+
+Representative commands remain:
 
 ```text
 npm install
@@ -108,6 +110,7 @@ npm run check:studio
 npm run build:studio
 npm run test:v2-core
 npm run check:legacy
+# plus an explicit legacy production build once the compatibility gate is corrected
 ```
 
 Regenerate/commit `package-lock.json` after workspace installation if it changes.
