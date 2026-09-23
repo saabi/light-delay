@@ -1,6 +1,6 @@
 # Deployment and Environments
 
-Status: **implemented for the first Studio staging deployment; operational setup remains one-time Linode/GitHub configuration**.
+Status: **implemented for the first Studio staging deployment; foundation security corrections are required before the next deployment**.
 
 ## Environments
 
@@ -37,7 +37,7 @@ The implementation is split across:
 - `.github/workflows/studio-staging.yml` — trusted-branch trigger guard, checks, build, artifact upload, SSH transfer and public health verification;
 - `tools/deploy/package-stage.sh` — packages the Studio Node build, workspace manifests and exact revision metadata;
 - `tools/deploy/stage-remote.sh` — installs runtime dependencies and invokes the server activation helper;
-- `tools/deploy/stage-activate.sh` — the root-owned Linode helper that runs an optional migration hook, atomically switches `current`, and restarts `studio-stage.service`.
+- `tools/deploy/stage-activate.sh` — the root-owned Linode helper that activates an already prepared release and restarts `studio-stage.service`. **Known issue:** the current implementation inspects release `package.json` through Node `require()`, which can execute release-controlled code as root. This must be replaced with non-executing data parsing before the next staging deployment.
 
 Studio uses `@sveltejs/adapter-node`. Its production entry point is `apps/studio/build/index.js`, and the service listens only on `127.0.0.1:5100`. The `/health` endpoint returns `ok`, `service`, `revision` and `builtAt`; the revision comes from the release's `release.json`.
 
@@ -215,7 +215,7 @@ EnvironmentFile=/srv/studio/shared/studio-stage.env
 Environment=NODE_ENV=production
 Environment=HOST=127.0.0.1
 Environment=PORT=5100
-ExecStart=/usr/bin/node /srv/studio/current/build/index.js
+ExecStart=/usr/bin/node /srv/studio/current/apps/studio/build/index.js
 Restart=on-failure
 ```
 
@@ -255,9 +255,25 @@ Pin/verify the staging host key rather than disabling SSH host verification.
 
 Store known-host material/fingerprint in `STAGING_KNOWN_HOSTS`; the workflow uses `StrictHostKeyChecking=yes` and fails on unexpected host identity changes. Do not replace this with `ssh-keyscan` at deploy time.
 
+## Privileged activation boundary
+
+The root helper is a security boundary, not a general deployment script.
+
+It must:
+
+- validate that the requested release path is exactly the expected SHA directory;
+- validate release metadata as **data**, never by importing/requiring/executing release-controlled JavaScript;
+- reject symlink tricks for security-sensitive manifest checks;
+- avoid executing arbitrary commands selected by release-controlled package scripts;
+- perform only the minimal ownership/finalization/symlink/service actions that actually require privilege.
+
+Prepared/finalized releases should become non-writable by the deployment identity before root trusts them for activation. The exact ownership model may be adjusted during the foundation correction, but "immutable release" must become an enforced property rather than a naming convention.
+
 ## Database migrations
 
-The current Studio implementation has no PostgreSQL usage and no migrations. The activation helper checks for a `db:migrate:stage` npm script; if absent, it logs that no migration ran. If that script is later added, it runs before the symlink switch as user `studio` with `/srv/studio/shared/studio-stage.env`; a failure stops activation.
+The current Studio implementation has no PostgreSQL usage and no migrations.
+
+Do not make the root activation helper discover and execute a migration command from release-controlled `package.json`. When migrations are introduced, use a separate explicit migration step/command with a fixed trusted entry point, run as the unprivileged Studio runtime/migration identity before activation. Activation/rollback should not implicitly rerun whichever migration hook happens to exist in the selected release.
 
 Rules:
 - migrations, when introduced, must be versioned in repository;
@@ -301,13 +317,13 @@ The `/health` response exposes the deployed revision from `release.json`; it con
 
 Keep enough previous releases/artifacts to roll back quickly.
 
-Manual rollback selects an already-installed release and does not rebuild source:
+Manual rollback selects an already-installed, finalized release and does not rebuild source or implicitly run migrations:
 
 ```sh
 sudo /usr/local/sbin/studio-stage-activate /srv/studio/releases/<40-char-sha> <40-char-sha>
 ```
 
-Run this on the Linode as `studio-deploy` (or an administrator). The helper rechecks release metadata, atomically switches `/srv/studio/current`, restarts the service and verifies it is active.
+Run this on the Linode as `studio-deploy` (or an administrator). The helper rechecks release metadata as non-executable data, atomically switches `/srv/studio/current`, restarts the service and verifies it is active.
 
 Database rollback is a separate concern; application rollback is safe only when schema compatibility permits it.
 
@@ -346,7 +362,7 @@ All should invoke the same underlying build/deploy contract.
 
 ## Acceptance criteria
 
-The implemented staging path satisfies these acceptance conditions; operational completion still requires the GitHub/Linode setup above:
+The staging topology remains appropriate, but the current helper does **not** satisfy all acceptance conditions until the foundation security corrections above are implemented and the installed host helper is updated. Required acceptance conditions are:
 
 1. Studio CI is green independently of legacy CI.
 2. Legacy festival deployment remains unchanged/protected.
@@ -355,7 +371,7 @@ The implemented staging path satisfies these acceptance conditions; operational 
 5. No directive means no automatic staging deployment.
 6. Manual staging deployment is possible.
 7. Host key verification is enabled.
-8. deployment user is unprivileged/minimally privileged.
+8. deployment user is unprivileged/minimally privileged and cannot cause the root helper to execute release-controlled code.
 9. concurrent deployments cannot corrupt the environment.
 10. deployment performs a health check and records the deployed SHA.
 11. rollback to a prior application release is documented/testable.
