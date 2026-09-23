@@ -1,6 +1,6 @@
 # Repository Structure Target
 
-Status: **accepted target design; execute after Milestone 0 baseline verification**.
+Status: **accepted target design; execute R1/R2 after the September 23 foundation-correction checkpoint; defer broader project/media moves**.
 
 This document defines the desired repository layout after the current branch has a verified build/test baseline. It is intentionally more ambitious than the first safe move of the legacy SvelteKit application: the repository root should become a **monorepo control surface**, not an implicit application directory or a storage area for one film project.
 
@@ -322,7 +322,7 @@ validate repository/project data
 
 Project production validations should not be accidentally coupled to whether either web UI builds.
 
-## Cleanup stages after Milestone 0
+## Cleanup stages after the foundation-correction baseline
 
 ### Stage R1 — Move legacy application source
 
@@ -398,9 +398,9 @@ Once paths are stable:
 - remove transitional path aliases;
 - document final root contract.
 
-## What Milestone 0 means for this cleanup
+## What the foundation-correction baseline means for this cleanup
 
-Milestone 0 does **not** require the clean-root migration itself.
+The foundation-correction checkpoint does **not** require the entire clean-root migration.
 
 It establishes the verified baseline that makes structural cleanup safe:
 
@@ -414,7 +414,7 @@ current branch
   -> structural change proven behavior-preserving
 ```
 
-The `refactor/move-legacy-app` branch should remain based on that baseline and be rebased/updated if Milestone 0 fixes alter the architecture branch.
+Any relocation branch must be refreshed from the current integrated architecture baseline before use; do not rely on the stale `refactor/move-legacy-app` branch name as evidence that relocation work is current.
 
 ## Relationship to Studio migration
 
