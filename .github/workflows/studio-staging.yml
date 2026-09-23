@@ -1,0 +1,136 @@
+name: Deploy Studio to Linode staging
+
+on:
+  push:
+    branches:
+      - architecture/v2-domain-model
+  workflow_dispatch:
+    inputs:
+      revision:
+        description: Git SHA on the trusted staging branch to deploy (defaults to this workflow revision)
+        required: false
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: studio-staging
+  cancel-in-progress: false
+
+env:
+  TRUSTED_STAGING_BRANCH: architecture/v2-domain-model
+  TARGET_SHA: ${{ github.event_name == 'workflow_dispatch' && inputs.revision != '' && inputs.revision || github.sha }}
+
+jobs:
+  build:
+    if: github.ref_name == 'architecture/v2-domain-model' && (github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[deploy:stage]'))
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout exact staging revision
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ env.TARGET_SHA }}
+          fetch-depth: 0
+          lfs: false
+
+      - name: Verify revision is on the trusted branch
+        run: |
+          git cat-file -e "${TARGET_SHA}^{commit}"
+          git fetch --no-tags origin "${TRUSTED_STAGING_BRANCH}"
+          git merge-base --is-ancestor "$TARGET_SHA" "origin/${TRUSTED_STAGING_BRANCH}"
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check Studio
+        run: npm run check:studio
+
+      - name: Test v2-core
+        run: npm run test:v2-core
+
+      - name: Check legacy application
+        run: npm run check:legacy
+
+      - name: Build Studio Node application
+        run: npm run build:studio
+
+      - name: Package immutable Studio release
+        run: bash tools/deploy/package-stage.sh "$TARGET_SHA" "$RUNNER_TEMP/studio-release.tgz"
+
+      - name: Upload release artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: studio-release-${{ env.TARGET_SHA }}
+          path: ${{ runner.temp }}/studio-release.tgz
+          if-no-files-found: error
+          retention-days: 14
+
+  deploy:
+    needs: build
+    if: github.ref_name == 'architecture/v2-domain-model' && (github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[deploy:stage]'))
+    runs-on: ubuntu-latest
+    environment:
+      name: staging
+      url: https://studio.ferreyrapons.com
+    steps:
+      - name: Checkout deployment helper at exact revision
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ env.TARGET_SHA }}
+          fetch-depth: 1
+          lfs: false
+
+      - name: Download immutable release artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: studio-release-${{ env.TARGET_SHA }}
+          path: ${{ runner.temp }}/studio-release
+
+      - name: Configure strict SSH host verification
+        env:
+          STAGING_KNOWN_HOSTS: ${{ secrets.STAGING_KNOWN_HOSTS }}
+          STAGING_SSH_KEY: ${{ secrets.STAGING_SSH_KEY }}
+        run: |
+          test -n "$STAGING_KNOWN_HOSTS"
+          test -n "$STAGING_SSH_KEY"
+          printf '%s\n' "$STAGING_KNOWN_HOSTS" > "$RUNNER_TEMP/staging_known_hosts"
+          chmod 600 "$RUNNER_TEMP/staging_known_hosts"
+          printf '%s\n' "$STAGING_SSH_KEY" > "$RUNNER_TEMP/staging_key"
+          chmod 600 "$RUNNER_TEMP/staging_key"
+
+      - name: Transfer and activate release
+        env:
+          STAGING_HOST: ${{ secrets.STAGING_HOST }}
+          STAGING_USER: ${{ secrets.STAGING_USER }}
+          STAGING_SSH_PORT: ${{ secrets.STAGING_SSH_PORT || '22' }}
+        run: |
+          set -Eeuo pipefail
+          test -n "$STAGING_HOST"
+          test -n "$STAGING_USER"
+          archive="$RUNNER_TEMP/studio-release/studio-release.tgz"
+          remote_archive="/srv/studio/releases/.incoming/studio-${TARGET_SHA}.tgz"
+          remote_helper="/srv/studio/releases/.incoming/stage-remote-${TARGET_SHA}.sh"
+          ssh_args=(-i "$RUNNER_TEMP/staging_key" -p "$STAGING_SSH_PORT" -o BatchMode=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile="$RUNNER_TEMP/staging_known_hosts")
+          scp_args=(-i "$RUNNER_TEMP/staging_key" -P "$STAGING_SSH_PORT" -o BatchMode=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile="$RUNNER_TEMP/staging_known_hosts")
+          test -f "$archive"
+          scp "${scp_args[@]}" "$archive" "$STAGING_USER@$STAGING_HOST:$remote_archive"
+          scp "${scp_args[@]}" tools/deploy/stage-remote.sh "$STAGING_USER@$STAGING_HOST:$remote_helper"
+          ssh "${ssh_args[@]}" "$STAGING_USER@$STAGING_HOST" "chmod 700 '$remote_helper' && bash '$remote_helper' --archive '$remote_archive' --sha '$TARGET_SHA'"
+
+      - name: Verify public HTTPS endpoint and exact revision
+        run: |
+          body=$(curl --fail --silent --show-error --retry 15 --retry-delay 2 https://studio.ferreyrapons.com/health)
+          node - "$TARGET_SHA" "$body" <<'NODE'
+          const [expected, body] = process.argv.slice(2);
+          const payload = JSON.parse(body);
+          if (payload.ok !== true || payload.service !== 'studio' || payload.revision !== expected) {
+            throw new Error(`unexpected public health response: ${body}`);
+          }
+          NODE

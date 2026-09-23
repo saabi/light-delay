@@ -1,0 +1,9 @@
+{
+  "name": "@light-delay/v2-core",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  }
+}

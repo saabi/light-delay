@@ -11,6 +11,7 @@
 	const path = $derived(canonicalPathname(page.url));
 	const isPlayer = $derived(/\/animatic\/.+\/player\/?$/.test(path));
 	const isLanding = $derived(path === '/');
+	const isV2 = $derived(path === '/v2' || path.startsWith('/v2/'));
 </script>
 
 <SeoHead />
@@ -21,7 +22,7 @@
 	<link rel="manifest" href={withBase('/site.webmanifest')} />
 </svelte:head>
 
-{#if isPlayer || isLanding}
+{#if isPlayer || isLanding || isV2}
 	{@render children()}
 {:else}
 	<AppShell>
