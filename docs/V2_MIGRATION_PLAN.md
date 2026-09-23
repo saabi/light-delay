@@ -5,10 +5,11 @@ Status: **proposed**. No v2 runtime migration is authorized by this document alo
 ## Goals
 
 - Evolve the repository without discarding working Light Delay narrative, production, generation or media infrastructure.
-- Make Light Delay an import/migration fixture for a general multi-project product.
+- Use Light Delay selectively as a provenance-aware migration/acceptance source for a general multi-project product; do not assume current HEAD is a valid bulk-import fixture.
 - Preserve stable IDs and provenance where possible.
 - Avoid invalidating media merely because the schema moves.
-- Keep existing application behavior operational through compatibility projections until replacement surfaces are proven.
+- Keep existing application behavior operational where practical through compatibility projections until replacement surfaces are proven.
+- Separate legacy application compatibility from known legacy project-data damage; see `V2_LIGHT_DELAY_RECONSTRUCTION.md`.
 
 ## Phase 0 — Architecture freeze and fixtures
 
@@ -45,20 +46,35 @@ Build adapters that expose current characters/locations/vehicles/objects as cand
 
 Exit: current data can be projected into the new core without changing existing routes.
 
-## Phase 3 — Import Light Delay world and story
+## Phase 3 — Bounded evidence adapter / reconstruction proof
 
-Build an importer that reads current authoritative/compatible sources and emits an `ImportProposal`.
+Do **not** bulk-import current Light Delay HEAD.
 
-Map:
-- master outline causal facts/knowledge/action requirements;
-- entity catalogs;
-- location v2 hierarchy/circulation/portals/proximity/nav;
-- vehicle/location host relationships;
-- sourceRefs/editorial lifecycle.
+The legacy project suffered significant zero-fill data loss followed by committed reconstruction attempts. When Studio actually needs Light Delay beyond bounded fixtures, first create a forensic/evidence inventory as described in `V2_LIGHT_DELAY_RECONSTRUCTION.md`.
 
-Ambiguities remain explicit proposals. Do not silently reconcile contradictory legacy material.
+A later bounded adapter may start from high-authority/recoverable sources such as:
+- master narrative / master outline authority records;
+- characters and locations referenced by that authority;
+- selected screenplay scenes;
+- selected storyboard/animatic structures;
+- Git-history versions needed to adjudicate a specific source.
 
-Exit: accepted import reconstructs a v2 Light Delay project with traceable source provenance.
+The flow is:
+
+```text
+legacy evidence + Git history
+ -> evidence/recovery manifest
+ -> extraction / interpretation
+ -> ImportProposal
+ -> review
+ -> accepted ChangeSet(s)
+```
+
+Ambiguity, contradiction, and missing information may remain explicitly unknown. Reconstructed HEAD files do not automatically outrank surviving pre-loss evidence.
+
+**This phase is deferred until a Studio milestone needs it.** It is not a prerequisite for M2, persistence, or the first authoring slice.
+
+Exit when a deliberately bounded Light Delay subset can be reconstructed with traceable provenance without assuming global referential integrity.
 
 ## Phase 4 — Chronology and narrative presentation
 
@@ -140,7 +156,9 @@ Do not convert stylistic preferences into hard errors.
 
 Exit: existing validation coverage is retained and new acceptance scenarios produce deterministic findings.
 
-## Phase 10 — Mutation history and collaboration
+## Phase 10 — Mutation history and collaboration (superseded in implementation order)
+
+The active implementation roadmap moved mutation history much earlier than this original migration sequence. This section remains descriptive of migration responsibilities, not current milestone order.
 
 Route authoritative writes through semantic commands/ChangeSets.
 
@@ -162,10 +180,12 @@ Separate:
 
 Exit: a user can belong to multiple projects/workspaces without data leakage; project history remains attributable.
 
-## Phase 12 — Import UX and agent runtimes
+## Phase 12 — Import/reconstruction UX and agent runtimes
 
-Expose staged import:
-source -> parser/AI interpretation -> ImportProposal -> review -> ChangeSet.
+Expose staged import/reconstruction:
+source/evidence -> discovery -> parser/AI interpretation -> ImportProposal -> review -> ChangeSet.
+
+For damaged historical projects, source provenance and uncertainty are first-class; import must not assume HEAD is authoritative.
 
 Expose a common agent application API with adapters for:
 - hosted model APIs;
@@ -202,4 +222,6 @@ Exit: a simple linear short can be created without configuring profiles, graphs 
 7. Import ambiguity is visible.
 8. Human and agent mutations use the same application boundary.
 9. History is append-only; restoration is a new mutation.
-10. Existing Light Delay behavior remains available until its replacement passes acceptance.
+10. Existing Light Delay behavior remains available where recoverable until its replacement passes acceptance.
+11. Known legacy corruption/reconstruction status is provenance, not noise to normalize away.
+12. Unknown is a valid reconstruction result; never fabricate missing legacy facts to make an import complete.
