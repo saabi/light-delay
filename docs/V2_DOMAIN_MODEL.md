@@ -448,6 +448,23 @@ A Project Profile may contain ontology/vocabulary modules, assumptions, hard rul
 
 Profiles are composable and scoped. Hard-SF defaults should normally be assumptions/warnings unless the project explicitly promotes them to hard constraints.
 
+## 14.5 Authority tiers and fictional state
+
+Studio distinguishes four related but non-interchangeable concerns:
+
+1. **authoritative project state** — accepted project meaning recorded through ChangeSets/ProjectRevisions;
+2. **durable provisional work** — Drafts, Proposals, scenarios, import interpretations, and pending AI output;
+3. **story-time state** — fictional facts that vary by StoryEvent/temporal/narrative anchor and are projected through `stateAt(...)`-style queries;
+4. **derived/operational state** — ContextPackages, indexes, caches, worker progress, storage availability, and other rebuildable or operational records.
+
+A ProjectRevision answers when the *project was edited*. It is not a fictional timestamp.
+
+A story transition such as gravity changing, a hatch opening, movement, or information acquisition must be anchored to story/world semantics. Two story points may therefore project different world state from the same ProjectRevision.
+
+Durable provisional work may be saved without entering authoritative history. Promotion/acceptance creates an explicit authoritative mutation. This is the boundary used by human drafts, import proposals, and agent proposals.
+
+See `ADR-0004-AUTHORING-STORY-STATE-AND-PROVISIONAL-WORK.md`.
+
 ## 15. History and collaboration
 
 The authoritative mutation invariant is:
@@ -484,9 +501,9 @@ interface ChangeSet {
 }
 ```
 
-Restoration/reversion appends a new ChangeSet whose operations produce the selected historical projection. It never rewrites or deletes prior history. Snapshots accelerate reconstruction but are not history. Binary media lives in blob storage. Derived caches/reports are rebuildable.
+Restoration/reversion appends a new ChangeSet whose resulting authoritative projection is semantically equivalent to the selected supported historical state. It never rewrites or deletes prior history. Semantic operations preserve intent; snapshots/checkpoints may accelerate or support durable reconstruction and replay may serve as a verification oracle. This architecture does not require pure event sourcing. Binary media lives in blob storage. Derived caches/reports are rebuildable.
 
-Concurrent ChangeSets may be automatically rebased only when their semantic operations commute and preconditions still hold; otherwise the system produces a reviewable conflict.
+Concurrent ChangeSets may be automatically rebased only when their semantic operations commute and relevant semantic/read-set preconditions still hold; otherwise the system produces a reviewable conflict. A project-wide revision remains an ordering fact but should not force unrelated future aggregates/documents to conflict by definition.
 
 ## 16. Import and agents
 
