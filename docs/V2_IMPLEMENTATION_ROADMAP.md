@@ -16,321 +16,258 @@ New abstractions should normally be introduced only when a milestone or acceptan
 
 Meaningful completed vertical increments should be exercised on the real Studio staging deployment when safe and when the established staging workflow permits it. Do not deploy incomplete or knowingly broken intermediate states merely to satisfy deployment frequency. Studio staging remains strictly independent from the protected festival deployment.
 
-## Milestone 0 — Verify the current branch
+## Foundation correction — close review findings before M2
 
-The Studio/workspace scaffold and first shared-core slice have now been executed in a checked-out working tree. The staging deployment implementation has been exercised against the real Linode environment; the workflow, host verification, immutable release activation and public health check are operational.
+The September 23 Astra and Claude Opus 5.5 reviews found concrete defects and, more importantly, exposed a semantic collision in the first M1 proof. Close this bounded correction before expanding implementation.
 
-After pulling `architecture/v2-domain-model`:
+### Required closure
 
-```sh
-npm install
-npm run check:studio
-npm run build:studio
-npm run test:v2-core
-npm run check:legacy
-```
+- **Legacy application versus damaged project data:** treat them as separate gates. The Light Delay dataset suffered significant zero-fill data loss and committed reconstruction attempts; current HEAD is not a uniformly valid import source. See `V2_LIGHT_DELAY_RECONSTRUCTION.md`.
+- **Legacy application regression:** remove/fix disposable legacy `/v2` prototype behavior that prevents the protected application from building/prerendering. Add an application build gate that can distinguish code regressions from known project-data validation failures.
+- **Staging privilege boundary:** replace root-side executable loading of release-controlled `package.json` in `stage-activate.sh` with non-executing data parsing and verify the installed helper. Keep migration and activation responsibilities narrowly privileged.
+- **M1 correctness:** repair restore so supported historical state is reproduced faithfully; add runtime validation/reference-integrity tests for accepted operations and serializable values; do not accept arbitrary client attribution as trusted server identity.
+- **Studio save semantics:** do not display "Saved" for the current unbound `contenteditable` screenplay.
+- **Semantic boundary:** implement ADR-0004 in the next contracts. ProjectRevision, story-time state, durable provisional work, and derived/operational state are distinct.
 
-Also run the existing repository test suite where practical.
+### Verification baseline
 
-If `npm install` changes `package-lock.json`, inspect and commit the regenerated workspace lockfile.
+Run Studio/shared-package checks normally. For legacy checks, record separately:
 
-### Exit criteria
+1. application/type/build regressions caused by code/path/config changes;
+2. known or newly discovered Light Delay project-data integrity failures.
 
-- Studio dependencies install from a clean checkout.
-- Studio type/check succeeds.
-- Studio production build succeeds.
-- v2-core tests succeed.
-- Legacy check/build behavior is not unintentionally broken.
-- The festival-facing legacy application remains independently runnable/buildable and its deployment path remains intact.
-- Any failures are recorded/fixed before treating later milestones as mechanically proven.
+Do not repair the entire legacy dataset merely to make this checkpoint green.
 
 ---
-
-## Festival compatibility gate
-
-Until film-festival judging is explicitly complete, the legacy Light Delay application is a protected deployable artifact. Every milestone or cleanup change that can affect shared data, paths, assets, tooling or dependencies must preserve and verify the legacy app independently. Studio deployment must not become a prerequisite for the festival site.
-
-## Staging deployment checkpoint
-
-Implemented and exercised in `.github/workflows/studio-staging.yml` and `tools/deploy/`. The preferred commit directive is `[deploy:stage]`, with manual workflow dispatch supported where the workflow is available. Staging deploys the exact tested SHA and remains independent of the protected festival deployment. Operational details are documented in `V2_DEPLOYMENT_AND_ENVIRONMENTS.md`.
-
-## Root cleanup checkpoint
-
-After Milestone 0 establishes a known-good baseline, execute the staged repository cleanup in `V2_REPOSITORY_STRUCTURE.md`, beginning with the legacy application move. Keep semantic/model migration separate from filesystem relocation and re-run the Milestone 0 gates after each material stage.
 
 ## Milestone 0.5 — Architecture contracts
 
-The M0.5 checkpoint is recorded in `V2_MEDIA_AND_AGENT_RUNTIME.md` and covers the contracts that must exist before media and agent implementation expands:
+M0.5 media/storage/export and Agent Runtime contracts remain recorded in `V2_MEDIA_AND_AGENT_RUNTIME.md`.
 
-- `MediaAsset` logical creative identity is separate from `AssetBlob` byte identity and `StorageLocation` availability;
-- provider IDs/URLs are provenance/location data, never canonical Studio asset IDs;
-- provider-only, mirrored and Studio-managed materialization are explicit lifecycle concepts;
-- S3-compatible managed storage is an abstraction, not a vendor decision or app-server filesystem;
-- linked and portable exports are distinct packaging modes, with large portable exports asynchronous and object-storage-backed;
-- `Studio -> AgentTask -> Agent Runtime/Worker -> Provider Adapter` is the provider-independent execution boundary;
-- agent runtime identity/configuration is separate from the public Studio process and immutable releases;
-- an explicit, pinned Agent CLI registry exists conceptually without `postinstall` installation or GitHub Actions authentication.
-
-### Exit criteria
-
-- The media/storage and Agent Runtime boundaries are discoverable from the architecture index.
-- Media identity, byte identity, availability, provenance, rights and export responsibilities are not conflated.
-- Future CLI, API, service-credential and local-model adapters remain possible.
-- No object-storage vendor, external AI CLI or durable execution infrastructure is introduced prematurely.
-
-## Milestone 1 — ChangeSet and revision engine
-
-Implement the smallest authoritative mutation/history path.
-
-Initial commands:
-
-```text
-SetWorldState
-SetOccupancy
-```
-
-Required concepts:
-- ProjectRevision;
-- ChangeSet;
-- semantic operation;
-- principal attribution;
-- base revision;
-- preconditions;
-- validation;
-- immutable accepted history;
-- current-state projection;
-- conflict result;
-- restore/undo represented as a new ChangeSet.
-
-Do not implement generic arbitrary JSON patching as the domain mutation API.
-
-### First end-to-end behavior
-
-Replace the Studio prototype's transient gravity and Harlan-blocker toggles with application commands.
-
-```text
-Studio action
- -> command
- -> proposed ChangeSet
- -> validate
- -> accept
- -> revision N+1
- -> current projection
-```
-
-### Current implementation checkpoint
-
-`packages/v2-core/src/history.ts` now provides an in-memory proof for the first vertical slice. It includes semantic `SetWorldState` and `SetOccupancy` operations, principal attribution, base-revision conflict detection, preconditions, immutable ordered projections and restore-as-new-ChangeSet behavior. The Studio prototype controls submit these operations locally; persistence remains deferred to M2/M4.
-
-### Exit criteria
-
-- A world-state change creates a new revision.
-- Occupancy/blocking change creates a new revision.
-- Previous revisions remain reconstructible.
-- A stale `baseRevision` is detected.
-- Restore/undo appends history rather than deleting it.
-- Studio no longer directly mutates its authoritative fixture object.
+No object-storage vendor, external AI CLI, durable worker infrastructure, or broad media migration is required during the next milestones.
 
 ---
 
-## Milestone 2 — ProjectStore and application boundary
+## Milestone 1 — ChangeSet/revision proof: correct and bound it
 
-Define persistence interfaces before selecting persistence behavior.
+The existing `packages/v2-core/src/history.ts` is an in-memory proof, not yet a persistence contract.
+
+Keep:
+
+- semantic operations rather than arbitrary JSON Patch;
+- principal attribution;
+- ordered immutable accepted history;
+- preconditions/conflict results;
+- restore/reversion as a new accepted mutation.
+
+Before declaring the proof complete:
+
+- faithful restore must be tested for every state shape the proof claims to support, including absence/removal;
+- malformed/unknown operations and non-serializable values must fail cleanly;
+- operation references must be validated for the supported fixture domain;
+- reconstruction semantics must not depend on an accidental in-memory object graph;
+- the implementation must leave room for snapshots/checkpoints and replay verification without prematurely committing Studio to pure event sourcing.
+
+The current gravity/Harlan toggles are exploratory proof controls. They must not establish that fictional story-time state is a project-global revisioned map.
+
+---
+
+## Repository checkpoint — integrate and execute R1/R2
+
+After the foundation correction and M1 proof are mechanically sound, reconcile the architecture work with the active repository and execute the early application-boundary cleanup described in `V2_REPOSITORY_STRUCTURE.md`:
+
+- R1: move the legacy application under `apps/light-delay`;
+- R2: move app-local i18n/browser/build configuration;
+- consolidate the runtime-contract direction into the shared core as needed;
+- make `packages/v2-core` independently importable/testable rather than relying on legacy Vite configuration.
+
+Do **not** make R3/R4 a prerequisite for M2. Light Delay data/tool relocation is bounded later because current paths/history are forensic evidence and the dataset is not ready for wholesale migration.
+
+Do not move `static/assets` as part of this checkpoint.
+
+---
+
+## Milestone 2 — Application boundary + durable provisional work + authoring proof
+
+Define the application/store interfaces before choosing durable persistence.
 
 At minimum:
 
 ```text
 ProjectStore
 HistoryStore
+Draft/Proposal store
 ProjectStoreResolver / forProject(projectId)
 transaction/application-unit boundary
 ```
 
-Implement an **in-memory adapter first**.
+Implement an in-memory adapter first, but design the contract so the same behavior can be persisted immediately afterward.
 
-Shared application/domain code must not depend directly on:
-- Svelte/SvelteKit;
-- PostgreSQL;
-- filesystem layout;
-- a globally imported DB client.
+### Authority tiers
 
-Preserve the future invariant:
+Implement ADR-0004:
 
-> A project is resolved to one authoritative project store/shard at a time.
+- accepted authoritative project state;
+- durable provisional Draft/Proposal/Scenario state;
+- story-time semantic state;
+- derived/operational state.
 
-### Exit criteria
+A Draft is durable work based on a known project revision; promoting/accepting it creates an authoritative ChangeSet. Do not design a generic branching system yet.
 
-- The complete Milestone 1 flow works against an in-memory ProjectStore.
-- Studio accesses state through application queries/commands, not persistence internals.
-- Tests can create isolated projects/stores cheaply.
-- Storage implementation can be replaced without changing domain commands.
+### Primary product proof
 
----
-
-## Milestone 3 — Dependency invalidation and Context Engine loop
-
-Connect accepted mutations to derived state.
-
-A successful ChangeSet must identify dependencies affected by its operations and invalidate/recompute only relevant projections where practical.
-
-First complete loop:
+Prove:
 
 ```text
-Studio
-  -> command
-  -> ChangeSet
-  -> revision N+1
-  -> world projection invalidated/updated
-  -> navigation result invalidated
-  -> ContextPackage re-resolved
-  -> Studio view model updates
+screenplay/document edit
+ -> durable Draft
+ -> semantic proposal
+ -> accept/reject
+ -> ChangeSet
+ -> ProjectRevision
+ -> projection
+ -> restore
 ```
 
-The Context Engine remains provider-independent; no LLM is needed for the navigation answer.
+Use a deterministic fake proposal source if necessary. A real AI provider is not required.
+
+Include two cuts/versions sharing stable entities but containing a deliberate version-scoped difference. Define enough version semantics to prove no sibling leakage and to distinguish inherited/absent/deliberately removed values.
+
+### Concurrency contract
+
+Keep project revision ordering, but allow commands to carry semantic/read-set preconditions so unrelated future mutations do not force a global-conflict model. Do not build a sophisticated collaborative merge engine yet.
 
 ### Exit criteria
 
-- Changing gravity changes route context without manual refresh/reconstruction.
-- Adding/removing Harlan's blocker changes reachability.
-- ContextPackage records the project revision it describes.
-- A stale cached package cannot silently describe a newer revision.
-- Context provenance remains inspectable.
-
-### Architectural checkpoint A
-
-At this point Studio should be a small genuine implementation, not merely a UI over fixtures.
-
-Review:
-- command ergonomics;
-- ChangeSet granularity;
-- query/view-model boundary;
-- invalidation complexity;
-- UI intrusion;
-- whether any abstraction is premature.
-
-Fix architectural friction before adding PostgreSQL.
+- authored text actually survives through the Draft abstraction;
+- "Saved" has a durable meaning;
+- accepting a proposal is explicit and attributable;
+- rejected proposals never alter authoritative state;
+- restore faithfully restores the supported scope without deleting history;
+- two cuts/versions remain isolated where intentionally different;
+- Studio accesses state through application commands/queries, not persistence internals;
+- tests can run cheaply against isolated in-memory stores.
 
 ---
 
-## Milestone 4 — PostgreSQL persistence foundation
+## Milestone 2.5 — Minimal PostgreSQL durability
 
-Implement a PostgreSQL adapter behind the proven store/application interfaces.
+Persist the proven M2 contract before building durable agents or relying on Context behavior in staging.
 
-Initial persistence should cover:
+Initial persistence:
+
 - project identity;
-- revisions;
-- ChangeSets/operations;
-- current projections needed by the vertical slice;
-- local authorization grants needed for RLS;
+- ChangeSets / project revisions;
+- current projections/checkpoints needed by the slice;
+- authored documents and durable Drafts/Proposals;
+- command/idempotency identity where required;
+- minimal project authorization;
 - transactional outbox.
 
 Use migrations from the beginning.
 
-Initial deployment may use one PostgreSQL database even though schemas/interfaces remain shardable.
-
-### PostgreSQL direction
-
-Use PostgreSQL for:
-- authoritative semantic/history data;
-- projections;
-- documents/metadata;
-- full-text retrieval;
-- later pgvector embeddings.
-
-Use object storage for large image/video/audio/media bytes.
+Keep authorization proportionate: enough to prevent project leakage and establish trusted server-side principal attribution. The full future control-plane/shard projection architecture remains deferred.
 
 ### Exit criteria
 
-- The same application tests can exercise PostgreSQL and in-memory adapters where appropriate.
-- ChangeSet + projection + outbox write atomically.
-- Project data is scoped by `project_id`.
-- Normal domain code does not know which physical DB/shard is in use.
-- Reconstruction/current projection semantics match the in-memory proof.
+- equivalent application contract tests pass against in-memory and PostgreSQL adapters where appropriate;
+- draft survives process restart;
+- accepted ChangeSet + projection/head + outbox are atomic;
+- retry/idempotency behavior cannot double-commit;
+- project data is scoped by `project_id`;
+- staging has an appropriate access boundary before it stores real writing or can spend provider money;
+- backup/restore procedure is documented and exercised at least once before real project authority depends on the database.
 
 ---
 
-## Milestone 5 — RLS and shardable authorization
+## Milestone 3 — Story-time state foundation
 
-Implement the security boundary described in `V2_SCALABILITY_AND_STORAGE.md`.
+Before Context persistence, model the distinction between authoring history and fictional state.
 
-Even if control and project data initially share one physical PostgreSQL deployment, model the logical separation:
+Introduce the smallest useful `StateChange` / temporal-anchor / `stateAt(...)` behavior needed to answer:
 
-```text
-control-plane membership = source of truth
-project-shard grant       = local authorization projection
-```
+> What is true at this point in the story?
 
-Project queries run inside transaction-local request context, conceptually:
+Start with ordinary linear state. Gravity, hatch state, occupancy/movement, or another bounded example may be used, but the state transition must be anchored to story semantics rather than to ProjectRevision number.
 
-```text
-SET LOCAL app.principal_id
-SET LOCAL app.project_id
-```
+Do not implement a universal time-travel solver.
 
-RLS uses only locally available grant facts. Do not make normal RLS depend on synchronous cross-database membership lookup.
-
-### Required tests
-
-- user can read authorized project;
-- user cannot read another project;
-- missing application `WHERE project_id` still cannot leak rows;
-- unauthorized write fails;
-- pooled connection cannot inherit prior request identity;
-- revoked local grant fails;
-- service/worker principal behavior is explicit;
-- runtime DB role cannot bypass RLS.
+A bounded Light Delay fixture may be used. Do not bulk-import current Light Delay HEAD.
 
 ### Exit criteria
 
-- RLS is verified as defense in depth.
-- Application authorization and DB authorization agree on representative cases.
-- Future control-DB/project-shard separation does not require rewriting policies around remote joins.
+- two story points in the same project revision may correctly produce different world state;
+- editing the project creates a ProjectRevision without being confused with fictional time passing;
+- unknown/undetermined state remains representable;
+- state projection carries provenance/source anchors.
 
 ---
 
-## Milestone 6 — Replace the Light Delay fixture with import/projection
+## Milestone 4 — Dependency invalidation and Context Engine loop
 
-The hand-authored `light-delay-fixture.ts` is transitional.
+Connect accepted project mutations and story-time scope to derived context.
 
-Build the first deterministic adapter/importer from existing Light Delay authoritative/compatible sources.
+A ContextPackage for authoring/navigation must be scoped at least by the relevant combination of:
 
-Initial target:
-- Celestial Ardor;
-- Bridge;
-- meal table;
-- crew-stations navigation waypoint;
-- Central Access;
-- Service Cylinder;
-- Engineering;
-- gravity state;
-- service hatch;
-- navigation edges/predicates;
-- Sorell/Harlan occupancy needed by the proof.
+- project revision;
+- narrative/cut version;
+- story/narrative anchor;
+- perspective/subject when relevant.
 
-Flow:
-
-```text
-existing Light Delay data
- -> parse/map
- -> ImportProposal
- -> reviewed/accepted ChangeSet(s)
- -> semantic project state
- -> same application queries
- -> same Studio behavior
-```
-
-Do not silently reconcile ambiguity.
+Prefer structural retrieval for exact facts. Recompute on demand before building sophisticated invalidation caches.
 
 ### Exit criteria
 
-- The manually duplicated fixture can be removed or retained only as a test fixture.
-- Source provenance identifies the legacy source records.
-- The existing 1g/microgravity/Harlan acceptance cases still pass.
-- Studio behavior does not depend on legacy JSON shape.
+- accepted semantic changes invalidate/re-resolve affected context;
+- story-point changes resolve the correct story-time state without creating project revisions;
+- a stale package cannot silently describe a newer project revision or wrong cut/story point;
+- provenance is real/inspectable rather than illustrative;
+- the authoring slice can show a contextual proposal using a bounded ContextPackage.
+
+### Architectural checkpoint A
+
+At this point Studio should prove ordinary authoring plus semantic assistance underneath it. Review command ergonomics, Draft/ChangeSet boundaries, version isolation, story-state scope, Context provenance, and UI intrusion before expanding.
 
 ---
 
-## Milestone 7 — Zao temporal/epistemic vertical slice
+## Milestone 5 — First durable Agent Runtime integration
+
+Only after Drafts/Proposals and durable task records have a home, add one real provider adapter plus a deterministic fake.
+
+The first agent:
+
+- receives a typed task/context package;
+- runs under the isolated Agent Runtime boundary;
+- produces a proposal/artifact/diagnostics/usage/provenance;
+- cannot mutate project authority directly;
+- cannot double-commit after retry;
+- has explicit cancellation/budget/approval behavior appropriate to the provider.
+
+Prefer an execution/auth mode that can actually ship commercially; do not make personal interactive CLI authentication a product invariant.
+
+No three-provider registry rollout is required yet.
+
+---
+
+## Milestone 6 — Media Plane persistence and resolved-edit foundation
+
+After semantic/document persistence is proven, implement the first durable media path:
+
+- `MediaAsset` creative identity;
+- `AssetBlob` byte identity;
+- N:M asset/representation/blob binding where needed;
+- `StorageLocation` availability;
+- provenance/rights/derivative relationships;
+- S3-compatible managed storage as a location, not identity;
+- selected/approved materialization policy.
+
+Before broad export work, establish one resolved-edit abstraction shared by playback and interchange export so Studio does not preserve legacy divergence between what plays and what OTIO/Resolve receives.
+
+Large portable exports remain asynchronous.
+
+---
+
+## Milestone 7 — Zao temporal/epistemic vertical slice (bounded)
 
 Use Zao's recording as the second architecture stress test.
 
@@ -487,19 +424,35 @@ Project remains the primary authoritative sharding/data-locality unit.
 
 ## Near-term working queue
 
-The active queue is therefore:
+The active queue is:
 
-1. local build/test verification;
-2. finish/checkpoint ChangeSet/revision integration;
-3. in-memory ProjectStore/application boundary;
-4. dependency invalidation + Context re-resolution;
-5. first isolated Agent Runtime integration;
-6. PostgreSQL adapter + migrations + outbox;
-7. media/blob/location persistence and S3-compatible materialization;
-8. RLS/shardable authorization;
-9. Light Delay importer replacing fixture authority;
-10. Zao temporal/epistemic slice;
-11. architectural checkpoint;
-12. broaden Studio.
+1. close the September 23 foundation-correction findings;
+2. correct/bound the M1 revision proof;
+3. reconcile active branches and execute R1/R2 application-boundary cleanup;
+4. M2 application boundary + Draft/Proposal + screenplay authoring proof + two-version isolation;
+5. M2.5 minimal PostgreSQL durability;
+6. M3 explicit story-time state;
+7. M4 revision/cut/story-point-aware Context loop;
+8. first durable Agent Runtime adapter;
+9. Media Plane persistence + resolved-edit/export foundation;
+10. bounded Zao temporal/epistemic slice when it provides the next useful stress test;
+11. forensic Light Delay reconstruction only when a concrete Studio milestone needs it;
+12. broaden Studio from proven workflows.
 
-If a new architectural question arises before these are complete, document only what is necessary to unblock or protect this sequence.
+### Deliberate deferrals
+
+Do not spend the next milestones on:
+
+- exhaustive Light Delay zero-fill reconstruction or making every legacy validator green;
+- bulk import of current Light Delay HEAD;
+- R3-R7 repository moves;
+- `static/assets` relocation;
+- universal time-travel/history semantics;
+- CRDT/presence/full multi-user collaboration;
+- full control-plane/sharding infrastructure;
+- pgvector until a retrieval task demonstrates need;
+- three-provider Agent CLI lifecycle implementation;
+- broad object-storage/transcoding/export infrastructure before the first persisted media slice;
+- all seven Studio lenses.
+
+If a new architectural question arises, document only what is necessary to unblock or protect this sequence.
