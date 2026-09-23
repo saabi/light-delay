@@ -13,7 +13,8 @@ This document defines the desired repository layout after the current branch has
 5. Large media does not dictate the shape of the application source tree.
 6. Existing paths are migrated deliberately, with compatibility adapters where required.
 7. No cleanup changes semantic authority merely because a file moved.
-8. The layout remains viable if Studio later becomes a multi-project commercial application and Light Delay becomes only one imported/example project.
+8. The layout remains viable if Studio later becomes a multi-project commercial application and Light Delay becomes only one selectively reconstructed/example project.
+9. Repository reorganization preserves Git history as evidence for the Light Delay data-loss/reconstruction record; cleanup must not erase provenance.
 
 ## Target tree
 
@@ -127,17 +128,19 @@ It owns:
 
 It consumes Light Delay project data through an explicit adapter/path contract during migration. Moving it does **not** make its current data model the Studio model.
 
-### Festival preservation constraint
+### Festival preservation and damaged-data constraint
 
 The legacy application is not merely a migration aid. While the film-festival submission is being judged, it is a **protected deployable artifact**.
 
 Until the judging/preservation window is explicitly closed:
-- the legacy app must remain independently runnable, checkable and buildable;
-- changes to shared data, tooling, packages or repository structure that can affect it must run the legacy compatibility gate;
+- the legacy **application code** must remain independently runnable, checkable and buildable against an appropriate known fixture/baseline;
+- changes to shared tooling, packages or repository structure that can affect it must run the legacy application compatibility gate;
 - the existing public festival deployment must remain available and must not depend on Studio being deployable;
 - cleanup must preserve public routes/assets unless an intentional compatibility migration is verified;
 - a failed Studio build must not prevent rebuilding/deploying the legacy festival app;
 - retirement, replacement or destructive simplification of the legacy app requires an explicit post-festival decision.
+
+Known Light Delay project-data corruption is a separate axis. A validator failure caused by pre-existing/reconstructed damaged data is not automatically an application compatibility failure. CI should report application build compatibility, Studio/shared-package correctness, and Light Delay project-data integrity separately where practical.
 
 Long term, after that constraint is explicitly lifted, this application may be retired. Its directory boundary should make retirement straightforward.
 
@@ -146,8 +149,10 @@ Long term, after that constraint is explicitly lifted, this application may be r
 ### `projects/light-delay`
 
 Light Delay is both:
-1. the creative work we need to preserve; and
-2. the principal real-world migration/acceptance fixture for Studio.
+1. the creative work and historical evidence we need to preserve; and
+2. an important real-world migration/acceptance source for Studio.
+
+Its current dataset is **not** uniformly trustworthy. Significant zero-fill data loss occurred, followed by committed reconstruction attempts. See `V2_LIGHT_DELAY_RECONSTRUCTION.md`. Physical relocation must not be mistaken for validation, repair, or authority promotion.
 
 Its project material should therefore not remain mixed with repository/platform infrastructure.
 
@@ -161,7 +166,7 @@ static/assets/        -> projects/light-delay/media/                (only after 
 scripts/<project-specific> -> projects/light-delay/tools/
 ```
 
-These are **target mappings**, not authorization to move all paths mechanically. Some current scripts are cross-cutting and some generated/export directories may have external workflow assumptions.
+These are **target mappings**, not authorization to move all paths mechanically. Some current scripts are cross-cutting and some generated/export directories may have external workflow assumptions. Damaged/reconstructed files may also have forensic value; preserve history and avoid destructive cleanup merely because current content appears obsolete.
 
 ### Project paths are configuration, not hidden cwd assumptions
 
@@ -330,7 +335,7 @@ Correct relative imports to root project data/scripts through a temporary explic
 
 Keep canonical `data/`, `static/`, and project production scripts at root for this stage.
 
-**Gate:** legacy check, unit tests, build and representative Pages build remain equivalent. During festival judging this gate is mandatory, not advisory.
+**Gate:** legacy application check, unit tests, build and representative Pages build remain equivalent using the agreed compatibility fixture/baseline. Known project-data recovery failures are reported separately. During festival judging the application gate is mandatory, not advisory.
 
 ### Stage R2 — Move app-local i18n and browser configuration
 
@@ -348,7 +353,9 @@ R1 and R2 may be implemented together if verification remains straightforward.
 
 ### Stage R3 — Establish `projects/light-delay`
 
-Move canonical creative structured data first:
+This stage is **not part of the immediate R1/R2 move**. Before relocating creative data, establish the project-root resolver and account for the forensic/reconstruction value of existing paths/history.
+
+Move structured creative/evidence data when justified:
 
 ```text
 data/ -> projects/light-delay/data/
@@ -356,7 +363,7 @@ data/ -> projects/light-delay/data/
 
 Introduce a project-root resolver before changing consumers. Update Node tools and legacy adapter systematically.
 
-**Gate:** all data validation/reporting tests pass and no direct old `data/` references remain outside migration compatibility code/docs.
+**Gate:** path consumers use the resolver and the move preserves traceable history. Do not require every legacy data validator to pass when failure is attributable to documented pre-existing data loss; record those failures separately.
 
 ### Stage R4 — Classify and move tooling
 
@@ -411,7 +418,7 @@ The `refactor/move-legacy-app` branch should remain based on that baseline and b
 
 ## Relationship to Studio migration
 
-Root cleanup and Studio architecture are related but not the same migration.
+Root cleanup and Studio architecture are related but not the same migration. R1/R2 should happen early after the current foundation-correction checkpoint; R3/R4 remain bounded/deferred until path abstraction and forensic constraints are understood.
 
 - Root cleanup changes **where repository material lives**.
 - V2 migration changes **what the authoritative semantic model is**.
