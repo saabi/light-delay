@@ -214,9 +214,9 @@ Use schema-generated controls for:
 
 The schema is a UI metadata source, not a substitute for product design.
 
-## First vertical slice
+## First vertical slice — completed architecture proof
 
-The first v2 implementation should use a real Light Delay subset rather than a toy project.
+The initial spatial/navigation slice used a bounded Light Delay fixture to prove shared domain queries, navigation, Context assembly, and the first ChangeSet/history path. It remains a useful architecture test, but it is **not the primary product proof** and must not be treated as an authoritative import of the damaged legacy dataset.
 
 ### Scope
 
@@ -236,7 +236,7 @@ Import/model:
 - one Harlan occupancy/blocker scenario;
 - a small set of StoryEvents/NarrativePresentations sufficient to place the movement in story/narrative context.
 
-The source remains current repository data with provenance.
+The fixture is bounded test material. Current Light Delay HEAD is not uniformly authoritative because of documented data loss/reconstruction; see `V2_LIGHT_DELAY_RECONSTRUCTION.md`.
 
 ### Required application queries
 
@@ -283,11 +283,46 @@ The slice is successful when the new UI can:
 5. Ask whether Sorell can reach Engineering.
 6. Show the chosen route when reachable.
 7. Explain the exact failed edge/requirement/blocker when not reachable.
-8. Change gravity or Harlan occupancy through a proposed ChangeSet.
-9. Immediately recompute route/findings.
+8. Explore gravity or Harlan occupancy without implying that exploratory UI state is automatically canonical story state.
+9. When an authoritative semantic change is accepted, record it through a ChangeSet and recompute dependent queries.
 10. Inspect the history entry and restore/undo through a new ChangeSet.
 
+ADR-0004 supersedes any implication that a project revision number represents fictional story time. Gravity, hatch, movement, and occupancy changes that occur *in the story* require explicit story/event/temporal anchors and a `stateAt(...)`-style projection.
+
 This tests schema, import, queries, commands, deterministic navigation, validation, history and the new UX in one coherent feature.
+
+## Primary product proof — authoring, durable draft, proposal, acceptance
+
+Before broadening the semantic engine, Studio must prove the ordinary filmmaking loop that the architecture is meant to serve.
+
+The next product slice is:
+
+```text
+open screenplay/document
+  -> edit authored text
+  -> durable Draft save
+  -> semantic implication/proposal
+  -> author accepts or rejects
+  -> accepted proposal becomes semantic ChangeSet
+  -> ProjectRevision advances
+  -> dependent projection/context reflects accepted change
+  -> history/restore remains available
+```
+
+Required properties:
+
+- authored text survives reload/restart without requiring every keystroke to become authoritative project history;
+- "Saved" means durable work, not merely a DOM mutation;
+- document elements have stable identity sufficient for later semantic anchors;
+- proposals remain non-authoritative until accepted;
+- acceptance records provenance/principal and uses the same ChangeSet boundary as other authoritative mutations;
+- restore is scoped and faithful for the supported document/semantic state;
+- two cuts/versions can share source entities while maintaining a deliberately different document/story assertion without leaking into the sibling version;
+- internal revision, schema, and graph terminology stays out of the normal writing surface.
+
+A deterministic fake proposal source is sufficient initially. The slice does not require a production AI provider.
+
+This product proof should inform M2 store contracts and precede broad Context/agent/media implementation.
 
 ## Parallel UI development
 
@@ -305,9 +340,9 @@ Prefer:
 - mock/fixture implementations where a domain service is not ready;
 - contract tests so fixture and real services agree.
 
-## Second slice
+## Later temporal/epistemic slice
 
-After spatial slice passes, add Zao's recording to exercise:
+After the authoring/product slice and explicit story-time state foundation pass, add Zao's recording to exercise:
 - StoryEvent chronology;
 - Artifact/Representation lifecycle;
 - narrative presentation;
@@ -319,7 +354,11 @@ This deliberately adds temporal/narrative complexity only after the first end-to
 
 ## UX acceptance
 
-A filmmaker who knows none of the internal vocabulary should be able to understand the first slice as:
+A filmmaker who knows none of the internal vocabulary should first be able to understand Studio as:
+
+> "I can write my scene, it is actually saved, Studio can suggest what that writing implies, and nothing becomes canon behind my back."
+
+The spatial proof remains independently understandable as:
 
 > "At this point in the story, can Sorell get from here to Engineering?"
 
