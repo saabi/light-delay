@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-  "updatedAt": "2026-09-16T18:05:35.677Z",
+  "updatedAt": "2026-09-16T23:38:30.670Z",
   "notes": "Seeded from data/production/runs/*-results.json uploadHandles. Key is assetId + sha256 of current staging bytes (resolveStretchStagingSource). Voice assets with seedanceUploadPath are not seeded from historical handles (often full WAV).",
   "entries": [
     {
@@ -916,6 +916,66 @@
       "sourceRunId": "run:festival-master:shot-plan-056:rev-1:video-1:ready",
       "uploadedAt": "2026-09-16T19:40:34.932Z",
       "localPath": "static/assets/characters/pairs/voss-harlan-bridge-reference-sheet-v1.png"
+    },
+    {
+      "assetId": "asset:festival-master-scene-22-single-take-still",
+      "sha256": "81c661ead26758181f1ba1b931a057a6729cdd4847aa1527b28842d3cfcf5e63",
+      "mediaId": "58cd71a4-36db-4720-8545-9ca3c9ad71a8",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:shot-plan-065:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-16T23:01:57.989Z",
+      "localPath": "static/assets/animatic/frames/festival-master/scene-22-single-take.png"
+    },
+    {
+      "assetId": "asset:location-celestial-ardor-bridge-realistic-reference",
+      "sha256": "97b36271ea893df0f2f1db6401b6696ead1e240a315515d7475bb27fa861ff62",
+      "mediaId": "40633642-79b7-4f8e-8530-92014d019865",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:shot-plan-065:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-16T23:01:57.989Z",
+      "localPath": "static/assets/locations/celestial-ardor-bridge/realistic-reference.png"
+    },
+    {
+      "assetId": "asset:festival-master-scene-23-single-take-still",
+      "sha256": "040b56c261b2aeeaf92e223d57c119efb6d079a2c8c71847c50b550b1b47b2c8",
+      "mediaId": "a5edf052-e008-4511-9db0-d0a6bba651f9",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:shot-plan-068:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-16T23:18:10.168Z",
+      "localPath": "static/assets/animatic/frames/festival-master/scene-23-single-take.png"
+    },
+    {
+      "assetId": "asset:festival-master-scene-24-single-take-still",
+      "sha256": "ee5397da98ce4992bfd7374dac3bdbbc96f2c6f685f72a1caf57a6d8fb3611da",
+      "mediaId": "3186deed-f14e-4ad6-a42f-4a5ae593a4b3",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:shot-plan-071:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-16T23:35:40.209Z",
+      "localPath": "static/assets/animatic/frames/festival-master/scene-24-single-take.png"
+    },
+    {
+      "assetId": "asset:festival-master-stretch-reactor-confrontation-077-079-panel-01",
+      "sha256": "00e90a0c00f54a57817b08efc5fe5415f90c6292178ee35731379cda5f0a8957",
+      "mediaId": "a7fb5d4a-2ac1-4473-988f-395a52a24a28",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:shot-plan-077:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-16T23:38:30.670Z",
+      "localPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-confrontation-077-079/panel-01.png"
+    },
+    {
+      "assetId": "asset:prop-pack-reactor-communications-sheet",
+      "sha256": "3c9b4851ce556c5b8009705f1966b5a0b1fcfcfdd8b9ac78bfd2ec0bd1b5654a",
+      "mediaId": "4a7aad82-6eae-4d6e-b6ea-26e3d9071ef3",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:shot-plan-077:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-16T23:38:30.670Z",
+      "localPath": "static/assets/props/packs/reactor-communications-props-reference-sheet-v1.png"
     }
   ]
 }

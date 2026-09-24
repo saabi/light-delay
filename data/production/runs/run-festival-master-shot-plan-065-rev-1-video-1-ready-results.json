@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "jobId": "festival-master:shot-plan-065:rev-1:video-1",
+  "scriptId": "script:light-delay-festival-master",
+  "stretchId": "festival-master:shot-plan-065",
+  "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
+  "inputDigest": "db4552c004a002276985be335e45354ddea9012c4c0e7d94509dca2449568d90",
+  "sourceRunId": "run:festival-master:shot-plan-065:rev-1:video-1:ready",
+  "sourceRunPath": "reports/runs/run-festival-master-shot-plan-065-rev-1-video-1-ready.json",
+  "providerJobId": "60a91d11-261e-4292-bd35-9611034243d0",
+  "provider": "higgsfield-mcp-official",
+  "model": "seedance-2.5",
+  "artifact": "video",
+  "status": "pending_review",
+  "creditsSpent": 75,
+  "submittedAt": "2026-09-16T23:02:53.022Z",
+  "completedAt": "2026-09-16T23:18:10.168Z",
+  "uploadHandles": {
+    "asset:festival-master-scene-22-single-take-still": "58cd71a4-36db-4720-8545-9ca3c9ad71a8",
+    "asset:location-celestial-ardor-bridge-realistic-reference": "40633642-79b7-4f8e-8530-92014d019865",
+    "asset:character-pair-voss-harlan-bridge-sheet": "104c4dc8-21ee-4625-82b2-0fe10232269a",
+    "asset:character-pair-okoye-voss-bridge-sheet": "9a791d77-aa62-4062-8ca3-7b96978313d6",
+    "asset:character-rao-sheet": "b33b42f4-3abf-457e-af8c-3f769025cbc1",
+    "asset:character-sorell-sheet": "6ad0326d-d672-4834-b2ac-14e748528407",
+    "asset:voice-ref-en-harlan": "5a68b791-75e3-49ec-9924-1294a27df1b8",
+    "asset:voice-ref-en-elin": "0938dded-f8bd-4fb2-9145-566f50b3eabc"
+  },
+  "output": {
+    "repoPath": "static/assets/animatic/frames/festival-master/shot-plan-065-rev-1-video-1.mp4",
+    "sha256": "45357dc472308f20d7676e3cdfd4baba3ae7377d870acafb8200c09521c4aa19",
+    "durationMs": 25042,
+    "width": 854,
+    "height": 480,
+    "mimeType": "video/mp4"
+  },
+  "declaredDurationMs": 25042,
+  "notes": "Scene 22 singleton Seedance. Registered and bound to take-04. Declined IN THE DARK. Not a visual-stretch job."
+}

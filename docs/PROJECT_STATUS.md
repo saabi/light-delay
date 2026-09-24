@@ -9,6 +9,42 @@
 - Staging uses protected-copy finalization and non-executing JSON validation. Administrator installation of protocol-2 helpers is still required; nothing was deployed.
 - Expanded browser compatibility to 15 tests with hydration waits; preserved stale narrative-copy assertions in the separate data audit. LFS-backed CI reduces the full unit-suite failures to the existing 94-versus-90 shot-count assertion; generated master-relevance report staleness also reproduces on the unchanged baseline.
 - No creative data/media were repaired, imported or relocated. See V2_ARCHITECTURE_INDEX.md for verification and the unchanged full-suite data/media failures.
+## 2026-09-16 - Scene 26 Seedance submitted and registered (English source)
+
+- Scene 26 (`077`) still approved `current`; Seedance I2V submitted and bound: job `689507db…`, **90 cr**, ~30.04 s / 480p. Movie mode plays the new clip on `take-02` (`needs_review`). Concurrent duplicate `57ef7d23…` not bound.
+
+## 2026-09-16 - Scene 24 Seedance submitted and registered (English source)
+
+- Scene 24 (`071`) Seedance I2V submitted and bound: job `9c6ed23c…`, **72 cr**, ~24.05 s / 480p. Movie mode plays the new clip on `take-03` (`needs_review`).
+
+## 2026-09-16 - Scene 25 not video-ready; gravity/location debt marked (English source)
+
+- Location sheets are present (not missing files). Scene 25 canon is **1 g under thrust**; prompts/stills had relapsed to microgravity — corrected prompts + `needs_regeneration`. `074` no longer attaches bay + service-cylinder sheets with central-access. Still regen required before Seedance; no `videoPrompt` yet.
+
+## 2026-09-16 - Scene 23 Seedance registered (English source)
+
+- Scene 23 (`068`) clip registered and bound (`needs_review`): job `10d4d9d6…`, **90 cr**, ~30.05 s / 480p.
+
+## 2026-09-16 - Scene 24 still regenerated and registered (English source)
+
+- Regenerated the Festival-master Scene 24 compact single-take still for `shot-plan-071` with corrected bridge geography, reduced cast, and wrist-device staging. Registered the new still, rebound the selected take, and rebuilt the production plan. Video remains unchanged.
+
+## 2026-09-16 - Scene 22 Seedance registered; Scene 23 submitted (English source)
+
+- Scene 22 (`065`) clip registered and bound (`needs_review`): job `60a91d11…`, **75 cr**, ~25.04 s / 480p.
+- Scene 23 (`068`) Seedance I2V submitted: job `10d4d9d6…`, **90 cr**, 30s / 480p. Register/bind pending completion.
+
+## 2026-09-16 - Scenes 26, 28, and 32 compacted to one continuous take each (English source)
+
+- Scene 26 (`077–079`) → one 29.999 s singleton on `shot-plan-077` (161 ms slack trim). Scene 28 (`083–085`) → one 26.60 s singleton on `shot-plan-083` (prior 083–085 videos recoverable unbound). Scene 32 (`095–096`) → one 16.42 s singleton on `shot-plan-095`. Shot count 90 → 85. No Seedance submit.
+
+## 2026-09-16 - Scene 22 Seedance submitted (English source)
+
+- Scene 22 (`065`) Seedance I2V submitted: job `60a91d11…`, **75 cr**, 25s / 480p. Register/bind pending completion.
+
+## 2026-09-16 - Scene 22 still regenerated and registered (English source)
+
+- Regenerated the Festival-master Scene 22 compact single-take still for `shot-plan-065` with corrected bridge geography and custody staging, using solo Rao/Sorell references instead of the corrupted pair composite. Registered the new still, rebound the selected take, and rebuilt the production plan. Video remains unchanged.
 
 ## 2026-09-16 - Catalog thumbs regenerated from intact sources (English source)
 

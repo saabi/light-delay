@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0.0",
+  "jobId": "festival-master:shot-plan-068:rev-1:video-1",
+  "scriptId": "script:light-delay-festival-master",
+  "stretchId": "festival-master:shot-plan-068",
+  "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
+  "inputDigest": "95dcb090fe21aced14da1db107ef65b6b99d433f132d2b2424437820296ae2c8",
+  "sourceRunId": "run:festival-master:shot-plan-068:rev-1:video-1:ready",
+  "sourceRunPath": "reports/runs/run-festival-master-shot-plan-068-rev-1-video-1-ready.json",
+  "providerJobId": "10d4d9d6-2602-4d7c-b431-660628d16498",
+  "provider": "higgsfield-mcp-official",
+  "model": "seedance-2.5",
+  "artifact": "video",
+  "status": "pending_review",
+  "creditsSpent": 90,
+  "submittedAt": "2026-09-16T23:18:49.666Z",
+  "completedAt": "2026-09-16T23:26:51.383Z",
+  "uploadHandles": {
+    "asset:festival-master-scene-23-single-take-still": "a5edf052-e008-4511-9db0-d0a6bba651f9",
+    "asset:location-celestial-ardor-bridge-realistic-reference": "40633642-79b7-4f8e-8530-92014d019865",
+    "asset:character-pair-voss-harlan-bridge-sheet": "104c4dc8-21ee-4625-82b2-0fe10232269a",
+    "asset:character-pair-okoye-voss-bridge-sheet": "9a791d77-aa62-4062-8ca3-7b96978313d6",
+    "asset:character-rao-sheet": "b33b42f4-3abf-457e-af8c-3f769025cbc1",
+    "asset:character-sorell-sheet": "6ad0326d-d672-4834-b2ac-14e748528407",
+    "asset:voice-ref-en-voss": "a53f345b-1044-408c-91e2-e0d37ea9a6d8",
+    "asset:voice-ref-en-elin": "0938dded-f8bd-4fb2-9145-566f50b3eabc",
+    "asset:voice-ref-en-sorell": "9b905fc4-c6c4-4dc6-8773-76977f54d2ed"
+  },
+  "output": {
+    "repoPath": "static/assets/animatic/frames/festival-master/shot-plan-068-rev-1-video-1.mp4",
+    "sha256": "c5c854ae7ef012fe9bb9450e0d4c40f264453ab03af2b253e889912a52ddc3ca",
+    "durationMs": 30050,
+    "width": 854,
+    "height": 480,
+    "mimeType": "video/mp4"
+  },
+  "declaredDurationMs": 30050,
+  "notes": "Scene 23 singleton Seedance. Registered and bound to take-02. Declined IN THE DARK. Not a visual-stretch job."
+}

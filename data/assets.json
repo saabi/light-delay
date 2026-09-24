@@ -10033,13 +10033,13 @@
         "storyboardEligible": true
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "canon_mismatch"
         ],
         "explanation": {
-          "en": "Regenerated independent storyboard still; pending editorial review.",
-          "es": "Imagen de storyboard independiente regenerada; pendiente de revisión editorial."
+          "en": "Scene 25 still shows microgravity; regenerate under thrust 1 g against the corrected prompt/refs.",
+          "es": "needs_revision"
         }
       }
     },
@@ -10071,13 +10071,13 @@
         "storyboardEligible": true
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "canon_mismatch"
         ],
         "explanation": {
-          "en": "Regenerated independent storyboard still; pending editorial review.",
-          "es": "Imagen de storyboard independiente regenerada; pendiente de revisión editorial."
+          "en": "Scene 25 still shows microgravity; regenerate under thrust 1 g against the corrected prompt/refs.",
+          "es": "needs_revision"
         }
       }
     },
@@ -10109,13 +10109,13 @@
         "storyboardEligible": true
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "canon_mismatch"
         ],
         "explanation": {
-          "en": "Regenerated independent storyboard still; pending editorial review.",
-          "es": "Imagen de storyboard independiente regenerada; pendiente de revisión editorial."
+          "en": "Scene 25 still shows microgravity; regenerate under thrust 1 g against the corrected prompt/refs.",
+          "es": "needs_revision"
         }
       }
     },
@@ -18283,6 +18283,281 @@
         ],
         "explanation": {
           "en": "Singleton Seedance I2V pending editorial review.",
+          "es": "needs_revision"
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-scene-22-single-take-still",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/scene-22-single-take.png",
+      "mimeType": "image/png",
+      "title": {
+        "en": "Festival Master Scene 22 single-take still",
+        "es": "needs_revision"
+      },
+      "description": {
+        "en": "Scene 22 single-take bridge still regenerated with corrected custody staging and solo Rao/Sorell identity references; editorial review pending.",
+        "es": "needs_revision"
+      },
+      "width": 1672,
+      "height": 941,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-16T22:49:58.428Z"
+      },
+      "metadata": {
+        "scriptId": "script:light-delay-festival-master",
+        "shotId": "festival-master:shot-plan-065",
+        "sceneId": "festival-master:scene-22",
+        "singleTake": true,
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:character-rao-sheet",
+          "asset:character-sorell-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ]
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "sourceShotId": "festival-master:shot-plan-065",
+        "explanation": {
+          "en": "Scene 22 single-take still regenerated with corrected bridge geography and custody staging; editorial review pending.",
+          "es": "needs_revision"
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-scene-23-single-take-still",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/scene-23-single-take.png",
+      "mimeType": "image/png",
+      "title": {
+        "en": "Festival Master Scene 23 single-take still",
+        "es": "needs_revision"
+      },
+      "description": {
+        "en": "Scene 23 single-take bridge still regenerated with corrected custody staging and solo Rao/Sorell identity references; editorial review pending.",
+        "es": "needs_revision"
+      },
+      "width": 1672,
+      "height": 941,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-16T23:01:43.323Z"
+      },
+      "metadata": {
+        "scriptId": "script:light-delay-festival-master",
+        "shotId": "festival-master:shot-plan-068",
+        "sceneId": "festival-master:scene-23",
+        "singleTake": true,
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:character-rao-sheet",
+          "asset:character-sorell-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ]
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "sourceShotId": "festival-master:shot-plan-068",
+        "explanation": {
+          "en": "Scene 23 single-take still regenerated with corrected bridge geography and custody staging; editorial review pending.",
+          "es": "needs_revision"
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-shot-plan-065-rev-1-video-1",
+      "kind": "video",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/shot-plan-065-rev-1-video-1.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 25042,
+      "width": 854,
+      "height": 480,
+      "source": {
+        "provider": "higgsfield-mcp-official",
+        "model": "seedance-2.5",
+        "generatedAt": "2026-09-16T23:18:10.168Z",
+        "externalId": "60a91d11-261e-4292-bd35-9611034243d0"
+      },
+      "metadata": {
+        "scriptId": "script:light-delay-festival-master",
+        "shotId": "festival-master:shot-plan-065",
+        "takeId": "festival-master:shot-plan-065:take-04",
+        "sourceRunId": "run:festival-master:shot-plan-065:rev-1:video-1:ready",
+        "inputDigest": "db4552c004a002276985be335e45354ddea9012c4c0e7d94509dca2449568d90",
+        "singleton": true
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Scene 22 singleton Seedance clip pending editorial review.",
+          "es": "needs_revision"
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-scene-24-single-take-still",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/scene-24-single-take.png",
+      "mimeType": "image/png",
+      "title": {
+        "en": "Festival Master Scene 24 single-take still",
+        "es": "needs_revision"
+      },
+      "description": {
+        "en": "Scene 24 single-take bridge still regenerated with corrected bridge geography, reduced cast, and wrist-device staging; editorial review pending.",
+        "es": "needs_revision"
+      },
+      "width": 1672,
+      "height": 941,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-16T23:18:33.279Z"
+      },
+      "metadata": {
+        "scriptId": "script:light-delay-festival-master",
+        "shotId": "festival-master:shot-plan-071",
+        "sceneId": "festival-master:scene-24",
+        "singleTake": true,
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:character-sorell-sheet",
+          "asset:object-harlan-wrist-device-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ]
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "sourceShotId": "festival-master:shot-plan-071",
+        "explanation": {
+          "en": "Scene 24 single-take still regenerated with corrected bridge geography, reduced cast, and wrist-device staging; editorial review pending.",
+          "es": "needs_revision"
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-shot-plan-068-rev-1-video-1",
+      "kind": "video",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/shot-plan-068-rev-1-video-1.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 30050,
+      "width": 854,
+      "height": 480,
+      "source": {
+        "provider": "higgsfield-mcp-official",
+        "model": "seedance-2.5",
+        "generatedAt": "2026-09-16T23:26:51.383Z",
+        "externalId": "10d4d9d6-2602-4d7c-b431-660628d16498"
+      },
+      "metadata": {
+        "scriptId": "script:light-delay-festival-master",
+        "shotId": "festival-master:shot-plan-068",
+        "takeId": "festival-master:shot-plan-068:take-02",
+        "sourceRunId": "run:festival-master:shot-plan-068:rev-1:video-1:ready",
+        "inputDigest": "95dcb090fe21aced14da1db107ef65b6b99d433f132d2b2424437820296ae2c8",
+        "singleton": true
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Scene 23 singleton Seedance clip pending editorial review.",
+          "es": "needs_revision"
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-shot-plan-071-rev-1-video-1",
+      "kind": "video",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/shot-plan-071-rev-1-video-1.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 24050,
+      "width": 854,
+      "height": 480,
+      "source": {
+        "provider": "higgsfield-mcp-official",
+        "model": "seedance-2.5",
+        "generatedAt": "2026-09-16T23:35:40.209Z",
+        "externalId": "9c6ed23c-dcc9-4a7b-91f9-e750749e0eee"
+      },
+      "metadata": {
+        "scriptId": "script:light-delay-festival-master",
+        "shotId": "festival-master:shot-plan-071",
+        "takeId": "festival-master:shot-plan-071:take-03",
+        "sourceRunId": "run:festival-master:shot-plan-071:rev-1:video-1:ready",
+        "inputDigest": "0d172bbf4c2cfef512d3b27526aae608d2c967f8413c79f80902d61f05b8aab9",
+        "singleton": true
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Scene 24 singleton Seedance clip pending editorial review.",
+          "es": "needs_revision"
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-shot-plan-077-rev-1-video-1",
+      "kind": "video",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/shot-plan-077-rev-1-video-1.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 30042,
+      "width": 854,
+      "height": 480,
+      "source": {
+        "provider": "higgsfield-mcp-official",
+        "model": "seedance-2.5",
+        "generatedAt": "2026-09-16T23:48:23.739Z",
+        "externalId": "689507db-0d86-4e0d-a048-f19abd593512"
+      },
+      "metadata": {
+        "scriptId": "script:light-delay-festival-master",
+        "shotId": "festival-master:shot-plan-077",
+        "takeId": "festival-master:shot-plan-077:take-02",
+        "sourceRunId": "run:festival-master:shot-plan-077:rev-1:video-1:ready",
+        "inputDigest": "8fa73c569b3b49c9e8345f9d99556bc482532d934fc8b94c78c549dc6e8a6aa8",
+        "singleton": true,
+        "sha256": "df5cfb9762a02ad567115ec16a975293070e3a27f495945cec1157019210189d"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Scene 26 singleton Seedance clip pending editorial review.",
           "es": "needs_revision"
         }
       }

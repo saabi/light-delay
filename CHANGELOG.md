@@ -9,6 +9,47 @@
 - Staging uses protected-copy finalization and non-executing JSON validation. Administrator installation of protocol-2 helpers is still required; nothing was deployed.
 - Expanded browser compatibility to 15 tests with hydration waits; preserved stale narrative-copy assertions in the separate data audit. LFS-backed CI reduces the full unit-suite failures to the existing 94-versus-90 shot-count assertion; generated master-relevance report staleness also reproduces on the unchanged baseline.
 - No creative data/media were repaired, imported or relocated. See V2_ARCHITECTURE_INDEX.md for verification and the unchanged full-suite data/media failures.
+## 2026-09-16 - Scene 26 Seedance submitted and registered
+
+- Approved Scene 26 singleton still (`shot-plan-077:take-02` → `current`); hardened Seedance `videoPrompt` + `videoReferenceAssetIds`.
+- Submitted Festival-master Scene 26 singleton Seedance 2.5 I2V (job `689507db…`, **90 cr**, 30s / 480p). Reactor-bay panel-01 + bay/pair/Rao/prop refs + Okoye/Harlan/Voss voices. Declined IN THE DARK. (Concurrent duplicate job `57ef7d23…` discarded; bound clip is `689507db…`.)
+- Registered `shot-plan-077-rev-1-video-1.mp4` (~30.04 s / 480p) as `asset:festival-master-shot-plan-077-rev-1-video-1` and bound `take-02.videoAssetId` (`needs_review`).
+
+## 2026-09-16 - Scene 24 Seedance submitted and registered
+
+- Submitted Festival-master Scene 24 singleton Seedance 2.5 I2V for `shot-plan-071` / `take-03` (job `9c6ed23c…`, **72 cr**, 24s / 480p). Opening still + bridge + pair/solo/wrist refs + Harlan/Okoye/Voss voice samples. Declined IN THE DARK.
+- Registered `shot-plan-071-rev-1-video-1.mp4` (~24.05 s / 480p) as `asset:festival-master-shot-plan-071-rev-1-video-1` and bound `take-03.videoAssetId` (`needs_review`).
+
+## 2026-09-16 - Scene 25 gravity/location readiness repair
+
+- Confirmed location sheets for Scene 25 exist on disk (central-access, reactor-service-bay, service-cylinder). Fixed stale `scene-25` continuity and still prompts from microgravity to thrust **1 g**; marked `074–076` stills `needs_regeneration` (`canon_mismatch`). Trimmed `074` still refs to one load-bearing location (central-access only). No image regen; no video prompts yet.
+
+## 2026-09-16 - Scene 23 Seedance registered
+
+- Registered Festival-master Scene 23 clip `shot-plan-068-rev-1-video-1.mp4` (~30.05 s / 480p) as `asset:festival-master-shot-plan-068-rev-1-video-1` and bound `take-02.videoAssetId` (`needs_review`). Job `10d4d9d6…`, **90 cr**.
+
+## 2026-09-16 - Scene 24 still regenerated and registered
+
+- Regenerated the Festival-master Scene 24 compact single-take still for `shot-plan-071`, using the intact bridge, Voss-Harlan, Okoye-Voss, solo Sorell, and wrist-device references. Registered `asset:festival-master-scene-24-single-take-still`, rebound the selected take, and rebuilt the production plan. No video was changed.
+
+## 2026-09-16 - Scene 22 Seedance registered; Scene 23 submitted
+
+- Registered Festival-master Scene 22 clip `shot-plan-065-rev-1-video-1.mp4` (~25.04 s / 480p) as `asset:festival-master-shot-plan-065-rev-1-video-1` and bound `take-04.videoAssetId` (`needs_review`). Job `60a91d11…`, **75 cr**.
+- Submitted Scene 23 singleton Seedance 2.5 I2V for `shot-plan-068` / `take-02` (job `10d4d9d6…`, **90 cr**, 30s / 480p). Opening still + bridge + identity sheets + Voss/Elin/Sorell voices. Declined IN THE DARK. Register pending completion.
+
+## 2026-09-16 - Scenes 26, 28, and 32 compacted to one continuous take each
+
+- Joined Festival-master Scene 26 `077–079` into one 29.999-second reactor-bay shot/take (`shot-plan-077`); trimmed 161 ms of opening action slack for the Seedance 30 s ceiling; dissolved stretch `077–079`.
+- Joined Scene 28 `083–085` into one 26.60-second bridge shot/take (`shot-plan-083`); dissolved stretch `083–085`; unbound prior per-shot Seedance clips (assets remain recoverable).
+- Joined Scene 32 `095–096` into one 16.42-second reactor-bay shot/take (`shot-plan-095`); dissolved stretch `095–096`. Shot count 90 → 85. Panel-01 keyframes reused; continuous `videoPrompt`s authored; no image regen or Seedance submit.
+
+## 2026-09-16 - Scene 22 Seedance submitted
+
+- Submitted Festival-master Scene 22 singleton Seedance 2.5 I2V for `shot-plan-065` / `take-04` (job `60a91d11…`, **75 cr**, 25s / 480p). Opening still + bridge + pair/solo identity sheets + Harlan/Elin voice samples. Declined IN THE DARK. Awaiting completion before register/bind.
+
+## 2026-09-16 - Scene 22 still regenerated and registered
+
+- Regenerated the Festival-master Scene 22 compact single-take still for `shot-plan-065`, using the intact bridge, Voss-Harlan, Okoye-Voss, and solo Rao/Sorell identity references. Registered `asset:festival-master-scene-22-single-take-still`, rebound the selected take, and rebuilt the production plan. No video was changed.
 
 ## 2026-09-16 - Catalog thumbs regenerated from intact sources
 

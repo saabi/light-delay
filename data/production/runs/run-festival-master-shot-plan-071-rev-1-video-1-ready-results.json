@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0.0",
+  "jobId": "festival-master:shot-plan-071:rev-1:video-1",
+  "scriptId": "script:light-delay-festival-master",
+  "stretchId": "festival-master:shot-plan-071",
+  "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
+  "inputDigest": "0d172bbf4c2cfef512d3b27526aae608d2c967f8413c79f80902d61f05b8aab9",
+  "sourceRunId": "run:festival-master:shot-plan-071:rev-1:video-1:ready",
+  "sourceRunPath": "reports/runs/run-festival-master-shot-plan-071-rev-1-video-1-ready.json",
+  "providerJobId": "9c6ed23c-dcc9-4a7b-91f9-e750749e0eee",
+  "provider": "higgsfield-mcp-official",
+  "model": "seedance-2.5",
+  "artifact": "video",
+  "status": "pending_review",
+  "creditsSpent": 72,
+  "submittedAt": "2026-09-16T23:28:39.000Z",
+  "completedAt": "2026-09-16T23:35:40.209Z",
+  "uploadHandles": {
+    "asset:festival-master-scene-24-single-take-still": "3186deed-f14e-4ad6-a42f-4a5ae593a4b3",
+    "asset:location-celestial-ardor-bridge-realistic-reference": "40633642-79b7-4f8e-8530-92014d019865",
+    "asset:character-pair-voss-harlan-bridge-sheet": "104c4dc8-21ee-4625-82b2-0fe10232269a",
+    "asset:character-pair-okoye-voss-bridge-sheet": "9a791d77-aa62-4062-8ca3-7b96978313d6",
+    "asset:character-sorell-sheet": "6ad0326d-d672-4834-b2ac-14e748528407",
+    "asset:object-harlan-wrist-device-sheet": "5d9ca18c-2105-4961-a876-2a195857e419",
+    "asset:voice-ref-en-harlan": "5a68b791-75e3-49ec-9924-1294a27df1b8",
+    "asset:voice-ref-en-okoye": "dd257e6b-0084-47b6-83a1-2ae5b9b37abd",
+    "asset:voice-ref-en-voss": "a53f345b-1044-408c-91e2-e0d37ea9a6d8"
+  },
+  "output": {
+    "repoPath": "static/assets/animatic/frames/festival-master/shot-plan-071-rev-1-video-1.mp4",
+    "sha256": "b22a56640ac63202741604546a8ee36cf3163ab7957cc6b7a799cb29e4581295",
+    "durationMs": 24050,
+    "width": 854,
+    "height": 480,
+    "mimeType": "video/mp4"
+  },
+  "declaredDurationMs": 24050,
+  "notes": "Scene 24 singleton Seedance. Registered and bound to take-03. Declined IN THE DARK. Not a visual-stretch job."
+}
