@@ -36,6 +36,7 @@ jobs:
 
       - name: Verify revision is on the trusted branch
         run: |
+          [[ "$TARGET_SHA" =~ ^[0-9a-f]{40}$ ]]
           git cat-file -e "${TARGET_SHA}^{commit}"
           git fetch --no-tags origin "${TRUSTED_STAGING_BRANCH}"
           git merge-base --is-ancestor "$TARGET_SHA" "origin/${TRUSTED_STAGING_BRANCH}"

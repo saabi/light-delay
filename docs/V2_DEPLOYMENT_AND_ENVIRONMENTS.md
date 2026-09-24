@@ -1,6 +1,6 @@
 # Deployment and Environments
 
-Status: **implemented for the first Studio staging deployment; foundation security corrections are required before the next deployment**.
+Status: **repository activation boundary corrected; protocol-2 host installation and verification are still required before deployment**.
 
 ## Environments
 
@@ -37,7 +37,8 @@ The implementation is split across:
 - `.github/workflows/studio-staging.yml` — trusted-branch trigger guard, checks, build, artifact upload, SSH transfer and public health verification;
 - `tools/deploy/package-stage.sh` — packages the Studio Node build, workspace manifests and exact revision metadata;
 - `tools/deploy/stage-remote.sh` — installs runtime dependencies and invokes the server activation helper;
-- `tools/deploy/stage-activate.sh` — the root-owned Linode helper that activates an already prepared release and restarts `studio-stage.service`. **Known issue:** the current implementation inspects release `package.json` through Node `require()`, which can execute release-controlled code as root. This must be replaced with non-executing data parsing before the next staging deployment.
+- `tools/deploy/stage-activate.sh` — administrator-installed activation/rollback helper; no package scripts or migrations.
+- `tools/deploy/stage-finalize.py` — administrator-installed, isolated Python helper that copies untrusted bytes into fresh root-owned inodes, validates JSON as data, and finalizes read-only releases.
 
 Studio uses `@sveltejs/adapter-node`. Its production entry point is `apps/studio/build/index.js`, and the service listens only on `127.0.0.1:5100`. The `/health` endpoint returns `ok`, `service`, `revision` and `builtAt`; the revision comes from the release's `release.json`.
 
@@ -188,18 +189,21 @@ The architecture does not require Docker merely for staging.
 
 The intended permission model does not touch the existing `node` user or PM2 installation:
 
-- `studio` remains the systemd service account and owns/reads application releases;
-- `studio-deploy` is the SSH deployment user and writes only the staging release area;
+- `studio` remains the systemd service account and can read, but cannot write, finalized releases;
+- `studio-deploy` is the SSH deployment user and writes only `releases/.incoming`; `releases` and finalized SHA directories are root-owned;
 - `studio-deploy` may run only the root-owned `/usr/local/sbin/studio-stage-activate` helper through sudo;
 - `/srv/studio/shared/studio-stage.env` remains VM-local and is readable by `studio` (not copied by GitHub Actions).
 
-Install the helper from this repository once, as root, then grant the narrow sudo rule:
+An administrator must update BOTH helpers from a reviewed commit. This session has not installed or audited anything on Linode. Pause staging deployments during the host update. Python 3, util-linux (`flock`) and systemd are prerequisites. Preserve unrelated PM2/nginx applications. Install as root, then grant the narrow sudo rule:
 
 ```sh
 id -u studio-deploy >/dev/null 2>&1 || useradd --system --home-dir /srv/studio --shell /usr/sbin/nologin studio-deploy
+install -d -o root -g root -m 0755 /usr/local/libexec
+install -o root -g root -m 0644 tools/deploy/stage-finalize.py /usr/local/libexec/studio-stage-finalize.py
 install -o root -g root -m 0755 tools/deploy/stage-activate.sh /usr/local/sbin/studio-stage-activate
+chown root:root /srv/studio /srv/studio/releases
+chmod 0755 /srv/studio /srv/studio/releases
 install -d -o studio-deploy -g studio-deploy -m 0750 /srv/studio/releases/.incoming
-chown studio-deploy:studio-deploy /srv/studio/releases
 printf '%s\n' 'studio-deploy ALL=(root) NOPASSWD: /usr/local/sbin/studio-stage-activate' >/etc/sudoers.d/studio-stage
 chmod 0440 /etc/sudoers.d/studio-stage
 visudo -cf /etc/sudoers.d/studio-stage
@@ -267,13 +271,15 @@ It must:
 - avoid executing arbitrary commands selected by release-controlled package scripts;
 - perform only the minimal ownership/finalization/symlink/service actions that actually require privilege.
 
-Prepared/finalized releases should become non-writable by the deployment identity before root trusts them for activation. The exact ownership model may be adjusted during the foundation correction, but "immutable release" must become an enforced property rather than a naming convention.
+Finalization copies through directory descriptors with O_NOFOLLOW into fresh root-owned inodes; it never chowns a deployment-owned tree in place. This protects against open writable descriptors and source-path swaps. Special files and hardlinks are rejected. Only contained relative npm links under node_modules are permitted; manifests and the entrypoint cannot have symlink components. JSON validation happens in the protected copy. Files become 0444 and directories 0555 before publication. Repeat activation revalidates ownership and permissions and does not recopy the upload. Root activation is serialized with flock.
+
+After host installation, run `sudo -u studio-deploy sudo -n /usr/local/sbin/studio-stage-activate --protocol-version` and require exactly `2`. Review the installed helper checksums against the reviewed repository files. The remote workflow fails closed against an old helper. Existing mutable releases are NOT grandfathered in for rollback: an administrator must separately verify and finalize a fresh copy before it is eligible. Do not blindly chown existing releases and call them immutable. No staging deployment was performed in this implementation session.
 
 ## Database migrations
 
 The current Studio implementation has no PostgreSQL usage and no migrations.
 
-Do not make the root activation helper discover and execute a migration command from release-controlled `package.json`. When migrations are introduced, use a separate explicit migration step/command with a fixed trusted entry point, run as the unprivileged Studio runtime/migration identity before activation. Activation/rollback should not implicitly rerun whichever migration hook happens to exist in the selected release.
+Do not make the root activation helper discover and execute a migration command from release-controlled `package.json`. When migrations are introduced, an administrator-installed migration service must use a fixed reviewed entry point (for example `/usr/local/libexec/studio-stage-migrate`), a separately authorized finalized SHA, and `User=studio` or a dedicated migration identity. Wire that explicit step before activation; do not discover npm hooks, source release shell files, or add a generic sudo command runner. No migration entry point exists or is needed in this database-free checkpoint. Activation/rollback should not implicitly rerun whichever migration hook happens to exist in the selected release.
 
 Rules:
 - migrations, when introduced, must be versioned in repository;
@@ -345,7 +351,7 @@ After the one-time server setup and GitHub Environment configuration, push a com
 
 For a manual deploy, open **Actions → Deploy Studio to Linode staging → Run workflow**, select `architecture/v2-domain-model`, and optionally enter a 40-character SHA already reachable from that branch in `revision`. Leave it empty to deploy the selected workflow revision.
 
-The first deployment creates `/srv/studio/releases/<sha>`, installs production dependencies there, atomically creates `/srv/studio/current -> releases/<sha>`, restarts `studio-stage.service`, checks localhost health, then checks the public HTTPS health endpoint. A failed health or revision check fails the workflow.
+The first deployment prepares `/srv/studio/releases/.incoming/<sha>`, installs production dependencies there without lifecycle scripts, finalizes a fresh read-only `/srv/studio/releases/<sha>`, atomically creates `/srv/studio/current -> releases/<sha>`, restarts `studio-stage.service`, checks localhost health, then checks the public HTTPS health endpoint. A failed health or revision check fails the workflow.
 
 ## Future path
 
@@ -362,7 +368,7 @@ All should invoke the same underlying build/deploy contract.
 
 ## Acceptance criteria
 
-The staging topology remains appropriate, but the current helper does **not** satisfy all acceptance conditions until the foundation security corrections above are implemented and the installed host helper is updated. Required acceptance conditions are:
+The repository helper is corrected and has Linux filesystem tests. Host acceptance remains pending until BOTH installed helpers and directory permissions are updated and verified. Required acceptance conditions are:
 
 1. Studio CI is green independently of legacy CI.
 2. Legacy festival deployment remains unchanged/protected.

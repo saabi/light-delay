@@ -24,11 +24,13 @@ fi
 
 studio_root=/srv/studio
 release_root=$studio_root/releases
-release_dir=$release_root/$sha
-temporary_dir=$release_root/.${sha}.install.$$
+release_dir=$release_root/.incoming/$sha
+temporary_dir=$release_root/.incoming/.${sha}.install.$
 trap 'rm -rf "$temporary_dir"' EXIT
 
-[[ ! -e "$release_dir" ]] || { printf 'release already exists: %s\n' "$release_dir" >&2; exit 1; }
+[[ "$(sudo -n /usr/local/sbin/studio-stage-activate --protocol-version)" == 2 ]] || { echo 'Install the trusted protocol-2 host helpers before deploying' >&2; exit 1; }
+if [[ ! -d "$release_root/$sha" ]]; then
+[[ ! -e "$release_dir" && ! -L "$release_dir" ]] || { echo 'Remove the previous unprivileged incoming attempt before retrying' >&2; exit 1; }
 mkdir -p "$temporary_dir"
 tar --extract --gzip --file="$archive" --directory="$temporary_dir" --no-same-owner
 [[ -f "$temporary_dir/release.json" ]] || { printf 'archive has no release metadata\n' >&2; exit 1; }
@@ -38,16 +40,27 @@ tar --extract --gzip --file="$archive" --directory="$temporary_dir" --no-same-ow
 printf 'installing production runtime dependencies\n'
 npm ci --omit=dev --ignore-scripts --audit=false --fund=false --prefix "$temporary_dir"
 mv "$temporary_dir" "$release_dir"
+else
+release_dir=$release_root/$sha
+fi
+previous=$(readlink "$studio_root/current" || true)
 sudo -n /usr/local/sbin/studio-stage-activate "$release_dir" "$sha"
 
-health=$(/usr/bin/curl --fail --silent --show-error --retry 15 --retry-delay 1 --retry-connrefused http://127.0.0.1:5100/health)
-node - "$sha" "$health" <<'NODE'
+if ! health=$(/usr/bin/curl --fail --silent --show-error --retry 15 --retry-delay 1 --retry-connrefused http://127.0.0.1:5100/health); then
+  if [[ "$previous" =~ ^/srv/studio/releases/[0-9a-f]{40}$ ]]; then sudo -n /usr/local/sbin/studio-stage-activate "$previous" "${previous##*/}"; fi
+  exit 1
+fi
+if ! node - "$sha" "$health" <<'NODE'
 const [expected, body] = process.argv.slice(2);
 const payload = JSON.parse(body);
 if (payload.ok !== true || payload.service !== 'studio' || payload.revision !== expected) {
   throw new Error(`unexpected health response: ${body}`);
 }
 NODE
+then
+  if [[ "$previous" =~ ^/srv/studio/releases/[0-9a-f]{40}$ ]]; then sudo -n /usr/local/sbin/studio-stage-activate "$previous" "${previous##*/}"; fi
+  exit 1
+fi
 
 rm -f "$archive"
 printf 'staging service is healthy at revision %s\n' "$sha"
