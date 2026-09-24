@@ -50,6 +50,18 @@ try {
 		!failed[0].fullName?.includes(testName) ||
 		!failed[0].failureMessages?.some((message) => message.includes(expectedFailure))
 	) {
+		console.error(
+			'Observed known-data audit report: ' +
+			JSON.stringify({
+				numFailedTests: output.numFailedTests,
+				numPassedTests: output.numPassedTests,
+				failed: failed.map((test) => ({
+					fullName: test.fullName,
+					title: test.title,
+					messages: (test.failureMessages ?? []).map((message) => message.slice(0, 500))
+				}))
+			})
+		);
 		throw new Error(
 			'The known data audit changed unexpectedly; refusing to classify a different failure as legacy.'
 		);
