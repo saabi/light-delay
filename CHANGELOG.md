@@ -4,6 +4,7 @@
 
 - Corrected bounded M1 restore, runtime validation/reference integrity and trusted principal attribution; separated transient exploration from accepted history and removed false Saved status.
 - Removed the disposable legacy /v2 prototype; moved the protected legacy app, localization and browser configuration into apps/light-delay with an explicit root-project path adapter.
+- Reconciled the optional dependency lock with CI npm 11.19 after Linux exposed an omission accepted by local npm 11.6; use Node 24 and current bundled npm for lockfile maintenance.
 - Consolidated runtime-contract proofs in v2-core; separate core, Studio, legacy compatibility and project-data gates now exist.
 - Staging uses protected-copy finalization and non-executing JSON validation. Administrator installation of protocol-2 helpers is still required; nothing was deployed.
 - No creative data/media were repaired, imported or relocated. See V2_ARCHITECTURE_INDEX.md for verification and the unchanged full-suite data/media failures.
