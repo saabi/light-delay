@@ -132,6 +132,7 @@
     "validate:project:light-delay": "npm run validate:data",
     "check:v2-core": "npm run check --workspace @light-delay/v2-core",
     "test:legacy:compat": "npm run test:compat --workspace @light-delay/legacy",
+    "test:legacy:known-data": "npm run test:known-data --workspace @light-delay/legacy",
     "test:deploy": "python3 tools/deploy/test_stage_finalize.py"
   },
   "devDependencies": {

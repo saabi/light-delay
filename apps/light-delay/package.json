@@ -12,7 +12,8 @@
     "check:watch": "npm run check -- --watch",
     "test:unit": "vitest run",
     "test:e2e": "playwright test",
-    "test:compat": "vitest run src/lib/audio src/lib/studio src/lib/state src/lib/data/selectors/animaticDialogueTimeline.spec.ts src/lib/data/selectors/animaticPlaybackSpans.spec.ts src/lib/utils/paths.spec.ts src/lib/utils/scriptRouting.spec.ts src/lib/utils/scriptRouting.base.spec.ts src/lib/utils/scriptId.spec.ts src/lib/utils/routeId.spec.ts src/lib/utils/duration.spec.ts src/lib/utils/thumbnailPath.spec.ts src/lib/data/repositories/legacyMediaPaths.spec.ts"
+    "test:compat": "node test-compat.mjs",
+    "test:known-data": "node ../../scripts/ci/audit-known-vitest-failure.mjs src/lib/data/selectors/extracted-data.spec.ts 'registers the new Festival derivative with screenplay and storyboard data' 'to have a length of 94 but got 90'"
   },
   "devDependencies": {
     "@inlang/paraglide-js": "^2.24.1",
