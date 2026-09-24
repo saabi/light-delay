@@ -29,6 +29,13 @@ A future Studio production environment is intentionally not defined by the stagi
 > Staging deployment is explicit and disposable; festival production is protected and independent.
 
 A Studio staging failure must not affect the legacy festival site. A legacy/festival deployment must not require Studio to build or deploy.
+## Legacy Pages promotion
+
+master is an integration branch, not by itself a legacy-production deployment trigger. Public Light Delay Pages deployment requires explicit [deploy:pages] authorization on the pushed HEAD commit or explicit manual promotion.
+
+The Pages workflow validates pushes and pull requests. Promotion depends on checkout, legacy type-check, complete application compatibility tests, browser compatibility tests, normal production build, and base-path build. It deploys the artifact built by that validated run. A push deploys only when github.event.head_commit.message contains [deploy:pages]; phrases such as deploy pages do not authorize it, and messages from earlier commits in a multi-commit push are ignored. Manual dispatch is restricted to master; an optional revision must be reachable from master and is the exact revision built and promoted.
+
+Pull requests, fork commits, feature-branch pushes, and ordinary master pushes cannot reach the production Pages job. Studio integration therefore cannot silently replace the public historical/festival application.
 
 ## Implemented staging contract
 
@@ -199,6 +206,9 @@ An administrator must update BOTH helpers from a reviewed commit. This session h
 ```sh
 id -u studio-deploy >/dev/null 2>&1 || useradd --system --home-dir /srv/studio --shell /bin/bash studio-deploy
 install -d -o root -g root -m 0755 /usr/local/libexec
+install -d -o root -g root -m 0755 /run/studio-stage
+install -o root -g root -m 0644 tools/deploy/studio-stage-tmpfiles.conf /etc/tmpfiles.d/studio-stage.conf
+systemd-tmpfiles --create /etc/tmpfiles.d/studio-stage.conf
 install -o root -g root -m 0644 tools/deploy/stage-finalize.py /usr/local/libexec/studio-stage-finalize.py
 install -o root -g root -m 0755 tools/deploy/stage-activate.sh /usr/local/sbin/studio-stage-activate
 chown root:root /srv/studio /srv/studio/releases
@@ -271,7 +281,7 @@ It must:
 - avoid executing arbitrary commands selected by release-controlled package scripts;
 - perform only the minimal ownership/finalization/symlink/service actions that actually require privilege.
 
-Finalization copies through directory descriptors with O_NOFOLLOW into fresh root-owned inodes; it never chowns a deployment-owned tree in place. This protects against open writable descriptors and source-path swaps. Special files and hardlinks are rejected. Only contained relative npm links under node_modules are permitted; manifests and the entrypoint cannot have symlink components. JSON validation happens in the protected copy. Files become 0444 and directories 0555 before publication. Repeat activation revalidates ownership and permissions and does not recopy the upload. Root activation is serialized with flock.
+Finalization copies through directory descriptors with O_NOFOLLOW into fresh root-owned inodes; it never chowns a deployment-owned tree in place. This protects against open writable descriptors and source-path swaps. Special files and hardlinks are rejected. Only contained relative npm links under node_modules are permitted; manifests and the entrypoint cannot have symlink components. JSON validation happens in the protected copy. Files become 0444 and directories 0555 before publication. Repeat activation revalidates ownership and permissions and does not recopy the upload. Root activation is serialized with flock at /run/studio-stage/stage-activate.lock. The directory is root-owned and recreated after boot by systemd-tmpfiles; the repository includes tools/deploy/studio-stage-tmpfiles.conf. This session changed repository helpers only: protocol-2 host installation remains pending.
 
 After host installation, run `sudo -u studio-deploy sudo -n /usr/local/sbin/studio-stage-activate --protocol-version` and require exactly `2`. Review the installed helper checksums against the reviewed repository files. The remote workflow fails closed against an old helper. Existing mutable releases are NOT grandfathered in for rollback: an administrator must separately verify and finalize a fresh copy before it is eligible. Do not blindly chown existing releases and call them immutable. No staging deployment was performed in this implementation session.
 

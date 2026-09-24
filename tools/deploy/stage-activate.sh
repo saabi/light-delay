@@ -6,7 +6,7 @@ unset NODE_OPTIONS PYTHONPATH PYTHONHOME
 if [[ $# -eq 1 && "$1" == --protocol-version ]]; then echo 2; exit 0; fi
 [[ $# -eq 2 && "$2" =~ ^[0-9a-f]{40}$ ]] || { echo 'usage: stage-activate <release-directory> <git-sha>' >&2; exit 2; }
 # This lock and both helpers must be installed by an administrator.
-exec 9>/run/lock/studio-stage-activate.lock
+exec 9>/run/studio-stage/stage-activate.lock
 flock -x 9
 release_dir=$(/usr/bin/python3 -I /usr/local/libexec/studio-stage-finalize.py "$1" "$2")
 current_link=/srv/studio/current
