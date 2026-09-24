@@ -19,9 +19,9 @@ Notas archivadas para rescate: **167**
 - **note:stretch-operations-gallery-001-003** [visual · todo · active] — La secuencia inicial de visionado en la galería de operaciones es un tramo continuo; generar como una sola hoja antes de dividir los paneles.
   - Origen: `data/scripts/light-delay-festival-master.json` · `$.visualStretches[0].notes[0]`
 - **note:bridge-027-not-shaft** [production · open · active] — needs_revision
-  - Origen: `data/scripts/light-delay-festival-master.json` · `$.visualStretches[25].notes[0]`
+  - Origen: `data/scripts/light-delay-festival-master.json` · `$.visualStretches[19].notes[0]`
 - **note:bridge-comms-exceptional-video-identity** [production · open · active] — needs_revision
-  - Origen: `data/scripts/light-delay-festival-master.json` · `$.visualStretches[27].notes[0]`
+  - Origen: `data/scripts/light-delay-festival-master.json` · `$.visualStretches[21].notes[0]`
 - **note:reactor-confront-scene-14** [production · open · active] — needs_revision
   - Origen: `data/scripts/light-delay-festival-master.json` · `$.visualStretches[7].notes[0]`
 - **data/scripts/light-delay-trailer-master.json:$.shots[0].notes[0]** [editorial · open · active] — Reutiliza el frame de festival-master:shot-plan-title (asset asset:festival-master-storyboard-title).
@@ -30,7 +30,7 @@ Notas archivadas para rescate: **167**
   - Origen: `data/scripts/light-delay-trailer-master.json` · `$.shots[1].notes[0]`
 - **data/scripts/light-delay-trailer-master.json:$.shots[10].notes[0]** [editorial · open · active] — Reutiliza el frame de festival-master:shot-plan-048 (asset asset:festival-master-storyboard-048).
   - Origen: `data/scripts/light-delay-trailer-master.json` · `$.shots[10].notes[0]`
-- **data/scripts/light-delay-trailer-master.json:$.shots[11].notes[0]** [editorial · open · active] — Reutiliza el frame de festival-master:shot-plan-058 (asset asset:festival-master-storyboard-058).
+- **data/scripts/light-delay-trailer-master.json:$.shots[11].notes[0]** [editorial · open · active] — Reutiliza el frame de festival-master:shot-plan-057 (asset asset:festival-master-scene-20-single-take-still).
   - Origen: `data/scripts/light-delay-trailer-master.json` · `$.shots[11].notes[0]`
 - **data/scripts/light-delay-trailer-master.json:$.shots[12].notes[0]** [editorial · open · active] — Reutiliza el frame de festival-master:shot-plan-062 (asset asset:festival-master-storyboard-062).
   - Origen: `data/scripts/light-delay-trailer-master.json` · `$.shots[12].notes[0]`

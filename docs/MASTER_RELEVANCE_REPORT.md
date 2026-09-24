@@ -98,7 +98,7 @@ Gates: `master_outline_complete` (open), `salvage_review_complete` (open), `repl
 | voice_profile | `voice:voss-es` | explicit | retain |
 | voice_profile | `voice:zao-es` | explicit | retain |
 
-## Revisión requerida (558)
+## Revisión requerida (566)
 
 | Tipo | ID | Base | Disposición |
 | --- | --- | --- | --- |
@@ -360,6 +360,14 @@ Gates: `master_outline_complete` (open), `salvage_review_complete` (open), `repl
 | asset | `asset:festival-master-shot-plan-050-rev-1-video-1` | default-review | retain |
 | asset | `asset:festival-master-shot-plan-054-rev-1-video-1-video` | default-review | retain |
 | asset | `asset:festival-master-shot-plan-056-rev-1-video-1-video` | default-review | retain |
+| asset | `asset:festival-master-shot-plan-057-rev-1-video-1-video` | default-review | retain |
+| asset | `asset:festival-master-shot-plan-060-rev-1-video-1-video` | default-review | retain |
+| asset | `asset:festival-master-shot-plan-062-rev-1-video-1-video` | default-review | retain |
+| asset | `asset:festival-master-shot-plan-064-rev-1-video-1-video` | default-review | retain |
+| asset | `asset:festival-master-shot-plan-065-rev-1-video-1` | default-review | retain |
+| asset | `asset:festival-master-shot-plan-068-rev-1-video-1` | default-review | retain |
+| asset | `asset:festival-master-shot-plan-071-rev-1-video-1` | default-review | retain |
+| asset | `asset:festival-master-shot-plan-077-rev-1-video-1` | default-review | retain |
 | asset | `asset:festival-master-shot-plan-083-rev-1-video-1-video` | default-review | retain |
 | asset | `asset:festival-master-shot-plan-084-rev-1-video-1-video` | default-review | retain |
 | asset | `asset:festival-master-shot-plan-085-rev-1-video-1-video` | default-review | retain |
@@ -692,7 +700,7 @@ Gates: `master_outline_complete` (open), `salvage_review_complete` (open), `repl
 | static_file | `docs/SVELTEKIT_SETUP.md` | explicit | retain_for_salvage |
 | static_file | `legacy-site/` | explicit | retain_for_salvage |
 
-## Obsoleto (278)
+## Obsoleto (281)
 
 | Tipo | ID | Base | Disposición |
 | --- | --- | --- | --- |
@@ -815,6 +823,9 @@ Gates: `master_outline_complete` (open), `salvage_review_complete` (open), `repl
 | asset | `asset:festival-master-scene-21-shot-060-still` | deprecated-animatic | delete_after_gates |
 | asset | `asset:festival-master-scene-21-shot-062-still` | deprecated-animatic | delete_after_gates |
 | asset | `asset:festival-master-scene-21-shot-064-still` | deprecated-animatic | delete_after_gates |
+| asset | `asset:festival-master-scene-22-single-take-still` | deprecated-animatic | delete_after_gates |
+| asset | `asset:festival-master-scene-23-single-take-still` | deprecated-animatic | delete_after_gates |
+| asset | `asset:festival-master-scene-24-single-take-still` | deprecated-animatic | delete_after_gates |
 | asset | `asset:festival-master-stretch-axial-dock-006-009-panel-01` | deprecated-animatic | delete_after_gates |
 | asset | `asset:festival-master-stretch-axial-dock-006-009-panel-02` | deprecated-animatic | delete_after_gates |
 | asset | `asset:festival-master-stretch-axial-dock-006-009-panel-03` | deprecated-animatic | delete_after_gates |

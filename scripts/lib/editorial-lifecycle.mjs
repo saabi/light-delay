@@ -72,6 +72,16 @@ export function buildLifecycleInventory(root) {
 	}
 	for (const path of filesUnder(join(root, 'docs')).filter((item) => item.endsWith('.md'))) {
 		const id = relative(root, path).replaceAll('\\', '/');
+		// This inventory is scoped to Light Delay project material. V2/Studio
+		// architecture, its design system, and repository review records are not
+		// candidates for disposition against the Light Delay master outline.
+		const docPath = id.slice('docs/'.length);
+		if (
+			docPath.startsWith('V2_') ||
+			/^ADR-000[34](?:-|\.).*\.md$/.test(docPath) ||
+			docPath === 'STUDIO_DESIGN_SYSTEM.md' ||
+			docPath.startsWith('reviews/')
+		) continue;
 		records.push(ref('static_file', id, id, id));
 	}
 	for (const item of project.continuities ?? []) records.push(ref('continuity', item.id, item.id, 'data/project.json'));

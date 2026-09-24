@@ -4,7 +4,7 @@
     "id": "generation-plan:light-delay-festival-master",
     "scriptId": "script:light-delay-festival-master",
     "scriptVersion": "0.2.0-wip",
-    "sourceDigest": "43ad0e7d950b8b7d1240783ae081d5673608991cb6433914716cfd244e4bd4be",
+    "sourceDigest": "403e30238cdb7ba539244b2b33f669ea0dc6bf209b7e460267045815d6b38bdd",
     "campaignId": "campaign:higgsfield-trial-24h",
     "status": "blocked",
     "promptLanguage": "en",
