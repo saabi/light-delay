@@ -376,7 +376,7 @@ describe('separate still/video reference sets', () => {
 		);
 		const stretch = (script.visualStretches || []).find(
 			(item: { id?: string; videoReferenceAssetIds?: string[] }) =>
-				item.id === 'festival-master:stretch-bridge-greeting-prep-083-085'
+				item.id === 'festival-master:stretch-bridge-greeting-086'
 		);
 		expect(stretch).toBeTruthy();
 		expect(Object.prototype.hasOwnProperty.call(stretch, 'videoReferenceAssetIds')).toBe(false);
