@@ -56,14 +56,20 @@ jobs:
       - name: Test v2-core
         run: npm run test:v2-core
 
-      - name: Check legacy application
-        run: npm run check:legacy
+      - name: Verify staging privilege boundary
+        run: |
+          bash -n tools/deploy/stage-activate.sh
+          bash -n tools/deploy/stage-remote.sh
+          npm run test:deploy
 
       - name: Build Studio Node application
         run: npm run build:studio
 
       - name: Package immutable Studio release
         run: bash tools/deploy/package-stage.sh "$TARGET_SHA" "$RUNNER_TEMP/studio-release.tgz"
+
+      - name: Smoke test the packaged release
+        run: bash tools/deploy/smoke-stage.sh "$RUNNER_TEMP/studio-release.tgz" "$TARGET_SHA"
 
       - name: Upload release artifact
         uses: actions/upload-artifact@v4

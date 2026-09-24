@@ -2,8 +2,6 @@ name: Deploy SvelteKit to GitHub Pages
 
 on:
   push:
-    branches:
-      - master
   pull_request:
   workflow_dispatch:
 
@@ -32,47 +30,35 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Validate structured data
-        run: npm run validate:data
-
-      - name: Verify generated editorial artifacts
-        run: npm run generated:check
-
-      - name: Validate causal ledger
-        run: npm run report:causal-validity
-
-      - name: Validate causal structure
-        run: npm run report:causal-structure
-
-      - name: Validate documentation
-        run: npm run validate:docs
-
-      - name: Validate public translations
-        run: npm run validate:translations
-
       - name: Type-check SvelteKit
-        run: npm run check
+        run: npm run check:legacy
 
       - name: Run unit tests
-        run: npm run test:unit
+        run: npm run test:legacy:compat
+
+      - name: Install browser for compatibility tests
+        run: npx playwright install --with-deps chromium
+
+      - name: Verify landing pages and Movie controls
+        run: npm run test:e2e --workspace @light-delay/legacy -- src/routes/page.svelte.e2e.ts
 
       - name: Build static site
         env:
           BASE_PATH: /${{ github.event.repository.name }}
-        run: npm run build
+        run: npm run build:legacy
 
       - name: Configure GitHub Pages
-        if: github.event_name != 'pull_request'
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/master'
         uses: actions/configure-pages@v5
 
       - name: Upload Pages artifact
-        if: github.event_name != 'pull_request'
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/master'
         uses: actions/upload-pages-artifact@v4
         with:
-          path: build/
+          path: apps/light-delay/build/
 
   deploy:
-    if: github.event_name != 'pull_request'
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/master'
     needs: build
     runs-on: ubuntu-latest
     permissions:

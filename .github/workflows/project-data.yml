@@ -1,0 +1,34 @@
+name: Light Delay project-data integrity
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  project-data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          lfs: true
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run validate:project:light-delay
+      - run: npm run validate:schemas
+        if: always()
+      - run: npm run generated:check
+        if: always()
+      - run: npm run report:causal-validity
+        if: always()
+      - run: npm run report:causal-structure
+        if: always()
+      - run: npm run validate:docs
+        if: always()
+      - run: npm run validate:translations
+        if: always()
+      - name: Full legacy suite including live project and media assertions
+        if: always()
+        run: npm run test:legacy

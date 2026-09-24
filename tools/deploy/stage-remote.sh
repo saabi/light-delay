@@ -25,7 +25,7 @@ fi
 studio_root=/srv/studio
 release_root=$studio_root/releases
 release_dir=$release_root/.incoming/$sha
-temporary_dir=$release_root/.incoming/.${sha}.install.$
+temporary_dir=$(mktemp -d "$release_root/.incoming/.${sha}.install.XXXXXX")
 trap 'rm -rf "$temporary_dir"' EXIT
 
 [[ "$(sudo -n /usr/local/sbin/studio-stage-activate --protocol-version)" == 2 ]] || { echo 'Install the trusted protocol-2 host helpers before deploying' >&2; exit 1; }

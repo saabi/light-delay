@@ -1,0 +1,30 @@
+name: Studio and shared foundation
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  studio:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run check:v2-core
+      - run: npm run test:v2-core
+      - run: npm run check:studio
+      - run: npm run build:studio
+      - name: Verify deployment helpers
+        run: |
+          bash -n tools/deploy/stage-activate.sh
+          bash -n tools/deploy/stage-remote.sh
+          bash -n tools/deploy/package-stage.sh
+          npm run test:deploy
+      - name: Start the packaged release in isolation
+        run: |
+          bash tools/deploy/package-stage.sh "$GITHUB_SHA" "$RUNNER_TEMP/studio-release.tgz"
+          bash tools/deploy/smoke-stage.sh "$RUNNER_TEMP/studio-release.tgz" "$GITHUB_SHA"
