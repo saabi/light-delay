@@ -3,7 +3,7 @@
 ## 2026-09-24 — Pre-M2 integration corrections
 
 - Integrated current `master` into `implementation/foundation-r1-r2`; the implementation line remains separate from `master`.
-- Expanded the legacy compatibility gate to the full application unit and browser suites, with exact audited exceptions for the stale 94-versus-90 Festival shot count and Okoye voice-copy assertion.
+- Expanded the legacy compatibility gate to the full application unit and browser suites, with exact audited exceptions for the stale 94-versus-85 Festival shot-count assertion and Okoye voice-copy assertion. Historical entries record the data count changing 94→90→85.
 - Scoped the master-relevance inventory to Light Delay material and refreshed generated reports/plans; Studio/V2 architecture docs are not classified as Light Delay project evidence.
 - Recorded the new 077 result's missing `inputDigest` as a precise schema-audit exception because the source digest is unavailable.
 - Changed Pages to require `[deploy:pages]` on pushed `master` HEAD or manual promotion from `master`; the validated artifact is promoted unchanged.

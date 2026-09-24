@@ -13,7 +13,7 @@
     "test:unit": "vitest run",
     "test:e2e": "playwright test",
     "test:compat": "node test-compat.mjs",
-    "test:known-data": "node ../../scripts/ci/audit-known-vitest-failure.mjs src/lib/data/selectors/extracted-data.spec.ts 'registers the new Festival derivative with screenplay and storyboard data' 'to have a length of 94 but got 90'"
+    "test:known-data": "node ../../scripts/ci/audit-known-vitest-failure.mjs src/lib/data/selectors/extracted-data.spec.ts 'registers the new Festival derivative with screenplay and storyboard data' 'to have a length of 94 but got 85'"
   },
   "devDependencies": {
     "@inlang/paraglide-js": "^2.24.1",
