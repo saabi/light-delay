@@ -1,5 +1,5 @@
 import { describe,expect,it } from 'vitest';
-import { findRoute } from './world'; import { ids,lightDelayBridgeFixture,withHarlanBlocking } from './light-delay-fixture';
+import { findRoute } from './world.js'; import { ids,lightDelayBridgeFixture,withHarlanBlocking } from './light-delay-fixture.js';
 describe('Light Delay navigation vertical slice',()=>{
  it('uses the safe around-rail route in 1g',()=>{const r=findRoute(lightDelayBridgeFixture,ids.sorell,ids.meal,ids.engineering);expect(r.reachable).toBe(true);if(r.reachable) expect(r.steps[0].edgeId).toBe('nav-edge:meal-table-around-to-stations');});
  it('allows the direct shaft crossing in microgravity',()=>{const s={...lightDelayBridgeFixture,state:{...lightDelayBridgeFixture.state,gravity:'microgravity'}};const r=findRoute(s,ids.sorell,ids.meal,ids.engineering);expect(r.reachable).toBe(true);if(r.reachable) expect(['nav-edge:meal-table-around-to-stations','nav-edge:meal-table-across-shaft-to-stations']).toContain(r.steps[0].edgeId);});

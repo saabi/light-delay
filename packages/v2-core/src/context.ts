@@ -1,4 +1,4 @@
-import { explainRoute, findRoute, getEffectiveLocation, type WorldSnapshot } from './world';
+import { explainRoute, findRoute, getEffectiveLocation, type WorldSnapshot } from './world.js';
 export interface StudioContextItem { id:string; kind:'world-state'|'entity-location'|'route'; label:string; value:unknown; reason:string; sourceRefs:string[]; }
 export interface StudioContextPackage { projectId:string; projectRevision:number; anchor:{kind:'entity';entityId:string}; items:StudioContextItem[]; }
 export function resolveNavigationContext(snapshot:WorldSnapshot,input:{projectId:string;actorId:string;from:string;to:string}):StudioContextPackage{

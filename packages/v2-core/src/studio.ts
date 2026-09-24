@@ -1,6 +1,6 @@
-import { ids, lightDelayBridgeFixture, withHarlanBlocking } from './light-delay-fixture';
-import { resolveNavigationContext } from './context';
-import type { WorldSnapshot } from './world';
+import { ids, lightDelayBridgeFixture, withHarlanBlocking } from './light-delay-fixture.js';
+import { resolveNavigationContext } from './context.js';
+import type { WorldSnapshot } from './world.js';
 export interface NavigationViewModel { revision:number; gravity:string; serviceHatch:string; harlanBlocking:boolean; reachable:boolean; summary:string; routeLabels:string[]; contextSourceCount:number; }
 export function getBridgeNavigationViewModelFromSnapshot(snapshot:WorldSnapshot):NavigationViewModel{
  const context=resolveNavigationContext(snapshot,{projectId:'project:light-delay',actorId:ids.sorell,from:ids.meal,to:ids.engineering}); const route=context.items.find(i=>i.kind==='route')!.value as any;

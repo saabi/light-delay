@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
-    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json"
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "precheck": "npm run build --workspace @light-delay/v2-core",
+    "prebuild": "npm run build --workspace @light-delay/v2-core",
+    "predev": "npm run build --workspace @light-delay/v2-core"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^7.1.2",
