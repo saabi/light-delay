@@ -112,10 +112,12 @@ Verified locally:
 - Studio check and production build;
 - legacy check, normal production build, and Pages build with `BASE_PATH=/light-delay`;
 - 47 legacy compatibility tests;
-- four representative browser tests: English/Spanish landing, Movie controls, and return-to-editor position (wait for static-page hydration);
+- 15 application browser tests covering landing/localization, routing, responsive navigation, Movie controls and return-to-editor position (wait for static-page hydration);
 - 10 Linux deployment filesystem tests, shell syntax checks, and isolated packaged-release install/start/health smoke.
 
 The full legacy suite has ten failures both before and after relocation in sparse checkouts: nine depend on omitted media; one asserts 94 Festival-master shots against 90 in the committed dataset. The September 16 changelog records the 94 → 90 joins. These are reported separately, not silently suppressed or repaired. Current `validate:data`, `validate:schemas` (75 schema files), and generated schema-type checks pass. The local documentation-link check reports four references into the deliberately omitted `higgsfield-uploads/` tree; the older review's missing-inputDigest failure does not reproduce. Passing validators do not erase the reconstruction provenance policy.
+
+Linux CI on Node 24.21.0/npm 11.19 verifies core/Studio/deployment independently. With LFS hydrated, the full legacy unit suite passes 310/311: only the pre-existing 94-versus-90 shot-count assertion fails. Documentation and translation validation pass in that full checkout. `generated:check` stops at stale `docs/MASTER_RELEVANCE_REPORT.md`, reproduced on unchanged architecture HEAD as well. The full browser suite also retains an old Okoye voice-copy assertion (including wording absent from unchanged `data/voice-profiles.json`); that test runs explicitly in the project-data audit. None of these assertions is deleted or used to rewrite narrative evidence.
 
 Local media is deliberately sparse, so this is application compatibility verification, not full media completeness certification. CI Pages retains LFS checkout. No deployment or Linode helper installation was performed. Protocol-2 host setup remains an explicit deployment prerequisite in `V2_DEPLOYMENT_AND_ENVIRONMENTS.md`.
 

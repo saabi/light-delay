@@ -32,3 +32,10 @@ jobs:
       - name: Full legacy suite including live project and media assertions
         if: always()
         run: npm run test:legacy
+
+      - name: Install browser for live narrative assertions
+        if: always()
+        run: npx playwright install --with-deps chromium
+      - name: Audit live voice-profile browser assertions
+        if: always()
+        run: npm run test:e2e --workspace @light-delay/legacy -- src/routes/page.svelte.e2e.ts --grep "Okoye exposes"

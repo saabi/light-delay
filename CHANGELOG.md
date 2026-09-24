@@ -7,6 +7,7 @@
 - Reconciled the optional dependency lock with CI npm 11.19 after Linux exposed an omission accepted by local npm 11.6; use Node 24 and current bundled npm for lockfile maintenance.
 - Consolidated runtime-contract proofs in v2-core; separate core, Studio, legacy compatibility and project-data gates now exist.
 - Staging uses protected-copy finalization and non-executing JSON validation. Administrator installation of protocol-2 helpers is still required; nothing was deployed.
+- Expanded browser compatibility to 15 tests with hydration waits; preserved stale narrative-copy assertions in the separate data audit. LFS-backed CI reduces the full unit-suite failures to the existing 94-versus-90 shot-count assertion; generated master-relevance report staleness also reproduces on the unchanged baseline.
 - No creative data/media were repaired, imported or relocated. See V2_ARCHITECTURE_INDEX.md for verification and the unchanged full-suite data/media failures.
 
 ## 2026-09-16 - Catalog thumbs regenerated from intact sources

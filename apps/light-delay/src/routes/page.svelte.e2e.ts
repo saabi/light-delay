@@ -1,6 +1,7 @@
 import { expect, test } from '@playwright/test';
 
 async function openNavigation(page: import('@playwright/test').Page) {
+	await page.waitForLoadState('networkidle');
 	const button = page.getByRole('button', { name: 'Open menu' });
 	await button.click();
 	await expect(page.getByRole('dialog', { name: 'Primary navigation' })).toBeVisible();
@@ -120,6 +121,7 @@ test('screenplay content defaults to the route language and preserves a manual c
 		page.getByText(/^The signature looks forged\. The real signature points to—/)
 	).toBeVisible();
 
+	await page.waitForLoadState('networkidle');
 	await page
 		.getByRole('complementary', { name: 'Primary navigation' })
 		.getByLabel('Story and dialogue')
@@ -148,6 +150,7 @@ test('/animatic redirects and is scoped by script ID', async ({ page }) => {
 
 test('script switcher preserves the current section', async ({ page }) => {
 	await page.goto('/animatic/script~light-delay-main-short');
+	await page.waitForLoadState('networkidle');
 	await page
 		.getByRole('complementary', { name: 'Primary navigation' })
 		.getByLabel('Select a script or cut')
@@ -245,6 +248,7 @@ test('comparison route localizes the interface and preserves selection', async (
 
 test('returning from Movie mode restores the selected editor shot', async ({ page }) => {
 	await page.goto('/animatic/script~light-delay-main-short/player');
+	await page.waitForLoadState('networkidle');
 	await page.getByRole('button', { name: 'Next shot' }).click();
 	await page.getByRole('link', { name: 'Edit timing' }).click();
 	await expect(page).toHaveURL(/\?shot=main%3Ashot-01-02$/);
