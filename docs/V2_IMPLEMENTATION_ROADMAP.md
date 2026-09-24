@@ -22,7 +22,7 @@ The September 23 Astra and Claude Opus 5.5 reviews found concrete defects and, m
 
 ### Required closure — repository implementation complete (2026-09-24)
 
-The corrections below are implemented and verified; see the exact verification and known sparse-media/data failures in `V2_ARCHITECTURE_INDEX.md`. Protocol-2 Linode host installation remains a deployment prerequisite, not a claim of completed host work.
+The corrections below are implemented and verified; see the exact verification and known sparse-media/data failures in `V2_ARCHITECTURE_INDEX.md`. Protocol-2 Linode host installation remains a deployment prerequisite. Current master is integrated into the implementation line; legacy Pages deployment is explicit opt-in. Neither deployment was performed.
 
 - **Legacy application versus damaged project data:** treat them as separate gates. The Light Delay dataset suffered significant zero-fill data loss and committed reconstruction attempts; current HEAD is not a uniformly valid import source. See `V2_LIGHT_DELAY_RECONSTRUCTION.md`.
 - **Legacy application regression:** remove/fix disposable legacy `/v2` prototype behavior that prevents the protected application from building/prerendering. Add an application build gate that can distinguish code regressions from known project-data validation failures.
@@ -41,6 +41,14 @@ Run Studio/shared-package checks normally. For legacy checks, record separately:
 Do not repair the entire legacy dataset merely to make this checkpoint green.
 
 ---
+
+## Pre-M2 integration corrections — complete (2026-09-24)
+
+- Expanded the green legacy gate to the full application unit and browser suites, with exact test-level quarantines for the stale Festival shot count and Okoye voice-copy expectation. The project-data audit reruns and reports both expected failures.
+- Scoped the master-relevance inventory to Light Delay project material; Studio/V2 documentation is not classified against the Light Delay master outline.
+- Integrated current master into implementation/foundation-r1-r2 without rewriting either branch. The master-added 077 singleton result still lacks inputDigest; it is an explicit schema-audit exception because its source digest is unavailable.
+- Changed Pages production promotion to require [deploy:pages] on master HEAD or manual dispatch from master with an optional reachable revision. Validation always runs; deployment consumes the same run artifact.
+- Moved the staging activation lock under /run/studio-stage/; host installation and systemd-tmpfiles setup remain pending.
 
 ## Milestone 0.5 — Architecture contracts
 

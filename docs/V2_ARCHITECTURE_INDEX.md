@@ -71,7 +71,7 @@ Implemented on `architecture/v2-domain-model`, with the foundation corrections o
 - Context Package assembly for navigation;
 - Studio view model consuming shared core;
 - Studio Context inspector showing Sorell → Engineering reachability;
-- test cases for 1g safe route, microgravity direct crossing, and Harlan blocker;
+- test cases for the 1g route, the microgravity fixture scenario, and Harlan blocker (the current equal-cost graph selects the same route in both gravity settings);
 - semantic ChangeSet/revision proof with immutable projections, preconditions, conflicts and restore-as-new-history;
 - exploratory Studio controls are transient and do not append authoring history; the editor explicitly says it is not saved;
 - faithful absence/removal restore, runtime TypeBox command validation, fixture reference integrity and runtime-owned principal attribution;
@@ -100,43 +100,19 @@ Until then, bounded fixtures may remain test fixtures. The Central Access → En
 
 The corrected M1 proof preserves the semantic boundary required before persistence: project revision history, fictional story-time state, and durable provisional work are distinct. See ADR-0004.
 
-## Verification status — foundation checkpoint (2026-09-24)
+## Verification status — pre-M2 integration checkpoint (2026-09-24)
 
-Repository corrections, bounded M1, and R1/R2 are implemented on `implementation/foundation-r1-r2`, based on `architecture/v2-domain-model` at `5a5c22f`. The stale relocation branch was already an ancestor and had no unique relocation work. Master remains separate (two production commits since the common ancestor); no production branch was merged or rewritten.
+Foundation/M1/R1/R2 and the pre-M2 corrections are on implementation/foundation-r1-r2. Current master at c2105fc is integrated by merge commit 22aa764; implementation remains unmerged into master. The review commit is included. refactor/move-legacy-app remains an ancestor with no unique work.
 
-Verified locally:
+The relevance report inventories Light Delay project material. Studio/V2 architecture, Studio design-system, ADR-0003/0004, and review records are excluded because they cannot be judged against the Light Delay master outline. The generated report is regenerated from that scope.
 
-- clean lockfile install;
-- core type-check/build and direct Node package import;
-- 45 shared/core tests, including the relocated runtime-contract tests;
-- Studio check and production build;
-- legacy check, normal production build, and Pages build with `BASE_PATH=/light-delay`;
-- 47 legacy compatibility tests;
-- 15 application browser tests covering landing/localization, routing, responsive navigation, Movie controls and return-to-editor position (wait for static-page hydration);
-- 10 Linux deployment filesystem tests, shell syntax checks, and isolated packaged-release install/start/health smoke.
+The application compatibility gate runs the complete unit suite and browser suite by default. It skips only the exact 94-versus-90 Festival shot-count assertion and exact Okoye voice-copy browser assertion under an explicit compatibility environment flag. The project-data audit runs both assertions individually, requires the same known failure symptoms, and fails if either changes. validate:schemas also reports and quarantines only the exact missing-inputDigest error in the newly added 077 singleton result. All other schema errors fail normally.
 
-The full legacy suite has ten failures both before and after relocation in sparse checkouts: nine depend on omitted media; one asserts 94 Festival-master shots against 90 in the committed dataset. The September 16 changelog records the 94 → 90 joins. These are reported separately, not silently suppressed or repaired. Current `validate:data`, `validate:schemas` (75 schema files), and generated schema-type checks pass. The local documentation-link check reports four references into the deliberately omitted `higgsfield-uploads/` tree; the older review's missing-inputDigest failure does not reproduce. Passing validators do not erase the reconstruction provenance policy.
+The 077 entry is a singleton Seedance output whose own notes say it is not a visual-stretch job. The shared production/runs binding nevertheless applies the visual-stretch result schema, which requires inputDigest. The ready-run source and digest are unavailable in the repository; a digest will not be invented. This is a known production-record/schema mismatch from current master and is surfaced by the data audit.
 
-Linux CI on Node 24.21.0/npm 11.19 verifies core/Studio/deployment independently. With LFS hydrated, the full legacy unit suite passes 310/311: only the pre-existing 94-versus-90 shot-count assertion fails. Documentation and translation validation pass in that full checkout. `generated:check` stops at stale `docs/MASTER_RELEVANCE_REPORT.md`, reproduced on unchanged architecture HEAD as well. The full browser suite also retains an old Okoye voice-copy assertion (including wording absent from unchanged `data/voice-profiles.json`); that test runs explicitly in the project-data audit. None of these assertions is deleted or used to rewrite narrative evidence.
+Microgravity navigation remains a bounded fixture test only. Both edges have equal cost, so the current resolver returns the same route for 1g and microgravity. The test does not establish a distinct microgravity crossing.
 
-Local media is deliberately sparse, so this is application compatibility verification, not full media completeness certification. CI Pages retains LFS checkout. No deployment or Linode helper installation was performed. Protocol-2 host setup remains an explicit deployment prerequisite in `V2_DEPLOYMENT_AND_ENVIRONMENTS.md`.
-
-Commands:
-
-```text
-npm ci
-npm run check:v2-core
-npm run test:v2-core
-npm run check:studio
-npm run build:studio
-npm run check:legacy
-npm run test:legacy:compat
-npm run build:legacy
-npm run validate:project:light-delay
-npm run test:legacy             # includes live project/media assertions
-npm run test:deploy             # Linux / Python 3
-```
-
+Verification on the integrated line: 45 v2-core tests; Studio check/build; legacy check; complete legacy application unit suite with 310 passing and one explicit data exception on LFS; 15 browser compatibility tests; normal and Pages builds; schema/data/lifecycle, generated, causal, docs and translation checks; deployment filesystem tests and package smoke. The project-data workflow logs its three exact known records while failing on any new or changed issue. No Pages or Linode deployment occurred. Protocol-2 helper installation remains pending.
 ## Immediate next milestone
 
 Start M2 in `V2_IMPLEMENTATION_ROADMAP.md`: application/store contracts and an in-memory document/Draft/Proposal slice, explicit acceptance, faithful scoped restore, and two-version isolation. M1 remains a bounded fixture proof, not a persistence schema or story-time engine. Its command schema is `packages/v2-core/src/history-contracts.ts`; principal, timestamp and ChangeSet identity come from trusted runtime configuration, never command content. A same-projection restore still appends an attributable checkpoint. Snapshots are immutable; JSON-roundtripped operations are tested as a reconstruction oracle. Durable storage, idempotent retry, finer concurrency, and version semantics belong to M2/M2.5.

@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-09-24 — Pre-M2 integration corrections
+
+- Integrated current `master` into `implementation/foundation-r1-r2`; the implementation line remains separate from `master`.
+- Expanded the legacy compatibility gate to the full application unit and browser suites, with exact audited exceptions for the stale 94-versus-90 Festival shot count and Okoye voice-copy assertion.
+- Scoped the master-relevance inventory to Light Delay material and refreshed generated reports/plans; Studio/V2 architecture docs are not classified as Light Delay project evidence.
+- Recorded the new 077 result's missing `inputDigest` as a precise schema-audit exception because the source digest is unavailable.
+- Changed Pages to require `[deploy:pages]` on pushed `master` HEAD or manual promotion from `master`; the validated artifact is promoted unchanged.
+- Moved the staging activation lock to `/run/studio-stage`; host setup remains an administrator task. No Pages or Linode deployment occurred.
+
 ## 2026-09-24 — Studio foundation and application boundary (English source)
 
 - Corrected bounded M1 restore, runtime validation/reference integrity and trusted principal attribution; separated transient exploration from accepted history and removed false Saved status.

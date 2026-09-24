@@ -96,10 +96,10 @@ current artifact
 
 The protected legacy application and the damaged legacy project data are separate concerns.
 
-CI should eventually distinguish:
+CI distinguishes:
 
 - **application compatibility** — can the protected legacy application still check/build under its supported fixture/baseline?
-- **project-data integrity** — what does the current Light Delay dataset validate or fail?
+- **project-data integrity** — what does the current Light Delay dataset validate or fail? Known findings are listed narrowly and rerun in the data audit; new failures remain blocking.
 - **Studio correctness** — do Studio and shared packages pass their own checks?
 
 A known data-recovery failure must not be silently reclassified as a V2 application regression. Conversely, damaged data must not be used to excuse a new application/build regression introduced by V2 changes.

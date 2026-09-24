@@ -232,7 +232,7 @@ Import/model:
 - Harlan;
 - bridge gravity state;
 - service-hatch state;
-- the existing safe-around-rail and microgravity-only direct crossing;
+- the 1g safe route and the microgravity fixture scenario; the equal-cost graph currently selects the same route in both settings.
 - one Harlan occupancy/blocker scenario;
 - a small set of StoryEvents/NarrativePresentations sufficient to place the movement in story/narrative context.
 

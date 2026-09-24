@@ -1,4 +1,12 @@
-# Estado del proyecto
+# Estado del proyecto## 2026-09-24 — Pre-M2 integration and deployment policy (English source)
+
+- Integrated current master into implementation/foundation-r1-r2; no changes flowed to master.
+- Legacy application CI runs its full unit and browser suites with only two exact historical data assertions quarantined; the project-data audit reproduces and reports both.
+- Excluded Studio/V2 documentation from the Light Delay master-relevance inventory; regenerated output now matches the intended project scope.
+- The new 077 singleton result remains an explicit inputDigest/schema mismatch because its ready-run provenance is unavailable.
+- Pages production now requires [deploy:pages] on master HEAD or manual promotion of a master-reachable revision. The validated artifact is promoted unchanged.
+- The activation lock moved to /run/studio-stage; helper installation and systemd-tmpfiles setup remain a Linode administrator task. No deployment occurred.
+
 
 ## 2026-09-24 — Studio foundation and application boundary (English source)
 
