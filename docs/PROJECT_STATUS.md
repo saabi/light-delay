@@ -1,5 +1,13 @@
 # Estado del proyecto
 
+## 2026-09-24 — Studio foundation and application boundary (English source)
+
+- Corrected bounded M1 restore, runtime validation/reference integrity and trusted principal attribution; separated transient exploration from accepted history and removed false Saved status.
+- Removed the disposable legacy /v2 prototype; moved the protected legacy app, localization and browser configuration into apps/light-delay with an explicit root-project path adapter.
+- Consolidated runtime-contract proofs in v2-core; separate core, Studio, legacy compatibility and project-data gates now exist.
+- Staging uses protected-copy finalization and non-executing JSON validation. Administrator installation of protocol-2 helpers is still required; nothing was deployed.
+- No creative data/media were repaired, imported or relocated. See V2_ARCHITECTURE_INDEX.md for verification and the unchanged full-suite data/media failures.
+
 ## 2026-09-16 - Catalog thumbs regenerated from intact sources (English source)
 
 - Regenerated catalog WebP thumbs from intact sources (`thumbs:generate`: 231 created). Six thumbs still blocked by zero-filled sources; 29 catalog stills remain unreadable for thumb rebuild until restored.

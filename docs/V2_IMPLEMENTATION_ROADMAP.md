@@ -20,7 +20,9 @@ Meaningful completed vertical increments should be exercised on the real Studio 
 
 The September 23 Astra and Claude Opus 5.5 reviews found concrete defects and, more importantly, exposed a semantic collision in the first M1 proof. Close this bounded correction before expanding implementation.
 
-### Required closure
+### Required closure — repository implementation complete (2026-09-24)
+
+The corrections below are implemented and verified; see the exact verification and known sparse-media/data failures in `V2_ARCHITECTURE_INDEX.md`. Protocol-2 Linode host installation remains a deployment prerequisite, not a claim of completed host work.
 
 - **Legacy application versus damaged project data:** treat them as separate gates. The Light Delay dataset suffered significant zero-fill data loss and committed reconstruction attempts; current HEAD is not a uniformly valid import source. See `V2_LIGHT_DELAY_RECONSTRUCTION.md`.
 - **Legacy application regression:** remove/fix disposable legacy `/v2` prototype behavior that prevents the protected application from building/prerendering. Add an application build gate that can distinguish code regressions from known project-data validation failures.
@@ -48,9 +50,9 @@ No object-storage vendor, external AI CLI, durable worker infrastructure, or bro
 
 ---
 
-## Milestone 1 — ChangeSet/revision proof: correct and bound it
+## Milestone 1 — ChangeSet/revision proof: corrected and bounded
 
-The existing `packages/v2-core/src/history.ts` is an in-memory proof, not yet a persistence contract.
+The existing `packages/v2-core/src/history.ts` is a verified in-memory proof, not a persistence contract. Runtime TypeBox operations permit set/unset of declared scalar state keys and replacement of occupancy for known fixture entities/nodes. Topology and entity membership are fixed. Restore handles absence, occupancy and equivalent projections; runtime attribution is separate from command content. Global base-revision conflicts remain intentionally conservative.
 
 Keep:
 
@@ -72,9 +74,9 @@ The current gravity/Harlan toggles are exploratory proof controls. They must not
 
 ---
 
-## Repository checkpoint — integrate and execute R1/R2
+## Repository checkpoint — R1/R2 complete (2026-09-24)
 
-After the foundation correction and M1 proof are mechanically sound, reconcile the architecture work with the active repository and execute the early application-boundary cleanup described in `V2_REPOSITORY_STRUCTURE.md`:
+Completed against the current integrated architecture baseline; the stale relocation branch was already an ancestor. Implemented the application-boundary cleanup described in `V2_REPOSITORY_STRUCTURE.md`:
 
 - R1: move the legacy application under `apps/light-delay`;
 - R2: move app-local i18n/browser/build configuration;
@@ -426,9 +428,9 @@ Project remains the primary authoritative sharding/data-locality unit.
 
 The active queue is:
 
-1. close the September 23 foundation-correction findings;
-2. correct/bound the M1 revision proof;
-3. reconcile active branches and execute R1/R2 application-boundary cleanup;
+1. completed: repository foundation-correction findings (host helper update remains an operational prerequisite);
+2. completed: corrected/bounded M1 proof;
+3. completed: branch reconciliation and R1/R2 application-boundary cleanup;
 4. M2 application boundary + Draft/Proposal + screenplay authoring proof + two-version isolation;
 5. M2.5 minimal PostgreSQL durability;
 6. M3 explicit story-time state;

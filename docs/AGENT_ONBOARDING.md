@@ -55,7 +55,7 @@ Authority flows **down**. Compatible lower-only fixes (typo, timing slack, non-s
 | Causal rebuild / meaning | [`docs/production/CAUSAL_AND_MEANING_PIPELINE.md`](production/CAUSAL_AND_MEANING_PIPELINE.md), `npm run report:causal-structure`, `npm run report:meaning-audit` |
 | Visual stretches (multi-shot stills) | [`docs/production/VISUAL_STRETCH_PIPELINE.md`](production/VISUAL_STRETCH_PIPELINE.md), `npm run compile:visual-stretch`, `npm run report:visual-stretches` |
 | MCP / Seedance smoke | [`docs/technical/HIGGSFIELD_MCP.md`](technical/HIGGSFIELD_MCP.md) §8b — package-prep must report **cost + input assets** before waiting for go |
-| App / Svelte | [`README.md`](../README.md), `src/lib/data/`, [`docs/ADR-0001-MULTI-SCRIPT-CONTINUITIES.md`](ADR-0001-MULTI-SCRIPT-CONTINUITIES.md) |
+| App / Svelte | [`README.md`](../README.md), `apps/light-delay/src/lib/data/`, [`docs/ADR-0001-MULTI-SCRIPT-CONTINUITIES.md`](ADR-0001-MULTI-SCRIPT-CONTINUITIES.md) |
 | Media tooling | [`docs/production/RESOLVE_OTIO_EXPORT.md`](production/RESOLVE_OTIO_EXPORT.md), TTS scripts in `package.json` — not generation authority |
 
 ## Do not treat as current authority

@@ -155,7 +155,7 @@ GitHub commit SHA
 
 This makes staging reproducible and rollbackable.
 
-The uploaded release contains `apps/studio/build`, the Studio and shared-core manifests, the root lockfile and `release.json`. The VM runs `npm ci --omit=dev --ignore-scripts` inside the extracted release so the runtime dependencies are installed from the exact lockfile.
+The uploaded release contains `apps/studio/build`, the Studio and shared-core manifests, the root lockfile and `release.json`. The package includes the compiled core and all workspace manifests. The VM runs `npm ci --omit=dev --ignore-scripts` inside the extracted release so the runtime dependencies are installed from the exact lockfile.
 
 ## Linode host layout
 
@@ -197,7 +197,7 @@ The intended permission model does not touch the existing `node` user or PM2 ins
 An administrator must update BOTH helpers from a reviewed commit. This session has not installed or audited anything on Linode. Pause staging deployments during the host update. Python 3, util-linux (`flock`) and systemd are prerequisites. Preserve unrelated PM2/nginx applications. Install as root, then grant the narrow sudo rule:
 
 ```sh
-id -u studio-deploy >/dev/null 2>&1 || useradd --system --home-dir /srv/studio --shell /usr/sbin/nologin studio-deploy
+id -u studio-deploy >/dev/null 2>&1 || useradd --system --home-dir /srv/studio --shell /bin/bash studio-deploy
 install -d -o root -g root -m 0755 /usr/local/libexec
 install -o root -g root -m 0644 tools/deploy/stage-finalize.py /usr/local/libexec/studio-stage-finalize.py
 install -o root -g root -m 0755 tools/deploy/stage-activate.sh /usr/local/sbin/studio-stage-activate

@@ -1,6 +1,8 @@
 # Repository Structure Target
 
-Status: **accepted target design; execute R1/R2 after the September 23 foundation-correction checkpoint; defer broader project/media moves**.
+Status: **R1/R2 implemented and verified on 2026-09-24; R3–R7 remain deferred target design**.
+
+Current application source, i18n and browser/build configuration live in `apps/light-delay`. `apps/light-delay/project-paths.mjs` is the explicit transitional adapter for root data/scripts/static; aliases replace scattered relative imports. `packages/v2-core` owns the relocated runtime-contract proofs and its independent TypeScript/Vitest configuration. Root commands dispatch to workspaces; bare build/check still mean legacy for compatibility. Root `data/`, `scripts/`, `blender/`, `higgsfield-uploads/` and `static/assets/` have not moved.
 
 This document defines the desired repository layout after the current branch has a verified build/test baseline. It is intentionally more ambitious than the first safe move of the legacy SvelteKit application: the repository root should become a **monorepo control surface**, not an implicit application directory or a storage area for one film project.
 
@@ -295,12 +297,12 @@ For compatibility, bare `npm run build` / `check` may temporarily delegate to th
 
 ## CI/deployment implications
 
-The existing GitHub Pages workflow currently assumes:
+Before R1/R2, GitHub Pages assumed:
 - legacy app at root;
 - root build command builds that app;
 - output at root `build/`.
 
-After the app move it should explicitly build `apps/light-delay` and upload that workspace's output.
+It now builds `apps/light-delay` explicitly and uploads `apps/light-delay/build`. Independent project-data CI retains all previous data validations and the full live-data test suite. The Pages application gate uses fixture compatibility tests; Studio failure cannot block a legacy build.
 
 Studio should have a distinct CI/build job even before it has a production deployment.
 
@@ -324,7 +326,7 @@ Project production validations should not be accidentally coupled to whether eit
 
 ## Cleanup stages after the foundation-correction baseline
 
-### Stage R1 — Move legacy application source
+### Stage R1 — Move legacy application source (complete)
 
 Move:
 - `src/` -> `apps/light-delay/src/`;
@@ -337,7 +339,7 @@ Keep canonical `data/`, `static/`, and project production scripts at root for th
 
 **Gate:** legacy application check, unit tests, build and representative Pages build remain equivalent using the agreed compatibility fixture/baseline. Known project-data recovery failures are reported separately. During festival judging the application gate is mandatory, not advisory.
 
-### Stage R2 — Move app-local i18n and browser configuration
+### Stage R2 — Move app-local i18n and browser configuration (complete)
 
 Move:
 - `messages/`;

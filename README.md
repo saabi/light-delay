@@ -1,5 +1,13 @@
 # Light Delay / Luz Tardía
 
+## Current workspace commands (English source, 2026-09-24)
+
+Studio lives in `apps/studio`; the protected legacy application lives in `apps/light-delay`. Shared code and runtime-contract proofs live in `packages/v2-core`. Root project data, scripts and canonical media remain in place. Read [the architecture index](docs/V2_ARCHITECTURE_INDEX.md) for the foundation checkpoint and known verification limits.
+
+Use `npm ci`, then `dev:studio` / `check:studio` / `build:studio` or `dev:legacy` / `check:legacy` / `build:legacy`. `test:v2-core` and `test:legacy:compat` are independent correctness gates. `test:legacy` includes live project/media assertions; `validate:project:light-delay` reports project-data integrity separately. Bare dev/check/build/preview remain legacy aliases. Dependency installation does not build Studio or the core, so it cannot block a legacy rebuild on a Studio compile failure.
+
+Pages publishes `apps/light-delay/build/` from the legacy compatibility job. Studio and project-data checks run separately. Staging still requires the documented protocol-2 host update; no deployment was performed for this checkpoint.
+
 Proyecto de ciencia ficción de primer contacto. La escaleta maestra bilingüe WIP es la fuente narrativa vigente; los guiones, cuts, animatics y recursos de la continuidad anterior permanecen archivados para rescate y procedencia hasta que puedan derivarse versiones nuevas del master terminado.
 
 ## Estado actual
@@ -15,7 +23,7 @@ Proyecto de ciencia ficción de primer contacto. La escaleta maestra bilingüe W
 - El archivo conserva un animatic anterior de 128 tomas y los montajes Festival/tráiler deprecados como material de rescate. La producción visual del Festival-master es WIP autorizado; no regenerar imágenes sin instrucción explícita.
 - Biblia visual: 13 hojas de personajes, 7 hojas de localización, 2 naves y 4 objetos clave. El catálogo suma dos localizaciones del reactor requeridas por el master que todavía no tienen hoja visual y no reutilizan la sala obsoleta del núcleo diplomático.
 - Sitio estático de referencia: `legacy-site/` (HTML/CSS/JavaScript).
-- Aplicación SvelteKit 2 / Svelte 5 en la raíz con rutas de documentos, guion, animatic, arte, entidades y player (Fases 2–6). Medios en `static/assets/`.
+- Aplicación SvelteKit 2 / Svelte 5 en `apps/light-delay` con rutas de documentos, guion, animatic, arte, entidades y player (Fases 2–6). Medios en `static/assets/`.
 
 ## Estructura
 
@@ -25,7 +33,9 @@ Proyecto de ciencia ficción de primer contacto. La escaleta maestra bilingüe W
 |-- CLAUDE.md                 # Thin pointer → AGENTS.md + AGENT_ONBOARDING
 |-- README.md
 |-- CHANGELOG.md
-|-- src/                      # Aplicación SvelteKit
+|-- apps/light-delay/         # Aplicación legacy SvelteKit
+|-- apps/studio/              # Studio
+|-- packages/v2-core/         # Shared domain and contracts
 |-- static/                   # Assets públicos usados por la aplicación
 |-- docs/                     # Canon, producción, estado y procedencia
 |-- docs/AGENT_ONBOARDING.md  # Day-one agent index (layers, working set)
@@ -48,7 +58,7 @@ Otras órdenes útiles: `npm run check`, `npm run test`, `npm run build`, `npm r
 
 ## Sitio público en GitHub Pages
 
-La aplicación se publica como sitio estático de proyecto en GitHub Pages. El workflow `.github/workflows/pages.yml` valida los JSON, ejecuta `svelte-check` y las pruebas unitarias, compila con `@sveltejs/adapter-static` y publica `build/` tras cada push a `master`.
+La aplicación se publica como sitio estático de proyecto en GitHub Pages. El workflow `.github/workflows/pages.yml` ejecuta `svelte-check` y las pruebas de compatibilidad, compila con `@sveltejs/adapter-static` y publica `apps/light-delay/build/` tras cada push a `master`.
 
 Para el repositorio `saabi/light-delay`, el despliegue estándar usa la base `/light-delay` y está disponible en:
 

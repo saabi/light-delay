@@ -16,7 +16,7 @@ Read this file at the start of every session. For a short day-one map, also open
 - **`canonicalScriptId` / `script:light-delay-master-narrative`:** empty route stub. It does **not** mean there is no active screenplay.
 - **Ignore as current product:** deprecated `main-short`, `festival`, `trailer`, and `long`. Never confuse `light-delay-festival` with `light-delay-festival-master`.
 - **Incomplete master** blocks *new unauthorized* cuts. It does **not** freeze work on derivatives already authorized in `data/editorial-lifecycle.json`.
-- **English authorship** for story copy and docs; edit `en` first; `es` may stay `needs_revision`. UI chrome = Paraglide (`messages/*.json`), not story overlays.
+- **English authorship** for story copy and docs; edit `en` first; `es` may stay `needs_revision`. UI chrome = Paraglide (`apps/light-delay/messages/*.json`), not story overlays.
 - **Causal facts SoT:** master outline `facts` / `knowledgeEvents` / `actionRequirements` (`master:fact-*`). Cut ledgers are not live authorship. Pipeline: [`docs/production/CAUSAL_AND_MEANING_PIPELINE.md`](docs/production/CAUSAL_AND_MEANING_PIPELINE.md).
 
 Before changing narrative or structure, also read `README.md`, the master outline, `data/editorial-lifecycle.json`, `docs/ADR-0002-MASTER-NARRATIVE-AUTHORITY.md`, and `docs/PROJECT_STATUS.md`. `docs/CANON_DECISIONS.md` is previous continuity only. For cut script/animatic work, read `docs/GUIA_ESCALETA.md` (contract: `docs/ESCALETA.md`).
@@ -66,7 +66,7 @@ The current **narrative** source of truth is `data/outlines/light-delay-master-n
 - If **there is no English copy**, the existing document keeps its role and provenance until an explicit English source is created; do not translate or replace it mechanically.
 - After any material English change, update translations in a later pass or mark their review status visibly. An outdated translation does not block English authorship.
 - On conflict between equivalent current variants, English prevails. Narrative authority and lifecycle status prevail over language: an obsolete or deprecated English document does not replace the master.
-- Story copy in JSON lives **in the same file** as per-language maps or, for dialogue/text, as `content.variants.<lang>`. Edit `en` first; `es` may be marked `needs_revision`. UI chrome stays in Paraglide (`messages/*.json`). Do not reintroduce overlays.
+- Story copy in JSON lives **in the same file** as per-language maps or, for dialogue/text, as `content.variants.<lang>`. Edit `en` first; `es` may be marked `needs_revision`. UI chrome stays in Paraglide (`apps/light-delay/messages/*.json`). Do not reintroduce overlays.
 - Naming when pairs exist: `name.md` or `name.en.md` for English; `name.es.md` for Spanish. Historical unpaired files are not renamed only to force the convention.
 - `AGENTS.md` is the only canonical place for agent instructions (any model or platform). Other tool guides must **reference** this file, not duplicate rules.
 
@@ -98,10 +98,11 @@ The current **narrative** source of truth is `data/outlines/light-delay-master-n
 
 ## Planned architecture
 
-- SvelteKit + TypeScript at the repository root.
-- `src/lib/components/`: documentary and animatic components.
-- `src/lib/data/`: JSON load and validation.
-- `src/lib/types/`: TypeScript contracts derived or synced with schemas.
+- Workspace orchestration at root; deployable SvelteKit apps in `apps/studio` and `apps/light-delay`.
+- Shared Studio domain/runtime contracts in `packages/v2-core`, independent of Svelte.
+- `apps/light-delay/src/lib/components/`: documentary and animatic components.
+- `apps/light-delay/src/lib/data/`: JSON load and validation.
+- `apps/light-delay/src/lib/types/`: TypeScript contracts derived or synced with schemas.
 - `data/`: canonical JSON and schemas readable by other tools.
 - `static/assets/`: public media (migrated from `legacy-site/assets/` where applicable).
 

@@ -41,12 +41,12 @@ Studio is a **separate SvelteKit app in the same repository**, not a permanent `
 
 ```text
 apps/studio          new product UI
-legacy root app      current Light Delay compatibility/reference UI
+apps/light-delay     protected Light Delay compatibility/reference UI
 packages/v2-core     current shared application/domain proof
-src/lib/v2           earlier contract/context proof code during migration
+packages/v2-core/src/contracts  shared TypeBox and Context contract proofs
 ```
 
-The existing `/v2` route is a disposable design prototype.
+The disposable legacy `/v2` prototype has been removed; it previously broke prerendering.
 
 Svelte/UI dependencies must not leak into shared domain/application logic.
 
@@ -56,7 +56,7 @@ Do not prematurely create a package for every bounded context. Extract when boun
 
 ## Current implementation
 
-Implemented on branch `architecture/v2-domain-model`:
+Implemented on `architecture/v2-domain-model`, with the foundation corrections on `implementation/foundation-r1-r2`:
 
 - architecture documentation and acceptance catalogue;
 - TypeBox contract proof;
@@ -73,7 +73,11 @@ Implemented on branch `architecture/v2-domain-model`:
 - Studio Context inspector showing Sorell → Engineering reachability;
 - test cases for 1g safe route, microgravity direct crossing, and Harlan blocker;
 - semantic ChangeSet/revision proof with immutable projections, preconditions, conflicts and restore-as-new-history;
-- Studio prototype controls routed through the in-memory revision engine.
+- exploratory Studio controls are transient and do not append authoring history; the editor explicitly says it is not saved;
+- faithful absence/removal restore, runtime TypeBox command validation, fixture reference integrity and runtime-owned principal attribution;
+- independent built/importable core package and relocated legacy application/i18n/browser configuration (R1/R2);
+- separate Studio, legacy compatibility and project-data CI jobs;
+- protocol-2 staging finalization and activation helpers, with host installation still pending.
 
 ## Important transitional debt
 
@@ -94,40 +98,48 @@ legacy evidence + Git history
 
 Until then, bounded fixtures may remain test fixtures. The Central Access → Engineering edge is explicitly derived from the existing location `connects[]` relationship and does not establish authority for the rest of legacy HEAD.
 
-The M1 history proof also exposed a semantic boundary that must be corrected before persistence: project revision history, fictional story-time state, and durable provisional work are distinct. See ADR-0004.
+The corrected M1 proof preserves the semantic boundary required before persistence: project revision history, fictional story-time state, and durable provisional work are distinct. See ADR-0004.
 
-## Verification status
+## Verification status — foundation checkpoint (2026-09-24)
 
-The workspace and Studio Node deployment path have been build-verified in a checked-out working tree. Studio staging has now been exercised on the Linode host through the protected staging workflow; the festival Pages deployment remains independent.
+Repository corrections, bounded M1, and R1/R2 are implemented on `implementation/foundation-r1-r2`, based on `architecture/v2-domain-model` at `5a5c22f`. The stale relocation branch was already an ancestor and had no unique relocation work. Master remains separate (two production commits since the common ancestor); no production branch was merged or rewritten.
 
-Before considering a code/path/config change mechanically verified, run the applicable Studio/shared checks and an explicit legacy application check/build gate. Report Light Delay project-data validation separately because known data loss can make repository-wide validation fail independently of application compatibility.
+Verified locally:
 
-Representative commands remain:
+- clean lockfile install;
+- core type-check/build and direct Node package import;
+- 45 shared/core tests, including the relocated runtime-contract tests;
+- Studio check and production build;
+- legacy check, normal production build, and Pages build with `BASE_PATH=/light-delay`;
+- 47 legacy compatibility tests;
+- four representative browser tests: English/Spanish landing, Movie controls, and return-to-editor position (wait for static-page hydration);
+- 10 Linux deployment filesystem tests, shell syntax checks, and isolated packaged-release install/start/health smoke.
+
+The full legacy suite has ten failures both before and after relocation in sparse checkouts: nine depend on omitted media; one asserts 94 Festival-master shots against 90 in the committed dataset. The September 16 changelog records the 94 → 90 joins. These are reported separately, not silently suppressed or repaired. Current `validate:data`, `validate:schemas` (75 schema files), and generated schema-type checks pass. The local documentation-link check reports four references into the deliberately omitted `higgsfield-uploads/` tree; the older review's missing-inputDigest failure does not reproduce. Passing validators do not erase the reconstruction provenance policy.
+
+Local media is deliberately sparse, so this is application compatibility verification, not full media completeness certification. CI Pages retains LFS checkout. No deployment or Linode helper installation was performed. Protocol-2 host setup remains an explicit deployment prerequisite in `V2_DEPLOYMENT_AND_ENVIRONMENTS.md`.
+
+Commands:
 
 ```text
-npm install
+npm ci
+npm run check:v2-core
+npm run test:v2-core
 npm run check:studio
 npm run build:studio
-npm run test:v2-core
 npm run check:legacy
-# plus an explicit legacy production build once the compatibility gate is corrected
+npm run test:legacy:compat
+npm run build:legacy
+npm run validate:project:light-delay
+npm run test:legacy             # includes live project/media assertions
+npm run test:deploy             # Linux / Python 3
 ```
-
-Regenerate/commit `package-lock.json` after workspace installation if it changes.
 
 ## Immediate next milestone
 
-Follow `V2_IMPLEMENTATION_ROADMAP.md`. Before M2 begins, close the September 23 foundation correction:
+Start M2 in `V2_IMPLEMENTATION_ROADMAP.md`: application/store contracts and an in-memory document/Draft/Proposal slice, explicit acceptance, faithful scoped restore, and two-version isolation. M1 remains a bounded fixture proof, not a persistence schema or story-time engine. Its command schema is `packages/v2-core/src/history-contracts.ts`; principal, timestamp and ChangeSet identity come from trusted runtime configuration, never command content. A same-projection restore still appends an attributable checkpoint. Snapshots are immutable; JSON-roundtripped operations are tested as a reconstruction oracle. Durable storage, idempotent retry, finer concurrency, and version semantics belong to M2/M2.5.
 
-1. separate legacy application/build compatibility from known Light Delay project-data integrity failures;
-2. remove/fix disposable legacy `/v2` prototype behavior that breaks the protected app build;
-3. fix the staging activation privilege-boundary issue identified by both independent reviews;
-4. repair M1 restore/runtime-validation correctness for its supported proof domain;
-5. stop presenting unsaved Studio screenplay text as saved;
-6. implement ADR-0004's boundary in the M2 contracts rather than persisting the current exploratory state model;
-7. then execute the early R1/R2 application-boundary reorganization before broad M2 implementation.
-
-The first product proof after the application boundary is ordinary authoring: durable screenplay/document work -> semantic proposal -> explicit acceptance -> ChangeSet -> ProjectRevision -> restore, with two versions/cuts proving isolation. Story-time state is then made explicit before Context Engine persistence.
+Do not begin R3/R4, bulk Light Delay import, story-time projection, agents or media infrastructure merely because the application boundary is now clean.
 
 ## Next major slice
 

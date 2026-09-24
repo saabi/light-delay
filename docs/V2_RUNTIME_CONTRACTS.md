@@ -1,6 +1,10 @@
 # V2 runtime contract architecture
 
-Status: **proposed implementation direction**.
+Status: **TypeBox direction implemented for bounded M1; broader contracts remain proofs**.
+
+Current package authority is `packages/v2-core`. `src/history-contracts.ts` defines M1 command/operation/precondition schemas and inferred static types. The earlier legacy `src/lib/v2` schema and Context proofs moved to `packages/v2-core/src/contracts`; no competing legacy schema package remains. The `contracts` and `context-contracts` subpath exports expose those proofs. The small navigation Context result remains a derived fixture view model, not the general Context persistence contract.
+
+TypeBox `Value.Check` consumes trusted in-process factories. JSON-transported schemas require a JSON Schema validator (for example Ajv); TypeBox runtime symbol metadata is not part of serialized JSON. No generic validator framework or new ontology package was introduced.
 
 ## Decision
 
