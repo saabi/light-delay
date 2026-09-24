@@ -243,3 +243,70 @@ describe('bounded runtime acceptance', () => {
 		}
 	});
 });
+
+it('appends an attributable restore even when the selected projection is equivalent', () => {
+	const history = createHistory();
+	expect(history.restore(1, { baseRevision: 1 }).ok).toBe(true);
+	expect(history.history).toHaveLength(2);
+	expect(history.changeSetsInOrder[0]).toMatchObject({
+		schemaVersion: 1,
+		restoresRevision: 1,
+		principal
+	});
+	expect(history.commit({ baseRevision: 2, intent: 'Empty command', operations: [] }).ok).toBe(
+		false
+	);
+	expect(history.restore(1, { baseRevision: 1 })).toMatchObject({
+		ok: false,
+		error: { kind: 'conflict' }
+	});
+});
+
+it('rejects cyclic and accessor-bearing commands without invoking user code', () => {
+	const history = createHistory();
+	const cyclic: Record<string, unknown> = {};
+	cyclic.self = cyclic;
+	expect(history.commit(cyclic)).toMatchObject({ ok: false, error: { kind: 'validation' } });
+	const accessor = {
+		get baseRevision() {
+			throw new Error('must not execute');
+		}
+	};
+	expect(history.commit(accessor)).toMatchObject({ ok: false, error: { kind: 'validation' } });
+	expect(history.history).toHaveLength(1);
+});
+
+it('compares occupancy preconditions as semantic sets independent of JSON property order', () => {
+	const history = createHistory();
+	const a = { entityId: ids.harlan, nodeId: ids.stations, blocksTraversal: true, reason: 'A' };
+	const b = { entityId: ids.harlan, nodeId: ids.central, blocksTraversal: false, reason: 'B' };
+	expect(
+		history.commit({
+			baseRevision: 1,
+			intent: 'Set occupancy',
+			operations: [{ type: 'SetOccupancy', entityId: ids.harlan, occupancy: [a, b] }]
+		}).ok
+	).toBe(true);
+	expect(
+		history.commit({
+			baseRevision: 2,
+			intent: 'Clear',
+			preconditions: [
+				{
+					type: 'OccupancyEquals',
+					entityId: ids.harlan,
+					expected: [
+						b,
+						{
+							reason: a.reason,
+							blocksTraversal: a.blocksTraversal,
+							nodeId: a.nodeId,
+							entityId: a.entityId
+						}
+					]
+				}
+			],
+			operations: [{ type: 'SetOccupancy', entityId: ids.harlan, occupancy: [] }]
+		}).ok
+	).toBe(true);
+});

@@ -6,7 +6,12 @@ const object = <T extends Parameters<typeof Type.Object>[0]>(properties: T) =>
 	Type.Object(properties, { additionalProperties: false });
 export const WorldValueSchema = Type.Union([Type.String(), Type.Number(), Type.Boolean()]);
 export const PrincipalSchema = object({
-	kind: Type.Union(['human', 'importer', 'agent', 'system'].map((value) => Type.Literal(value))),
+	kind: Type.Union([
+		Type.Literal('human'),
+		Type.Literal('importer'),
+		Type.Literal('agent'),
+		Type.Literal('system')
+	]),
 	id: text
 });
 export const OccupancySchema = object({

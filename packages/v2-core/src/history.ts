@@ -1,4 +1,4 @@
-import type { OccupancyBlocker, WorldSnapshot, WorldValue } from './world.js';
+import type { OccupancyBlocker, WorldSnapshot } from './world.js';
 
 import {
 	CommitInputSchema,
@@ -11,7 +11,6 @@ import type {
 	SemanticOperation,
 	Precondition,
 	CommitInput,
-	RestoreInput,
 	PrincipalRef
 } from './history-contracts.js';
 export type {
@@ -21,9 +20,11 @@ export type {
 	RestoreInput,
 	PrincipalRef
 } from './history-contracts.js';
+
 export type RevisionNumber = number;
 
 export interface ChangeSet {
+	schemaVersion: 1;
 	id: string;
 	projectId: string;
 	baseRevision: RevisionNumber;
@@ -130,14 +131,25 @@ function deepFreeze<T>(value: T): T {
 }
 
 function equivalent(left: unknown, right: unknown): boolean {
-	return JSON.stringify(left) === JSON.stringify(right);
+	const canonical = (value: unknown): unknown => {
+		if (Array.isArray(value)) return value.map(canonical);
+		if (value && typeof value === 'object')
+			return Object.fromEntries(
+				Object.entries(value)
+					.sort(([a], [b]) => a.localeCompare(b))
+					.map(([key, child]) => [key, canonical(child)])
+			);
+		return value;
+	};
+	return JSON.stringify(canonical(left)) === JSON.stringify(canonical(right));
+}
+
+function sortedOccupancy(items: readonly OccupancyBlocker[]): OccupancyBlocker[] {
+	return items.map(cloneOccupancy).sort((a, b) => a.nodeId.localeCompare(b.nodeId));
 }
 
 function occupancyForEntity(snapshot: WorldSnapshot, entityId: string): OccupancyBlocker[] {
-	return snapshot.occupancy
-		.filter((blocker) => blocker.entityId === entityId)
-		.map(cloneOccupancy)
-		.sort((a, b) => `${a.nodeId}:${a.reason}`.localeCompare(`${b.nodeId}:${b.reason}`));
+	return sortedOccupancy(snapshot.occupancy.filter((blocker) => blocker.entityId === entityId));
 }
 
 function applyOperation(snapshot: WorldSnapshot, operation: SemanticOperation): void {
@@ -300,6 +312,10 @@ export class InMemoryRevisionHistory {
 		input.operations.forEach(checkReference);
 		(input.preconditions ?? []).forEach(checkReference);
 		if (messages.length) return this.invalid(...messages);
+		return this.acceptValidated(input);
+	}
+
+	private acceptValidated(input: CommitInput): CommitResult {
 		const changeSetId = this.idFactory();
 		if (typeof changeSetId !== 'string' || !changeSetId.trim())
 			return this.invalid('Invalid runtime changeSetId');
@@ -327,7 +343,12 @@ export class InMemoryRevisionHistory {
 					: precondition.type === 'WorldStateEquals'
 						? this.current.state.state[precondition.key]
 						: occupancyForEntity(this.current.state, precondition.entityId);
-			const expected = precondition.type === 'WorldStateAbsent' ? false : precondition.expected;
+			const expected =
+				precondition.type === 'WorldStateAbsent'
+					? false
+					: precondition.type === 'OccupancyEquals'
+						? sortedOccupancy(precondition.expected)
+						: precondition.expected;
 			if (!equivalent(actual, expected))
 				return {
 					ok: false,
@@ -340,6 +361,7 @@ export class InMemoryRevisionHistory {
 		projected.revision = resultingRevision;
 		input.operations.forEach((operation) => applyOperation(projected, operation));
 		const changeSet = deepFreeze({
+			schemaVersion: 1 as const,
 			id: changeSetId,
 			projectId: this.projectId,
 			baseRevision: input.baseRevision,
@@ -382,20 +404,14 @@ export class InMemoryRevisionHistory {
 			};
 		const operations = diffSnapshots(this.current.state, target.state);
 		if (!Array.isArray(operations)) return { ok: false, error: operations };
-		if (!operations.length)
-			return {
-				ok: false,
-				error: {
-					kind: 'validation',
-					code: 'INVALID_CHANGE_SET',
-					messages: ['restore target is already the current projection']
-				}
-			};
-		const result = this.commit({
+		const command = {
 			...input,
 			intent: input.intent ?? `Restore revision ${targetRevision}`,
 			operations
-		});
+		};
+		// Restoring an equivalent projection is still an attributable authoring action.
+		// Empty operations are allowed only here, never through public commit input.
+		const result = operations.length ? this.commit(command) : this.acceptValidated(command);
 		if (result.ok) {
 			const restored = deepFreeze({ ...result.changeSet, restoresRevision: targetRevision });
 			this.changeSets.set(restored.id, restored);
