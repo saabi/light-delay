@@ -1,9 +1,14 @@
-name: Deploy SvelteKit to GitHub Pages
+name: Validate and promote Light Delay Pages
 
 on:
   push:
   pull_request:
   workflow_dispatch:
+    inputs:
+      revision:
+        description: Optional 40-character commit SHA reachable from master (defaults to the selected master workflow revision)
+        required: false
+        type: string
 
 permissions:
   contents: read
@@ -15,11 +20,47 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      PAGES_TARGET_SHA: ${{ github.event_name == 'workflow_dispatch' && inputs.revision != '' && inputs.revision || github.sha }}
+    outputs:
+      revision: ${{ steps.target.outputs.sha }}
+      promotion_authorized: ${{ steps.target.outputs.promotion_authorized }}
     steps:
-      - name: Checkout
+      - name: Checkout exact revision
         uses: actions/checkout@v6
         with:
+          ref: ${{ env.PAGES_TARGET_SHA }}
+          fetch-depth: 0
           lfs: true
+
+      - name: Validate target and determine promotion authorization
+        id: target
+        shell: bash
+        env:
+          HEAD_COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
+        run: |
+          set -euo pipefail
+          target="$PAGES_TARGET_SHA"
+          [[ "$target" =~ ^[0-9a-f]{40}$ ]]
+          git cat-file -e "$target^{commit}"
+          promotion=false
+          if [[ "$GITHUB_EVENT_NAME" == workflow_dispatch ]]; then
+            [[ "$GITHUB_REF" == refs/heads/master ]]
+            git fetch --no-tags origin master
+            git merge-base --is-ancestor "$target" origin/master
+            promotion=true
+          elif [[ "$GITHUB_EVENT_NAME" == push && "$GITHUB_REF" == refs/heads/master ]]; then
+            [[ "$target" == "$GITHUB_SHA" ]]
+            git fetch --no-tags origin master
+            git merge-base --is-ancestor "$target" origin/master
+            if [[ "$HEAD_COMMIT_MESSAGE" == *"[deploy:pages]"* ]]; then
+              promotion=true
+            fi
+          fi
+          printf 'sha=%s\n' "$target" >> "$GITHUB_OUTPUT"
+          printf 'promotion_authorized=%s\n' "$promotion" >> "$GITHUB_OUTPUT"
+          echo "Validated Light Delay revision: $target"
+          echo "Pages promotion authorized: $promotion"
 
       - name: Setup Node.js
         uses: actions/setup-node@v6
@@ -33,33 +74,34 @@ jobs:
       - name: Type-check SvelteKit
         run: npm run check:legacy
 
-      - name: Run unit tests
+      - name: Run complete legacy application unit suite
         run: npm run test:legacy:compat
 
       - name: Install browser for compatibility tests
         run: npx playwright install --with-deps chromium
 
-      # The full suite retains a stale Okoye voice-copy assertion in the project-data audit.
       - name: Verify application browser compatibility
-        run: npm run test:e2e --workspace @light-delay/legacy -- src/routes/page.svelte.e2e.ts --grep-invert "Okoye exposes"
+        env:
+          LIGHT_DELAY_COMPAT_GATE: '1'
+        run: npm run test:e2e --workspace @light-delay/legacy -- src/routes/page.svelte.e2e.ts
 
-      - name: Build static site
+      - name: Build normal production site
+        run: npm run build:legacy
+
+      - name: Build Pages site
         env:
           BASE_PATH: /${{ github.event.repository.name }}
         run: npm run build:legacy
 
-      - name: Configure GitHub Pages
-        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/master'
-        uses: actions/configure-pages@v5
-
-      - name: Upload Pages artifact
-        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/master'
+      - name: Upload the validated Pages artifact
+        if: steps.target.outputs.promotion_authorized == 'true'
         uses: actions/upload-pages-artifact@v4
         with:
           path: apps/light-delay/build/
+          retention-days: 7
 
   deploy:
-    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/master' && needs.build.outputs.promotion_authorized == 'true'
     needs: build
     runs-on: ubuntu-latest
     permissions:
@@ -69,6 +111,9 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Record the exact validated revision being promoted
+        run: echo "Promoting the Pages artifact built and validated from ${{ needs.build.outputs.revision }}"
+
+      - name: Deploy the validated Pages artifact
         id: deployment
         uses: actions/deploy-pages@v4
