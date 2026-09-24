@@ -51,7 +51,7 @@ export function resolveLocalized(content, requestedLanguage, projectFallback = '
 
 /**
  * Dialogue variants are co-located on disk; reports no longer inject from overlay.
- * @param {import('../../src/lib/types/script.ts').ScriptFile} source
+ * @param {import('../../apps/light-delay/src/lib/types/script.ts').ScriptFile} source
  * @param {string} _language
  */
 export function localizeScriptDialogue(source, _language) {
@@ -72,7 +72,7 @@ export function localizeScriptDialogue(source, _language) {
 }
 
 /**
- * @param {import('../../src/lib/types/script.ts').Cue} cue
+ * @param {import('../../apps/light-delay/src/lib/types/script.ts').Cue} cue
  * @param {string} language
  * @param {string} [projectFallback='es']
  * @returns {number}
@@ -90,15 +90,15 @@ export function estimateCueSpokenMs(cue, language, projectFallback = 'es') {
 }
 
 /**
- * @param {import('../../src/lib/types/script.ts').ScriptFile} script
- * @returns {Map<string, import('../../src/lib/types/script.ts').Cue>}
+ * @param {import('../../apps/light-delay/src/lib/types/script.ts').ScriptFile} script
+ * @returns {Map<string, import('../../apps/light-delay/src/lib/types/script.ts').Cue>}
  */
 function cueById(script) {
 	return new Map(script.cues.map((cue) => [cue.id, cue]));
 }
 
 /**
- * @param {import('../../src/lib/types/script.ts').ScriptFile} script
+ * @param {import('../../apps/light-delay/src/lib/types/script.ts').ScriptFile} script
  * @returns {Map<string, string>}
  */
 function beatSceneId(script) {
@@ -106,15 +106,15 @@ function beatSceneId(script) {
 }
 
 /**
- * @param {import('../../src/lib/types/script.ts').CuePlacement | undefined} placement
- * @param {import('../../src/lib/types/script.ts').DialogueCue} cue
+ * @param {import('../../apps/light-delay/src/lib/types/script.ts').CuePlacement | undefined} placement
+ * @param {import('../../apps/light-delay/src/lib/types/script.ts').DialogueCue} cue
  */
 function effectivePresentation(placement, cue) {
 	return placement?.presentationOverride ?? cue.presentation;
 }
 
 /**
- * @param {import('../../src/lib/types/script.ts').Shot} shot
+ * @param {import('../../apps/light-delay/src/lib/types/script.ts').Shot} shot
  * @param {Record<string, number> | undefined} [shotDurations]
  * @returns {number}
  */
@@ -124,7 +124,7 @@ export function montageShotMs(shot, shotDurations = undefined) {
 }
 
 /**
- * @param {import('../../src/lib/types/script.ts').ScriptFile} script
+ * @param {import('../../apps/light-delay/src/lib/types/script.ts').ScriptFile} script
  * @param {string} sceneId
  * @param {Record<string, number> | undefined} shotDurations
  */
@@ -135,7 +135,7 @@ export function montageSceneMs(script, sceneId, shotDurations) {
 }
 
 /**
- * @param {import('../../src/lib/types/script.ts').ScriptFile} script
+ * @param {import('../../apps/light-delay/src/lib/types/script.ts').ScriptFile} script
  * @param {Record<string, number> | undefined} shotDurations
  */
 export function montageScriptMs(script, shotDurations) {
@@ -143,8 +143,8 @@ export function montageScriptMs(script, shotDurations) {
 }
 
 /**
- * @param {import('../../src/lib/types/script.ts').ScriptFile} script
- * @param {import('../../src/lib/types/script.ts').Shot} shot
+ * @param {import('../../apps/light-delay/src/lib/types/script.ts').ScriptFile} script
+ * @param {import('../../apps/light-delay/src/lib/types/script.ts').Shot} shot
  * @param {string} language
  * @param {string} [projectFallback='es']
  */
@@ -160,7 +160,7 @@ export function estimateShotSpokenMs(script, shot, language, projectFallback = '
 }
 
 /**
- * @param {import('../../src/lib/types/script.ts').ScriptFile} script
+ * @param {import('../../apps/light-delay/src/lib/types/script.ts').ScriptFile} script
  * @param {string} sceneId
  * @param {string} language
  * @param {string} [projectFallback='es']
@@ -177,7 +177,7 @@ export function estimateSceneSpokenMs(script, sceneId, language, projectFallback
 }
 
 /**
- * @param {import('../../src/lib/types/script.ts').ScriptFile} script
+ * @param {import('../../apps/light-delay/src/lib/types/script.ts').ScriptFile} script
  * @param {string} language
  * @param {string} [projectFallback='es']
  */
@@ -191,8 +191,8 @@ export function estimateScriptSpokenMs(script, language, projectFallback = 'es')
 }
 
 /**
- * @param {import('../../src/lib/types/script.ts').ScriptFile} script
- * @param {import('../../src/lib/types/script.ts').Shot} shot
+ * @param {import('../../apps/light-delay/src/lib/types/script.ts').ScriptFile} script
+ * @param {import('../../apps/light-delay/src/lib/types/script.ts').Shot} shot
  * @param {string} language
  * @param {string} [projectFallback='es']
  */
@@ -251,7 +251,7 @@ export function formatClock(ms) {
 }
 
 /**
- * @param {import('../../src/lib/types/script.ts').ScriptFile} script
+ * @param {import('../../apps/light-delay/src/lib/types/script.ts').ScriptFile} script
  * @param {string} language
  * @param {{ shotDurations?: Record<string, number>; projectFallback?: string }} [options]
  */

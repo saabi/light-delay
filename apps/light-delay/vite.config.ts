@@ -1,0 +1,64 @@
+import { defineConfig } from 'vitest/config';
+import adapter from '@sveltejs/adapter-static';
+import { sveltekit } from '@sveltejs/kit/vite';
+import { paraglideVitePlugin } from '@inlang/paraglide-js';
+import { paraglideOptions, resolveBase } from './paraglide.config.mjs';
+
+import { legacyAliases, mediaRoot } from './project-paths.mjs';
+
+const base = resolveBase(process.env.BASE_PATH);
+
+export default defineConfig({
+	plugins: [
+		sveltekit({
+			alias: legacyAliases,
+            files: { assets: mediaRoot },
+            compilerOptions: {
+				// Force runes mode for the project, except for libraries. Can be removed in svelte 6.
+				runes: ({ filename }) =>
+					filename.split(/[/\\]/).includes('node_modules') ? undefined : true
+			},
+			adapter: adapter({
+				fallback: '404.html'
+			}),
+			paths: {
+				base,
+				relative: false
+			},
+			prerender: {
+				handleHttpError: ({ path, status, message }) => {
+					// Missing optional thumbs must not fail Pages builds; BASE_PATH is prefixed on CI.
+					const asset404 =
+						status === 404 &&
+						(path.startsWith('/assets/') ||
+							(base !== '' && path.startsWith(`${base}/assets/`)));
+					if (asset404) return;
+					throw new Error(message);
+				}
+			}
+		}),
+		paraglideVitePlugin(paraglideOptions(base))
+	],
+	server: {
+		proxy: {
+			'/v1/imitation': {
+				target: 'http://127.0.0.1:8765',
+				changeOrigin: false
+			}
+		}
+	},
+	test: {
+		expect: { requireAssertions: true },
+		projects: [
+			{
+				extends: './vite.config.ts',
+				test: {
+					name: 'server',
+					environment: 'node',
+					include: ['src/**/*.{test,spec}.{js,ts}'],
+					exclude: ['src/**/*.svelte.{test,spec}.{js,ts}']
+				}
+			}
+		]
+	}
+});

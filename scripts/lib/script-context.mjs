@@ -4,7 +4,7 @@
 // @ts-nocheck
 
 /**
- * @param {import('../../src/lib/types/script.ts').ScriptFile} script
+ * @param {import('../../apps/light-delay/src/lib/types/script.ts').ScriptFile} script
  */
 export function createScriptContext(script) {
 	const sceneById = new Map(script.scenes.map((s) => [s.id, s]));
@@ -14,10 +14,10 @@ export function createScriptContext(script) {
 	const beatById = new Map(script.beats.map((b) => [b.id, b]));
 	const beatSceneId = new Map(script.beats.map((b) => [b.id, b.sceneId]));
 
-	/** @param {import('../../src/lib/types/script.ts').Shot} shot */
+	/** @param {import('../../apps/light-delay/src/lib/types/script.ts').Shot} shot */
 	const shotScene = (shot) => sceneById.get(shot.sceneId);
 
-	/** @param {import('../../src/lib/types/script.ts').Shot} shot */
+	/** @param {import('../../apps/light-delay/src/lib/types/script.ts').Shot} shot */
 	const selectedTake = (shot) =>
 		shot.selectedTakeId ? takeById.get(shot.selectedTakeId) : undefined;
 

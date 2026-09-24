@@ -25,7 +25,7 @@ function text(value) {
 	return sourceLocalizedString(value) ?? (typeof value === 'string' ? value : '');
 }
 
-/** @param {import('../../src/lib/types/script.ts').Shot} shot */
+/** @param {import('../../apps/light-delay/src/lib/types/script.ts').Shot} shot */
 export function shotCompletenessFlags(shot) {
 	const flags = [];
 	const purpose = text(shot.purpose);
@@ -40,15 +40,15 @@ export function shotCompletenessFlags(shot) {
 	return flags;
 }
 
-/** @param {import('../../src/lib/types/script.ts').Take | undefined} take */
+/** @param {import('../../apps/light-delay/src/lib/types/script.ts').Take | undefined} take */
 export function takeNeedsRegeneration(take) {
 	if (!take?.imageStatus) return false;
 	return take.imageStatus.status !== 'current';
 }
 
 /**
- * @param {import('../../src/lib/types/script.ts').Shot} shot
- * @param {import('../../src/lib/types/script.ts').Take | undefined} take
+ * @param {import('../../apps/light-delay/src/lib/types/script.ts').Shot} shot
+ * @param {import('../../apps/light-delay/src/lib/types/script.ts').Take | undefined} take
  */
 export function shotReadinessChips(shot, take) {
 	const chips = [];
@@ -60,7 +60,7 @@ export function shotReadinessChips(shot, take) {
 	return chips;
 }
 
-/** @param {import('../../src/lib/types/script.ts').ScriptFile} script */
+/** @param {import('../../apps/light-delay/src/lib/types/script.ts').ScriptFile} script */
 export function countTakesNeedingRegeneration(script) {
 	return script.takes.filter((t) => takeNeedsRegeneration(t)).length;
 }

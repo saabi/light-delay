@@ -5,7 +5,7 @@ import { compileFromFile } from 'json-schema-to-typescript';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const SCHEMAS = join(ROOT, 'data', 'schemas');
-const OUTPUT = join(ROOT, 'src', 'lib', 'types', 'generated', 'production.ts');
+const OUTPUT = join(ROOT, 'apps', 'light-delay', 'src', 'lib', 'types', 'generated', 'production.ts');
 const checkOnly = process.argv.includes('--check');
 const inputs = [
 	['ProductionContextsFile', 'production-contexts.schema.json'],

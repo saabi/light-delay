@@ -12,7 +12,7 @@ export { REPORT_ENTRIES, REPORT_IDS, getReportEntry };
 
 /**
  * @param {string} reportId
- * @param {import('../../src/lib/types/script.ts').ScriptFile} script
+ * @param {import('../../apps/light-delay/src/lib/types/script.ts').ScriptFile} script
  * @param {string} language
  * @param {ReturnType<typeof createProjectContext>} [projectCtx]
  */
@@ -95,7 +95,7 @@ export function formatReportMarkdown(reportId, report) {
 
 /**
  * @param {string} reportId
- * @param {import('../../src/lib/types/script.ts').ScriptFile} script
+ * @param {import('../../apps/light-delay/src/lib/types/script.ts').ScriptFile} script
  * @param {string} language
  * @param {ReturnType<typeof createProjectContext>} [projectCtx]
  */
