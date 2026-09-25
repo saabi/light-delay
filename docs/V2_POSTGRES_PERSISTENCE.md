@@ -70,6 +70,10 @@ separate pool connections for concurrent calls, and drops the schema afterward. 
 PostgreSQL 16 service and runs migrations and the integration suite alongside core and Studio
 checks. It does not contact Linode or any staging database.
 
+The synthetic scale check adds 250 screenplay elements to two cuts, accepts a change in one cut,
+and checks that the revision metadata occupies less than one tenth of the initial project JSON.
+It also checks that the acceptance wrote exactly one scoped checkpoint.
+
 ## Later rollout
 
 This milestone does not run staging migrations or deploy Studio. Before a host rollout, review the

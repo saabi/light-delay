@@ -129,6 +129,7 @@ describe('PostgreSQL authoring persistence', () => {
 	it('preserves Draft owner, scope, identity and immutable semantic base on resave', async () => {
 		const app = application();
 		const saved = await draft(app);
+		await accept(app, (await propose(app, coda)).id);
 		const updated = await app.handle(
 			{
 				type: 'SaveDraft',
@@ -152,6 +153,7 @@ describe('PostgreSQL authoring persistence', () => {
 			baseDocumentVersion: saved.baseDocumentVersion
 		});
 		expect(reloaded?.elements[1].text).toBe('Más luz.');
+		expect((await app.getProjectHead(projectId))?.number).toBe(1);
 	});
 
 	it('does not allow a late Draft save to move its base', async () => {
@@ -351,10 +353,41 @@ describe('PostgreSQL authoring persistence', () => {
 	});
 
 	it('restores one scope after restart by appending history', async () => {
-		const before = await view(application());
+		const app = application();
+		const before = await view(app);
 		const sibling = await view(application(), trailer);
-		await accept(application(), (await propose(application())).id);
+		const addedId = `element:restore-${randomUUID()}`;
+		const edited = [
+			before.elements[1],
+			{ id: addedId, kind: 'action' as const, text: 'A new lantern appears.' },
+			before.elements[0],
+			before.elements[2]
+		];
+		const saved = await app.handle(
+			{
+				type: 'SaveDraft',
+				projectId,
+				scope: feature,
+				baseProjectRevision: before.projectRevision,
+				baseDocumentVersion: before.documentVersion,
+				elements: edited
+			},
+			author
+		);
+		expect(saved).toMatchObject({ ok: true, kind: 'draft-saved' });
+		if (!saved.ok || saved.kind !== 'draft-saved') return;
+		await accept(application(), (await proposal(application(), saved.draft.id)).id);
 		const changed = await view(application());
+		expect(changed.elements.map((element) => element.id)).toEqual(
+			edited.map((element) => element.id)
+		);
+		expect(
+			resolveElementState(
+				(await app.getProjectHead(projectId))!.projection,
+				feature,
+				authoringFixtureIds.dialogue
+			)
+		).toBe('removed');
 		const result = await application().handle(
 			{
 				type: 'RestoreScreenplay',
@@ -367,8 +400,22 @@ describe('PostgreSQL authoring persistence', () => {
 		);
 		expect(result).toMatchObject({ ok: true, kind: 'screenplay-restored' });
 		expect((await view(application())).elements).toEqual(before.elements);
+		expect(
+			resolveElementState(
+				(await application().getProjectHead(projectId))!.projection,
+				feature,
+				addedId
+			)
+		).toBe('unknown');
 		expect((await view(application(), trailer)).elements).toEqual(sibling.elements);
-		expect(await application().listHistory(projectId)).toHaveLength(2);
+		const history = await application().listHistory(projectId);
+		expect(history).toHaveLength(2);
+		expect(history[1].principal).toEqual(accepter.principal);
+		expect(history[1].provenance).toMatchObject({
+			kind: 'scoped-restore',
+			scope: feature,
+			targetRevision: 0
+		});
 	});
 
 	it('reconstructs historical revisions deterministically from scoped checkpoints', async () => {
