@@ -81,6 +81,8 @@ Required properties for provisional durable work:
 - explicit promotion/acceptance into an authoritative ChangeSet;
 - rejection/abandonment without rewriting project history.
 
+M2 clarifies two lifecycle invariants within this decision. Saving an existing Draft preserves its original semantic base; changing that base requires a future explicit rebase/merge action. A Proposal may transition exactly once from pending to accepted or rejected. Persistence adapters must expose conditional transitions, not unconditional state overwrite.
+
 ### 4. Derived/operational state remains separate
 
 Caches, ContextPackages, indexes, findings projections, worker progress, storage availability, and similar operational/derived records are not automatically project-authoritative mutations.
@@ -113,7 +115,7 @@ The invariant remains:
 
 This ADR does **not** require pure event sourcing.
 
-Semantic operations preserve intent. Versioned snapshots/checkpoints may be used for efficient durable reconstruction. Replay may be used as a verification mechanism. The implementation must not claim a restore succeeded unless the resulting authoritative projection is semantically equivalent to the selected historical state.
+Semantic operations preserve intent. Versioned snapshots/checkpoints may be used for efficient durable reconstruction. Replay may be used as a verification mechanism. M2 stores revision metadata plus affected document × version checkpoints rather than a full project copy per revision, while retaining a one-time initial projection and deterministic reconstruction. The implementation must not claim a restore succeeded unless the resulting authoritative projection is semantically equivalent to the selected historical state.
 
 The current Milestone 1 proof has a known restore gap for state keys that need to become absent. M1 is not complete until the operation/projection model can faithfully represent the supported restore domain and tests prove it.
 
@@ -141,4 +143,6 @@ For authoring surfaces:
 - The first useful Studio product proof moves toward screenplay/document authoring with durable save and explicit semantic promotion.
 - Story-time state must be made explicit before the Context Engine relies on persisted world state.
 - Agents and importers naturally produce proposals before accepted ChangeSets.
+- Accepted provenance distinguishes content authors/source/proposer from the trusted principal who accepts the ChangeSet.
+- Accepted-history representations and semantic-operation reducers are explicitly versioned so historical evidence is not reinterpreted by later command rules.
 - More complex branching, CRDTs, and collaborative draft semantics remain deferred.

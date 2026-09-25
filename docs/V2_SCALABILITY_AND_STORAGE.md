@@ -220,8 +220,14 @@ Cross-project/workspace search may use an authorized derived search/vector index
 ## ChangeSets and asynchronous derived work
 
 Authoritative mutation transaction writes:
-- ChangeSet/current projection updates;
-- transactional outbox record.
+- the complete ChangeSet and metadata-only ProjectRevision;
+- affected document × version checkpoints/current projection and document version;
+- the project head;
+- the transactional outbox record.
+
+Proposal acceptance must additionally lock/verify that the Proposal is still pending and that its scoped document-version precondition still holds, then atomically append the complete accepted record, update affected authority/head state, and transition the Proposal to accepted. Any failure rolls back the entire transaction. Proposal rejection is a conditional pending-to-rejected transition. The in-memory M2 adapter implements the same externally observable all-or-nothing contract; M2.5 must implement it with PostgreSQL transactions rather than split writes.
+
+Canonical persistence rules are explicit: opaque IDs use the supported ASCII alphabet and byte-reproducible ordering, authored Unicode text rejects NUL and malformed surrogate values without locale normalization, and stored timestamps are valid canonical UTC instants. Database collations must not be treated as semantic ordering authority.
 
 Workers consume outbox events for:
 - validation;

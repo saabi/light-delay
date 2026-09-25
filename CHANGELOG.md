@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-09-25 — M2 independent-review corrections
+
+- Made Proposal resolution a conditional one-way transition and made accepted mutation plus Proposal acceptance atomic in the application-store contract.
+- Preserved a Draft's original semantic base across saves, preventing implicit rebase over intervening accepted work.
+- Replaced per-revision whole-project copies with metadata-only revisions and affected-scope checkpoints while preserving deterministic reconstruction and scoped restore.
+- Added persistence-safe ID/text/timestamp validation, deterministic ASCII ID ordering, project-scoped element identity/kind enforcement, separate content-authorship and acceptance provenance, and accepted-history contract versioning.
+- Made Proposal review visually usable and content-first with explicit Before/After, insertion, removal and movement descriptions.
+- Added regression coverage for all independent-review findings without starting PostgreSQL, Story/Outline, M3, agents, media or Light Delay migration.
+
 ## 2026-09-24 — M2 Studio authoring vertical slice
 
 - Added async application/store contracts and an in-memory authoring unit of work separate from the M1 `WorldSnapshot` revision proof.

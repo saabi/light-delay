@@ -122,7 +122,7 @@ Implement ADR-0004:
 - story-time semantic state;
 - derived/operational state.
 
-A Draft is durable work based on a known project revision; promoting/accepting it creates an authoritative ChangeSet. Do not design a generic branching system yet.
+A Draft is durable work based on a known project revision and document-version scope; promoting/accepting it creates an authoritative ChangeSet. Saving an existing Draft preserves that semantic base. Moving the base will require a future explicit rebase operation rather than being an implicit side effect of save. Do not design a generic branching system yet.
 
 ### Primary product proof
 
@@ -164,9 +164,13 @@ M2 is implemented in `packages/v2-core/src/authoring*.ts` and the Studio Write s
 
 The screenplay projection is materialized per document × version. Stable element IDs may appear in both Feature and Trailer scopes; each scope records ordered element state as `present` or deliberately `removed`, while no state means the identity is unknown in that scope. This proves removal versus nonexistence without introducing cut inheritance or a continuity model.
 
-Drafts and Proposals are durable only for the lifetime of the in-memory store. Draft edits do not create ProjectRevisions. Proposal acceptance checks the target document version rather than requiring the Draft's project-global base revision to remain head, so unrelated accepted work may advance history without creating a false conflict. Same-scope changes fail safely.
+Drafts and Proposals are durable only for the lifetime of the in-memory store. Draft edits do not create ProjectRevisions. Proposal acceptance checks the target document version rather than requiring the Draft's project-global base revision to remain head, so unrelated accepted work may advance history without creating a false conflict. Same-scope changes fail safely. A Proposal has one one-way terminal transition from `pending` to either `accepted` or `rejected`; the store contract exposes conditional transition/commit operations so competing callers cannot both succeed.
 
-Accepted history stores complete ChangeSets and full revision projections. Historical rehydration validates and preserves accepted records through a distinct path; it does not assign new IDs, timestamps or principals and does not feed records through new-command acceptance. Restore uses one semantic scoped-restore operation and appends new history.
+Accepted history stores complete semantic ChangeSets, metadata-only ProjectRevisions, and checkpoints only for affected document × version scopes. One initial projection anchors the history bundle; reconstruction applies the versioned semantic records deterministically and verifies their scoped checkpoints. Historical rehydration reads an explicit accepted-history contract version, dispatches known operation schema versions, and preserves accepted IDs, timestamps and attribution through a distinct path. It does not assign authority metadata or feed records through new-command acceptance. Restore uses one semantic scoped-restore operation and appends new history.
+
+Screenplay element identity is project-scoped. The project element registry binds each ID permanently to its owning screenplay document and semantic kind; cuts may change text/order or deliberately remove the element, but may not reinterpret that identity as another kind or document. Independent projects retain independent registries.
+
+Accepted provenance separates content authors, the proposal actor/source and generator from the trusted accepting principal. Persistence-facing IDs use a documented ASCII-safe alphabet and byte-reproducible order; authored text retains international Unicode while rejecting NUL and malformed surrogate data; persisted timestamps are valid canonical UTC instants.
 
 ---
 
@@ -192,7 +196,7 @@ Keep authorization proportionate: enough to prevent project leakage and establis
 
 - equivalent application contract tests pass against in-memory and PostgreSQL adapters where appropriate;
 - draft survives process restart;
-- accepted ChangeSet + projection/head + outbox are atomic;
+- accepted ChangeSet + affected scoped checkpoints/current projection + head + Proposal transition + outbox are atomic;
 - retry/idempotency behavior cannot double-commit;
 - project data is scoped by `project_id`;
 - staging has an appropriate access boundary before it stores real writing or can spend provider money;

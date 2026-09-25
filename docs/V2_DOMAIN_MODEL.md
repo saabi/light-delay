@@ -240,7 +240,7 @@ A document can:
 
 The first runtime subset is intentionally smaller than the complete document model. A screenplay has stable ordered elements of kind `scene-heading`, `action`, `character`, or `dialogue`. Authored wording lives on present element state. Semantic operations insert an element, update authored text, remove an element from a cut, move an element, or restore a document/version scope.
 
-The M2 version representation is materialized rather than inherited: each document × version scope has its own deterministic order and element states. The same element ID may be present in two cuts with different text, deliberately `removed` in one cut, or unknown because no state exists there. This does not decide future continuity, lineage or derivation-pin semantics.
+The M2 version representation is materialized rather than inherited: each document × version scope has its own deterministic order and element states. The same element ID may be present in two cuts with different text, deliberately `removed` in one cut, or unknown because no state exists there. A project-scoped registry binds that stable screenplay-element identity to one owning document and one semantic kind for its entire history; another project has an independent registry. This does not decide future continuity, lineage or derivation-pin semantics.
 
 ## 8. Spatial graph
 
@@ -487,7 +487,7 @@ Command
   -> deterministic projection/current state
 ```
 
-`ChangeSet.operations` contains domain operations such as `SetWorldState` and `SetOccupancy`; it is not an arbitrary JSON Patch document. Every accepted ChangeSet records its project, base revision, resulting revision, principal, intent, timestamp, operation schema/version and relevant provenance. A stale base revision or failed precondition is a reviewable conflict and does not append history.
+`ChangeSet.operations` contains domain operations such as authored screenplay changes; it is not an arbitrary JSON Patch document. Every accepted ChangeSet records its project, base revision, resulting revision, trusted accepting principal, intent, valid canonical UTC timestamp, operation schema/version and relevant provenance. Provenance separately retains content authors, proposal actor/source and deterministic generator where applicable. A stale semantic precondition is a reviewable conflict and does not append history.
 
 ```ts
 interface ChangeSet {
@@ -507,13 +507,15 @@ interface ChangeSet {
 }
 ```
 
-Restoration/reversion appends a new ChangeSet whose resulting authoritative projection is semantically equivalent to the selected supported historical state. It never rewrites or deletes prior history. Semantic operations preserve intent; snapshots/checkpoints may accelerate or support durable reconstruction and replay may serve as a verification oracle. This architecture does not require pure event sourcing. Binary media lives in blob storage. Derived caches/reports are rebuildable.
+Restoration/reversion appends a new ChangeSet whose resulting authoritative projection is semantically equivalent to the selected supported historical state. It never rewrites or deletes prior history. Semantic operations preserve intent; snapshots/checkpoints may accelerate or support durable reconstruction and replay may serve as a verification oracle. In M2, ProjectRevision records contain ordering/attribution metadata while accepted records checkpoint only affected document × version scopes; the initial projection is stored once. This architecture does not require pure event sourcing. Binary media lives in blob storage. Derived caches/reports are rebuildable.
 
 Concurrent ChangeSets may be automatically rebased only when their semantic operations commute and relevant semantic/read-set preconditions still hold; otherwise the system produces a reviewable conflict. A project-wide revision remains an ordering fact but should not force unrelated future aggregates/documents to conflict by definition.
 
 The M2 authoring slice applies that rule with a document-version precondition scoped by document and narrative version. Project revision remains the total order and becomes the accepted ChangeSet's actual base at acceptance time. A proposal created from an older project revision can still be accepted when unrelated scopes changed and its document version did not; a same-scope change conflicts.
 
-New command acceptance and historical rehydration are distinct. Acceptance materializes untrusted input once, validates and executes only that private value, applies current preconditions, and assigns trusted identity, principal and time. Rehydration preserves complete accepted records and verifies their stored projection without reassigning authority or passing them through command acceptance.
+New command acceptance and historical rehydration are distinct. Acceptance materializes untrusted input once, validates and executes only that private value, applies current preconditions, and assigns trusted identity, principal and time. Rehydration first selects an explicit accepted-history contract reader and operation-schema reducer, then preserves complete accepted records and verifies their scoped checkpoints without reassigning authority or passing them through command acceptance. Unsupported versions fail clearly and leave a deliberate seam for future upcasters.
+
+Persistence-facing M2 IDs are ASCII opaque identifiers ordered by their byte-equivalent character sequence, never by locale. International authored text is preserved without normalization; NUL and malformed surrogate content are rejected because they cannot safely round-trip through the intended PostgreSQL boundary. These storage rules are narrower than screenplay language support.
 
 ## 16. Import and agents
 

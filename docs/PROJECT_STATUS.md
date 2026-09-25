@@ -1,5 +1,14 @@
 # Estado del proyecto
 
+## 2026-09-25 — M2 independent-review corrections (English source)
+
+- Closed the Proposal accept/reject race with conditional terminal transitions and one atomic accepted-mutation boundary; repeated or competing transitions now return an explicit conflict.
+- Draft save preserves its original semantic base, while same-scope stale acceptance still conflicts and unrelated accepted work remains commutative.
+- Accepted history now uses versioned records, metadata-only revisions and affected-scope checkpoints; source/content authorship remains distinct from trusted acceptance authority.
+- Persistence-facing contracts now reject unsafe IDs/text/timestamps, define deterministic ASCII ID ordering and enforce project-scoped screenplay-element document/kind identity through restore and rehydration.
+- Studio Proposal review now exposes meaningful filmmaker-facing Before/After and structural change descriptions with a visible primary Accept action.
+- No Light Delay narrative, production data, media, audited legacy exception or deployment policy changed. PostgreSQL and later milestones remain deferred.
+
 ## 2026-09-24 — M2 Studio authoring vertical slice (English source)
 
 - Implemented the first real Studio Write workflow: screenplay editing → process-lifetime Draft save → deterministic Proposal → explicit reject/accept → ChangeSet → ProjectRevision → authoritative projection.
