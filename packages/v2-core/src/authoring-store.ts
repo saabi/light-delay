@@ -54,8 +54,10 @@ export interface ProposalTransition {
 
 export interface DraftProposalStore {
 	getDraft(draftId: string): Promise<ScreenplayDraft | undefined>;
+	listDrafts(): Promise<readonly ScreenplayDraft[]>;
 	saveDraft(draft: ScreenplayDraft): Promise<DraftWriteResult>;
 	getProposal(proposalId: string): Promise<ScreenplayProposal | undefined>;
+	listProposals(): Promise<readonly ScreenplayProposal[]>;
 	createProposal(proposal: ScreenplayProposal): Promise<ProposalWriteResult>;
 	transitionProposal(transition: ProposalTransition): Promise<ProposalWriteResult>;
 }
@@ -530,7 +532,7 @@ function materializeMutation(input: unknown): AcceptedMutation | undefined {
 	return materializeAndValidate<AcceptedMutation>(AcceptedMutationSchema, input);
 }
 
-function validateRestoreReferences(
+export function validateRestoreReferences(
 	changeSet: AuthoringChangeSet,
 	projectionAt: (revision: number) => ProjectProjection | undefined
 ): string | undefined {
@@ -547,7 +549,7 @@ function validateRestoreReferences(
 	return undefined;
 }
 
-function validateAcceptedMutation(
+export function validateAcceptedMutation(
 	mutation: AcceptedMutation,
 	current: AuthoringProjectState,
 	projected: ProjectProjection
@@ -736,6 +738,10 @@ export class InMemoryAuthoringProjectStore implements AuthoringUnitOfWork {
 		return draft ? deepFreeze(cloneJson(draft)) : undefined;
 	}
 
+	async listDrafts(): Promise<readonly ScreenplayDraft[]> {
+		return deepFreeze(cloneJson([...this.drafts.values()]));
+	}
+
 	async saveDraft(input: ScreenplayDraft): Promise<DraftWriteResult> {
 		const draft = materializeAndValidate<ScreenplayDraft>(ScreenplayDraftSchema, input);
 		if (!draft) return { ok: false, code: 'DRAFT_ID_CONFLICT', message: 'Draft is malformed' };
@@ -765,6 +771,10 @@ export class InMemoryAuthoringProjectStore implements AuthoringUnitOfWork {
 	async getProposal(proposalId: string): Promise<ScreenplayProposal | undefined> {
 		const proposal = this.proposals.get(proposalId);
 		return proposal ? deepFreeze(cloneJson(proposal)) : undefined;
+	}
+
+	async listProposals(): Promise<readonly ScreenplayProposal[]> {
+		return deepFreeze(cloneJson([...this.proposals.values()]));
 	}
 
 	async createProposal(input: ScreenplayProposal): Promise<ProposalWriteResult> {
