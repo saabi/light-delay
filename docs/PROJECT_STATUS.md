@@ -1,5 +1,13 @@
 # Estado del proyecto
 
+## 2026-09-25 — Studio M2.5 PostgreSQL implementation (English source)
+
+- M2 is accepted at `c0881311`. M2.5 adds PostgreSQL durability through the established asynchronous authoring store without changing provisional Draft or Proposal acceptance semantics.
+- A committed migration stores project/document/version identities, current scoped projections, document versions, Drafts, Proposals, accepted ChangeSets, metadata-only revisions, scoped checkpoints and the project-scoped element registry. Accepted-history contract v1 is stored and checked.
+- Proposal acceptance and rejection use conditional PostgreSQL transactions; project revision ordering is database-backed while document-version preconditions remain scoped. The Studio server supplies accepting authority and loads Drafts/Proposals on restart.
+- Studio CI now provisions an isolated PostgreSQL service for migration and concurrency tests. Local/CI verification status and workflow links are recorded in the implementation review; no Linode, staging or Pages deployment was performed.
+- Authentication, Story/Outline, M3+, Context, Agent, Media, R3/R4 and Light Delay reconstruction remain deferred. The three audited legacy-data exceptions are unchanged.
+
 ## 2026-09-25 — M2 independent-review corrections (English source)
 
 - Closed the Proposal accept/reject race with conditional terminal transitions and one atomic accepted-mutation boundary; repeated or competing transitions now return an explicit conflict.

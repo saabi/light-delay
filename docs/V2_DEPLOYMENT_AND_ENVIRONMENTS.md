@@ -287,9 +287,10 @@ After host installation, run `sudo -u studio-deploy sudo -n /usr/local/sbin/stud
 
 ## Database migrations
 
-The current Studio implementation has no PostgreSQL usage and no migrations.
+M2.5 adds the PostgreSQL adapter and committed authoring migrations for local development and CI.
+See [`V2_POSTGRES_PERSISTENCE.md`](V2_POSTGRES_PERSISTENCE.md). No host rollout has occurred.
 
-Do not make the root activation helper discover and execute a migration command from release-controlled `package.json`. When migrations are introduced, an administrator-installed migration service must use a fixed reviewed entry point (for example `/usr/local/libexec/studio-stage-migrate`), a separately authorized finalized SHA, and `User=studio` or a dedicated migration identity. Wire that explicit step before activation; do not discover npm hooks, source release shell files, or add a generic sudo command runner. No migration entry point exists or is needed in this database-free checkpoint. Activation/rollback should not implicitly rerun whichever migration hook happens to exist in the selected release.
+Do not make the root activation helper discover and execute a migration command from release-controlled `package.json`. For a later authorized rollout, an administrator-installed migration service must use a fixed reviewed entry point (for example `/usr/local/libexec/studio-stage-migrate`), a separately authorized finalized SHA, and `User=studio` or a dedicated migration identity. Wire that explicit step before activation; do not discover npm hooks, source release shell files, or add a generic sudo command runner. Activation/rollback should not implicitly rerun whichever migration hook happens to exist in the selected release.
 
 Rules:
 - migrations, when introduced, must be versioned in repository;

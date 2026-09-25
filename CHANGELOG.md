@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-09-25 — Studio M2.5 PostgreSQL persistence
+
+- Added versioned PostgreSQL migrations and a scoped authoring store behind the accepted M2 asynchronous ports.
+- Made Drafts and Proposals survive restart while keeping Draft bases immutable and terminal Proposal transitions conditional.
+- Made acceptance one database transaction for semantic history, revision metadata, affected-scope checkpoints, current projection, document versions, project head and Proposal status.
+- Routed Studio Write through a server-side application instance so acceptance authority is supplied by trusted server context; saved Drafts and pending Proposals reopen on reload.
+- Added real PostgreSQL transaction and restart integration coverage to Studio CI. No Light Delay creative data, host database or deployment was changed.
+
 ## 2026-09-25 — M2 independent-review corrections
 
 - Made Proposal resolution a conditional one-way transition and made accepted mutation plus Proposal acceptance atomic in the application-store contract.
