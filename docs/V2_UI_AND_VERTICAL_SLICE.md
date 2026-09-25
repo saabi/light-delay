@@ -291,7 +291,7 @@ ADR-0004 supersedes any implication that a project revision number represents fi
 
 This tests schema, import, queries, commands, deterministic navigation, validation, history and the new UX in one coherent feature.
 
-## Primary product proof — authoring, durable draft, proposal, acceptance
+## Primary product proof — authoring, durable draft, proposal, acceptance (implemented M2)
 
 Before broadening the semantic engine, Studio must prove the ordinary filmmaking loop that the architecture is meant to serve.
 
@@ -321,6 +321,14 @@ Required properties:
 - internal revision, schema, and graph terminology stays out of the normal writing surface.
 
 A deterministic fake proposal source is sufficient initially. The slice does not require a production AI provider.
+
+### Implemented Write behavior
+
+Studio now opens the neutral Harbor Light screenplay fixture as ordered screenplay elements, with Feature and Trailer cut selection. A filmmaker can revise text, add an action element, remove an element from the selected cut, and reorder elements. These interactions modify local editing state until **Save Draft** persists the Draft in the M2 in-memory application store.
+
+**Review changes** invokes the deterministic Draft-diff proposal source. The review panel describes screenplay operations in author-facing terms and offers explicit Reject and Accept actions. Reject preserves the Draft but changes no authoritative projection or history. Accept records the trusted human principal separately from the proposal's deterministic-system provenance, appends a ChangeSet/ProjectRevision, and refreshes the authoritative screenplay.
+
+History can restore the selected screenplay × cut to a supported earlier project revision. Restore is a new attributable revision and does not roll sibling cuts or unrelated documents backward. The interface states that the Draft store is process-lifetime memory and resets when the Studio process stops; PostgreSQL restart durability remains M2.5.
 
 This product proof should inform M2 store contracts and precede broad Context/agent/media implementation.
 

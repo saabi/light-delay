@@ -1,6 +1,6 @@
 # V2 domain model
 
-Status: **architecture reference; no runtime schema migration yet**.
+Status: **architecture reference; M2 authored-document/history subset implemented**.
 
 This document makes ADR-0003 concrete enough to test before implementation.
 
@@ -235,6 +235,12 @@ A document can:
 - produce an extraction/import proposal;
 - become stale when dependencies change;
 - remain intentionally divergent when authored as an independent product.
+
+### M2 screenplay subset
+
+The first runtime subset is intentionally smaller than the complete document model. A screenplay has stable ordered elements of kind `scene-heading`, `action`, `character`, or `dialogue`. Authored wording lives on present element state. Semantic operations insert an element, update authored text, remove an element from a cut, move an element, or restore a document/version scope.
+
+The M2 version representation is materialized rather than inherited: each document × version scope has its own deterministic order and element states. The same element ID may be present in two cuts with different text, deliberately `removed` in one cut, or unknown because no state exists there. This does not decide future continuity, lineage or derivation-pin semantics.
 
 ## 8. Spatial graph
 
@@ -504,6 +510,10 @@ interface ChangeSet {
 Restoration/reversion appends a new ChangeSet whose resulting authoritative projection is semantically equivalent to the selected supported historical state. It never rewrites or deletes prior history. Semantic operations preserve intent; snapshots/checkpoints may accelerate or support durable reconstruction and replay may serve as a verification oracle. This architecture does not require pure event sourcing. Binary media lives in blob storage. Derived caches/reports are rebuildable.
 
 Concurrent ChangeSets may be automatically rebased only when their semantic operations commute and relevant semantic/read-set preconditions still hold; otherwise the system produces a reviewable conflict. A project-wide revision remains an ordering fact but should not force unrelated future aggregates/documents to conflict by definition.
+
+The M2 authoring slice applies that rule with a document-version precondition scoped by document and narrative version. Project revision remains the total order and becomes the accepted ChangeSet's actual base at acceptance time. A proposal created from an older project revision can still be accepted when unrelated scopes changed and its document version did not; a same-scope change conflicts.
+
+New command acceptance and historical rehydration are distinct. Acceptance materializes untrusted input once, validates and executes only that private value, applies current preconditions, and assigns trusted identity, principal and time. Rehydration preserves complete accepted records and verifies their stored projection without reassigning authority or passing them through command acceptance.
 
 ## 16. Import and agents
 

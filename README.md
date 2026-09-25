@@ -2,9 +2,9 @@
 
 ## Current workspace commands (English source, 2026-09-24)
 
-Studio lives in `apps/studio`; the protected legacy application lives in `apps/light-delay`. Shared code and runtime-contract proofs live in `packages/v2-core`. Root project data, scripts and canonical media remain in place. Read [the architecture index](docs/V2_ARCHITECTURE_INDEX.md) for the foundation checkpoint and known verification limits.
+Studio lives in `apps/studio`; the protected legacy application lives in `apps/light-delay`. Shared code and runtime contracts live in `packages/v2-core`. Root project data, scripts and canonical media remain in place. M2 adds a real screenplay Write workflow with process-lifetime Draft persistence, deterministic Proposals, explicit acceptance/rejection, ProjectRevision history, two-cut isolation and scoped restore. Read [the architecture index](docs/V2_ARCHITECTURE_INDEX.md) for the current checkpoint and verification limits.
 
-Use `npm ci`, then `dev:studio` / `check:studio` / `build:studio` or `dev:legacy` / `check:legacy` / `build:legacy`. `test:v2-core` and `test:legacy:compat` are independent correctness gates. `test:legacy` includes live project/media assertions; `validate:project:light-delay` reports project-data integrity separately. Bare dev/check/build/preview remain legacy aliases. Dependency installation does not build Studio or the core, so it cannot block a legacy rebuild on a Studio compile failure.
+Use `npm ci`, then `dev:studio` / `check:studio` / `test:studio` / `test:studio:e2e` / `build:studio` or `dev:legacy` / `check:legacy` / `build:legacy`. `test:v2-core` and `test:legacy:compat` are independent correctness gates. `test:legacy` includes live project/media assertions; `validate:project:light-delay` reports project-data integrity separately. Bare dev/check/build/preview remain legacy aliases. Dependency installation does not build Studio or the core, so it cannot block a legacy rebuild on a Studio compile failure.
 
 Pages publishes `apps/light-delay/build/` from the legacy compatibility job. Studio and project-data checks run separately. Staging still requires the documented protocol-2 host update; no deployment was performed for this checkpoint.
 

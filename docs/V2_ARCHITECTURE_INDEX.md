@@ -78,6 +78,15 @@ Implemented on `architecture/v2-domain-model`, with the foundation corrections o
 - independent built/importable core package and relocated legacy application/i18n/browser configuration (R1/R2);
 - separate Studio, legacy compatibility and project-data CI jobs;
 - protocol-2 staging finalization and activation helpers, with host installation still pending.
+- M2 async authoring application/store ports with per-command trusted execution context;
+- a TypeBox-authoritative screenplay model with stable element IDs and ordered scene-heading, action, character and dialogue elements;
+- durable-within-process Draft and Proposal records kept outside authoritative project history;
+- deterministic Draft-diff proposals with explicit rejection or human acceptance into complete ChangeSets and ProjectRevisions;
+- separate accepted-history rehydration that preserves stored IDs, timestamps and attribution instead of re-running command acceptance;
+- Feature and Trailer screenplay scopes sharing element identity while retaining explicit version-local present/removed state;
+- document-version preconditions that allow unrelated project revisions but reject stale same-scope proposals;
+- document × version restore as a new attributed revision, leaving sibling cuts and unrelated documents unchanged;
+- a real Studio Write workflow plus unit and browser coverage for save, proposal review, accept/reject, cut isolation and restore.
 
 ## Important transitional debt
 
@@ -115,9 +124,9 @@ Microgravity navigation remains a bounded fixture test only. Both edges have equ
 Verification on the integrated line passed in GitHub Actions at `48c3a705ca0ec6572866d8138635d3dc2c14015a`: [Studio/core](https://github.com/saabi/light-delay/actions/runs/36075035541), [project-data audit](https://github.com/saabi/light-delay/actions/runs/36075035524), and [Pages validation](https://github.com/saabi/light-delay/actions/runs/36075035517). Core passed 45 tests; Studio check/build, 10 deployment filesystem tests and the packaged-release smoke passed. Project-data validators, generated reports, causal checks, docs and translations passed; the full legacy unit suite passed 310 with one exact data test skipped, and the targeted 94-versus-85 and Okoye copy audits matched their documented failures. Pages passed legacy check, 310 unit tests with one skip, 15 browser tests with one skip, normal build and base-path build. Pages promotion authorization was `false` for this feature-branch push, so artifact upload and deploy were skipped. No Pages or Linode deployment occurred. Protocol-2 helper installation remains pending.
 ## Immediate next milestone
 
-Start M2 in `V2_IMPLEMENTATION_ROADMAP.md`: application/store contracts and an in-memory document/Draft/Proposal slice, explicit acceptance, faithful scoped restore, and two-version isolation. M1 remains a bounded fixture proof, not a persistence schema or story-time engine. Its command schema is `packages/v2-core/src/history-contracts.ts`; principal, timestamp and ChangeSet identity come from trusted runtime configuration, never command content. A same-projection restore still appends an attributable checkpoint. Snapshots are immutable; JSON-roundtripped operations are tested as a reconstruction oracle. Durable storage, idempotent retry, finer concurrency, and version semantics belong to M2/M2.5.
+M2 is implemented on `implementation/m2-authoring`. The next milestone after independent review is M2.5: persist the proven application contract in PostgreSQL with migrations, atomic accepted mutation/projection updates, durable Drafts/Proposals, idempotency, minimal authorization and an outbox.
 
-Do not begin R3/R4, bulk Light Delay import, story-time projection, agents or media infrastructure merely because the application boundary is now clean.
+The M2 in-memory adapter is deliberately process-lifetime only. Do not describe it as restart durability, and do not begin M3 story-time state, R3/R4, bulk Light Delay import, agents or media infrastructure as part of M2.5.
 
 ## Next major slice
 

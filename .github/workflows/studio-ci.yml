@@ -17,7 +17,12 @@ jobs:
       - run: npm run check:v2-core
       - run: npm run test:v2-core
       - run: npm run check:studio
+      - run: npm run test:studio
       - run: npm run build:studio
+      - name: Install Studio browser
+        run: npx playwright install --with-deps chromium
+      - name: Verify Studio authoring workflow
+        run: npm run test:studio:e2e
       - name: Verify deployment helpers
         run: |
           bash -n tools/deploy/stage-activate.sh

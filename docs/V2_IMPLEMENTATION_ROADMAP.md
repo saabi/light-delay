@@ -97,7 +97,7 @@ Do not move `static/assets` as part of this checkpoint.
 
 ---
 
-## Milestone 2 — Application boundary + durable provisional work + authoring proof
+## Milestone 2 — Application boundary + durable provisional work + authoring proof (implemented 2026-09-24)
 
 Define the application/store interfaces before choosing durable persistence.
 
@@ -157,6 +157,16 @@ Keep project revision ordering, but allow commands to carry semantic/read-set pr
 - two cuts/versions remain isolated where intentionally different;
 - Studio accesses state through application commands/queries, not persistence internals;
 - tests can run cheaply against isolated in-memory stores.
+
+### Implemented boundary
+
+M2 is implemented in `packages/v2-core/src/authoring*.ts` and the Studio Write surface. The application accepts runtime-validated commands plus a separate trusted execution context. Async project/history/provisional ports are backed by an in-memory unit of work; M1's `InMemoryRevisionHistory` remains unchanged and fixture-specific.
+
+The screenplay projection is materialized per document × version. Stable element IDs may appear in both Feature and Trailer scopes; each scope records ordered element state as `present` or deliberately `removed`, while no state means the identity is unknown in that scope. This proves removal versus nonexistence without introducing cut inheritance or a continuity model.
+
+Drafts and Proposals are durable only for the lifetime of the in-memory store. Draft edits do not create ProjectRevisions. Proposal acceptance checks the target document version rather than requiring the Draft's project-global base revision to remain head, so unrelated accepted work may advance history without creating a false conflict. Same-scope changes fail safely.
+
+Accepted history stores complete ChangeSets and full revision projections. Historical rehydration validates and preserves accepted records through a distinct path; it does not assign new IDs, timestamps or principals and does not feed records through new-command acceptance. Restore uses one semantic scoped-restore operation and appends new history.
 
 ---
 

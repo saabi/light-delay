@@ -1,4 +1,15 @@
-# Estado del proyecto## 2026-09-24 — Pre-M2 integration and deployment policy (English source)
+# Estado del proyecto
+
+## 2026-09-24 — M2 Studio authoring vertical slice (English source)
+
+- Implemented the first real Studio Write workflow: screenplay editing → process-lifetime Draft save → deterministic Proposal → explicit reject/accept → ChangeSet → ProjectRevision → authoritative projection.
+- Added async, PostgreSQL-replaceable project/history/provisional ports, per-command trusted context, copy-before-validation inputs, complete-before-append accepted records and a distinct accepted-history rehydration path.
+- Proved Feature/Trailer isolation with shared stable screenplay element IDs, version-scoped text/order and explicit removed-versus-unknown state.
+- Proved document × version restore as new history, including removal of later elements, return of removed elements, deterministic order and preservation of sibling/unrelated scopes.
+- Studio accurately labels saved work as a Draft in the in-memory process store; restart durability remains M2.5.
+- No Light Delay creative authority or assets changed. The three audited legacy exceptions remain the Festival-master 94-versus-85 shot assertion, missing Okoye voice-copy expectation, and result 077 missing `inputDigest`.
+
+## 2026-09-24 — Pre-M2 integration and deployment policy (English source)
 
 - Integrated current master into implementation/foundation-r1-r2; no changes flowed to master.
 - Legacy application CI runs its full unit and browser suites with only two exact historical data assertions quarantined; the project-data audit reproduces and reports both.
