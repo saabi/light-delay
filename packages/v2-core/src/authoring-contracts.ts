@@ -1,11 +1,25 @@
 import { Type, type Static } from '@sinclair/typebox';
+import { FormatRegistry } from '@sinclair/typebox/type';
 
-const text = Type.String({ minLength: 1, pattern: '\\S' });
-const id = Type.String({ minLength: 1, pattern: '^[a-z][a-z0-9-]*:[^\\s]+$' });
-const revision = Type.Integer({ minimum: 0, maximum: Number.MAX_SAFE_INTEGER - 1 });
-const timestamp = Type.String({
-	pattern: '^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d{3})?Z$'
+const persistedInstantFormat = 'light-delay-utc-instant-v1';
+if (!FormatRegistry.Has(persistedInstantFormat)) {
+	FormatRegistry.Set(persistedInstantFormat, (value) => {
+		if (!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/.test(value)) return false;
+		const parsed = new Date(value);
+		return Number.isFinite(parsed.valueOf()) && parsed.toISOString() === value;
+	});
+}
+
+const persistedTextPattern =
+	'^(?=[\\s\\S]*\\S)(?:[^\\u0000\\uD800-\\uDFFF]|[\\uD800-\\uDBFF][\\uDC00-\\uDFFF])+$';
+const text = Type.String({ minLength: 1, maxLength: 1_000_000, pattern: persistedTextPattern });
+const id = Type.String({
+	minLength: 3,
+	maxLength: 161,
+	pattern: '^[a-z][a-z0-9-]{0,31}:[A-Za-z0-9._~-]{1,128}$'
 });
+const revision = Type.Integer({ minimum: 0, maximum: Number.MAX_SAFE_INTEGER - 1 });
+const timestamp = Type.String({ format: persistedInstantFormat });
 const object = <T extends Parameters<typeof Type.Object>[0]>(properties: T) =>
 	Type.Object(properties, { additionalProperties: false });
 
@@ -35,6 +49,13 @@ export const ScreenplayElementSchema = object({
 	id,
 	kind: ScreenplayElementKindSchema,
 	text
+});
+
+export const ScreenplayElementDefinitionSchema = object({
+	id,
+	documentId: id,
+	kind: ScreenplayElementKindSchema,
+	createdInRevision: revision
 });
 
 export const RemovedScreenplayElementSchema = object({
@@ -79,6 +100,7 @@ export const ProjectProjectionSchema = object({
 	name: text,
 	documents: Type.Array(object({ id, title: text })),
 	versions: Type.Array(object({ id, label: text })),
+	screenplayElements: Type.Array(ScreenplayElementDefinitionSchema),
 	screenplays: Type.Array(ScreenplayScopeProjectionSchema)
 });
 
@@ -113,6 +135,7 @@ const RestoreScreenplayDocumentSchema = object({
 	type: Type.Literal('RestoreScreenplayDocument'),
 	scope: DocumentVersionScopeSchema,
 	targetRevision: revision,
+	targetDocumentVersion: revision,
 	content: ScreenplayScopeContentSchema
 });
 
@@ -130,24 +153,37 @@ export const AuthoringPreconditionSchema = object({
 	expectedDocumentVersion: revision
 });
 
+export const ProposalGeneratorSchema = object({
+	id: Type.Literal('proposer:deterministic-draft-diff'),
+	version: Type.Literal(1),
+	principal: AuthoringPrincipalSchema
+});
+
 export const ProposalSourceSchema = object({
-	kind: Type.Literal('deterministic-draft-diff'),
-	id: Type.Literal('proposer:deterministic-draft-diff-v1'),
-	principal: AuthoringPrincipalSchema,
-	draftId: id
+	kind: Type.Literal('draft'),
+	ref: object({ kind: Type.Literal('draft'), id }),
+	contentAuthors: Type.Array(AuthoringPrincipalSchema, { minItems: 1 }),
+	generator: ProposalGeneratorSchema
 });
 
 export const ChangeSetProvenanceSchema = Type.Union([
 	object({
 		kind: Type.Literal('proposal-acceptance'),
 		proposalId: id,
-		draftId: id,
+		baseProjectRevision: revision,
+		proposedBy: AuthoringPrincipalSchema,
+		contentAuthors: Type.Array(AuthoringPrincipalSchema, { minItems: 1 }),
 		source: ProposalSourceSchema
 	}),
 	object({
 		kind: Type.Literal('scoped-restore'),
 		targetRevision: revision,
+		targetDocumentVersion: revision,
 		scope: DocumentVersionScopeSchema
+	}),
+	object({
+		kind: Type.Literal('checkpoint'),
+		reason: text
 	})
 ]);
 
@@ -172,7 +208,26 @@ export const AuthoringProjectRevisionSchema = object({
 	number: revision,
 	changeSetId: Type.Union([id, Type.Null()]),
 	timestamp,
+	touchedScopes: Type.Array(DocumentVersionScopeSchema)
+});
+
+export const AuthoringProjectStateSchema = object({
+	schemaVersion: Type.Literal(1),
+	projectId: id,
+	number: revision,
+	changeSetId: Type.Union([id, Type.Null()]),
+	timestamp,
+	touchedScopes: Type.Array(DocumentVersionScopeSchema),
 	projection: ProjectProjectionSchema
+});
+
+export const ScreenplayScopeCheckpointSchema = object({
+	schemaVersion: Type.Literal(1),
+	projectId: id,
+	projectRevision: revision,
+	scope: DocumentVersionScopeSchema,
+	documentVersion: revision,
+	content: ScreenplayScopeContentSchema
 });
 
 const draftBase = {
@@ -197,7 +252,7 @@ const proposalBase = {
 	scope: DocumentVersionScopeSchema,
 	baseProjectRevision: revision,
 	baseDocumentVersion: revision,
-	requestedBy: AuthoringPrincipalSchema,
+	proposedBy: AuthoringPrincipalSchema,
 	createdAt: timestamp,
 	source: ProposalSourceSchema,
 	operations: Type.Array(AuthoringOperationSchema, { minItems: 1 }),
@@ -224,11 +279,14 @@ export const ScreenplayProposalSchema = Type.Union([
 
 export const AcceptedMutationSchema = object({
 	changeSet: AuthoringChangeSetSchema,
-	revision: AuthoringProjectRevisionSchema
+	revision: AuthoringProjectRevisionSchema,
+	checkpoints: Type.Array(ScreenplayScopeCheckpointSchema)
 });
 
 export const AcceptedHistoryBundleSchema = object({
+	historyContractVersion: Type.Literal(1),
 	initialRevision: AuthoringProjectRevisionSchema,
+	initialProjection: ProjectProjectionSchema,
 	accepted: Type.Array(AcceptedMutationSchema)
 });
 
@@ -282,6 +340,7 @@ export type AuthoringPrincipal = Static<typeof AuthoringPrincipalSchema>;
 export type TrustedExecutionContext = Static<typeof TrustedExecutionContextSchema>;
 export type ScreenplayElementKind = Static<typeof ScreenplayElementKindSchema>;
 export type ScreenplayElement = Static<typeof ScreenplayElementSchema>;
+export type ScreenplayElementDefinition = Static<typeof ScreenplayElementDefinitionSchema>;
 export type ScreenplayElementState = Static<typeof ScreenplayElementStateSchema>;
 export type DocumentVersionScope = Static<typeof DocumentVersionScopeSchema>;
 export type ScreenplayScopeContent = Static<typeof ScreenplayScopeContentSchema>;
@@ -289,10 +348,13 @@ export type ScreenplayScopeProjection = Static<typeof ScreenplayScopeProjectionS
 export type ProjectProjection = Static<typeof ProjectProjectionSchema>;
 export type AuthoringOperation = Static<typeof AuthoringOperationSchema>;
 export type AuthoringPrecondition = Static<typeof AuthoringPreconditionSchema>;
+export type ProposalGenerator = Static<typeof ProposalGeneratorSchema>;
 export type ProposalSource = Static<typeof ProposalSourceSchema>;
 export type ChangeSetProvenance = Static<typeof ChangeSetProvenanceSchema>;
 export type AuthoringChangeSet = Static<typeof AuthoringChangeSetSchema>;
 export type AuthoringProjectRevision = Static<typeof AuthoringProjectRevisionSchema>;
+export type AuthoringProjectState = Static<typeof AuthoringProjectStateSchema>;
+export type ScreenplayScopeCheckpoint = Static<typeof ScreenplayScopeCheckpointSchema>;
 export type ScreenplayDraft = Static<typeof ScreenplayDraftSchema>;
 export type ScreenplayProposal = Static<typeof ScreenplayProposalSchema>;
 export type AcceptedMutation = Static<typeof AcceptedMutationSchema>;

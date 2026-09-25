@@ -7,6 +7,7 @@ import {
 	type AuthoringOperation,
 	type AuthoringPrincipal,
 	type AuthoringProjectRevision,
+	type AuthoringProjectState,
 	type DocumentVersionScope,
 	type ProjectProjection,
 	type ScreenplayDraft,
@@ -16,11 +17,13 @@ import {
 } from './authoring-contracts.js';
 import {
 	findScreenplayScope,
+	checkpointsForProjection,
 	materializeAndValidate,
 	projectAuthoringOperations,
 	resolveElementState,
 	resolveScreenplayElements,
 	screenplayContent,
+	touchedScopesForOperations,
 	type ProjectStoreResolver
 } from './authoring-store.js';
 
@@ -107,10 +110,14 @@ function deriveDraftOperations(
 	const baseElements = resolveScreenplayElements(base, scope);
 	if (!screenplay || !baseElements)
 		return { code: 'DOCUMENT_VERSION_NOT_FOUND', message: 'Screenplay version was not found' };
-	const knownKinds = new Map(screenplay.elements.map((element) => [element.id, element.kind]));
 	for (const element of draftElements) {
-		const knownKind = knownKinds.get(element.id);
-		if (knownKind && knownKind !== element.kind)
+		const definition = base.screenplayElements.find((candidate) => candidate.id === element.id);
+		if (definition && definition.documentId !== scope.documentId)
+			return {
+				code: 'INVALID_DRAFT',
+				message: `Element identity belongs to another document: ${element.id}`
+			};
+		if (definition && definition.kind !== element.kind)
 			return {
 				code: 'INVALID_DRAFT',
 				message: `Element kind cannot change for stable identity ${element.id}`
@@ -173,14 +180,14 @@ export class AuthoringApplication {
 		this.idFactory = options.idFactory ?? ((kind) => `${kind}:${globalThis.crypto.randomUUID()}`);
 	}
 
-	async getProjectHead(projectId: string): Promise<AuthoringProjectRevision | undefined> {
+	async getProjectHead(projectId: string): Promise<AuthoringProjectState | undefined> {
 		return (await this.stores.forProject(projectId))?.getHead();
 	}
 
 	async getRevision(
 		projectId: string,
 		revision: number
-	): Promise<AuthoringProjectRevision | undefined> {
+	): Promise<AuthoringProjectState | undefined> {
 		return (await this.stores.forProject(projectId))?.getRevision(revision);
 	}
 
@@ -248,13 +255,6 @@ export class AuthoringApplication {
 		if (!store) return failure('PROJECT_NOT_FOUND', `Project was not found: ${command.projectId}`);
 
 		if (command.type === 'SaveDraft') {
-			const baseRevision = await store.getRevision(command.baseProjectRevision);
-			const baseScope = baseRevision && findScreenplayScope(baseRevision.projection, command.scope);
-			if (!baseRevision || !baseScope || baseScope.documentVersion !== command.baseDocumentVersion)
-				return failure(
-					'DOCUMENT_VERSION_NOT_FOUND',
-					'The Draft base does not identify a supported screenplay version'
-				);
 			if (!uniqueElementIds(command.elements))
 				return failure('INVALID_DRAFT', 'Draft contains duplicate screenplay element IDs');
 			const existing = command.draftId ? await store.getDraft(command.draftId) : undefined;
@@ -269,6 +269,24 @@ export class AuthoringApplication {
 					existing.scope.versionId !== command.scope.versionId)
 			)
 				return failure('INVALID_DRAFT', 'Draft scope cannot change after creation');
+			if (
+				existing &&
+				(existing.baseProjectRevision !== command.baseProjectRevision ||
+					existing.baseDocumentVersion !== command.baseDocumentVersion)
+			)
+				return failure(
+					'INVALID_DRAFT',
+					'An existing Draft keeps the semantic base where it was started; rebase requires an explicit future workflow'
+				);
+			const baseProjectRevision = existing?.baseProjectRevision ?? command.baseProjectRevision;
+			const baseDocumentVersion = existing?.baseDocumentVersion ?? command.baseDocumentVersion;
+			const baseRevision = await store.getRevision(baseProjectRevision);
+			const baseScope = baseRevision && findScreenplayScope(baseRevision.projection, command.scope);
+			if (!baseRevision || !baseScope || baseScope.documentVersion !== baseDocumentVersion)
+				return failure(
+					'DOCUMENT_VERSION_NOT_FOUND',
+					'The Draft base does not identify a supported screenplay version'
+				);
 			const timestamp = this.now();
 			const draft: ScreenplayDraft = {
 				schemaVersion: 1,
@@ -276,14 +294,15 @@ export class AuthoringApplication {
 				projectId: command.projectId,
 				scope: command.scope,
 				owner: context.principal,
-				baseProjectRevision: command.baseProjectRevision,
-				baseDocumentVersion: command.baseDocumentVersion,
+				baseProjectRevision,
+				baseDocumentVersion,
 				elements: command.elements,
 				createdAt: existing?.createdAt ?? timestamp,
 				updatedAt: timestamp,
 				status: 'saved'
 			};
-			await store.saveDraft(draft);
+			const saved = await store.saveDraft(draft);
+			if (!saved.ok) return failure('INVALID_DRAFT', saved.message);
 			return { ok: true, kind: 'draft-saved', draft: (await store.getDraft(draft.id))! };
 		}
 
@@ -313,13 +332,17 @@ export class AuthoringApplication {
 				scope: draft.scope,
 				baseProjectRevision: draft.baseProjectRevision,
 				baseDocumentVersion: draft.baseDocumentVersion,
-				requestedBy: context.principal,
+				proposedBy: context.principal,
 				createdAt: this.now(),
 				source: {
-					kind: 'deterministic-draft-diff',
-					id: 'proposer:deterministic-draft-diff-v1',
-					principal: deterministicSourcePrincipal,
-					draftId: draft.id
+					kind: 'draft',
+					ref: { kind: 'draft', id: draft.id },
+					contentAuthors: [draft.owner],
+					generator: {
+						id: 'proposer:deterministic-draft-diff',
+						version: 1,
+						principal: deterministicSourcePrincipal
+					}
 				},
 				operations,
 				preconditions: [
@@ -331,7 +354,8 @@ export class AuthoringApplication {
 				],
 				status: 'pending'
 			};
-			await store.saveProposal(proposal);
+			const created = await store.createProposal(proposal);
+			if (!created.ok) return failure('STORE_REJECTED', created.message);
 			return { ok: true, kind: 'proposal-created', proposal };
 		}
 
@@ -348,7 +372,12 @@ export class AuthoringApplication {
 				resolvedBy: context.principal,
 				...(command.reason ? { reason: command.reason } : {})
 			};
-			await store.saveProposal(rejected);
+			const transitioned = await store.transitionProposal({
+				proposalId: proposal.id,
+				expectedStatus: 'pending',
+				next: rejected
+			});
+			if (!transitioned.ok) return failure('PROPOSAL_ALREADY_RESOLVED', transitioned.message);
 			return { ok: true, kind: 'proposal-rejected', proposal: rejected };
 		}
 
@@ -362,7 +391,8 @@ export class AuthoringApplication {
 			const projected = projectAuthoringOperations(
 				head.projection,
 				proposal.operations,
-				proposal.preconditions
+				proposal.preconditions,
+				head.number + 1
 			);
 			if (!projected.ok) return failure('CONFLICT', projected.message);
 			const timestamp = this.now();
@@ -381,7 +411,9 @@ export class AuthoringApplication {
 				provenance: {
 					kind: 'proposal-acceptance',
 					proposalId: proposal.id,
-					draftId: proposal.source.draftId,
+					baseProjectRevision: proposal.baseProjectRevision,
+					proposedBy: proposal.proposedBy,
+					contentAuthors: proposal.source.contentAuthors,
 					source: proposal.source
 				}
 			};
@@ -391,7 +423,7 @@ export class AuthoringApplication {
 				number: changeSet.resultingRevision,
 				changeSetId: changeSet.id,
 				timestamp,
-				projection: projected.projection
+				touchedScopes: touchedScopesForOperations(changeSet.operations)
 			};
 			const acceptedProposal: ScreenplayProposal = {
 				...proposal,
@@ -400,9 +432,27 @@ export class AuthoringApplication {
 				resolvedBy: context.principal,
 				changeSetId: changeSet.id
 			};
-			const accepted: AcceptedMutation = { changeSet, revision };
-			const stored = await store.commitAccepted(accepted, acceptedProposal);
-			if (!stored.ok) return failure('STORE_REJECTED', stored.message);
+			const accepted: AcceptedMutation = {
+				changeSet,
+				revision,
+				checkpoints: checkpointsForProjection(
+					projected.projection,
+					revision.number,
+					changeSet.operations
+				)
+			};
+			const stored = await store.commitAccepted(accepted, {
+				proposalId: proposal.id,
+				expectedStatus: 'pending',
+				next: acceptedProposal
+			});
+			if (!stored.ok)
+				return failure(
+					stored.code === 'PROPOSAL_ALREADY_RESOLVED'
+						? 'PROPOSAL_ALREADY_RESOLVED'
+						: 'STORE_REJECTED',
+					stored.message
+				);
 			return { ok: true, kind: 'proposal-accepted', changeSet, revision };
 		}
 
@@ -423,6 +473,7 @@ export class AuthoringApplication {
 			type: 'RestoreScreenplayDocument',
 			scope: command.scope,
 			targetRevision: command.targetRevision,
+			targetDocumentVersion: targetScope.documentVersion,
 			content: screenplayContent(targetScope)
 		};
 		const preconditions = [
@@ -432,7 +483,12 @@ export class AuthoringApplication {
 				expectedDocumentVersion: command.expectedDocumentVersion
 			}
 		];
-		const projected = projectAuthoringOperations(head.projection, [operation], preconditions);
+		const projected = projectAuthoringOperations(
+			head.projection,
+			[operation],
+			preconditions,
+			head.number + 1
+		);
 		if (!projected.ok) return failure('CONFLICT', projected.message);
 		const timestamp = this.now();
 		const changeSet: AuthoringChangeSet = {
@@ -450,6 +506,7 @@ export class AuthoringApplication {
 			provenance: {
 				kind: 'scoped-restore',
 				targetRevision: command.targetRevision,
+				targetDocumentVersion: targetScope.documentVersion,
 				scope: command.scope
 			}
 		};
@@ -459,9 +516,17 @@ export class AuthoringApplication {
 			number: changeSet.resultingRevision,
 			changeSetId: changeSet.id,
 			timestamp,
-			projection: projected.projection
+			touchedScopes: touchedScopesForOperations(changeSet.operations)
 		};
-		const stored = await store.commitAccepted({ changeSet, revision });
+		const stored = await store.commitAccepted({
+			changeSet,
+			revision,
+			checkpoints: checkpointsForProjection(
+				projected.projection,
+				revision.number,
+				changeSet.operations
+			)
+		});
 		if (!stored.ok) return failure('STORE_REJECTED', stored.message);
 		return { ok: true, kind: 'screenplay-restored', changeSet, revision };
 	}

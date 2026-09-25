@@ -1,5 +1,5 @@
 import type {
-	AuthoringProjectRevision,
+	AuthoringProjectState,
 	ProjectProjection,
 	ScreenplayElement
 } from './authoring-contracts.js';
@@ -64,6 +64,20 @@ export const harborLightProjection: ProjectProjection = {
 		{ id: authoringFixtureIds.featureVersion, label: 'Feature' },
 		{ id: authoringFixtureIds.trailerVersion, label: 'Trailer' }
 	],
+	screenplayElements: [
+		...sharedElements.map((element) => ({
+			id: element.id,
+			documentId: authoringFixtureIds.primaryDocument,
+			kind: element.kind,
+			createdInRevision: 0
+		})),
+		...codaElements.map((element) => ({
+			id: element.id,
+			documentId: authoringFixtureIds.secondaryDocument,
+			kind: element.kind,
+			createdInRevision: 0
+		}))
+	].sort((left, right) => (left.id < right.id ? -1 : left.id > right.id ? 1 : 0)),
 	screenplays: [
 		{
 			documentId: authoringFixtureIds.primaryDocument,
@@ -103,11 +117,12 @@ export const harborLightProjection: ProjectProjection = {
 	]
 };
 
-export const harborLightInitialRevision: AuthoringProjectRevision = {
+export const harborLightInitialRevision: AuthoringProjectState = {
 	schemaVersion: 1,
 	projectId: authoringFixtureIds.project,
 	number: 0,
 	changeSetId: null,
 	timestamp: '2026-09-24T12:00:00.000Z',
+	touchedScopes: [],
 	projection: harborLightProjection
 };
