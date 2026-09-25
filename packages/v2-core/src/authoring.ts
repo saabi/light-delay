@@ -221,8 +221,8 @@ export class AuthoringApplication {
 	): Promise<ScreenplayView | undefined> {
 		const store = await this.stores.forProject(projectId);
 		if (!store) return undefined;
-		const record =
-			revision === undefined ? await store.getHead() : await store.getRevision(revision);
+		if (revision === undefined) return store.getCurrentScreenplayView(scope);
+		const record = await store.getRevision(revision);
 		if (!record) return undefined;
 		const screenplay = findScreenplayScope(record.projection, scope);
 		const elements = resolveScreenplayElements(record.projection, scope);

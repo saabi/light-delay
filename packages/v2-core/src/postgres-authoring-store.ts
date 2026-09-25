@@ -5,6 +5,7 @@ import {
 	AuthoringProjectStateSchema,
 	ScreenplayDraftSchema,
 	ScreenplayProposalSchema,
+	ScreenplayScopeContentSchema,
 	type AcceptedHistoryBundle,
 	type AcceptedMutation,
 	type AuthoringChangeSet,
@@ -14,6 +15,7 @@ import {
 	type ScreenplayProposal,
 	type ScreenplayScopeContent
 } from './authoring-contracts.js';
+import type { ScreenplayView } from './authoring.js';
 import {
 	InMemoryAuthoringProjectStore,
 	compareCanonicalIds,
@@ -214,6 +216,83 @@ export class PostgresAuthoringProjectStore implements AuthoringUnitOfWork {
 		const state = await this.consistentState();
 		if (!state) throw new Error(`Project was not found: ${this.projectId}`);
 		return state;
+	}
+
+	async getCurrentScreenplayView(scope: {
+		documentId: string;
+		versionId: string;
+	}): Promise<ScreenplayView | undefined> {
+		return inTransaction(this.pool, async (client) => {
+			await client.query('SET TRANSACTION ISOLATION LEVEL REPEATABLE READ READ ONLY');
+			const rows = await client.query<{
+				project_name: string;
+				head_number: string;
+				history_contract_version: number;
+				document_title: string;
+				version_label: string;
+				document_version: string;
+				content: unknown;
+			}>(
+				`SELECT p.name AS project_name, p.head_number, p.history_contract_version, d.title AS document_title,
+				 v.label AS version_label, s.document_version, s.content
+				 FROM authoring_scopes s
+				 JOIN authoring_projects p ON p.project_id = s.project_id
+				 JOIN authoring_documents d ON (d.project_id = s.project_id AND d.document_id = s.document_id)
+				 JOIN authoring_versions v ON (v.project_id = s.project_id AND v.version_id = s.version_id)
+				 WHERE s.project_id = $1 AND s.document_id = $2 AND s.version_id = $3`,
+				[this.projectId, scope.documentId, scope.versionId]
+			);
+			if (!rows.rowCount) return undefined;
+			const row = rows.rows[0];
+			if (row.history_contract_version !== 1)
+				throw new Error(
+					`Unsupported accepted history contract version: ${row.history_contract_version}`
+				);
+			const content = readRecord<ScreenplayScopeContent>(ScreenplayScopeContentSchema, row.content);
+			const byId = new Map(content.elements.map((element) => [element.id, element]));
+			if (
+				byId.size !== content.elements.length ||
+				content.order.length !== byId.size ||
+				new Set(content.order).size !== byId.size ||
+				content.order.some((id) => !byId.has(id))
+			)
+				throw new Error('Stored screenplay order is malformed');
+			const definitions = await client.query<{
+				element_id: string;
+				document_id: string;
+				kind: string;
+			}>(
+				`SELECT element_id, document_id, kind FROM authoring_elements
+				 WHERE project_id = $1 AND element_id = ANY($2::text[])`,
+				[this.projectId, [...byId.keys()]]
+			);
+			if (
+				definitions.rows.length !== byId.size ||
+				definitions.rows.some(
+					(definition) =>
+						definition.document_id !== scope.documentId ||
+						byId.get(definition.element_id)?.kind !== definition.kind
+				)
+			)
+				throw new Error('Stored screenplay element identity is malformed');
+			const elements = content.order.flatMap((id) => {
+				const element = byId.get(id)!;
+				return element.status === 'present'
+					? [{ id: element.id, kind: element.kind, text: element.text }]
+					: [];
+			});
+			return {
+				projectId: this.projectId,
+				projectName: row.project_name,
+				documentId: scope.documentId,
+				documentTitle: row.document_title,
+				versionId: scope.versionId,
+				versionLabel: row.version_label,
+				projectRevision: Number(row.head_number),
+				documentVersion: Number(row.document_version),
+				elements
+			};
+		});
 	}
 
 	async getRevision(revision: number): Promise<AuthoringProjectState | undefined> {

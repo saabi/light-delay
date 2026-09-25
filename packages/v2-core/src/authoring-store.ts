@@ -1,5 +1,6 @@
 import type { TSchema } from '@sinclair/typebox';
 import { Value } from '@sinclair/typebox/value';
+import type { ScreenplayView } from './authoring.js';
 import {
 	AcceptedHistoryBundleSchema,
 	AcceptedMutationSchema,
@@ -28,6 +29,7 @@ import {
 export interface ProjectStore {
 	getHead(): Promise<AuthoringProjectState>;
 	getRevision(revision: number): Promise<AuthoringProjectState | undefined>;
+	getCurrentScreenplayView(scope: DocumentVersionScope): Promise<ScreenplayView | undefined>;
 }
 
 export interface HistoryStore {
@@ -710,6 +712,29 @@ export class InMemoryAuthoringProjectStore implements AuthoringUnitOfWork {
 
 	async getHead(): Promise<AuthoringProjectState> {
 		return deepFreeze(cloneJson(this.currentState()));
+	}
+
+	async getCurrentScreenplayView(scope: DocumentVersionScope): Promise<ScreenplayView | undefined> {
+		const state = this.currentState();
+		const screenplay = findScreenplayScope(state.projection, scope);
+		const elements = resolveScreenplayElements(state.projection, scope);
+		const document = state.projection.documents.find((item) => item.id === scope.documentId);
+		const version = state.projection.versions.find((item) => item.id === scope.versionId);
+		return screenplay && elements && document && version
+			? deepFreeze(
+					cloneJson({
+						projectId: state.projectId,
+						projectName: state.projection.name,
+						documentId: document.id,
+						documentTitle: document.title,
+						versionId: version.id,
+						versionLabel: version.label,
+						projectRevision: state.number,
+						documentVersion: screenplay.documentVersion,
+						elements
+					})
+				)
+			: undefined;
 	}
 
 	async getRevision(revision: number): Promise<AuthoringProjectState | undefined> {
