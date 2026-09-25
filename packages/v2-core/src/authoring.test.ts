@@ -1,4 +1,6 @@
-import { describe, expect, it, vi } from 'vitest';
+import { randomUUID } from 'node:crypto';
+import { Pool } from 'pg';
+import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
 import { AuthoringApplication, type ScreenplayView } from './authoring.js';
 import type {
 	AuthoringPrincipal,
@@ -10,11 +12,49 @@ import { authoringFixtureIds, harborLightInitialRevision } from './authoring-fix
 import {
 	compareCanonicalIds,
 	InMemoryAuthoringProjectStore,
-	InMemoryProjectStoreResolver,
 	materializeAndValidate,
-	resolveElementState
+	resolveElementState,
+	type ProjectStoreResolver
 } from './authoring-store.js';
 import { ScreenplayDraftSchema } from './authoring-contracts.js';
+import {
+	PostgresAuthoringProjectStore,
+	PostgresProjectStoreResolver
+} from './postgres-authoring-store.js';
+import { migrateAuthoringDatabase } from './postgres-migrations.js';
+
+const backend = process.env.AUTHORING_CONTRACT_BACKEND ?? 'memory';
+if (backend !== 'memory' && backend !== 'postgres')
+	throw new Error(`Unknown authoring contract backend: ${backend}`);
+const postgresUrl = process.env.TEST_DATABASE_URL;
+if (backend === 'postgres' && !postgresUrl)
+	throw new Error('TEST_DATABASE_URL is required for PostgreSQL contract tests');
+const schema = `m25_contract_${randomUUID().replaceAll('-', '')}`;
+const admin = backend === 'postgres' ? new Pool({ connectionString: postgresUrl }) : undefined;
+const pool =
+	backend === 'postgres'
+		? new Pool({ connectionString: postgresUrl, options: `-c search_path=${schema}`, max: 10 })
+		: undefined;
+
+beforeAll(async () => {
+	if (!admin || !pool) return;
+	await admin.query(`CREATE SCHEMA "${schema}"`);
+	await migrateAuthoringDatabase(pool);
+});
+beforeEach(async () => {
+	if (!pool) return;
+	await pool.query('TRUNCATE authoring_projects CASCADE');
+	await new PostgresProjectStoreResolver(pool).seedProject(harborLightInitialRevision);
+});
+afterEach(async () => {
+	if (pool) await pool.query('TRUNCATE authoring_projects CASCADE');
+});
+afterAll(async () => {
+	if (!admin || !pool) return;
+	await pool.end();
+	await admin.query(`DROP SCHEMA "${schema}" CASCADE`);
+	await admin.end();
+});
 
 const human: AuthoringPrincipal = { kind: 'human', id: 'user:director' };
 const context: TrustedExecutionContext = { principal: human, requestId: 'request:test' };
@@ -32,11 +72,12 @@ const codaScope: DocumentVersionScope = {
 };
 
 function createHarness(options: { now?: () => string } = {}) {
-	const store = new InMemoryAuthoringProjectStore(harborLightInitialRevision);
-	const resolver = new InMemoryProjectStoreResolver([]);
-	vi.spyOn(resolver, 'forProject').mockImplementation(async (projectId) =>
-		projectId === authoringFixtureIds.project ? store : undefined
-	);
+	const store = pool
+		? new PostgresAuthoringProjectStore(pool, authoringFixtureIds.project)
+		: new InMemoryAuthoringProjectStore(harborLightInitialRevision);
+	const resolver: ProjectStoreResolver = {
+		forProject: async (projectId) => (projectId === authoringFixtureIds.project ? store : undefined)
+	};
 	let id = 0;
 	let tick = 0;
 	const application = new AuthoringApplication(resolver, {

@@ -30,9 +30,11 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run check:v2-core
-      - run: npm run test:v2-core
+      - name: Run M2 contract and core tests (in-memory)
+        run: npm run test:v2-core
       - run: npm run migrate:studio
-      - run: npm run test:postgres
+      - name: Run M2 contract and integration tests (PostgreSQL)
+        run: npm run test:postgres
       - run: npm run check:studio
       - run: npm run test:studio
       - run: npm run build:studio
