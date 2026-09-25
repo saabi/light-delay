@@ -19,6 +19,7 @@
 	let elements = $state<ScreenplayElement[]>([]);
 	let draft = $state<ScreenplayDraft>();
 	let proposal = $state<ScreenplayProposal>();
+	let proposalBaseElements = $state<ScreenplayElement[]>([]);
 	let history = $state<readonly AuthoringChangeSet[]>([]);
 	let selectedVersionId = $state<string>(authoringFixtureIds.featureVersion);
 	let draftIds = $state<Record<string, string>>({});
@@ -43,6 +44,7 @@
 		busy = true;
 		selectedVersionId = versionId;
 		proposal = undefined;
+		proposalBaseElements = [];
 		reviewOpen = false;
 		const nextScope = { documentId: authoringFixtureIds.primaryDocument, versionId };
 		view = await authoringApplication.getScreenplayView(authoringFixtureIds.project, nextScope);
@@ -52,7 +54,12 @@
 			: undefined;
 		elements = (draft?.elements ?? view?.elements ?? []).map((element) => ({ ...element }));
 		dirty = false;
-		status = draft ? draftSavedMessage() : 'Authoritative screenplay';
+		status =
+			draft && view && draft.baseDocumentVersion !== view.documentVersion
+				? 'Draft saved · authoritative screenplay changed since this Draft started'
+				: draft
+					? draftSavedMessage()
+					: 'Authoritative screenplay';
 		history = await authoringApplication.listHistory(authoringFixtureIds.project);
 		busy = false;
 	}
@@ -108,8 +115,8 @@
 				projectId: authoringFixtureIds.project,
 				...(draft ? { draftId: draft.id } : {}),
 				scope,
-				baseProjectRevision: view.projectRevision,
-				baseDocumentVersion: view.documentVersion,
+				baseProjectRevision: draft?.baseProjectRevision ?? view.projectRevision,
+				baseDocumentVersion: draft?.baseDocumentVersion ?? view.documentVersion,
 				elements
 			},
 			studioAuthoringContext
@@ -138,6 +145,14 @@
 		);
 		if (result.ok && result.kind === 'proposal-created') {
 			proposal = result.proposal;
+			proposalBaseElements =
+				(
+					await authoringApplication.getScreenplayView(
+						authoringFixtureIds.project,
+						result.proposal.scope,
+						result.proposal.baseProjectRevision
+					)
+				)?.elements.map((element) => ({ ...element })) ?? [];
 			reviewOpen = true;
 			status = 'Proposal ready for review — not yet accepted';
 		} else if (!result.ok) status = result.error.message;
@@ -181,6 +196,7 @@
 				pendingProposal.id
 			);
 			draft = undefined;
+			proposalBaseElements = [];
 			delete draftIds[selectedVersionId];
 			draftIds = { ...draftIds };
 			view = await authoringApplication.getScreenplayView(authoringFixtureIds.project, scope);
@@ -210,6 +226,7 @@
 			elements = view?.elements.map((element) => ({ ...element })) ?? [];
 			draft = undefined;
 			proposal = undefined;
+			proposalBaseElements = [];
 			delete draftIds[selectedVersionId];
 			draftIds = { ...draftIds };
 			history = await authoringApplication.listHistory(authoringFixtureIds.project);
@@ -316,7 +333,21 @@
 							: 's'}
 					</h2>
 					<ul class="change-list">
-						{#each proposal.operations as operation}<li>{describeOperation(operation)}</li>{/each}
+						{#each proposal.operations as operation}
+							{@const review = describeOperation(operation, proposalBaseElements)}
+							<li>
+								<strong>{review.title}</strong>
+								{#if review.before}
+									<span class="review-label">Before</span>
+									<blockquote>{review.before}</blockquote>
+								{/if}
+								{#if review.after}
+									<span class="review-label">After</span>
+									<blockquote>{review.after}</blockquote>
+								{/if}
+								{#if review.detail}<small>{review.detail}</small>{/if}
+							</li>
+						{/each}
 					</ul>
 					<p class="hint">
 						Source: deterministic local Draft comparison. Nothing changes in project history until
@@ -597,16 +628,45 @@
 		padding: 9px 0;
 		border-top: 1px solid var(--studio-hairline);
 	}
+	.change-list strong,
+	.change-list small,
+	.review-label {
+		display: block;
+	}
+	.review-label {
+		margin-top: 10px;
+		font-size: 9px;
+		font-weight: 700;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--studio-text-muted);
+	}
+	.change-list blockquote {
+		margin: 3px 0 0;
+		padding: 7px 9px;
+		background: var(--studio-surface-subtle);
+		border-left: 2px solid var(--studio-hairline);
+		font-family: 'Courier Prime', 'Courier New', monospace;
+		line-height: 1.4;
+	}
+	.change-list small {
+		margin-top: 8px;
+		color: var(--studio-text-muted);
+	}
 	.proposal-actions {
 		display: flex;
 		justify-content: flex-end;
 		gap: 8px;
 		margin-top: 20px;
 	}
-	.proposal-actions button {
+	.proposal-actions button:not(.primary) {
 		border: 0;
 		background: transparent;
 		padding: 8px 11px;
+		cursor: pointer;
+	}
+	.proposal-actions button.primary {
+		border: 0;
 		cursor: pointer;
 	}
 	.history-list {

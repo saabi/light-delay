@@ -12,7 +12,21 @@ test('saves, proposes, rejects, accepts, isolates cuts, and restores screenplay 
 	await expect(page.getByText('Draft saved in this Studio process', { exact: true })).toBeVisible();
 	await page.getByRole('button', { name: 'Review changes' }).click();
 	await expect(page.getByRole('heading', { name: '1 screenplay change' })).toBeVisible();
+	const review = page.getByLabel('Proposal review');
+	await expect(review.getByText('Revise dialogue')).toBeVisible();
+	await expect(review.getByText('Before')).toBeVisible();
+	await expect(review.getByText('Leave the channel open.')).toBeVisible();
+	await expect(review.getByText('After')).toBeVisible();
+	await expect(review.getByText('Keep the channel alive.')).toBeVisible();
 	await expect(page.getByText('Proposal ready for review — not yet accepted')).toBeVisible();
+	const accept = page.getByRole('button', { name: 'Accept changes' });
+	await expect(accept).toBeVisible();
+	const acceptColors = await accept.evaluate((element) => {
+		const style = getComputedStyle(element);
+		return { color: style.color, backgroundColor: style.backgroundColor };
+	});
+	expect(acceptColors.backgroundColor).not.toBe('rgba(0, 0, 0, 0)');
+	expect(acceptColors.backgroundColor).not.toBe(acceptColors.color);
 	await page.getByRole('button', { name: 'Reject' }).click();
 	await expect(
 		page.getByText('Proposal rejected — authoritative screenplay unchanged')
