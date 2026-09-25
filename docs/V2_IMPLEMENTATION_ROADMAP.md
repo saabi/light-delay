@@ -176,7 +176,10 @@ Accepted provenance separates content authors, the proposal actor/source and gen
 
 ## Milestone 2.5 — Minimal PostgreSQL durability
 
-Persist the proven M2 contract before building durable agents or relying on Context behavior in staging.
+Implementation branch: `implementation/m2.5-postgres`. Persist the proven M2 contract before
+building durable agents or relying on Context behavior in staging. See
+[`V2_POSTGRES_PERSISTENCE.md`](V2_POSTGRES_PERSISTENCE.md) for the implemented schema,
+transaction boundary, migration and local test setup.
 
 Initial persistence:
 
@@ -185,18 +188,23 @@ Initial persistence:
 - current projections/checkpoints needed by the slice;
 - authored documents and durable Drafts/Proposals;
 - command/idempotency identity where required;
-- minimal project authorization;
-- transactional outbox.
+- trusted server-side acceptance attribution.
 
 Use migrations from the beginning.
 
-Keep authorization proportionate: enough to prevent project leakage and establish trusted server-side principal attribution. The full future control-plane/shard projection architecture remains deferred.
+Minimal project authorization and a transactional outbox are conscious M2.5 deferrals, not omitted
+requirements. The trusted accepting-principal boundary remains in force. Add project authorization
+before meaningful multi-user or external Studio exposure, and revisit an outbox when committed
+changes require reliable asynchronous publication to external workers or services. The current
+single-user fixture must not be deployed to hold real authoring before an access boundary is added.
+The bootstrap document/cut catalog is sufficient for this bounded slice; future Story → Version →
+Outline → Screenplay work needs an authoritative path for dynamically adding structure.
 
 ### Exit criteria
 
 - equivalent application contract tests pass against in-memory and PostgreSQL adapters where appropriate;
 - draft survives process restart;
-- accepted ChangeSet + affected scoped checkpoints/current projection + head + Proposal transition + outbox are atomic;
+- accepted ChangeSet + affected scoped checkpoints/current projection + head + Proposal transition are atomic;
 - retry/idempotency behavior cannot double-commit;
 - project data is scoped by `project_id`;
 - staging has an appropriate access boundary before it stores real writing or can spend provider money;

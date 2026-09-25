@@ -9,8 +9,12 @@ test('saves, proposes, rejects, accepts, isolates cuts, and restores screenplay 
 	await dialogue.fill('Keep the channel alive.');
 	await expect(page.getByText('Unsaved Draft changes', { exact: true })).toBeVisible();
 	await page.getByRole('button', { name: 'Save Draft' }).click();
-	await expect(page.getByText('Draft saved in this Studio process', { exact: true })).toBeVisible();
+	await expect(page.getByText('Draft saved', { exact: true })).toBeVisible();
+	await page.reload();
+	await expect(dialogue).toHaveValue('Keep the channel alive.');
+	await expect(page.getByText('Draft saved', { exact: true })).toBeVisible();
 	await page.getByRole('button', { name: 'Review changes' }).click();
+	await page.reload();
 	await expect(page.getByRole('heading', { name: '1 screenplay change' })).toBeVisible();
 	const review = page.getByLabel('Proposal review');
 	await expect(review.getByText('Revise dialogue')).toBeVisible();

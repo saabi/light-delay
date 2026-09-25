@@ -130,6 +130,8 @@
     "test:studio": "npm run test:unit --workspace @light-delay/studio",
     "test:studio:e2e": "npm run test:e2e --workspace @light-delay/studio",
     "test:v2-core": "npm run test --workspace @light-delay/v2-core",
+    "test:postgres": "npm run test:postgres --workspace @light-delay/v2-core",
+    "migrate:studio": "npm run migrate --workspace @light-delay/v2-core",
     "test:legacy": "npm run test:unit --workspace @light-delay/legacy",
     "validate:project:light-delay": "npm run validate:data",
     "check:v2-core": "npm run check --workspace @light-delay/v2-core",

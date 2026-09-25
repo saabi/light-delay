@@ -59,5 +59,5 @@ export function describeOperation(
 }
 
 export function draftSavedMessage(): string {
-	return 'Draft saved in this Studio process';
+	return 'Draft saved';
 }

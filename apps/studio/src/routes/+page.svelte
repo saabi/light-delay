@@ -46,22 +46,65 @@
 		proposal = undefined;
 		proposalBaseElements = [];
 		reviewOpen = false;
-		const nextScope = { documentId: authoringFixtureIds.primaryDocument, versionId };
-		view = await authoringApplication.getScreenplayView(authoringFixtureIds.project, nextScope);
-		const draftId = draftIds[versionId];
-		draft = draftId
-			? await authoringApplication.getDraft(authoringFixtureIds.project, draftId)
-			: undefined;
-		elements = (draft?.elements ?? view?.elements ?? []).map((element) => ({ ...element }));
-		dirty = false;
-		status =
-			draft && view && draft.baseDocumentVersion !== view.documentVersion
-				? 'Draft saved · authoritative screenplay changed since this Draft started'
-				: draft
-					? draftSavedMessage()
-					: 'Authoritative screenplay';
-		history = await authoringApplication.listHistory(authoringFixtureIds.project);
-		busy = false;
+		try {
+			const nextScope = { documentId: authoringFixtureIds.primaryDocument, versionId };
+			const projectId = authoringFixtureIds.project;
+			const [nextView, drafts, proposals, nextHistory] = await Promise.all([
+				authoringApplication.getScreenplayView(projectId, nextScope),
+				authoringApplication.listDrafts(projectId),
+				authoringApplication.listProposals(projectId),
+				authoringApplication.listHistory(projectId)
+			]);
+			view = nextView;
+			const consumed = new Set(
+				proposals.filter((item) => item.status === 'accepted').map((item) => item.source.ref.id)
+			);
+			const matching = drafts
+				.filter(
+					(item) =>
+						item.scope.documentId === nextScope.documentId &&
+						item.scope.versionId === nextScope.versionId &&
+						!consumed.has(item.id)
+				)
+				.sort((a, b) => b.updatedAt.localeCompare(a.updatedAt));
+			draft = matching.find((item) => item.id === draftIds[versionId]) ?? matching[0];
+			if (draft) draftIds = { ...draftIds, [versionId]: draft.id };
+			const pending = proposals
+				.filter(
+					(item) =>
+						item.status === 'pending' &&
+						item.scope.documentId === nextScope.documentId &&
+						item.scope.versionId === nextScope.versionId &&
+						(!draft || item.source.ref.id === draft.id)
+				)
+				.sort((a, b) => b.createdAt.localeCompare(a.createdAt));
+			proposal = pending[0];
+			if (proposal) {
+				proposalBaseElements =
+					(
+						await authoringApplication.getScreenplayView(
+							projectId,
+							proposal.scope,
+							proposal.baseProjectRevision
+						)
+					)?.elements.map((element) => ({ ...element })) ?? [];
+				reviewOpen = true;
+			}
+			elements = (draft?.elements ?? view?.elements ?? []).map((element) => ({ ...element }));
+			dirty = false;
+			status = proposal
+				? 'Proposal ready for review — not yet accepted'
+				: draft && view && draft.baseDocumentVersion !== view.documentVersion
+					? 'Draft saved · authoritative screenplay changed since this Draft started'
+					: draft
+						? draftSavedMessage()
+						: 'Authoritative screenplay';
+			history = nextHistory;
+		} catch (error) {
+			status = error instanceof Error ? error.message : 'Could not load screenplay';
+		} finally {
+			busy = false;
+		}
 	}
 
 	function updateText(elementId: string, text: string) {
@@ -267,6 +310,7 @@
 			>
 		</div>
 		<p class:accepted={status.startsWith('Accepted') || status.startsWith('Restored')}>{status}</p>
+		{#if !view && !busy}<button onclick={() => openVersion(selectedVersionId)}>Retry</button>{/if}
 		<button disabled={busy || !dirty} onclick={saveDraft}>Save Draft</button>
 	</div>
 
@@ -316,7 +360,7 @@
 							? 'Draft saved · provisional'
 							: 'Authoritative projection'}</span
 				>
-				<span>In-memory M2 store · resets when this Studio process stops</span>
+				<span>Studio Write</span>
 			</footer>
 		</section>
 

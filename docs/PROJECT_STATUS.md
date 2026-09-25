@@ -1,5 +1,21 @@
 # Estado del proyecto
 
+## 2026-09-25 — Studio M2.5 independent-review corrections (English source)
+
+- Raised bounded global-head retries to 64 and added `STORE_BUSY` for exhaustion; scoped conflicts still stop immediately and pending Proposals remain pending on exhaustion.
+- Handled idle PostgreSQL pool errors without logging connection details, and added focused regression coverage.
+- CI now reruns the same M2 authoring contract suite against in-memory and PostgreSQL, alongside the existing PostgreSQL integration tests.
+- Transactional outbox and minimal project authorization are conscious M2.5 deferrals. The revision-0 document/cut catalog is temporary for this bounded slice; future dynamic Story/Version/Outline/Screenplay structure needs its own authoritative mutation path.
+- M2.5 remains pending narrow independent verification and human acceptance. No staging deployment or database migration was performed in this correction pass.
+
+## 2026-09-25 — Studio M2.5 PostgreSQL implementation (English source)
+
+- M2 is accepted at `c0881311`. M2.5 adds PostgreSQL durability through the established asynchronous authoring store without changing provisional Draft or Proposal acceptance semantics.
+- A committed migration stores project/document/version identities, current scoped projections, document versions, Drafts, Proposals, accepted ChangeSets, metadata-only revisions, scoped checkpoints and the project-scoped element registry. Accepted-history contract v1 is stored and checked.
+- Proposal acceptance and rejection use conditional PostgreSQL transactions; project revision ordering is database-backed while document-version preconditions remain scoped. The Studio server supplies accepting authority and loads Drafts/Proposals on restart.
+- Studio CI now provisions an isolated PostgreSQL service for migration and concurrency tests. The first implementation CI run passed [Studio/shared](https://github.com/saabi/light-delay/actions/runs/36158718642) (81 core, 26 PostgreSQL, 3 Studio unit, 1 Studio browser and 10 deployment-helper tests), [project-data integrity](https://github.com/saabi/light-delay/actions/runs/36158718646) (310 legacy unit tests with one audited skip), and [Pages validation](https://github.com/saabi/light-delay/actions/runs/36158718638) (310 legacy unit tests with one audited skip, 15 browser tests with one audited skip). Pages promotion authorization was false, so artifact upload and deployment were skipped. No Linode or staging deployment was performed.
+- Authentication, Story/Outline, M3+, Context, Agent, Media, R3/R4 and Light Delay reconstruction remain deferred. The three audited legacy-data exceptions are unchanged.
+
 ## 2026-09-25 — M2 independent-review corrections (English source)
 
 - Closed the Proposal accept/reject race with conditional terminal transitions and one atomic accepted-mutation boundary; repeated or competing transitions now return an explicit conflict.

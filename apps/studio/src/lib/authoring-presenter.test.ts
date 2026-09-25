@@ -67,6 +67,6 @@ describe('Studio authoring presentation', () => {
 	});
 
 	it('states the in-memory Draft durability boundary truthfully', () => {
-		expect(draftSavedMessage()).toBe('Draft saved in this Studio process');
+		expect(draftSavedMessage()).toBe('Draft saved');
 	});
 });
