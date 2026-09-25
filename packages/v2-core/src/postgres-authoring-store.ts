@@ -749,5 +749,10 @@ export class PostgresProjectStoreResolver implements ProjectStoreResolver {
 
 export function createPostgresPool(connectionString: string): Pool {
 	if (!connectionString) throw new Error('DATABASE_URL is required for PostgreSQL authoring');
-	return new Pool({ connectionString });
+	const pool = new Pool({ connectionString });
+	pool.on('error', () => {
+		// pg removes failed idle clients from the pool. Active query errors still reach their callers.
+		console.error('Studio PostgreSQL pool lost an idle connection');
+	});
+	return pool;
 }
