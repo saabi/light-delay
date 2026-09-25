@@ -1,10 +1,13 @@
 import { randomUUID } from 'node:crypto';
 import { Pool } from 'pg';
-import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it } from 'vitest';
+import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
 import { AuthoringApplication } from './authoring.js';
 import { authoringFixtureIds, harborLightInitialRevision } from './authoring-fixture.js';
 import { InMemoryAuthoringProjectStore, resolveElementState } from './authoring-store.js';
-import { PostgresProjectStoreResolver } from './postgres-authoring-store.js';
+import {
+	PostgresAuthoringProjectStore,
+	PostgresProjectStoreResolver
+} from './postgres-authoring-store.js';
 import { migrateAuthoringDatabase } from './postgres-migrations.js';
 import type {
 	AuthoringProjectState,
@@ -261,6 +264,73 @@ describe('PostgreSQL authoring persistence', () => {
 		const results = await Promise.all([accept(application(), a.id), accept(application(), b.id)]);
 		expect(results.every((result) => result.ok)).toBe(true);
 		expect((await app.getProjectHead(projectId))?.number).toBe(2);
+	});
+
+	it('accepts twelve unrelated scopes concurrently despite global head movement', async () => {
+		const state: AuthoringProjectState = structuredClone(harborLightInitialRevision);
+		const scopes: DocumentVersionScope[] = [];
+		for (let index = 0; index < 12; index += 1) {
+			const suffix = String(index).padStart(2, '0');
+			const documentId = `document:contention-${suffix}`;
+			const headingId = `element:contention-${suffix}-heading`;
+			const actionId = `element:contention-${suffix}-action`;
+			const scope = { documentId, versionId: authoringFixtureIds.featureVersion };
+			scopes.push(scope);
+			state.projection.documents.push({ id: documentId, title: `Contention ${suffix}` });
+			state.projection.screenplayElements.push(
+				{ id: headingId, documentId, kind: 'scene-heading', createdInRevision: 0 },
+				{ id: actionId, documentId, kind: 'action', createdInRevision: 0 }
+			);
+			state.projection.screenplays.push({
+				...scope,
+				documentVersion: 0,
+				order: [headingId, actionId],
+				elements: [
+					{ id: actionId, kind: 'action', status: 'present', text: 'Initial action.' },
+					{ id: headingId, kind: 'scene-heading', status: 'present', text: 'INT. ROOM' }
+				]
+			});
+		}
+		state.projection.screenplayElements.sort((a, b) => a.id.localeCompare(b.id));
+		await pool.query('TRUNCATE authoring_projects CASCADE');
+		await new PostgresProjectStoreResolver(pool).seedProject(state);
+		const app = application();
+		const proposals = await Promise.all(
+			scopes.map((scope, index) => propose(app, scope, `Changed action ${index}.`))
+		);
+		const results = await Promise.all(proposals.map((item) => accept(application(), item.id)));
+		expect(
+			results.every((result) => result.ok),
+			JSON.stringify(results)
+		).toBe(true);
+		expect((await app.getProjectHead(projectId))?.number).toBe(12);
+		expect((await app.listHistory(projectId)).map((item) => item.resultingRevision)).toEqual(
+			Array.from({ length: 12 }, (_, index) => index + 1)
+		);
+		expect(
+			(await app.listProposals(projectId)).filter((item) => item.status === 'accepted')
+		).toHaveLength(12);
+	}, 60_000);
+
+	it('classifies exhausted head retries as busy and leaves the Proposal pending', async () => {
+		const saved = await propose(application());
+		const store = new PostgresAuthoringProjectStore(pool, projectId);
+		const commit = vi.spyOn(store, 'commitAccepted').mockResolvedValue({
+			ok: false,
+			code: 'STALE_PROJECT_HEAD',
+			message: 'Injected concurrent head movement'
+		});
+		const resolver = { forProject: async () => store };
+		const app = new AuthoringApplication(resolver, { maxHeadRetries: 2 });
+		expect(await accept(app, saved.id)).toMatchObject({
+			ok: false,
+			error: { code: 'STORE_BUSY' }
+		});
+		expect(commit).toHaveBeenCalledTimes(3);
+		expect((await application().getProposal(projectId, saved.id))?.status).toBe('pending');
+		expect((await application().getProjectHead(projectId))?.number).toBe(0);
+		expect(await application().listHistory(projectId)).toHaveLength(0);
+		expect((await pool.query('SELECT 1 FROM authoring_checkpoints')).rowCount).toBe(0);
 	});
 
 	it('round-trips ChangeSet, revision, scoped checkpoint and accepted history v1', async () => {
