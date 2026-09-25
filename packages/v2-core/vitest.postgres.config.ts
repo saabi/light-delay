@@ -2,8 +2,8 @@ import { defineConfig } from 'vitest/config';
 export default defineConfig({
 	test: {
 		environment: 'node',
-		include: ['src/**/*.test.ts'],
-		exclude: ['src/**/*.postgres.test.ts'],
+		include: ['src/**/*.postgres.test.ts'],
+		fileParallelism: false,
 		expect: { requireAssertions: true }
 	}
 });
