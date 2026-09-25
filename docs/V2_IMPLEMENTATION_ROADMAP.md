@@ -192,8 +192,13 @@ Initial persistence:
 
 Use migrations from the beginning.
 
-Authentication, project authorization and a transactional outbox remain future work. The current
+Minimal project authorization and a transactional outbox are conscious M2.5 deferrals, not omitted
+requirements. The trusted accepting-principal boundary remains in force. Add project authorization
+before meaningful multi-user or external Studio exposure, and revisit an outbox when committed
+changes require reliable asynchronous publication to external workers or services. The current
 single-user fixture must not be deployed to hold real authoring before an access boundary is added.
+The bootstrap document/cut catalog is sufficient for this bounded slice; future Story → Version →
+Outline → Screenplay work needs an authoritative path for dynamically adding structure.
 
 ### Exit criteria
 

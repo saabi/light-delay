@@ -1,5 +1,13 @@
 # Estado del proyecto
 
+## 2026-09-25 — Studio M2.5 independent-review corrections (English source)
+
+- Raised bounded global-head retries to 64 and added `STORE_BUSY` for exhaustion; scoped conflicts still stop immediately and pending Proposals remain pending on exhaustion.
+- Handled idle PostgreSQL pool errors without logging connection details, and added focused regression coverage.
+- CI now reruns the same M2 authoring contract suite against in-memory and PostgreSQL, alongside the existing PostgreSQL integration tests.
+- Transactional outbox and minimal project authorization are conscious M2.5 deferrals. The revision-0 document/cut catalog is temporary for this bounded slice; future dynamic Story/Version/Outline/Screenplay structure needs its own authoritative mutation path.
+- M2.5 remains pending narrow independent verification and human acceptance. No staging deployment or database migration was performed in this correction pass.
+
 ## 2026-09-25 — Studio M2.5 PostgreSQL implementation (English source)
 
 - M2 is accepted at `c0881311`. M2.5 adds PostgreSQL durability through the established asynchronous authoring store without changing provisional Draft or Proposal acceptance semantics.

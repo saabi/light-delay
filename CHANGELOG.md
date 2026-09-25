@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-25 — Studio M2.5 independent-review corrections
+
+- Retried unrelated PostgreSQL project-head movement with a generous bounded budget; exhaustion now returns retryable `STORE_BUSY` while preserving pending Proposals and scoped conflict behavior.
+- Handled idle PostgreSQL pool errors without exposing connection details in logs.
+- Enforced the unchanged M2 authoring contract against both stores in CI and added high-contention and retry-exhaustion coverage.
+- Recorded the conscious outbox and project-authorization deferrals and the future dynamic document/cut catalog constraint.
+
 ## 2026-09-25 — Studio M2.5 PostgreSQL persistence
 
 - Added versioned PostgreSQL migrations and a scoped authoring store behind the accepted M2 asynchronous ports.

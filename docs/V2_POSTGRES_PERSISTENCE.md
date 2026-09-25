@@ -41,8 +41,10 @@ lock and unique ChangeSet/revision keys prevent duplicate terminal results and h
 
 The project lock is needed only for deterministic revision ordering. Distinct document rows can be
 prepared concurrently. If unrelated work wins the ordering lock after an application read, the
-application rebuilds the accepted record against the new head and retries up to three times. A
-changed target document version remains a semantic conflict. The current-state query uses a
+application rebuilds the accepted record against the new head and retries up to 64 times. If the
+bounded budget is exhausted, `STORE_BUSY` tells the caller to retry later and leaves the Proposal
+pending. A changed target document version remains a semantic conflict and stops retries. The
+current-state query uses a
 `REPEATABLE READ READ ONLY` transaction for a consistent project/scopes view. A retry after an
 uncertain acceptance response observes an accepted Proposal and cannot append history again.
 
@@ -65,10 +67,12 @@ SELECT version, applied_at FROM authoring_schema_migrations ORDER BY version;
 ```
 
 Set `TEST_DATABASE_URL` to a disposable PostgreSQL database and run `npm run test:postgres` for
-real transaction tests. The suite creates a random isolated schema, migrates it from zero, uses
-separate pool connections for concurrent calls, and drops the schema afterward. CI provisions a
-PostgreSQL 16 service and runs migrations and the integration suite alongside core and Studio
-checks. It does not contact Linode or any staging database.
+real transaction tests and the unchanged M2 authoring contract suite against PostgreSQL. The
+normal `test:v2-core` run executes the same contract against the in-memory store. PostgreSQL test
+files create random isolated schemas, migrate them from zero, clear project rows between tests,
+and drop the schemas afterward. CI provisions one PostgreSQL 16 service for migrations, the
+integration suite and contract parity alongside core and Studio checks. It does not contact
+Linode or any staging database.
 
 The synthetic scale check adds 250 screenplay elements to two cuts, accepts a change in one cut,
 and checks that the revision metadata occupies less than one tenth of the initial project JSON.
@@ -79,6 +83,18 @@ It also checks that the acceptance wrote exactly one scoped checkpoint.
 This milestone does not run staging migrations or deploy Studio. Before a host rollout, review the
 exact migration and release SHA, take and exercise a database backup/restore, and install a fixed
 administrator-controlled migration entry point before activation. The existing activation helper
-must not discover or execute a release-controlled migration hook. Authentication, an outbox and
-workers remain separate work. Document `kind` is stored without assuming all future authored
-documents are screenplays; only screenplay behavior exists in the current M2 domain contract.
+must not discover or execute a release-controlled migration hook.
+
+The transactional outbox is a conscious deferral: M2.5 has no committed change that must atomically
+publish work to an external Agent Runtime, generation/export worker or notification service. Revisit
+it when reliable asynchronous side effects are required. Minimal project authorization is also
+consciously deferred from M2.5. The trusted accepting-principal boundary already prevents client
+data from choosing the accepter; project access control must be added before meaningful multi-user
+or external Studio exposure. Neither deferral changes the current trusted-principal boundary.
+
+The revision-0/bootstrap snapshot currently supplies the project document/cut catalog. This is
+sufficient for the bounded M2/M2.5 screenplay slice, but it is not the permanent path for dynamic
+StoryVersions, cuts or future document kinds such as Outline. Future Story → Version → Outline →
+Screenplay work needs an authoritative mutation and persistence path for that structure. Document
+`kind` is stored without assuming all future authored documents are screenplays; only screenplay
+behavior exists in the current M2 domain contract.
