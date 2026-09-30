@@ -36,6 +36,48 @@ import {
 } from './authoring-store.js';
 
 type Db = Pool | PoolClient;
+const unavailableCodes = new Set([
+	'ECONNREFUSED',
+	'ECONNRESET',
+	'ECONNABORTED',
+	'EPIPE',
+	'ETIMEDOUT',
+	'ENETDOWN',
+	'ENETUNREACH',
+	'EHOSTDOWN',
+	'EHOSTUNREACH',
+	'57P01',
+	'57P02',
+	'57P03',
+	'25P03',
+	'53300'
+]);
+
+/** Only transport, server shutdown, and configured timeout failures are retryable. */
+export function isPostgresUnavailable(error: unknown): boolean {
+	if (!error || typeof error !== 'object') return false;
+	const candidate = error as { code?: unknown; message?: unknown; cause?: unknown };
+	if (typeof candidate.code === 'string') {
+		if (candidate.code.startsWith('08') || unavailableCodes.has(candidate.code)) return true;
+		if (candidate.code === '57014')
+			return typeof candidate.message === 'string' && /statement timeout/i.test(candidate.message);
+	}
+	if (
+		typeof candidate.message === 'string' &&
+		/^(Connection terminated unexpectedly|Connection terminated due to connection timeout|timeout exceeded when trying to connect|Connection terminated during connection setup)$/.test(
+			candidate.message
+		)
+	)
+		return true;
+	return candidate.cause !== error && isPostgresUnavailable(candidate.cause);
+}
+
+export const POSTGRES_CONNECTION_LIMITS = {
+	connectionTimeoutMillis: 5_000,
+	statement_timeout: 15_000,
+	idle_in_transaction_session_timeout: 30_000,
+	keepAlive: true
+} as const;
 const invalid = (message: string): StoreCommitResult => ({
 	ok: false,
 	code: 'INVALID_ACCEPTED_MUTATION',
@@ -68,16 +110,35 @@ async function inTransaction<T>(
 	action: (client: PoolClient) => Promise<T>
 ): Promise<T> {
 	const client = await pool.connect();
+	let connectionError: Error | undefined;
+	const onError = (error: Error) => {
+		connectionError ??= error;
+	};
+	client.on('error', onError);
+	let discard = false;
 	try {
 		await client.query('BEGIN');
 		const result = await action(client);
+		if (connectionError) throw connectionError;
 		await client.query('COMMIT');
+		if (connectionError) throw connectionError;
 		return result;
 	} catch (error) {
-		await client.query('ROLLBACK');
+		discard = !!connectionError || isPostgresUnavailable(error);
+		if (!discard) {
+			try {
+				await client.query('ROLLBACK');
+			} catch {
+				discard = true;
+			}
+		}
 		throw error;
 	} finally {
-		client.release();
+		// Keep the listener until release: pg may emit after rejecting an active query.
+		client.release(
+			discard || connectionError ? (connectionError ?? new Error('Connection unusable')) : undefined
+		);
+		client.off('error', onError);
 	}
 }
 
@@ -749,10 +810,10 @@ export class PostgresProjectStoreResolver implements ProjectStoreResolver {
 
 export function createPostgresPool(connectionString: string): Pool {
 	if (!connectionString) throw new Error('DATABASE_URL is required for PostgreSQL authoring');
-	const pool = new Pool({ connectionString });
-	pool.on('error', () => {
+	const pool = new Pool({ connectionString, ...POSTGRES_CONNECTION_LIMITS });
+	pool.on('error', (error: Error & { code?: string }) => {
 		// pg removes failed idle clients from the pool. Active query errors still reach their callers.
-		console.error('Studio PostgreSQL pool lost an idle connection');
+		console.error('Studio PostgreSQL pool lost an idle connection', error.code ?? 'unknown');
 	});
 	return pool;
 }

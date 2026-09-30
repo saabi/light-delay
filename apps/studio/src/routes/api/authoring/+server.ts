@@ -1,5 +1,6 @@
 import { json, type RequestHandler } from '@sveltejs/kit';
 import { getAuthoringApplication, serverAuthoringContext } from '$lib/server/authoring';
+import { isPostgresUnavailable } from '@light-delay/v2-core/postgres';
 
 const methods = new Set([
 	'getProjectHead',
@@ -60,10 +61,18 @@ export const POST: RequestHandler = async ({ request }) => {
 		}
 		return json(result ?? null);
 	} catch (error) {
-		const message =
-			error instanceof Error && error.message.startsWith('DATABASE_URL is required')
-				? error.message
-				: 'Studio authoring is temporarily unavailable';
-		return json({ message }, { status: 503 });
+		const unavailable = isPostgresUnavailable(error);
+		const code =
+			error && typeof error === 'object' && 'code' in error ? String(error.code) : 'unknown';
+		console.error('Studio authoring request failed', { code, method: input.method });
+		return unavailable
+			? json(
+					{ code: 'STORE_UNAVAILABLE', message: 'Database connection is temporarily unavailable' },
+					{ status: 503, headers: { 'Retry-After': '1' } }
+				)
+			: json(
+					{ code: 'STORE_REJECTED', message: 'Studio authoring request failed' },
+					{ status: 500 }
+				);
 	}
 };

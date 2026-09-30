@@ -5,6 +5,7 @@ import { AuthoringApplication } from './authoring.js';
 import { authoringFixtureIds, harborLightInitialRevision } from './authoring-fixture.js';
 import { InMemoryAuthoringProjectStore, resolveElementState } from './authoring-store.js';
 import {
+	createPostgresPool,
 	PostgresAuthoringProjectStore,
 	PostgresProjectStoreResolver
 } from './postgres-authoring-store.js';
@@ -117,11 +118,72 @@ describe('PostgreSQL authoring persistence', () => {
 		expect(rows.rows).toEqual([{ version: '001_authoring.sql' }]);
 	});
 
+	it('applies bounded server-side connection settings', async () => {
+		const bounded = createPostgresPool(url);
+		try {
+			expect(bounded.options.connectionTimeoutMillis).toBe(5000);
+			expect(bounded.options.keepAlive).toBe(true);
+			expect((await bounded.query('SHOW statement_timeout')).rows[0].statement_timeout).toBe('15s');
+			expect(
+				(await bounded.query('SHOW idle_in_transaction_session_timeout')).rows[0]
+					.idle_in_transaction_session_timeout
+			).toBe('30s');
+		} finally {
+			await bounded.end();
+		}
+	});
+
 	it('saves a Draft without an authoritative revision', async () => {
 		const app = application();
 		await draft(app);
 		expect((await app.getProjectHead(projectId))?.number).toBe(0);
 		expect(await app.listHistory(projectId)).toHaveLength(0);
+	});
+
+	it('survives termination of a checked-out acceptance transaction without partial history', async () => {
+		const app = application();
+		const pending = await propose(app);
+		const blocker = await pool.connect();
+		try {
+			await blocker.query('BEGIN');
+			const blockerPid = Number(
+				(await blocker.query('SELECT pg_backend_pid() AS pid')).rows[0].pid
+			);
+			await blocker.query('SELECT 1 FROM authoring_projects WHERE project_id = $1 FOR UPDATE', [
+				projectId
+			]);
+			const acceptance = accept(app, pending.id).then(
+				(value) => ({ value }),
+				(error: unknown) => ({ error })
+			);
+			const deadline = Date.now() + 10_000;
+			let waitingPid: number | undefined;
+			while (!waitingPid && Date.now() < deadline) {
+				const waiting = await admin.query<{ pid: number }>(
+					'SELECT pid FROM pg_stat_activity WHERE $1 = ANY(pg_blocking_pids(pid))',
+					[blockerPid]
+				);
+				waitingPid = waiting.rows[0]?.pid;
+				if (!waitingPid) await new Promise<void>((resolve) => setImmediate(resolve));
+			}
+			expect(waitingPid).toBeDefined();
+			const terminated = await admin.query('SELECT pg_terminate_backend($1) AS terminated', [
+				waitingPid
+			]);
+			expect(terminated.rows[0].terminated).toBe(true);
+			const outcome = await acceptance;
+			expect('error' in outcome && outcome.error).toBeInstanceOf(Error);
+		} finally {
+			await blocker.query('ROLLBACK');
+			blocker.release();
+		}
+		expect((await app.getProposal(projectId, pending.id))?.status).toBe('pending');
+		expect((await app.getProjectHead(projectId))?.number).toBe(0);
+		expect(await app.listHistory(projectId)).toHaveLength(0);
+		expect(
+			(await pool.query('SELECT count(*)::int AS count FROM authoring_checkpoints')).rows[0].count
+		).toBe(0);
+		expect((await pool.query('SELECT 1 AS healthy')).rows[0].healthy).toBe(1);
 	});
 
 	it('reloads a Draft after constructing a fresh application', async () => {

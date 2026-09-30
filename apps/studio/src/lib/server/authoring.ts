@@ -32,7 +32,13 @@ async function createApplication(): Promise<AuthoringApplication> {
 		throw new Error('DATABASE_URL is required for PostgreSQL Studio authoring');
 	const { createPostgresPool, PostgresProjectStoreResolver } =
 		await import('@light-delay/v2-core/postgres');
-	const resolver = new PostgresProjectStoreResolver(createPostgresPool(connectionString));
-	await resolver.seedProject(harborLightInitialRevision);
-	return new AuthoringApplication(resolver);
+	const pool = createPostgresPool(connectionString);
+	try {
+		const resolver = new PostgresProjectStoreResolver(pool);
+		await resolver.seedProject(harborLightInitialRevision);
+		return new AuthoringApplication(resolver);
+	} catch (error) {
+		await pool.end().catch(() => {});
+		throw error;
+	}
 }

@@ -41,6 +41,7 @@ export type AuthoringErrorCode =
 	| 'INVALID_DRAFT'
 	| 'CONFLICT'
 	| 'STORE_BUSY'
+	| 'STORE_UNAVAILABLE'
 	| 'STORE_REJECTED';
 
 export type AuthoringError = {
