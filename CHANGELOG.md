@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-30 — Studio M2.5 connectivity correction
+
+- Protected checked-out PostgreSQL transaction clients from unhandled connection errors and discarded broken clients without replaying transactions.
+- Added narrow database-unavailable classification, safe HTTP 503 responses, and bounded pool connection/statement/idle-transaction waits.
+- Added bounded Studio transient retries, persisted-state reconciliation after ambiguous mutations, a reconnecting warning, and a manual retry that keeps unsaved browser work.
+- Added a real PostgreSQL backend-termination regression and focused HTTP, retry and browser coverage. No staging or Pages deployment or migration was performed.
+
 ## 2026-09-26 — Studio M2.5 correction verification
 
 - Recorded the independent verification of the M2.5 corrections, including the open checked-out-connection crash (V1).

@@ -50,28 +50,35 @@ uncertain acceptance response observes an accepted Proposal and cannot append hi
 
 ## Connection failures
 
-Studio must survive PostgreSQL restarts and network drops, including long ones. The pool logs and
-discards failed idle connections without connection details. A connection checked out by a store
-transaction still needs its own error listener: without one, a dropped connection during a
-transaction terminates the process (correction verification finding V1, open at `20b3d25`).
-Transactions are never replayed automatically.
+Studio survives PostgreSQL restarts and connection loss, including a checked-out transaction client
+(correction verification finding V1). `inTransaction` listens for client errors until release,
+discards unusable connections, and preserves the original transaction failure if rollback also
+fails. It never replays a transaction. The pool handles idle-client errors separately.
 
-Decided policy (Sep 26, 2026; not yet implemented beyond the idle-pool handler):
+The pool uses a 5 s connection/acquisition timeout, 15 s PostgreSQL statement timeout, 30 s
+idle-in-transaction timeout, and TCP keepalive. The HTTP boundary classifies connection refused,
+reset and other transport failures; SQLSTATE class `08`; shutdown `57P01`–`57P03`;
+idle-in-transaction timeout `25P03`; too many connections `53300`; and PostgreSQL statement timeout `57014` with its specific
+message. Only these receive HTTP 503, `STORE_UNAVAILABLE`, and `Retry-After: 1`. Semantic,
+integrity, validation and arbitrary SQL errors remain non-retryable. Browser responses contain
+safe messages; server logs include the error code and request method.
 
-- The server fails fast. Connectivity failures return HTTP 503 with the retryable code
-  `STORE_UNAVAILABLE` and a `Retry-After` header; other errors are logged with their code and are
-  not retryable. The pool sets connect, statement and idle-in-transaction timeouts and keepalive.
-- There is no server-side command queue. PostgreSQL stays the single source of truth; a RAM queue
-  is lost on restart, a Redis queue adds a second durable store, and replaying a queued acceptance
-  would apply a decision to a state nobody saw. Asynchronous side effects wait for the deferred
-  transactional outbox.
-- The client retries transient failures (network, `STORE_UNAVAILABLE`, `STORE_BUSY`) three times
-  with jittered backoff of about 0.5 s, 1.5 s and 4 s. It never retries semantic results. After a
-  retried accept, reject or restore it re-reads state, because an already-resolved or conflict
-  result may mean an earlier attempt succeeded. After the third failure it shows a banner, keeps
-  the unsaved work in the browser and offers a manual retry.
-- The next Studio milestone mirrors unsaved edits to IndexedDB and adds a client-generated command
-  id stored with the ChangeSet, so a retry after a lost acknowledgement returns the original result.
+The browser retries network failures, `STORE_UNAVAILABLE`, and `STORE_BUSY` three times after
+the initial attempt, at 0.5, 1.5 and 4 s with ±25% jitter. A longer valid seconds or HTTP-date
+`Retry-After` is honored up to 60 s.
+It does not retry semantic results. After a lost accept/reject response it checks the Proposal's
+terminal status and accepted history before resending. Restore checks its scoped ChangeSet,
+target revision and expected document version. These terminal and scoped preconditions prevent
+duplicate accepted history. An ambiguous new Draft or CreateProposal is only re-read automatically:
+M2 permits multiple Proposals from one Draft, and a new Draft lacks a stable id. The user must
+choose **Retry now** before the browser can send that command again.
+
+Studio shows a restrained reconnecting state during retries. After exhaustion it keeps the editor
+contents in the current browser session and shows a persistent warning and **Retry now** action.
+The manual path reconciles persisted state before reporting success. A refresh or closed tab can
+still lose unsaved browser edits. PostgreSQL remains the sole durable source of accepted history;
+there is no server-side queue. IndexedDB protection and durable per-command ids remain for the
+next Studio milestone, as do the transactional outbox and authorization.
 
 Details: [correction verification §9](reviews/2026-09-26-M2.5-correction-verification-claude.md).
 

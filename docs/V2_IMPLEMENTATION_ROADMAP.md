@@ -199,6 +199,9 @@ changes require reliable asynchronous publication to external workers or service
 single-user fixture must not be deployed to hold real authoring before an access boundary is added.
 The bootstrap document/cut catalog is sufficient for this bounded slice; future Story → Version →
 Outline → Screenplay work needs an authoritative path for dynamically adding structure.
+IndexedDB protection for unsaved browser work and durable per-command idempotency ids are likewise
+deferred to the next Studio milestone. The M2.5 connectivity correction uses bounded client retries
+and persisted-state reconciliation; it never replays a failed server transaction.
 
 ### Exit criteria
 

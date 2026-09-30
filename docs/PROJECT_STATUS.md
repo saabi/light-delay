@@ -1,5 +1,12 @@
 # Estado del proyecto
 
+## 2026-09-30 — Studio M2.5 connectivity correction (English source)
+
+- Corrected V1 at the checked-out PostgreSQL transaction client: connection errors are handled through release, failed clients are discarded, and the original failure survives rollback failure. A real PostgreSQL test terminates a blocked acceptance backend and checks process survival, pending Proposal, unchanged head/history/checkpoints, and pool recovery.
+- Added narrow `STORE_UNAVAILABLE` classification and safe HTTP 503 with `Retry-After`; configured 5 s connect/acquisition, 15 s statement and 30 s idle-transaction bounds with keepalive.
+- Studio now retries transient failures three times with jittered delays, reconciles ambiguous accept/reject/restore results against persisted state, and shows reconnecting and persistent manual-retry states while retaining unsaved browser work. Ambiguous new Draft/Proposal creation is re-read rather than replayed automatically because M2 permits multiple Proposals from a Draft.
+- B1's server-side stale-head retry and B3's shared in-memory/PostgreSQL contract remain distinct and unchanged. M2.5 still awaits independent targeted verification and human acceptance. No staging database migration, Studio deployment or Pages promotion was performed.
+
 ## 2026-09-26 — Studio M2.5 correction verification and connectivity-failure decision (English source)
 
 - Independent verification at `20b3d25` confirmed B1 (bounded head retries, `STORE_BUSY`, no partial state) and B3 (the unchanged 36-test M2 contract runs against both stores in CI). B2 holds for idle connections only: a connection checked out by a store transaction still crashes Studio when PostgreSQL drops it (finding V1). See [the correction verification](reviews/2026-09-26-M2.5-correction-verification-claude.md).
