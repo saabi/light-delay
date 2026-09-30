@@ -3,6 +3,7 @@ import {
 	type AuthoringApplication,
 	type TrustedExecutionContext
 } from '@light-delay/v2-core';
+import { createRetriedRequest, type ConnectionState } from './authoring-retry.js';
 
 type ClientMethods = Pick<
 	AuthoringApplication,
@@ -17,17 +18,17 @@ type ClientMethods = Pick<
 	| 'handle'
 >;
 
-async function call<T>(method: string, args: unknown[]): Promise<T> {
-	const response = await fetch('/api/authoring', {
-		method: 'POST',
-		headers: { 'content-type': 'application/json' },
-		body: JSON.stringify({ method, args })
-	});
-	if (!response.ok) {
-		const body = await response.json().catch(() => ({}));
-		throw new Error(body.message ?? `Studio authoring request failed (${response.status})`);
+const connectionListeners = new Set<(state: ConnectionState) => void>();
+const call = createRetriedRequest({
+	fetcher: (...args) => fetch(...args),
+	onState: (state) => {
+		for (const listener of connectionListeners) listener(state);
 	}
-	return (await response.json()) as T;
+});
+export const authorizeManualAuthoringRetry = () => call.authorizeManualRetry();
+export function onAuthoringConnectionState(listener: (state: ConnectionState) => void): () => void {
+	connectionListeners.add(listener);
+	return () => connectionListeners.delete(listener);
 }
 
 export const authoringApplication: ClientMethods = {

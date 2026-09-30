@@ -55,3 +55,34 @@ test('saves, proposes, rejects, accepts, isolates cuts, and restores screenplay 
 	await expect(page.getByText(/Restored as new project revision 2/)).toBeVisible();
 	await expect(page.getByLabel('dialogue')).toHaveValue('Leave the channel open.');
 });
+
+test('keeps unsaved editor text through exhausted retries and saves on Retry now', async ({
+	page
+}) => {
+	await page.goto('/');
+	const dialogue = page.getByLabel('dialogue');
+	await expect(dialogue).toBeVisible();
+	const text = `${await dialogue.inputValue()} Still here.`;
+	await dialogue.fill(text);
+	let unavailable = true;
+	await page.route('**/api/authoring', async (route) => {
+		const body = route.request().postDataJSON();
+		if (unavailable && body.method === 'handle' && body.args[0].type === 'SaveDraft')
+			await route.fulfill({
+				status: 503,
+				contentType: 'application/json',
+				body: JSON.stringify({ code: 'STORE_UNAVAILABLE', message: 'Database unavailable' })
+			});
+		else await route.continue();
+	});
+	await page.getByRole('button', { name: 'Save Draft' }).click();
+	await expect(
+		page.getByText('Database unavailable. Your unsaved work is kept in this browser.')
+	).toBeVisible({ timeout: 15_000 });
+	await expect(dialogue).toHaveValue(text);
+	unavailable = false;
+	await page.getByRole('button', { name: 'Retry now' }).click();
+	await expect(page.getByText('Draft saved', { exact: true })).toBeVisible();
+	await expect(dialogue).toHaveValue(text);
+	await expect(page.getByRole('button', { name: 'Retry now' })).toHaveCount(0);
+});

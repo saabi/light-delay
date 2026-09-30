@@ -11,8 +11,11 @@
 	import {
 		authoringApplication,
 		authoringFixtureIds,
+		authorizeManualAuthoringRetry,
+		onAuthoringConnectionState,
 		studioAuthoringContext
 	} from '$lib/authoring-client';
+	import { AuthoringRequestError, type ConnectionState } from '$lib/authoring-retry';
 	import { describeOperation, draftSavedMessage } from '$lib/authoring-presenter';
 
 	let view = $state<ScreenplayView>();
@@ -29,6 +32,9 @@
 	let reviewOpen = $state(false);
 	let historyOpen = $state(false);
 	let localElementCounter = 0;
+	let connection = $state<ConnectionState>({ kind: 'ready' });
+	let retryAction = $state<(() => Promise<void>) | undefined>();
+	let activeAction: (() => Promise<void>) | undefined;
 
 	const scope = $derived<DocumentVersionScope>({
 		documentId: authoringFixtureIds.primaryDocument,
@@ -37,15 +43,37 @@
 	const pendingProposal = $derived(proposal?.status === 'pending' ? proposal : undefined);
 
 	onMount(() => {
+		const unsubscribe = onAuthoringConnectionState((state) => {
+			connection = state;
+			if (state.kind === 'unavailable' && activeAction) retryAction = activeAction;
+		});
 		void openVersion(selectedVersionId);
+		return unsubscribe;
 	});
+
+	async function perform(action: () => Promise<void>) {
+		activeAction = action;
+		busy = true;
+		try {
+			await action();
+			if (connection.kind !== 'unavailable') retryAction = undefined;
+		} catch (error) {
+			status = error instanceof Error ? error.message : 'Studio request failed';
+			if (error instanceof AuthoringRequestError && error.transient) retryAction = action;
+		} finally {
+			activeAction = undefined;
+			busy = false;
+		}
+	}
+
+	async function retryNow() {
+		authorizeManualAuthoringRetry();
+		if (retryAction) await perform(retryAction);
+		else await openVersion(selectedVersionId);
+	}
 
 	async function openVersion(versionId: string) {
 		busy = true;
-		selectedVersionId = versionId;
-		proposal = undefined;
-		proposalBaseElements = [];
-		reviewOpen = false;
 		try {
 			const nextScope = { documentId: authoringFixtureIds.primaryDocument, versionId };
 			const projectId = authoringFixtureIds.project;
@@ -55,6 +83,10 @@
 				authoringApplication.listProposals(projectId),
 				authoringApplication.listHistory(projectId)
 			]);
+			selectedVersionId = versionId;
+			proposal = undefined;
+			proposalBaseElements = [];
+			reviewOpen = false;
 			view = nextView;
 			const consumed = new Set(
 				proposals.filter((item) => item.status === 'accepted').map((item) => item.source.ref.id)
@@ -102,6 +134,8 @@
 			history = nextHistory;
 		} catch (error) {
 			status = error instanceof Error ? error.message : 'Could not load screenplay';
+			if (error instanceof AuthoringRequestError && error.transient)
+				retryAction = () => openVersion(versionId);
 		} finally {
 			busy = false;
 		}
@@ -292,8 +326,10 @@
 			<button class:active={historyOpen} onclick={() => (historyOpen = !historyOpen)}
 				>History</button
 			>
-			<button class="primary" disabled={busy || (!draft && !dirty)} onclick={proposeChanges}
-				>Review changes</button
+			<button
+				class="primary"
+				disabled={busy || (!draft && !dirty)}
+				onclick={() => perform(proposeChanges)}>Review changes</button
 			>
 		</div>
 	</header>
@@ -311,8 +347,22 @@
 		</div>
 		<p class:accepted={status.startsWith('Accepted') || status.startsWith('Restored')}>{status}</p>
 		{#if !view && !busy}<button onclick={() => openVersion(selectedVersionId)}>Retry</button>{/if}
-		<button disabled={busy || !dirty} onclick={saveDraft}>Save Draft</button>
+		<button disabled={busy || !dirty} onclick={() => perform(saveDraft)}>Save Draft</button>
 	</div>
+	{#if connection.kind !== 'ready'}
+		<div class="connection-warning" role="status">
+			{connection.kind === 'retrying'
+				? `Reconnecting… (attempt ${connection.attempt} of 3)`
+				: connection.reason === 'busy'
+					? 'Studio is busy. Your work is kept in this browser.'
+					: connection.reason === 'unknown'
+						? 'Could not confirm the last save. Your work is kept in this browser.'
+						: 'Database unavailable. Your unsaved work is kept in this browser.'}
+			{#if connection.kind === 'unavailable'}
+				<button onclick={retryNow} disabled={busy}>Retry now</button>
+			{/if}
+		</div>
+	{/if}
 
 	<main class:withPanel={reviewOpen || historyOpen}>
 		<section class="workspace" aria-busy={busy}>
@@ -328,6 +378,7 @@
 						class:character={element.kind === 'character'}
 					>
 						<textarea
+							disabled={busy}
 							aria-label={element.kind}
 							class:sceneHeading={element.kind === 'scene-heading'}
 							rows={element.kind === 'action' ? 2 : 1}
@@ -336,21 +387,23 @@
 						<div class="element-actions">
 							<button
 								aria-label="Move up"
-								disabled={index === 0}
+								disabled={busy || index === 0}
 								onclick={() => moveElement(index, -1)}>↑</button
 							>
 							<button
 								aria-label="Move down"
-								disabled={index === elements.length - 1}
+								disabled={busy || index === elements.length - 1}
 								onclick={() => moveElement(index, 1)}>↓</button
 							>
-							<button aria-label="Remove element" onclick={() => removeElement(element.id)}
-								>Remove</button
+							<button
+								aria-label="Remove element"
+								disabled={busy}
+								onclick={() => removeElement(element.id)}>Remove</button
 							>
 						</div>
 					</div>
 				{/each}
-				<button class="add-action" onclick={addAction}>+ Action</button>
+				<button class="add-action" disabled={busy} onclick={addAction}>+ Action</button>
 			</article>
 			<footer>
 				<span
@@ -399,8 +452,9 @@
 					</p>
 					{#if pendingProposal}
 						<div class="proposal-actions">
-							<button onclick={rejectProposal}>Reject</button>
-							<button class="primary" onclick={acceptProposal}>Accept changes</button>
+							<button onclick={() => perform(rejectProposal)}>Reject</button>
+							<button class="primary" onclick={() => perform(acceptProposal)}>Accept changes</button
+							>
 						</div>
 					{/if}
 				{:else}
@@ -417,7 +471,7 @@
 				</p>
 				<ul class="history-list">
 					<li>
-						<span>Initial screenplay</span><button onclick={() => restoreRevision(0)}
+						<span>Initial screenplay</span><button onclick={() => perform(() => restoreRevision(0))}
 							>Restore</button
 						>
 					</li>
@@ -428,7 +482,9 @@
 									>{changeSet.intent}</small
 								>
 							</div>
-							<button onclick={() => restoreRevision(changeSet.resultingRevision)}>Restore</button>
+							<button onclick={() => perform(() => restoreRevision(changeSet.resultingRevision))}
+								>Restore</button
+							>
 						</li>
 					{/each}
 				</ul>
@@ -438,6 +494,22 @@
 </div>
 
 <style>
+	.connection-warning {
+		padding: 9px 18px;
+		background: #fff2dc;
+		color: #4c391b;
+		font-size: 12px;
+		display: flex;
+		align-items: center;
+		gap: 12px;
+	}
+	.connection-warning button {
+		border: 1px solid currentColor;
+		border-radius: 4px;
+		background: transparent;
+		padding: 4px 8px;
+		cursor: pointer;
+	}
 	.shell {
 		min-height: 100vh;
 	}
