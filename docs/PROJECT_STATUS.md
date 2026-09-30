@@ -1,5 +1,12 @@
 # Estado del proyecto
 
+## 2026-09-30 — Studio M2.5 N1 correction (English source)
+
+- Corrected N1 at the existing client retry/reconciliation layer: after an ambiguous attempt and a semantic resend failure, authoritative reconciliation can establish success; otherwise the real failure remains. Transaction behavior and existing outcome checks are unchanged.
+- Real PostgreSQL regressions cover late COMMIT accept/reject/restore, all three incompatible-writer outcomes and exact history integrity. The built Studio page confirms accepted state and restored authoritative text. B1–B4/V1 and both shared-store contracts pass. See [the correction disposition](reviews/2026-09-30-M2.5-N1-correction-disposition.md).
+- N2/N3 and existing C/D findings remain deferred. The user's WSL server was inaccessible; destructive tests used an isolated `studio_test` on PostgreSQL 16.15.
+- N1 is ready for narrow independent Claude Opus 5.5 verification. M2.5 is **not accepted**. PR #3 remains unmerged; staging/Linode and Pages promotion are untouched.
+
 ## 2026-09-30 — Studio M2.5 B-corrections verification (English source)
 
 - Independent verification of `3069d1c` closes B1 (Retry now refreshes after a committed accept, restore or Proposal creation without resending it), B2 (exact, idempotent Proposal reconciliation), B3 (`25P03` and between-query connection loss return 503) and B4's bounded waiting. V1, integrity, contention, store parity and the retry policy hold. See [the verification](reviews/2026-09-30-M2.5-B-corrections-verification-claude.md).

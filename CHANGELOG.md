@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-09-30 — Studio M2.5 N1 correction
+
+- Reconciled authoritative state once more when a resend after an ambiguous infrastructure failure returns a semantic failure. Only a confirmed intended outcome becomes success; genuine semantic failures are preserved.
+- Added real PostgreSQL delayed-COMMIT regressions for accept/reject/restore, incompatible-writer negatives and duplicate-history checks, plus a built Studio PostgreSQL browser regression for Accept and Restore in CI.
+- N1 is ready for narrow independent verification. M2.5 remains unaccepted; no merge, staging deployment or Pages promotion was made.
+
 ## 2026-09-30 — Studio M2.5 B-corrections verification
 
 - Recorded the independent verification of the M2.5 B-finding corrections: B1–B3 and B4's bounded waiting are closed; new finding N1 (a timed-out COMMIT can commit while Studio reports failure) blocks acceptance. Documentation only.

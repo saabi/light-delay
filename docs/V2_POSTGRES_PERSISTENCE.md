@@ -57,7 +57,9 @@ fails. It never replays a transaction. The pool handles idle-client errors separ
 
 The pool uses a 5 s connection/acquisition timeout, 15 s PostgreSQL statement timeout, 20 s
 client-side query-read timeout, 30 s idle-in-transaction timeout, and TCP keepalive beginning
-at 10 s. The query deadline also bounds a server or network that stops making progress. The HTTP boundary classifies connection refused,
+at 10 s. The query deadline also bounds a server or network that stops making progress.
+It abandons the client wait and does not necessarily cancel PostgreSQL work: a COMMIT already
+sent can still succeed, so a deadline on a mutation leaves its outcome ambiguous. The HTTP boundary classifies connection refused,
 reset and other transport failures; SQLSTATE class `08`; shutdown `57P01`–`57P03`;
 idle-in-transaction timeout `25P03`; too many connections `53300`; PostgreSQL statement timeout `57014` with its specific
 message; pg unqueryable-client connection messages; and the configured Query read timeout. Only these receive HTTP 503, `STORE_UNAVAILABLE`, and `Retry-After: 1`. Semantic,
@@ -69,7 +71,11 @@ the initial attempt, at 0.5, 1.5 and 4 s with ±25% jitter. A longer valid secon
 `Retry-After` is honored up to 60 s.
 It does not retry semantic results. After a lost accept/reject response it checks the Proposal's
 terminal status and accepted history before resending. Restore checks its scoped ChangeSet,
-target revision and expected document version. These terminal and scoped preconditions prevent
+target revision and expected document version. If a resend after an ambiguous infrastructure
+attempt returns a semantic failure, the client reconciles once more: a delayed original COMMIT
+may have completed while the resend waited on its locks. Only a confirmed intended outcome
+replaces that response with success; otherwise the original semantic failure is preserved.
+These terminal and scoped preconditions prevent
 duplicate accepted history. An ambiguous new Draft without a stable ID is only re-read automatically; the user must
 choose **Retry now** before it can be sent again. Studio supplies a stable Proposal ID for each
 logical CreateProposal attempt. Reconciliation reads that exact Proposal, and the persisted
