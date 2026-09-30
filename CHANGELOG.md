@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-09-26 — Studio M2.5 correction verification
+
+- Recorded the independent verification of the M2.5 corrections, including the open checked-out-connection crash (V1).
+- Recorded the database connectivity-failure decision: server fail-fast with retryable `STORE_UNAVAILABLE`, three client retries with jittered backoff and reconciliation, then a banner with manual retry; no server-side command queue.
+
 ## 2026-09-25 — Studio M2.5 independent-review corrections
 
 - Retried unrelated PostgreSQL project-head movement with a generous bounded budget; exhaustion now returns retryable `STORE_BUSY` while preserving pending Proposals and scoped conflict behavior.

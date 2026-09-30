@@ -48,6 +48,33 @@ current-state query uses a
 `REPEATABLE READ READ ONLY` transaction for a consistent project/scopes view. A retry after an
 uncertain acceptance response observes an accepted Proposal and cannot append history again.
 
+## Connection failures
+
+Studio must survive PostgreSQL restarts and network drops, including long ones. The pool logs and
+discards failed idle connections without connection details. A connection checked out by a store
+transaction still needs its own error listener: without one, a dropped connection during a
+transaction terminates the process (correction verification finding V1, open at `20b3d25`).
+Transactions are never replayed automatically.
+
+Decided policy (Sep 26, 2026; not yet implemented beyond the idle-pool handler):
+
+- The server fails fast. Connectivity failures return HTTP 503 with the retryable code
+  `STORE_UNAVAILABLE` and a `Retry-After` header; other errors are logged with their code and are
+  not retryable. The pool sets connect, statement and idle-in-transaction timeouts and keepalive.
+- There is no server-side command queue. PostgreSQL stays the single source of truth; a RAM queue
+  is lost on restart, a Redis queue adds a second durable store, and replaying a queued acceptance
+  would apply a decision to a state nobody saw. Asynchronous side effects wait for the deferred
+  transactional outbox.
+- The client retries transient failures (network, `STORE_UNAVAILABLE`, `STORE_BUSY`) three times
+  with jittered backoff of about 0.5 s, 1.5 s and 4 s. It never retries semantic results. After a
+  retried accept, reject or restore it re-reads state, because an already-resolved or conflict
+  result may mean an earlier attempt succeeded. After the third failure it shows a banner, keeps
+  the unsaved work in the browser and offers a manual retry.
+- The next Studio milestone mirrors unsaved edits to IndexedDB and adds a client-generated command
+  id stored with the ChangeSet, so a retry after a lost acknowledgement returns the original result.
+
+Details: [correction verification §9](reviews/2026-09-26-M2.5-correction-verification-claude.md).
+
 ## Local setup and migrations
 
 Use a local PostgreSQL database that you control. Set `DATABASE_URL` to its connection URL in the

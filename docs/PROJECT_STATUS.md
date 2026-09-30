@@ -1,5 +1,12 @@
 # Estado del proyecto
 
+## 2026-09-26 — Studio M2.5 correction verification and connectivity-failure decision (English source)
+
+- Independent verification at `20b3d25` confirmed B1 (bounded head retries, `STORE_BUSY`, no partial state) and B3 (the unchanged 36-test M2 contract runs against both stores in CI). B2 holds for idle connections only: a connection checked out by a store transaction still crashes Studio when PostgreSQL drops it (finding V1). See [the correction verification](reviews/2026-09-26-M2.5-correction-verification-claude.md).
+- Scoped conflicts end retries at the first attempt after the conflicting change is visible; before that, unrelated commits can cause several retries.
+- Decision: no server-side command queue. The server fails fast with a retryable `STORE_UNAVAILABLE`; the client retries transient failures three times with jittered backoff, reconciles accept/reject/restore outcomes, then shows a banner with unsaved work kept in the browser and a manual retry. IndexedDB persistence and per-command ids follow in the next Studio milestone.
+- M2.5 remains pending the V1 fix decision and human acceptance. No code, staging deployment or database migration changed.
+
 ## 2026-09-25 — Studio M2.5 independent-review corrections (English source)
 
 - Raised bounded global-head retries to 64 and added `STORE_BUSY` for exhaustion; scoped conflicts still stop immediately and pending Proposals remain pending on exhaustion.
