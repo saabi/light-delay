@@ -200,7 +200,7 @@ export function createRetriedRequest(options: {
 						continue;
 					}
 				}
-				const result = await once<T>(method, args);
+				let result: T = await once<T>(method, args);
 				if (
 					command &&
 					result &&
@@ -215,6 +215,19 @@ export function createRetriedRequest(options: {
 						return result;
 					}
 					continue;
+				}
+				// A timed-out COMMIT can finish while the resend waits on its locks.
+				// Confirm the intended outcome before returning the resend's semantic failure.
+				if (
+					command &&
+					ambiguous.has(key) &&
+					result &&
+					typeof result === 'object' &&
+					'ok' in result &&
+					result.ok === false
+				) {
+					const prior = await reconcile(command);
+					if (prior?.ok) result = prior as T;
 				}
 				if (command) ambiguous.delete(key);
 				onState({ kind: 'ready' });

@@ -37,7 +37,8 @@ describe('Studio transient requests', () => {
 			.fn()
 			.mockResolvedValueOnce(reply({ code: 'STORE_UNAVAILABLE' }, 503, { 'Retry-After': '3' }))
 			.mockResolvedValueOnce(reply([]))
-			.mockResolvedValueOnce(reply({ ok: false, error: { code: 'CONFLICT', message: 'Changed' } }));
+			.mockResolvedValueOnce(reply({ ok: false, error: { code: 'CONFLICT', message: 'Changed' } }))
+			.mockResolvedValueOnce(reply([]));
 		const waits: number[] = [];
 		const request = createRetriedRequest({
 			fetcher: fetcher as typeof fetch,
@@ -101,6 +102,100 @@ describe('Studio transient requests', () => {
 				([_, init]) => JSON.parse((init as RequestInit).body as string).method === 'handle'
 			)
 		).toHaveLength(1);
+	});
+	it.each(['AcceptProposal', 'RejectProposal', 'RestoreScreenplay'])(
+		'reconciles %s when a delayed COMMIT wins while its resend waits',
+		async (type) => {
+			const restore = {
+				scope: { documentId: 'document:test', versionId: 'version:test' },
+				targetRevision: 0,
+				expectedDocumentVersion: 1
+			};
+			const changeSet = {
+				id: 'changeset:test',
+				resultingRevision: 2,
+				provenance: { kind: 'scoped-restore', targetRevision: 0, scope: restore.scope },
+				preconditions: [{ type: 'DocumentVersionEquals', expectedDocumentVersion: 1 }]
+			};
+			const resolved = {
+				id: command.proposalId,
+				status: type === 'RejectProposal' ? 'rejected' : 'accepted',
+				changeSetId: changeSet.id
+			};
+			const semantic = {
+				ok: false,
+				error: {
+					code: type === 'RestoreScreenplay' ? 'CONFLICT' : 'PROPOSAL_ALREADY_RESOLVED',
+					message: 'Resend lost'
+				}
+			};
+			const fetcher = vi
+				.fn()
+				.mockResolvedValueOnce(reply({ code: 'STORE_UNAVAILABLE' }, 503))
+				.mockResolvedValueOnce(reply(type === 'RestoreScreenplay' ? [] : { status: 'pending' }))
+				.mockResolvedValueOnce(reply(semantic))
+				.mockResolvedValueOnce(reply(type === 'RestoreScreenplay' ? [changeSet] : resolved));
+			if (type === 'AcceptProposal') fetcher.mockResolvedValueOnce(reply([changeSet]));
+			if (type !== 'RejectProposal') fetcher.mockResolvedValueOnce(reply({ number: 2 }));
+			const request = createRetriedRequest({
+				fetcher: fetcher as typeof fetch,
+				sleep: async () => {}
+			});
+			expect(await request('handle', [{ ...command, ...restore, type }])).toMatchObject({
+				ok: true,
+				kind:
+					type === 'AcceptProposal'
+						? 'proposal-accepted'
+						: type === 'RejectProposal'
+							? 'proposal-rejected'
+							: 'screenplay-restored'
+			});
+			expect(
+				fetcher.mock.calls.filter(
+					([, init]) => JSON.parse((init as RequestInit).body as string).method === 'handle'
+				)
+			).toHaveLength(2);
+		}
+	);
+	it.each(['AcceptProposal', 'RejectProposal', 'RestoreScreenplay'])(
+		'preserves the genuine %s resend failure after incompatible resolution',
+		async (type) => {
+			const semantic = {
+				ok: false,
+				error: {
+					code: type === 'RestoreScreenplay' ? 'CONFLICT' : 'PROPOSAL_ALREADY_RESOLVED',
+					message: 'Original semantic failure'
+				}
+			};
+			const fetcher = vi
+				.fn()
+				.mockResolvedValueOnce(reply({ code: 'STORE_UNAVAILABLE' }, 503))
+				.mockResolvedValueOnce(reply(type === 'RestoreScreenplay' ? [] : { status: 'pending' }))
+				.mockResolvedValueOnce(reply(semantic))
+				.mockResolvedValueOnce(
+					reply(
+						type === 'RestoreScreenplay'
+							? []
+							: { status: type === 'AcceptProposal' ? 'rejected' : 'accepted' }
+					)
+				);
+			const request = createRetriedRequest({
+				fetcher: fetcher as typeof fetch,
+				sleep: async () => {}
+			});
+			expect(await request('handle', [{ ...command, type }])).toEqual(semantic);
+			expect(fetcher).toHaveBeenCalledTimes(4);
+		}
+	);
+	it('does not reconcile a semantic failure without an ambiguous infrastructure attempt', async () => {
+		const semantic = {
+			ok: false,
+			error: { code: 'PROPOSAL_ALREADY_RESOLVED', message: 'Resolved' }
+		};
+		const fetcher = vi.fn().mockResolvedValue(reply(semantic));
+		const request = createRetriedRequest({ fetcher: fetcher as typeof fetch });
+		expect(await request('handle', [command])).toEqual(semantic);
+		expect(fetcher).toHaveBeenCalledTimes(1);
 	});
 	it('retries STORE_BUSY within the same four-attempt budget', async () => {
 		const fetcher = vi

@@ -12,7 +12,8 @@
     "test:e2e": "playwright test",
     "precheck": "npm run build --workspace @light-delay/v2-core",
     "prebuild": "npm run build --workspace @light-delay/v2-core",
-    "predev": "npm run build --workspace @light-delay/v2-core"
+    "predev": "npm run build --workspace @light-delay/v2-core",
+    "test:e2e:postgres": "playwright test --config playwright.postgres.config.ts"
   },
   "devDependencies": {
     "@playwright/test": "^1.60.0",
