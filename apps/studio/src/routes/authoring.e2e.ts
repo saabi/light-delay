@@ -66,8 +66,7 @@ test('keeps unsaved editor text through exhausted retries and saves on Retry now
 	await dialogue.fill(text);
 	let unavailable = true;
 	await page.route('**/api/authoring', async (route) => {
-		const body = route.request().postDataJSON();
-		if (unavailable && body.method === 'handle' && body.args[0].type === 'SaveDraft')
+		if (unavailable)
 			await route.fulfill({
 				status: 503,
 				contentType: 'application/json',
