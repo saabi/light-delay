@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-09-30 — Studio M2.5 N1 verification
+
+- Recorded the final independent verification of the N1 correction: no demonstrated A or B finding remains, and M2.5 is technically ready for human acceptance. Documentation only.
+
 ## 2026-09-30 — Studio M2.5 N1 correction
 
 - Reconciled authoritative state once more when a resend after an ambiguous infrastructure failure returns a semantic failure. Only a confirmed intended outcome becomes success; genuine semantic failures are preserved.

@@ -1,5 +1,11 @@
 # Estado del proyecto
 
+## 2026-09-30 — Studio M2.5 N1 verification (English source)
+
+- Independent verification of `5d9c754` closes N1. With a real delayed COMMIT, accept, reject and restore now report success only when authoritative state confirms the intended operation. Incompatible rival outcomes keep `PROPOSAL_ALREADY_RESOLVED` or `CONFLICT`. Exactly one mutation was persisted in every case. See [the verification](reviews/2026-09-30-M2.5-N1-verification-claude.md).
+- B1–B4, V1, store parity (36/36 per store) and CI (six runs, Pages upload and deploy skipped) hold. The regressions fail against the pre-N1 helper and against a laundering mutation.
+- No demonstrated A or B finding remains. M2.5 is technically ready for human acceptance and merge; human acceptance is still required. N2, N3, F5–F9 and the D notes remain deferred. Nothing was merged, deployed or promoted.
+
 ## 2026-09-30 — Studio M2.5 N1 correction (English source)
 
 - Corrected N1 at the existing client retry/reconciliation layer: after an ambiguous attempt and a semantic resend failure, authoritative reconciliation can establish success; otherwise the real failure remains. Transaction behavior and existing outcome checks are unchanged.
