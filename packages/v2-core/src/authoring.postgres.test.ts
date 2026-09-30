@@ -6,6 +6,7 @@ import { authoringFixtureIds, harborLightInitialRevision } from './authoring-fix
 import { InMemoryAuthoringProjectStore, resolveElementState } from './authoring-store.js';
 import {
 	createPostgresPool,
+	isPostgresUnavailable,
 	PostgresAuthoringProjectStore,
 	PostgresProjectStoreResolver
 } from './postgres-authoring-store.js';
@@ -123,6 +124,8 @@ describe('PostgreSQL authoring persistence', () => {
 		try {
 			expect(bounded.options.connectionTimeoutMillis).toBe(5000);
 			expect(bounded.options.keepAlive).toBe(true);
+			expect(bounded.options.keepAliveInitialDelayMillis).toBe(10_000);
+			expect(bounded.options.query_timeout).toBe(20_000);
 			expect((await bounded.query('SHOW statement_timeout')).rows[0].statement_timeout).toBe('15s');
 			expect(
 				(await bounded.query('SHOW idle_in_transaction_session_timeout')).rows[0]
@@ -130,6 +133,112 @@ describe('PostgreSQL authoring persistence', () => {
 			).toBe('30s');
 		} finally {
 			await bounded.end();
+		}
+	});
+
+	it('reuses one Proposal identity for an ambiguous attempt after the Draft changes', async () => {
+		const app = application();
+		const firstDraft = await draft(app, feature, 'FIRST ');
+		const first = await proposal(app, firstDraft.id);
+		const saved = await app.handle(
+			{
+				type: 'SaveDraft',
+				projectId,
+				draftId: firstDraft.id,
+				scope: firstDraft.scope,
+				baseProjectRevision: firstDraft.baseProjectRevision,
+				baseDocumentVersion: firstDraft.baseDocumentVersion,
+				elements: firstDraft.elements.map((element, index) =>
+					index === 1 ? { ...element, text: 'SECOND' } : element
+				)
+			},
+			author
+		);
+		expect(saved).toMatchObject({ ok: true, kind: 'draft-saved' });
+		if (!saved.ok || saved.kind !== 'draft-saved') throw new Error('Draft save failed');
+		const command = {
+			type: 'CreateProposal' as const,
+			projectId,
+			draftId: firstDraft.id,
+			proposalId: `proposal:${randomUUID()}`,
+			expectedDraftUpdatedAt: saved.draft.updatedAt
+		};
+		const second = await app.handle(command, author);
+		expect(second).toMatchObject({
+			ok: true,
+			kind: 'proposal-created',
+			proposal: { id: command.proposalId }
+		});
+		expect(await app.handle(command, author)).toEqual(second);
+		if (!second.ok || second.kind !== 'proposal-created') throw new Error('Proposal failed');
+		expect(JSON.stringify(second.proposal.operations)).toContain('SECOND');
+		expect(JSON.stringify(second.proposal.operations)).not.toContain('FIRST');
+		const proposals = await app.listProposals(projectId);
+		expect(proposals).toHaveLength(2);
+		expect(proposals.find((item) => item.id === first.id)).toBeDefined();
+		expect(proposals.find((item) => item.id === command.proposalId)?.operations).toEqual(
+			second.ok && second.kind === 'proposal-created' ? second.proposal.operations : []
+		);
+		const stale = await app.handle(
+			{
+				...command,
+				proposalId: `proposal:${randomUUID()}`,
+				expectedDraftUpdatedAt: firstDraft.updatedAt
+			},
+			author
+		);
+		expect(stale).toMatchObject({ ok: false, error: { code: 'CONFLICT' } });
+		expect(await app.listProposals(projectId)).toHaveLength(2);
+	});
+
+	it('classifies real idle transaction loss and query read deadlines as unavailable', async () => {
+		const delayed = new Pool({
+			connectionString: url,
+			options: `-c search_path=${schema} -c idle_in_transaction_session_timeout=100ms`,
+			query_timeout: 200
+		});
+		const originalConnect = delayed.connect.bind(delayed);
+		(delayed as unknown as { connect: typeof delayed.connect }).connect = ((...args: unknown[]) => {
+			if (args.length) return (originalConnect as (...args: unknown[]) => unknown)(...args);
+			return (async () => {
+				const client = await originalConnect();
+				const originalQuery = client.query.bind(client);
+				(client as unknown as { query: typeof client.query }).query = (async (
+					...queryArgs: unknown[]
+				) => {
+					const result = await (originalQuery as (...args: unknown[]) => Promise<unknown>)(
+						...queryArgs
+					);
+					if (queryArgs[0] === 'BEGIN') await new Promise((resolve) => setTimeout(resolve, 250));
+					return result;
+				}) as typeof client.query;
+				return client;
+			})();
+		}) as typeof delayed.connect;
+		try {
+			const pending = await propose(application());
+			const outcome = await accept(
+				new AuthoringApplication(new PostgresProjectStoreResolver(delayed)),
+				pending.id
+			).then(
+				() => undefined,
+				(error: unknown) => error
+			);
+			expect(isPostgresUnavailable(outcome)).toBe(true);
+			expect((await application().getProposal(projectId, pending.id))?.status).toBe('pending');
+			expect(await application().listHistory(projectId)).toHaveLength(0);
+		} finally {
+			await delayed.end();
+		}
+		const timed = new Pool({
+			connectionString: url,
+			options: `-c search_path=${schema}`,
+			query_timeout: 100
+		});
+		try {
+			await expect(timed.query('SELECT pg_sleep(0.5)')).rejects.toSatisfy(isPostgresUnavailable);
+		} finally {
+			await timed.end();
 		}
 	});
 

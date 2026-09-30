@@ -35,6 +35,7 @@
 	let connection = $state<ConnectionState>({ kind: 'ready' });
 	let retryAction = $state<(() => Promise<void>) | undefined>();
 	let activeAction: (() => Promise<void>) | undefined;
+	let proposalAttemptId: string | undefined;
 
 	const scope = $derived<DocumentVersionScope>({
 		documentId: authoringFixtureIds.primaryDocument,
@@ -53,13 +54,15 @@
 
 	async function perform(action: () => Promise<void>) {
 		activeAction = action;
+		retryAction = undefined;
 		busy = true;
 		try {
 			await action();
-			if (connection.kind !== 'unavailable') retryAction = undefined;
+			if (connection.kind !== 'unavailable' && retryAction === action) retryAction = undefined;
 		} catch (error) {
 			status = error instanceof Error ? error.message : 'Studio request failed';
-			if (error instanceof AuthoringRequestError && error.transient) retryAction = action;
+			if (error instanceof AuthoringRequestError && error.transient)
+				retryAction = activeAction ?? action;
 		} finally {
 			activeAction = undefined;
 			busy = false;
@@ -142,6 +145,7 @@
 	}
 
 	function updateText(elementId: string, text: string) {
+		proposalAttemptId = undefined;
 		elements = elements.map((element) =>
 			element.id === elementId ? { ...element, text } : element
 		);
@@ -151,6 +155,7 @@
 	}
 
 	function moveElement(index: number, direction: -1 | 1) {
+		proposalAttemptId = undefined;
 		const target = index + direction;
 		if (target < 0 || target >= elements.length) return;
 		const reordered = [...elements];
@@ -162,6 +167,7 @@
 	}
 
 	function removeElement(elementId: string) {
+		proposalAttemptId = undefined;
 		elements = elements.filter((element) => element.id !== elementId);
 		dirty = true;
 		status = 'Unsaved Draft changes';
@@ -169,6 +175,7 @@
 	}
 
 	function addAction() {
+		proposalAttemptId = undefined;
 		localElementCounter += 1;
 		elements = [
 			...elements,
@@ -212,26 +219,41 @@
 		if (dirty || !draft) await saveDraft();
 		if (!draft) return;
 		busy = true;
+		proposalAttemptId ??= `proposal:${crypto.randomUUID()}`;
 		const result = await authoringApplication.handle(
 			{
 				type: 'CreateProposal',
 				projectId: authoringFixtureIds.project,
-				draftId: draft.id
+				draftId: draft.id,
+				proposalId: proposalAttemptId,
+				expectedDraftUpdatedAt: draft.updatedAt
 			},
 			studioAuthoringContext
 		);
 		if (result.ok && result.kind === 'proposal-created') {
+			proposalAttemptId = undefined;
 			proposal = result.proposal;
-			proposalBaseElements =
-				(
-					await authoringApplication.getScreenplayView(
-						authoringFixtureIds.project,
-						result.proposal.scope,
-						result.proposal.baseProjectRevision
-					)
-				)?.elements.map((element) => ({ ...element })) ?? [];
 			reviewOpen = true;
 			status = 'Proposal ready for review — not yet accepted';
+			const refresh = async () => {
+				activeAction = refresh;
+				try {
+					proposalBaseElements =
+						(
+							await authoringApplication.getScreenplayView(
+								authoringFixtureIds.project,
+								result.proposal.scope,
+								result.proposal.baseProjectRevision
+							)
+						)?.elements.map((element) => ({ ...element })) ?? [];
+					status = 'Proposal ready for review — not yet accepted';
+					retryAction = undefined;
+				} catch {
+					status = 'Proposal created · Review refresh pending';
+					retryAction = refresh;
+				}
+			};
+			await refresh();
 		} else if (!result.ok) status = result.error.message;
 		busy = false;
 	}
@@ -255,6 +277,35 @@
 		busy = false;
 	}
 
+	async function refreshCommitted(message: string, versionId: string) {
+		const refresh = async () => {
+			activeAction = refresh;
+			try {
+				const nextScope = { documentId: authoringFixtureIds.primaryDocument, versionId };
+				const [nextView, nextHistory] = await Promise.all([
+					authoringApplication.getScreenplayView(authoringFixtureIds.project, nextScope),
+					authoringApplication.listHistory(authoringFixtureIds.project)
+				]);
+				view = nextView;
+				elements = nextView?.elements.map((element) => ({ ...element })) ?? [];
+				history = nextHistory;
+				draft = undefined;
+				proposal = undefined;
+				proposalBaseElements = [];
+				reviewOpen = false;
+				delete draftIds[versionId];
+				draftIds = { ...draftIds };
+				dirty = false;
+				status = message;
+				retryAction = undefined;
+			} catch {
+				status = `${message} · Authoritative refresh pending`;
+				retryAction = refresh;
+			}
+		};
+		await refresh();
+	}
+
 	async function acceptProposal() {
 		if (!pendingProposal) return;
 		busy = true;
@@ -267,19 +318,12 @@
 			studioAuthoringContext
 		);
 		if (result.ok && result.kind === 'proposal-accepted') {
-			status = `Accepted into project history as revision ${result.revision.number}`;
-			proposal = await authoringApplication.getProposal(
-				authoringFixtureIds.project,
-				pendingProposal.id
+			proposal = undefined;
+			reviewOpen = false;
+			await refreshCommitted(
+				`Accepted into project history as revision ${result.revision.number}`,
+				selectedVersionId
 			);
-			draft = undefined;
-			proposalBaseElements = [];
-			delete draftIds[selectedVersionId];
-			draftIds = { ...draftIds };
-			view = await authoringApplication.getScreenplayView(authoringFixtureIds.project, scope);
-			elements = view?.elements.map((element) => ({ ...element })) ?? [];
-			history = await authoringApplication.listHistory(authoringFixtureIds.project);
-			dirty = false;
 		} else if (!result.ok) status = `Proposal not accepted: ${result.error.message}`;
 		busy = false;
 	}
@@ -299,16 +343,12 @@
 			studioAuthoringContext
 		);
 		if (result.ok && result.kind === 'screenplay-restored') {
-			view = await authoringApplication.getScreenplayView(authoringFixtureIds.project, scope);
-			elements = view?.elements.map((element) => ({ ...element })) ?? [];
-			draft = undefined;
 			proposal = undefined;
-			proposalBaseElements = [];
-			delete draftIds[selectedVersionId];
-			draftIds = { ...draftIds };
-			history = await authoringApplication.listHistory(authoringFixtureIds.project);
-			dirty = false;
-			status = `Restored as new project revision ${result.revision.number}`;
+			reviewOpen = false;
+			await refreshCommitted(
+				`Restored as new project revision ${result.revision.number}`,
+				selectedVersionId
+			);
 		} else if (!result.ok) status = `Restore not applied: ${result.error.message}`;
 		busy = false;
 	}

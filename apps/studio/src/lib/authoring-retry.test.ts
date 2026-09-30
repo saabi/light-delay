@@ -174,6 +174,38 @@ describe('Studio transient requests', () => {
 		expect(await request('getProjectHead', ['project:test'])).toEqual({ number: 2 });
 		expect(states.at(-1)).toEqual({ kind: 'ready' });
 	});
+	it('reconciles the exact Proposal after a lost CreateProposal response', async () => {
+		const proposalCommand = {
+			type: 'CreateProposal',
+			projectId: 'project:test',
+			draftId: 'draft:test',
+			proposalId: 'proposal:second',
+			expectedDraftUpdatedAt: '2026-09-30T00:00:00.000Z'
+		};
+		const fetcher = vi
+			.fn()
+			.mockRejectedValueOnce(new Error('lost acknowledgement'))
+			.mockResolvedValueOnce(
+				reply({
+					id: 'proposal:second',
+					status: 'pending',
+					source: { ref: { id: 'draft:test' } }
+				})
+			);
+		const request = createRetriedRequest({
+			fetcher: fetcher as typeof fetch,
+			sleep: async () => {}
+		});
+		expect(await request('handle', [proposalCommand])).toMatchObject({
+			ok: true,
+			kind: 'proposal-created',
+			proposal: { id: 'proposal:second' }
+		});
+		const methods = fetcher.mock.calls.map(
+			([_, init]) => JSON.parse((init as RequestInit).body as string).method
+		);
+		expect(methods).toEqual(['handle', 'getProposal']);
+	});
 	it('does not replay an ambiguous CreateProposal without an explicit manual retry', async () => {
 		const states: ConnectionState[] = [];
 		const proposalCommand = {
@@ -184,10 +216,6 @@ describe('Studio transient requests', () => {
 		const fetcher = vi
 			.fn()
 			.mockRejectedValueOnce(new Error('lost acknowledgement'))
-			.mockResolvedValueOnce(reply([]))
-			.mockResolvedValueOnce(reply([]))
-			.mockResolvedValueOnce(reply([]))
-			.mockResolvedValueOnce(reply([]))
 			.mockResolvedValueOnce(
 				reply({ ok: true, kind: 'proposal-created', proposal: { id: 'proposal:new' } })
 			);

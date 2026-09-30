@@ -42,12 +42,20 @@ describe('PostgreSQL authoring pool', () => {
 			expect(isPostgresUnavailable(Object.assign(new Error('ordinary SQL error'), { code }))).toBe(
 				false
 			);
+		for (const message of [
+			'Client has encountered a connection error and is not queryable',
+			'Client was closed and is not queryable',
+			'Query read timeout'
+		])
+			expect(isPostgresUnavailable(new Error(message))).toBe(true);
 		expect(isPostgresUnavailable(new Error('Stored authoring record is malformed'))).toBe(false);
 		expect(POSTGRES_CONNECTION_LIMITS).toEqual({
 			connectionTimeoutMillis: 5000,
 			statement_timeout: 15000,
+			query_timeout: 20000,
 			idle_in_transaction_session_timeout: 30000,
-			keepAlive: true
+			keepAlive: true,
+			keepAliveInitialDelayMillis: 10000
 		});
 	});
 });

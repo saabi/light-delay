@@ -328,10 +328,23 @@ export class AuthoringApplication {
 		}
 
 		if (command.type === 'CreateProposal') {
+			if (command.proposalId) {
+				const prior = await store.getProposal(command.proposalId);
+				if (prior) {
+					if (
+						prior.source.ref.id !== command.draftId ||
+						!samePrincipal(prior.proposedBy, context.principal)
+					)
+						return failure('CONFLICT', 'Proposal identity belongs to another creation attempt');
+					return { ok: true, kind: 'proposal-created', proposal: prior };
+				}
+			}
 			const draft = await store.getDraft(command.draftId);
 			if (!draft) return failure('DRAFT_NOT_FOUND', `Draft was not found: ${command.draftId}`);
 			if (!samePrincipal(draft.owner, context.principal))
 				return failure('DRAFT_OWNER_MISMATCH', 'Draft belongs to another principal');
+			if (command.expectedDraftUpdatedAt && draft.updatedAt !== command.expectedDraftUpdatedAt)
+				return failure('CONFLICT', 'Draft changed since this Proposal creation began');
 			const baseRevision = await store.getRevision(draft.baseProjectRevision);
 			if (!baseRevision)
 				return failure(
@@ -348,7 +361,7 @@ export class AuthoringApplication {
 				return failure('NO_CHANGES', 'Draft matches the authoritative screenplay');
 			const proposal: ScreenplayProposal = {
 				schemaVersion: 1,
-				id: this.idFactory('proposal'),
+				id: command.proposalId ?? this.idFactory('proposal'),
 				projectId: draft.projectId,
 				scope: draft.scope,
 				baseProjectRevision: draft.baseProjectRevision,
@@ -376,7 +389,17 @@ export class AuthoringApplication {
 				status: 'pending'
 			};
 			const created = await store.createProposal(proposal);
-			if (!created.ok) return failure('STORE_REJECTED', created.message);
+			if (!created.ok) {
+				// A concurrent retry can win the primary-key insert while this request waits.
+				const prior = command.proposalId && (await store.getProposal(command.proposalId));
+				if (
+					prior &&
+					prior.source.ref.id === command.draftId &&
+					samePrincipal(prior.proposedBy, context.principal)
+				)
+					return { ok: true, kind: 'proposal-created', proposal: prior };
+				return failure('STORE_REJECTED', created.message);
+			}
 			return { ok: true, kind: 'proposal-created', proposal };
 		}
 

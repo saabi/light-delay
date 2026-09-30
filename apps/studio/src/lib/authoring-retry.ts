@@ -137,12 +137,13 @@ export function createRetriedRequest(options: {
 				if (revision) return { ok: true, kind: 'screenplay-restored', changeSet, revision };
 			}
 		}
-		if (command.type === 'CreateProposal') {
-			const proposals = await once<ScreenplayProposal[]>('listProposals', [projectId]);
-			const proposal = proposals.find(
-				(item) => item.status === 'pending' && item.source.ref.id === command.draftId
-			);
-			if (proposal) return { ok: true, kind: 'proposal-created', proposal };
+		if (command.type === 'CreateProposal' && command.proposalId) {
+			const proposal = await once<ScreenplayProposal | undefined>('getProposal', [
+				projectId,
+				command.proposalId
+			]);
+			if (proposal && proposal.source.ref.id === command.draftId)
+				return { ok: true, kind: 'proposal-created', proposal };
 		}
 		if (command.type === 'SaveDraft') {
 			const drafts = await once<ScreenplayDraft[]>('listDrafts', [projectId]);
@@ -181,11 +182,11 @@ export function createRetriedRequest(options: {
 						onState({ kind: 'ready' });
 						return prior as T;
 					}
-					// M2 permits multiple Proposals from one Draft, and a new Draft has no
-					// stable id yet. Until command ids exist, re-read these outcomes only.
+					// A new Draft has no stable ID. Legacy CreateProposal callers without a
+					// proposalId also cannot safely resend after an ambiguous response.
 					if (
 						!userRetried &&
-						(command.type === 'CreateProposal' ||
+						((command.type === 'CreateProposal' && !command.proposalId) ||
 							(command.type === 'SaveDraft' && !command.draftId))
 					) {
 						if (attempt === delays.length) {

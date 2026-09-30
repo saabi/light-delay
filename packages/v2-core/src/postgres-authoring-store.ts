@@ -64,7 +64,7 @@ export function isPostgresUnavailable(error: unknown): boolean {
 	}
 	if (
 		typeof candidate.message === 'string' &&
-		/^(Connection terminated unexpectedly|Connection terminated due to connection timeout|timeout exceeded when trying to connect|Connection terminated during connection setup)$/.test(
+		/^(Connection terminated unexpectedly|Connection terminated due to connection timeout|timeout exceeded when trying to connect|Connection terminated during connection setup|Client has encountered a connection error and is not queryable|Client was closed and is not queryable|Query read timeout)$/.test(
 			candidate.message
 		)
 	)
@@ -75,8 +75,10 @@ export function isPostgresUnavailable(error: unknown): boolean {
 export const POSTGRES_CONNECTION_LIMITS = {
 	connectionTimeoutMillis: 5_000,
 	statement_timeout: 15_000,
+	query_timeout: 20_000,
 	idle_in_transaction_session_timeout: 30_000,
-	keepAlive: true
+	keepAlive: true,
+	keepAliveInitialDelayMillis: 10_000
 } as const;
 const invalid = (message: string): StoreCommitResult => ({
 	ok: false,

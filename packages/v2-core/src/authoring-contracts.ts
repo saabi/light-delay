@@ -303,7 +303,10 @@ export const SaveDraftCommandSchema = object({
 export const CreateProposalCommandSchema = object({
 	type: Type.Literal('CreateProposal'),
 	projectId: id,
-	draftId: id
+	draftId: id,
+	// The caller keeps this ID for every retry of one logical creation attempt.
+	proposalId: Type.Optional(id),
+	expectedDraftUpdatedAt: Type.Optional(timestamp)
 });
 
 export const RejectProposalCommandSchema = object({
