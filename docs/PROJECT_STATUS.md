@@ -1,5 +1,12 @@
 # Estado del proyecto
 
+## 2026-09-30 — Studio M2.5 B-corrections verification (English source)
+
+- Independent verification of `3069d1c` closes B1 (Retry now refreshes after a committed accept, restore or Proposal creation without resending it), B2 (exact, idempotent Proposal reconciliation), B3 (`25P03` and between-query connection loss return 503) and B4's bounded waiting. V1, integrity, contention, store parity and the retry policy hold. See [the verification](reviews/2026-09-30-M2.5-B-corrections-verification-claude.md).
+- New **B** finding N1: the 20 s client query deadline does not cancel PostgreSQL work. A timed-out COMMIT can still commit while Studio's resend waits on its locks. Studio then reports "already resolved" or a restore conflict for its own successful accept, reject or restore. No history is duplicated. The fix is to reconcile once more when a resend after an ambiguous attempt returns a semantic failure.
+- C follow-ups: identity replay ignores the observed Draft time (N2); reloading offers an older pending Proposal beside a newer Draft (N3, pre-existing M2 UI); F5–F9 unchanged.
+- M2.5 is **not accepted**. The owner's WSL databases could not be inspected from the verification environment. Nothing was merged, deployed or promoted.
+
 ## 2026-09-30 — Studio M2.5 B findings correction (English source)
 
 - F1: Retry now retries only the failed authoritative read after a known committed accept, restore or Proposal creation. Browser tests cover accept and restore refresh outages and one mutation request each.

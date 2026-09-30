@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-09-30 — Studio M2.5 B-corrections verification
+
+- Recorded the independent verification of the M2.5 B-finding corrections: B1–B3 and B4's bounded waiting are closed; new finding N1 (a timed-out COMMIT can commit while Studio reports failure) blocks acceptance. Documentation only.
+
 ## 2026-09-30 — Studio M2.5 final B corrections
 
 - Separated committed accept, restore and Proposal-create results from later read refreshes, so Retry now refreshes state without resending a known committed mutation.
