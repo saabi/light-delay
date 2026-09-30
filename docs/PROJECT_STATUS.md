@@ -1,5 +1,14 @@
 # Estado del proyecto
 
+## 2026-09-30 — Studio M2.5 B findings correction (English source)
+
+- F1: Retry now retries only the failed authoritative read after a known committed accept, restore or Proposal creation. Browser tests cover accept and restore refresh outages and one mutation request each.
+- F2: Studio supplies one persisted Proposal ID and observed Draft update time per creation attempt. Reconciliation reads the exact ID. A stale Draft timestamp fails as a semantic conflict.
+- F3/F4: pg unqueryable-client messages and Query read timeout classify as STORE_UNAVAILABLE. Pool queries have a 20 s client deadline; TCP keepalive starts at 10 s. Real PostgreSQL probes cover idle transaction loss and stalled reads.
+- Local WSL PostgreSQL 14.24 on localhost:5432: studio_dev has the canonical LF migration, 11 Studio tables owned by studio_dev, and zero projects. studio_test has a restricted role; Windows Node connects to both, and studio_test cannot connect to studio_dev.
+- M2.5 is **not accepted**. A fresh Claude Opus 5.5 independent verification is next. No staging, Linode or Pages deployment was made.
+
+
 ## 2026-09-30 — Studio M2.5 final connectivity verification (English source)
 
 - Independent verification of `7610e9f` closes V1: Studio survived every checked-out connection termination, restart and outage probe, with no partial or duplicated history. Lost acknowledgements of accept, reject and restore reconcile correctly. B1 and B3 hold. See [the final verification](reviews/2026-09-30-M2.5-final-verification-claude.md).

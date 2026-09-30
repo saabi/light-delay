@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-09-30 — Studio M2.5 final B corrections
+
+- Separated committed accept, restore and Proposal-create results from later read refreshes, so Retry now refreshes state without resending a known committed mutation.
+- Correlated each Studio CreateProposal attempt with a stable caller-supplied Proposal ID and Draft update timestamp. The persisted Proposal primary key makes lost acknowledgements idempotent without a new migration.
+- Classified pg's unqueryable-client and query-read-timeout failures as retryable unavailability; added a 20 s client-side query deadline and a 10 s initial TCP keepalive delay.
+- Added real PostgreSQL and browser regressions. Local WSL PostgreSQL 14.24 now has a migrated, empty studio_dev and an isolated studio_test used by Windows Node.
+- M2.5 remains pending fresh independent verification. No staging or Pages deployment was performed.
+
 ## 2026-09-30 — Studio M2.5 final connectivity verification
 
 - Recorded the independent verification of the connectivity correction: V1 closed, integrity and lost-acknowledgement reconciliation verified, B1/B3 unchanged, and four open B findings (F1–F4).

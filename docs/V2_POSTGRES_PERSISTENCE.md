@@ -55,11 +55,12 @@ Studio survives PostgreSQL restarts and connection loss, including a checked-out
 discards unusable connections, and preserves the original transaction failure if rollback also
 fails. It never replays a transaction. The pool handles idle-client errors separately.
 
-The pool uses a 5 s connection/acquisition timeout, 15 s PostgreSQL statement timeout, 30 s
-idle-in-transaction timeout, and TCP keepalive. The HTTP boundary classifies connection refused,
+The pool uses a 5 s connection/acquisition timeout, 15 s PostgreSQL statement timeout, 20 s
+client-side query-read timeout, 30 s idle-in-transaction timeout, and TCP keepalive beginning
+at 10 s. The query deadline also bounds a server or network that stops making progress. The HTTP boundary classifies connection refused,
 reset and other transport failures; SQLSTATE class `08`; shutdown `57P01`–`57P03`;
-idle-in-transaction timeout `25P03`; too many connections `53300`; and PostgreSQL statement timeout `57014` with its specific
-message. Only these receive HTTP 503, `STORE_UNAVAILABLE`, and `Retry-After: 1`. Semantic,
+idle-in-transaction timeout `25P03`; too many connections `53300`; PostgreSQL statement timeout `57014` with its specific
+message; pg unqueryable-client connection messages; and the configured Query read timeout. Only these receive HTTP 503, `STORE_UNAVAILABLE`, and `Retry-After: 1`. Semantic,
 integrity, validation and arbitrary SQL errors remain non-retryable. Browser responses contain
 safe messages; server logs include the error code and request method.
 
@@ -69,13 +70,17 @@ the initial attempt, at 0.5, 1.5 and 4 s with ±25% jitter. A longer valid secon
 It does not retry semantic results. After a lost accept/reject response it checks the Proposal's
 terminal status and accepted history before resending. Restore checks its scoped ChangeSet,
 target revision and expected document version. These terminal and scoped preconditions prevent
-duplicate accepted history. An ambiguous new Draft or CreateProposal is only re-read automatically:
-M2 permits multiple Proposals from one Draft, and a new Draft lacks a stable id. The user must
-choose **Retry now** before the browser can send that command again.
+duplicate accepted history. An ambiguous new Draft without a stable ID is only re-read automatically; the user must
+choose **Retry now** before it can be sent again. Studio supplies a stable Proposal ID for each
+logical CreateProposal attempt. Reconciliation reads that exact Proposal, and the persisted
+(project, Proposal ID) primary key makes a retry return the same Proposal. A new logical attempt
+uses a new ID. The observed Draft update time prevents an uncommitted retry from proposing later
+Draft contents under the old attempt ID. This is a narrow CreateProposal mechanism.
 
 Studio shows a restrained reconnecting state during retries. After exhaustion it keeps the editor
 contents in the current browser session and shows a persistent warning and **Retry now** action.
-The manual path reconciles persisted state before reporting success. A refresh or closed tab can
+After a mutation is known to have committed, the manual path retries only its failed authoritative
+refresh and never resends the mutation. A refresh or closed tab can
 still lose unsaved browser edits. PostgreSQL remains the sole durable source of accepted history;
 there is no server-side queue. IndexedDB protection and durable per-command ids remain for the
 next Studio milestone, as do the transactional outbox and authorization.
@@ -100,7 +105,7 @@ review their compatibility with existing data. Schema version is inspectable wit
 SELECT version, applied_at FROM authoring_schema_migrations ORDER BY version;
 ```
 
-Set `TEST_DATABASE_URL` to a disposable PostgreSQL database and run `npm run test:postgres` for
+Set `TEST_DATABASE_URL` to an isolated PostgreSQL test database and run `npm run test:postgres` for
 real transaction tests and the unchanged M2 authoring contract suite against PostgreSQL. The
 normal `test:v2-core` run executes the same contract against the in-memory store. PostgreSQL test
 files create random isolated schemas, migrate them from zero, clear project rows between tests,
@@ -111,7 +116,7 @@ Linode or any staging database.
 Local convention: `DATABASE_URL` points to `studio_dev`, the persistent interactive development
 database owned by the `studio_dev` role. `TEST_DATABASE_URL` points to `studio_test`, owned by a
 restricted `studio_test` role that cannot connect to `studio_dev`. Automated agents and the test
-suites use only `studio_test`. Set both as user environment variables; never commit them. Migrate
+suites use only `studio_test`; randomized test schemas are removed after each run. Set both as user environment variables; never commit them. Migrate
 `studio_dev` with `npm run migrate:studio` from a checkout whose `.sql` files have LF endings, so the
 recorded hash matches CI (see [final verification §12 and F7](reviews/2026-09-30-M2.5-final-verification-claude.md)).
 
