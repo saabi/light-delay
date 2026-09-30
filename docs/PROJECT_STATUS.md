@@ -1,5 +1,17 @@
 # Estado del proyecto
 
+## 2026-09-30 — Studio M2.5 final connectivity verification (English source)
+
+- Independent verification of `7610e9f` closes V1: Studio survived every checked-out connection termination, restart and outage probe, with no partial or duplicated history. Lost acknowledgements of accept, reject and restore reconcile correctly. B1 and B3 hold. See [the final verification](reviews/2026-09-30-M2.5-final-verification-claude.md).
+- Four B findings remain before acceptance:
+  - F1: after a committed accept or restore, a failed refresh makes Retry now resend the command and report failure.
+  - F2: `CreateProposal` reconciliation can return an older Proposal from the same Draft.
+  - F3: connection loss between transaction queries, including `25P03`, returns non-retryable 500.
+  - F4: a hung or partitioned database is not bounded client-side, and keepalive is inert.
+- Pre-existing `40P01` deadlocks between Proposal creation and acceptance (F5) are a follow-up.
+- Local convention: `DATABASE_URL` → `studio_dev` (interactive development, migrated with `npm run migrate:studio`); `TEST_DATABASE_URL` → `studio_test` (automated tests, restricted role). Setup commands are in the verification §12; they have not yet been run on the owner's WSL server.
+- M2.5 remains pending corrections and human acceptance. Nothing was merged, deployed or migrated remotely.
+
 ## 2026-09-30 — Studio M2.5 connectivity correction (English source)
 
 - Corrected V1 at the checked-out PostgreSQL transaction client: connection errors are handled through release, failed clients are discarded, and the original failure survives rollback failure. A real PostgreSQL test terminates a blocked acceptance backend and checks process survival, pending Proposal, unchanged head/history/checkpoints, and pool recovery.

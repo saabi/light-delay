@@ -108,6 +108,13 @@ and drop the schemas afterward. CI provisions one PostgreSQL 16 service for migr
 integration suite and contract parity alongside core and Studio checks. It does not contact
 Linode or any staging database.
 
+Local convention: `DATABASE_URL` points to `studio_dev`, the persistent interactive development
+database owned by the `studio_dev` role. `TEST_DATABASE_URL` points to `studio_test`, owned by a
+restricted `studio_test` role that cannot connect to `studio_dev`. Automated agents and the test
+suites use only `studio_test`. Set both as user environment variables; never commit them. Migrate
+`studio_dev` with `npm run migrate:studio` from a checkout whose `.sql` files have LF endings, so the
+recorded hash matches CI (see [final verification §12 and F7](reviews/2026-09-30-M2.5-final-verification-claude.md)).
+
 The synthetic scale check adds 250 screenplay elements to two cuts, accepts a change in one cut,
 and checks that the revision metadata occupies less than one tenth of the initial project JSON.
 It also checks that the acceptance wrote exactly one scoped checkpoint.

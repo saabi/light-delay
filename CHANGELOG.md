@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-09-30 — Studio M2.5 final connectivity verification
+
+- Recorded the independent verification of the connectivity correction: V1 closed, integrity and lost-acknowledgement reconciliation verified, B1/B3 unchanged, and four open B findings (F1–F4).
+- Documented the local `studio_dev` (development) / `studio_test` (automated tests) database convention.
+
 ## 2026-09-30 — Studio M2.5 connectivity correction
 
 - Protected checked-out PostgreSQL transaction clients from unhandled connection errors and discarded broken clients without replaying transactions.
