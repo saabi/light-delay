@@ -1,13 +1,27 @@
 import { randomUUID } from 'node:crypto';
 import { Pool } from 'pg';
 import { afterAll, beforeAll, beforeEach, describe, expect, it } from 'vitest';
-import { createRetriedRequest } from '../../../apps/studio/src/lib/authoring-retry';
+import { readFile } from 'node:fs/promises';
+import ts from 'typescript';
 import { postgresFaultProxy } from '../test-support/postgres-fault-proxy';
 import { AuthoringApplication } from './authoring.js';
 import { authoringFixtureIds as ids, harborLightInitialRevision } from './authoring-fixture.js';
 import { isPostgresUnavailable, PostgresProjectStoreResolver } from './postgres-authoring-store.js';
 import { migrateAuthoringDatabase } from './postgres-migrations.js';
 import type { AuthoringCommand, AuthoringCommandResult } from './authoring-contracts.js';
+
+// Compile the actual framework-independent client helper without requiring
+// Studio's generated SvelteKit tsconfig in a fresh core-only test checkout.
+const source = await readFile(
+	new URL('../../../apps/studio/src/lib/authoring-retry.ts', import.meta.url),
+	'utf8'
+);
+const compiled = ts.transpileModule(source, {
+	compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.ES2022 }
+}).outputText;
+const { createRetriedRequest } = (await import(
+	`data:text/javascript;base64,${Buffer.from(compiled).toString('base64')}`
+)) as typeof import('../../../apps/studio/src/lib/authoring-retry');
 
 const url = process.env.TEST_DATABASE_URL;
 if (!url) throw new Error('TEST_DATABASE_URL is required');
