@@ -1,7 +1,5 @@
 # svelte-glyph-capacity
 
-[![CI](https://github.com/saabi/svelte-glyph-capacity/actions/workflows/ci.yml/badge.svg)](https://github.com/saabi/svelte-glyph-capacity/actions/workflows/ci.yml)
-[![npm](https://img.shields.io/npm/v/svelte-glyph-capacity.svg)](https://www.npmjs.com/package/svelte-glyph-capacity)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 A Svelte 5 sensor that measures rendered glyph dimensions and reports how much text fits in a
@@ -11,11 +9,18 @@ orientations, and breakpoint flags as reactive data.
 The repository also includes a workbench that compares measured glyph capacity with `px`, `rem`,
 `em`, and calibrated `em/ch` container-query strategies across several adaptive layouts.
 
-## Install
+## Status and install
 
-```sh
-npm install svelte-glyph-capacity
+Pre-release. The package is not yet published to npm. It is developed in the
+[light-delay](https://github.com/saabi/light-delay) repository under
+`packages/svelte-glyph-capacity` as an npm workspace package; workspace consumers depend on it by
+name:
+
+```json
+{ "dependencies": { "svelte-glyph-capacity": "0.1.0" } }
 ```
+
+Once published it will install with `npm install svelte-glyph-capacity`.
 
 ## Basic usage
 
@@ -81,12 +86,22 @@ consumers can map the flags to locally scoped classes or application state.
 
 ## Capacity semantics
 
-The default `glyph-area` mode starts with the observed border box and subtracts computed margins,
-borders, and padding on both axes. Margin deduction is intentionally conservative even though CSS
-margins sit outside the observed border box. The raw observed dimensions remain available through
+The sensor answers one question: how many glyphs fit in the container's text area? Only space that
+actually reduces that area is excluded.
+
+The default `glyph-area` mode uses the observed **content box** on both axes. Borders, padding and
+scrollbars are excluded, because text cannot be laid out there. Margins are never deducted: they
+sit outside the element and do not change how much text fits inside it.
+
+```text
+glyph-area width = border-box width − borders − padding − vertical scrollbar
+```
+
+Content-box changes are observed directly, so padding, border and scrollbar changes that leave the
+border box unchanged still update the result. The raw border box remains available through
 `value.container`.
 
-Use `capacityBox="measured-box"` to calculate capacity from the observed box without deductions.
+Use `capacityBox="measured-box"` to calculate capacity from the border box without deductions.
 
 The glyph sample is measured at `line-height: 1`. Horizontal capacity is:
 
@@ -104,6 +119,9 @@ When `lineHeight` is supplied, it is treated as a unitless multiplier of the mea
 
 ## Breakpoint flags
 
+`breakpoints` must be four finite, positive, strictly ascending numbers. Any other value logs one
+console warning and the defaults are used instead.
+
 With the default breakpoints:
 
 - `xSmall` is enabled below 45 characters.
@@ -115,13 +133,37 @@ With the default breakpoints:
 The orientation names included in `classes` are `pixelLandscape`, `pixelPortrait`,
 `textLandscape`, and `textPortrait`.
 
+## Containment: give sensed containers a layout-determined size
+
+The sensor measures the container, and consumers usually change the container's content based on
+the measurement. If the container is sized by that content (for example an auto-height block whose
+content grows when capacity drops), the two form a feedback loop: a smaller mode makes the content
+shorter, the shorter container reports more capacity, the larger mode makes it taller again, and
+the value flips every frame.
+
+Size sensed containers from layout instead of content, for example:
+
+- `container-type: size` (or `inline-size` when only width drives decisions) on the container;
+- a grid or flex track that fixes its size;
+- explicit dimensions.
+
+In development, the sensor detects this loop (capacity alternating between the same two values
+within half a second) and logs one console warning naming the two capacities. The fix is in the
+layout, not in the sensor.
+
+## Update behavior
+
+`value` is reassigned only when a measured field changes. Resize notifications that produce the
+same capacity, glyph and container dimensions do not publish a new object, so derived state and
+effects that depend on `value` do not re-run on every resize frame.
+
 ## Font loading
 
 Measurements update through `ResizeObserver` when the container, glyph sample, or inherited line
 box changes. For deterministic initial measurements with web fonts, wait for `document.fonts.ready`
 before treating the first non-empty value as final.
 
-The component requires browser support for `ResizeObserver`, `MutationObserver`, and
+The component requires browser support for `ResizeObserver` (with `box: 'content-box'`) and
 `requestAnimationFrame`. It can be server-rendered, but measurements remain empty until hydration
 and layout occur in the browser.
 
@@ -133,13 +175,19 @@ npm run dev
 ```
 
 Then open the local URL printed by Vite. The demo compares five strategies using the same font
-environment and scenarios.
+environment and scenarios. `/fixtures` holds the deterministic cases used by
+`tests/glyph-capacity-fixtures.spec.ts` (scrollbar exclusion, size flags, oscillation, invalid
+breakpoints).
+
+Inside light-delay, run the scripts from the repository root with
+`npm run <script> -w svelte-glyph-capacity`. To use an existing Chromium instead of Playwright's
+bundled browser, set `PLAYWRIGHT_CHROMIUM_PATH`.
 
 Useful commands:
 
 ```sh
 npm run check       # Svelte and TypeScript diagnostics
-npm test            # Playwright sensor and demo tests
+npm test            # Playwright sensor, fixture and demo tests
 npm run build       # static demo build
 npm run package     # generate the publishable dist directory
 npm run publint     # validate package metadata and exports

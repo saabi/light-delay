@@ -26,7 +26,7 @@ test.beforeEach(async ({ page }) => {
 	await page.evaluate(() => document.fonts.ready);
 });
 
-test('deducts all non-glyph spacing on both axes and supports measured-box mode', async ({
+test('measures the content box: borders and padding reduce capacity, margins do not', async ({
 	page
 }) => {
 	const { root, metric, capacity } = await waitForMeasurement(page);
@@ -47,16 +47,12 @@ test('deducts all non-glyph spacing on both axes and supports measured-box mode'
 		return {
 			width:
 				rect.width -
-				px(cs.marginLeft) -
-				px(cs.marginRight) -
 				px(cs.borderLeftWidth) -
 				px(cs.borderRightWidth) -
 				px(cs.paddingLeft) -
 				px(cs.paddingRight),
 			height:
 				rect.height -
-				px(cs.marginTop) -
-				px(cs.marginBottom) -
 				px(cs.borderTopWidth) -
 				px(cs.borderBottomWidth) -
 				px(cs.paddingTop) -
@@ -103,8 +99,9 @@ test('deducts all non-glyph spacing on both axes and supports measured-box mode'
 			padding: '20px'
 		});
 	});
-	await expect.poll(() => numberAttribute(metric, 'data-capacity-width')).toBe(0);
-	await expect.poll(() => numberAttribute(metric, 'data-capacity-height')).toBe(0);
+	// 80px border box − 2 × 10px border − 2 × 20px padding = 20px; the 30px margin is outside it.
+	await expect.poll(() => numberAttribute(metric, 'data-capacity-width')).toBe(20);
+	await expect.poll(() => numberAttribute(metric, 'data-capacity-height')).toBe(20);
 });
 
 test('updates maxLines when used line-height changes without resizing the container', async ({

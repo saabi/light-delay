@@ -77,11 +77,15 @@
 </script>
 
 <script lang="ts">
-	import type { Snippet } from 'svelte';
+	import { untrack, type Snippet } from 'svelte';
 
 	type Props = {
 		breakpoints?: number[];
-		/** Box used for capacity. glyph-area removes margins, borders, and padding on both axes. */
+		/**
+		 * Box used for capacity. `glyph-area` is the content box: the area where glyphs can be laid
+		 * out, excluding borders, padding and scrollbars. Margins never reduce it. `measured-box` is the
+		 * border box.
+		 */
 		capacityBox?: GlyphCapacityBox;
 		children?: Snippet<[GlyphCapacityValue]>;
 		class?: string;
@@ -112,12 +116,35 @@
 	let lineBoxEl: HTMLSpanElement | undefined = $state();
 	let containerWidth = $state(0);
 	let containerHeight = $state(0);
+	let contentWidth = $state(0);
+	let contentHeight = $state(0);
 	let sampleWidth = $state(0);
 	let sampleHeight = $state(0);
 	let measuredLineBoxHeight = $state(0);
-	let boxStyleRevision = $state(0);
 
 	const sampleLength = $derived(Math.max(1, sampleText.length));
+
+	let warnedBreakpoints = false;
+	/** Four finite, strictly ascending, positive thresholds; otherwise the defaults. */
+	const validBreakpoints = $derived.by(() => {
+		const valid =
+			Array.isArray(breakpoints) &&
+			breakpoints.length === 4 &&
+			breakpoints.every(
+				(threshold, index) =>
+					Number.isFinite(threshold) &&
+					threshold > 0 &&
+					(index === 0 || threshold > breakpoints[index - 1])
+			);
+		if (!valid && !warnedBreakpoints) {
+			warnedBreakpoints = true;
+			console.warn(
+				'GlyphCapacitySensor: `breakpoints` must be four positive, strictly ascending numbers; using the defaults.',
+				breakpoints
+			);
+		}
+		return valid ? breakpoints : defaultGlyphCapacityBreakpoints;
+	});
 
 	function readBorderBox(entry: ResizeObserverEntry, element: Element) {
 		const box = entry.borderBoxSize?.[0];
@@ -129,6 +156,13 @@
 			width: box.inlineSize,
 			height: box.blockSize
 		};
+	}
+
+	/** Content box: excludes borders, padding and scrollbars, which all reduce glyph capacity. */
+	function readContentBox(entry: ResizeObserverEntry) {
+		const box = entry.contentBoxSize?.[0];
+		if (!box) return { width: entry.contentRect.width, height: entry.contentRect.height };
+		return { width: box.inlineSize, height: box.blockSize };
 	}
 
 	function makeClasses(
@@ -148,11 +182,6 @@
 			.join(' ');
 	}
 
-	function parseCssPx(value: string) {
-		const px = parseFloat(value);
-		return Number.isFinite(px) ? px : 0;
-	}
-
 	/** Used line-box height in px for maxLines (observed used LH, or unitless override x glyph). */
 	function resolveLineBoxHeight(glyphHeight: number) {
 		if (lineHeight != null && lineHeight > 0) {
@@ -161,50 +190,49 @@
 		return measuredLineBoxHeight;
 	}
 
-	/** Semantic capacity box used for glyph fit, kept separate from the raw observed box. */
 	function resolveCapacityBox() {
-		let width = containerWidth;
-		let height = containerHeight;
-		if (!containerEl || capacityBox === 'measured-box') {
-			return { width, height };
-		}
-
-		const cs = getComputedStyle(containerEl);
-		width -=
-			parseCssPx(cs.marginLeft) +
-			parseCssPx(cs.marginRight) +
-			parseCssPx(cs.borderLeftWidth) +
-			parseCssPx(cs.borderRightWidth) +
-			parseCssPx(cs.paddingLeft) +
-			parseCssPx(cs.paddingRight);
-		height -=
-			parseCssPx(cs.marginTop) +
-			parseCssPx(cs.marginBottom) +
-			parseCssPx(cs.borderTopWidth) +
-			parseCssPx(cs.borderBottomWidth) +
-			parseCssPx(cs.paddingTop) +
-			parseCssPx(cs.paddingBottom);
-
-		return { width: Math.max(0, width), height: Math.max(0, height) };
+		return capacityBox === 'measured-box'
+			? { width: containerWidth, height: containerHeight }
+			: { width: contentWidth, height: contentHeight };
 	}
 
+	/* Two observers on the container, because padding, border and scrollbar changes can alter the
+	   content box without changing the border box (and vice versa). Both feed one deferred frame so
+	   the capacity is recomputed once per layout change, never from a half-updated pair. */
 	$effect(() => {
 		if (!containerEl) return;
 
 		let frame = 0;
-		const observer = new ResizeObserver((entries) => {
-			const box = readBorderBox(entries[0], containerEl!);
+		let borderBox: { width: number; height: number } | undefined;
+		let contentBox: { width: number; height: number } | undefined;
+		const schedule = () => {
 			cancelAnimationFrame(frame);
 			frame = requestAnimationFrame(() => {
-				containerWidth = box.width;
-				containerHeight = box.height;
+				if (borderBox) {
+					containerWidth = borderBox.width;
+					containerHeight = borderBox.height;
+				}
+				if (contentBox) {
+					contentWidth = contentBox.width;
+					contentHeight = contentBox.height;
+				}
 			});
+		};
+		const borderObserver = new ResizeObserver((entries) => {
+			borderBox = readBorderBox(entries[0], containerEl!);
+			schedule();
 		});
-		observer.observe(containerEl, { box: 'border-box' });
+		const contentObserver = new ResizeObserver((entries) => {
+			contentBox = readContentBox(entries[0]);
+			schedule();
+		});
+		borderObserver.observe(containerEl, { box: 'border-box' });
+		contentObserver.observe(containerEl, { box: 'content-box' });
 
 		return () => {
 			cancelAnimationFrame(frame);
-			observer.disconnect();
+			borderObserver.disconnect();
+			contentObserver.disconnect();
 		};
 	});
 
@@ -247,36 +275,69 @@
 		};
 	});
 
-	$effect(() => {
-		if (!containerEl) return;
-		const observer = new MutationObserver(() => {
-			boxStyleRevision += 1;
-		});
-		observer.observe(containerEl, { attributes: true, attributeFilter: ['class', 'style'] });
-		return () => observer.disconnect();
-	});
+	/* Oscillation guard: a container whose size depends on content that changes with its own
+	   capacity flips between two measurements every frame. Warn once; the fix is in the layout. */
+	let recentCapacities: string[] = [];
+	let recentTimes: number[] = [];
+	let alternations = 0;
+	let warnedOscillation = false;
+	function noteCapacity(key: string) {
+		/* Only capacity transitions count; other fields (pixel size, aspect) may change in between. */
+		if (key === recentCapacities[recentCapacities.length - 1]) return;
+		const now = performance.now();
+		recentCapacities = [...recentCapacities, key].slice(-4);
+		recentTimes = [...recentTimes, now].slice(-4);
+		if (recentCapacities.length < 4) return;
+		const [a, b, c, d] = recentCapacities;
+		const alternating = a === c && b === d && a !== b && now - recentTimes[0] < 500;
+		alternations = alternating ? alternations + 1 : 0;
+		if (alternations >= 3 && !warnedOscillation) {
+			warnedOscillation = true;
+			console.warn(
+				`GlyphCapacitySensor: capacity is oscillating between ${a} and ${b} characters × lines. ` +
+					'The container is sized by content that changes with its own capacity. Give it a ' +
+					'layout-determined size (for example container-type: inline-size or size, or explicit dimensions).',
+				containerEl
+			);
+		}
+	}
+
+	function sameValue(a: GlyphCapacityValue, b: GlyphCapacityValue) {
+		return (
+			a.classes === b.classes &&
+			a.container.width === b.container.width &&
+			a.container.height === b.container.height &&
+			a.capacityBox.width === b.capacityBox.width &&
+			a.capacityBox.height === b.capacityBox.height &&
+			a.glyph.width === b.glyph.width &&
+			a.glyph.height === b.glyph.height &&
+			a.text.maxChars === b.text.maxChars &&
+			a.text.maxLines === b.text.maxLines
+		);
+	}
 
 	$effect(() => {
 		/* Track props + probes so capacity recomputes when they change. */
 		void lineHeight;
 		void measuredLineBoxHeight;
 		void capacityBox;
-		void boxStyleRevision;
-		void className;
-		void style;
+		void contentWidth;
+		void contentHeight;
 		const glyphWidth = sampleWidth / sampleLength;
 		const glyphHeight = sampleHeight;
 		const hasMeasurement =
 			containerWidth > 0 && containerHeight > 0 && glyphWidth > 0 && glyphHeight > 0;
 
 		if (!hasMeasurement) {
-			value = emptyGlyphCapacityValue;
+			if (!untrack(() => sameValue(value, emptyGlyphCapacityValue)))
+				value = emptyGlyphCapacityValue;
 			return;
 		}
 
 		const lineBoxHeight = resolveLineBoxHeight(glyphHeight);
 		if (!(lineBoxHeight > 0)) {
-			value = emptyGlyphCapacityValue;
+			if (!untrack(() => sameValue(value, emptyGlyphCapacityValue)))
+				value = emptyGlyphCapacityValue;
 			return;
 		}
 
@@ -292,14 +353,14 @@
 			textPortrait: textAspectRatio < 1
 		};
 		const sizes = {
-			xSmall: maxChars < breakpoints[0],
+			xSmall: maxChars < validBreakpoints[0],
 			small: true,
-			medium: maxChars >= breakpoints[1],
-			large: maxChars >= breakpoints[2],
-			xLarge: maxChars >= breakpoints[3]
+			medium: maxChars >= validBreakpoints[1],
+			large: maxChars >= validBreakpoints[2],
+			xLarge: maxChars >= validBreakpoints[3]
 		};
 
-		value = {
+		const next: GlyphCapacityValue = {
 			classes: makeClasses(sizes, orientations),
 			container: {
 				width: containerWidth,
@@ -319,6 +380,11 @@
 				aspectRatio: textAspectRatio
 			}
 		};
+
+		/* Skip no-op updates so subscribers do not re-run on every resize frame. */
+		if (untrack(() => sameValue(value, next))) return;
+		noteCapacity(`${maxChars}×${maxLines}`);
+		value = next;
 	});
 </script>
 
