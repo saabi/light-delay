@@ -9,6 +9,11 @@
 - The sensor's home until release is this repository's workspace (`packages/svelte-glyph-capacity`, PR #5); the guidelines now require sensed containers to have a layout-determined size.
 - Next: Write correctness fixes (review U1–U8), then shell and identity, saving and committing, and the continuous screenplay editor. The application name and mark are undecided.
 
+## 2026-10-01 — Owner review gate (English source)
+
+- Policy: shared machine account `saabi-agents` (Write, not Admin) opens agent PRs; only owner `saabi` approves. CODEOWNERS is `* @saabi`. Agents must not approve reviews and must not merge unless the owner asks for that PR in-session (`gh pr merge` only).
+- Target branch for the upcoming ruleset: `implementation/m2-authoring` only (`master` untouched). Approvals dismiss on new pushes; repository admins may merge their own PRs through the logged pull-request bypass. No `accepted` label or label workflow.
+
 ## 2026-09-30 — Studio M2.5 N1 verification (English source)
 
 - Independent verification of `5d9c754` closes N1. With a real delayed COMMIT, accept, reject and restore now report success only when authoritative state confirms the intended operation. Incompatible rival outcomes keep `PROPOSAL_ALREADY_RESOLVED` or `CONFLICT`. Exactly one mutation was persisted in every case. See [the verification](reviews/2026-09-30-M2.5-N1-verification-claude.md).

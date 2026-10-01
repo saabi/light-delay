@@ -7,6 +7,11 @@
 - Recorded the capacity sensor's temporary home in this repository's workspace and the containment requirement for sensed containers.
 - Added an ADR-0004 addendum for autosaved Drafts and a single commit action in Write. Documentation only.
 
+## 2026-10-01 — Owner review gate (agent account policy)
+
+- Added `.github/CODEOWNERS` (`* @saabi`) and an AGENTS.md **Review and merging** section: agents authenticate as `saabi-agents`, only the owner approves, and agents merge only when explicitly asked via `gh pr merge`.
+- Prepares the branch for an active GitHub ruleset on `implementation/m2-authoring` (required owner/code-owner review, dismiss stale approvals on push, admin PR bypass). Replaces the earlier `accepted`-label plan; no label workflow was added.
+
 ## 2026-09-30 — Studio M2.5 N1 verification
 
 - Recorded the final independent verification of the N1 correction: no demonstrated A or B finding remains, and M2.5 is technically ready for human acceptance. Documentation only.
