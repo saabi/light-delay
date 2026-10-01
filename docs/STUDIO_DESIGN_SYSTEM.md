@@ -98,7 +98,7 @@ The two measures are deliberately not compared: the sensor uses the alphabet ave
 
 ### Screen sensor
 
-Studio ports `ScreenSensor` as a small Svelte 5 module in `apps/studio` (runes, no `lamb` or `@svizzle/ui` dependency, since svizzle's component uses Svelte 3/4 syntax). It is the single source of application layout classes:
+Studio ports `ScreenSensor` as a small Svelte 5 module in `apps/studio` (runes, no `lamb` or `@svizzle/ui` dependency, since svizzle's component uses Svelte 3/4 syntax). The port follows the owner's newest version of the sensor (`svelte-glyph-capacity`, in progress) where it differs from svizzle's. It is the single source of application layout classes:
 
 ```text
 glyph.width  = sampleWidth / sampleLength   (hidden alphabet sample at 1rem, ResizeObserver)
@@ -123,6 +123,16 @@ Thresholds start at svizzle's defaults `[45, 90, 135, 180]`. At 100% scale a ful
 
 Height uses `maxLines` instead of pixels: below 30 lines the shell hides everything optional (for example a phone in landscape). Studio does not use pixel orientation, which avoids the disagreement between pixel orientation and character size classes noted in the article.
 
+### Startup and layout switching
+
+These follow the pattern of Nesta's WAIfinder (`nestauk/dsp_waifinder`), built on svizzle's `FontsLoader`, `ScreenSensor` and `ViewsXor`:
+
+1. **Ordered startup.** Readability preferences apply before first paint. The fonts loader loads the selected interface face first; the sensor mounts only when that face has loaded; the application layout stays hidden (`visibility: hidden`, so it still occupies space and can be measured) until the sensor has published its first classes. The user never sees a layout computed from a fallback face or from no measurement.
+2. **Layout identity derived once.** One pure, tested function maps the sensor's classes to the small set of layouts Studio actually implements: `phone` (`xSmall`), `narrow` (`small`), `regular` (`medium`, `large`) and `wide` (`xLarge`). Components switch on this `layoutId`, never on raw sizes or pixel widths. Adding a layout means changing that one function.
+3. **Switch whole trees at few boundaries.** Where layouts differ structurally, the shell renders a different component (for example `ShellPhone` and `ShellRegular`, a `Sheet` or a docked `Panel`) at a small number of boundaries, with layout-specific components grouped by layout and shared state kept outside them. Components do not accumulate scattered size conditionals.
+4. **Grid areas per class.** The root element carries the sensor's classes. Region placement is CSS `grid-template-areas` keyed on those classes. On `phone`, contextual actions (commit, history) may sit in a bottom bar within thumb reach while identity and breadcrumb stay at the top; the prototype decides.
+5. **Measured, not assumed, chrome sizes.** Where a layout depends on the actual size of the application bar or a bar at the bottom, a resize-observer action publishes it as a CSS variable. No hard-coded pixel offsets.
+
 ### Container queries in `ch`
 
 A component that lives in variable space (a panel, a pane, a list) adapts its internal arrangement with container queries written in `ch`, for example `@container (min-width: 40ch)`. CSS evaluates `ch` in a container query against the query container's own font; this was verified in Chromium 141 and must be covered by a browser test. This extends the "what fits" logic to individual containers, which the article lists as an open limitation of a viewport-wide sensor.
@@ -143,12 +153,13 @@ Adopted from Color Lab's accessibility controls and svizzle's accessibility menu
 | Text scale | 100, 112, 125, 150, 175 % | `--studio-font-scale` on the root |
 | Secondary contrast | normal, high, maximum | Overrides the muted text tokens |
 | Line height | 125, 145, 165, 185 % | `--studio-line-height` |
+| Interface typeface | Inter, plus reading-support faces (for example a dyslexia-friendly face) | Interface font family; the fonts loader loads it first and the sensor re-measures, so layout adapts to wider faces |
 
 - Preferences are local to the browser, not project data, and not part of any document.
 - They are applied before first paint by an inline script in `app.html`, so the page never renders at the wrong scale first.
 - The preferences menu is always readable: it never applies dense styling to itself.
 - Studio also follows `prefers-contrast` and `prefers-reduced-motion`.
-- The screenplay page keeps single line spacing for page fidelity. A separate, explicit "comfortable spacing" view may relax it.
+- The screenplay page keeps Courier Prime and single line spacing for page fidelity; the typeface preference applies to the interface. A separate, explicit "comfortable spacing" view may relax it.
 
 Right-to-left scripts, vertical text and CJK line breaking are out of scope for now, as in the article. Layouts where images and text compete for space (Direct) are to be revisited when that lens exists.
 
@@ -461,10 +472,10 @@ Pass/fail for any Studio UI change. Each item should have an automated check whe
 1. The identity slot shows the application, never the project; the document title is on the document surface.
 2. One application bar; no second persistent bar; no footer; no single-item lens switcher.
 3. No `px` font sizes; no `vw` type; sizes in `rem`/`em`/`ch`/`lh`.
-4. Application layout classes come only from the screen sensor; component internals only from `ch` container queries; no pixel media queries for layout.
+4. Application layout comes only from the screen sensor through the single `layoutId` function; component internals only from `ch` container queries; no pixel media queries for layout.
 5. Raising text scale to 175% steps the layout down and keeps Write usable.
 6. Screenplay page geometry is in `ch` of the screenplay face and matches the table.
-7. Fonts are bundled; nothing loads from remote services; the sensor measures after fonts load.
+7. Fonts are bundled; nothing loads from remote services; the sensor measures after fonts load; the layout is hidden until the first measurement.
 8. Readability preferences apply before first paint and persist locally.
 9. Enter, Tab and Shift+Tab follow screenplay conventions; every element type is creatable by keyboard; selection and undo cross elements.
 10. No text is clipped at any size class (test compares content height to box height).
