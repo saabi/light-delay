@@ -15,18 +15,26 @@
     "./context-contracts": {
       "types": "./dist/contracts/context/context.d.ts",
       "default": "./dist/contracts/context/context.js"
+    },
+    "./postgres": {
+      "types": "./dist/postgres-authoring-store.d.ts",
+      "default": "./dist/postgres-authoring-store.js"
     }
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "check": "tsc -p tsconfig.json --noEmit",
-    "test": "vitest run --config vitest.config.ts"
+    "test": "vitest run --config vitest.config.ts",
+    "test:postgres": "vitest run --config vitest.postgres.config.ts",
+    "migrate": "npm run build && node dist/migrate-postgres.js"
   },
   "dependencies": {
-    "@sinclair/typebox": "^0.34.49"
+    "@sinclair/typebox": "^0.34.49",
+    "pg": "^8.23.0"
   },
   "devDependencies": {
     "@types/node": "^24",
+    "@types/pg": "^8.23.1",
     "typescript": "^6.0.3",
     "vitest": "^4.1.8"
   }

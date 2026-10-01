@@ -40,6 +40,8 @@ export type AuthoringErrorCode =
 	| 'DRAFT_OWNER_MISMATCH'
 	| 'INVALID_DRAFT'
 	| 'CONFLICT'
+	| 'STORE_BUSY'
+	| 'STORE_UNAVAILABLE'
 	| 'STORE_REJECTED';
 
 export type AuthoringError = {
@@ -74,7 +76,10 @@ export interface ScreenplayView {
 export interface AuthoringApplicationOptions {
 	now?: () => string;
 	idFactory?: (kind: 'draft' | 'proposal' | 'changeset') => string;
+	maxHeadRetries?: number;
 }
+
+const defaultMaxHeadRetries = 64;
 
 const deterministicSourcePrincipal: AuthoringPrincipal = {
 	kind: 'system',
@@ -171,6 +176,7 @@ function isError(value: AuthoringOperation[] | AuthoringError): value is Authori
 export class AuthoringApplication {
 	private readonly now: () => string;
 	private readonly idFactory: (kind: 'draft' | 'proposal' | 'changeset') => string;
+	private readonly maxHeadRetries: number;
 
 	constructor(
 		private readonly stores: ProjectStoreResolver,
@@ -178,6 +184,9 @@ export class AuthoringApplication {
 	) {
 		this.now = options.now ?? (() => new Date().toISOString());
 		this.idFactory = options.idFactory ?? ((kind) => `${kind}:${globalThis.crypto.randomUUID()}`);
+		this.maxHeadRetries = options.maxHeadRetries ?? defaultMaxHeadRetries;
+		if (!Number.isSafeInteger(this.maxHeadRetries) || this.maxHeadRetries < 0)
+			throw new Error('maxHeadRetries must be a non-negative safe integer');
 	}
 
 	async getProjectHead(projectId: string): Promise<AuthoringProjectState | undefined> {
@@ -199,11 +208,19 @@ export class AuthoringApplication {
 		return (await this.stores.forProject(projectId))?.getDraft(draftId);
 	}
 
+	async listDrafts(projectId: string): Promise<readonly ScreenplayDraft[]> {
+		return (await this.stores.forProject(projectId))?.listDrafts() ?? [];
+	}
+
 	async getProposal(
 		projectId: string,
 		proposalId: string
 	): Promise<ScreenplayProposal | undefined> {
 		return (await this.stores.forProject(projectId))?.getProposal(proposalId);
+	}
+
+	async listProposals(projectId: string): Promise<readonly ScreenplayProposal[]> {
+		return (await this.stores.forProject(projectId))?.listProposals() ?? [];
 	}
 
 	async getScreenplayView(
@@ -213,8 +230,8 @@ export class AuthoringApplication {
 	): Promise<ScreenplayView | undefined> {
 		const store = await this.stores.forProject(projectId);
 		if (!store) return undefined;
-		const record =
-			revision === undefined ? await store.getHead() : await store.getRevision(revision);
+		if (revision === undefined) return store.getCurrentScreenplayView(scope);
+		const record = await store.getRevision(revision);
 		if (!record) return undefined;
 		const screenplay = findScreenplayScope(record.projection, scope);
 		const elements = resolveScreenplayElements(record.projection, scope);
@@ -238,7 +255,11 @@ export class AuthoringApplication {
 		};
 	}
 
-	async handle(commandInput: unknown, contextInput: unknown): Promise<AuthoringCommandResult> {
+	async handle(
+		commandInput: unknown,
+		contextInput: unknown,
+		retryCount = 0
+	): Promise<AuthoringCommandResult> {
 		const command = materializeAndValidate<AuthoringCommand>(AuthoringCommandSchema, commandInput);
 		if (!command)
 			return failure(
@@ -307,10 +328,23 @@ export class AuthoringApplication {
 		}
 
 		if (command.type === 'CreateProposal') {
+			if (command.proposalId) {
+				const prior = await store.getProposal(command.proposalId);
+				if (prior) {
+					if (
+						prior.source.ref.id !== command.draftId ||
+						!samePrincipal(prior.proposedBy, context.principal)
+					)
+						return failure('CONFLICT', 'Proposal identity belongs to another creation attempt');
+					return { ok: true, kind: 'proposal-created', proposal: prior };
+				}
+			}
 			const draft = await store.getDraft(command.draftId);
 			if (!draft) return failure('DRAFT_NOT_FOUND', `Draft was not found: ${command.draftId}`);
 			if (!samePrincipal(draft.owner, context.principal))
 				return failure('DRAFT_OWNER_MISMATCH', 'Draft belongs to another principal');
+			if (command.expectedDraftUpdatedAt && draft.updatedAt !== command.expectedDraftUpdatedAt)
+				return failure('CONFLICT', 'Draft changed since this Proposal creation began');
 			const baseRevision = await store.getRevision(draft.baseProjectRevision);
 			if (!baseRevision)
 				return failure(
@@ -327,7 +361,7 @@ export class AuthoringApplication {
 				return failure('NO_CHANGES', 'Draft matches the authoritative screenplay');
 			const proposal: ScreenplayProposal = {
 				schemaVersion: 1,
-				id: this.idFactory('proposal'),
+				id: command.proposalId ?? this.idFactory('proposal'),
 				projectId: draft.projectId,
 				scope: draft.scope,
 				baseProjectRevision: draft.baseProjectRevision,
@@ -355,7 +389,17 @@ export class AuthoringApplication {
 				status: 'pending'
 			};
 			const created = await store.createProposal(proposal);
-			if (!created.ok) return failure('STORE_REJECTED', created.message);
+			if (!created.ok) {
+				// A concurrent retry can win the primary-key insert while this request waits.
+				const prior = command.proposalId && (await store.getProposal(command.proposalId));
+				if (
+					prior &&
+					prior.source.ref.id === command.draftId &&
+					samePrincipal(prior.proposedBy, context.principal)
+				)
+					return { ok: true, kind: 'proposal-created', proposal: prior };
+				return failure('STORE_REJECTED', created.message);
+			}
 			return { ok: true, kind: 'proposal-created', proposal };
 		}
 
@@ -446,6 +490,10 @@ export class AuthoringApplication {
 				expectedStatus: 'pending',
 				next: acceptedProposal
 			});
+			if (!stored.ok && stored.code === 'STALE_PROJECT_HEAD')
+				return retryCount < this.maxHeadRetries
+					? this.handle(command, context, retryCount + 1)
+					: failure('STORE_BUSY', 'Project revision changed repeatedly; retry this operation');
 			if (!stored.ok)
 				return failure(
 					stored.code === 'PROPOSAL_ALREADY_RESOLVED'
@@ -527,6 +575,10 @@ export class AuthoringApplication {
 				changeSet.operations
 			)
 		});
+		if (!stored.ok && stored.code === 'STALE_PROJECT_HEAD')
+			return retryCount < this.maxHeadRetries
+				? this.handle(command, context, retryCount + 1)
+				: failure('STORE_BUSY', 'Project revision changed repeatedly; retry this operation');
 		if (!stored.ok) return failure('STORE_REJECTED', stored.message);
 		return { ok: true, kind: 'screenplay-restored', changeSet, revision };
 	}

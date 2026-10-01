@@ -1,5 +1,59 @@
 # Changelog
 
+## 2026-09-30 — Studio M2.5 N1 verification
+
+- Recorded the final independent verification of the N1 correction: no demonstrated A or B finding remains, and M2.5 is technically ready for human acceptance. Documentation only.
+
+## 2026-09-30 — Studio M2.5 N1 correction
+
+- Reconciled authoritative state once more when a resend after an ambiguous infrastructure failure returns a semantic failure. Only a confirmed intended outcome becomes success; genuine semantic failures are preserved.
+- Added real PostgreSQL delayed-COMMIT regressions for accept/reject/restore, incompatible-writer negatives and duplicate-history checks, plus a built Studio PostgreSQL browser regression for Accept and Restore in CI.
+- N1 is ready for narrow independent verification. M2.5 remains unaccepted; no merge, staging deployment or Pages promotion was made.
+
+## 2026-09-30 — Studio M2.5 B-corrections verification
+
+- Recorded the independent verification of the M2.5 B-finding corrections: B1–B3 and B4's bounded waiting are closed; new finding N1 (a timed-out COMMIT can commit while Studio reports failure) blocks acceptance. Documentation only.
+
+## 2026-09-30 — Studio M2.5 final B corrections
+
+- Separated committed accept, restore and Proposal-create results from later read refreshes, so Retry now refreshes state without resending a known committed mutation.
+- Correlated each Studio CreateProposal attempt with a stable caller-supplied Proposal ID and Draft update timestamp. The persisted Proposal primary key makes lost acknowledgements idempotent without a new migration.
+- Classified pg's unqueryable-client and query-read-timeout failures as retryable unavailability; added a 20 s client-side query deadline and a 10 s initial TCP keepalive delay.
+- Added real PostgreSQL and browser regressions. Local WSL PostgreSQL 14.24 now has a migrated, empty studio_dev and an isolated studio_test used by Windows Node.
+- M2.5 remains pending fresh independent verification. No staging or Pages deployment was performed.
+
+## 2026-09-30 — Studio M2.5 final connectivity verification
+
+- Recorded the independent verification of the connectivity correction: V1 closed, integrity and lost-acknowledgement reconciliation verified, B1/B3 unchanged, and four open B findings (F1–F4).
+- Documented the local `studio_dev` (development) / `studio_test` (automated tests) database convention.
+
+## 2026-09-30 — Studio M2.5 connectivity correction
+
+- Protected checked-out PostgreSQL transaction clients from unhandled connection errors and discarded broken clients without replaying transactions.
+- Added narrow database-unavailable classification, safe HTTP 503 responses, and bounded pool connection/statement/idle-transaction waits.
+- Added bounded Studio transient retries, persisted-state reconciliation after ambiguous mutations, a reconnecting warning, and a manual retry that keeps unsaved browser work.
+- Added a real PostgreSQL backend-termination regression and focused HTTP, retry and browser coverage. No staging or Pages deployment or migration was performed.
+
+## 2026-09-26 — Studio M2.5 correction verification
+
+- Recorded the independent verification of the M2.5 corrections, including the open checked-out-connection crash (V1).
+- Recorded the database connectivity-failure decision: server fail-fast with retryable `STORE_UNAVAILABLE`, three client retries with jittered backoff and reconciliation, then a banner with manual retry; no server-side command queue.
+
+## 2026-09-25 — Studio M2.5 independent-review corrections
+
+- Retried unrelated PostgreSQL project-head movement with a generous bounded budget; exhaustion now returns retryable `STORE_BUSY` while preserving pending Proposals and scoped conflict behavior.
+- Handled idle PostgreSQL pool errors without exposing connection details in logs.
+- Enforced the unchanged M2 authoring contract against both stores in CI and added high-contention and retry-exhaustion coverage.
+- Recorded the conscious outbox and project-authorization deferrals and the future dynamic document/cut catalog constraint.
+
+## 2026-09-25 — Studio M2.5 PostgreSQL persistence
+
+- Added versioned PostgreSQL migrations and a scoped authoring store behind the accepted M2 asynchronous ports.
+- Made Drafts and Proposals survive restart while keeping Draft bases immutable and terminal Proposal transitions conditional.
+- Made acceptance one database transaction for semantic history, revision metadata, affected-scope checkpoints, current projection, document versions, project head and Proposal status.
+- Routed Studio Write through a server-side application instance so acceptance authority is supplied by trusted server context; saved Drafts and pending Proposals reopen on reload.
+- Added real PostgreSQL transaction and restart integration coverage to Studio CI. No Light Delay creative data, host database or deployment was changed.
+
 ## 2026-09-25 — M2 independent-review corrections
 
 - Made Proposal resolution a conditional one-way transition and made accepted mutation plus Proposal acceptance atomic in the application-store contract.

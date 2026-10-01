@@ -11,8 +11,11 @@
 	import {
 		authoringApplication,
 		authoringFixtureIds,
+		authorizeManualAuthoringRetry,
+		onAuthoringConnectionState,
 		studioAuthoringContext
 	} from '$lib/authoring-client';
+	import { AuthoringRequestError, type ConnectionState } from '$lib/authoring-retry';
 	import { describeOperation, draftSavedMessage } from '$lib/authoring-presenter';
 
 	let view = $state<ScreenplayView>();
@@ -29,6 +32,10 @@
 	let reviewOpen = $state(false);
 	let historyOpen = $state(false);
 	let localElementCounter = 0;
+	let connection = $state<ConnectionState>({ kind: 'ready' });
+	let retryAction = $state<(() => Promise<void>) | undefined>();
+	let activeAction: (() => Promise<void>) | undefined;
+	let proposalAttemptId: string | undefined;
 
 	const scope = $derived<DocumentVersionScope>({
 		documentId: authoringFixtureIds.primaryDocument,
@@ -37,34 +44,108 @@
 	const pendingProposal = $derived(proposal?.status === 'pending' ? proposal : undefined);
 
 	onMount(() => {
+		const unsubscribe = onAuthoringConnectionState((state) => {
+			connection = state;
+			if (state.kind === 'unavailable' && activeAction) retryAction = activeAction;
+		});
 		void openVersion(selectedVersionId);
+		return unsubscribe;
 	});
+
+	async function perform(action: () => Promise<void>) {
+		activeAction = action;
+		retryAction = undefined;
+		busy = true;
+		try {
+			await action();
+			if (connection.kind !== 'unavailable' && retryAction === action) retryAction = undefined;
+		} catch (error) {
+			status = error instanceof Error ? error.message : 'Studio request failed';
+			if (error instanceof AuthoringRequestError && error.transient)
+				retryAction = activeAction ?? action;
+		} finally {
+			activeAction = undefined;
+			busy = false;
+		}
+	}
+
+	async function retryNow() {
+		authorizeManualAuthoringRetry();
+		if (retryAction) await perform(retryAction);
+		else await openVersion(selectedVersionId);
+	}
 
 	async function openVersion(versionId: string) {
 		busy = true;
-		selectedVersionId = versionId;
-		proposal = undefined;
-		proposalBaseElements = [];
-		reviewOpen = false;
-		const nextScope = { documentId: authoringFixtureIds.primaryDocument, versionId };
-		view = await authoringApplication.getScreenplayView(authoringFixtureIds.project, nextScope);
-		const draftId = draftIds[versionId];
-		draft = draftId
-			? await authoringApplication.getDraft(authoringFixtureIds.project, draftId)
-			: undefined;
-		elements = (draft?.elements ?? view?.elements ?? []).map((element) => ({ ...element }));
-		dirty = false;
-		status =
-			draft && view && draft.baseDocumentVersion !== view.documentVersion
-				? 'Draft saved · authoritative screenplay changed since this Draft started'
-				: draft
-					? draftSavedMessage()
-					: 'Authoritative screenplay';
-		history = await authoringApplication.listHistory(authoringFixtureIds.project);
-		busy = false;
+		try {
+			const nextScope = { documentId: authoringFixtureIds.primaryDocument, versionId };
+			const projectId = authoringFixtureIds.project;
+			const [nextView, drafts, proposals, nextHistory] = await Promise.all([
+				authoringApplication.getScreenplayView(projectId, nextScope),
+				authoringApplication.listDrafts(projectId),
+				authoringApplication.listProposals(projectId),
+				authoringApplication.listHistory(projectId)
+			]);
+			selectedVersionId = versionId;
+			proposal = undefined;
+			proposalBaseElements = [];
+			reviewOpen = false;
+			view = nextView;
+			const consumed = new Set(
+				proposals.filter((item) => item.status === 'accepted').map((item) => item.source.ref.id)
+			);
+			const matching = drafts
+				.filter(
+					(item) =>
+						item.scope.documentId === nextScope.documentId &&
+						item.scope.versionId === nextScope.versionId &&
+						!consumed.has(item.id)
+				)
+				.sort((a, b) => b.updatedAt.localeCompare(a.updatedAt));
+			draft = matching.find((item) => item.id === draftIds[versionId]) ?? matching[0];
+			if (draft) draftIds = { ...draftIds, [versionId]: draft.id };
+			const pending = proposals
+				.filter(
+					(item) =>
+						item.status === 'pending' &&
+						item.scope.documentId === nextScope.documentId &&
+						item.scope.versionId === nextScope.versionId &&
+						(!draft || item.source.ref.id === draft.id)
+				)
+				.sort((a, b) => b.createdAt.localeCompare(a.createdAt));
+			proposal = pending[0];
+			if (proposal) {
+				proposalBaseElements =
+					(
+						await authoringApplication.getScreenplayView(
+							projectId,
+							proposal.scope,
+							proposal.baseProjectRevision
+						)
+					)?.elements.map((element) => ({ ...element })) ?? [];
+				reviewOpen = true;
+			}
+			elements = (draft?.elements ?? view?.elements ?? []).map((element) => ({ ...element }));
+			dirty = false;
+			status = proposal
+				? 'Proposal ready for review — not yet accepted'
+				: draft && view && draft.baseDocumentVersion !== view.documentVersion
+					? 'Draft saved · authoritative screenplay changed since this Draft started'
+					: draft
+						? draftSavedMessage()
+						: 'Authoritative screenplay';
+			history = nextHistory;
+		} catch (error) {
+			status = error instanceof Error ? error.message : 'Could not load screenplay';
+			if (error instanceof AuthoringRequestError && error.transient)
+				retryAction = () => openVersion(versionId);
+		} finally {
+			busy = false;
+		}
 	}
 
 	function updateText(elementId: string, text: string) {
+		proposalAttemptId = undefined;
 		elements = elements.map((element) =>
 			element.id === elementId ? { ...element, text } : element
 		);
@@ -74,6 +155,7 @@
 	}
 
 	function moveElement(index: number, direction: -1 | 1) {
+		proposalAttemptId = undefined;
 		const target = index + direction;
 		if (target < 0 || target >= elements.length) return;
 		const reordered = [...elements];
@@ -85,6 +167,7 @@
 	}
 
 	function removeElement(elementId: string) {
+		proposalAttemptId = undefined;
 		elements = elements.filter((element) => element.id !== elementId);
 		dirty = true;
 		status = 'Unsaved Draft changes';
@@ -92,6 +175,7 @@
 	}
 
 	function addAction() {
+		proposalAttemptId = undefined;
 		localElementCounter += 1;
 		elements = [
 			...elements,
@@ -135,26 +219,41 @@
 		if (dirty || !draft) await saveDraft();
 		if (!draft) return;
 		busy = true;
+		proposalAttemptId ??= `proposal:${crypto.randomUUID()}`;
 		const result = await authoringApplication.handle(
 			{
 				type: 'CreateProposal',
 				projectId: authoringFixtureIds.project,
-				draftId: draft.id
+				draftId: draft.id,
+				proposalId: proposalAttemptId,
+				expectedDraftUpdatedAt: draft.updatedAt
 			},
 			studioAuthoringContext
 		);
 		if (result.ok && result.kind === 'proposal-created') {
+			proposalAttemptId = undefined;
 			proposal = result.proposal;
-			proposalBaseElements =
-				(
-					await authoringApplication.getScreenplayView(
-						authoringFixtureIds.project,
-						result.proposal.scope,
-						result.proposal.baseProjectRevision
-					)
-				)?.elements.map((element) => ({ ...element })) ?? [];
 			reviewOpen = true;
 			status = 'Proposal ready for review — not yet accepted';
+			const refresh = async () => {
+				activeAction = refresh;
+				try {
+					proposalBaseElements =
+						(
+							await authoringApplication.getScreenplayView(
+								authoringFixtureIds.project,
+								result.proposal.scope,
+								result.proposal.baseProjectRevision
+							)
+						)?.elements.map((element) => ({ ...element })) ?? [];
+					status = 'Proposal ready for review — not yet accepted';
+					retryAction = undefined;
+				} catch {
+					status = 'Proposal created · Review refresh pending';
+					retryAction = refresh;
+				}
+			};
+			await refresh();
 		} else if (!result.ok) status = result.error.message;
 		busy = false;
 	}
@@ -178,6 +277,35 @@
 		busy = false;
 	}
 
+	async function refreshCommitted(message: string, versionId: string) {
+		const refresh = async () => {
+			activeAction = refresh;
+			try {
+				const nextScope = { documentId: authoringFixtureIds.primaryDocument, versionId };
+				const [nextView, nextHistory] = await Promise.all([
+					authoringApplication.getScreenplayView(authoringFixtureIds.project, nextScope),
+					authoringApplication.listHistory(authoringFixtureIds.project)
+				]);
+				view = nextView;
+				elements = nextView?.elements.map((element) => ({ ...element })) ?? [];
+				history = nextHistory;
+				draft = undefined;
+				proposal = undefined;
+				proposalBaseElements = [];
+				reviewOpen = false;
+				delete draftIds[versionId];
+				draftIds = { ...draftIds };
+				dirty = false;
+				status = message;
+				retryAction = undefined;
+			} catch {
+				status = `${message} · Authoritative refresh pending`;
+				retryAction = refresh;
+			}
+		};
+		await refresh();
+	}
+
 	async function acceptProposal() {
 		if (!pendingProposal) return;
 		busy = true;
@@ -190,19 +318,12 @@
 			studioAuthoringContext
 		);
 		if (result.ok && result.kind === 'proposal-accepted') {
-			status = `Accepted into project history as revision ${result.revision.number}`;
-			proposal = await authoringApplication.getProposal(
-				authoringFixtureIds.project,
-				pendingProposal.id
+			proposal = undefined;
+			reviewOpen = false;
+			await refreshCommitted(
+				`Accepted into project history as revision ${result.revision.number}`,
+				selectedVersionId
 			);
-			draft = undefined;
-			proposalBaseElements = [];
-			delete draftIds[selectedVersionId];
-			draftIds = { ...draftIds };
-			view = await authoringApplication.getScreenplayView(authoringFixtureIds.project, scope);
-			elements = view?.elements.map((element) => ({ ...element })) ?? [];
-			history = await authoringApplication.listHistory(authoringFixtureIds.project);
-			dirty = false;
 		} else if (!result.ok) status = `Proposal not accepted: ${result.error.message}`;
 		busy = false;
 	}
@@ -222,16 +343,12 @@
 			studioAuthoringContext
 		);
 		if (result.ok && result.kind === 'screenplay-restored') {
-			view = await authoringApplication.getScreenplayView(authoringFixtureIds.project, scope);
-			elements = view?.elements.map((element) => ({ ...element })) ?? [];
-			draft = undefined;
 			proposal = undefined;
-			proposalBaseElements = [];
-			delete draftIds[selectedVersionId];
-			draftIds = { ...draftIds };
-			history = await authoringApplication.listHistory(authoringFixtureIds.project);
-			dirty = false;
-			status = `Restored as new project revision ${result.revision.number}`;
+			reviewOpen = false;
+			await refreshCommitted(
+				`Restored as new project revision ${result.revision.number}`,
+				selectedVersionId
+			);
 		} else if (!result.ok) status = `Restore not applied: ${result.error.message}`;
 		busy = false;
 	}
@@ -249,8 +366,10 @@
 			<button class:active={historyOpen} onclick={() => (historyOpen = !historyOpen)}
 				>History</button
 			>
-			<button class="primary" disabled={busy || (!draft && !dirty)} onclick={proposeChanges}
-				>Review changes</button
+			<button
+				class="primary"
+				disabled={busy || (!draft && !dirty)}
+				onclick={() => perform(proposeChanges)}>Review changes</button
 			>
 		</div>
 	</header>
@@ -267,8 +386,23 @@
 			>
 		</div>
 		<p class:accepted={status.startsWith('Accepted') || status.startsWith('Restored')}>{status}</p>
-		<button disabled={busy || !dirty} onclick={saveDraft}>Save Draft</button>
+		{#if !view && !busy}<button onclick={() => openVersion(selectedVersionId)}>Retry</button>{/if}
+		<button disabled={busy || !dirty} onclick={() => perform(saveDraft)}>Save Draft</button>
 	</div>
+	{#if connection.kind !== 'ready'}
+		<div class="connection-warning" role="status">
+			{connection.kind === 'retrying'
+				? `Reconnecting… (attempt ${connection.attempt} of 3)`
+				: connection.reason === 'busy'
+					? 'Studio is busy. Your work is kept in this browser.'
+					: connection.reason === 'unknown'
+						? 'Could not confirm the last save. Your work is kept in this browser.'
+						: 'Database unavailable. Your unsaved work is kept in this browser.'}
+			{#if connection.kind === 'unavailable'}
+				<button onclick={retryNow} disabled={busy}>Retry now</button>
+			{/if}
+		</div>
+	{/if}
 
 	<main class:withPanel={reviewOpen || historyOpen}>
 		<section class="workspace" aria-busy={busy}>
@@ -284,6 +418,7 @@
 						class:character={element.kind === 'character'}
 					>
 						<textarea
+							disabled={busy}
 							aria-label={element.kind}
 							class:sceneHeading={element.kind === 'scene-heading'}
 							rows={element.kind === 'action' ? 2 : 1}
@@ -292,21 +427,23 @@
 						<div class="element-actions">
 							<button
 								aria-label="Move up"
-								disabled={index === 0}
+								disabled={busy || index === 0}
 								onclick={() => moveElement(index, -1)}>↑</button
 							>
 							<button
 								aria-label="Move down"
-								disabled={index === elements.length - 1}
+								disabled={busy || index === elements.length - 1}
 								onclick={() => moveElement(index, 1)}>↓</button
 							>
-							<button aria-label="Remove element" onclick={() => removeElement(element.id)}
-								>Remove</button
+							<button
+								aria-label="Remove element"
+								disabled={busy}
+								onclick={() => removeElement(element.id)}>Remove</button
 							>
 						</div>
 					</div>
 				{/each}
-				<button class="add-action" onclick={addAction}>+ Action</button>
+				<button class="add-action" disabled={busy} onclick={addAction}>+ Action</button>
 			</article>
 			<footer>
 				<span
@@ -316,7 +453,7 @@
 							? 'Draft saved · provisional'
 							: 'Authoritative projection'}</span
 				>
-				<span>In-memory M2 store · resets when this Studio process stops</span>
+				<span>Studio Write</span>
 			</footer>
 		</section>
 
@@ -355,8 +492,9 @@
 					</p>
 					{#if pendingProposal}
 						<div class="proposal-actions">
-							<button onclick={rejectProposal}>Reject</button>
-							<button class="primary" onclick={acceptProposal}>Accept changes</button>
+							<button onclick={() => perform(rejectProposal)}>Reject</button>
+							<button class="primary" onclick={() => perform(acceptProposal)}>Accept changes</button
+							>
 						</div>
 					{/if}
 				{:else}
@@ -373,7 +511,7 @@
 				</p>
 				<ul class="history-list">
 					<li>
-						<span>Initial screenplay</span><button onclick={() => restoreRevision(0)}
+						<span>Initial screenplay</span><button onclick={() => perform(() => restoreRevision(0))}
 							>Restore</button
 						>
 					</li>
@@ -384,7 +522,9 @@
 									>{changeSet.intent}</small
 								>
 							</div>
-							<button onclick={() => restoreRevision(changeSet.resultingRevision)}>Restore</button>
+							<button onclick={() => perform(() => restoreRevision(changeSet.resultingRevision))}
+								>Restore</button
+							>
 						</li>
 					{/each}
 				</ul>
@@ -394,6 +534,22 @@
 </div>
 
 <style>
+	.connection-warning {
+		padding: 9px 18px;
+		background: #fff2dc;
+		color: #4c391b;
+		font-size: 12px;
+		display: flex;
+		align-items: center;
+		gap: 12px;
+	}
+	.connection-warning button {
+		border: 1px solid currentColor;
+		border-radius: 4px;
+		background: transparent;
+		padding: 4px 8px;
+		cursor: pointer;
+	}
 	.shell {
 		min-height: 100vh;
 	}

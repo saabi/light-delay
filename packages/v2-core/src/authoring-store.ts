@@ -1,5 +1,6 @@
 import type { TSchema } from '@sinclair/typebox';
 import { Value } from '@sinclair/typebox/value';
+import type { ScreenplayView } from './authoring.js';
 import {
 	AcceptedHistoryBundleSchema,
 	AcceptedMutationSchema,
@@ -28,6 +29,7 @@ import {
 export interface ProjectStore {
 	getHead(): Promise<AuthoringProjectState>;
 	getRevision(revision: number): Promise<AuthoringProjectState | undefined>;
+	getCurrentScreenplayView(scope: DocumentVersionScope): Promise<ScreenplayView | undefined>;
 }
 
 export interface HistoryStore {
@@ -54,8 +56,10 @@ export interface ProposalTransition {
 
 export interface DraftProposalStore {
 	getDraft(draftId: string): Promise<ScreenplayDraft | undefined>;
+	listDrafts(): Promise<readonly ScreenplayDraft[]>;
 	saveDraft(draft: ScreenplayDraft): Promise<DraftWriteResult>;
 	getProposal(proposalId: string): Promise<ScreenplayProposal | undefined>;
+	listProposals(): Promise<readonly ScreenplayProposal[]>;
 	createProposal(proposal: ScreenplayProposal): Promise<ProposalWriteResult>;
 	transitionProposal(transition: ProposalTransition): Promise<ProposalWriteResult>;
 }
@@ -530,7 +534,7 @@ function materializeMutation(input: unknown): AcceptedMutation | undefined {
 	return materializeAndValidate<AcceptedMutation>(AcceptedMutationSchema, input);
 }
 
-function validateRestoreReferences(
+export function validateRestoreReferences(
 	changeSet: AuthoringChangeSet,
 	projectionAt: (revision: number) => ProjectProjection | undefined
 ): string | undefined {
@@ -547,7 +551,7 @@ function validateRestoreReferences(
 	return undefined;
 }
 
-function validateAcceptedMutation(
+export function validateAcceptedMutation(
 	mutation: AcceptedMutation,
 	current: AuthoringProjectState,
 	projected: ProjectProjection
@@ -710,6 +714,29 @@ export class InMemoryAuthoringProjectStore implements AuthoringUnitOfWork {
 		return deepFreeze(cloneJson(this.currentState()));
 	}
 
+	async getCurrentScreenplayView(scope: DocumentVersionScope): Promise<ScreenplayView | undefined> {
+		const state = this.currentState();
+		const screenplay = findScreenplayScope(state.projection, scope);
+		const elements = resolveScreenplayElements(state.projection, scope);
+		const document = state.projection.documents.find((item) => item.id === scope.documentId);
+		const version = state.projection.versions.find((item) => item.id === scope.versionId);
+		return screenplay && elements && document && version
+			? deepFreeze(
+					cloneJson({
+						projectId: state.projectId,
+						projectName: state.projection.name,
+						documentId: document.id,
+						documentTitle: document.title,
+						versionId: version.id,
+						versionLabel: version.label,
+						projectRevision: state.number,
+						documentVersion: screenplay.documentVersion,
+						elements
+					})
+				)
+			: undefined;
+	}
+
 	async getRevision(revision: number): Promise<AuthoringProjectState | undefined> {
 		const metadata = this.revisions[revision];
 		const projection = this.projectionAtRevision(revision);
@@ -734,6 +761,10 @@ export class InMemoryAuthoringProjectStore implements AuthoringUnitOfWork {
 	async getDraft(draftId: string): Promise<ScreenplayDraft | undefined> {
 		const draft = this.drafts.get(draftId);
 		return draft ? deepFreeze(cloneJson(draft)) : undefined;
+	}
+
+	async listDrafts(): Promise<readonly ScreenplayDraft[]> {
+		return deepFreeze(cloneJson([...this.drafts.values()]));
 	}
 
 	async saveDraft(input: ScreenplayDraft): Promise<DraftWriteResult> {
@@ -765,6 +796,10 @@ export class InMemoryAuthoringProjectStore implements AuthoringUnitOfWork {
 	async getProposal(proposalId: string): Promise<ScreenplayProposal | undefined> {
 		const proposal = this.proposals.get(proposalId);
 		return proposal ? deepFreeze(cloneJson(proposal)) : undefined;
+	}
+
+	async listProposals(): Promise<readonly ScreenplayProposal[]> {
+		return deepFreeze(cloneJson([...this.proposals.values()]));
 	}
 
 	async createProposal(input: ScreenplayProposal): Promise<ProposalWriteResult> {

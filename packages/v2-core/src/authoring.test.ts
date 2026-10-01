@@ -1,4 +1,6 @@
-import { describe, expect, it, vi } from 'vitest';
+import { randomUUID } from 'node:crypto';
+import { Pool } from 'pg';
+import { afterAll, afterEach, beforeAll, describe, expect, it, vi } from 'vitest';
 import { AuthoringApplication, type ScreenplayView } from './authoring.js';
 import type {
 	AuthoringPrincipal,
@@ -10,11 +12,44 @@ import { authoringFixtureIds, harborLightInitialRevision } from './authoring-fix
 import {
 	compareCanonicalIds,
 	InMemoryAuthoringProjectStore,
-	InMemoryProjectStoreResolver,
 	materializeAndValidate,
-	resolveElementState
+	resolveElementState,
+	type ProjectStoreResolver
 } from './authoring-store.js';
 import { ScreenplayDraftSchema } from './authoring-contracts.js';
+import {
+	PostgresAuthoringProjectStore,
+	PostgresProjectStoreResolver
+} from './postgres-authoring-store.js';
+import { migrateAuthoringDatabase } from './postgres-migrations.js';
+
+const backend = process.env.AUTHORING_CONTRACT_BACKEND ?? 'memory';
+if (backend !== 'memory' && backend !== 'postgres')
+	throw new Error(`Unknown authoring contract backend: ${backend}`);
+const postgresUrl = process.env.TEST_DATABASE_URL;
+if (backend === 'postgres' && !postgresUrl)
+	throw new Error('TEST_DATABASE_URL is required for PostgreSQL contract tests');
+const schema = `m25_contract_${randomUUID().replaceAll('-', '')}`;
+const admin = backend === 'postgres' ? new Pool({ connectionString: postgresUrl }) : undefined;
+const pool =
+	backend === 'postgres'
+		? new Pool({ connectionString: postgresUrl, options: `-c search_path=${schema}`, max: 10 })
+		: undefined;
+
+beforeAll(async () => {
+	if (!admin || !pool) return;
+	await admin.query(`CREATE SCHEMA "${schema}"`);
+	await migrateAuthoringDatabase(pool);
+});
+afterEach(async () => {
+	if (pool) await pool.query('TRUNCATE authoring_projects CASCADE');
+});
+afterAll(async () => {
+	if (!admin || !pool) return;
+	await pool.end();
+	await admin.query(`DROP SCHEMA "${schema}" CASCADE`);
+	await admin.end();
+});
 
 const human: AuthoringPrincipal = { kind: 'human', id: 'user:director' };
 const context: TrustedExecutionContext = { principal: human, requestId: 'request:test' };
@@ -31,12 +66,17 @@ const codaScope: DocumentVersionScope = {
 	versionId: authoringFixtureIds.featureVersion
 };
 
-function createHarness(options: { now?: () => string } = {}) {
-	const store = new InMemoryAuthoringProjectStore(harborLightInitialRevision);
-	const resolver = new InMemoryProjectStoreResolver([]);
-	vi.spyOn(resolver, 'forProject').mockImplementation(async (projectId) =>
-		projectId === authoringFixtureIds.project ? store : undefined
-	);
+async function createHarness(options: { now?: () => string } = {}) {
+	if (pool) {
+		await pool.query('TRUNCATE authoring_projects CASCADE');
+		await new PostgresProjectStoreResolver(pool).seedProject(harborLightInitialRevision);
+	}
+	const store = pool
+		? new PostgresAuthoringProjectStore(pool, authoringFixtureIds.project)
+		: new InMemoryAuthoringProjectStore(harborLightInitialRevision);
+	const resolver: ProjectStoreResolver = {
+		forProject: async (projectId) => (projectId === authoringFixtureIds.project ? store : undefined)
+	};
 	let id = 0;
 	let tick = 0;
 	const application = new AuthoringApplication(resolver, {
@@ -123,7 +163,7 @@ async function proposeAndAccept(
 
 describe('durable provisional screenplay work', () => {
 	it('saves and reopens a Draft without creating a ProjectRevision or changing authority', async () => {
-		const { application } = createHarness();
+		const { application } = await createHarness();
 		const before = await getView(application, featureScope);
 		const edited = before.elements.map((element) =>
 			element.id === authoringFixtureIds.dialogue
@@ -143,7 +183,7 @@ describe('durable provisional screenplay work', () => {
 	});
 
 	it('materializes once, validates the private value, and executes only that value', async () => {
-		const { application } = createHarness();
+		const { application } = await createHarness();
 		const view = await getView(application, featureScope);
 		let descriptorReads = 0;
 		const volatileElement = new Proxy(
@@ -180,7 +220,7 @@ describe('durable provisional screenplay work', () => {
 
 describe('proposal lifecycle and trusted attribution', () => {
 	it('creates the same semantic proposal from the same saved Draft and retains source provenance', async () => {
-		const { application } = createHarness();
+		const { application } = await createHarness();
 		const view = await getView(application, featureScope);
 		const edited = view.elements.map((element) =>
 			element.id === authoringFixtureIds.action
@@ -208,7 +248,7 @@ describe('proposal lifecycle and trusted attribution', () => {
 	});
 
 	it('rejects a Proposal without changing accepted history or the authoritative screenplay', async () => {
-		const { application } = createHarness();
+		const { application } = await createHarness();
 		const before = await getView(application, featureScope);
 		const draft = await saveDraft(application, featureScope, [
 			...before.elements.slice(0, 1),
@@ -232,7 +272,7 @@ describe('proposal lifecycle and trusted attribution', () => {
 	});
 
 	it('accepts explicitly, attributes the human separately from proposal provenance, and rejects forged authority', async () => {
-		const { application } = createHarness();
+		const { application } = await createHarness();
 		const view = await getView(application, featureScope);
 		const forged = await application.handle(
 			{
@@ -286,7 +326,7 @@ function deterministicSourcePrincipalForTest() {
 
 describe('version-scoped identity and conflict semantics', () => {
 	it('shares stable element identity while resolving deliberate removal deterministically', async () => {
-		const { application } = createHarness();
+		const { application } = await createHarness();
 		const feature = await getView(application, featureScope);
 		const trailer = await getView(application, trailerScope);
 		const head = await application.getProjectHead(authoringFixtureIds.project);
@@ -308,7 +348,7 @@ describe('version-scoped identity and conflict semantics', () => {
 	});
 
 	it('accepts one cut without leaking into its sibling', async () => {
-		const { application } = createHarness();
+		const { application } = await createHarness();
 		const feature = await getView(application, featureScope);
 		const trailerBefore = await getView(application, trailerScope);
 		await proposeAndAccept(
@@ -327,7 +367,7 @@ describe('version-scoped identity and conflict semantics', () => {
 	});
 
 	it('fails a stale proposal safely when its document version changed', async () => {
-		const { application } = createHarness();
+		const { application } = await createHarness();
 		const original = await getView(application, featureScope);
 		const staleDraft = await saveDraft(
 			application,
@@ -356,7 +396,7 @@ describe('version-scoped identity and conflict semantics', () => {
 	});
 
 	it('does not reject a proposal merely because unrelated accepted work advanced project history', async () => {
-		const { application } = createHarness();
+		const { application } = await createHarness();
 		const feature = await getView(application, featureScope);
 		const featureDraft = await saveDraft(
 			application,
@@ -388,7 +428,7 @@ describe('version-scoped identity and conflict semantics', () => {
 
 describe('scoped restore and accepted-history reconstruction', () => {
 	it('restores one document/cut as new history while preserving sibling and unrelated scopes', async () => {
-		const { application, store } = createHarness();
+		const { application, store } = await createHarness();
 		const initialFeature = await getView(application, featureScope);
 		const changedFeature: ScreenplayElement[] = [
 			{ ...initialFeature.elements[3], text: 'Reordered dialogue.' },
@@ -479,7 +519,7 @@ describe('scoped restore and accepted-history reconstruction', () => {
 	});
 
 	it('round-trips accepted records through JSON and rehydrates without command acceptance', async () => {
-		const { application, store } = createHarness();
+		const { application, store } = await createHarness();
 		const feature = await getView(application, featureScope);
 		const acceptedBy = {
 			principal: { kind: 'human' as const, id: 'user:accepting-editor' },
@@ -569,7 +609,7 @@ describe('Proposal terminal transitions', () => {
 	}
 
 	it('does not allow reject after accept', async () => {
-		const { application } = createHarness();
+		const { application } = await createHarness();
 		const proposal = await pendingProposal(application);
 		expect(await acceptProposal(application, proposal.id)).toMatchObject({
 			ok: true,
@@ -583,7 +623,7 @@ describe('Proposal terminal transitions', () => {
 	});
 
 	it('does not allow accept after reject', async () => {
-		const { application } = createHarness();
+		const { application } = await createHarness();
 		const proposal = await pendingProposal(application);
 		expect(await rejectProposal(application, proposal.id)).toMatchObject({
 			ok: true,
@@ -598,7 +638,7 @@ describe('Proposal terminal transitions', () => {
 
 	it('makes competing accept and reject choose exactly one terminal winner', async () => {
 		for (const acceptFirst of [true, false]) {
-			const { application } = createHarness();
+			const { application } = await createHarness();
 			const proposal = await pendingProposal(application);
 			const calls = acceptFirst
 				? [acceptProposal(application, proposal.id), rejectProposal(application, proposal.id)]
@@ -617,7 +657,7 @@ describe('Proposal terminal transitions', () => {
 	});
 
 	it('rejects duplicate acceptance', async () => {
-		const { application } = createHarness();
+		const { application } = await createHarness();
 		const proposal = await pendingProposal(application);
 		expect(await acceptProposal(application, proposal.id)).toMatchObject({ ok: true });
 		expect(await acceptProposal(application, proposal.id)).toMatchObject({
@@ -627,7 +667,7 @@ describe('Proposal terminal transitions', () => {
 	});
 
 	it('rejects duplicate rejection', async () => {
-		const { application } = createHarness();
+		const { application } = await createHarness();
 		const proposal = await pendingProposal(application);
 		expect(await rejectProposal(application, proposal.id)).toMatchObject({ ok: true });
 		expect(await rejectProposal(application, proposal.id)).toMatchObject({
@@ -639,7 +679,7 @@ describe('Proposal terminal transitions', () => {
 
 describe('Draft base semantics and durable provenance', () => {
 	it('keeps an existing Draft base stable and detects staleness after re-save', async () => {
-		const { application } = createHarness();
+		const { application } = await createHarness();
 		const alice: AuthoringPrincipal = { kind: 'human', id: 'user:alice' };
 		const bob: AuthoringPrincipal = { kind: 'human', id: 'user:bob' };
 		const aliceContext = { principal: alice, requestId: 'request:alice-draft' };
@@ -723,7 +763,7 @@ describe('Draft base semantics and durable provenance', () => {
 	});
 
 	it('preserves content authorship, proposer, generator, and accepting authority', async () => {
-		const { application, store } = createHarness();
+		const { application, store } = await createHarness();
 		const alice: AuthoringPrincipal = { kind: 'human', id: 'user:alice' };
 		const bob: AuthoringPrincipal = { kind: 'human', id: 'user:bob' };
 		const view = await getView(application, featureScope);
@@ -781,7 +821,7 @@ describe('Draft base semantics and durable provenance', () => {
 	});
 
 	it('records an author accepting their own work without collapsing provenance roles', async () => {
-		const { application } = createHarness();
+		const { application } = await createHarness();
 		const view = await getView(application, featureScope);
 		const accepted = await proposeAndAccept(
 			application,
@@ -813,7 +853,7 @@ describe('persistence-safe accepted representation', () => {
 			'2026-09-24T12:00:02.000Z',
 			'2026-02-30T12:00:03.000Z'
 		];
-		const { application } = createHarness({ now: () => timestamps.shift()! });
+		const { application } = await createHarness({ now: () => timestamps.shift()! });
 		const view = await getView(application, featureScope);
 		const draft = await saveDraft(application, featureScope, [
 			...view.elements.slice(0, -1),
@@ -829,7 +869,7 @@ describe('persistence-safe accepted representation', () => {
 	});
 
 	it('stores scoped checkpoints instead of duplicating the whole project projection', async () => {
-		const { application, store } = createHarness();
+		const { application, store } = await createHarness();
 		const feature = await getView(application, featureScope);
 		await proposeAndAccept(
 			application,
@@ -851,7 +891,7 @@ describe('persistence-safe accepted representation', () => {
 	});
 
 	it('uses ASCII persistence IDs while preserving international screenplay text', async () => {
-		const { application } = createHarness();
+		const { application } = await createHarness();
 		const view = await getView(application, featureScope);
 		const international = await application.handle(
 			{
@@ -893,7 +933,7 @@ describe('persistence-safe accepted representation', () => {
 	});
 
 	it('rejects NUL, malformed Unicode, and impossible persisted timestamps', async () => {
-		const { application } = createHarness();
+		const { application } = await createHarness();
 		const view = await getView(application, featureScope);
 		for (const unsafeText of ['line\u0000break', '\uD800']) {
 			const result = await application.handle(
@@ -926,7 +966,7 @@ describe('persistence-safe accepted representation', () => {
 	});
 
 	it('versions accepted history explicitly and rejects unsupported contracts clearly', async () => {
-		const { application, store } = createHarness();
+		const { application, store } = await createHarness();
 		const view = await getView(application, featureScope);
 		const accepted = await proposeAndAccept(
 			application,
@@ -981,7 +1021,7 @@ describe('project-scoped screenplay element identity', () => {
 	}
 
 	it('keeps element kind stable across restore and within one cut', async () => {
-		const { application } = createHarness();
+		const { application } = await createHarness();
 		const initial = await getView(application, featureScope);
 		const identity = 'element:stable-signal';
 		await proposeAndAccept(application, featureScope, [
@@ -1010,7 +1050,7 @@ describe('project-scoped screenplay element identity', () => {
 	});
 
 	it('keeps element kind and document ownership stable across sibling cuts and documents', async () => {
-		const { application } = createHarness();
+		const { application } = await createHarness();
 		const identity = 'element:shared-signal';
 		const feature = await getView(application, featureScope);
 		await proposeAndAccept(application, featureScope, [
@@ -1034,7 +1074,7 @@ describe('project-scoped screenplay element identity', () => {
 	});
 
 	it('rejects historical restore content that does not match its target checkpoint', async () => {
-		const { application, store } = createHarness();
+		const { application, store } = await createHarness();
 		const feature = await getView(application, featureScope);
 		await proposeAndAccept(
 			application,
@@ -1071,7 +1111,7 @@ describe('project-scoped screenplay element identity', () => {
 	});
 
 	it('enforces element kind identity while rehydrating accepted operations', async () => {
-		const { application, store } = createHarness();
+		const { application, store } = await createHarness();
 		const identity = 'element:rehydrated-signal';
 		const initial = await getView(application, featureScope);
 		await proposeAndAccept(application, featureScope, [
@@ -1117,13 +1157,13 @@ describe('closed application boundary', () => {
 			acceptedBy: human
 		}
 	])('rejects malformed or unknown commands %#', async (command) => {
-		const { application } = createHarness();
+		const { application } = await createHarness();
 		const result = await application.handle(command, context);
 		expect(result).toMatchObject({ ok: false, error: { code: 'INVALID_COMMAND' } });
 	});
 
 	it('rejects accessor-bearing input without invoking caller code', async () => {
-		const { application } = createHarness();
+		const { application } = await createHarness();
 		let invoked = false;
 		const command = {
 			get type() {
@@ -1137,7 +1177,7 @@ describe('closed application boundary', () => {
 	});
 
 	it('exposes Promise-returning application and store boundaries', async () => {
-		const { application, store } = createHarness();
+		const { application, store } = await createHarness();
 		const query = application.getProjectHead(authoringFixtureIds.project);
 		const storeQuery = store.getHead();
 		expect(query).toBeInstanceOf(Promise);

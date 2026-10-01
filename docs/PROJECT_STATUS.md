@@ -1,5 +1,76 @@
 # Estado del proyecto
 
+## 2026-09-30 — Studio M2.5 N1 verification (English source)
+
+- Independent verification of `5d9c754` closes N1. With a real delayed COMMIT, accept, reject and restore now report success only when authoritative state confirms the intended operation. Incompatible rival outcomes keep `PROPOSAL_ALREADY_RESOLVED` or `CONFLICT`. Exactly one mutation was persisted in every case. See [the verification](reviews/2026-09-30-M2.5-N1-verification-claude.md).
+- B1–B4, V1, store parity (36/36 per store) and CI (six runs, Pages upload and deploy skipped) hold. The regressions fail against the pre-N1 helper and against a laundering mutation.
+- No demonstrated A or B finding remains. M2.5 is technically ready for human acceptance and merge; human acceptance is still required. N2, N3, F5–F9 and the D notes remain deferred. Nothing was merged, deployed or promoted.
+
+## 2026-09-30 — Studio M2.5 N1 correction (English source)
+
+- Corrected N1 at the existing client retry/reconciliation layer: after an ambiguous attempt and a semantic resend failure, authoritative reconciliation can establish success; otherwise the real failure remains. Transaction behavior and existing outcome checks are unchanged.
+- Real PostgreSQL regressions cover late COMMIT accept/reject/restore, all three incompatible-writer outcomes and exact history integrity. The built Studio page confirms accepted state and restored authoritative text. B1–B4/V1 and both shared-store contracts pass. See [the correction disposition](reviews/2026-09-30-M2.5-N1-correction-disposition.md).
+- N2/N3 and existing C/D findings remain deferred. The user's WSL server was inaccessible; destructive tests used an isolated `studio_test` on PostgreSQL 16.15.
+- N1 is ready for narrow independent Claude Opus 5.5 verification. M2.5 is **not accepted**. PR #3 remains unmerged; staging/Linode and Pages promotion are untouched.
+
+## 2026-09-30 — Studio M2.5 B-corrections verification (English source)
+
+- Independent verification of `3069d1c` closes B1 (Retry now refreshes after a committed accept, restore or Proposal creation without resending it), B2 (exact, idempotent Proposal reconciliation), B3 (`25P03` and between-query connection loss return 503) and B4's bounded waiting. V1, integrity, contention, store parity and the retry policy hold. See [the verification](reviews/2026-09-30-M2.5-B-corrections-verification-claude.md).
+- New **B** finding N1: the 20 s client query deadline does not cancel PostgreSQL work. A timed-out COMMIT can still commit while Studio's resend waits on its locks. Studio then reports "already resolved" or a restore conflict for its own successful accept, reject or restore. No history is duplicated. The fix is to reconcile once more when a resend after an ambiguous attempt returns a semantic failure.
+- C follow-ups: identity replay ignores the observed Draft time (N2); reloading offers an older pending Proposal beside a newer Draft (N3, pre-existing M2 UI); F5–F9 unchanged.
+- M2.5 is **not accepted**. The owner's WSL databases could not be inspected from the verification environment. Nothing was merged, deployed or promoted.
+
+## 2026-09-30 — Studio M2.5 B findings correction (English source)
+
+- F1: Retry now retries only the failed authoritative read after a known committed accept, restore or Proposal creation. Browser tests cover accept and restore refresh outages and one mutation request each.
+- F2: Studio supplies one persisted Proposal ID and observed Draft update time per creation attempt. Reconciliation reads the exact ID. A stale Draft timestamp fails as a semantic conflict.
+- F3/F4: pg unqueryable-client messages and Query read timeout classify as STORE_UNAVAILABLE. Pool queries have a 20 s client deadline; TCP keepalive starts at 10 s. Real PostgreSQL probes cover idle transaction loss and stalled reads.
+- Local WSL PostgreSQL 14.24 on localhost:5432: studio_dev has the canonical LF migration, 11 Studio tables owned by studio_dev, and zero projects. studio_test has a restricted role; Windows Node connects to both, and studio_test cannot connect to studio_dev.
+- M2.5 is **not accepted**. A fresh Claude Opus 5.5 independent verification is next. No staging, Linode or Pages deployment was made.
+
+
+## 2026-09-30 — Studio M2.5 final connectivity verification (English source)
+
+- Independent verification of `7610e9f` closes V1: Studio survived every checked-out connection termination, restart and outage probe, with no partial or duplicated history. Lost acknowledgements of accept, reject and restore reconcile correctly. B1 and B3 hold. See [the final verification](reviews/2026-09-30-M2.5-final-verification-claude.md).
+- Four B findings remain before acceptance:
+  - F1: after a committed accept or restore, a failed refresh makes Retry now resend the command and report failure.
+  - F2: `CreateProposal` reconciliation can return an older Proposal from the same Draft.
+  - F3: connection loss between transaction queries, including `25P03`, returns non-retryable 500.
+  - F4: a hung or partitioned database is not bounded client-side, and keepalive is inert.
+- Pre-existing `40P01` deadlocks between Proposal creation and acceptance (F5) are a follow-up.
+- Local convention: `DATABASE_URL` → `studio_dev` (interactive development, migrated with `npm run migrate:studio`); `TEST_DATABASE_URL` → `studio_test` (automated tests, restricted role). Setup commands are in the verification §12; they have not yet been run on the owner's WSL server.
+- M2.5 remains pending corrections and human acceptance. Nothing was merged, deployed or migrated remotely.
+
+## 2026-09-30 — Studio M2.5 connectivity correction (English source)
+
+- Corrected V1 at the checked-out PostgreSQL transaction client: connection errors are handled through release, failed clients are discarded, and the original failure survives rollback failure. A real PostgreSQL test terminates a blocked acceptance backend and checks process survival, pending Proposal, unchanged head/history/checkpoints, and pool recovery.
+- Added narrow `STORE_UNAVAILABLE` classification and safe HTTP 503 with `Retry-After`; configured 5 s connect/acquisition, 15 s statement and 30 s idle-transaction bounds with keepalive.
+- Studio now retries transient failures three times with jittered delays, reconciles ambiguous accept/reject/restore results against persisted state, and shows reconnecting and persistent manual-retry states while retaining unsaved browser work. Ambiguous new Draft/Proposal creation is re-read rather than replayed automatically because M2 permits multiple Proposals from a Draft.
+- B1's server-side stale-head retry and B3's shared in-memory/PostgreSQL contract remain distinct and unchanged. M2.5 still awaits independent targeted verification and human acceptance. No staging database migration, Studio deployment or Pages promotion was performed.
+
+## 2026-09-26 — Studio M2.5 correction verification and connectivity-failure decision (English source)
+
+- Independent verification at `20b3d25` confirmed B1 (bounded head retries, `STORE_BUSY`, no partial state) and B3 (the unchanged 36-test M2 contract runs against both stores in CI). B2 holds for idle connections only: a connection checked out by a store transaction still crashes Studio when PostgreSQL drops it (finding V1). See [the correction verification](reviews/2026-09-26-M2.5-correction-verification-claude.md).
+- Scoped conflicts end retries at the first attempt after the conflicting change is visible; before that, unrelated commits can cause several retries.
+- Decision: no server-side command queue. The server fails fast with a retryable `STORE_UNAVAILABLE`; the client retries transient failures three times with jittered backoff, reconciles accept/reject/restore outcomes, then shows a banner with unsaved work kept in the browser and a manual retry. IndexedDB persistence and per-command ids follow in the next Studio milestone.
+- M2.5 remains pending the V1 fix decision and human acceptance. No code, staging deployment or database migration changed.
+
+## 2026-09-25 — Studio M2.5 independent-review corrections (English source)
+
+- Raised bounded global-head retries to 64 and added `STORE_BUSY` for exhaustion; scoped conflicts still stop immediately and pending Proposals remain pending on exhaustion.
+- Handled idle PostgreSQL pool errors without logging connection details, and added focused regression coverage.
+- CI now reruns the same M2 authoring contract suite against in-memory and PostgreSQL, alongside the existing PostgreSQL integration tests.
+- Transactional outbox and minimal project authorization are conscious M2.5 deferrals. The revision-0 document/cut catalog is temporary for this bounded slice; future dynamic Story/Version/Outline/Screenplay structure needs its own authoritative mutation path.
+- M2.5 remains pending narrow independent verification and human acceptance. No staging deployment or database migration was performed in this correction pass.
+
+## 2026-09-25 — Studio M2.5 PostgreSQL implementation (English source)
+
+- M2 is accepted at `c0881311`. M2.5 adds PostgreSQL durability through the established asynchronous authoring store without changing provisional Draft or Proposal acceptance semantics.
+- A committed migration stores project/document/version identities, current scoped projections, document versions, Drafts, Proposals, accepted ChangeSets, metadata-only revisions, scoped checkpoints and the project-scoped element registry. Accepted-history contract v1 is stored and checked.
+- Proposal acceptance and rejection use conditional PostgreSQL transactions; project revision ordering is database-backed while document-version preconditions remain scoped. The Studio server supplies accepting authority and loads Drafts/Proposals on restart.
+- Studio CI now provisions an isolated PostgreSQL service for migration and concurrency tests. The first implementation CI run passed [Studio/shared](https://github.com/saabi/light-delay/actions/runs/36158718642) (81 core, 26 PostgreSQL, 3 Studio unit, 1 Studio browser and 10 deployment-helper tests), [project-data integrity](https://github.com/saabi/light-delay/actions/runs/36158718646) (310 legacy unit tests with one audited skip), and [Pages validation](https://github.com/saabi/light-delay/actions/runs/36158718638) (310 legacy unit tests with one audited skip, 15 browser tests with one audited skip). Pages promotion authorization was false, so artifact upload and deployment were skipped. No Linode or staging deployment was performed.
+- Authentication, Story/Outline, M3+, Context, Agent, Media, R3/R4 and Light Delay reconstruction remain deferred. The three audited legacy-data exceptions are unchanged.
+
 ## 2026-09-25 — M2 independent-review corrections (English source)
 
 - Closed the Proposal accept/reject race with conditional terminal transitions and one atomic accepted-mutation boundary; repeated or competing transitions now return an explicit conflict.
