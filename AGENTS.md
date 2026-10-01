@@ -15,7 +15,7 @@ Read this file at the start of every session. For a short day-one map, also open
 - **Trailer WIP:** `script:light-delay-trailer-master` (derived from Festival-master frames/audio).
 - **`canonicalScriptId` / `script:light-delay-master-narrative`:** empty route stub. It does **not** mean there is no active screenplay.
 - **Ignore as current product:** deprecated `main-short`, `festival`, `trailer`, and `long`. Never confuse `light-delay-festival` with `light-delay-festival-master`.
-- **Incomplete master** blocks *new unauthorized* cuts. It does **not** freeze work on derivatives already authorized in `data/editorial-lifecycle.json`.
+- **Incomplete master** blocks _new unauthorized_ cuts. It does **not** freeze work on derivatives already authorized in `data/editorial-lifecycle.json`.
 - **English authorship** for story copy and docs; edit `en` first; `es` may stay `needs_revision`. UI chrome = Paraglide (`apps/light-delay/messages/*.json`), not story overlays.
 - **Causal facts SoT:** master outline `facts` / `knowledgeEvents` / `actionRequirements` (`master:fact-*`). Cut ledgers are not live authorship. Pipeline: [`docs/production/CAUSAL_AND_MEANING_PIPELINE.md`](docs/production/CAUSAL_AND_MEANING_PIPELINE.md).
 
@@ -73,7 +73,7 @@ The current **narrative** source of truth is `data/outlines/light-delay-master-n
 ## Mandatory rules
 
 - Read this file in full at the start of every work session in the repository.
-- Do **not** create or extend a *new unauthorized* derived script/animatic/cut while the master escaleta remains incomplete. Check `data/editorial-lifecycle.json` for already-authorized WIP derivatives (Festival-master, trailer-master). After the master is complete (or with explicit editorial authorization for a new cut), create a derived escaleta in `data/outlines/` first, declare provenance, and verify that the script/animatic respects it; procedure in `docs/GUIA_ESCALETA.md`.
+- Do **not** create or extend a _new unauthorized_ derived script/animatic/cut while the master escaleta remains incomplete. Check `data/editorial-lifecycle.json` for already-authorized WIP derivatives (Festival-master, trailer-master). After the master is complete (or with explicit editorial authorization for a new cut), create a derived escaleta in `data/outlines/` first, declare provenance, and verify that the script/animatic respects it; procedure in `docs/GUIA_ESCALETA.md`.
 - Treat `legacy-site/` as obsolete archive retained only for rescue and provenance. Do not use it as authority or as a current regression baseline.
 - Do not rewrite canon to solve an implementation difficulty.
 - Do not invent missing data. Mark uncertainties and pending decisions.
@@ -107,6 +107,12 @@ The current **narrative** source of truth is `data/outlines/light-delay-master-n
 - `static/assets/`: public media (migrated from `legacy-site/assets/` where applicable).
 
 Do not move assets to `static/` without updating and verifying all references.
+
+## Review and merging
+
+- Agents authenticate to GitHub as `saabi-agents`, never as the owner. Commits keep each agent's own author name and trailers, so Claude and Codex work stays distinguishable.
+- Only the owner approves PRs; agents never submit approving reviews.
+- Agents merge a PR only when the owner asks for that specific PR in the current session, and only through `gh pr merge`, never by a local merge and push.
 
 ## Minimum validation (archive integrity + product)
 

@@ -6,6 +6,11 @@
 - `glyph-area` capacity is the content box (borders, padding and scrollbars excluded; margins never count). The sensor publishes values only when a measured field changes, rejects invalid `breakpoints`, and warns once in development when capacity oscillates because the container is sized by its own content.
 - CI runs a separate `glyph-capacity` job: format, type check, package, publint, static demo build and 17 Playwright tests. Studio does not consume the package yet.
 
+## 2026-10-01 — Owner review gate (English source)
+
+- Policy: shared machine account `saabi-agents` (Write, not Admin) opens agent PRs; only owner `saabi` approves. CODEOWNERS is `* @saabi`. Agents must not approve reviews and must not merge unless the owner asks for that PR in-session (`gh pr merge` only).
+- Target branch for the upcoming ruleset: `implementation/m2-authoring` only (`master` untouched). Approvals dismiss on new pushes; repository admins may merge their own PRs through the logged pull-request bypass. No `accepted` label or label workflow.
+
 ## 2026-09-30 — Studio M2.5 N1 verification (English source)
 
 - Independent verification of `5d9c754` closes N1. With a real delayed COMMIT, accept, reject and restore now report success only when authoritative state confirms the intended operation. Incompatible rival outcomes keep `PROPOSAL_ALREADY_RESOLVED` or `CONFLICT`. Exactly one mutation was persisted in every case. See [the verification](reviews/2026-09-30-M2.5-N1-verification-claude.md).
