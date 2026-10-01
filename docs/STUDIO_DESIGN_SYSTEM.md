@@ -84,13 +84,13 @@ Below the size class that fits the page, the page drops its paper margins and th
 
 ### One measuring mechanism: `GlyphCapacitySensor`
 
-Studio measures text capacity with `GlyphCapacitySensor` from `svelte-glyph-capacity`, the owner's Svelte 5 successor to svizzle's `ScreenSensor`. Studio uses the package as it is; it does not port or fork it.
+Studio measures text capacity with `GlyphCapacitySensor` from `svelte-glyph-capacity`, the owner's Svelte 5 successor to svizzle's `ScreenSensor`. Studio consumes the package as a dependency; it does not port or fork it.
 
 The sensor wraps a container and measures it in that container's own inherited font:
 
 ```text
 glyph.width   = sampleWidth / sampleLength   (hidden alphabet sample, line-height 1)
-capacityBox   = border box − margins − borders − padding   ('glyph-area', the default)
+capacityBox   = content box: border box − borders − padding − scrollbars   ('glyph-area', the default; margins never count)
 maxChars      = floor(capacityBox.width  / glyph.width)
 maxLines      = floor(capacityBox.height / lineBoxHeight)   (the container's used line height)
 ```
@@ -101,6 +101,8 @@ Because the sensor is local, the same mechanism decides at two levels:
 
 1. **Shell.** One sensor on the application root decides the application layout (below).
 2. **Adaptive regions.** A component that lives in variable space (a panel, a pane, a toolbar, a list) wraps itself in a sensor and declares a **capacity budget**: the characters × lines it needs for its `full` and `reduced` modes. Anything less is `minimal`. Budgets are data kept with the component, as in the workbench's `ADAPTIVE_POLICIES`, for example `{ full: { maxChars: 48, maxLines: 5 }, reduced: { maxChars: 32, maxLines: 4 } }` for a toolbar.
+
+**Sensed containers get a layout-determined size.** A sensed container must not be sized by the content its own mode changes: an auto-height panel whose `minimal` mode is shorter would report more lines, switch back to `full`, grow, and flip every frame. Size it from layout instead (`container-type: size` or `inline-size`, a grid or flex track, or explicit dimensions). The sensor warns once in development when it detects this oscillation; that warning is a defect to fix in the layout.
 
 The screenplay page is not a responsive decision: its geometry is CSS `ch`/`lh` of the monospaced face (above), which is exact.
 
@@ -139,7 +141,7 @@ These follow WAIfinder (`nestauk/dsp_waifinder`), built on svizzle's `FontsLoade
 
 ### Package source
 
-`svelte-glyph-capacity` is not yet published, and its repository is private. A copy exists in the owner's local checkout under `packages/svelte-glyph-capacity`, not yet committed or wired into the workspace. To keep one source of truth, the package has a single home, and Studio consumes a released version of it unchanged. Fixes go to that home first, never only to a copy inside this repository. Whether that home is a published npm package, a versioned git dependency or this repository's workspace is an owner decision to take before Phase 2 implementation.
+`svelte-glyph-capacity` is not yet published. Until its first release, its single home is this repository's npm workspace, `packages/svelte-glyph-capacity` (added by PR #5, with its own CI job), and Studio depends on it by package name. Fixes go there, with tests, and are recorded in the package's own changelog. At release it is extracted with its history (`git subtree split`) to its own repository and published to npm; Studio then depends on the published version, and the workspace copy is removed in the same change.
 
 ### Fonts
 
@@ -393,7 +395,7 @@ Components consume semantic tokens rather than project colors. Muted text starts
 
 Share domain/application behavior aggressively. Share generic UI deliberately. Do not share product UI merely because the legacy app contains something visually similar.
 
-Initial shared UI candidates are primitives such as Button, Popover, Dialog, Sheet, SplitPane, Tooltip, CommandPalette and the readability-preferences driver. The capacity sensor is an external package (see [Package source](#package-source)). ScreenplayEditor, StoryTimeline, WorldInspector and ShotPlanner belong to Studio until reuse is demonstrated.
+Initial shared UI candidates are primitives such as Button, Popover, Dialog, Sheet, SplitPane, Tooltip, CommandPalette and the readability-preferences driver. The capacity sensor is its own package (see [Package source](#package-source)). ScreenplayEditor, StoryTimeline, WorldInspector and ShotPlanner belong to Studio until reuse is demonstrated.
 
 ## Reference states
 
@@ -489,6 +491,7 @@ Pass/fail for any Studio UI change. Each item should have an automated check whe
 16. Text tokens pass AA; text ≥ `0.75rem`; targets ≥ `1.5rem`; focus visible on every focusable element.
 17. The `phone` and `compact` layouts show the full text of every element.
 18. Adaptive modes never lose values; `minimal` controls keep accessible names and complete overflow.
+19. Every sensed container has a layout-determined size; no `GlyphCapacitySensor` oscillation warning appears in any layout or text scale.
 
 ## Review question
 
