@@ -7,11 +7,12 @@
 	"author": "Sebastian Ferreyra Pons",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/saabi/svelte-glyph-capacity.git"
+		"url": "git+https://github.com/saabi/light-delay.git",
+		"directory": "packages/svelte-glyph-capacity"
 	},
-	"homepage": "https://github.com/saabi/svelte-glyph-capacity#readme",
+	"homepage": "https://github.com/saabi/light-delay/tree/master/packages/svelte-glyph-capacity#readme",
 	"bugs": {
-		"url": "https://github.com/saabi/svelte-glyph-capacity/issues"
+		"url": "https://github.com/saabi/light-delay/issues"
 	},
 	"keywords": [
 		"svelte",

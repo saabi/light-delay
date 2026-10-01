@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-01 — svelte-glyph-capacity workspace package
+
+- Added the owner's unpublished `svelte-glyph-capacity` sensor as an npm workspace package in `packages/svelte-glyph-capacity`, its temporary home until first release. It is not yet used by Studio.
+- Capacity is now measured on the content box: borders, padding and scrollbars reduce it; margins no longer do. The sensor skips no-op updates, validates `breakpoints`, and warns in development when a content-sized container oscillates.
+- Added fixture tests and a CI job that runs the package's format, type, package, publint, build and Playwright checks.
+
 ## 2026-09-30 — Studio M2.5 N1 verification
 
 - Recorded the final independent verification of the N1 correction: no demonstrated A or B finding remains, and M2.5 is technically ready for human acceptance. Documentation only.
