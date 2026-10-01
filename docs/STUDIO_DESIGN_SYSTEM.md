@@ -33,7 +33,7 @@ The application always identifies itself in a fixed place (see [Shell anatomy](#
 
 One application bar, at most `2.75rem` tall at 100% text scale. From left to right:
 
-1. **Identity slot.** The application mark, plus the wordmark when the [size class](#screen-sensor) is `small` or larger. It is fixed in position and width, links to the workspace home, is monochrome, and is sized in `rem` so it follows text scaling. It never shows a project name, project art or document title. Until the product has a name and mark, the slot holds a neutral text wordmark ("Studio") and keeps its reserved width.
+1. **Identity slot.** The application mark, plus the wordmark in every layout except `phone` and `compact`. It is fixed in position and width, links to the workspace home, is monochrome, and is sized in `rem` so it follows text scaling. It never shows a project name, project art or document title. Until the product has a name and mark, the slot holds a neutral text wordmark ("Studio") and keeps its reserved width.
 2. **Context breadcrumb.** `Project ▾ / Document · Cut ▾`. Each part is a menu: the project switcher, the document switcher and the cut/version switcher.
 3. **Save state**, immediately after the breadcrumb. It is the only place the document's save state appears (see [State and vocabulary](#state-and-vocabulary)).
 4. **Lens switcher**, centred, shown only when two or more lenses exist. A single lens is not shown as a tab.
@@ -43,7 +43,7 @@ The shell must not have a second persistent bar or a footer. The document's own 
 
 ## Units, type and responsive mechanics
 
-This section adopts the method the owner uses in Color Lab, Spanwise and svizzle, described in [*Glyph metrics and responsive design*](https://ferreyrapons.com/notes/glyph-metrics-responsive-design): layout decisions follow how many characters and lines fit, not how many pixels the screen has.
+This section adopts the method the owner uses in Color Lab, Spanwise, svizzle and WAIfinder, described in [*Glyph metrics and responsive design*](https://ferreyrapons.com/notes/glyph-metrics-responsive-design) and implemented in its current form by the owner's `svelte-glyph-capacity` package: layout decisions follow how many characters and lines fit, not how many pixels are available.
 
 ### Units
 
@@ -82,62 +82,64 @@ Line spacing on the page is single (`line-height: 1`, one 12 pt line), with one 
 
 Below the size class that fits the page, the page drops its paper margins and the indents compress proportionally (character cue ≈ 40% of the measure, dialogue indent ≈ 15%, dialogue width ≈ 70%). The face and size never shrink.
 
-### Three mechanisms, each with one job
+### One measuring mechanism: `GlyphCapacitySensor`
 
-Studio uses three character-based mechanisms. Each owns a different decision, so they never compete for the same one:
+Studio measures text capacity with `GlyphCapacitySensor` from `svelte-glyph-capacity`, the owner's Svelte 5 successor to svizzle's `ScreenSensor`. Studio uses the package as it is; it does not port or fork it.
 
-| Mechanism | Owns | Measures |
-| --- | --- | --- |
-| **Screen sensor** (port of svizzle's `ScreenSensor`) | Application-level layout: which regions exist, whether a panel is a sheet, floats or docks, how much chrome shows, phone mode | Average glyph of the interface face, viewport `maxChars` × `maxLines` |
-| **`ch` container queries** (CSS only) | A component's internal arrangement inside whatever space the shell gave it: wrapping, columns, label placement | `ch` of the container's own font |
-| **`ch`/`lh` geometry** (CSS only) | The screenplay page: margins, indents, widths | `ch` of the monospaced screenplay face |
-
-The sensor is required because the shell's decisions are structural (render a sheet or a docked panel, move focus accordingly), and those happen in Svelte, not only in CSS. It also provides `maxLines`, which CSS cannot express. Container queries are required because the sensor is viewport-wide and cannot know the width a pane or panel received. A component must not read the sensor to decide its internal arrangement, and the shell must not use container queries to decide which regions exist.
-
-The two measures are deliberately not compared: the sensor uses the alphabet average of the interface face, while `ch` is the advance of "0", which in a proportional face is wider than the average. Each threshold is written in the unit of the mechanism that owns it.
-
-### Screen sensor
-
-Studio ports `ScreenSensor` as a small Svelte 5 module in `apps/studio` (runes, no `lamb` or `@svizzle/ui` dependency, since svizzle's component uses Svelte 3/4 syntax). The port follows the owner's newest version of the sensor (`svelte-glyph-capacity`, in progress) where it differs from svizzle's. It is the single source of application layout classes:
+The sensor wraps a container and measures it in that container's own inherited font:
 
 ```text
-glyph.width  = sampleWidth / sampleLength   (hidden alphabet sample at 1rem, ResizeObserver)
-glyph.height = sample line block size
-maxChars     = floor(viewportWidth  / glyph.width)
-maxLines     = floor(viewportHeight / glyph.height)
+glyph.width   = sampleWidth / sampleLength   (hidden alphabet sample, line-height 1)
+capacityBox   = border box − margins − borders − padding   ('glyph-area', the default)
+maxChars      = floor(capacityBox.width  / glyph.width)
+maxLines      = floor(capacityBox.height / lineBoxHeight)   (the container's used line height)
 ```
 
-- It measures only after the bundled fonts have loaded (Font Loading API), so a fallback face never decides the layout.
-- It exposes a reactive state for Svelte, and mirrors the same classes onto the root element (for example `data-screen="small medium"`) so CSS reads the same decision instead of re-deriving it. Pixel media queries for layout are not used.
-- Because sizes are in `rem`, raising the text scale lowers `maxChars`, and the layout steps down on its own. This is intended and must be tested.
+It reports raw container pixels, `maxChars × maxLines`, pixel and text orientation, and cumulative size flags (`xSmall` < 45, `small`, `medium` ≥ 90, `large` ≥ 135, `xLarge` ≥ 180). Its `classes` string is data: Studio maps the flags to its own state and scoped classes and does not apply the generic names.
 
-| Class | `maxChars` | Write layout |
+Because the sensor is local, the same mechanism decides at two levels:
+
+1. **Shell.** One sensor on the application root decides the application layout (below).
+2. **Adaptive regions.** A component that lives in variable space (a panel, a pane, a toolbar, a list) wraps itself in a sensor and declares a **capacity budget**: the characters × lines it needs for its `full` and `reduced` modes. Anything less is `minimal`. Budgets are data kept with the component, as in the workbench's `ADAPTIVE_POLICIES`, for example `{ full: { maxChars: 48, maxLines: 5 }, reduced: { maxChars: 32, maxLines: 4 } }` for a toolbar.
+
+The screenplay page is not a responsive decision: its geometry is CSS `ch`/`lh` of the monospaced face (above), which is exact.
+
+**`ch` container queries are not used for layout decisions.** CSS evaluates `ch` in a container query against the container's own font (verified in Chromium 141), but `ch` is the advance of "0", not the average glyph. A `ch` threshold therefore needs per-typeface calibration, as the workbench's calibrated `em`/`ch` strategy shows (`calc(12.32em + 24.2ch)` for Latin prose, `calc(9.68em + 22ch)` for dense UI). Those constants silently go wrong when the typeface preference changes; the sensor does not. Pixel, `rem` and `em` container or media queries are likewise not used for layout decisions. In media queries, `em` and `ch` refer to the browser's initial font, not Studio's.
+
+### Application layout
+
+One pure, tested function maps the root sensor's value to the layouts Studio implements. Components switch on this `layoutId`, never on raw sizes or pixel widths, and adding a layout means changing that one function. The shell exposes it as state and as a scoped attribute (for example `data-layout="regular"`) for CSS.
+
+| `layoutId` | Rule (first match wins) | Write layout |
 | --- | --- | --- |
-| `xSmall` | < 45 | Phone. Page without paper margins, compressed indents. Panels are full-height sheets. Identity shows the mark only |
-| `small` | 45–89 | Page without paper margins. Panels are sheets over the page |
-| `medium` | 90–134 | Full page with margins. Panels float over the margin area |
-| `large` | 135–179 | As medium. A pinned inspector may sit beside the page (see [Layout stability](#layout-stability)) |
-| `xLarge` | ≥ 180 | A panel fits beside the centred page without covering or moving it |
+| `compact` | `maxChars` < 75, pixel landscape, `maxLines` ≤ 32 | Short landscape screen (a phone on its side). Everything optional hidden; page without paper margins |
+| `phone` | `maxChars` < 45 | Page without paper margins, compressed indents. Panels are full-height sheets. Identity shows the mark only |
+| `narrow` | `maxChars` < 90 | Page without paper margins. Panels are sheets over the page |
+| `regular` | `maxChars` < 180 | Full page with margins. Panels float over the margin area; a pinned inspector may sit beside the page (see [Layout stability](#layout-stability)) |
+| `wide` | `maxChars` ≥ 180 | A panel fits beside the centred page without covering or moving it |
 
-Thresholds start at svizzle's defaults `[45, 90, 135, 180]`. At 100% scale a full screenplay page needs about 92 interface characters and a page plus a `20rem` panel about 135, so the defaults fall on Studio's real needs; recalibrate when the faces are final.
+The `compact` rule is the workbench's stage policy. It is the only place pixel orientation is used: device posture matters there, while size is still judged in characters and lines. Text orientation is available to adaptive regions that need it.
 
-Height uses `maxLines` instead of pixels: below 30 lines the shell hides everything optional (for example a phone in landscape). Studio does not use pixel orientation, which avoids the disagreement between pixel orientation and character size classes noted in the article.
+Thresholds follow the package defaults. At 100% scale a full screenplay page needs about 92 interface characters and a page plus a `20rem` panel about 135, so the defaults fall on Studio's real needs; recalibrate when the faces are final. Because sizes are in `rem`, raising the text scale lowers `maxChars`, and the layout steps down on its own. This is intended and must be tested.
+
+### Adaptive modes
+
+- `full`, `reduced` and `minimal` change presentation only. Switching modes never loses a value, a selection or typed text (the workbench tests this).
+- A `minimal` control keeps its accessible name. Icon-only actions show a dismissible label on hover and focus where hover exists; on touch-first devices, compact controls keep text labels instead of depending on tooltips.
+- Overflow is complete: an action hidden by a narrower mode stays reachable from an overflow menu.
 
 ### Startup and layout switching
 
-These follow the pattern of Nesta's WAIfinder (`nestauk/dsp_waifinder`), built on svizzle's `FontsLoader`, `ScreenSensor` and `ViewsXor`:
+These follow WAIfinder (`nestauk/dsp_waifinder`), built on svizzle's `FontsLoader`, `ScreenSensor` and `ViewsXor`, adapted to `GlyphCapacitySensor`:
 
-1. **Ordered startup.** Readability preferences apply before first paint. The fonts loader loads the selected interface face first; the sensor mounts only when that face has loaded; the application layout stays hidden (`visibility: hidden`, so it still occupies space and can be measured) until the sensor has published its first classes. The user never sees a layout computed from a fallback face or from no measurement.
-2. **Layout identity derived once.** One pure, tested function maps the sensor's classes to the small set of layouts Studio actually implements: `phone` (`xSmall`), `narrow` (`small`), `regular` (`medium`, `large`) and `wide` (`xLarge`). Components switch on this `layoutId`, never on raw sizes or pixel widths. Adding a layout means changing that one function.
-3. **Switch whole trees at few boundaries.** Where layouts differ structurally, the shell renders a different component (for example `ShellPhone` and `ShellRegular`, a `Sheet` or a docked `Panel`) at a small number of boundaries, with layout-specific components grouped by layout and shared state kept outside them. Components do not accumulate scattered size conditionals.
-4. **Grid areas per class.** The root element carries the sensor's classes. Region placement is CSS `grid-template-areas` keyed on those classes. On `phone`, contextual actions (commit, history) may sit in a bottom bar within thumb reach while identity and breadcrumb stay at the top; the prototype decides.
-5. **Measured, not assumed, chrome sizes.** Where a layout depends on the actual size of the application bar or a bar at the bottom, a resize-observer action publishes it as a CSS variable. No hard-coded pixel offsets.
+1. **Ordered startup.** Readability preferences apply before first paint. The fonts loader loads the selected interface face first. A sensor's first non-empty value is treated as final only after `document.fonts.ready`. The application layout stays hidden (`visibility: hidden`, so it still occupies space and can be measured) until the root sensor has produced a `layoutId`. The user never sees a layout computed from a fallback face or from no measurement.
+2. **Switch whole trees at few boundaries.** Where layouts differ structurally, the shell renders a different component (for example `ShellPhone` and `ShellRegular`, a `Sheet` or a docked `Panel`) at a small number of boundaries, with layout-specific components grouped by layout and shared state kept outside them. Components do not accumulate scattered size conditionals.
+3. **Grid areas per layout.** Region placement is CSS `grid-template-areas` keyed on `data-layout`. On `phone`, contextual actions (commit, history) may sit in a bottom bar within thumb reach while identity and breadcrumb stay at the top; the prototype decides.
+4. **Measured, not assumed, chrome sizes.** Where a layout depends on the actual size of the application bar or a bottom bar, a resize-observer action publishes it as a CSS variable. No hard-coded pixel offsets.
 
-### Container queries in `ch`
+### Package source
 
-A component that lives in variable space (a panel, a pane, a list) adapts its internal arrangement with container queries written in `ch`, for example `@container (min-width: 40ch)`. CSS evaluates `ch` in a container query against the query container's own font; this was verified in Chromium 141 and must be covered by a browser test. This extends the "what fits" logic to individual containers, which the article lists as an open limitation of a viewport-wide sensor.
-
-Media queries must not use `em` or `ch` as if they referred to the application's face: in media queries those units refer to the browser's initial font.
+`svelte-glyph-capacity` is not yet published, and its repository is private. A copy exists in the owner's local checkout under `packages/svelte-glyph-capacity`, not yet committed or wired into the workspace. To keep one source of truth, the package has a single home, and Studio consumes a released version of it unchanged. Fixes go to that home first, never only to a copy inside this repository. Whether that home is a published npm package, a versioned git dependency or this repository's workspace is an owner decision to take before Phase 2 implementation.
 
 ### Fonts
 
@@ -153,7 +155,7 @@ Adopted from Color Lab's accessibility controls and svizzle's accessibility menu
 | Text scale | 100, 112, 125, 150, 175 % | `--studio-font-scale` on the root |
 | Secondary contrast | normal, high, maximum | Overrides the muted text tokens |
 | Line height | 125, 145, 165, 185 % | `--studio-line-height` |
-| Interface typeface | Inter, plus reading-support faces (for example a dyslexia-friendly face) | Interface font family; the fonts loader loads it first and the sensor re-measures, so layout adapts to wider faces |
+| Interface typeface | Inter, plus reading-support faces (for example a dyslexia-friendly face) | Interface font family; the fonts loader loads it first and every sensor re-measures, so layout adapts to wider faces |
 
 - Preferences are local to the browser, not project data, and not part of any document.
 - They are applied before first paint by an inline script in `app.html`, so the page never renders at the wrong scale first.
@@ -382,7 +384,7 @@ These are semantic roles, not a frozen palette:
 --studio-panel-width      (rem)
 --studio-target-min       (1.5rem)
 --studio-sp-*             (screenplay geometry in ch, see table)
---studio-breakpoints      (45, 90, 135, 180 characters)
+(capacity thresholds are sensor props and component budgets, not CSS tokens)
 ```
 
 Components consume semantic tokens rather than project colors. Muted text starts at about `#666661` on `#f7f7f5` (5.4:1).
@@ -391,7 +393,7 @@ Components consume semantic tokens rather than project colors. Muted text starts
 
 Share domain/application behavior aggressively. Share generic UI deliberately. Do not share product UI merely because the legacy app contains something visually similar.
 
-Initial shared UI candidates are primitives such as Button, Popover, Dialog, Sheet, SplitPane, Tooltip, CommandPalette, the screen sensor and the readability-preferences driver. ScreenplayEditor, StoryTimeline, WorldInspector and ShotPlanner belong to Studio until reuse is demonstrated.
+Initial shared UI candidates are primitives such as Button, Popover, Dialog, Sheet, SplitPane, Tooltip, CommandPalette and the readability-preferences driver. The capacity sensor is an external package (see [Package source](#package-source)). ScreenplayEditor, StoryTimeline, WorldInspector and ShotPlanner belong to Studio until reuse is demonstrated.
 
 ## Reference states
 
@@ -448,7 +450,7 @@ Offline:
 │ ◇ Studio   Harbor Light ▾ / Scene · Feature ▾   Offline — kept on this device  ↻ │
 ```
 
-Phone (`xSmall`):
+Phone (`phone`):
 
 ```text
 ┌───────────────────────────┐
@@ -472,10 +474,10 @@ Pass/fail for any Studio UI change. Each item should have an automated check whe
 1. The identity slot shows the application, never the project; the document title is on the document surface.
 2. One application bar; no second persistent bar; no footer; no single-item lens switcher.
 3. No `px` font sizes; no `vw` type; sizes in `rem`/`em`/`ch`/`lh`.
-4. Application layout comes only from the screen sensor through the single `layoutId` function; component internals only from `ch` container queries; no pixel media queries for layout.
+4. Application layout comes only from the root `GlyphCapacitySensor` through the single `layoutId` function; adaptive regions only from their own sensor and declared capacity budget; no pixel, `rem`, `em` or `ch` queries for layout decisions.
 5. Raising text scale to 175% steps the layout down and keeps Write usable.
 6. Screenplay page geometry is in `ch` of the screenplay face and matches the table.
-7. Fonts are bundled; nothing loads from remote services; the sensor measures after fonts load; the layout is hidden until the first measurement.
+7. Fonts are bundled; nothing loads from remote services; measurements are final only after `document.fonts.ready`; the layout is hidden until the first `layoutId`.
 8. Readability preferences apply before first paint and persist locally.
 9. Enter, Tab and Shift+Tab follow screenplay conventions; every element type is creatable by keyboard; selection and undo cross elements.
 10. No text is clipped at any size class (test compares content height to box height).
@@ -485,7 +487,8 @@ Pass/fail for any Studio UI change. Each item should have an automated check whe
 14. Opening or closing any transient panel or notice does not move document text (test compares element positions).
 15. Consequential actions preview and confirm; no-op actions are not offered.
 16. Text tokens pass AA; text ≥ `0.75rem`; targets ≥ `1.5rem`; focus visible on every focusable element.
-17. Phone layout (`xSmall`) shows the full text of every element.
+17. The `phone` and `compact` layouts show the full text of every element.
+18. Adaptive modes never lose values; `minimal` controls keep accessible names and complete overflow.
 
 ## Review question
 

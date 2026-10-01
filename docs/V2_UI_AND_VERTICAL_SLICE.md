@@ -53,7 +53,7 @@ In short:
 - the proposal review surface is for proposals from elsewhere (AI, imports, collaborators);
 - typed text is never clipped or silently discarded;
 - the page never moves when panels or notices appear;
-- page geometry and layout classes are measured in characters, following the owner's glyph-metric method.
+- page geometry is set in characters, and layout and component modes follow measured character × line capacity (the owner's `svelte-glyph-capacity` sensor).
 
 ### Resting state
 
