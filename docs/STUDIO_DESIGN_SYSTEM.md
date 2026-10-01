@@ -33,7 +33,7 @@ The application always identifies itself in a fixed place (see [Shell anatomy](#
 
 One application bar, at most `2.75rem` tall at 100% text scale. From left to right:
 
-1. **Identity slot.** The application mark, plus the wordmark when the [size class](#breakpoints-measured-in-characters) is `small` or larger. It is fixed in position and width, links to the workspace home, is monochrome, and is sized in `rem` so it follows text scaling. It never shows a project name, project art or document title. Until the product has a name and mark, the slot holds a neutral text wordmark ("Studio") and keeps its reserved width.
+1. **Identity slot.** The application mark, plus the wordmark when the [size class](#screen-sensor) is `small` or larger. It is fixed in position and width, links to the workspace home, is monochrome, and is sized in `rem` so it follows text scaling. It never shows a project name, project art or document title. Until the product has a name and mark, the slot holds a neutral text wordmark ("Studio") and keeps its reserved width.
 2. **Context breadcrumb.** `Project ▾ / Document · Cut ▾`. Each part is a menu: the project switcher, the document switcher and the cut/version switcher.
 3. **Save state**, immediately after the breadcrumb. It is the only place the document's save state appears (see [State and vocabulary](#state-and-vocabulary)).
 4. **Lens switcher**, centred, shown only when two or more lenses exist. A single lens is not shown as a tab.
@@ -82,9 +82,23 @@ Line spacing on the page is single (`line-height: 1`, one 12 pt line), with one 
 
 Below the size class that fits the page, the page drops its paper margins and the indents compress proportionally (character cue ≈ 40% of the measure, dialogue indent ≈ 15%, dialogue width ≈ 70%). The face and size never shrink.
 
-### Breakpoints measured in characters
+### Three mechanisms, each with one job
 
-A single screen sensor, equivalent to svizzle's `ScreenSensor`, measures the interface face:
+Studio uses three character-based mechanisms. Each owns a different decision, so they never compete for the same one:
+
+| Mechanism | Owns | Measures |
+| --- | --- | --- |
+| **Screen sensor** (port of svizzle's `ScreenSensor`) | Application-level layout: which regions exist, whether a panel is a sheet, floats or docks, how much chrome shows, phone mode | Average glyph of the interface face, viewport `maxChars` × `maxLines` |
+| **`ch` container queries** (CSS only) | A component's internal arrangement inside whatever space the shell gave it: wrapping, columns, label placement | `ch` of the container's own font |
+| **`ch`/`lh` geometry** (CSS only) | The screenplay page: margins, indents, widths | `ch` of the monospaced screenplay face |
+
+The sensor is required because the shell's decisions are structural (render a sheet or a docked panel, move focus accordingly), and those happen in Svelte, not only in CSS. It also provides `maxLines`, which CSS cannot express. Container queries are required because the sensor is viewport-wide and cannot know the width a pane or panel received. A component must not read the sensor to decide its internal arrangement, and the shell must not use container queries to decide which regions exist.
+
+The two measures are deliberately not compared: the sensor uses the alphabet average of the interface face, while `ch` is the advance of "0", which in a proportional face is wider than the average. Each threshold is written in the unit of the mechanism that owns it.
+
+### Screen sensor
+
+Studio ports `ScreenSensor` as a small Svelte 5 module in `apps/studio` (runes, no `lamb` or `@svizzle/ui` dependency, since svizzle's component uses Svelte 3/4 syntax). It is the single source of application layout classes:
 
 ```text
 glyph.width  = sampleWidth / sampleLength   (hidden alphabet sample at 1rem, ResizeObserver)
@@ -94,7 +108,7 @@ maxLines     = floor(viewportHeight / glyph.height)
 ```
 
 - It measures only after the bundled fonts have loaded (Font Loading API), so a fallback face never decides the layout.
-- It is the single source of layout classes. Components read its result; they do not query viewport pixels.
+- It exposes a reactive state for Svelte, and mirrors the same classes onto the root element (for example `data-screen="small medium"`) so CSS reads the same decision instead of re-deriving it. Pixel media queries for layout are not used.
 - Because sizes are in `rem`, raising the text scale lowers `maxChars`, and the layout steps down on its own. This is intended and must be tested.
 
 | Class | `maxChars` | Write layout |
@@ -109,9 +123,11 @@ Thresholds start at svizzle's defaults `[45, 90, 135, 180]`. At 100% scale a ful
 
 Height uses `maxLines` instead of pixels: below 30 lines the shell hides everything optional (for example a phone in landscape). Studio does not use pixel orientation, which avoids the disagreement between pixel orientation and character size classes noted in the article.
 
-### Container-level character breakpoints
+### Container queries in `ch`
 
-A component that lives in variable space (a panel, a pane, a list) adapts to its own width with container queries written in `ch`, for example `@container (min-width: 40ch)`. CSS evaluates `ch` in a container query against the query container's own font; this was verified in Chromium 141 and must be covered by a browser test. This gives each container the same "what fits" logic as the global sensor, which the article lists as an open limitation. Media queries must not use `em` or `ch` as if they referred to the application's face: in media queries those units refer to the browser's initial font.
+A component that lives in variable space (a panel, a pane, a list) adapts its internal arrangement with container queries written in `ch`, for example `@container (min-width: 40ch)`. CSS evaluates `ch` in a container query against the query container's own font; this was verified in Chromium 141 and must be covered by a browser test. This extends the "what fits" logic to individual containers, which the article lists as an open limitation of a viewport-wide sensor.
+
+Media queries must not use `em` or `ch` as if they referred to the application's face: in media queries those units refer to the browser's initial font.
 
 ### Fonts
 
@@ -445,7 +461,7 @@ Pass/fail for any Studio UI change. Each item should have an automated check whe
 1. The identity slot shows the application, never the project; the document title is on the document surface.
 2. One application bar; no second persistent bar; no footer; no single-item lens switcher.
 3. No `px` font sizes; no `vw` type; sizes in `rem`/`em`/`ch`/`lh`.
-4. Layout classes come from the character sensor or `ch` container queries, not pixel media queries.
+4. Application layout classes come only from the screen sensor; component internals only from `ch` container queries; no pixel media queries for layout.
 5. Raising text scale to 175% steps the layout down and keeps Write usable.
 6. Screenplay page geometry is in `ch` of the screenplay face and matches the table.
 7. Fonts are bundled; nothing loads from remote services; the sensor measures after fonts load.
