@@ -44,7 +44,16 @@ Other lenses may legitimately use denser UI. Navigate can show a graph; Produce 
 
 ## Write lens
 
-Write should feel as close as practical to a high-quality text/screenplay editor.
+Write should feel as close as practical to a high-quality text/screenplay editor. That is a requirement, not an aspiration: the editor model, saving and committing, review, history and layout rules are specified in [`STUDIO_DESIGN_SYSTEM.md` § Write](STUDIO_DESIGN_SYSTEM.md#write) with a pass/fail [review checklist](STUDIO_DESIGN_SYSTEM.md#review-checklist).
+
+In short:
+
+- one continuous screenplay document with typed elements and the standard Enter/Tab conventions, never one input field per element;
+- typing autosaves the Draft; one deliberate commit action, with changes shown inline, takes the author's own edits into project history ([ADR-0004 addendum](ADR-0004-AUTHORING-STORY-STATE-AND-PROVISIONAL-WORK.md#addendum--saving-and-committing-in-write-oct-1-2026));
+- the proposal review surface is for proposals from elsewhere (AI, imports, collaborators);
+- typed text is never clipped or silently discarded;
+- the page never moves when panels or notices appear;
+- page geometry and layout classes are measured in characters, following the owner's glyph-metric method.
 
 ### Resting state
 
@@ -143,6 +152,7 @@ These are views over one project, not separate stores.
 
 The first shell should provide:
 
+- a fixed application identity slot (mark and name), never occupied by a project name;
 - workspace/project switcher;
 - lens navigation;
 - current narrative/product selector where relevant;
@@ -152,7 +162,7 @@ The first shell should provide:
 - assistant/agent entry point;
 - project-history access.
 
-Exact pane layout is a UX implementation decision.
+The shell's anatomy (one application bar: identity, project/document/cut breadcrumb, save state, lens switcher when more than one lens exists, contextual actions) is specified in [`STUDIO_DESIGN_SYSTEM.md` § Shell anatomy](STUDIO_DESIGN_SYSTEM.md#shell-anatomy). Pane layout within a lens remains a UX implementation decision.
 
 ## Progressive disclosure
 
@@ -333,6 +343,8 @@ Re-saving an existing Draft persists its current provisional content without cha
 History can restore the selected screenplay × cut to a supported earlier project revision. Restore is a new attributable revision and does not roll sibling cuts or unrelated documents backward. The interface states that the Draft store is process-lifetime memory and resets when the Studio process stops; PostgreSQL restart durability remains M2.5.
 
 This product proof should inform M2 store contracts and precede broad Context/agent/media implementation.
+
+The [Oct 1, 2026 Write UX review](reviews/2026-10-01-studio-write-ux-review-claude.md) found that this implementation proves the authoring loop but not the editor: elements are separate fields, wrapped text is hidden, switching cut can discard unsaved text, and the chrome exposes model vocabulary. The revised design system governs the next Write iteration; the behaviour above is the M2/M2.5 baseline, not the target.
 
 ## Parallel UI development
 

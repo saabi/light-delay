@@ -146,3 +146,15 @@ For authoring surfaces:
 - Accepted provenance distinguishes content authors/source/proposer from the trusted principal who accepts the ChangeSet.
 - Accepted-history representations and semantic-operation reducers are explicitly versioned so historical evidence is not reinterpreted by later command rules.
 - More complex branching, CRDTs, and collaborative draft semantics remain deferred.
+
+## Addendum — saving and committing in Write (Oct 1, 2026)
+
+Status: **accepted** by the owner after the [Write UX review](reviews/2026-10-01-studio-write-ux-review-claude.md). This addendum changes how the two promises above are presented in Write. It does not change the authority tiers, the Proposal lifecycle, ChangeSet provenance or restore.
+
+**Saving.** The author's own typing autosaves the Draft: after a short pause in typing, when the editor loses focus, and before any navigation that would replace the editor's content. There is no Save button in the normal flow. The save state shows *Saved*, *Saving…* or a failure; it never shows a protection that does not exist. "Offline — kept on this device" requires local persistence of unsaved text (the IndexedDB mirror deferred from M2.5). Until that exists, a failed save shows *Not saved — Retry*.
+
+**Committing.** One deliberate commit action promotes the author's own Draft into project history. The author sees the changes inline in the document and confirms. Underneath, this is still a Proposal created from the Draft (with a stable caller-supplied Proposal ID) and accepted by the same trusted principal, through the same ChangeSet boundary and preconditions. Content author, deterministic proposer and accepting principal remain distinct in provenance. Whether create and accept become a single atomic application command (`CommitDraft`) or remain two commands with the existing reconciliation is decided in the implementation plan. If they remain two, a conflict after creation must leave the pending Proposal visible and reviewable, never silently orphaned.
+
+**Proposals from elsewhere.** AI suggestions, importer interpretations and collaborators' proposals keep the explicit review surface with accept and reject. They are never committed by the author's commit action unless the author has reviewed them.
+
+**Unchanged.** *Saved* and *accepted into project history* remain different promises. A Proposal still transitions exactly once. Scoped conflict checks, restore as a new attributable revision, and sibling-cut isolation are unchanged. A Draft whose base has advanced still fails its scoped check on commit; Studio shows the conflict and offers review. An explicit rebase/merge remains future work.

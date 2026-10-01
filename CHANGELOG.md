@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-01 — Studio Write UX guidelines
+
+- Recorded M2.5's acceptance and merge into `implementation/m2-authoring`.
+- Added the Write UX review and revised the Studio design system with testable shell, typography, responsive, editor, state and accessibility requirements, adopting the owner's character-measured layout method.
+- Added an ADR-0004 addendum for autosaved Drafts and a single commit action in Write. Documentation only.
+
 ## 2026-09-30 — Studio M2.5 N1 verification
 
 - Recorded the final independent verification of the N1 correction: no demonstrated A or B finding remains, and M2.5 is technically ready for human acceptance. Documentation only.
