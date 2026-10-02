@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-01 — Owner review gate on master (CODEOWNERS)
+
+- Added `.github/CODEOWNERS` (`* @saabi`) and an AGENTS.md **Review and merging** section on `master`, matching the agent-account policy already used on `implementation/m2-authoring`.
+- Prerequisite for extending the active **Owner review** ruleset to `refs/heads/master` so accidental direct pushes and unreviewed merges cannot land on the default branch.
+
 ## 2026-09-16 - Scene 26 Seedance submitted and registered
 
 - Approved Scene 26 singleton still (`shot-plan-077:take-02` → `current`); hardened Seedance `videoPrompt` + `videoReferenceAssetIds`.
@@ -498,7 +503,6 @@
 - Seedance 2.5 snapshot is `executable: true` (`confidence` still `provisional`). Ready handoff emits `status: ready` / `nonExecutable: false` for those 13 video jobs. No Higgsfield job was submitted; paid smoke still needs `get_cost` plus human confirmation. Full `prepare:higgsfield` still fails on a missing engineering concept sheet; 42 OK-stretch refs were staged under `higgsfield-uploads/stretch/`.
 - Trailer-overlapping packages first: operations-gallery 001–003, bridge-meal 010–012, engineering-audit 016–017, bridge-investigation 046–049.
 
-
 ## 2026-09-14 - Canonical Celestial Ardor EVA suit reference
 
 - Derived and registered a canonical EVA suit model sheet from the approved Velari-answer panel, preserving its established suit design without regenerating any stretch still.
@@ -536,15 +540,15 @@
 
 ## 2026-09-14 — Mark Festival-master stretch panels as current
 
-- Promoted 44 stretch-derived panel assets from 
-eeds_review to current so generation ref-ready checks treat approved panels as generation-safe.
+- Promoted 44 stretch-derived panel assets from
+  eeds_review to current so generation ref-ready checks treat approved panels as generation-safe.
 
 ## 2026-09-14 — Stop stubbing shot.status and artifacts.animaticStill in the generation plan
 
 - `scripts/build-generation-plans.mjs` wrote `status: 'blocked'` and
   `artifacts.animaticStill: { status: 'missing' }` unconditionally for every shot, regardless of
   its actual `blockers`/take state — e.g. `festival-master:shot-plan-016b` showed `status:
-  "blocked"` with `blockers: []` and an already-generated still marked `"missing"`.
+"blocked"` with `blockers: []` and an already-generated still marked `"missing"`.
 - `status` is now derived from the shot's own (deduped) blockers: `'ready'` when empty, `'blocked'`
   otherwise. `artifacts.animaticStill` is now derived from the shot's selected take:
   `status: 'missing'` with no `imageAssetId`, `'accepted'` when `imageStatus.status === 'current'`,
@@ -562,7 +566,6 @@ eeds_review to current so generation ref-ready checks treat approved panels as g
 - **Refs present** stays a diagnostic (files exist); **Refs ready** requires `current` status. Stale stretch refs no longer look generation-ready.
 - Audio labels dialogue **text ready** separately from generation eligibility; missing voice samples still block can-generate.
 - Expand all / collapse all move one tree level at a time (groups, then packages). Manifest object URLs are revoked after a short delay.
-
 
 ## 2026-09-14 — Clear remaining "prompt not ready" blockers on Festival-master image packages
 
@@ -594,16 +597,16 @@ eeds_review to current so generation ref-ready checks treat approved panels as g
 
 ## 2026-09-14 — Fix reports route SSR and wire visual-stretches
 
-- Moved report builds to +page.server.ts and split browser-safe report metadata from Node builders (avoids 
-ode:crypto in the client).
+- Moved report builds to +page.server.ts and split browser-safe report metadata from Node builders (avoids
+  ode:crypto in the client).
 - Wired visual-stretches title/description into report presentation; reports include generatedAt.
 - Unknown report ids return 404 instead of 500.
 
 ## 2026-09-14 - Lift Festival-master still stretch prompt freeze
 
 - Removed the still-only editorial_prompt_freeze_not_approved hold from visual-stretch still jobs (video/Seedance keeps seedance_execution_gated).
-- Rebuilt light-delay-festival-master plans so all 29 still stretch jobs carry a real compiledPrompt and 
-unnable: true.
+- Rebuilt light-delay-festival-master plans so all 29 still stretch jobs carry a real compiledPrompt and
+  unnable: true.
 - Recorded the session-scoped exception in docs/production/AGENT_GENERATION_BRIEF.md. No submission adapter; plan JSON only.
 
 ## 2026-09-14 — Generation package readiness routes
@@ -619,8 +622,8 @@ unnable: true.
 ## 2026-09-14 - Regenerate independent Festival-master stills
 
 - Regenerated and registered the 16 selected independent stills flagged for continuity, composition, or quality correction (013b, 016b, 037-041, 045b, 068-070, 074-076, 089-090).
-- Each replacement was visually checked against its current prompt and references; all remain 
-eeds_review for editorial acceptance.
+- Each replacement was visually checked against its current prompt and references; all remain
+  eeds_review for editorial acceptance.
 
 ## 2026-09-14 - Split and promote Festival-master stretch panels
 
@@ -1074,7 +1077,7 @@ eeds_review for editorial acceptance.
 ## 2026-09-12 — Fix scrubbing dialogue saturation (overlapping cue starts)
 
 - `WebAudioCueSequencer.seek` aborted and replaced its `AbortController`, so in-flight
-  `ensureWindow`/`scheduleCue` work kept checking the *new* signal and could `source.start`
+  `ensureWindow`/`scheduleCue` work kept checking the _new_ signal and could `source.start`
   the same cue twice while scrubbing — stacked gains sounded like clipping/saturation.
 - Fix: schedule epoch + reserve `scheduledIds` before `await loadUrl`, and dedupe in-flight
   buffer fetches per URL.
