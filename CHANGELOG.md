@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-02 — Write polish
+
+- Pending proposals are reviewed inline in the page, with the side list jumping to each change; History's action reads "Preview"; text size up to 200%.
+- Browser tests for 200% text and for capacity-sensor warnings across layouts and text sizes; `applyOperations` unit tests.
+
 ## 2026-10-02 — Notes on committed versions
 
 - Accepting a proposal or restoring can carry an optional note, stored on the ChangeSet and shown as the History entry's main line; the commit card and restore preview have a "What changed?" field.

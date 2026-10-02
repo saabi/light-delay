@@ -1,5 +1,12 @@
 # Estado del proyecto
 
+## 2026-10-02 — Write polish (English source)
+
+- A pending proposal open for review is shown inline in the page, where it would apply (computed by applying its operations to the text it was made against); the side list jumps to each change and focuses it. Closing the review returns to the editor.
+- History's per-entry action is now "Preview", as in the reference states. Text size goes up to 200%; at 200% the layout steps down (through `layoutFor`) with nothing clipped and no horizontal overflow, at desktop and phone sizes.
+- A browser test checks that no `GlyphCapacitySensor` warning (oscillation or breakpoints) appears across five window sizes and text sizes 100–200%, with a panel opened and closed (checklist item 19).
+- Not done, with reasons: "Suggested changes · n" and a note on review-panel accepts. Drafts carry no author, so a proposal from elsewhere cannot be told from the author's own and every reviewable proposal today is the author's own commit that conflicted. Such a proposal can never be accepted (its precondition names a document version that has moved on), so the panel's Accept always fails for it; the author's way forward is not designed yet. Both belong with authored suggestions (agents, collaborators).
+
 ## 2026-10-02 — Notes on committed versions (English source)
 
 - Core: `AcceptProposal` and `RestoreScreenplay` take an optional `note` (1–1000 characters, at least one visible), stored on the ChangeSet as `note: { text }`. Existing versions have none. No migration: ChangeSets are stored as schema-validated records and the field is optional, so schema version 1 still holds. `intent` stays the system's record of the change kind.

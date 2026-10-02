@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import type { AuthoringOperation, ScreenplayElement } from '@light-delay/v2-core';
-import { changesBetween, trackChanges } from './track-changes';
+import { applyOperations, changesBetween, trackChanges } from './track-changes';
 
 const scope = { documentId: 'document:test', versionId: 'version:feature' };
 const el = (id: string, kind: ScreenplayElement['kind'], text: string): ScreenplayElement => ({
@@ -116,5 +116,50 @@ describe('changesBetween', () => {
 		).toBe(true);
 		const tracked = trackChanges(before, before.slice(1), changesBetween(before, before.slice(1)));
 		expect(tracked[0]).toMatchObject({ state: 'removed', key: 'removed:element:heading' });
+	});
+});
+
+describe('applyOperations', () => {
+	it('produces the screenplay a proposal describes, ignoring other cuts', () => {
+		const ops: AuthoringOperation[] = [
+			{ type: 'RemoveScreenplayElement', scope, elementId: 'element:action' },
+			{
+				type: 'InsertScreenplayElement',
+				scope,
+				element: el('new', 'action', 'A horn answers.'),
+				afterElementId: 'element:heading'
+			},
+			{ type: 'UpdateScreenplayElementText', scope, elementId: 'element:line', text: 'Hold on.' },
+			{ type: 'MoveScreenplayElement', scope, elementId: 'element:line', afterElementId: null },
+			{
+				type: 'UpdateScreenplayElementText',
+				scope: { ...scope, versionId: 'version:trailer' },
+				elementId: 'element:cue',
+				text: 'ELSEWHERE'
+			}
+		];
+		expect(applyOperations(before, ops, scope)).toEqual([
+			{ ...before[3], text: 'Hold on.' },
+			before[0],
+			el('new', 'action', 'A horn answers.'),
+			before[2]
+		]);
+		expect(before[3].text).toBe('Leave the channel open.');
+	});
+
+	it('round-trips with changesBetween on the elements it marks', () => {
+		const after = applyOperations(
+			before,
+			[
+				{
+					type: 'MoveScreenplayElement',
+					scope,
+					elementId: 'element:cue',
+					afterElementId: 'element:heading'
+				}
+			],
+			scope
+		);
+		expect([...changesBetween(before, after).moved]).toEqual(['element:cue']);
 	});
 });

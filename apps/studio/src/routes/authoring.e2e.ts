@@ -78,7 +78,7 @@ test('autosaves, commits through an inline review, isolates cuts, and restores',
 
 	await page.getByRole('button', { name: 'History' }).click();
 	await expect(historyEntries(page).first()).toContainText('Revised dialogue');
-	await initialEntry(page).getByRole('button', { name: 'Restore…' }).click();
+	await initialEntry(page).getByRole('button', { name: 'Preview' }).click();
 	await page.getByRole('button', { name: 'Restore this version' }).click();
 	await expect(saveState(page)).toHaveText('Restored');
 	await expect(historyEntries(page)).toHaveCount(3);
@@ -148,7 +148,7 @@ test('Retry refreshes restored editor without resending a committed restore', as
 			});
 		} else await route.continue();
 	});
-	await initialEntry(page).getByRole('button', { name: 'Restore…' }).click();
+	await initialEntry(page).getByRole('button', { name: 'Preview' }).click();
 	await page.getByRole('button', { name: 'Restore this version' }).click();
 	await expect(saveState(page)).toContainText('Restored · couldn’t refresh', { timeout: 15000 });
 	readsUnavailable = false;

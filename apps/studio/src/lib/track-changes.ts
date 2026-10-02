@@ -133,3 +133,41 @@ export function trackChanges(
 	}
 	return result;
 }
+
+/**
+ * The screenplay a proposal produces: its operations applied, in order, to the screenplay it was
+ * made against. Only operations on `scope` apply. Used to show a pending proposal inline.
+ */
+export function applyOperations(
+	base: readonly ScreenplayElement[],
+	operations: readonly AuthoringOperation[],
+	scope: { documentId: string; versionId: string }
+): ScreenplayElement[] {
+	const result = base.map((element) => ({ ...element }));
+	const indexOf = (id: string) => result.findIndex((element) => element.id === id);
+	const insertAfter = (element: ScreenplayElement, afterElementId: string | null) =>
+		result.splice(afterElementId === null ? 0 : indexOf(afterElementId) + 1, 0, element);
+	for (const operation of operations) {
+		if (
+			!('scope' in operation) ||
+			operation.scope.documentId !== scope.documentId ||
+			operation.scope.versionId !== scope.versionId
+		)
+			continue;
+		if (operation.type === 'InsertScreenplayElement')
+			insertAfter({ ...operation.element }, operation.afterElementId);
+		else if (operation.type === 'UpdateScreenplayElementText') {
+			const index = indexOf(operation.elementId);
+			if (index >= 0) result[index] = { ...result[index], text: operation.text };
+		} else if (operation.type === 'RemoveScreenplayElement') {
+			const index = indexOf(operation.elementId);
+			if (index >= 0) result.splice(index, 1);
+		} else if (operation.type === 'MoveScreenplayElement') {
+			const index = indexOf(operation.elementId);
+			if (index < 0) continue;
+			const [moved] = result.splice(index, 1);
+			insertAfter(moved, operation.afterElementId);
+		}
+	}
+	return result;
+}

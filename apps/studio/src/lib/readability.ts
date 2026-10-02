@@ -8,7 +8,7 @@
  */
 
 export const readabilityOptions = {
-	scale: [1, 1.12, 1.25, 1.5, 1.75],
+	scale: [1, 1.12, 1.25, 1.5, 1.75, 2],
 	contrast: ['normal', 'high', 'maximum'],
 	lineHeight: [1.25, 1.45, 1.65, 1.85],
 	face: ['inter', 'atkinson', 'opendyslexic']

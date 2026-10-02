@@ -144,7 +144,7 @@ test('PostgreSQL N1: Accept and Restore show authoritative success after a late 
 		.getByLabel('History')
 		.getByRole('listitem')
 		.filter({ hasText: 'Initial screenplay' })
-		.getByRole('button', { name: 'Restore…' })
+		.getByRole('button', { name: 'Preview' })
 		.click();
 	await delayedCommit('RestoreScreenplay', () =>
 		page.getByRole('button', { name: 'Restore this version' }).click()

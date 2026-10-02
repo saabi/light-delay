@@ -169,13 +169,13 @@ test('reset returns to the defaults and forgets the stored choice', async ({ pag
 	expect(await page.evaluate(() => localStorage.getItem('studio.readability.v1'))).toBeNull();
 });
 
-test('at the largest text size on a phone, the panel stays readable and on screen', async ({
+test('at the largest text size (200%) on a phone, the panel stays readable and on screen', async ({
 	page
 }) => {
 	await page.setViewportSize({ width: 390, height: 844 });
 	await open(page);
 	const panel = await openPanel(page);
-	await panel.getByRole('radio', { name: '175%' }).check();
+	await panel.getByRole('radio', { name: '200%' }).check();
 	const box = (await panel.boundingBox())!;
 	expect(box.x).toBeGreaterThanOrEqual(0);
 	expect(box.x + box.width).toBeLessThanOrEqual(390);
