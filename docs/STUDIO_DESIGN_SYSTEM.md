@@ -267,6 +267,8 @@ The resting Write surface must behave as a professional screenplay editor, not a
 
 - An action that would replace unsaved text (switching cut or document, reloading, closing) must save it first, or ask.
 - The interface must never promise a protection that does not exist. "Kept on this device" appears only when local persistence actually holds the text.
+- Every edit the server has not confirmed is kept on this device (IndexedDB, per browser profile, one copy per cut per open page) and removed once the server has it. Closing or reloading then needs no warning; where the browser cannot keep text, leaving with unsaved edits still asks.
+- On the next visit, kept text that continues the saved text is restored and saved without a question. Kept text that the saved text has moved past (another tab, device or a commit) is shown against the saved text, inline like a commit review, and the author restores or discards it. A page never takes over the kept text of a page that is still open.
 - Autosave failures are visible in the save state and never silently retried forever.
 
 ### Saving and committing
@@ -299,7 +301,7 @@ The save state is shown in one place, beside the breadcrumb. It is short, plain 
 | Draft persisted | Saved |
 | Save in flight | Saving… |
 | Retrying after a connection failure | Reconnecting… |
-| Not persisted, held locally | Offline — kept on this device (only when true) |
+| Not persisted (or outcome unknown), held locally | Offline — kept on this device (only when true) |
 | Not persisted, not held locally | Not saved — Retry |
 | Save outcome unknown | Couldn't confirm save — Retry |
 | Uncommitted changes exist | the commit action appears |

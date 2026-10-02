@@ -86,10 +86,12 @@ Draft contents under the old attempt ID. This is a narrow CreateProposal mechani
 Studio shows a restrained reconnecting state during retries. After exhaustion it keeps the editor
 contents in the current browser session and shows a persistent warning and **Retry now** action.
 After a mutation is known to have committed, the manual path retries only its failed authoritative
-refresh and never resends the mutation. A refresh or closed tab can
-still lose unsaved browser edits. PostgreSQL remains the sole durable source of accepted history;
-there is no server-side queue. IndexedDB protection and durable per-command ids remain for the
-next Studio milestone, as do the transactional outbox and authorization.
+refresh and never resends the mutation. Since 2026-10-02 Studio keeps unconfirmed edits in the
+browser's IndexedDB, so a refresh or closed tab no longer loses them (see
+[`STUDIO_DESIGN_SYSTEM.md`](STUDIO_DESIGN_SYSTEM.md#never-lose-typed-text)); that copy is a
+per-browser safety net, never an authority. PostgreSQL remains the sole durable source of accepted
+history; there is no server-side queue. Durable per-command ids remain for the next Studio
+milestone, as do the transactional outbox and authorization.
 
 Details: [correction verification §9](reviews/2026-09-26-M2.5-correction-verification-claude.md).
 

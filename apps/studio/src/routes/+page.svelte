@@ -24,7 +24,18 @@
 	import { describeHistoryEntry, describeOperation, explainError } from '$lib/authoring-presenter';
 	import { layoutFor, marginlessLayouts } from '$lib/layout';
 	import { sameScreenplayText } from '$lib/screenplay-text';
-	import { trackChanges } from '$lib/track-changes';
+	import { changesBetween, trackChanges } from '$lib/track-changes';
+	import {
+		compareKeptText,
+		holdPageLock,
+		keptTextCut,
+		keptTextKey,
+		keptTextToRecover,
+		openPages,
+		openKeptTextStore,
+		type KeptText,
+		type KeptTextStore
+	} from '$lib/kept-text';
 	import {
 		applyReadability,
 		clearReadability,
@@ -74,7 +85,17 @@
 	const autosaveDelay = 800;
 	let autosaveTimer: ReturnType<typeof setTimeout> | undefined;
 	let saveInFlight: Promise<void> | undefined;
-	let editVersion = 0;
+	let editVersion = $state(0);
+	/* Text kept on this device until the server confirms it ($lib/kept-text). */
+	let keptStore: KeptTextStore | undefined;
+	let keptStoreReady: Promise<KeptTextStore | undefined> = Promise.resolve(undefined);
+	let pageId = '';
+	/* The edit the device copy holds; equal to editVersion when every edit is kept. */
+	let keptVersion = $state<number>();
+	let keepInFlight = false;
+	let keepAgain = false;
+	/* Kept text that no longer continues what is saved: shown against it for the author to choose. */
+	let recovery = $state<{ kept: KeptText; savedElements: ScreenplayElement[] }>();
 	/* Commit: a proposal prepared from the saved Draft, reviewed inline, then accepted. */
 	let commitReview = $state<{
 		proposal: ScreenplayProposal;
@@ -135,8 +156,15 @@
 	const trackedChanges = $derived(
 		commitReview
 			? trackChanges(commitReview.baseElements, elements, commitReview.proposal.operations)
-			: []
+			: recovery
+				? trackChanges(
+						recovery.savedElements,
+						recovery.kept.elements,
+						changesBetween(recovery.savedElements, recovery.kept.elements)
+					)
+				: []
 	);
+	const keptOnDevice = $derived(dirty && keptVersion === editVersion);
 
 	/* The only place the document's save state appears (STUDIO_DESIGN_SYSTEM.md § State and vocabulary). */
 	const saveState = $derived.by<SaveState | undefined>(() => {
@@ -146,11 +174,14 @@
 				/* A specific outcome ("Changes accepted · couldn’t refresh") beats the generic one. */
 				text:
 					notice?.text ??
-					(connection.reason === 'unknown'
-						? 'Couldn’t confirm save'
-						: dirty
-							? 'Not saved'
-							: 'Can’t reach Studio'),
+					/* Text kept here is safe whether or not the server got it; Retry checks. */
+					(keptOnDevice
+						? 'Offline — kept on this device'
+						: connection.reason === 'unknown'
+							? 'Couldn’t confirm save'
+							: dirty
+								? 'Not saved'
+								: 'Can’t reach Studio'),
 				tone: 'attention',
 				action: 'retry'
 			};
@@ -176,13 +207,19 @@
 		followContrast();
 		contrastQuery.addEventListener('change', followContrast);
 		/* Measurements are final only once the bundled faces, and the chosen interface face, load. */
+		pageId = `page:${crypto.randomUUID()}`;
+		holdPageLock(pageId);
+		keptStoreReady = openKeptTextStore()
+			.catch(() => undefined)
+			.then((store) => (keptStore = store));
 		void Promise.all([document.fonts.ready, loadInterfaceFace(readability.face)])
 			.catch((error) => console.error(error))
 			.finally(() => (fontsReady = true));
 		void openVersion(selectedVersionId);
-		/* Never lose typed text: warn before leaving while edits are not saved (review U2). */
+		/* Never lose typed text: warn before leaving while edits are neither saved nor kept here. */
 		const guardUnsaved = (event: BeforeUnloadEvent) => {
 			if (!dirty && !saving) return;
+			if (keptOnDevice) return;
 			void autosave();
 			event.preventDefault();
 			event.returnValue = '';
@@ -400,6 +437,16 @@
 				authoringApplication.listProposals(projectId),
 				authoringApplication.listHistory(projectId)
 			]);
+			/* Text kept for this cut by a page that has since closed (or by this page). */
+			const store = await keptStoreReady;
+			let kept: KeptText | undefined;
+			try {
+				const live = await openPages();
+				live.delete(pageId);
+				kept = keptTextToRecover((await store?.list(keptCut(versionId))) ?? [], live);
+			} catch (error) {
+				console.error(error);
+			}
 			selectedVersionId = versionId;
 			proposal = undefined;
 			proposalBaseElements = [];
@@ -456,6 +503,22 @@
 					? { text: 'Saved · the screenplay changed since you started', tone: 'attention' }
 					: undefined;
 			history = nextHistory;
+			keptVersion = undefined;
+			recovery = undefined;
+			if (nextView) {
+				const finding = compareKeptText(kept, {
+					draft,
+					documentVersion: nextView.documentVersion,
+					elements: nextView.elements
+				});
+				if (finding === 'same') forgetKeptRecord(kept!);
+				else if (finding === 'continues') adoptKeptText(kept!);
+				else if (finding === 'diverged')
+					recovery = {
+						kept: kept!,
+						savedElements: (draft?.elements ?? nextView.elements).map((element) => ({ ...element }))
+					};
+			}
 			void loadRevisionTexts();
 		} catch (error) {
 			failureNotice(error);
@@ -471,7 +534,78 @@
 		dirty = true;
 		notice = undefined;
 		if (proposal && proposal.source.ref.id === draft?.id) proposal = undefined;
+		void keepLocally();
 		scheduleAutosave();
+	}
+
+	const keptCut = (versionId: string) =>
+		keptTextCut(authoringFixtureIds.project, authoringFixtureIds.primaryDocument, versionId);
+
+	/** Mirrors the current text to this device. Writes run one at a time; the latest text wins. */
+	async function keepLocally() {
+		if (!keptStore || !view) return;
+		if (keepInFlight) {
+			keepAgain = true;
+			return;
+		}
+		keepInFlight = true;
+		try {
+			do {
+				keepAgain = false;
+				/* Nothing to keep once the server has confirmed every edit. */
+				if (!dirty || !view) break;
+				const version = editVersion;
+				const cut = keptCut(selectedVersionId);
+				await keptStore.put({
+					key: keptTextKey(cut, pageId),
+					cut,
+					writer: pageId,
+					editVersion: version,
+					elements: $state.snapshot(elements),
+					base: {
+						...(draft ? { draftId: draft.id, draftUpdatedAt: draft.updatedAt } : {}),
+						documentVersion: view.documentVersion
+					},
+					keptAt: new Date().toISOString()
+				});
+				keptVersion = version;
+			} while (keepAgain);
+		} catch (error) {
+			/* Storage can fail (quota, blocked); the save state then stops claiming the text is kept. */
+			console.error(error);
+			keptVersion = undefined;
+		} finally {
+			keepInFlight = false;
+		}
+	}
+
+	/** Removes this page's copy for a cut once the server has every edit up to `upTo`. */
+	function forgetOwnKeptText(versionId: string, upTo: number) {
+		keptVersion = undefined;
+		void keptStore
+			?.remove(keptTextKey(keptCut(versionId), pageId), upTo)
+			.catch((error) => console.error(error));
+	}
+
+	/** Removes exactly the copy that was found (never a newer one written since). */
+	function forgetKeptRecord(record: KeptText) {
+		void keptStore?.remove(record.key, record.editVersion).catch((error) => console.error(error));
+	}
+
+	/* Kept text becomes this page's text and is saved like any edit; this page keeps it from now on. */
+	function adoptKeptText(kept: KeptText) {
+		recovery = undefined;
+		elements = kept.elements.map((element) => ({ ...element }));
+		editorKey += 1;
+		edited();
+		/* edited() has already queued this page's own copy, so the old one can go. */
+		if (kept.writer !== pageId) forgetKeptRecord(kept);
+	}
+
+	function discardKeptText() {
+		if (!recovery) return;
+		forgetKeptRecord(recovery.kept);
+		recovery = undefined;
 	}
 
 	function scheduleAutosave() {
@@ -532,9 +666,15 @@
 				draft = result.draft;
 				draftIds[selectedVersionId] = draft.id;
 				draftIds = { ...draftIds };
-				/* Edits typed while this save was in flight still need saving. */
-				if (editVersion === version) dirty = false;
-				else scheduleAutosave();
+				/* Edits typed while this save was in flight still need saving, and keeping on top of
+				   the Draft as it is now. */
+				if (editVersion === version) {
+					dirty = false;
+					forgetOwnKeptText(selectedVersionId, version);
+				} else {
+					scheduleAutosave();
+					void keepLocally();
+				}
 			} else if (!result.ok)
 				notice = { text: `Not saved: ${explainError(result.error)}`, tone: 'attention' };
 		} finally {
@@ -670,6 +810,9 @@
 				delete draftIds[versionId];
 				draftIds = { ...draftIds };
 				dirty = false;
+				recovery = undefined;
+				/* The text was replaced on purpose (commit, restore, accept): this page's copy goes. */
+				forgetOwnKeptText(versionId, editVersion);
 				notice = { text: message, tone: 'success' };
 				retryAction = undefined;
 				void loadRevisionTexts();
@@ -909,7 +1052,7 @@
 						></button
 					>
 				{/if}
-				{#if uncommitted && !commitReview}
+				{#if uncommitted && !commitReview && !recovery}
 					<!-- One deliberate commit action, only when there is something to commit. -->
 					<button
 						class="primary"
@@ -932,11 +1075,11 @@
 					<!-- Leaving the page area saves at once instead of waiting for the typing pause. -->
 					<article
 						class="page"
-						class:reviewing={!!commitReview}
+						class:reviewing={!!commitReview || !!recovery}
 						aria-label="Screenplay"
 						onfocusout={autosaveAutomatically}
 					>
-						{#if commitReview}
+						{#if commitReview || recovery}
 							<!-- The changes inline, as they will be committed: inserted text marked, removed struck. -->
 							{#each trackedChanges as item (item.key)}
 								<div class="el tracked" data-kind={item.kind} data-change={item.state}>
@@ -955,12 +1098,12 @@
 							{/each}
 						{/if}
 						<!-- Kept mounted during the commit review, so Cancel returns to the same undo history. -->
-						<div class="editor" hidden={!!commitReview || !view}>
+						<div class="editor" hidden={!!commitReview || !!recovery || !view}>
 							<ScreenplayEditor
 								{elements}
 								contentKey={editorKey}
 								{committedKinds}
-								editable={!busy && !commitReview && !!view}
+								editable={!busy && !commitReview && !recovery && !!view}
 								onchange={(next) => {
 									elements = next;
 									edited();
@@ -985,6 +1128,22 @@
 							class="primary"
 							disabled={busy}
 							onclick={() => perform(commit)}>Commit</button
+						>
+					</div>
+				</div>
+			{/if}
+
+			{#if recovery}
+				<!-- Kept text that no longer continues the saved text: shown against it, the author chooses. -->
+				<div class="commit-card" role="dialog" aria-label="Text kept on this device" tabindex="-1">
+					<h2>Text kept on this device</h2>
+					<p>
+						You typed this here but it was never saved, and the saved {cutLabel} text has changed since.
+						It is shown against the saved text.
+					</p>
+					<div class="panel-actions">
+						<button onclick={discardKeptText}>Discard it</button>
+						<button class="primary" onclick={() => adoptKeptText(recovery!.kept)}>Restore it</button
 						>
 					</div>
 				</div>

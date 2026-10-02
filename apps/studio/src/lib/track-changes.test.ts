@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import type { AuthoringOperation, ScreenplayElement } from '@light-delay/v2-core';
-import { trackChanges } from './track-changes';
+import { changesBetween, trackChanges } from './track-changes';
 
 const scope = { documentId: 'document:test', versionId: 'version:feature' };
 const el = (id: string, kind: ScreenplayElement['kind'], text: string): ScreenplayElement => ({
@@ -76,5 +76,45 @@ describe('trackChanges', () => {
 			key: 'removed:element:heading',
 			state: 'removed'
 		});
+	});
+});
+
+describe('changesBetween', () => {
+	const ids = (set: Set<string>) => [...set].sort();
+
+	it('finds revised, added and removed elements', () => {
+		const after = [
+			before[0],
+			{ ...before[1], text: 'Mara lowers the lamp.' },
+			el('new', 'action', 'A horn answers.'),
+			before[2]
+		];
+		const changes = changesBetween(before, after);
+		expect(ids(changes.revised)).toEqual(['element:action']);
+		expect(ids(changes.added)).toEqual(['element:new']);
+		expect(ids(changes.removed)).toEqual(['element:line']);
+		expect(ids(changes.moved)).toEqual([]);
+	});
+
+	it('marks only what moved, as core does', () => {
+		const swapped = [before[0], before[2], before[1], before[3]];
+		expect(ids(changesBetween(before, swapped).moved)).toEqual(['element:cue']);
+		const last = [before[1], before[2], before[3], before[0]];
+		expect(ids(changesBetween(before, last).moved)).toEqual([
+			'element:action',
+			'element:cue',
+			'element:line'
+		]);
+	});
+
+	it('reports nothing for the same screenplay, and drives trackChanges', () => {
+		const changes = changesBetween(before, before);
+		expect(
+			[changes.revised, changes.added, changes.removed, changes.moved].every(
+				(set) => set.size === 0
+			)
+		).toBe(true);
+		const tracked = trackChanges(before, before.slice(1), changesBetween(before, before.slice(1)));
+		expect(tracked[0]).toMatchObject({ state: 'removed', key: 'removed:element:heading' });
 	});
 });

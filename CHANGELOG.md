@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-02 — Studio keeps unsaved text on this device
+
+- Unconfirmed edits are mirrored to IndexedDB until the server confirms them; the save state shows "Offline — kept on this device" only when that is true, and closing no longer asks then.
+- On the next visit kept text is restored and saved, or, if the saved text has moved on, shown against it for the author to restore or discard. Open tabs never take over each other's kept text.
+- Unit tests (store, rules, change derivation) and a `kept-text` browser project.
+
 ## 2026-10-02 — Studio continuous screenplay editor (Phase 4)
 
 - Write's per-element text fields are replaced by one ProseMirror document of typed screenplay elements, with Enter/Tab conventions, Ctrl/⌘+Alt+1…6 and Alt+↑/↓ shortcuts, cross-element selection, paste and undo, and a gutter handle menu for element actions.

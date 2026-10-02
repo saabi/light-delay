@@ -110,7 +110,13 @@ test('U2: if the edits cannot be saved, Studio stays on the current cut with the
 	await expect(el(page, 'dialogue')).toHaveText('Must not be lost.');
 });
 
-test('U2: leaving the page with unsaved edits asks first', async ({ page }) => {
+test('U2: leaving the page with edits neither saved nor kept on this device asks first', async ({
+	page
+}) => {
+	/* Where the browser cannot keep text (kept-text.e2e.ts covers the case where it can). */
+	await page.addInitScript(() =>
+		Object.defineProperty(window, 'indexedDB', { value: undefined, configurable: true })
+	);
 	await open(page);
 	await el(page, 'dialogue').fill('Unsaved when closing.');
 	const dialog = page.waitForEvent('dialog');
@@ -258,6 +264,8 @@ test('U8: connectivity states do not move the document', async ({ page }) => {
 	await dialogue.fill('Typing during an outage.');
 	await expect(saveState(page)).toContainText('Reconnecting…');
 	expect(await dialogue.boundingBox()).toEqual(before);
-	await expect(saveState(page)).toContainText('Not saved', { timeout: 15_000 });
+	await expect(saveState(page)).toContainText('Offline — kept on this device', {
+		timeout: 15_000
+	});
 	expect(await dialogue.boundingBox()).toEqual(before);
 });

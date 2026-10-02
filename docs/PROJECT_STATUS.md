@@ -1,5 +1,12 @@
 # Estado del proyecto
 
+## 2026-10-02 — Studio keeps unsaved text on this device (English source)
+
+- Every edit the server has not confirmed is mirrored to IndexedDB (per browser profile, one copy per cut per open page) and removed once the server confirms it. While Studio is unreachable the save state reads **Offline — kept on this device — Retry**, and closing or reloading no longer asks. Where the browser cannot keep text (storage blocked), the save state still says *Not saved* and leaving still asks.
+- Next visit: kept text that continues the saved text is restored and saved automatically. Kept text the saved text has moved past (another tab or device saved, or a commit) is shown against the saved text, inline like the commit review, with **Discard it** / **Restore it**; nothing is edited or committed until the author chooses. Each open page holds a Web Lock, so no page ever takes over a still-open page's kept text, and two tabs never overwrite each other's copy.
+- Decision (owner): this closes the last unmet Write requirement before other work; durable per-command ids stay deferred. Not yet: showing kept text when Studio cannot be reached at all on opening (it waits on the device until Studio can be read).
+- Tests: unit tests for the store (fake IndexedDB), the decision rules and client-side change derivation; a `kept-text` browser project covering a closed tab, two-tab divergence with restore and discard, never taking over an open tab, and browsers without storage. Existing tests that exhaust retries now expect the kept message.
+
 ## 2026-10-02 — Studio continuous screenplay editor (Phase 4) (English source)
 
 - Write is now one continuous editable document (ProseMirror, used directly, owner decision) instead of one text field per element. Elements are typed blocks set in the screenplay geometry: scene heading, action, character, parenthetical, dialogue and transition. No form fields, grips or per-element scrolling; text wraps and the page grows.

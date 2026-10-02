@@ -175,7 +175,9 @@ test('keeps unsaved editor text through exhausted retries and saves on Retry', a
 	});
 	/* Typing autosaves; every attempt fails until the store is back. */
 	await dialogue.fill(text);
-	await expect(saveState(page)).toContainText('Not saved', { timeout: 15_000 });
+	await expect(saveState(page)).toContainText('Offline — kept on this device', {
+		timeout: 15_000
+	});
 	await expect(dialogue).toHaveText(text);
 	unavailable = false;
 	await retry(page);
