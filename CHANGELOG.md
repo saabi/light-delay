@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-02 — M3 redefined (documentation)
+
+- M3 is now "Story structure and story-time state, from real material", in slices 3a–3e, with the original exit criteria kept; design note `V2_M3_STORY_STRUCTURE_DESIGN.md`. The roadmap records Write productization, marks M2/M2.5 complete in the queue, adds the integration step, and notes the bounded import exception.
+
 ## 2026-10-02 — Write polish
 
 - Pending proposals are reviewed inline in the page, with the side list jumping to each change; History's action reads "Preview"; text size up to 200%.

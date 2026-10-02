@@ -215,26 +215,69 @@ and persisted-state reconciliation; it never replays a failed server transaction
 
 ---
 
-## Milestone 3 — Story-time state foundation
+## Write productization — complete (Oct 1–2, 2026)
 
-Before Context persistence, model the distinction between authoring history and fictional state.
+Between M2.5 and M3, Write became a usable screenplay editor (PRs #8–#16 into `implementation/m2-authoring`). This included:
 
-Introduce the smallest useful `StateChange` / temporal-anchor / `stateAt(...)` behavior needed to answer:
+- correctness fixes;
+- the application shell, with layout from the glyph-capacity sensor;
+- readability preferences;
+- autosave and a single commit with inline track changes;
+- the continuous ProseMirror editor with six element kinds;
+- unsaved text kept on the device;
+- notes on committed versions;
+- inline review of pending proposals.
+
+See `CHANGELOG.md` and `PROJECT_STATUS.md`. This advances M8's "Write refinement" early; it adds no architecture beyond the authoring model.
+
+---
+
+## Milestone 3 — Story structure and story-time state, from real material
+
+Redefined Oct 2, 2026 (owner decision; design note [`V2_M3_STORY_STRUCTURE_DESIGN.md`](V2_M3_STORY_STRUCTURE_DESIGN.md)). The original question stands:
 
 > What is true at this point in the story?
 
-Start with ordinary linear state. Gravity, hatch state, occupancy/movement, or another bounded example may be used, but the state transition must be anchored to story semantics rather than to ProjectRevision number.
+The real Luz Tardía outline (`data/outlines/light-delay-master-narrative.json`) shows that story structure (*Story → Version → Outline → Screenplay*, which M2.5 named but did not schedule) and story-time state are one problem. Its 58 steps carry:
+
+- causal links;
+- 40 facts;
+- 150 knowledge events;
+- action requirements.
+
+M3 therefore models fabula (story events, facts, knowledge, causal links, state changes) and narrative versions (units that present events) together. It brings in the real outline through a reviewed import.
+
+Authority and scope:
+
+- the repository JSON stays authoritative under ADR-0002; the Studio project is a reviewable copy with provenance, and Studio never writes to `data/`;
+- bounded exception to the bulk-import deferral: only the master outline and its two active derived outlines (festival-master, trailer-master);
+- the first importer reads the JSON; Markdown import comes later;
+- integrate `implementation/m2-authoring` into `master` before starting; slices branch from `master`.
+
+Slices:
+
+- 3a: creating structure, import proposals, the master-outline importer, a read-only Outline lens;
+- 3b: story-time state (`stateAt`, `knowsAt`, `availableAt`, findings) with parity against the legacy causal-validity report;
+- 3c: outline editing for Studio-native projects (editing the Luz Tardía copy waits for an authority ADR);
+- 3d: derived narrative versions;
+- 3e: screenplay import linked to outline units, and Markdown importers.
 
 Do not implement a universal time-travel solver.
 
-A bounded Light Delay fixture may be used. Do not bulk-import current Light Delay HEAD.
-
 ### Exit criteria
+
+The original four, met in slice 3b:
 
 - two story points in the same project revision may correctly produce different world state;
 - editing the project creates a ProjectRevision without being confused with fictional time passing;
 - unknown/undetermined state remains representable;
 - state projection carries provenance/source anchors.
+
+Plus:
+
+- the master outline imports as a reviewed proposal whose counts match the source, and re-importing an unchanged file proposes nothing;
+- Studio's findings on the imported master equal `scripts/report-causal-validity.mjs`'s rules on the source;
+- each slice's own criteria in the design note.
 
 ---
 
@@ -395,7 +438,7 @@ Review
 Prioritize actual filmmaking workflows rather than exposing domain objects.
 
 Likely sequence:
-- Write refinement;
+- Write refinement (largely done early, see Write productization);
 - Story chronology/narrative-order surface;
 - World/character/location inspector;
 - Navigate visual spatial editor;
@@ -464,9 +507,11 @@ The active queue is:
 1. completed: repository foundation-correction findings (host helper update remains an operational prerequisite);
 2. completed: corrected/bounded M1 proof;
 3. completed: branch reconciliation and R1/R2 application-boundary cleanup;
-4. M2 application boundary + Draft/Proposal + screenplay authoring proof + two-version isolation;
-5. M2.5 minimal PostgreSQL durability;
-6. M3 explicit story-time state;
+4. completed: M2 application boundary + Draft/Proposal + screenplay authoring proof + two-version isolation;
+5. completed: M2.5 minimal PostgreSQL durability;
+5a. completed: Write productization (Oct 1–2, 2026);
+5b. integrate into `master`, human acceptance of Write, staging with an access boundary and an exercised backup/restore;
+6. M3 story structure and story-time state from real material (slices 3a–3e);
 7. M4 revision/cut/story-point-aware Context loop;
 8. first durable Agent Runtime adapter;
 9. Media Plane persistence + resolved-edit/export foundation;
@@ -479,7 +524,7 @@ The active queue is:
 Do not spend the next milestones on:
 
 - exhaustive Light Delay zero-fill reconstruction or making every legacy validator green;
-- bulk import of current Light Delay HEAD;
+- bulk import of current Light Delay HEAD (bounded exception, Oct 2, 2026: the master outline and its two active derived outlines, as reviewable copies; see M3);
 - R3-R7 repository moves;
 - `static/assets` relocation;
 - universal time-travel/history semantics;

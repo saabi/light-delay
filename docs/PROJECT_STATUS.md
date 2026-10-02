@@ -1,5 +1,11 @@
 # Estado del proyecto
 
+## 2026-10-02 — M3 redefined: story structure and story-time state from real material (English source)
+
+- Owner decision after reviewing the roadmap gap (Story → Version → Outline → Screenplay was named but never scheduled): M3 now covers story structure and story-time state together, built from the real Luz Tardía outline, whose meaning is mostly causal and epistemic (58 steps, 40 facts, 150 knowledge events, causal links, action requirements). Design note: [`V2_M3_STORY_STRUCTURE_DESIGN.md`](V2_M3_STORY_STRUCTURE_DESIGN.md); roadmap updated (M3 section, Write productization recorded, near-term queue, deferrals).
+- Authority stays with `data/outlines/` under ADR-0002: the Studio project will be a reviewable copy with provenance, never written back. Bounded exception to the bulk-import deferral: the master outline and its two active derived outlines only. The first importer reads the JSON, not the Markdown exports.
+- Next: integrate `implementation/m2-authoring` into `master`, human acceptance of Write, staging with an access boundary and an exercised backup/restore; then slice 3a from `master`. Documentation only.
+
 ## 2026-10-02 — Write polish (English source)
 
 - A pending proposal open for review is shown inline in the page, where it would apply (computed by applying its operations to the text it was made against); the side list jumps to each change and focuses it. Closing the review returns to the editor.
