@@ -10,8 +10,29 @@ export async function switchCut(page: Page, label: 'Feature' | 'Trailer') {
 	await expect(page.getByRole('button', { name: `Cut: ${label}` })).toBeVisible();
 }
 
-export async function save(page: Page) {
-	await saveState(page).getByRole('button', { name: 'Save' }).click();
+/* Typing autosaves; this waits until the save state confirms it. */
+export async function saved(page: Page) {
+	await expect(saveState(page)).toHaveText('Saved');
+}
+
+export const commitCard = (page: Page) => page.getByRole('dialog', { name: 'Commit changes' });
+
+/* Commit the current edits through the inline review. */
+export async function commit(page: Page) {
+	await page.getByRole('button', { name: 'Commit changes' }).click();
+	await commitCard(page).getByRole('button', { name: 'Commit' }).click();
+	await expect(saveState(page)).toHaveText('Committed');
+}
+
+export async function proposalCount(page: Page) {
+	return page.evaluate(async () => {
+		const response = await fetch('/api/authoring', {
+			method: 'POST',
+			headers: { 'content-type': 'application/json' },
+			body: JSON.stringify({ method: 'listProposals', args: ['project:harbor-light'] })
+		});
+		return (await response.json()).length as number;
+	});
 }
 
 export async function retry(page: Page) {

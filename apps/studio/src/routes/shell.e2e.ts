@@ -1,6 +1,6 @@
 import { expect, test, type Page } from '@playwright/test';
 import { layoutFor, type LayoutId } from '../lib/layout';
-import { historyEntries, initialEntry, saveState } from './studio-e2e';
+import { commit, commitCard, historyEntries, initialEntry, saveState } from './studio-e2e';
 
 /*
 	Phase 2 (shell and identity), checked against STUDIO_DESIGN_SYSTEM.md: shell anatomy, layout from
@@ -53,7 +53,7 @@ test('one application bar with a fixed identity slot, no second bar and no foote
 test('the save state appears once, right after the breadcrumb', async ({ page }) => {
 	await open(page);
 	await page.getByLabel('dialogue').fill(`Shell save ${Date.now()}.`);
-	await expect(saveState(page)).toContainText('Unsaved changes');
+	await expect(saveState(page)).toHaveText('Saving…');
 	await expect(page.getByRole('status')).toHaveCount(1);
 	const order = await page
 		.locator('header')
@@ -63,7 +63,6 @@ test('the save state appears once, right after the breadcrumb', async ({ page })
 			)
 		);
 	expect(order.indexOf('status')).toBe(order.indexOf('breadcrumb') + 1);
-	await saveState(page).getByRole('button', { name: 'Save' }).click();
 	await expect(saveState(page)).toHaveText('Saved');
 	await expect(page.getByText('Saved', { exact: true })).toHaveCount(1);
 });
@@ -233,12 +232,12 @@ test('normal surfaces use the plain vocabulary and never show IDs', async ({ pag
 	await page.getByLabel('dialogue').fill(`Vocabulary line ${Date.now()}.`);
 	expect(await visibleText(page)).not.toMatch(forbidden);
 
-	await page.getByRole('button', { name: 'Review changes' }).click();
-	await expect(page.getByLabel('Changes to review')).toBeVisible();
+	await page.getByRole('button', { name: 'Commit changes' }).click();
+	await expect(commitCard(page)).toBeVisible();
 	expect(await visibleText(page)).not.toMatch(forbidden);
 
-	await page.getByRole('button', { name: 'Accept changes' }).click();
-	await expect(saveState(page)).toHaveText('Changes accepted');
+	await commitCard(page).getByRole('button', { name: 'Commit' }).click();
+	await expect(saveState(page)).toHaveText('Committed');
 	expect(await visibleText(page)).not.toMatch(forbidden);
 
 	await page.getByRole('button', { name: 'History' }).click();
@@ -254,9 +253,7 @@ test('normal surfaces use the plain vocabulary and never show IDs', async ({ pag
 test('history reads newest first, in plain language', async ({ page }) => {
 	await open(page);
 	await page.getByLabel('dialogue').fill(`Newest ${Date.now()}.`);
-	await page.getByRole('button', { name: 'Review changes' }).click();
-	await page.getByRole('button', { name: 'Accept changes' }).click();
-	await expect(saveState(page)).toHaveText('Changes accepted');
+	await commit(page);
 	await page.getByRole('button', { name: 'History' }).click();
 	const entries = historyEntries(page);
 	await expect(entries.first()).toContainText('Revised dialogue');

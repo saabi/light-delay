@@ -83,8 +83,11 @@ test('PostgreSQL N1: Accept and Restore show authoritative success after a late 
 	const dialogue = page.getByLabel('dialogue');
 	await expect(dialogue).toHaveValue('Leave the channel open.');
 	await dialogue.fill('N1 browser accepted text.');
-	await page.getByRole('button', { name: 'Review changes' }).click();
-	await expect(page.getByRole('button', { name: 'Accept changes' })).toBeVisible();
+	await expect(page.getByRole('status')).toHaveText('Saved');
+	/* Commit, step 1 (save and prepare) runs before the proxy is armed, so the held COMMIT is the accept. */
+	await page.getByRole('button', { name: 'Commit changes' }).click();
+	const commitCard = page.getByRole('dialog', { name: 'Commit changes' });
+	await expect(commitCard).toBeVisible();
 
 	async function delayedCommit(commandType: string, click: () => Promise<void>) {
 		const mutations: Array<{ status: number; result: unknown }> = [];
@@ -129,12 +132,12 @@ test('PostgreSQL N1: Accept and Restore show authoritative success after a late 
 		}
 	}
 	await delayedCommit('AcceptProposal', () =>
-		page.getByRole('button', { name: 'Accept changes' }).click()
+		commitCard.getByRole('button', { name: 'Commit' }).click()
 	);
-	await expect(page.getByRole('status')).toHaveText('Changes accepted');
+	await expect(page.getByRole('status')).toHaveText('Committed');
 	await expect(dialogue).toHaveValue('N1 browser accepted text.');
-	await expect(page.getByRole('button', { name: 'Accept changes' })).toHaveCount(0);
-	await expect(page.getByText(/Couldn’t accept/)).toHaveCount(0);
+	await expect(commitCard).toHaveCount(0);
+	await expect(page.getByText(/Couldn’t commit/)).toHaveCount(0);
 	await page.getByRole('button', { name: 'History' }).click();
 	await page
 		.getByLabel('History')
