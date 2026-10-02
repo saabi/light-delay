@@ -22,7 +22,6 @@
 	} from '$lib/authoring-client';
 	import { AuthoringRequestError, type ConnectionState } from '$lib/authoring-retry';
 	import { describeHistoryEntry, describeOperation, explainError } from '$lib/authoring-presenter';
-	import { autosize } from '$lib/autosize';
 	import { layoutFor, marginlessLayouts } from '$lib/layout';
 	import { sameScreenplayText } from '$lib/screenplay-text';
 	import { trackChanges } from '$lib/track-changes';
@@ -37,6 +36,7 @@
 		type Readability
 	} from '$lib/readability';
 	import { loadInterfaceFace } from '$lib/readability-faces';
+	import ScreenplayEditor from '$lib/screenplay-editor/ScreenplayEditor.svelte';
 
 	/** Until the product has a name and mark, the identity slot holds this neutral wordmark. */
 	const appName = 'Studio';
@@ -65,7 +65,8 @@
 	let dirty = $state(false);
 	let reviewOpen = $state(false);
 	let historyOpen = $state(false);
-	let localElementCounter = 0;
+	/* Replacing the text from outside (open, commit, restore) bumps this; the editor reloads and its undo resets. */
+	let editorKey = $state(0);
 	let connection = $state<ConnectionState>({ kind: 'ready' });
 	let retryAction = $state<(() => Promise<void>) | undefined>();
 	let activeAction: (() => Promise<void>) | undefined;
@@ -126,6 +127,10 @@
 	/* The commit action appears only when the text differs from what is committed. */
 	const uncommitted = $derived(
 		!!view && (dirty || !!draft) && !sameScreenplayText(elements, view.elements)
+	);
+	/* Kind is fixed per committed identity, so the editor gives a retyped element a new one. */
+	const committedKinds = $derived(
+		new Map((view?.elements ?? []).map((element) => [element.id, element.kind]))
 	);
 	const trackedChanges = $derived(
 		commitReview
@@ -444,6 +449,7 @@
 					)?.elements.map((element) => ({ ...element })) ?? [];
 			}
 			elements = (draft?.elements ?? view?.elements ?? []).map((element) => ({ ...element }));
+			editorKey += 1;
 			dirty = false;
 			notice =
 				!proposal && draft && view && draft.baseDocumentVersion !== view.documentVersion
@@ -502,40 +508,6 @@
 			saveInFlight = undefined;
 		}
 		return !dirty;
-	}
-
-	function updateText(elementId: string, text: string) {
-		elements = elements.map((element) =>
-			element.id === elementId ? { ...element, text } : element
-		);
-		edited();
-	}
-
-	function moveElement(index: number, direction: -1 | 1) {
-		const target = index + direction;
-		if (target < 0 || target >= elements.length) return;
-		const reordered = [...elements];
-		[reordered[index], reordered[target]] = [reordered[target], reordered[index]];
-		elements = reordered;
-		edited();
-	}
-
-	function removeElement(elementId: string) {
-		elements = elements.filter((element) => element.id !== elementId);
-		edited();
-	}
-
-	function addAction() {
-		localElementCounter += 1;
-		elements = [
-			...elements,
-			{
-				id: `element:studio-action-${Date.now()}-${localElementCounter}`,
-				kind: 'action',
-				text: 'New action.'
-			}
-		];
-		edited();
 	}
 
 	async function saveDraft() {
@@ -689,6 +661,7 @@
 				]);
 				view = nextView;
 				elements = nextView?.elements.map((element) => ({ ...element })) ?? [];
+				editorKey += 1;
 				history = nextHistory;
 				draft = undefined;
 				proposal = undefined;
@@ -966,17 +939,12 @@
 						{#if commitReview}
 							<!-- The changes inline, as they will be committed: inserted text marked, removed struck. -->
 							{#each trackedChanges as item (item.key)}
-								<div
-									class="element tracked"
-									class:scene-heading={item.kind === 'scene-heading'}
-									class:action={item.kind === 'action'}
-									class:character={item.kind === 'character'}
-									class:dialogue={item.kind === 'dialogue'}
-									data-change={item.state}
-								>
-									{#if item.moved}<span class="change-tag">Moved</span>{/if}
-									{#if item.state === 'added'}<span class="change-tag">Added</span>{/if}
-									{#if item.state === 'removed'}<span class="change-tag">Removed</span>{/if}
+								<div class="el tracked" data-kind={item.kind} data-change={item.state}>
+									{#if item.moved}<span class="change-tag"><span>Moved</span></span>{/if}
+									{#if item.state === 'added'}<span class="change-tag"><span>Added</span></span
+										>{/if}
+									{#if item.state === 'removed'}<span class="change-tag"><span>Removed</span></span
+										>{/if}
 									<p class="tracked-text">
 										{#each item.parts as part, index (index)}{#if part.op === 'insert'}<ins
 													>{part.text}</ins
@@ -985,46 +953,20 @@
 									</p>
 								</div>
 							{/each}
-						{:else}
-							{#each elements as element, index (element.id)}
-								<div
-									class="element"
-									class:scene-heading={element.kind === 'scene-heading'}
-									class:action={element.kind === 'action'}
-									class:character={element.kind === 'character'}
-									class:dialogue={element.kind === 'dialogue'}
-								>
-									<textarea
-										disabled={busy}
-										aria-label={element.kind}
-										rows="1"
-										value={element.text}
-										use:autosize={element.text}
-										oninput={(event) => updateText(element.id, event.currentTarget.value)}
-									></textarea>
-									<div class="element-actions">
-										<button
-											aria-label="Move up"
-											disabled={busy || index === 0}
-											onclick={() => moveElement(index, -1)}>↑</button
-										>
-										<button
-											aria-label="Move down"
-											disabled={busy || index === elements.length - 1}
-											onclick={() => moveElement(index, 1)}>↓</button
-										>
-										<button
-											aria-label="Remove element"
-											disabled={busy}
-											onclick={() => removeElement(element.id)}>Remove</button
-										>
-									</div>
-								</div>
-							{/each}
-							<button class="add-action" disabled={busy || !view} onclick={addAction}
-								>+ Action</button
-							>
 						{/if}
+						<!-- Kept mounted during the commit review, so Cancel returns to the same undo history. -->
+						<div class="editor" hidden={!!commitReview || !view}>
+							<ScreenplayEditor
+								{elements}
+								contentKey={editorKey}
+								{committedKinds}
+								editable={!busy && !commitReview && !!view}
+								onchange={(next) => {
+									elements = next;
+									edited();
+								}}
+							/>
+						</div>
 					</article>
 				</div>
 			</main>
@@ -1290,7 +1232,7 @@
 		background: var(--studio-surface-subtle);
 	}
 	.menu button[aria-checked='true']::before {
-		content: '✓';
+		content: '✓' / '';
 		position: absolute;
 		left: 0.5rem;
 	}
@@ -1462,94 +1404,16 @@
 		padding: 6lh 10ch 6lh 15ch;
 		line-height: 1;
 	}
-	.element {
-		position: relative;
-		width: 60ch;
-		max-width: 100%;
-		margin: 0 0 1lh;
-	}
-	.element.character {
-		width: auto;
-		margin: 0;
-		padding-left: 22ch;
-	}
-	.element.dialogue {
-		width: 35ch;
-		margin-left: 10ch;
-	}
-	textarea {
-		display: block;
-		width: 100%;
-		/* Elements grow with their text (autosize); no grips, nothing clipped (review U1, U4). */
-		resize: none;
-		overflow: hidden;
-		border: 0;
-		border-radius: var(--studio-radius-sm);
-		background: transparent;
-		color: var(--studio-text);
-		font: inherit;
-		line-height: inherit;
-		padding: 0;
-	}
-	.scene-heading textarea {
-		font-weight: 700;
-		text-transform: uppercase;
-	}
-	.character textarea {
-		text-transform: uppercase;
-	}
-	textarea:focus {
-		outline: none;
-	}
-	textarea:focus-visible {
-		outline: 2px solid var(--studio-focus);
-		outline-offset: 0.25rem;
-	}
-	.element-actions {
-		position: absolute;
-		top: -0.25rem;
-		left: calc(100% + 1ch);
-		display: flex;
-		gap: 0.125rem;
-		opacity: 0;
-		transition: opacity 0.12s ease;
-	}
-	.character .element-actions {
-		left: calc(22ch + 12ch);
-	}
-	.element:focus-within .element-actions,
-	.element:hover .element-actions {
-		opacity: 1;
-	}
-	.element-actions button,
-	.add-action {
-		border: 0;
-		background: transparent;
-		color: var(--studio-text-muted);
-		font-family: var(--studio-font-ui);
-		font-size: var(--studio-text-ui);
-		line-height: calc(var(--studio-line-height) * 0.83);
-		cursor: pointer;
-		padding: 0.25rem;
-		white-space: nowrap;
-	}
-	.add-action {
-		margin-top: 1lh;
-		color: var(--studio-accent);
-	}
-
 	/* Commit review: changes shown where they live, marked by more than colour. */
 	.tracked-text {
 		margin: 0;
+		min-height: 1lh;
 		white-space: pre-wrap;
 		overflow-wrap: anywhere;
 	}
-	.scene-heading .tracked-text {
-		font-weight: 700;
-		text-transform: uppercase;
-	}
-	.character .tracked-text {
-		text-transform: uppercase;
+	/* Template whitespace between the tag and the text must not render as a line. */
+	.tracked {
+		white-space: normal;
 	}
 	.tracked ins {
 		text-decoration: underline;
@@ -1562,19 +1426,20 @@
 		text-decoration-thickness: 2px;
 		color: var(--studio-text-muted);
 	}
+	/* Tags sit in the left margin, level with the text column whatever the element's indent. The
+	   outer box keeps the screenplay face, so its offset is in the page's characters. */
 	.change-tag {
 		position: absolute;
-		right: calc(100% + 1ch);
 		top: 0;
-		font-family: var(--studio-font-ui);
-		font-size: var(--studio-text-xs);
-		color: var(--studio-text-muted);
+		right: calc(100% + 1ch + var(--el-indent, 0ch));
 		white-space: nowrap;
 	}
-	.character .change-tag {
-		right: auto;
-		left: -1ch;
-		transform: translateX(-100%);
+	.change-tag span {
+		font-family: var(--studio-font-ui);
+		font-size: var(--studio-text-xs);
+		font-weight: 400;
+		text-transform: none;
+		color: var(--studio-text-muted);
 	}
 	.commit-card {
 		position: absolute;
@@ -1611,7 +1476,7 @@
 	.marginless .change-tag {
 		position: static;
 		display: block;
-		transform: none;
+		line-height: 1.2;
 	}
 
 	/* Below the size class that fits the page: no paper margins, indents compress. */
@@ -1620,27 +1485,8 @@
 	}
 	.marginless .page {
 		min-height: 0;
-		padding: 2lh 1rem 3lh;
-	}
-	.marginless .element,
-	.marginless .element.dialogue {
-		width: auto;
-	}
-	.marginless .element.character {
-		padding-left: 40%;
-	}
-	.marginless .element.dialogue {
-		margin-left: 15%;
-		margin-right: 15%;
-	}
-	.marginless .element-actions {
-		position: static;
-		opacity: 1;
-		justify-content: flex-end;
-		margin-top: 0.25rem;
-	}
-	.marginless .element.character .element-actions {
-		margin-left: -40%;
+		/* The left padding leaves room for the element handle beside the current element. */
+		padding: 2lh 1rem 3lh 2.25rem;
 	}
 
 	/* ── Panels float over the page edge; they never move it ──────── */

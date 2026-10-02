@@ -9,7 +9,8 @@ import {
 	retry,
 	saved,
 	saveState,
-	switchCut
+	switchCut,
+	el
 } from './studio-e2e';
 
 async function historyCount(page: Page): Promise<number> {
@@ -27,8 +28,8 @@ test('autosaves, commits through an inline review, isolates cuts, and restores',
 	page
 }) => {
 	await page.goto('/');
-	const dialogue = page.getByLabel('dialogue');
-	await expect(dialogue).toHaveValue('Leave the channel open.');
+	const dialogue = el(page, 'dialogue');
+	await expect(dialogue).toHaveText('Leave the channel open.');
 	/* Nothing to commit until the text differs. */
 	await expect(page.getByRole('button', { name: 'Commit changes' })).toHaveCount(0);
 
@@ -37,7 +38,7 @@ test('autosaves, commits through an inline review, isolates cuts, and restores',
 	await saved(page);
 	await expect(page.getByRole('button', { name: 'Save' })).toHaveCount(0);
 	await page.reload();
-	await expect(dialogue).toHaveValue('Keep the channel alive.');
+	await expect(dialogue).toHaveText('Keep the channel alive.');
 	await saved(page);
 
 	/* The commit review shows the changes inline, marked by more than colour, before anything is committed. */
@@ -61,19 +62,19 @@ test('autosaves, commits through an inline review, isolates cuts, and restores',
 	).toBe('underline');
 	await expect(dialogue).toHaveCount(0);
 	await commitCard(page).getByRole('button', { name: 'Cancel' }).click();
-	await expect(dialogue).toHaveValue('Keep the channel alive.');
+	await expect(dialogue).toHaveText('Keep the channel alive.');
 	expect(await proposalCount(page)).toBe(proposalsBefore + 1);
 
 	/* Preparing again without edits reuses the same proposal. */
 	await commit(page);
 	expect(await proposalCount(page)).toBe(proposalsBefore + 1);
-	await expect(dialogue).toHaveValue('Keep the channel alive.');
+	await expect(dialogue).toHaveText('Keep the channel alive.');
 	await expect(page.getByRole('button', { name: 'Commit changes' })).toHaveCount(0);
 
 	await switchCut(page, 'Trailer');
-	await expect(page.getByLabel('dialogue')).toHaveCount(0);
+	await expect(el(page, 'dialogue')).toHaveCount(0);
 	await switchCut(page, 'Feature');
-	await expect(page.getByLabel('dialogue')).toHaveValue('Keep the channel alive.');
+	await expect(el(page, 'dialogue')).toHaveText('Keep the channel alive.');
 
 	await page.getByRole('button', { name: 'History' }).click();
 	await expect(historyEntries(page).first()).toContainText('Revised dialogue');
@@ -81,12 +82,12 @@ test('autosaves, commits through an inline review, isolates cuts, and restores',
 	await page.getByRole('button', { name: 'Restore this version' }).click();
 	await expect(saveState(page)).toHaveText('Restored');
 	await expect(historyEntries(page)).toHaveCount(3);
-	await expect(page.getByLabel('dialogue')).toHaveValue('Leave the channel open.');
+	await expect(el(page, 'dialogue')).toHaveText('Leave the channel open.');
 });
 
 test('Retry refreshes committed state without resending the commit', async ({ page }) => {
 	await page.goto('/');
-	const dialogue = page.getByLabel('dialogue');
+	const dialogue = el(page, 'dialogue');
 	await dialogue.fill('Accepted after refresh.');
 	await page.getByRole('button', { name: 'Commit changes' }).click();
 	await expect(commitCard(page)).toBeVisible();
@@ -114,7 +115,7 @@ test('Retry refreshes committed state without resending the commit', async ({ pa
 	});
 	readsUnavailable = false;
 	await retry(page);
-	await expect(dialogue).toHaveValue('Accepted after refresh.');
+	await expect(dialogue).toHaveText('Accepted after refresh.');
 	expect(acceptCount).toBe(1);
 	expect(await historyCount(page)).toBe(historyBefore + 1);
 	await page.getByRole('button', { name: 'History' }).click();
@@ -123,11 +124,11 @@ test('Retry refreshes committed state without resending the commit', async ({ pa
 
 test('Retry refreshes restored editor without resending a committed restore', async ({ page }) => {
 	await page.goto('/');
-	const dialogue = page.getByLabel('dialogue');
+	const dialogue = el(page, 'dialogue');
 	const original = 'Leave the channel open.';
 	await dialogue.fill('A different version for restore.');
 	await commit(page);
-	await expect(dialogue).toHaveValue('A different version for restore.');
+	await expect(dialogue).toHaveText('A different version for restore.');
 	await page.getByRole('button', { name: 'History' }).click();
 	const historyBefore = await historyCount(page);
 	let restoreCount = 0;
@@ -152,16 +153,16 @@ test('Retry refreshes restored editor without resending a committed restore', as
 	await expect(saveState(page)).toContainText('Restored · couldn’t refresh', { timeout: 15000 });
 	readsUnavailable = false;
 	await retry(page);
-	await expect(dialogue).toHaveValue(original);
+	await expect(dialogue).toHaveText(original);
 	expect(restoreCount).toBe(1);
 	expect(await historyCount(page)).toBe(historyBefore + 1);
 });
 
 test('keeps unsaved editor text through exhausted retries and saves on Retry', async ({ page }) => {
 	await page.goto('/');
-	const dialogue = page.getByLabel('dialogue');
+	const dialogue = el(page, 'dialogue');
 	await expect(dialogue).toBeVisible();
-	const text = `${await dialogue.inputValue()} Still here.`;
+	const text = `${await dialogue.textContent()} Still here.`;
 	let unavailable = true;
 	await page.route('**/api/authoring', async (route) => {
 		if (unavailable)
@@ -175,10 +176,10 @@ test('keeps unsaved editor text through exhausted retries and saves on Retry', a
 	/* Typing autosaves; every attempt fails until the store is back. */
 	await dialogue.fill(text);
 	await expect(saveState(page)).toContainText('Not saved', { timeout: 15_000 });
-	await expect(dialogue).toHaveValue(text);
+	await expect(dialogue).toHaveText(text);
 	unavailable = false;
 	await retry(page);
 	await expect(saveState(page)).toHaveText('Saved');
-	await expect(dialogue).toHaveValue(text);
+	await expect(dialogue).toHaveText(text);
 	await expect(saveState(page).getByRole('button', { name: 'Retry' })).toHaveCount(0);
 });

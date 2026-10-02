@@ -1,0 +1,91 @@
+/*
+	Screenplay page geometry, shared by the editor and the commit review (STUDIO_DESIGN_SYSTEM.md
+	§ Screenplay geometry in characters). Lengths are in ch and lh of Courier Prime at 1rem.
+*/
+.page .el {
+	position: relative;
+	width: 60ch;
+	max-width: 100%;
+	min-height: 1lh;
+	margin: 0 0 1lh;
+	white-space: pre-wrap;
+	overflow-wrap: anywhere;
+}
+.page .el[data-kind='scene-heading'] {
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.page .el[data-kind='character'] {
+	width: auto;
+	--el-indent: 22ch;
+	margin-left: var(--el-indent);
+	margin-bottom: 0;
+	text-transform: uppercase;
+}
+.page .el[data-kind='parenthetical'] {
+	width: 20ch;
+	--el-indent: 16ch;
+	margin-left: var(--el-indent);
+	margin-bottom: 0;
+}
+.page .el[data-kind='dialogue'] {
+	width: 35ch;
+	--el-indent: 10ch;
+	margin-left: var(--el-indent);
+}
+/* Speech continues without a blank line into a following parenthetical. */
+.page .el[data-kind='dialogue']:has(+ .el[data-kind='parenthetical']) {
+	margin-bottom: 0;
+}
+.page .el[data-kind='transition'] {
+	text-align: right;
+	text-transform: uppercase;
+}
+
+/* Below the size class that fits the page: no paper margins, indents compress. */
+.marginless .page .el {
+	width: auto;
+}
+.marginless .page .el[data-kind='character'] {
+	margin-left: 40%;
+}
+.marginless .page .el[data-kind='parenthetical'] {
+	width: auto;
+	margin-left: 25%;
+	margin-right: 15%;
+}
+.marginless .page .el[data-kind='dialogue'] {
+	width: auto;
+	margin-left: 15%;
+	margin-right: 15%;
+}
+
+/* Editor surface. */
+/* The element holding the caret is marked instead of the whole editor (see below). */
+.screenplay-editor.ProseMirror,
+.screenplay-editor.ProseMirror:focus-visible {
+	outline: none;
+}
+.screenplay-editor {
+	white-space: pre-wrap;
+	caret-color: var(--studio-text);
+}
+.screenplay-editor .el[data-placeholder]::before {
+	content: attr(data-placeholder);
+	position: absolute;
+	pointer-events: none;
+	color: var(--studio-text-muted);
+	font-family: var(--studio-font-ui);
+	font-size: var(--studio-text-sm);
+	text-transform: none;
+	font-weight: 400;
+}
+.screenplay-editor .el[data-kind='transition'][data-placeholder]::before {
+	right: 0;
+}
+/* The element holding the caret is marked, not only the caret itself. */
+.screenplay-editor.ProseMirror-focused .el-current {
+	outline: 2px solid var(--studio-focus);
+	outline-offset: 0.35ch;
+	border-radius: var(--studio-radius-sm);
+}

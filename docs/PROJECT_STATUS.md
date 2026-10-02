@@ -1,5 +1,15 @@
 # Estado del proyecto
 
+## 2026-10-02 — Studio continuous screenplay editor (Phase 4) (English source)
+
+- Write is now one continuous editable document (ProseMirror, used directly, owner decision) instead of one text field per element. Elements are typed blocks set in the screenplay geometry: scene heading, action, character, parenthetical, dialogue and transition. No form fields, grips or per-element scrolling; text wraps and the page grows.
+- Keyboard: Enter ends an element and starts the conventional next one (scene heading → action, character → dialogue, parenthetical → dialogue, dialogue → action, transition → scene heading); in the middle it splits, at the very start it opens a line above. Tab / Shift+Tab on an empty element cycle action → character → transition → scene heading, and swap dialogue ⇄ parenthetical; on text, Tab leaves the editor. Ctrl/⌘+Alt+1…6 set any type, Alt+↑/↓ move the element. Selection, paste, undo and redo cross elements; type changes, moves and removals are their own undo steps.
+- Element actions live in a handle beside the current element (also Shift+F10 or the context-menu key): move up/down, type, remove, with shortcuts announced through `aria-keyshortcuts`. The element holding the caret is outlined; empty elements show their type as a placeholder.
+- Identities: each element keeps its ID through edits, moves and undo; splits, pasted lines and duplicates get new IDs. Kind stays fixed per committed identity, so a committed element whose type changes is saved as `<id>~<kind>` (a removal and an addition in the commit review) and returns to its own ID when changed back.
+- Autosave and commit are unchanged and driven by the editor; the editor stays mounted under the commit review, so Cancel returns to the same undo history. The commit review uses the same page geometry, with change labels in the left margin.
+- Tests: editor unit tests (conversion, Enter/Tab conventions, identities, move, remove, undo, paste) and a new `editor` browser project; every earlier browser test now drives the editor, and the PostgreSQL N1 regression passes unchanged.
+- Not yet: local persistence of unsaved text; automatic parentheses or capitalisation of what is typed (cues and transitions are shown in capitals, stored as typed).
+
 ## 2026-10-02 — Screenplay element kinds: parenthetical and transition (English source)
 
 - The shared screenplay contract gains `parenthetical` and `transition`, required by the Write editor model (Tab cycle and screenplay geometry). PostgreSQL migration `002_screenplay_element_kinds.sql` widens the element-kind check; it is append-only and applied by `migrate:studio` like `001`.
@@ -11,7 +21,7 @@
 - Write autosaves the Draft after a short pause in typing, when focus leaves the page, and before switching cut or restoring. There is no Save button. Saves run one at a time; edits made during a save are saved by a follow-up. The save state reads Saving…, Saved, Reconnecting…, Not saved — Retry or Couldn't confirm save — Retry. Automatic saves pause while Studio is unreachable; Retry saves the latest text.
 - One **Commit changes** action appears only when the text differs from what is committed. It saves, prepares the change from the saved Draft and shows it inline in the page as track changes (inserted text underlined, removed text struck, added/removed/moved elements labelled), with a small Commit / Cancel card over the margin. Commit accepts exactly what was shown; "Committed" shows briefly and History holds the detail. Preparing again without edits reuses the same prepared change.
 - Decision recorded in the [ADR-0004 addendum](ADR-0004-AUTHORING-STORY-STATE-AND-PROVISIONAL-WORK.md#addendum--saving-and-committing-in-write-oct-1-2026): commit stays two commands (create, then accept), no core or persistence change. A commit that conflicts after preparation stays pending and opens for review; this is tested with two tabs. The PostgreSQL N1 browser regression now delays the accept inside the commit flow and still reports success exactly once.
-- Not yet: local persistence of unsaved text (so "Offline — kept on this device" is never shown) and the continuous editor (Phase 4).
+- Not yet: local persistence of unsaved text (so "Offline — kept on this device" is never shown) and the continuous editor (Phase 4, since done).
 
 ## 2026-10-01 — Studio readability preferences (English source)
 

@@ -7,7 +7,9 @@ import {
 	proposalCount,
 	retry,
 	saveState,
-	switchCut
+	switchCut,
+	editor,
+	el
 } from './studio-e2e';
 
 /*
@@ -24,45 +26,56 @@ const initialDialogue = 'Leave the channel open.';
 
 async function open(page: Page) {
 	await page.goto('/');
-	await expect(page.getByLabel('dialogue')).toBeVisible();
+	await expect(el(page, 'dialogue')).toBeVisible();
 	await expect(page.getByRole('button', { name: /^Cut: / })).toBeEnabled();
 	await page.evaluate(() => document.fonts.ready);
 }
 
-async function clippedTextareas(page: Page) {
-	return page.locator('textarea').evaluateAll((nodes) =>
-		nodes
-			.map((node) => node as HTMLTextAreaElement)
-			.filter((node) => node.scrollHeight > node.clientHeight + 1)
-			.map((node) => node.value)
-	);
+/* Elements whose text overflows their box, or that scroll inside themselves. */
+async function clippedElements(page: Page) {
+	return editor(page)
+		.locator('.el')
+		.evaluateAll((nodes) =>
+			nodes
+				.filter(
+					(node) =>
+						node.scrollHeight > node.clientHeight + 1 ||
+						!['visible', ''].includes(getComputedStyle(node).overflowY)
+				)
+				.map((node) => node.textContent)
+		);
 }
 
 for (const viewport of [
 	{ width: 1280, height: 900 },
 	{ width: 390, height: 844 }
 ])
-	test(`U1/U4: every element shows all of its text, without resize grips, at ${viewport.width}px`, async ({
+	test(`U1/U4: one continuous document where every element shows all of its text, at ${viewport.width}px`, async ({
 		page
 	}) => {
 		await page.setViewportSize(viewport);
 		await open(page);
-		expect(await clippedTextareas(page)).toEqual([]);
-		await page.getByLabel('dialogue').fill(longDialogue);
-		expect(await clippedTextareas(page)).toEqual([]);
-		const resize = await page
-			.locator('textarea')
-			.evaluateAll((nodes) => [...new Set(nodes.map((node) => getComputedStyle(node).resize))]);
-		expect(resize).toEqual(['none']);
+		/* No form fields: one editable document, with no grips or per-element scroll bars. */
+		await expect(page.locator('textarea, input')).toHaveCount(0);
+		await expect(page.locator('[contenteditable="true"]')).toHaveCount(1);
+		expect(await clippedElements(page)).toEqual([]);
+		await el(page, 'dialogue').fill(longDialogue);
+		await expect(el(page, 'dialogue')).toHaveText(longDialogue);
+		expect(await clippedElements(page)).toEqual([]);
+		/* The long line wraps onto several lines instead of being hidden. */
+		const lines = await el(page, 'dialogue').evaluate(
+			(node) => node.getBoundingClientRect().height / parseFloat(getComputedStyle(node).fontSize)
+		);
+		expect(lines).toBeGreaterThan(2);
 	});
 
 test('U2: switching cut saves unsaved edits instead of discarding them', async ({ page }) => {
 	await open(page);
-	await page.getByLabel('dialogue').fill('Edited before switching cut.');
+	await el(page, 'dialogue').fill('Edited before switching cut.');
 	await switchCut(page, 'Trailer');
-	await expect(page.getByLabel('dialogue')).toHaveCount(0);
+	await expect(el(page, 'dialogue')).toHaveCount(0);
 	await switchCut(page, 'Feature');
-	await expect(page.getByLabel('dialogue')).toHaveValue('Edited before switching cut.');
+	await expect(el(page, 'dialogue')).toHaveText('Edited before switching cut.');
 	await expect(saveState(page)).not.toContainText('Saving');
 });
 
@@ -81,25 +94,25 @@ test('U2: if the edits cannot be saved, Studio stays on the current cut with the
 			});
 		return route.continue();
 	});
-	await page.getByLabel('dialogue').fill('Must not be lost.');
+	await el(page, 'dialogue').fill('Must not be lost.');
 	await page.getByRole('button', { name: /^Cut: / }).click();
 	await page.getByRole('menuitemradio', { name: 'Trailer' }).click();
 	await expect(saveState(page).getByRole('button', { name: 'Retry' })).toBeVisible({
 		timeout: 15_000
 	});
-	await expect(page.getByLabel('dialogue')).toHaveValue('Must not be lost.');
+	await expect(el(page, 'dialogue')).toHaveText('Must not be lost.');
 	await expect(page.getByRole('button', { name: 'Cut: Feature' })).toBeVisible();
 
 	await page.unroute('**/api/authoring');
 	await retry(page);
 	await expect(page.getByRole('button', { name: 'Cut: Trailer' })).toBeVisible();
 	await switchCut(page, 'Feature');
-	await expect(page.getByLabel('dialogue')).toHaveValue('Must not be lost.');
+	await expect(el(page, 'dialogue')).toHaveText('Must not be lost.');
 });
 
 test('U2: leaving the page with unsaved edits asks first', async ({ page }) => {
 	await open(page);
-	await page.getByLabel('dialogue').fill('Unsaved when closing.');
+	await el(page, 'dialogue').fill('Unsaved when closing.');
 	const dialog = page.waitForEvent('dialog');
 	await page.close({ runBeforeUnload: true });
 	const prompt = await dialog;
@@ -131,7 +144,7 @@ test('U5: restore shows the text first, asks, and is not offered for the current
 }) => {
 	await open(page);
 	const accepted = `Accepted line ${Date.now()}.`;
-	await page.getByLabel('dialogue').fill(accepted);
+	await el(page, 'dialogue').fill(accepted);
 	await commit(page);
 
 	await page.getByRole('button', { name: 'History' }).click();
@@ -144,15 +157,15 @@ test('U5: restore shows the text first, asks, and is not offered for the current
 	await initial.getByRole('button', { name: 'Restore…' }).click();
 	const preview = page.getByLabel('Restore preview');
 	await expect(preview.getByText(initialDialogue)).toBeVisible();
-	await expect(page.getByLabel('dialogue')).toHaveValue(accepted);
+	await expect(el(page, 'dialogue')).toHaveText(accepted);
 	await preview.getByRole('button', { name: 'Cancel' }).click();
 	await expect(preview).toHaveCount(0);
-	await expect(page.getByLabel('dialogue')).toHaveValue(accepted);
+	await expect(el(page, 'dialogue')).toHaveText(accepted);
 
 	await initial.getByRole('button', { name: 'Restore…' }).click();
 	await page.getByRole('button', { name: 'Restore this version' }).click();
 	await expect(saveState(page)).toHaveText('Restored');
-	await expect(page.getByLabel('dialogue')).toHaveValue(initialDialogue);
+	await expect(el(page, 'dialogue')).toHaveText(initialDialogue);
 	await expect(initial.getByText('Current text')).toBeVisible();
 	await expect(initial.getByRole('button')).toHaveCount(0);
 });
@@ -161,9 +174,9 @@ test('U6: the commit action appears only when there is something to commit, and 
 	page
 }) => {
 	await open(page);
-	const dialogue = page.getByLabel('dialogue');
+	const dialogue = el(page, 'dialogue');
 	const action = page.getByRole('button', { name: 'Commit changes' });
-	const committed = await dialogue.inputValue();
+	const committed = (await dialogue.textContent()) ?? '';
 	await dialogue.fill(`${committed} Pending.`);
 	await expect(action).toBeVisible();
 	await expect(action).toHaveClass(/primary/);
@@ -214,19 +227,26 @@ for (const viewport of [
 				.map(({ name, box }) => `${name} ${box.width}×${box.height}`)
 		);
 		expect(smallTargets).toEqual([]);
-		const dialogue = page.getByLabel('dialogue');
-		await dialogue.focus();
+		await page.getByRole('button', { name: 'History' }).click();
+		/* The element holding the caret is marked, not only the caret. */
+		const dialogue = el(page, 'dialogue');
+		await dialogue.click();
+		await expect(dialogue).toHaveClass(/el-current/);
 		const outline = await dialogue.evaluate((node) => {
 			const style = getComputedStyle(node);
 			return { style: style.outlineStyle, width: parseFloat(style.outlineWidth) };
 		});
 		expect(outline.style).toBe('solid');
 		expect(outline.width).toBeGreaterThanOrEqual(2);
+		/* The element handle shown beside it meets the target floor too. */
+		const handle = await page.getByRole('button', { name: 'Dialogue actions' }).boundingBox();
+		expect(handle!.width).toBeGreaterThanOrEqual(24);
+		expect(handle!.height).toBeGreaterThanOrEqual(24);
 	});
 
 test('U8: connectivity states do not move the document', async ({ page }) => {
 	await open(page);
-	const dialogue = page.getByLabel('dialogue');
+	const dialogue = el(page, 'dialogue');
 	const before = await dialogue.boundingBox();
 	await page.route('**/api/authoring', (route) =>
 		route.fulfill({
