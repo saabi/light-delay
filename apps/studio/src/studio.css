@@ -1,13 +1,90 @@
-:root {
-	font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-	color: #202124; background: #f7f7f5; font-synthesis: none;
-	--studio-bg: #f7f7f5; --studio-surface: #fff; --studio-surface-subtle: #f1f1ee;
-	--studio-text: #202124; --studio-text-muted: #74746f; --studio-hairline: #deded9;
-	--studio-accent: #315f73; --studio-focus: #315f73; --studio-danger: #a13f3f;
-	--studio-warning: #8a651b; --studio-success: #3d7254; --studio-radius-sm: 3px;
-	--studio-radius-md: 6px; --studio-reading-width: 760px; --studio-panel-width: 288px;
+/*
+	Metric-matched fallbacks, so text keeps its size and line breaks while the bundled faces load.
+	Values are computed from the bundled faces against Arial / Courier New (and their
+	metric-compatible Liberation equivalents): size-adjust matches the average advance width,
+	the overrides then match ascent and descent.
+*/
+@font-face {
+	font-family: 'Inter Fallback';
+	src: local('Arial'), local('Liberation Sans'), local('Helvetica');
+	size-adjust: 107.19%;
+	ascent-override: 90.38%;
+	descent-override: 22.5%;
+	line-gap-override: 0%;
 }
-* { box-sizing: border-box; }
-html, body { margin: 0; min-height: 100%; background: var(--studio-bg); color: var(--studio-text); }
-button { font: inherit; }
-button:focus-visible, [contenteditable]:focus-visible { outline: 2px solid var(--studio-focus); outline-offset: 2px; }
+@font-face {
+	font-family: 'Courier Prime Fallback';
+	src: local('Courier New'), local('Liberation Mono'), local('Courier');
+	size-adjust: 99.92%;
+	ascent-override: 78.18%;
+	descent-override: 34.21%;
+	line-gap-override: 0%;
+}
+
+:root {
+	--studio-font-ui: 'Inter Variable', 'Inter Fallback', ui-sans-serif, system-ui, sans-serif;
+	--studio-font-screenplay: 'Courier Prime', 'Courier Prime Fallback', 'Courier New', monospace;
+	--studio-font-scale: 1;
+	--studio-line-height: 1.45;
+
+	--studio-text-xs: 0.75rem;
+	--studio-text-sm: 0.8125rem;
+	--studio-text-ui: 0.875rem;
+	--studio-text-md: 1rem;
+	--studio-text-lg: 1.125rem;
+	--studio-target-min: 1.5rem;
+
+	--studio-bg: #f7f7f5;
+	--studio-surface: #fff;
+	--studio-surface-subtle: #f1f1ee;
+	--studio-notice: #fff2dc;
+	--studio-text: #202124;
+	--studio-text-muted: #666661;
+	--studio-hairline: #deded9;
+	--studio-accent: #315f73;
+	--studio-on-accent: #fff;
+	--studio-focus: #315f73;
+	--studio-danger: #a13f3f;
+	--studio-warning: #8a651b;
+	--studio-success: #3d7254;
+	--studio-radius-sm: 3px;
+	--studio-radius-md: 6px;
+	--studio-reading-width: 760px;
+	--studio-panel-width: 288px;
+
+	font-family: var(--studio-font-ui);
+	line-height: var(--studio-line-height);
+	color: var(--studio-text);
+	background: var(--studio-bg);
+	font-synthesis: none;
+}
+html {
+	font-size: calc(100% * var(--studio-font-scale));
+}
+* {
+	box-sizing: border-box;
+}
+html,
+body {
+	margin: 0;
+	min-height: 100%;
+	background: var(--studio-bg);
+	color: var(--studio-text);
+}
+button {
+	font: inherit;
+	min-width: var(--studio-target-min);
+	min-height: var(--studio-target-min);
+}
+button:focus-visible,
+textarea:focus-visible,
+[contenteditable]:focus-visible {
+	outline: 2px solid var(--studio-focus);
+	outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+	* {
+		transition: none !important;
+		animation: none !important;
+	}
+}

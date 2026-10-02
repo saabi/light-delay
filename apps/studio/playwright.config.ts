@@ -8,5 +8,20 @@ export default defineConfig({
 		timeout: 360000,
 		reuseExistingServer: !process.env.CI
 	},
-	testMatch: '**/*.e2e.ts'
+	testMatch: '**/*.e2e.ts',
+	/* One shared in-memory store: run serially, authoring flow first (it expects the initial text). */
+	workers: 1,
+	projects: [
+		{ name: 'authoring', testMatch: '**/authoring.e2e.ts' },
+		{
+			name: 'write-correctness',
+			testMatch: '**/write-correctness.e2e.ts',
+			dependencies: ['authoring']
+		}
+	],
+	use: {
+		launchOptions: process.env.STUDIO_TEST_BROWSER
+			? { executablePath: process.env.STUDIO_TEST_BROWSER }
+			: {}
+	}
 });

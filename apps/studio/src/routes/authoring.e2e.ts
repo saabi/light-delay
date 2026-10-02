@@ -62,8 +62,9 @@ test('saves, proposes, rejects, accepts, isolates cuts, and restores screenplay 
 	await page
 		.getByRole('listitem')
 		.filter({ hasText: 'Initial screenplay' })
-		.getByRole('button')
+		.getByRole('button', { name: 'Restore…' })
 		.click();
+	await page.getByRole('button', { name: 'Restore this version' }).click();
 	await expect(page.getByText(/Restored as new project revision 2/)).toBeVisible();
 	await expect(page.getByLabel('dialogue')).toHaveValue('Leave the channel open.');
 });
@@ -138,8 +139,9 @@ test('Retry now refreshes restored editor without resending a committed restore'
 	await page
 		.getByRole('listitem')
 		.filter({ hasText: 'Initial screenplay' })
-		.getByRole('button')
+		.getByRole('button', { name: 'Restore…' })
 		.click();
+	await page.getByRole('button', { name: 'Restore this version' }).click();
 	await expect(page.getByText(/Restored as new project revision.*refresh pending/i)).toBeVisible({
 		timeout: 15000
 	});
@@ -170,7 +172,7 @@ test('keeps unsaved editor text through exhausted retries and saves on Retry now
 	});
 	await page.getByRole('button', { name: 'Save Draft' }).click();
 	await expect(
-		page.getByText('Database unavailable. Your unsaved work is kept in this browser.')
+		page.getByText('Database unavailable. Unsaved changes are held in this tab until they save.')
 	).toBeVisible({ timeout: 15_000 });
 	await expect(dialogue).toHaveValue(text);
 	unavailable = false;

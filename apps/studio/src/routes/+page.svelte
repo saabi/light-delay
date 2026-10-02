@@ -17,6 +17,8 @@
 	} from '$lib/authoring-client';
 	import { AuthoringRequestError, type ConnectionState } from '$lib/authoring-retry';
 	import { describeOperation, draftSavedMessage } from '$lib/authoring-presenter';
+	import { autosize } from '$lib/autosize';
+	import { sameScreenplayText } from '$lib/screenplay-text';
 
 	let view = $state<ScreenplayView>();
 	let elements = $state<ScreenplayElement[]>([]);
@@ -36,7 +38,12 @@
 	let retryAction = $state<(() => Promise<void>) | undefined>();
 	let activeAction: (() => Promise<void>) | undefined;
 	let proposalAttemptId: string | undefined;
+	/* Screenplay text at each history revision, per cut. Revisions are immutable, so entries never go stale. */
+	let revisionTexts = $state<Record<string, readonly ScreenplayElement[] | null>>({});
+	let revisionTextsFailed = $state(false);
+	let restoreTarget = $state<number | undefined>();
 
+	const revisionKey = (versionId: string, revision: number) => `${versionId}@${revision}`;
 	const scope = $derived<DocumentVersionScope>({
 		documentId: authoringFixtureIds.primaryDocument,
 		versionId: selectedVersionId
@@ -49,8 +56,82 @@
 			if (state.kind === 'unavailable' && activeAction) retryAction = activeAction;
 		});
 		void openVersion(selectedVersionId);
-		return unsubscribe;
+		/* Never lose typed text: warn before leaving while edits are not saved (review U2). */
+		const guardUnsaved = (event: BeforeUnloadEvent) => {
+			if (!dirty) return;
+			event.preventDefault();
+			event.returnValue = '';
+		};
+		window.addEventListener('beforeunload', guardUnsaved);
+		return () => {
+			unsubscribe();
+			window.removeEventListener('beforeunload', guardUnsaved);
+		};
 	});
+
+	/* Switching cut saves unsaved edits first; if they cannot be saved, stay on this cut (review U2). */
+	async function switchVersion(versionId: string) {
+		if (versionId === selectedVersionId) return;
+		if (dirty) {
+			await saveDraft();
+			if (dirty) return;
+		}
+		restoreTarget = undefined;
+		await openVersion(versionId);
+	}
+
+	async function loadRevisionTexts() {
+		if (!historyOpen) return;
+		const versionId = selectedVersionId;
+		const versionScope = { documentId: authoringFixtureIds.primaryDocument, versionId };
+		const revisions = [0, ...history.map((changeSet) => changeSet.resultingRevision)];
+		const missing = revisions.filter(
+			(revision) => !(revisionKey(versionId, revision) in revisionTexts)
+		);
+		if (missing.length === 0) return;
+		try {
+			const loaded = await Promise.all(
+				missing.map(
+					async (revision) =>
+						[
+							revision,
+							(
+								await authoringApplication.getScreenplayView(
+									authoringFixtureIds.project,
+									versionScope,
+									revision
+								)
+							)?.elements ?? null
+						] as const
+				)
+			);
+			const next = { ...revisionTexts };
+			for (const [revision, texts] of loaded) next[revisionKey(versionId, revision)] = texts;
+			revisionTexts = next;
+			revisionTextsFailed = false;
+		} catch {
+			revisionTextsFailed = true;
+		}
+	}
+
+	function revisionText(revision: number) {
+		return revisionTexts[revisionKey(selectedVersionId, revision)];
+	}
+
+	/* Restore is offered only when it would change the current text (review U5). */
+	function isCurrentText(revision: number) {
+		const texts = revisionText(revision);
+		return !!texts && !!view && sameScreenplayText(texts, view.elements);
+	}
+
+	function toggleHistory() {
+		historyOpen = !historyOpen;
+		restoreTarget = undefined;
+		if (historyOpen) {
+			reviewOpen = false;
+			void loadRevisionTexts();
+		}
+	}
 
 	async function perform(action: () => Promise<void>) {
 		activeAction = action;
@@ -135,6 +216,7 @@
 						? draftSavedMessage()
 						: 'Authoritative screenplay';
 			history = nextHistory;
+			void loadRevisionTexts();
 		} catch (error) {
 			status = error instanceof Error ? error.message : 'Could not load screenplay';
 			if (error instanceof AuthoringRequestError && error.transient)
@@ -298,6 +380,7 @@
 				dirty = false;
 				status = message;
 				retryAction = undefined;
+				void loadRevisionTexts();
 			} catch {
 				status = `${message} · Authoritative refresh pending`;
 				retryAction = refresh;
@@ -343,6 +426,7 @@
 			studioAuthoringContext
 		);
 		if (result.ok && result.kind === 'screenplay-restored') {
+			restoreTarget = undefined;
 			proposal = undefined;
 			reviewOpen = false;
 			await refreshCommitted(
@@ -363,14 +447,23 @@
 		</div>
 		<nav aria-label="Workspace"><button class="active">Write</button></nav>
 		<div class="actions">
-			<button class:active={historyOpen} onclick={() => (historyOpen = !historyOpen)}
-				>History</button
-			>
-			<button
-				class="primary"
-				disabled={busy || (!draft && !dirty)}
-				onclick={() => perform(proposeChanges)}>Review changes</button
-			>
+			<button class:active={historyOpen} onclick={toggleHistory}>History</button>
+			{#if pendingProposal && !dirty}
+				<!-- A proposal is already waiting: reopen it instead of creating another (review U6). -->
+				<button
+					class:active={reviewOpen}
+					onclick={() => {
+						reviewOpen = true;
+						historyOpen = false;
+					}}>Open review</button
+				>
+			{:else}
+				<button
+					class="primary"
+					disabled={busy || (!draft && !dirty)}
+					onclick={() => perform(proposeChanges)}>Review changes</button
+				>
+			{/if}
 		</div>
 	</header>
 
@@ -378,11 +471,15 @@
 		<div class="version-switcher" aria-label="Story version">
 			<button
 				class:active={selectedVersionId === authoringFixtureIds.featureVersion}
-				onclick={() => openVersion(authoringFixtureIds.featureVersion)}>Feature</button
+				disabled={busy}
+				onclick={() => perform(() => switchVersion(authoringFixtureIds.featureVersion))}
+				>Feature</button
 			>
 			<button
 				class:active={selectedVersionId === authoringFixtureIds.trailerVersion}
-				onclick={() => openVersion(authoringFixtureIds.trailerVersion)}>Trailer</button
+				disabled={busy}
+				onclick={() => perform(() => switchVersion(authoringFixtureIds.trailerVersion))}
+				>Trailer</button
 			>
 		</div>
 		<p class:accepted={status.startsWith('Accepted') || status.startsWith('Restored')}>{status}</p>
@@ -390,14 +487,15 @@
 		<button disabled={busy || !dirty} onclick={() => perform(saveDraft)}>Save Draft</button>
 	</div>
 	{#if connection.kind !== 'ready'}
+		<!-- An overlay, so the notice never moves the document while typing (review U8). -->
 		<div class="connection-warning" role="status">
 			{connection.kind === 'retrying'
 				? `Reconnecting… (attempt ${connection.attempt} of 3)`
 				: connection.reason === 'busy'
-					? 'Studio is busy. Your work is kept in this browser.'
+					? 'Studio is busy. Unsaved changes are held in this tab until they save.'
 					: connection.reason === 'unknown'
-						? 'Could not confirm the last save. Your work is kept in this browser.'
-						: 'Database unavailable. Your unsaved work is kept in this browser.'}
+						? 'Couldn’t confirm the last save. Unsaved changes are held in this tab until they save.'
+						: 'Database unavailable. Unsaved changes are held in this tab until they save.'}
 			{#if connection.kind === 'unavailable'}
 				<button onclick={retryNow} disabled={busy}>Retry now</button>
 			{/if}
@@ -421,8 +519,9 @@
 							disabled={busy}
 							aria-label={element.kind}
 							class:sceneHeading={element.kind === 'scene-heading'}
-							rows={element.kind === 'action' ? 2 : 1}
+							rows="1"
 							value={element.text}
+							use:autosize={element.text}
 							oninput={(event) => updateText(element.id, event.currentTarget.value)}></textarea>
 						<div class="element-actions">
 							<button
@@ -506,66 +605,118 @@
 				<div class="aside-head">
 					<strong>History</strong><button onclick={() => (historyOpen = false)}>Close</button>
 				</div>
-				<p class="hint">
-					Restore affects only this screenplay and cut. It appends a new project revision.
-				</p>
-				<ul class="history-list">
-					<li>
-						<span>Initial screenplay</span><button onclick={() => perform(() => restoreRevision(0))}
-							>Restore</button
-						>
-					</li>
-					{#each history as changeSet}
-						<li>
-							<div>
-								<strong>Revision {changeSet.resultingRevision}</strong><small
-									>{changeSet.intent}</small
+				{#if restoreTarget !== undefined}
+					{@const target = restoreTarget}
+					<!-- Restore shows the text it will bring back and asks first (review U5). -->
+					<section class="restore-preview" aria-label="Restore preview">
+						<p class="eyebrow">Restore preview</p>
+						<h2>{target === 0 ? 'Initial screenplay' : `Revision ${target}`}</h2>
+						<ol class="preview-text">
+							{#each revisionText(target) ?? [] as element (element.id)}
+								<li
+									class:sceneHeading={element.kind === 'scene-heading'}
+									class:character={element.kind === 'character'}
+									class:dialogue={element.kind === 'dialogue'}
 								>
-							</div>
-							<button onclick={() => perform(() => restoreRevision(changeSet.resultingRevision))}
-								>Restore</button
+									{element.text}
+								</li>
+							{/each}
+						</ol>
+						<p class="hint">
+							Restoring replaces the current {view?.versionLabel ?? ''} text with this version. It is
+							added to history; nothing is deleted.
+						</p>
+						{#if dirty || draft}
+							<p class="caution">Your edits that have not been accepted will be replaced.</p>
+						{/if}
+						<div class="proposal-actions">
+							<button onclick={() => (restoreTarget = undefined)}>Cancel</button>
+							<button class="primary" onclick={() => perform(() => restoreRevision(target))}
+								>Restore this version</button
 							>
+						</div>
+					</section>
+				{:else}
+					<p class="hint">
+						Restore affects only this screenplay and cut. It appends a new project revision.
+					</p>
+					{#if revisionTextsFailed}
+						<p class="hint">
+							Couldn’t load earlier versions.
+							<button class="link" onclick={loadRevisionTexts}>Retry</button>
+						</p>
+					{/if}
+					<ul class="history-list">
+						{#snippet restoreControl(revision: number)}
+							{#if isCurrentText(revision)}
+								<span class="current-tag">Current text</span>
+							{:else if revisionText(revision)}
+								<button onclick={() => (restoreTarget = revision)}>Restore…</button>
+							{/if}
+						{/snippet}
+						<li>
+							<span>Initial screenplay</span>{@render restoreControl(0)}
 						</li>
-					{/each}
-				</ul>
+						{#each history as changeSet (changeSet.id)}
+							<li>
+								<div>
+									<strong>Revision {changeSet.resultingRevision}</strong><small
+										>{changeSet.intent}</small
+									>
+								</div>
+								{@render restoreControl(changeSet.resultingRevision)}
+							</li>
+						{/each}
+					</ul>
+				{/if}
 			</aside>
 		{/if}
 	</main>
 </div>
 
 <style>
+	/* Sizes follow the type and target tokens in studio.css (review U7). */
 	.connection-warning {
-		padding: 9px 18px;
-		background: #fff2dc;
-		color: #4c391b;
-		font-size: 12px;
+		position: fixed;
+		z-index: 10;
+		left: 50%;
+		bottom: 1.25rem;
+		transform: translateX(-50%);
+		max-width: min(36rem, calc(100vw - 2rem));
+		padding: 0.5rem 0.75rem 0.5rem 1rem;
+		border-radius: var(--studio-radius-md);
+		background: var(--studio-notice);
+		color: var(--studio-text);
+		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+		font-size: var(--studio-text-sm);
 		display: flex;
 		align-items: center;
-		gap: 12px;
+		gap: 0.75rem;
 	}
 	.connection-warning button {
 		border: 1px solid currentColor;
-		border-radius: 4px;
+		border-radius: var(--studio-radius-sm);
 		background: transparent;
-		padding: 4px 8px;
+		padding: 0.25rem 0.5rem;
 		cursor: pointer;
+		white-space: nowrap;
 	}
 	.shell {
 		min-height: 100vh;
 	}
 	header {
-		height: 48px;
+		height: 3rem;
 		display: grid;
-		grid-template-columns: minmax(240px, 1fr) auto minmax(240px, 1fr);
+		grid-template-columns: minmax(15rem, 1fr) auto minmax(15rem, 1fr);
 		align-items: center;
-		padding: 0 18px;
+		padding: 0 1.125rem;
 		border-bottom: 1px solid var(--studio-hairline);
 		background: rgba(247, 247, 245, 0.96);
-		font-size: 12px;
+		font-size: var(--studio-text-ui);
 	}
 	.project {
 		display: flex;
-		gap: 10px;
+		gap: 0.625rem;
 		align-items: baseline;
 	}
 	.project span,
@@ -582,10 +733,11 @@
 		border: 0;
 		background: transparent;
 		color: var(--studio-text-muted);
-		padding: 0 10px;
+		padding: 0 0.625rem;
 		cursor: pointer;
 	}
-	nav button.active {
+	nav button.active,
+	.actions button.active {
 		color: var(--studio-text);
 		box-shadow: inset 0 -1px var(--studio-text);
 	}
@@ -593,29 +745,33 @@
 		justify-self: end;
 		display: flex;
 		align-items: center;
-		gap: 4px;
+		gap: 0.25rem;
 		height: 100%;
 	}
 	button.primary {
-		color: white;
+		color: var(--studio-on-accent);
 		background: var(--studio-accent);
 		border-radius: var(--studio-radius-sm);
-		height: 30px;
-		padding: 0 12px;
+		height: 2rem;
+		padding: 0 0.75rem;
+	}
+	.actions button.primary {
+		height: 2rem;
+		color: var(--studio-on-accent);
 	}
 	button:disabled {
 		opacity: 0.42;
 		cursor: default;
 	}
 	.subbar {
-		min-height: 42px;
+		min-height: 2.75rem;
 		display: grid;
 		grid-template-columns: 1fr auto 1fr;
 		align-items: center;
-		padding: 0 18px;
+		padding: 0 1.125rem;
 		border-bottom: 1px solid var(--studio-hairline);
 		background: var(--studio-surface);
-		font-size: 11px;
+		font-size: var(--studio-text-sm);
 	}
 	.subbar > button {
 		justify-self: end;
@@ -633,13 +789,13 @@
 	}
 	.version-switcher {
 		display: flex;
-		gap: 3px;
+		gap: 0.1875rem;
 	}
 	.version-switcher button {
 		border: 0;
 		border-radius: var(--studio-radius-sm);
 		background: transparent;
-		padding: 6px 9px;
+		padding: 0.375rem 0.5625rem;
 		color: var(--studio-text-muted);
 		cursor: pointer;
 	}
@@ -648,7 +804,7 @@
 		color: var(--studio-text);
 	}
 	main {
-		min-height: calc(100vh - 90px);
+		min-height: calc(100vh - 5.75rem);
 		display: grid;
 		grid-template-columns: 1fr;
 	}
@@ -656,14 +812,14 @@
 		grid-template-columns: minmax(0, 1fr) var(--studio-panel-width);
 	}
 	.workspace {
-		padding: 42px 56px 28px;
+		padding: 2.625rem 3.5rem 1.75rem;
 	}
 	.document-meta {
 		max-width: var(--studio-reading-width);
-		margin: 0 auto 16px;
+		margin: 0 auto 1rem;
 		display: flex;
 		justify-content: space-between;
-		font-size: 11px;
+		font-size: var(--studio-text-xs);
 		color: var(--studio-text-muted);
 	}
 	.page {
@@ -671,10 +827,10 @@
 		min-height: 70vh;
 		margin: auto;
 		background: var(--studio-surface);
-		padding: 68px 84px 96px;
+		padding: 4.25rem 5.25rem 6rem;
 		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.045);
-		font-family: 'Courier Prime', 'Courier New', monospace;
-		font-size: 15px;
+		font-family: var(--studio-font-screenplay);
+		font-size: var(--studio-text-md);
 		line-height: 1.55;
 	}
 	.element {
@@ -693,14 +849,16 @@
 	textarea {
 		display: block;
 		width: 100%;
-		resize: vertical;
+		/* Elements grow with their text (autosize); no grips, nothing clipped (review U1, U4). */
+		resize: none;
 		overflow: hidden;
 		border: 0;
+		border-radius: var(--studio-radius-sm);
 		background: transparent;
 		color: var(--studio-text);
 		font: inherit;
 		line-height: inherit;
-		padding: 2px 0;
+		padding: 0.125rem 0;
 	}
 	textarea.sceneHeading {
 		font-weight: 700;
@@ -711,14 +869,17 @@
 	}
 	textarea:focus {
 		outline: none;
-		background: linear-gradient(transparent calc(100% - 1px), var(--studio-hairline) 0);
+	}
+	textarea:focus-visible {
+		outline: 2px solid var(--studio-focus);
+		outline-offset: 0.25rem;
 	}
 	.element-actions {
 		position: absolute;
-		left: calc(100% + 14px);
+		left: calc(100% + 0.875rem);
 		top: 0;
 		display: flex;
-		gap: 2px;
+		gap: 0.125rem;
 		opacity: 0;
 		transition: opacity 0.12s ease;
 	}
@@ -731,57 +892,57 @@
 		border: 0;
 		background: transparent;
 		color: var(--studio-text-muted);
-		font:
-			10px/1.2 Inter,
-			sans-serif;
+		font-family: var(--studio-font-ui);
+		font-size: var(--studio-text-ui);
+		line-height: 1.2;
 		cursor: pointer;
-		padding: 4px;
+		padding: 0.25rem;
 		white-space: nowrap;
 	}
 	.add-action {
-		margin-top: 18px;
+		margin-top: 1.125rem;
 		color: var(--studio-accent);
 	}
 	.workspace footer {
 		max-width: var(--studio-reading-width);
-		margin: 13px auto 0;
+		margin: 0.8125rem auto 0;
 		display: flex;
 		justify-content: space-between;
-		font-size: 10px;
+		font-size: var(--studio-text-xs);
 		color: var(--studio-text-muted);
 	}
 	aside {
 		border-left: 1px solid var(--studio-hairline);
 		background: var(--studio-surface);
-		padding: 16px 18px;
-		font-size: 12px;
+		padding: 1rem 1.125rem;
+		font-size: var(--studio-text-ui);
 	}
 	.aside-head {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		margin-bottom: 26px;
+		margin-bottom: 1.625rem;
 	}
 	.aside-head button {
 		height: auto;
 	}
 	aside h2 {
-		font-size: 15px;
-		margin: 5px 0 18px;
+		font-size: var(--studio-text-md);
+		margin: 0.3125rem 0 1.125rem;
 	}
 	.eyebrow {
 		text-transform: uppercase;
 		letter-spacing: 0.08em;
 		color: var(--studio-text-muted);
-		font-size: 10px;
+		font-size: var(--studio-text-xs);
 	}
 	.change-list {
 		padding: 0;
 		list-style: none;
-		margin: 0 0 18px;
+		margin: 0 0 1.125rem;
 	}
 	.change-list li {
-		padding: 9px 0;
+		padding: 0.5625rem 0;
 		border-top: 1px solid var(--studio-hairline);
 	}
 	.change-list strong,
@@ -790,35 +951,36 @@
 		display: block;
 	}
 	.review-label {
-		margin-top: 10px;
-		font-size: 9px;
+		margin-top: 0.625rem;
+		font-size: var(--studio-text-xs);
 		font-weight: 700;
 		letter-spacing: 0.08em;
 		text-transform: uppercase;
 		color: var(--studio-text-muted);
 	}
 	.change-list blockquote {
-		margin: 3px 0 0;
-		padding: 7px 9px;
+		margin: 0.1875rem 0 0;
+		padding: 0.4375rem 0.5625rem;
 		background: var(--studio-surface-subtle);
 		border-left: 2px solid var(--studio-hairline);
-		font-family: 'Courier Prime', 'Courier New', monospace;
+		font-family: var(--studio-font-screenplay);
 		line-height: 1.4;
 	}
 	.change-list small {
-		margin-top: 8px;
+		margin-top: 0.5rem;
+		font-size: var(--studio-text-sm);
 		color: var(--studio-text-muted);
 	}
 	.proposal-actions {
 		display: flex;
 		justify-content: flex-end;
-		gap: 8px;
-		margin-top: 20px;
+		gap: 0.5rem;
+		margin-top: 1.25rem;
 	}
 	.proposal-actions button:not(.primary) {
 		border: 0;
 		background: transparent;
-		padding: 8px 11px;
+		padding: 0.5rem 0.6875rem;
 		cursor: pointer;
 	}
 	.proposal-actions button.primary {
@@ -827,27 +989,68 @@
 	}
 	.history-list {
 		list-style: none;
-		margin: 20px 0 0;
+		margin: 1.25rem 0 0;
 		padding: 0;
 	}
 	.history-list li {
 		display: flex;
 		justify-content: space-between;
-		gap: 12px;
-		padding: 12px 0;
+		align-items: flex-start;
+		gap: 0.75rem;
+		padding: 0.75rem 0;
 		border-top: 1px solid var(--studio-hairline);
 	}
 	.history-list small {
 		display: block;
-		margin-top: 4px;
+		margin-top: 0.25rem;
+		font-size: var(--studio-text-sm);
 		color: var(--studio-text-muted);
 		line-height: 1.35;
 	}
-	.history-list button {
+	.history-list button,
+	button.link {
 		border: 0;
 		background: transparent;
 		color: var(--studio-accent);
 		cursor: pointer;
+		white-space: nowrap;
+	}
+	.current-tag {
+		color: var(--studio-text-muted);
+		font-size: var(--studio-text-sm);
+		white-space: nowrap;
+	}
+	.preview-text {
+		list-style: none;
+		margin: 0;
+		padding: 0.75rem;
+		max-height: 50vh;
+		overflow: auto;
+		background: var(--studio-surface-subtle);
+		font-family: var(--studio-font-screenplay);
+		font-size: var(--studio-text-sm);
+		line-height: 1.45;
+	}
+	.preview-text li {
+		margin: 0 0 0.75em;
+		white-space: pre-wrap;
+	}
+	.preview-text .sceneHeading {
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	.preview-text .character {
+		text-align: center;
+		margin-bottom: 0.1em;
+	}
+	.preview-text .dialogue {
+		margin-inline: 12%;
+	}
+	.caution {
+		color: var(--studio-text);
+		background: var(--studio-notice);
+		padding: 0.5rem 0.625rem;
+		border-radius: var(--studio-radius-sm);
 	}
 	@media (max-width: 850px) {
 		header {
@@ -858,18 +1061,18 @@
 		}
 		.subbar {
 			grid-template-columns: 1fr auto;
-			gap: 8px;
+			gap: 0.5rem;
 		}
 		.subbar p {
 			grid-column: 1 / -1;
 			grid-row: 2;
-			padding-bottom: 8px;
+			padding-bottom: 0.5rem;
 		}
 		.workspace {
-			padding: 30px 16px;
+			padding: 1.875rem 1rem;
 		}
 		.page {
-			padding: 48px 32px;
+			padding: 3rem 2rem;
 		}
 		main.withPanel {
 			grid-template-columns: 1fr;
@@ -877,7 +1080,7 @@
 		aside {
 			position: fixed;
 			right: 0;
-			top: 90px;
+			top: 5.75rem;
 			bottom: 0;
 			width: min(88vw, var(--studio-panel-width));
 			box-shadow: -8px 0 24px rgba(0, 0, 0, 0.08);
@@ -889,7 +1092,7 @@
 			justify-content: flex-end;
 		}
 		.workspace footer {
-			gap: 12px;
+			gap: 0.75rem;
 			flex-direction: column;
 		}
 	}
