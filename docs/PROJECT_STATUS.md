@@ -1,5 +1,12 @@
 # Estado del proyecto
 
+## 2026-10-01 — Studio autosave and commit (Phase 3) (English source)
+
+- Write autosaves the Draft after a short pause in typing, when focus leaves the page, and before switching cut or restoring. There is no Save button. Saves run one at a time; edits made during a save are saved by a follow-up. The save state reads Saving…, Saved, Reconnecting…, Not saved — Retry or Couldn't confirm save — Retry. Automatic saves pause while Studio is unreachable; Retry saves the latest text.
+- One **Commit changes** action appears only when the text differs from what is committed. It saves, prepares the change from the saved Draft and shows it inline in the page as track changes (inserted text underlined, removed text struck, added/removed/moved elements labelled), with a small Commit / Cancel card over the margin. Commit accepts exactly what was shown; "Committed" shows briefly and History holds the detail. Preparing again without edits reuses the same prepared change.
+- Decision recorded in the [ADR-0004 addendum](ADR-0004-AUTHORING-STORY-STATE-AND-PROVISIONAL-WORK.md#addendum--saving-and-committing-in-write-oct-1-2026): commit stays two commands (create, then accept), no core or persistence change. A commit that conflicts after preparation stays pending and opens for review; this is tested with two tabs. The PostgreSQL N1 browser regression now delays the accept inside the commit flow and still reports success exactly once.
+- Not yet: local persistence of unsaved text (so "Offline — kept on this device" is never shown) and the continuous editor (Phase 4).
+
 ## 2026-10-01 — Studio readability preferences (English source)
 
 - An "Aa" panel in the application bar sets text size (100–175%), secondary text contrast (normal, high, maximum), line spacing (125–185%) and the interface font (Inter, Atkinson Hyperlegible Next, OpenDyslexic; all OFL, bundled WOFF2, loaded only when chosen). Unset contrast follows `prefers-contrast`.

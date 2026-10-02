@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-01 — Studio autosave and commit (Phase 3)
+
+- Write autosaves (typing pause, leaving the page, before switching cut or restoring); the Save button and the review step for the author's own edits are gone.
+- New Commit changes action with an inline track-changes review of exactly what will be committed; conflicts leave the prepared change pending and reviewable.
+- Recorded the two-command commit decision in the ADR-0004 addendum; added word diff and track-changes unit tests and commit browser tests, including a two-tab conflict.
+
 ## 2026-10-01 — Studio readability preferences
 
 - Added per-browser text size, secondary contrast, line spacing and interface font (Inter, Atkinson Hyperlegible Next, OpenDyslexic), applied before first paint by an inline head script generated from the runtime code; unset contrast follows `prefers-contrast`.

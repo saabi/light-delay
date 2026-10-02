@@ -25,6 +25,7 @@
 	import { autosize } from '$lib/autosize';
 	import { layoutFor, marginlessLayouts } from '$lib/layout';
 	import { sameScreenplayText } from '$lib/screenplay-text';
+	import { trackChanges } from '$lib/track-changes';
 	import {
 		applyReadability,
 		clearReadability,
@@ -47,7 +48,7 @@
 		cuts.map((cut) => [cut.id, cut.label])
 	);
 
-	type SaveState = { text: string; tone?: 'success' | 'attention'; action?: 'retry' | 'save' };
+	type SaveState = { text: string; tone?: 'success' | 'attention'; action?: 'retry' };
 
 	let view = $state<ScreenplayView>();
 	let elements = $state<ScreenplayElement[]>([]);
@@ -68,7 +69,19 @@
 	let connection = $state<ConnectionState>({ kind: 'ready' });
 	let retryAction = $state<(() => Promise<void>) | undefined>();
 	let activeAction: (() => Promise<void>) | undefined;
-	let proposalAttemptId: string | undefined;
+	/* Autosave (ADR-0004 addendum): debounced, on leaving the page, and before replacing the editor. */
+	const autosaveDelay = 800;
+	let autosaveTimer: ReturnType<typeof setTimeout> | undefined;
+	let saveInFlight: Promise<void> | undefined;
+	let editVersion = 0;
+	/* Commit: a proposal prepared from the saved Draft, reviewed inline, then accepted. */
+	let commitReview = $state<{
+		proposal: ScreenplayProposal;
+		baseElements: ScreenplayElement[];
+	}>();
+	let preparedCommit: ScreenplayProposal | undefined;
+	let commitAttempt: { draftUpdatedAt: string; proposalId: string } | undefined;
+	let commitButton = $state<HTMLButtonElement>();
 	/* Screenplay text at each history revision, per cut. Revisions are immutable, so entries never go stale. */
 	let revisionTexts = $state<Record<string, readonly ScreenplayElement[] | null>>({});
 	let revisionTextsFailed = $state(false);
@@ -110,6 +123,15 @@
 	const pendingProposal = $derived(proposal?.status === 'pending' ? proposal : undefined);
 	const cutLabel = $derived(view?.versionLabel ?? cutLabels[selectedVersionId]);
 	const historyNewestFirst = $derived([...history].reverse());
+	/* The commit action appears only when the text differs from what is committed. */
+	const uncommitted = $derived(
+		!!view && (dirty || !!draft) && !sameScreenplayText(elements, view.elements)
+	);
+	const trackedChanges = $derived(
+		commitReview
+			? trackChanges(commitReview.baseElements, elements, commitReview.proposal.operations)
+			: []
+	);
 
 	/* The only place the document's save state appears (STUDIO_DESIGN_SYSTEM.md § State and vocabulary). */
 	const saveState = $derived.by<SaveState | undefined>(() => {
@@ -120,7 +142,7 @@
 				text:
 					notice?.text ??
 					(connection.reason === 'unknown'
-						? 'Couldn’t confirm the last change'
+						? 'Couldn’t confirm save'
 						: dirty
 							? 'Not saved'
 							: 'Can’t reach Studio'),
@@ -132,9 +154,8 @@
 				? { text: 'Opening…' }
 				: { text: 'Couldn’t open the screenplay', tone: 'attention', action: 'retry' };
 		if (notice) return notice;
-		if (saving) return { text: 'Saving…' };
-		/* Saving stays manual until autosave (Phase 3); the save action lives in the save state. */
-		if (dirty) return { text: 'Unsaved changes', action: 'save' };
+		/* Typing autosaves: unsaved edits are already on their way. */
+		if (dirty || saving) return { text: 'Saving…' };
 		if (draft) return { text: 'Saved' };
 		return undefined;
 	});
@@ -156,7 +177,8 @@
 		void openVersion(selectedVersionId);
 		/* Never lose typed text: warn before leaving while edits are not saved (review U2). */
 		const guardUnsaved = (event: BeforeUnloadEvent) => {
-			if (!dirty) return;
+			if (!dirty && !saving) return;
+			void autosave();
 			event.preventDefault();
 			event.returnValue = '';
 		};
@@ -251,11 +273,13 @@
 	/* Switching cut saves unsaved edits first; if they cannot be saved, stay on this cut (review U2). */
 	async function switchVersion(versionId: string) {
 		if (versionId === selectedVersionId) return;
-		if (dirty) {
-			await saveDraft();
-			if (dirty) return;
+		if (!(await autosave())) {
+			/* Stay on this cut; Retry saves and then completes the switch. */
+			if (connection.kind === 'unavailable') retryAction = () => switchVersion(versionId);
+			return;
 		}
 		restoreTarget = undefined;
+		commitReview = undefined;
 		await openVersion(versionId);
 	}
 
@@ -394,11 +418,21 @@
 					(item) =>
 						item.status === 'pending' &&
 						item.scope.documentId === nextScope.documentId &&
-						item.scope.versionId === nextScope.versionId &&
-						(!draft || item.source.ref.id === draft.id)
+						item.scope.versionId === nextScope.versionId
 				)
 				.sort((a, b) => b.createdAt.localeCompare(a.createdAt));
-			proposal = pending[0];
+			/* The author's own proposals made from this exact Draft: still committable, or in conflict.
+			   Proposals made from an earlier state of the Draft are superseded and never shown. */
+			const own = draft
+				? pending.filter(
+						(item) => item.source.ref.id === draft!.id && item.createdAt >= draft!.updatedAt
+					)
+				: [];
+			preparedCommit = own.find((item) => item.baseDocumentVersion === nextView?.documentVersion);
+			commitReview = undefined;
+			proposal = draft
+				? own.find((item) => item.baseDocumentVersion !== nextView?.documentVersion)
+				: pending[0];
 			if (proposal) {
 				proposalBaseElements =
 					(
@@ -408,8 +442,6 @@
 							proposal.baseProjectRevision
 						)
 					)?.elements.map((element) => ({ ...element })) ?? [];
-				reviewOpen = true;
-				historyOpen = false;
 			}
 			elements = (draft?.elements ?? view?.elements ?? []).map((element) => ({ ...element }));
 			dirty = false;
@@ -429,10 +461,47 @@
 	}
 
 	function edited() {
-		proposalAttemptId = undefined;
+		editVersion += 1;
 		dirty = true;
 		notice = undefined;
-		proposal = undefined;
+		if (proposal && proposal.source.ref.id === draft?.id) proposal = undefined;
+		scheduleAutosave();
+	}
+
+	function scheduleAutosave() {
+		clearTimeout(autosaveTimer);
+		autosaveTimer = setTimeout(autosaveAutomatically, autosaveDelay);
+	}
+
+	/* Automatic saves (typing pause, leaving the page) pause while Studio is unreachable: the save
+	   state shows Not saved — Retry, and Retry or the next explicit action saves the latest text. */
+	function autosaveAutomatically() {
+		if (connection.kind === 'unavailable') return;
+		void autosave();
+	}
+
+	/**
+	 * Saves unsaved edits now. Saves run one at a time, so the first save's Draft is reused; edits
+	 * made while a save is in flight are saved by a follow-up. Returns true when nothing is unsaved.
+	 */
+	async function autosave(): Promise<boolean> {
+		clearTimeout(autosaveTimer);
+		while (saveInFlight) await saveInFlight;
+		if (!dirty || !view) return !dirty;
+		const run = saveDraft();
+		saveInFlight = run;
+		try {
+			await run;
+		} catch (error) {
+			failureNotice(error);
+			if (error instanceof AuthoringRequestError && error.transient)
+				retryAction = async () => {
+					await autosave();
+				};
+		} finally {
+			saveInFlight = undefined;
+		}
+		return !dirty;
 	}
 
 	function updateText(elementId: string, text: string) {
@@ -471,75 +540,122 @@
 
 	async function saveDraft() {
 		if (!view) return;
-		busy = true;
+		const version = editVersion;
+		const snapshot = elements;
 		saving = true;
-		const result = await authoringApplication.handle(
-			{
-				type: 'SaveDraft',
-				projectId: authoringFixtureIds.project,
-				...(draft ? { draftId: draft.id } : {}),
-				scope,
-				baseProjectRevision: draft?.baseProjectRevision ?? view.projectRevision,
-				baseDocumentVersion: draft?.baseDocumentVersion ?? view.documentVersion,
-				elements
-			},
-			studioAuthoringContext
-		);
-		saving = false;
-		if (result.ok && result.kind === 'draft-saved') {
-			draft = result.draft;
-			draftIds[selectedVersionId] = draft.id;
-			draftIds = { ...draftIds };
-			dirty = false;
-			notice = undefined;
-		} else if (!result.ok)
-			notice = { text: `Not saved: ${explainError(result.error)}`, tone: 'attention' };
-		busy = false;
+		try {
+			const result = await authoringApplication.handle(
+				{
+					type: 'SaveDraft',
+					projectId: authoringFixtureIds.project,
+					...(draft ? { draftId: draft.id } : {}),
+					scope,
+					baseProjectRevision: draft?.baseProjectRevision ?? view.projectRevision,
+					baseDocumentVersion: draft?.baseDocumentVersion ?? view.documentVersion,
+					elements: snapshot
+				},
+				studioAuthoringContext
+			);
+			if (result.ok && result.kind === 'draft-saved') {
+				draft = result.draft;
+				draftIds[selectedVersionId] = draft.id;
+				draftIds = { ...draftIds };
+				/* Edits typed while this save was in flight still need saving. */
+				if (editVersion === version) dirty = false;
+				else scheduleAutosave();
+			} else if (!result.ok)
+				notice = { text: `Not saved: ${explainError(result.error)}`, tone: 'attention' };
+		} finally {
+			saving = false;
+		}
 	}
 
-	async function proposeChanges() {
-		if (dirty || !draft) await saveDraft();
-		if (!draft || dirty) return;
-		busy = true;
-		proposalAttemptId ??= `proposal:${crypto.randomUUID()}`;
+	/* Commit, step 1: save, prepare the proposal from the saved Draft, and show it inline. */
+	async function prepareCommit() {
+		if (!(await autosave()) || !draft || !view) return;
+		const current = draft;
+		let prepared =
+			preparedCommit?.source.ref.id === current.id && preparedCommit.createdAt >= current.updatedAt
+				? preparedCommit
+				: undefined;
+		if (!prepared) {
+			if (commitAttempt?.draftUpdatedAt !== current.updatedAt)
+				commitAttempt = {
+					draftUpdatedAt: current.updatedAt,
+					proposalId: `proposal:${crypto.randomUUID()}`
+				};
+			const result = await authoringApplication.handle(
+				{
+					type: 'CreateProposal',
+					projectId: authoringFixtureIds.project,
+					draftId: current.id,
+					proposalId: commitAttempt.proposalId,
+					expectedDraftUpdatedAt: current.updatedAt
+				},
+				studioAuthoringContext
+			);
+			if (!result.ok) {
+				notice =
+					result.error.code === 'NO_CHANGES'
+						? { text: 'Nothing to commit' }
+						: { text: `Can’t commit: ${explainError(result.error)}`, tone: 'attention' };
+				return;
+			}
+			if (result.kind !== 'proposal-created') return;
+			prepared = result.proposal;
+			/* A retried preparation may find the commit already done. */
+			if (prepared.status === 'accepted') return committed();
+		}
+		preparedCommit = prepared;
+		const baseElements =
+			(
+				await authoringApplication.getScreenplayView(
+					authoringFixtureIds.project,
+					prepared.scope,
+					prepared.baseProjectRevision
+				)
+			)?.elements.map((element) => ({ ...element })) ?? [];
+		reviewOpen = false;
+		historyOpen = false;
+		commitReview = { proposal: prepared, baseElements };
+		await tick();
+		commitButton?.focus();
+	}
+
+	/* Commit, step 2: accept exactly the proposal that was shown. */
+	async function commit() {
+		if (!commitReview) return;
+		const { proposal: target, baseElements } = commitReview;
 		const result = await authoringApplication.handle(
-			{
-				type: 'CreateProposal',
-				projectId: authoringFixtureIds.project,
-				draftId: draft.id,
-				proposalId: proposalAttemptId,
-				expectedDraftUpdatedAt: draft.updatedAt
-			},
+			{ type: 'AcceptProposal', projectId: authoringFixtureIds.project, proposalId: target.id },
 			studioAuthoringContext
 		);
-		if (result.ok && result.kind === 'proposal-created') {
-			proposalAttemptId = undefined;
-			proposal = result.proposal;
+		if (result.ok && result.kind === 'proposal-accepted') return committed();
+		if (!result.ok) {
+			/* A conflict leaves the proposal pending and reviewable, never silently orphaned. */
+			commitReview = undefined;
+			proposal = target;
+			proposalBaseElements = baseElements;
 			reviewOpen = true;
-			historyOpen = false;
-			notice = undefined;
-			const refresh = async () => {
-				activeAction = refresh;
-				try {
-					proposalBaseElements =
-						(
-							await authoringApplication.getScreenplayView(
-								authoringFixtureIds.project,
-								result.proposal.scope,
-								result.proposal.baseProjectRevision
-							)
-						)?.elements.map((element) => ({ ...element })) ?? [];
-					notice = undefined;
-					retryAction = undefined;
-				} catch {
-					notice = { text: 'Review ready · couldn’t load the comparison', tone: 'attention' };
-					retryAction = refresh;
-				}
-			};
-			await refresh();
-		} else if (!result.ok)
-			notice = { text: `Can’t review: ${explainError(result.error)}`, tone: 'attention' };
-		busy = false;
+			notice = { text: `Couldn’t commit: ${explainError(result.error)}`, tone: 'attention' };
+		}
+	}
+
+	async function committed() {
+		commitReview = undefined;
+		preparedCommit = undefined;
+		commitAttempt = undefined;
+		await refreshCommitted('Committed', selectedVersionId);
+		/* "Committed" shows briefly; History holds the detail. */
+		const shown = notice;
+		if (shown?.tone === 'success')
+			setTimeout(() => {
+				if (notice === shown) notice = undefined;
+			}, 4000);
+	}
+
+	function cancelCommit() {
+		commitReview = undefined;
 	}
 
 	async function rejectProposal() {
@@ -613,6 +729,8 @@
 	}
 
 	async function restoreRevision(targetRevision: number) {
+		/* Unsaved edits are saved first, so the Draft keeps them even though the page is replaced. */
+		await autosave();
 		if (!view) return;
 		busy = true;
 		const result = await authoringApplication.handle(
@@ -712,8 +830,6 @@
 					<span>{saveState.text}</span>
 					{#if saveState.action === 'retry'}
 						<button class="link" onclick={retryNow} disabled={busy}>Retry</button>
-					{:else if saveState.action === 'save'}
-						<button class="link" onclick={() => perform(saveDraft)} disabled={busy}>Save</button>
 					{/if}
 				{/if}
 			</p>
@@ -806,8 +922,8 @@
 				<button class:active={historyOpen} aria-pressed={historyOpen} onclick={toggleHistory}
 					>History</button
 				>
-				{#if pendingProposal && !dirty}
-					<!-- A proposal is already waiting: reopen it instead of creating another (review U6). -->
+				{#if pendingProposal}
+					<!-- A proposal waiting for review (a conflicting commit, or changes from elsewhere). -->
 					<button
 						class:active={reviewOpen}
 						aria-pressed={reviewOpen}
@@ -819,13 +935,15 @@
 						><span class="label-long">Open review</span><span class="label-short">Review</span
 						></button
 					>
-				{:else}
+				{/if}
+				{#if uncommitted && !commitReview}
+					<!-- One deliberate commit action, only when there is something to commit. -->
 					<button
 						class="primary"
-						disabled={busy || (!draft && !dirty)}
-						aria-label="Review changes"
-						onclick={() => perform(proposeChanges)}
-						><span class="label-long">Review changes</span><span class="label-short">Review</span
+						disabled={busy}
+						aria-label="Commit changes"
+						onclick={() => perform(prepareCommit)}
+						><span class="label-long">Commit changes</span><span class="label-short">Commit</span
 						></button
 					>
 				{/if}
@@ -838,46 +956,97 @@
 					{#if view}
 						<p class="running-header">{view.documentTitle} · {cutLabel}</p>
 					{/if}
-					<article class="page" aria-label="Screenplay">
-						{#each elements as element, index (element.id)}
-							<div
-								class="element"
-								class:scene-heading={element.kind === 'scene-heading'}
-								class:action={element.kind === 'action'}
-								class:character={element.kind === 'character'}
-								class:dialogue={element.kind === 'dialogue'}
-							>
-								<textarea
-									disabled={busy}
-									aria-label={element.kind}
-									rows="1"
-									value={element.text}
-									use:autosize={element.text}
-									oninput={(event) => updateText(element.id, event.currentTarget.value)}></textarea>
-								<div class="element-actions">
-									<button
-										aria-label="Move up"
-										disabled={busy || index === 0}
-										onclick={() => moveElement(index, -1)}>↑</button
-									>
-									<button
-										aria-label="Move down"
-										disabled={busy || index === elements.length - 1}
-										onclick={() => moveElement(index, 1)}>↓</button
-									>
-									<button
-										aria-label="Remove element"
-										disabled={busy}
-										onclick={() => removeElement(element.id)}>Remove</button
-									>
+					<!-- Leaving the page area saves at once instead of waiting for the typing pause. -->
+					<article
+						class="page"
+						class:reviewing={!!commitReview}
+						aria-label="Screenplay"
+						onfocusout={autosaveAutomatically}
+					>
+						{#if commitReview}
+							<!-- The changes inline, as they will be committed: inserted text marked, removed struck. -->
+							{#each trackedChanges as item (item.key)}
+								<div
+									class="element tracked"
+									class:scene-heading={item.kind === 'scene-heading'}
+									class:action={item.kind === 'action'}
+									class:character={item.kind === 'character'}
+									class:dialogue={item.kind === 'dialogue'}
+									data-change={item.state}
+								>
+									{#if item.moved}<span class="change-tag">Moved</span>{/if}
+									{#if item.state === 'added'}<span class="change-tag">Added</span>{/if}
+									{#if item.state === 'removed'}<span class="change-tag">Removed</span>{/if}
+									<p class="tracked-text">
+										{#each item.parts as part, index (index)}{#if part.op === 'insert'}<ins
+													>{part.text}</ins
+												>{:else if part.op === 'delete'}<del>{part.text}</del
+												>{:else}{part.text}{/if}{/each}
+									</p>
 								</div>
-							</div>
-						{/each}
-						<button class="add-action" disabled={busy || !view} onclick={addAction}>+ Action</button
-						>
+							{/each}
+						{:else}
+							{#each elements as element, index (element.id)}
+								<div
+									class="element"
+									class:scene-heading={element.kind === 'scene-heading'}
+									class:action={element.kind === 'action'}
+									class:character={element.kind === 'character'}
+									class:dialogue={element.kind === 'dialogue'}
+								>
+									<textarea
+										disabled={busy}
+										aria-label={element.kind}
+										rows="1"
+										value={element.text}
+										use:autosize={element.text}
+										oninput={(event) => updateText(element.id, event.currentTarget.value)}
+									></textarea>
+									<div class="element-actions">
+										<button
+											aria-label="Move up"
+											disabled={busy || index === 0}
+											onclick={() => moveElement(index, -1)}>↑</button
+										>
+										<button
+											aria-label="Move down"
+											disabled={busy || index === elements.length - 1}
+											onclick={() => moveElement(index, 1)}>↓</button
+										>
+										<button
+											aria-label="Remove element"
+											disabled={busy}
+											onclick={() => removeElement(element.id)}>Remove</button
+										>
+									</div>
+								</div>
+							{/each}
+							<button class="add-action" disabled={busy || !view} onclick={addAction}
+								>+ Action</button
+							>
+						{/if}
 					</article>
 				</div>
 			</main>
+
+			{#if commitReview}
+				<div class="commit-card" role="dialog" aria-label="Commit changes" tabindex="-1">
+					<h2>Commit changes</h2>
+					<p>
+						{commitReview.proposal.operations.length}
+						{commitReview.proposal.operations.length === 1 ? 'change' : 'changes'} in {cutLabel}
+					</p>
+					<div class="panel-actions">
+						<button onclick={cancelCommit} disabled={busy}>Cancel</button>
+						<button
+							bind:this={commitButton}
+							class="primary"
+							disabled={busy}
+							onclick={() => perform(commit)}>Commit</button
+						>
+					</div>
+				</div>
+			{/if}
 
 			{#if reviewOpen}
 				<aside class="panel" aria-label="Changes to review">
@@ -1367,6 +1536,82 @@
 	.add-action {
 		margin-top: 1lh;
 		color: var(--studio-accent);
+	}
+
+	/* Commit review: changes shown where they live, marked by more than colour. */
+	.tracked-text {
+		margin: 0;
+		white-space: pre-wrap;
+		overflow-wrap: anywhere;
+	}
+	.scene-heading .tracked-text {
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	.character .tracked-text {
+		text-transform: uppercase;
+	}
+	.tracked ins {
+		text-decoration: underline;
+		text-decoration-thickness: 2px;
+		text-underline-offset: 0.15em;
+		background: color-mix(in srgb, var(--studio-success) 14%, transparent);
+	}
+	.tracked del {
+		text-decoration: line-through;
+		text-decoration-thickness: 2px;
+		color: var(--studio-text-muted);
+	}
+	.change-tag {
+		position: absolute;
+		right: calc(100% + 1ch);
+		top: 0;
+		font-family: var(--studio-font-ui);
+		font-size: var(--studio-text-xs);
+		color: var(--studio-text-muted);
+		white-space: nowrap;
+	}
+	.character .change-tag {
+		right: auto;
+		left: -1ch;
+		transform: translateX(-100%);
+	}
+	.commit-card {
+		position: absolute;
+		z-index: 15;
+		top: 1rem;
+		right: 1rem;
+		width: min(18rem, calc(100% - 2rem));
+		padding: 0.875rem 1rem 1rem;
+		border: 1px solid var(--studio-hairline);
+		border-radius: var(--studio-radius-md);
+		background: var(--studio-surface);
+		box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+		font-size: var(--studio-text-ui);
+	}
+	.commit-card h2 {
+		margin: 0;
+		font-size: var(--studio-text-md);
+	}
+	.commit-card p {
+		margin: 0.25rem 0 0;
+		color: var(--studio-text-muted);
+	}
+	.commit-card .panel-actions {
+		margin-top: 0.75rem;
+	}
+	[data-layout='phone'] .commit-card,
+	[data-layout='compact'] .commit-card {
+		top: auto;
+		bottom: 0.5rem;
+		left: 0.5rem;
+		right: 0.5rem;
+		width: auto;
+	}
+	.marginless .change-tag {
+		position: static;
+		display: block;
+		transform: none;
 	}
 
 	/* Below the size class that fits the page: no paper margins, indents compress. */

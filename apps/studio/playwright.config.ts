@@ -19,7 +19,8 @@ export default defineConfig({
 			dependencies: ['authoring']
 		},
 		{ name: 'shell', testMatch: '**/shell.e2e.ts', dependencies: ['write-correctness'] },
-		{ name: 'readability', testMatch: '**/readability.e2e.ts', dependencies: ['shell'] }
+		{ name: 'readability', testMatch: '**/readability.e2e.ts', dependencies: ['shell'] },
+		{ name: 'commit', testMatch: '**/commit.e2e.ts', dependencies: ['readability'] }
 	],
 	use: {
 		launchOptions: process.env.STUDIO_TEST_BROWSER
