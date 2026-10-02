@@ -1144,6 +1144,66 @@ describe('project-scoped screenplay element identity', () => {
 	});
 });
 
+describe('screenplay element kinds', () => {
+	it('accepts parentheticals and transitions with the same identity rules as other kinds', async () => {
+		const { application } = await createHarness();
+		const initial = await getView(application, featureScope);
+		const cueIndex = initial.elements.findIndex((element) => element.kind === 'character');
+		const parenthetical: ScreenplayElement = {
+			id: 'element:aside',
+			kind: 'parenthetical',
+			text: '(quietly)'
+		};
+		const transition: ScreenplayElement = {
+			id: 'element:cut',
+			kind: 'transition',
+			text: 'CUT TO:'
+		};
+		const elements = [
+			...initial.elements.slice(0, cueIndex + 1),
+			parenthetical,
+			...initial.elements.slice(cueIndex + 1),
+			transition
+		];
+		await proposeAndAccept(application, featureScope, elements);
+		const accepted = await getView(application, featureScope);
+		expect(accepted.elements.map((element) => [element.kind, element.text])).toEqual(
+			elements.map((element) => [element.kind, element.text])
+		);
+
+		const retyped = accepted.elements.map((element) =>
+			element.id === transition.id ? { ...element, kind: 'action' as const } : element
+		);
+		/* Changing the kind of an accepted identity is refused, at save or at proposal time. */
+		const saved = await application.handle(
+			{
+				type: 'SaveDraft',
+				projectId: authoringFixtureIds.project,
+				scope: featureScope,
+				baseProjectRevision: accepted.projectRevision,
+				baseDocumentVersion: accepted.documentVersion,
+				elements: retyped
+			},
+			context
+		);
+		const refused =
+			saved.ok && saved.kind === 'draft-saved'
+				? await application.handle(
+						{
+							type: 'CreateProposal',
+							projectId: authoringFixtureIds.project,
+							draftId: saved.draft.id
+						},
+						context
+					)
+				: saved;
+		expect(refused).toMatchObject({
+			ok: false,
+			error: { code: 'INVALID_DRAFT', message: expect.stringContaining('kind cannot change') }
+		});
+	});
+});
+
 describe('closed application boundary', () => {
 	it.each([
 		null,

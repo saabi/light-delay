@@ -42,7 +42,9 @@ export const ScreenplayElementKindSchema = Type.Union([
 	Type.Literal('scene-heading'),
 	Type.Literal('action'),
 	Type.Literal('character'),
-	Type.Literal('dialogue')
+	Type.Literal('parenthetical'),
+	Type.Literal('dialogue'),
+	Type.Literal('transition')
 ]);
 
 export const ScreenplayElementSchema = object({
