@@ -1,5 +1,5 @@
 import { expect, test, type Page } from '@playwright/test';
-import { commit, commitCard, el, saved, saveState } from './studio-e2e';
+import { commit, commitCard, el, historyEntries, saved, saveState } from './studio-e2e';
 
 /*
 	Phase 3 commit rules (ADR-0004 addendum): what is reviewed inline is exactly what is committed,
@@ -75,4 +75,46 @@ test('the inline review shows added, removed and moved elements in place', async
 	await expect(screenplay.locator('[data-change="removed"] .change-tag')).toHaveText('Removed');
 	await commitCard(page).getByRole('button', { name: 'Cancel' }).click();
 	await expect(el(page, 'action')).toHaveText('The lamp flickers.');
+});
+
+test('a commit can carry a note, written in the commit card and shown in History', async ({
+	page
+}) => {
+	await open(page);
+	if (await page.getByRole('button', { name: 'Commit changes' }).count()) await commit(page);
+	const note = `Mara holds the line ${Date.now()}`;
+	await el(page, 'dialogue').fill(`Hold the channel ${Date.now()}.`);
+	/* The note field takes focus; Enter commits, with or without a note. */
+	await page.getByRole('button', { name: 'Commit changes' }).click();
+	const field = commitCard(page).getByRole('textbox', { name: 'Note (optional)' });
+	await expect(field).toBeFocused();
+	await page.keyboard.type(note);
+	await expect(field).toHaveValue(note);
+	await page.keyboard.press('Enter');
+	await expect(saveState(page)).toHaveText('Committed');
+
+	await el(page, 'dialogue').fill(`Without a note ${Date.now()}.`);
+	await page.getByRole('button', { name: 'Commit changes' }).click();
+	await expect(field).toBeFocused();
+	await expect(field).toHaveValue('');
+	await page.keyboard.press('Enter');
+	await expect(saveState(page)).toHaveText('Committed');
+
+	await page.getByRole('button', { name: 'History' }).click();
+	const [latest, noted] = [historyEntries(page).nth(0), historyEntries(page).nth(1)];
+	await expect(latest).toContainText('Revised dialogue');
+	await expect(latest).not.toContainText(note);
+	await expect(noted.locator('.entry-note')).toHaveText(note);
+	await expect(noted).toContainText('Revised dialogue');
+
+	/* A restore can carry one too. */
+	await noted.getByRole('button', { name: 'Restore…' }).click();
+	const preview = page.getByLabel('Restore preview');
+	await preview.getByRole('textbox', { name: 'Note (optional)' }).fill('Back to the held line');
+	await preview.getByRole('button', { name: 'Restore this version' }).click();
+	await expect(saveState(page)).toHaveText('Restored');
+	await expect(historyEntries(page).first().locator('.entry-note')).toHaveText(
+		'Back to the held line'
+	);
+	await expect(historyEntries(page).first()).toContainText('Restored an earlier version');
 });

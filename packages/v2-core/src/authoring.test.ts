@@ -1246,3 +1246,76 @@ describe('closed application boundary', () => {
 		await expect(storeQuery).resolves.toMatchObject({ number: 0 });
 	});
 });
+
+describe('notes on committed versions', () => {
+	it('keeps an optional note with the accepted version, and none when omitted', async () => {
+		const { application, store } = await createHarness();
+		const initial = await getView(application, featureScope);
+		const edited = initial.elements.map((element) =>
+			element.id === authoringFixtureIds.dialogue
+				? { ...element, text: 'Keep the lamp lit.' }
+				: element
+		);
+		const draft = await saveDraft(application, featureScope, edited);
+		const proposal = await createProposal(application, draft.id);
+		const accepted = await application.handle(
+			{
+				type: 'AcceptProposal',
+				projectId: authoringFixtureIds.project,
+				proposalId: proposal.id,
+				note: 'Mara keeps the lamp lit'
+			},
+			context
+		);
+		expect(accepted).toMatchObject({
+			ok: true,
+			kind: 'proposal-accepted',
+			changeSet: { note: { text: 'Mara keeps the lamp lit' } }
+		});
+		await proposeAndAccept(application, featureScope, initial.elements);
+		const history = await application.listHistory(authoringFixtureIds.project);
+		expect(history.at(-2)?.note).toEqual({ text: 'Mara keeps the lamp lit' });
+		expect(history.at(-1)).not.toHaveProperty('note');
+		/* The note survives export and reconstruction like the rest of the version. */
+		const rebuilt = await InMemoryAuthoringProjectStore.fromAcceptedHistory(
+			JSON.parse(JSON.stringify(await store.exportAcceptedHistory()))
+		);
+		const bundle = await rebuilt.exportAcceptedHistory();
+		expect(bundle.accepted.at(-2)?.changeSet.note).toEqual({ text: 'Mara keeps the lamp lit' });
+	});
+
+	it('restores with a note, and refuses empty or oversized notes', async () => {
+		const { application } = await createHarness();
+		const initial = await getView(application, featureScope);
+		await proposeAndAccept(
+			application,
+			featureScope,
+			initial.elements.map((element) =>
+				element.id === authoringFixtureIds.dialogue ? { ...element, text: 'Changed.' } : element
+			)
+		);
+		const changed = await getView(application, featureScope);
+		const restore = (note: string) =>
+			application.handle(
+				{
+					type: 'RestoreScreenplay',
+					projectId: authoringFixtureIds.project,
+					scope: featureScope,
+					targetRevision: 0,
+					expectedDocumentVersion: changed.documentVersion,
+					note
+				},
+				context
+			);
+		for (const invalid of ['', '   ', 'x'.repeat(1001)])
+			expect(await restore(invalid)).toMatchObject({
+				ok: false,
+				error: { code: 'INVALID_COMMAND' }
+			});
+		expect(await restore('Back to the original line')).toMatchObject({
+			ok: true,
+			kind: 'screenplay-restored',
+			changeSet: { note: { text: 'Back to the original line' } }
+		});
+	});
+});

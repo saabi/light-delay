@@ -65,7 +65,10 @@ export function describeOperation(
 export interface HistoryEntryText {
 	who: string;
 	when: string;
+	/** What changed, worked out from the change itself. */
 	summary: string;
+	/** What the author said about it, when they wrote a note. */
+	note?: string;
 }
 
 const principalLabel: Record<AuthoringChangeSet['principal']['kind'], string> = {
@@ -97,7 +100,8 @@ function formatWhen(timestamp: string, now: Date) {
 }
 
 /**
- * Plain-language history entry: "You · 22:15 · Revised dialogue". Never shows IDs or revision
+ * Plain-language history entry: "You · 22:15 · Revised dialogue", with the author's note when there
+ * is one. Never shows IDs or revision
  * numbers. `baseElements` is the screenplay this change was made against, for the cut being viewed,
  * when it is known; `cutLabel` names that cut.
  */
@@ -129,7 +133,9 @@ export function describeHistoryEntry(
 	} else
 		summary =
 			scopes.length === 1 ? `Changed the ${cut(scopes[0])} cut` : `Changed ${scopes.length} cuts`;
-	return { who, when, summary };
+	return changeSet.note
+		? { who, when, summary, note: changeSet.note.text }
+		: { who, when, summary };
 }
 
 /** Plain-language reason for a failed command. Raw messages may use internal vocabulary. */

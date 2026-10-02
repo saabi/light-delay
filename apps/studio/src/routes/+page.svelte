@@ -103,7 +103,10 @@
 	}>();
 	let preparedCommit: ScreenplayProposal | undefined;
 	let commitAttempt: { draftUpdatedAt: string; proposalId: string } | undefined;
-	let commitButton = $state<HTMLButtonElement>();
+	/* Optional note on the committed version, shown in History. */
+	let commitNote = $state('');
+	let commitNoteInput = $state<HTMLInputElement>();
+	let restoreNote = $state('');
 	/* Screenplay text at each history revision, per cut. Revisions are immutable, so entries never go stale. */
 	let revisionTexts = $state<Record<string, readonly ScreenplayElement[] | null>>({});
 	let revisionTextsFailed = $state(false);
@@ -414,7 +417,7 @@
 		const changeSet = history.find((item) => item.resultingRevision === revision);
 		if (!changeSet) return 'Earlier version';
 		const entry = historyEntry(changeSet);
-		return `${entry.summary} · ${entry.when}`;
+		return `${entry.note ?? entry.summary} · ${entry.when}`;
 	}
 
 	function toggleHistory() {
@@ -731,15 +734,23 @@
 		historyOpen = false;
 		commitReview = { proposal: prepared, baseElements };
 		await tick();
-		commitButton?.focus();
+		/* Enter in the note commits, so a commit without a note is still one keystroke. The field is
+		   never disabled, so it can take focus while this step is still finishing. */
+		commitNoteInput?.focus();
 	}
 
 	/* Commit, step 2: accept exactly the proposal that was shown. */
 	async function commit() {
 		if (!commitReview) return;
 		const { proposal: target, baseElements } = commitReview;
+		const note = commitNote.trim();
 		const result = await authoringApplication.handle(
-			{ type: 'AcceptProposal', projectId: authoringFixtureIds.project, proposalId: target.id },
+			{
+				type: 'AcceptProposal',
+				projectId: authoringFixtureIds.project,
+				proposalId: target.id,
+				...(note ? { note } : {})
+			},
 			studioAuthoringContext
 		);
 		if (result.ok && result.kind === 'proposal-accepted') return committed();
@@ -755,6 +766,7 @@
 
 	async function committed() {
 		commitReview = undefined;
+		commitNote = '';
 		preparedCommit = undefined;
 		commitAttempt = undefined;
 		await refreshCommitted('Committed', selectedVersionId);
@@ -856,7 +868,8 @@
 				scope,
 				targetRevision,
 				expectedDocumentVersion: view.documentVersion,
-				intent: `Restore ${view.documentTitle} — ${view.versionLabel}`
+				intent: `Restore ${view.documentTitle} — ${view.versionLabel}`,
+				...(restoreNote.trim() ? { note: restoreNote.trim() } : {})
 			},
 			studioAuthoringContext
 		);
@@ -1121,14 +1134,24 @@
 						{commitReview.proposal.operations.length}
 						{commitReview.proposal.operations.length === 1 ? 'change' : 'changes'} in {cutLabel}
 					</p>
+					<label class="note-field">
+						<span>Note (optional)</span>
+						<input
+							bind:this={commitNoteInput}
+							bind:value={commitNote}
+							maxlength="1000"
+							placeholder="What changed?"
+							onkeydown={(event) => {
+								if (event.key === 'Enter') {
+									event.preventDefault();
+									if (!busy) void perform(commit);
+								}
+							}}
+						/>
+					</label>
 					<div class="panel-actions">
 						<button onclick={cancelCommit} disabled={busy}>Cancel</button>
-						<button
-							bind:this={commitButton}
-							class="primary"
-							disabled={busy}
-							onclick={() => perform(commit)}>Commit</button
-						>
+						<button class="primary" disabled={busy} onclick={() => perform(commit)}>Commit</button>
 					</div>
 				</div>
 			{/if}
@@ -1228,6 +1251,10 @@
 							{#if dirty || draft}
 								<p class="caution">Your edits that have not been accepted will be replaced.</p>
 							{/if}
+							<label class="note-field">
+								<span>Note (optional)</span>
+								<input bind:value={restoreNote} maxlength="1000" placeholder="Why restore it?" />
+							</label>
 							<div class="panel-actions">
 								<button onclick={() => (restoreTarget = undefined)}>Cancel</button>
 								<button class="primary" onclick={() => perform(() => restoreRevision(target))}
@@ -1248,7 +1275,13 @@
 								{#if isCurrentText(revision)}
 									<span class="current-tag">Current text</span>
 								{:else if revisionText(revision)}
-									<button class="link" onclick={() => (restoreTarget = revision)}>Restore…</button>
+									<button
+										class="link"
+										onclick={() => {
+											restoreNote = '';
+											restoreTarget = revision;
+										}}>Restore…</button
+									>
 								{/if}
 							{/snippet}
 							{#each historyNewestFirst as changeSet (changeSet.id)}
@@ -1256,7 +1289,12 @@
 								<li>
 									<div>
 										<span class="entry-meta">{entry.who} · {entry.when}</span>
-										<span class="entry-summary">{entry.summary}</span>
+										{#if entry.note}
+											<span class="entry-summary entry-note">{entry.note}</span>
+											<span class="entry-detail">{entry.summary}</span>
+										{:else}
+											<span class="entry-summary">{entry.summary}</span>
+										{/if}
 									</div>
 									{@render restoreControl(changeSet.resultingRevision)}
 								</li>
@@ -1762,6 +1800,38 @@
 	}
 	.entry-summary {
 		display: block;
+	}
+	.entry-note {
+		overflow-wrap: anywhere;
+	}
+	.entry-detail {
+		display: block;
+		font-size: var(--studio-text-sm);
+		color: var(--studio-text-muted);
+	}
+	.note-field {
+		display: block;
+		margin-top: 0.75rem;
+	}
+	.note-field span {
+		display: block;
+		margin-bottom: 0.25rem;
+		font-size: var(--studio-text-sm);
+		color: var(--studio-text-muted);
+	}
+	.note-field input {
+		width: 100%;
+		min-height: 2rem;
+		padding: 0.25rem 0.5rem;
+		border: 1px solid var(--studio-hairline);
+		border-radius: var(--studio-radius-sm);
+		background: var(--studio-surface);
+		color: var(--studio-text);
+		font: inherit;
+	}
+	.note-field input:focus-visible {
+		outline: 2px solid var(--studio-focus);
+		outline-offset: 1px;
 	}
 	.current-tag {
 		color: var(--studio-text-muted);

@@ -499,6 +499,7 @@ interface ChangeSet {
   principal: PrincipalRef;
   timestamp: string;
   intent: string;
+  note?: { text: string };   // what the committer says about this version, shown in History (optional)
   operations: SemanticOperation[];
   provenance?: Provenance;
   assumptions?: string[];
@@ -506,6 +507,8 @@ interface ChangeSet {
   agentExecutionId?: AgentExecutionId;
 }
 ```
+
+`intent` is the system's record of what kind of change this is (accept a proposal, restore). `note` is optional and written, or confirmed, by the committing principal: "Mara keeps the lamp lit". It is set once with the ChangeSet and never edited. An assistant may later suggest the text; the committer still sees and confirms it, and the suggestion's provenance will be added to `note` as an optional field. `rationale` remains a proposer's reasoning (for example an agent's), distinct from the committer's note.
 
 Restoration/reversion appends a new ChangeSet whose resulting authoritative projection is semantically equivalent to the selected supported historical state. It never rewrites or deletes prior history. Semantic operations preserve intent; snapshots/checkpoints may accelerate or support durable reconstruction and replay may serve as a verification oracle. In M2, ProjectRevision records contain ordering/attribution metadata while accepted records checkpoint only affected document × version scopes; the initial projection is stored once. This architecture does not require pure event sourcing. Binary media lives in blob storage. Derived caches/reports are rebuildable.
 
