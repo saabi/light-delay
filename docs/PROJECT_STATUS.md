@@ -1,5 +1,14 @@
 # Estado del proyecto
 
+## 2026-10-01 — Studio M2.5 merged; Write UX guidelines revised (English source)
+
+- M2.5 was accepted by the owner and PR #3 merged into `implementation/m2-authoring` (`164799d`, a merge commit preserving the reviewed SHAs). It has not reached `master`; no staging or Pages deployment was made.
+- A [Write UX review](reviews/2026-10-01-studio-write-ux-review-claude.md) found the surface proves the authoring loop but not the editor: per-element fields, hidden wrapped text, unsaved text discarded on cut switch, unbundled fonts, model vocabulary in the chrome, no application identity.
+- [`STUDIO_DESIGN_SYSTEM.md`](STUDIO_DESIGN_SYSTEM.md) now carries testable requirements: shell anatomy with an application identity slot; rem-only units; screenplay geometry in `ch`; layout and per-component capacity measured in characters × lines with the owner's `svelte-glyph-capacity` sensor (his glyph-metric method from Color Lab, svizzle and WAIfinder); bundled fonts; readability preferences; editor model; never-lose-text; state vocabulary; layout stability; accessibility floors; reference states and a review checklist.
+- [ADR-0004 addendum](ADR-0004-AUTHORING-STORY-STATE-AND-PROVISIONAL-WORK.md#addendum--saving-and-committing-in-write-oct-1-2026): Write autosaves Drafts and commits the author's own edits with one deliberate action; the review surface is for proposals from elsewhere.
+- The sensor's home until release is this repository's workspace (`packages/svelte-glyph-capacity`, PR #5); the guidelines now require sensed containers to have a layout-determined size.
+- Next: Write correctness fixes (review U1–U8), then shell and identity, saving and committing, and the continuous screenplay editor. The application name and mark are undecided.
+
 ## 2026-10-01 — svelte-glyph-capacity workspace package (English source)
 
 - `packages/svelte-glyph-capacity` is the owner's glyph-capacity sensor, imported from an untracked working copy (no prior history). light-delay is its temporary home until it is ready for release; it will then be extracted with its history and published to npm.

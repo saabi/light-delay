@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-01 — Studio Write UX guidelines
+
+- Recorded M2.5's acceptance and merge into `implementation/m2-authoring`.
+- Added the Write UX review and revised the Studio design system with testable shell, typography, responsive, editor, state and accessibility requirements, adopting the owner's character-measured layout method.
+- Recorded the capacity sensor's temporary home in this repository's workspace and the containment requirement for sensed containers.
+- Added an ADR-0004 addendum for autosaved Drafts and a single commit action in Write. Documentation only.
+
 ## 2026-10-01 — svelte-glyph-capacity workspace package
 
 - Added the owner's unpublished `svelte-glyph-capacity` sensor as an npm workspace package in `packages/svelte-glyph-capacity`, its temporary home until first release. It is not yet used by Studio.
