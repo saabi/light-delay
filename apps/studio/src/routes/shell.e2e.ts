@@ -244,7 +244,7 @@ test('normal surfaces use the plain vocabulary and never show IDs', async ({ pag
 	await expect(historyEntries(page).first()).toContainText(/^You · \d\d:\d\d/);
 	expect(await visibleText(page)).not.toMatch(forbidden);
 
-	await initialEntry(page).getByRole('button', { name: 'Restore…' }).click();
+	await initialEntry(page).getByRole('button', { name: 'Preview' }).click();
 	await expect(page.getByLabel('Restore preview')).toBeVisible();
 	expect(await visibleText(page)).not.toMatch(forbidden);
 	await page.getByRole('button', { name: 'Cancel' }).click();
@@ -259,4 +259,73 @@ test('history reads newest first, in plain language', async ({ page }) => {
 	await expect(entries.first()).toContainText('Revised dialogue');
 	await expect(entries.first()).toContainText('Current text');
 	await expect(entries.last()).toContainText('Initial screenplay');
+});
+
+test('at 200% text the layout steps down and Write stays usable, at desktop and phone sizes', async ({
+	page
+}) => {
+	for (const [width, height] of [
+		[1280, 860],
+		[390, 844]
+	]) {
+		await page.setViewportSize({ width, height });
+		await open(page);
+		const before = (await layoutState(page)).maxChars;
+		await page.evaluate(() =>
+			document.documentElement.style.setProperty('--studio-font-scale', '2')
+		);
+		await expect.poll(async () => (await layoutState(page)).maxChars).toBeLessThan(before);
+		const state = await layoutState(page);
+		expect(state.layout).toBe(layoutFor(state));
+		expect(['compact', 'phone', 'narrow']).toContain(state.layout);
+		const clipped = await page.locator('.screenplay-editor .el').evaluateAll(
+			(nodes) =>
+				/* Courier Prime's glyphs reach slightly past a single-spaced line; a hidden line would
+					   overflow by a whole line, so allow a quarter of one. */
+				nodes.filter(
+					(node) =>
+						node.scrollHeight > node.clientHeight + parseFloat(getComputedStyle(node).fontSize) / 4
+				).length
+		);
+		expect(clipped).toBe(0);
+		const overflow = await page.evaluate(() => ({
+			bar:
+				document.querySelector('.app-bar')!.scrollWidth -
+				document.querySelector('.app-bar')!.clientWidth,
+			page: document.documentElement.scrollWidth - innerWidth
+		}));
+		expect(overflow.bar).toBeLessThanOrEqual(0);
+		expect(overflow.page).toBeLessThanOrEqual(0);
+		await el(page, 'dialogue').first().click();
+		await expect(el(page, 'dialogue').first()).toHaveClass(/el-current/);
+	}
+});
+
+test('the capacity sensors never warn, at any layout or text size', async ({ page }) => {
+	const warnings: string[] = [];
+	page.on('console', (message) => {
+		if (message.text().includes('GlyphCapacitySensor')) warnings.push(message.text());
+	});
+	for (const [width, height] of [
+		[1920, 1000],
+		[1280, 860],
+		[700, 900],
+		[390, 844],
+		[600, 300]
+	]) {
+		await page.setViewportSize({ width, height });
+		await open(page);
+		for (const scale of ['1', '1.5', '2', '1']) {
+			await page.evaluate(
+				(value) => document.documentElement.style.setProperty('--studio-font-scale', value),
+				scale
+			);
+			/* Let the sensors settle; an oscillation warning needs several alternations. */
+			await page.waitForTimeout(400);
+		}
+		await page.getByRole('button', { name: 'History' }).click();
+		await page.waitForTimeout(200);
+		await page.getByRole('button', { name: 'History' }).click();
+	}
+	expect(warnings).toEqual([]);
 });

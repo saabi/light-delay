@@ -160,7 +160,7 @@ test('U5: restore shows the text first, asks, and is not offered for the current
 	await expect(latest.getByRole('button')).toHaveCount(0);
 
 	const initial = initialEntry(page);
-	await initial.getByRole('button', { name: 'Restore…' }).click();
+	await initial.getByRole('button', { name: 'Preview' }).click();
 	const preview = page.getByLabel('Restore preview');
 	await expect(preview.getByText(initialDialogue)).toBeVisible();
 	await expect(el(page, 'dialogue')).toHaveText(accepted);
@@ -168,7 +168,7 @@ test('U5: restore shows the text first, asks, and is not offered for the current
 	await expect(preview).toHaveCount(0);
 	await expect(el(page, 'dialogue')).toHaveText(accepted);
 
-	await initial.getByRole('button', { name: 'Restore…' }).click();
+	await initial.getByRole('button', { name: 'Preview' }).click();
 	await page.getByRole('button', { name: 'Restore this version' }).click();
 	await expect(saveState(page)).toHaveText('Restored');
 	await expect(el(page, 'dialogue')).toHaveText(initialDialogue);

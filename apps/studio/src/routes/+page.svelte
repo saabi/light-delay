@@ -2,6 +2,7 @@
 	import { onMount, tick } from 'svelte';
 	import type {
 		AuthoringChangeSet,
+		AuthoringOperation,
 		DocumentVersionScope,
 		ScreenplayDraft,
 		ScreenplayElement,
@@ -24,7 +25,7 @@
 	import { describeHistoryEntry, describeOperation, explainError } from '$lib/authoring-presenter';
 	import { layoutFor, marginlessLayouts } from '$lib/layout';
 	import { sameScreenplayText } from '$lib/screenplay-text';
-	import { changesBetween, trackChanges } from '$lib/track-changes';
+	import { applyOperations, changesBetween, trackChanges } from '$lib/track-changes';
 	import {
 		compareKeptText,
 		holdPageLock,
@@ -146,6 +147,8 @@
 		versionId: selectedVersionId
 	});
 	const pendingProposal = $derived(proposal?.status === 'pending' ? proposal : undefined);
+	/* While a pending proposal is open for review, the page shows it inline, where it would apply. */
+	const reviewInline = $derived(reviewOpen && !!pendingProposal);
 	const cutLabel = $derived(view?.versionLabel ?? cutLabels[selectedVersionId]);
 	const historyNewestFirst = $derived([...history].reverse());
 	/* The commit action appears only when the text differs from what is committed. */
@@ -159,13 +162,23 @@
 	const trackedChanges = $derived(
 		commitReview
 			? trackChanges(commitReview.baseElements, elements, commitReview.proposal.operations)
-			: recovery
+			: reviewInline && pendingProposal
 				? trackChanges(
-						recovery.savedElements,
-						recovery.kept.elements,
-						changesBetween(recovery.savedElements, recovery.kept.elements)
+						proposalBaseElements,
+						applyOperations(
+							proposalBaseElements,
+							pendingProposal.operations,
+							pendingProposal.scope
+						),
+						pendingProposal.operations
 					)
-				: []
+				: recovery
+					? trackChanges(
+							recovery.savedElements,
+							recovery.kept.elements,
+							changesBetween(recovery.savedElements, recovery.kept.elements)
+						)
+					: []
 	);
 	const keptOnDevice = $derived(dirty && keptVersion === editVersion);
 
@@ -836,6 +849,22 @@
 		await refresh();
 	}
 
+	/* Scrolls the page to a change in the inline review and focuses it. */
+	function showChange(operation: AuthoringOperation) {
+		const key =
+			operation.type === 'RemoveScreenplayElement'
+				? `removed:${operation.elementId}`
+				: operation.type === 'InsertScreenplayElement'
+					? operation.element.id
+					: 'elementId' in operation
+						? operation.elementId
+						: undefined;
+		if (!key) return;
+		const node = document.querySelector<HTMLElement>(`.page [data-key="${CSS.escape(key)}"]`);
+		node?.scrollIntoView({ block: 'center' });
+		node?.focus({ preventScroll: true });
+	}
+
 	async function acceptProposal() {
 		if (!pendingProposal) return;
 		busy = true;
@@ -1065,7 +1094,7 @@
 						></button
 					>
 				{/if}
-				{#if uncommitted && !commitReview && !recovery}
+				{#if uncommitted && !commitReview && !recovery && !reviewInline}
 					<!-- One deliberate commit action, only when there is something to commit. -->
 					<button
 						class="primary"
@@ -1088,14 +1117,20 @@
 					<!-- Leaving the page area saves at once instead of waiting for the typing pause. -->
 					<article
 						class="page"
-						class:reviewing={!!commitReview || !!recovery}
+						class:reviewing={!!commitReview || !!recovery || reviewInline}
 						aria-label="Screenplay"
 						onfocusout={autosaveAutomatically}
 					>
-						{#if commitReview || recovery}
+						{#if commitReview || recovery || reviewInline}
 							<!-- The changes inline, as they will be committed: inserted text marked, removed struck. -->
 							{#each trackedChanges as item (item.key)}
-								<div class="el tracked" data-kind={item.kind} data-change={item.state}>
+								<div
+									class="el tracked"
+									data-kind={item.kind}
+									data-change={item.state}
+									data-key={item.key}
+									tabindex="-1"
+								>
 									{#if item.moved}<span class="change-tag"><span>Moved</span></span>{/if}
 									{#if item.state === 'added'}<span class="change-tag"><span>Added</span></span
 										>{/if}
@@ -1111,12 +1146,12 @@
 							{/each}
 						{/if}
 						<!-- Kept mounted during the commit review, so Cancel returns to the same undo history. -->
-						<div class="editor" hidden={!!commitReview || !!recovery || !view}>
+						<div class="editor" hidden={!!commitReview || !!recovery || reviewInline || !view}>
 							<ScreenplayEditor
 								{elements}
 								contentKey={editorKey}
 								{committedKinds}
-								editable={!busy && !commitReview && !recovery && !!view}
+								editable={!busy && !commitReview && !recovery && !reviewInline && !!view}
 								onchange={(next) => {
 									elements = next;
 									edited();
@@ -1195,7 +1230,14 @@
 							{#each proposal.operations as operation, index (index)}
 								{@const review = describeOperation(operation, proposalBaseElements)}
 								<li>
-									<strong>{review.title}</strong>
+									{#if reviewInline && !marginless}
+										<!-- Jump to the change where it lives in the page. -->
+										<button class="link change-jump" onclick={() => showChange(operation)}
+											>{review.title}</button
+										>
+									{:else}
+										<strong>{review.title}</strong>
+									{/if}
 									{#if review.before}
 										<span class="review-label">Before</span>
 										<blockquote>{review.before}</blockquote>
@@ -1280,7 +1322,7 @@
 										onclick={() => {
 											restoreNote = '';
 											restoreTarget = revision;
-										}}>Restore…</button
+										}}>Preview</button
 									>
 								{/if}
 							{/snippet}
@@ -1611,6 +1653,19 @@
 	/* Template whitespace between the tag and the text must not render as a line. */
 	.tracked {
 		white-space: normal;
+	}
+	.tracked:focus {
+		outline: 2px solid var(--studio-focus);
+		outline-offset: 0.35ch;
+		border-radius: var(--studio-radius-sm);
+	}
+	.change-jump {
+		display: block;
+		padding: 0;
+		font-weight: 650;
+		text-align: left;
+		white-space: normal;
+		min-height: var(--studio-target-min);
 	}
 	.tracked ins {
 		text-decoration: underline;

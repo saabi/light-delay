@@ -37,6 +37,18 @@ test('a commit that conflicts stays pending and reviewable', async ({ browser })
 	await expect(review).toBeVisible();
 	await expect(review.getByText('Waiting for your review')).toBeVisible();
 	await expect(review.getByText(line)).toBeVisible();
+
+	/* The change is also shown where it lives, and the list jumps to it. */
+	const page_ = first.getByLabel('Screenplay', { exact: true });
+	const tracked = page_.locator('[data-change="revised"][data-kind="dialogue"]');
+	await expect(tracked.locator('ins')).not.toHaveCount(0);
+	await expect(first.getByRole('textbox', { name: 'Screenplay text' })).toBeHidden();
+	await expect(first.getByRole('button', { name: 'Commit changes' })).toHaveCount(0);
+	await review.getByRole('button', { name: 'Revise dialogue' }).click();
+	await expect(tracked).toBeFocused();
+	/* Closing the review returns to the editor with the author's text. */
+	await review.getByRole('button', { name: 'Close' }).click();
+	await expect(first.getByRole('textbox', { name: 'Screenplay text' })).toBeVisible();
 	await expect(el(first, 'dialogue')).toHaveText(line);
 
 	/* Reopening Studio still finds it, waiting for review. */
@@ -108,7 +120,7 @@ test('a commit can carry a note, written in the commit card and shown in History
 	await expect(noted).toContainText('Revised dialogue');
 
 	/* A restore can carry one too. */
-	await noted.getByRole('button', { name: 'Restore…' }).click();
+	await noted.getByRole('button', { name: 'Preview' }).click();
 	const preview = page.getByLabel('Restore preview');
 	await preview.getByRole('textbox', { name: 'Note (optional)' }).fill('Back to the held line');
 	await preview.getByRole('button', { name: 'Restore this version' }).click();

@@ -154,7 +154,7 @@ Adopted from Color Lab's accessibility controls and svizzle's accessibility menu
 
 | Preference | Values | Effect |
 | --- | --- | --- |
-| Text scale | 100, 112, 125, 150, 175 % | `--studio-font-scale` on the root |
+| Text scale | 100, 112, 125, 150, 175, 200 % | `--studio-font-scale` on the root |
 | Secondary contrast | normal, high, maximum | Overrides the muted text tokens |
 | Line height | 125, 145, 165, 185 % | `--studio-line-height` |
 | Interface typeface | Inter, plus reading-support faces (for example a dyslexia-friendly face) | Interface font family; the fonts loader loads it first and every sensor re-measures, so layout adapts to wider faces |
@@ -282,7 +282,7 @@ Per the [ADR-0004 addendum](ADR-0004-AUTHORING-STORY-STATE-AND-PROVISIONAL-WORK.
 
 ### Review and history
 
-- Changes are reviewed where they live: inline in the document, with removed text struck and inserted text marked, not only by colour. A side list may summarise several changes and jump to each.
+- Changes are reviewed where they live: inline in the document, with removed text struck and inserted text marked, not only by colour. A side list may summarise several changes and jump to each. While a pending proposal is open for review, the page shows it inline in place of the editor; where the page is beside the list (not `phone` or `compact`), each list entry jumps to its change. Closing the review returns to the editor.
 - History is newest first. Entries read like "You · 10:42 · Revised Mara's line"; they never show IDs. When the version has a note, the note is the entry's main line and the worked-out summary sits under it.
 - Restore shows the restored text before it happens and asks for confirmation. Restore is not offered for the current state.
 
@@ -480,7 +480,7 @@ Pass/fail for any Studio UI change. Each item should have an automated check whe
 2. One application bar; no second persistent bar; no footer; no single-item lens switcher.
 3. No `px` font sizes; no `vw` type; sizes in `rem`/`em`/`ch`/`lh`.
 4. Application layout comes only from the root `GlyphCapacitySensor` through the single `layoutId` function; adaptive regions only from their own sensor and declared capacity budget; no pixel, `rem`, `em` or `ch` queries for layout decisions.
-5. Raising text scale to 175% steps the layout down and keeps Write usable.
+5. Raising text scale to 175% and 200% steps the layout down and keeps Write usable.
 6. Screenplay page geometry is in `ch` of the screenplay face and matches the table.
 7. Fonts are bundled; nothing loads from remote services; measurements are final only after `document.fonts.ready`; the layout is hidden until the first `layoutId`.
 8. Readability preferences apply before first paint and persist locally.
