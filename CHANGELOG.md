@@ -7,6 +7,12 @@
 - Recorded the capacity sensor's temporary home in this repository's workspace and the containment requirement for sensed containers.
 - Added an ADR-0004 addendum for autosaved Drafts and a single commit action in Write. Documentation only.
 
+## 2026-10-01 — svelte-glyph-capacity workspace package
+
+- Added the owner's unpublished `svelte-glyph-capacity` sensor as an npm workspace package in `packages/svelte-glyph-capacity`, its temporary home until first release. It is not yet used by Studio.
+- Capacity is now measured on the content box: borders, padding and scrollbars reduce it; margins no longer do. The sensor skips no-op updates, validates `breakpoints`, and warns in development when a content-sized container oscillates.
+- Added fixture tests and a CI job that runs the package's format, type, package, publint, build and Playwright checks.
+
 ## 2026-10-01 — Owner review gate (agent account policy)
 
 - Added `.github/CODEOWNERS` (`* @saabi`) and an AGENTS.md **Review and merging** section: agents authenticate as `saabi-agents`, only the owner approves, and agents merge only when explicitly asked via `gh pr merge`.

@@ -54,3 +54,22 @@ jobs:
         run: |
           bash tools/deploy/package-stage.sh "$GITHUB_SHA" "$RUNNER_TEMP/studio-release.tgz"
           bash tools/deploy/smoke-stage.sh "$RUNNER_TEMP/studio-release.tgz" "$GITHUB_SHA"
+  glyph-capacity:
+    # svelte-glyph-capacity lives here until its first release; validate it like a standalone package.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run lint -w svelte-glyph-capacity
+      - run: npm run check -w svelte-glyph-capacity
+      - run: npm run package -w svelte-glyph-capacity
+      - run: npm run publint -w svelte-glyph-capacity
+      - run: npm run build -w svelte-glyph-capacity
+      - name: Install browser
+        run: npx playwright install --with-deps chromium
+      - name: Sensor, fixture and demo tests
+        run: npm test -w svelte-glyph-capacity
