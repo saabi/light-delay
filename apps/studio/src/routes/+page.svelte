@@ -25,6 +25,17 @@
 	import { autosize } from '$lib/autosize';
 	import { layoutFor, marginlessLayouts } from '$lib/layout';
 	import { sameScreenplayText } from '$lib/screenplay-text';
+	import {
+		applyReadability,
+		clearReadability,
+		defaultReadability,
+		faceLabels,
+		readabilityConfig,
+		readabilityOptions,
+		saveReadability,
+		type Readability
+	} from '$lib/readability';
+	import { loadInterfaceFace } from '$lib/readability-faces';
 
 	/** Until the product has a name and mark, the identity slot holds this neutral wordmark. */
 	const appName = 'Studio';
@@ -69,6 +80,17 @@
 	/* Layout comes only from the root sensor through layoutFor (STUDIO_DESIGN_SYSTEM.md). */
 	let capacity = $state<GlyphCapacityValue>(emptyGlyphCapacityValue);
 	let fontsReady = $state(false);
+
+	/* Readability preferences: per browser, applied before first paint by the head script. */
+	let readability = $state<Readability>({ ...defaultReadability });
+	let systemHighContrast = $state(false);
+	let readabilityOpen = $state(false);
+	let readabilityButton = $state<HTMLButtonElement>();
+	let readabilityPanel = $state<HTMLDivElement>();
+	const effectiveContrast = $derived(
+		readability.contrast ?? (systemHighContrast ? 'high' : 'normal')
+	);
+	const percent = (value: number) => `${Math.round(value * 100)}%`;
 	const layout = $derived(
 		fontsReady && capacity.text.maxChars > 0
 			? layoutFor({
@@ -122,8 +144,15 @@
 			connection = state;
 			if (state.kind === 'unavailable' && activeAction) retryAction = activeAction;
 		});
-		/* Measurements are final only once the bundled faces have loaded. */
-		void document.fonts.ready.then(() => (fontsReady = true));
+		readability = applyReadability(null, readabilityConfig);
+		const contrastQuery = matchMedia('(prefers-contrast: more)');
+		const followContrast = () => (systemHighContrast = contrastQuery.matches);
+		followContrast();
+		contrastQuery.addEventListener('change', followContrast);
+		/* Measurements are final only once the bundled faces, and the chosen interface face, load. */
+		void Promise.all([document.fonts.ready, loadInterfaceFace(readability.face)])
+			.catch((error) => console.error(error))
+			.finally(() => (fontsReady = true));
 		void openVersion(selectedVersionId);
 		/* Never lose typed text: warn before leaving while edits are not saved (review U2). */
 		const guardUnsaved = (event: BeforeUnloadEvent) => {
@@ -134,8 +163,47 @@
 		window.addEventListener('beforeunload', guardUnsaved);
 		return () => {
 			unsubscribe();
+			contrastQuery.removeEventListener('change', followContrast);
 			window.removeEventListener('beforeunload', guardUnsaved);
 		};
+	});
+
+	async function setReadability(patch: Partial<Readability>) {
+		const next = { ...readability, ...patch };
+		/* Load a new face before switching to it, so the sensors re-measure with the real face. */
+		if (next.face !== readability.face)
+			await loadInterfaceFace(next.face).catch((error) => console.error(error));
+		readability = applyReadability(next, readabilityConfig);
+		saveReadability(readability);
+	}
+
+	function resetReadability() {
+		clearReadability();
+		readability = applyReadability({ ...defaultReadability }, readabilityConfig);
+	}
+
+	async function openReadability() {
+		readabilityOpen = true;
+		cutMenuOpen = false;
+		await tick();
+		readabilityPanel?.querySelector<HTMLInputElement>('input:checked')?.focus();
+	}
+
+	function closeReadability() {
+		readabilityOpen = false;
+		readabilityButton?.focus();
+	}
+
+	/* Close the readability panel on any press outside it. */
+	$effect(() => {
+		if (!readabilityOpen) return;
+		const close = (event: PointerEvent) => {
+			const target = event.target as Node;
+			if (!readabilityPanel?.contains(target) && !readabilityButton?.contains(target))
+				readabilityOpen = false;
+		};
+		window.addEventListener('pointerdown', close);
+		return () => window.removeEventListener('pointerdown', close);
 	});
 
 	/* Close the cut menu on any press outside it. */
@@ -651,6 +719,90 @@
 			</p>
 
 			<div class="actions">
+				<span class="readability-anchor">
+					<button
+						bind:this={readabilityButton}
+						class="readability-button"
+						class:active={readabilityOpen}
+						aria-label="Readability"
+						aria-haspopup="dialog"
+						aria-expanded={readabilityOpen}
+						onclick={() => (readabilityOpen ? closeReadability() : openReadability())}
+						><span aria-hidden="true">Aa</span></button
+					>
+					{#if readabilityOpen}
+						<div
+							bind:this={readabilityPanel}
+							class="readability"
+							role="dialog"
+							aria-label="Readability"
+							tabindex="-1"
+							onkeydown={(event) => {
+								if (event.key === 'Escape') {
+									event.preventDefault();
+									closeReadability();
+								}
+							}}
+						>
+							<fieldset>
+								<legend>Text size</legend>
+								{#each readabilityOptions.scale as value (value)}
+									<label
+										><input
+											type="radio"
+											name="readability-scale"
+											checked={readability.scale === value}
+											onchange={() => setReadability({ scale: value })}
+										/>{percent(value)}</label
+									>
+								{/each}
+							</fieldset>
+							<fieldset>
+								<legend>Secondary text contrast</legend>
+								{#each readabilityOptions.contrast as value (value)}
+									<label
+										><input
+											type="radio"
+											name="readability-contrast"
+											checked={effectiveContrast === value}
+											onchange={() => setReadability({ contrast: value })}
+										/>{value[0].toUpperCase() + value.slice(1)}</label
+									>
+								{/each}
+							</fieldset>
+							<fieldset>
+								<legend>Line spacing</legend>
+								{#each readabilityOptions.lineHeight as value (value)}
+									<label
+										><input
+											type="radio"
+											name="readability-line-height"
+											checked={readability.lineHeight === value}
+											onchange={() => setReadability({ lineHeight: value })}
+										/>{percent(value)}</label
+									>
+								{/each}
+							</fieldset>
+							<fieldset>
+								<legend>Interface font</legend>
+								{#each readabilityOptions.face as value (value)}
+									<label
+										><input
+											type="radio"
+											name="readability-face"
+											checked={readability.face === value}
+											onchange={() => setReadability({ face: value })}
+										/>{faceLabels[value]}</label
+									>
+								{/each}
+							</fieldset>
+							<p class="readability-note">
+								Saved in this browser. The screenplay page keeps its own font and spacing.
+							</p>
+							<button class="link" onclick={resetReadability}>Reset to defaults</button>
+						</div>
+					{/if}
+				</span>
 				<button class:active={historyOpen} aria-pressed={historyOpen} onclick={toggleHistory}
 					>History</button
 				>
@@ -659,10 +811,13 @@
 					<button
 						class:active={reviewOpen}
 						aria-pressed={reviewOpen}
+						aria-label="Open review"
 						onclick={() => {
 							reviewOpen = true;
 							historyOpen = false;
-						}}>Open review</button
+						}}
+						><span class="label-long">Open review</span><span class="label-short">Review</span
+						></button
 					>
 				{:else}
 					<button
@@ -866,6 +1021,7 @@
 
 	/* ── Application bar ─────────────────────────────────────────────── */
 	.app-bar {
+		position: relative;
 		height: 2.75rem;
 		display: flex;
 		align-items: center;
@@ -972,7 +1128,7 @@
 	/* The save state gives up space first; the cut switcher and actions never shrink. */
 	.save-state {
 		margin: 0;
-		flex: 0 100 auto;
+		flex: 1 1 0;
 		min-width: 0;
 		display: flex;
 		align-items: center;
@@ -1014,6 +1170,65 @@
 	}
 	.actions button {
 		height: 2rem;
+	}
+	.readability-button span {
+		font-weight: 650;
+	}
+	/* The preferences panel never applies dense styling to itself. */
+	/* Anchored to the bar's right edge so it stays on screen at every size and scale. */
+	.readability {
+		position: absolute;
+		z-index: 30;
+		top: calc(100% + 0.25rem);
+		right: 0.5rem;
+		width: min(19rem, calc(100% - 1rem));
+		max-height: calc(100dvh - 4rem);
+		overflow: auto;
+		padding: 0.75rem 1rem 1rem;
+		border: 1px solid var(--studio-hairline);
+		border-radius: var(--studio-radius-md);
+		background: var(--studio-surface);
+		box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+		color: var(--studio-text);
+		font-size: var(--studio-text-ui);
+		line-height: max(1.45, var(--studio-line-height));
+	}
+	.readability fieldset {
+		margin: 0 0 0.75rem;
+		padding: 0;
+		border: 0;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.25rem 0.5rem;
+	}
+	.readability legend {
+		padding: 0;
+		margin-bottom: 0.25rem;
+		font-weight: 650;
+	}
+	.readability label {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.375rem;
+		min-height: var(--studio-target-min);
+		padding-right: 0.25rem;
+		cursor: pointer;
+	}
+	.readability input {
+		width: 1rem;
+		height: 1rem;
+		margin: 0;
+		accent-color: var(--studio-accent);
+	}
+	.readability-note {
+		margin: 0 0 0.5rem;
+		color: var(--studio-text);
+	}
+	.readability button.link {
+		height: auto;
+		min-height: var(--studio-target-min);
+		padding: 0;
+		color: var(--studio-accent);
 	}
 	.actions button.active {
 		color: var(--studio-text);
@@ -1144,7 +1359,7 @@
 		color: var(--studio-text-muted);
 		font-family: var(--studio-font-ui);
 		font-size: var(--studio-text-ui);
-		line-height: 1.2;
+		line-height: calc(var(--studio-line-height) * 0.83);
 		cursor: pointer;
 		padding: 0.25rem;
 		white-space: nowrap;
@@ -1261,7 +1476,7 @@
 		background: var(--studio-surface-subtle);
 		border-left: 2px solid var(--studio-hairline);
 		font-family: var(--studio-font-screenplay);
-		line-height: 1.4;
+		line-height: calc(var(--studio-line-height) * 0.97);
 	}
 	.change-list small {
 		margin-top: 0.5rem;
@@ -1312,7 +1527,7 @@
 		background: var(--studio-surface-subtle);
 		font-family: var(--studio-font-screenplay);
 		font-size: var(--studio-text-sm);
-		line-height: 1.45;
+		line-height: var(--studio-line-height);
 	}
 	.preview-text li {
 		margin: 0 0 0.75em;
@@ -1363,10 +1578,21 @@
 	[data-layout='compact'] .label-short {
 		display: inline;
 	}
+	/* On the smallest layouts at large text sizes the actions wrap to a second row, never off screen. */
+	[data-layout='phone'] .actions,
+	[data-layout='compact'] .actions {
+		flex-wrap: wrap;
+		justify-content: flex-end;
+		flex-shrink: 1;
+		min-width: 0;
+	}
 	[data-layout='phone'] .app-bar,
 	[data-layout='compact'] .app-bar {
-		gap: 0.5rem;
-		padding: 0 0.5rem;
+		height: auto;
+		min-height: 2.75rem;
+		flex-wrap: wrap;
+		gap: 0.25rem 0.5rem;
+		padding: 0.25rem 0.5rem;
 	}
 	[data-layout='phone'] .workspace,
 	[data-layout='compact'] .workspace,

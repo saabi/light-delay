@@ -57,6 +57,28 @@
 	background: var(--studio-bg);
 	font-synthesis: none;
 }
+/* Readability preferences (applied to the root by $lib/readability before first paint). */
+:root[data-contrast='high'] {
+	--studio-text-muted: #45453f;
+	--studio-hairline: #b4b4ad;
+}
+:root[data-contrast='maximum'] {
+	--studio-text-muted: #202124;
+	--studio-hairline: #6f6f69;
+}
+@media (prefers-contrast: more) {
+	:root:not([data-contrast]) {
+		--studio-text-muted: #45453f;
+		--studio-hairline: #b4b4ad;
+	}
+}
+:root[data-face='atkinson'] {
+	--studio-font-ui:
+		'Atkinson Hyperlegible Next', 'Inter Fallback', ui-sans-serif, system-ui, sans-serif;
+}
+:root[data-face='opendyslexic'] {
+	--studio-font-ui: 'OpenDyslexic', 'Inter Fallback', ui-sans-serif, system-ui, sans-serif;
+}
 html {
 	font-size: calc(100% * var(--studio-font-scale));
 }

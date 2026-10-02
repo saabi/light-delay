@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-01 — Studio readability preferences
+
+- Added per-browser text size, secondary contrast, line spacing and interface font (Inter, Atkinson Hyperlegible Next, OpenDyslexic), applied before first paint by an inline head script generated from the runtime code; unset contrast follows `prefers-contrast`.
+- Tests: boot-script unit tests, high/maximum contrast token checks, and browser tests for keyboard use, pre-paint application, contrast, spacing, face loading and re-measurement, reset, and phone layout at 175%.
+
 ## 2026-10-01 — Studio shell and identity (Phase 2)
 
 - One application bar with a neutral "Studio" identity slot, breadcrumb with a cut menu, and a single save state; removed the second bar, footer and single-lens tab.
