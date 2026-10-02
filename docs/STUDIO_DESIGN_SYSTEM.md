@@ -277,12 +277,13 @@ Per the [ADR-0004 addendum](ADR-0004-AUTHORING-STORY-STATE-AND-PROVISIONAL-WORK.
 
 - Typing autosaves the Draft (debounced). There is no Save button in the normal flow.
 - One deliberate **commit** action appears only when there are uncommitted changes. It shows the changes inline in the page as track changes and commits on confirmation. Its final label is chosen in the prototype ("Commit changes" is the working label).
+- The commit card has an optional one-line **note** ("What changed?"), focused when the card opens; Enter commits with or without it. Restore takes an optional note too. Later an assistant may pre-fill the note from the changes shown; the author always sees, edits or clears it before committing, and the suggestion is recorded as such.
 - The proposal review surface is for proposals that did not come from the author's own typing: AI suggestions, imports, collaborators.
 
 ### Review and history
 
 - Changes are reviewed where they live: inline in the document, with removed text struck and inserted text marked, not only by colour. A side list may summarise several changes and jump to each.
-- History is newest first. Entries read like "You · 10:42 · Revised Mara's line"; they never show IDs.
+- History is newest first. Entries read like "You · 10:42 · Revised Mara's line"; they never show IDs. When the version has a note, the note is the entry's main line and the worked-out summary sits under it.
 - Restore shows the restored text before it happens and asks for confirmation. Restore is not offered for the current state.
 
 ### Ambient intelligence

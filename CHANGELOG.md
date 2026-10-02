@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-02 — Notes on committed versions
+
+- Accepting a proposal or restoring can carry an optional note, stored on the ChangeSet and shown as the History entry's main line; the commit card and restore preview have a "What changed?" field.
+- Core in-memory and PostgreSQL tests, presenter and browser tests.
+
 ## 2026-10-02 — Studio keeps unsaved text on this device
 
 - Unconfirmed edits are mirrored to IndexedDB until the server confirms them; the save state shows "Offline — kept on this device" only when that is true, and closing no longer asks then.

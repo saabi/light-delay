@@ -122,6 +122,18 @@ describe('PostgreSQL authoring persistence', () => {
 		expect(rows.rows).toEqual(migrations.map((version) => ({ version })));
 	});
 
+	it('stores a note on a committed version and reads it back after reopening', async () => {
+		const app = application();
+		const pending = await propose(app);
+		const result = await app.handle(
+			{ type: 'AcceptProposal', projectId, proposalId: pending.id, note: 'Brighter lantern' },
+			accepter
+		);
+		expect(result).toMatchObject({ ok: true, kind: 'proposal-accepted' });
+		const history = await application().listHistory(projectId);
+		expect(history.at(-1)?.note).toEqual({ text: 'Brighter lantern' });
+	});
+
 	it('applies bounded server-side connection settings', async () => {
 		const bounded = createPostgresPool(url);
 		try {

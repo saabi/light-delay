@@ -98,6 +98,15 @@ describe('Studio authoring presentation', () => {
 			expect(text).not.toMatch(/element:|proposal:|revision/i);
 		});
 
+		it('carries the author’s note beside the worked-out summary', () => {
+			expect(entry(changeSet({ note: { text: 'Mara keeps the lamp lit' } }), base)).toEqual({
+				who: 'You',
+				when: '22:15',
+				summary: 'Revised dialogue',
+				note: 'Mara keeps the lamp lit'
+			});
+		});
+
 		it('counts further changes, names other cuts and restores', () => {
 			const two = changeSet({
 				operations: [

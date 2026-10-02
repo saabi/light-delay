@@ -1,5 +1,12 @@
 # Estado del proyecto
 
+## 2026-10-02 — Notes on committed versions (English source)
+
+- Core: `AcceptProposal` and `RestoreScreenplay` take an optional `note` (1–1000 characters, at least one visible), stored on the ChangeSet as `note: { text }`. Existing versions have none. No migration: ChangeSets are stored as schema-validated records and the field is optional, so schema version 1 still holds. `intent` stays the system's record of the change kind.
+- Studio: the commit card has an optional "Note (optional) — What changed?" field that takes focus when the card opens; Enter commits with or without a note. The restore preview takes a note too. History shows the note as the entry's main line with the worked-out summary under it.
+- Later (owner): an assistant pre-fills the note from the changes; the author sees and confirms it, and the suggestion's provenance is added to `note` as an optional field.
+- Tests: core in-memory and PostgreSQL round trips (including export and reconstruction, and rejection of empty or oversized notes), a presenter test, and a browser test for commit and restore notes in History.
+
 ## 2026-10-02 — Studio keeps unsaved text on this device (English source)
 
 - Every edit the server has not confirmed is mirrored to IndexedDB (per browser profile, one copy per cut per open page) and removed once the server confirms it. While Studio is unreachable the save state reads **Offline — kept on this device — Retry**, and closing or reloading no longer asks. Where the browser cannot keep text (storage blocked), the save state still says *Not saved* and leaving still asks.

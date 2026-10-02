@@ -450,6 +450,7 @@ export class AuthoringApplication {
 				requestId: context.requestId,
 				timestamp,
 				intent: `Accept screenplay proposal ${proposal.id}`,
+				...(command.note ? { note: { text: command.note } } : {}),
 				operations: proposal.operations,
 				preconditions: proposal.preconditions,
 				provenance: {
@@ -549,6 +550,7 @@ export class AuthoringApplication {
 			requestId: context.requestId,
 			timestamp,
 			intent: command.intent ?? `Restore screenplay to project revision ${command.targetRevision}`,
+			...(command.note ? { note: { text: command.note } } : {}),
 			operations: [operation],
 			preconditions,
 			provenance: {

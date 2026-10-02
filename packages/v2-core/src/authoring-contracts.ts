@@ -13,6 +13,8 @@ if (!FormatRegistry.Has(persistedInstantFormat)) {
 const persistedTextPattern =
 	'^(?=[\\s\\S]*\\S)(?:[^\\u0000\\uD800-\\uDFFF]|[\\uD800-\\uDBFF][\\uDC00-\\uDFFF])+$';
 const text = Type.String({ minLength: 1, maxLength: 1_000_000, pattern: persistedTextPattern });
+/* A note on a committed version: one or more visible characters, at most 1000. */
+const noteText = Type.String({ minLength: 1, maxLength: 1_000, pattern: persistedTextPattern });
 const id = Type.String({
 	minLength: 3,
 	maxLength: 161,
@@ -189,6 +191,13 @@ export const ChangeSetProvenanceSchema = Type.Union([
 	})
 ]);
 
+/**
+ * What the author says about a committed version, shown in History. Optional; written or confirmed
+ * by the committing principal. It is an object so that provenance (for example an assistant that
+ * suggested the text) can be added later without changing its shape.
+ */
+export const ChangeSetNoteSchema = object({ text: noteText });
+
 export const AuthoringChangeSetSchema = object({
 	schemaVersion: Type.Literal(1),
 	id,
@@ -199,6 +208,7 @@ export const AuthoringChangeSetSchema = object({
 	requestId: id,
 	timestamp,
 	intent: text,
+	note: Type.Optional(ChangeSetNoteSchema),
 	operations: Type.Array(AuthoringOperationSchema),
 	preconditions: Type.Array(AuthoringPreconditionSchema),
 	provenance: ChangeSetProvenanceSchema
@@ -321,7 +331,8 @@ export const RejectProposalCommandSchema = object({
 export const AcceptProposalCommandSchema = object({
 	type: Type.Literal('AcceptProposal'),
 	projectId: id,
-	proposalId: id
+	proposalId: id,
+	note: Type.Optional(noteText)
 });
 
 export const RestoreScreenplayCommandSchema = object({
@@ -330,7 +341,8 @@ export const RestoreScreenplayCommandSchema = object({
 	scope: DocumentVersionScopeSchema,
 	targetRevision: revision,
 	expectedDocumentVersion: revision,
-	intent: Type.Optional(text)
+	intent: Type.Optional(text),
+	note: Type.Optional(noteText)
 });
 
 export const AuthoringCommandSchema = Type.Union([
@@ -357,6 +369,7 @@ export type ProposalGenerator = Static<typeof ProposalGeneratorSchema>;
 export type ProposalSource = Static<typeof ProposalSourceSchema>;
 export type ChangeSetProvenance = Static<typeof ChangeSetProvenanceSchema>;
 export type AuthoringChangeSet = Static<typeof AuthoringChangeSetSchema>;
+export type ChangeSetNote = Static<typeof ChangeSetNoteSchema>;
 export type AuthoringProjectRevision = Static<typeof AuthoringProjectRevisionSchema>;
 export type AuthoringProjectState = Static<typeof AuthoringProjectStateSchema>;
 export type ScreenplayScopeCheckpoint = Static<typeof ScreenplayScopeCheckpointSchema>;
