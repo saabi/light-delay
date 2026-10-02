@@ -21,7 +21,8 @@ export default defineConfig({
 		{ name: 'shell', testMatch: '**/shell.e2e.ts', dependencies: ['write-correctness'] },
 		{ name: 'readability', testMatch: '**/readability.e2e.ts', dependencies: ['shell'] },
 		{ name: 'commit', testMatch: '**/commit.e2e.ts', dependencies: ['readability'] },
-		{ name: 'editor', testMatch: '**/editor.e2e.ts', dependencies: ['commit'] }
+		{ name: 'editor', testMatch: '**/editor.e2e.ts', dependencies: ['commit'] },
+		{ name: 'kept-text', testMatch: '**/kept-text.e2e.ts', dependencies: ['editor'] }
 	],
 	use: {
 		launchOptions: process.env.STUDIO_TEST_BROWSER
