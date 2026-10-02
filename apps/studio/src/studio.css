@@ -49,8 +49,7 @@
 	--studio-success: #3d7254;
 	--studio-radius-sm: 3px;
 	--studio-radius-md: 6px;
-	--studio-reading-width: 760px;
-	--studio-panel-width: 288px;
+	--studio-panel-width: 20rem;
 
 	font-family: var(--studio-font-ui);
 	line-height: var(--studio-line-height);

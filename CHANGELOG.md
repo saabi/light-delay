@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-01 — Studio shell and identity (Phase 2)
+
+- One application bar with a neutral "Studio" identity slot, breadcrumb with a cut menu, and a single save state; removed the second bar, footer and single-lens tab.
+- Layout from the root `GlyphCapacitySensor` through a tested `layoutFor` (compact/phone/narrow/regular/wide); hidden until measured; overlay panels that never move the page; screenplay page geometry in `ch`.
+- Plain vocabulary for states, outcomes and history, with browser tests for anatomy, layouts, text scaling, stability, page geometry and forbidden words.
+
 ## 2026-10-01 — Studio Write correctness fixes (U1–U8)
 
 - Screenplay elements grow with their text and have no resize grips; switching cut saves edits first and leaving with unsaved edits asks; Restore previews and confirms and is hidden for the current text; a pending proposal is reopened rather than duplicated.

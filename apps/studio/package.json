@@ -10,9 +10,9 @@
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "test:unit": "vitest run",
     "test:e2e": "playwright test",
-    "precheck": "npm run build --workspace @light-delay/v2-core",
-    "prebuild": "npm run build --workspace @light-delay/v2-core",
-    "predev": "npm run build --workspace @light-delay/v2-core",
+    "precheck": "npm run build --workspace @light-delay/v2-core && npm run package --workspace svelte-glyph-capacity",
+    "prebuild": "npm run build --workspace @light-delay/v2-core && npm run package --workspace svelte-glyph-capacity",
+    "predev": "npm run build --workspace @light-delay/v2-core && npm run package --workspace svelte-glyph-capacity",
     "test:e2e:postgres": "playwright test --config playwright.postgres.config.ts"
   },
   "devDependencies": {
@@ -29,6 +29,7 @@
     "@fontsource/courier-prime": "^5.3.0",
     "@light-delay/v2-core": "*",
     "@sveltejs/adapter-node": "^5.5.0",
-    "@sveltejs/kit": "^2.63.0"
+    "@sveltejs/kit": "^2.63.0",
+    "svelte-glyph-capacity": "0.1.0"
   }
 }

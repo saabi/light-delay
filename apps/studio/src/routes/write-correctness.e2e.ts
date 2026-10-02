@@ -1,4 +1,5 @@
 import { expect, test, type Page } from '@playwright/test';
+import { historyEntries, initialEntry, retry, save, saveState, switchCut } from './studio-e2e';
 
 /*
 	Regressions for the Studio Write UX review defects U1–U8
@@ -15,7 +16,7 @@ const initialDialogue = 'Leave the channel open.';
 async function open(page: Page) {
 	await page.goto('/');
 	await expect(page.getByLabel('dialogue')).toBeVisible();
-	await expect(page.getByRole('button', { name: 'Feature' })).toBeEnabled();
+	await expect(page.getByRole('button', { name: /^Cut: / })).toBeEnabled();
 	await page.evaluate(() => document.fonts.ready);
 }
 
@@ -49,11 +50,11 @@ for (const viewport of [
 test('U2: switching cut saves unsaved edits instead of discarding them', async ({ page }) => {
 	await open(page);
 	await page.getByLabel('dialogue').fill('Edited before switching cut.');
-	await page.getByRole('button', { name: 'Trailer' }).click();
+	await switchCut(page, 'Trailer');
 	await expect(page.getByLabel('dialogue')).toHaveCount(0);
-	await page.getByRole('button', { name: 'Feature' }).click();
+	await switchCut(page, 'Feature');
 	await expect(page.getByLabel('dialogue')).toHaveValue('Edited before switching cut.');
-	await expect(page.getByText('Unsaved Draft changes', { exact: true })).toHaveCount(0);
+	await expect(saveState(page)).not.toContainText('Unsaved');
 });
 
 test('U2: if the edits cannot be saved, Studio stays on the current cut with the text intact', async ({
@@ -72,15 +73,18 @@ test('U2: if the edits cannot be saved, Studio stays on the current cut with the
 			});
 		return route.continue();
 	});
-	await page.getByRole('button', { name: 'Trailer' }).click();
-	await expect(page.getByRole('button', { name: 'Retry now' })).toBeVisible({ timeout: 15_000 });
+	await page.getByRole('button', { name: /^Cut: / }).click();
+	await page.getByRole('menuitemradio', { name: 'Trailer' }).click();
+	await expect(saveState(page).getByRole('button', { name: 'Retry' })).toBeVisible({
+		timeout: 15_000
+	});
 	await expect(page.getByLabel('dialogue')).toHaveValue('Must not be lost.');
-	await expect(page.getByText('Screenplay · Feature cut')).toBeVisible();
+	await expect(page.getByRole('button', { name: 'Cut: Feature' })).toBeVisible();
 
 	await page.unroute('**/api/authoring');
-	await page.getByRole('button', { name: 'Retry now' }).click();
-	await expect(page.getByText('Screenplay · Trailer cut')).toBeVisible();
-	await page.getByRole('button', { name: 'Feature' }).click();
+	await retry(page);
+	await expect(page.getByRole('button', { name: 'Cut: Trailer' })).toBeVisible();
+	await switchCut(page, 'Feature');
 	await expect(page.getByLabel('dialogue')).toHaveValue('Must not be lost.');
 });
 
@@ -121,16 +125,15 @@ test('U5: restore shows the text first, asks, and is not offered for the current
 	await page.getByLabel('dialogue').fill(accepted);
 	await page.getByRole('button', { name: 'Review changes' }).click();
 	await page.getByRole('button', { name: 'Accept changes' }).click();
-	const acceptedStatus = page.getByText(/Accepted into project history as revision \d+/);
-	await expect(acceptedStatus).toBeVisible();
-	const revision = (await acceptedStatus.textContent())!.match(/revision (\d+)/)![1];
+	await expect(saveState(page)).toHaveText('Changes accepted');
 
 	await page.getByRole('button', { name: 'History' }).click();
-	const latest = page.getByRole('listitem').filter({ hasText: `Revision ${revision}` });
+	const latest = historyEntries(page).first();
+	await expect(latest).toContainText('Revised dialogue');
 	await expect(latest.getByText('Current text')).toBeVisible();
 	await expect(latest.getByRole('button')).toHaveCount(0);
 
-	const initial = page.getByRole('listitem').filter({ hasText: 'Initial screenplay' });
+	const initial = initialEntry(page);
 	await initial.getByRole('button', { name: 'Restore…' }).click();
 	const preview = page.getByLabel('Restore preview');
 	await expect(preview.getByText(initialDialogue)).toBeVisible();
@@ -141,7 +144,7 @@ test('U5: restore shows the text first, asks, and is not offered for the current
 
 	await initial.getByRole('button', { name: 'Restore…' }).click();
 	await page.getByRole('button', { name: 'Restore this version' }).click();
-	await expect(page.getByText(/Restored as new project revision \d+/)).toBeVisible();
+	await expect(saveState(page)).toHaveText('Restored');
 	await expect(page.getByLabel('dialogue')).toHaveValue(initialDialogue);
 	await expect(initial.getByText('Current text')).toBeVisible();
 	await expect(initial.getByRole('button')).toHaveCount(0);
@@ -153,7 +156,7 @@ test('U6: a pending proposal is reopened, not proposed again', async ({ page }) 
 	await page.getByRole('button', { name: 'Review changes' }).click();
 	await expect(page.getByRole('button', { name: 'Accept changes' })).toBeVisible();
 	await expect(page.getByRole('button', { name: 'Review changes' })).toHaveCount(0);
-	await page.getByLabel('Proposal review').getByRole('button', { name: 'Close' }).click();
+	await page.getByLabel('Changes to review').getByRole('button', { name: 'Close' }).click();
 	const reopen = page.getByRole('button', { name: 'Open review' });
 	await expect(reopen).not.toHaveClass(/primary/);
 	await reopen.click();
@@ -168,7 +171,7 @@ for (const viewport of [
 		await page.setViewportSize(viewport);
 		await open(page);
 		await page.getByRole('button', { name: 'History' }).click();
-		await expect(page.getByLabel('Project history')).toBeVisible();
+		await expect(page.getByLabel('History')).toBeVisible();
 		const tooSmall = await page.evaluate(() => {
 			const small: string[] = [];
 			for (const node of document.querySelectorAll('body *')) {
@@ -204,7 +207,7 @@ for (const viewport of [
 		expect(outline.width).toBeGreaterThanOrEqual(2);
 	});
 
-test('U8: the connectivity notice does not move the document', async ({ page }) => {
+test('U8: connectivity states do not move the document', async ({ page }) => {
 	await open(page);
 	const dialogue = page.getByLabel('dialogue');
 	await dialogue.fill('Typing during an outage.');
@@ -216,11 +219,9 @@ test('U8: the connectivity notice does not move the document', async ({ page }) 
 			body: JSON.stringify({ code: 'STORE_UNAVAILABLE', message: 'Database unavailable' })
 		})
 	);
-	await page.getByRole('button', { name: 'Save Draft' }).click();
-	const notice = page.getByRole('status');
-	await expect(notice).toBeVisible();
+	await save(page);
+	await expect(saveState(page)).toContainText('Reconnecting…');
 	expect(await dialogue.boundingBox()).toEqual(before);
-	await expect(notice).toContainText('Database unavailable', { timeout: 15_000 });
+	await expect(saveState(page)).toContainText('Not saved', { timeout: 15_000 });
 	expect(await dialogue.boundingBox()).toEqual(before);
-	expect(await notice.evaluate((node) => getComputedStyle(node).position)).toBe('fixed');
 });

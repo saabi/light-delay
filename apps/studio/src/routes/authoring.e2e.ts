@@ -1,5 +1,6 @@
 import { expect, test, type Page } from '@playwright/test';
 import { authoringFixtureIds } from '@light-delay/v2-core';
+import { historyEntries, initialEntry, retry, save, saveState, switchCut } from './studio-e2e';
 
 async function historyCount(page: Page): Promise<number> {
 	return page.evaluate(async (projectId) => {
@@ -19,22 +20,22 @@ test('saves, proposes, rejects, accepts, isolates cuts, and restores screenplay 
 	const dialogue = page.getByLabel('dialogue');
 	await expect(dialogue).toHaveValue('Leave the channel open.');
 	await dialogue.fill('Keep the channel alive.');
-	await expect(page.getByText('Unsaved Draft changes', { exact: true })).toBeVisible();
-	await page.getByRole('button', { name: 'Save Draft' }).click();
-	await expect(page.getByText('Draft saved', { exact: true })).toBeVisible();
+	await expect(saveState(page)).toContainText('Unsaved changes');
+	await save(page);
+	await expect(saveState(page)).toHaveText('Saved');
 	await page.reload();
 	await expect(dialogue).toHaveValue('Keep the channel alive.');
-	await expect(page.getByText('Draft saved', { exact: true })).toBeVisible();
+	await expect(saveState(page)).toHaveText('Saved');
 	await page.getByRole('button', { name: 'Review changes' }).click();
 	await page.reload();
 	await expect(page.getByRole('heading', { name: '1 screenplay change' })).toBeVisible();
-	const review = page.getByLabel('Proposal review');
+	const review = page.getByLabel('Changes to review');
 	await expect(review.getByText('Revise dialogue')).toBeVisible();
 	await expect(review.getByText('Before')).toBeVisible();
 	await expect(review.getByText('Leave the channel open.')).toBeVisible();
 	await expect(review.getByText('After')).toBeVisible();
 	await expect(review.getByText('Keep the channel alive.')).toBeVisible();
-	await expect(page.getByText('Proposal ready for review — not yet accepted')).toBeVisible();
+	await expect(review.getByText('Waiting for your review')).toBeVisible();
 	const accept = page.getByRole('button', { name: 'Accept changes' });
 	await expect(accept).toBeVisible();
 	const acceptColors = await accept.evaluate((element) => {
@@ -44,32 +45,27 @@ test('saves, proposes, rejects, accepts, isolates cuts, and restores screenplay 
 	expect(acceptColors.backgroundColor).not.toBe('rgba(0, 0, 0, 0)');
 	expect(acceptColors.backgroundColor).not.toBe(acceptColors.color);
 	await page.getByRole('button', { name: 'Reject' }).click();
-	await expect(
-		page.getByText('Proposal rejected — authoritative screenplay unchanged')
-	).toBeVisible();
+	await expect(saveState(page)).toHaveText('Rejected · the screenplay is unchanged');
 
 	await page.getByRole('button', { name: 'Review changes' }).click();
 	await page.getByRole('button', { name: 'Accept changes' }).click();
-	await expect(page.getByText(/Accepted into project history as revision 1/)).toBeVisible();
+	await expect(saveState(page)).toHaveText('Changes accepted');
 	await expect(dialogue).toHaveValue('Keep the channel alive.');
 
-	await page.getByRole('button', { name: 'Trailer' }).click();
+	await switchCut(page, 'Trailer');
 	await expect(page.getByLabel('dialogue')).toHaveCount(0);
-	await page.getByRole('button', { name: 'Feature' }).click();
+	await switchCut(page, 'Feature');
 	await expect(page.getByLabel('dialogue')).toHaveValue('Keep the channel alive.');
 
 	await page.getByRole('button', { name: 'History' }).click();
-	await page
-		.getByRole('listitem')
-		.filter({ hasText: 'Initial screenplay' })
-		.getByRole('button', { name: 'Restore…' })
-		.click();
+	await initialEntry(page).getByRole('button', { name: 'Restore…' }).click();
 	await page.getByRole('button', { name: 'Restore this version' }).click();
-	await expect(page.getByText(/Restored as new project revision 2/)).toBeVisible();
+	await expect(saveState(page)).toHaveText('Restored');
+	await expect(historyEntries(page)).toHaveCount(3);
 	await expect(page.getByLabel('dialogue')).toHaveValue('Leave the channel open.');
 });
 
-test('Retry now refreshes accepted state without resending a committed acceptance', async ({
+test('Retry refreshes accepted state without resending a committed acceptance', async ({
 	page
 }) => {
 	await page.goto('/');
@@ -95,21 +91,19 @@ test('Retry now refreshes accepted state without resending a committed acceptanc
 		} else await route.continue();
 	});
 	await page.getByRole('button', { name: 'Accept changes' }).click();
-	await expect(page.getByText(/Accepted into project history.*refresh pending/i)).toBeVisible({
+	await expect(saveState(page)).toContainText('Changes accepted · couldn’t refresh', {
 		timeout: 15000
 	});
 	readsUnavailable = false;
-	await page.getByRole('button', { name: 'Retry now' }).click();
+	await retry(page);
 	await expect(dialogue).toHaveValue('Accepted after refresh.');
 	expect(acceptCount).toBe(1);
 	expect(await historyCount(page)).toBe(historyBefore + 1);
 	await page.getByRole('button', { name: 'History' }).click();
-	await expect(page.getByText(/Accepted into project history as revision/)).toBeVisible();
+	await expect(historyEntries(page).first()).toContainText('Revised dialogue');
 });
 
-test('Retry now refreshes restored editor without resending a committed restore', async ({
-	page
-}) => {
+test('Retry refreshes restored editor without resending a committed restore', async ({ page }) => {
 	await page.goto('/');
 	const dialogue = page.getByLabel('dialogue');
 	const original = 'Leave the channel open.';
@@ -136,25 +130,17 @@ test('Retry now refreshes restored editor without resending a committed restore'
 			});
 		} else await route.continue();
 	});
-	await page
-		.getByRole('listitem')
-		.filter({ hasText: 'Initial screenplay' })
-		.getByRole('button', { name: 'Restore…' })
-		.click();
+	await initialEntry(page).getByRole('button', { name: 'Restore…' }).click();
 	await page.getByRole('button', { name: 'Restore this version' }).click();
-	await expect(page.getByText(/Restored as new project revision.*refresh pending/i)).toBeVisible({
-		timeout: 15000
-	});
+	await expect(saveState(page)).toContainText('Restored · couldn’t refresh', { timeout: 15000 });
 	readsUnavailable = false;
-	await page.getByRole('button', { name: 'Retry now' }).click();
+	await retry(page);
 	await expect(dialogue).toHaveValue(original);
 	expect(restoreCount).toBe(1);
 	expect(await historyCount(page)).toBe(historyBefore + 1);
 });
 
-test('keeps unsaved editor text through exhausted retries and saves on Retry now', async ({
-	page
-}) => {
+test('keeps unsaved editor text through exhausted retries and saves on Retry', async ({ page }) => {
 	await page.goto('/');
 	const dialogue = page.getByLabel('dialogue');
 	await expect(dialogue).toBeVisible();
@@ -170,14 +156,12 @@ test('keeps unsaved editor text through exhausted retries and saves on Retry now
 			});
 		else await route.continue();
 	});
-	await page.getByRole('button', { name: 'Save Draft' }).click();
-	await expect(
-		page.getByText('Database unavailable. Unsaved changes are held in this tab until they save.')
-	).toBeVisible({ timeout: 15_000 });
+	await save(page);
+	await expect(saveState(page)).toContainText('Not saved', { timeout: 15_000 });
 	await expect(dialogue).toHaveValue(text);
 	unavailable = false;
-	await page.getByRole('button', { name: 'Retry now' }).click();
-	await expect(page.getByText('Draft saved', { exact: true })).toBeVisible();
+	await retry(page);
+	await expect(saveState(page)).toHaveText('Saved');
 	await expect(dialogue).toHaveValue(text);
-	await expect(page.getByRole('button', { name: 'Retry now' })).toHaveCount(0);
+	await expect(saveState(page).getByRole('button', { name: 'Retry' })).toHaveCount(0);
 });
