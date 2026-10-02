@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import type { ScreenplayElement } from '@light-delay/v2-core';
-import { describeOperation, draftSavedMessage } from './authoring-presenter.js';
+import type { AuthoringChangeSet, ScreenplayElement as Element } from '@light-delay/v2-core';
+import { describeHistoryEntry, describeOperation, explainError } from './authoring-presenter.js';
 
 const scope = { documentId: 'document:test', versionId: 'version:feature' };
 const base: ScreenplayElement[] = [
@@ -66,7 +67,84 @@ describe('Studio authoring presentation', () => {
 		).toMatchObject({ title: 'Move dialogue', detail: 'Move to the start of the screenplay' });
 	});
 
-	it('states the in-memory Draft durability boundary truthfully', () => {
-		expect(draftSavedMessage()).toBe('Draft saved');
+	describe('history entries', () => {
+		const now = new Date('2026-10-01T22:30:00');
+		const cutLabels = { 'version:feature': 'Feature', 'version:trailer': 'Trailer' };
+		const changeSet = (overrides: Partial<AuthoringChangeSet>) =>
+			({
+				principal: { kind: 'human', id: 'user:local-filmmaker' },
+				timestamp: '2026-10-01T22:15:00',
+				operations: [
+					{ type: 'UpdateScreenplayElementText', scope, elementId: 'element:dialogue', text: 'x' }
+				],
+				provenance: { kind: 'proposal-acceptance' },
+				...overrides
+			}) as unknown as AuthoringChangeSet;
+		const entry = (value: AuthoringChangeSet, baseElements?: readonly Element[]) =>
+			describeHistoryEntry(value, {
+				viewedVersionId: 'version:feature',
+				cutLabels,
+				baseElements,
+				now
+			});
+
+		it('reads like "You · 22:15 · Revised dialogue" and never shows IDs', () => {
+			expect(entry(changeSet({}), base)).toEqual({
+				who: 'You',
+				when: '22:15',
+				summary: 'Revised dialogue'
+			});
+			const text = JSON.stringify(entry(changeSet({}), base));
+			expect(text).not.toMatch(/element:|proposal:|revision/i);
+		});
+
+		it('counts further changes, names other cuts and restores', () => {
+			const two = changeSet({
+				operations: [
+					{ type: 'UpdateScreenplayElementText', scope, elementId: 'element:dialogue', text: 'x' },
+					{ type: 'RemoveScreenplayElement', scope, elementId: 'element:action' }
+				] as AuthoringChangeSet['operations']
+			});
+			expect(entry(two, base).summary).toBe('Revised dialogue and 1 more change');
+			const trailer = { ...scope, versionId: 'version:trailer' };
+			expect(
+				entry(
+					changeSet({
+						operations: [
+							{ type: 'RemoveScreenplayElement', scope: trailer, elementId: 'element:action' }
+						] as AuthoringChangeSet['operations']
+					}),
+					base
+				).summary
+			).toBe('Changed the Trailer cut');
+			expect(
+				entry(
+					changeSet({
+						provenance: { kind: 'scoped-restore', scope } as AuthoringChangeSet['provenance']
+					})
+				).summary
+			).toBe('Restored an earlier version');
+		});
+
+		it('shows the date for older entries and names non-human authors', () => {
+			const older = entry(
+				changeSet({
+					timestamp: '2026-09-28T09:05:00',
+					principal: { kind: 'agent', id: 'agent:x' }
+				}),
+				base
+			);
+			expect(older.who).toBe('Assistant');
+			expect(older.when).toMatch(/^28 Sept?, 09:05$/);
+		});
+	});
+});
+
+describe('explainError', () => {
+	it('never surfaces internal vocabulary', () => {
+		for (const code of ['NO_CHANGES', 'CONFLICT', 'PROPOSAL_ALREADY_RESOLVED', 'INVALID_DRAFT'])
+			expect(
+				explainError({ code, message: 'Draft matches the authoritative screenplay' })
+			).not.toMatch(/authoritative|draft|proposal|revision/i);
 	});
 });

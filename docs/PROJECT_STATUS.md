@@ -1,5 +1,13 @@
 # Estado del proyecto
 
+## 2026-10-01 — Studio shell and identity (Phase 2) (English source)
+
+- One application bar (2.75rem): a neutral "Studio" identity slot (name and mark still undecided), a `Project / Document · Cut ▾` breadcrumb with a keyboard-accessible cut menu, and a single save state. No second bar, no footer, no single-lens tab; the document title is a running header above the page.
+- Layout comes only from a root `GlyphCapacitySensor` (`svelte-glyph-capacity` workspace package) through a tested `layoutFor` function: compact, phone, narrow, regular, wide. The shell stays hidden until the first measurement after fonts load. Panels overlay the page, so opening History, a review or the cut menu never moves the document.
+- The screenplay page is set in `ch` of Courier Prime at 1rem: 85ch page, 15ch/10ch margins, 60ch action, dialogue at 10ch/35ch, cue at 22ch, single spacing. Narrow layouts drop the paper margins and compress indents.
+- Plain vocabulary everywhere: save states (Saved, Saving…, Unsaved changes, Reconnecting…, Not saved — Retry), outcomes (Changes accepted, Restored), and history entries such as "You · 22:15 · Revised dialogue", newest first, without IDs or revision numbers. A browser test checks every normal surface for the forbidden words.
+- Interim, until later phases: saving is still manual (the Save action sits in the save state until autosave, Phase 3); the project and document crumbs are plain text while there is only one of each; readability preferences are a follow-up. At 175% text scale a landscape desktop window measures as `compact` under the documented rule; recalibrate thresholds when the faces and name are final.
+
 ## 2026-10-01 — Studio Write correctness fixes U1–U8 (English source)
 
 - Phase 1 of the [Write UX review](reviews/2026-10-01-studio-write-ux-review-claude.md) disposition. Each defect has a browser regression that fails on the previous page:

@@ -131,14 +131,13 @@ test('PostgreSQL N1: Accept and Restore show authoritative success after a late 
 	await delayedCommit('AcceptProposal', () =>
 		page.getByRole('button', { name: 'Accept changes' }).click()
 	);
-	await expect(
-		page.getByText('Accepted into project history as revision 1', { exact: true })
-	).toBeVisible();
+	await expect(page.getByRole('status')).toHaveText('Changes accepted');
 	await expect(dialogue).toHaveValue('N1 browser accepted text.');
 	await expect(page.getByRole('button', { name: 'Accept changes' })).toHaveCount(0);
-	await expect(page.getByText(/Proposal not accepted/)).toHaveCount(0);
+	await expect(page.getByText(/Couldn’t accept/)).toHaveCount(0);
 	await page.getByRole('button', { name: 'History' }).click();
 	await page
+		.getByLabel('History')
 		.getByRole('listitem')
 		.filter({ hasText: 'Initial screenplay' })
 		.getByRole('button', { name: 'Restore…' })
@@ -146,9 +145,9 @@ test('PostgreSQL N1: Accept and Restore show authoritative success after a late 
 	await delayedCommit('RestoreScreenplay', () =>
 		page.getByRole('button', { name: 'Restore this version' }).click()
 	);
-	await expect(page.getByText('Restored as new project revision 2', { exact: true })).toBeVisible();
+	await expect(page.getByRole('status')).toHaveText('Restored');
 	await expect(dialogue).toHaveValue('Leave the channel open.');
-	await expect(page.getByText(/Restore not applied/)).toHaveCount(0);
+	await expect(page.getByText(/Couldn’t restore/)).toHaveCount(0);
 	const history = await db.query(
 		'SELECT record FROM authoring_change_sets ORDER BY revision_number'
 	);
