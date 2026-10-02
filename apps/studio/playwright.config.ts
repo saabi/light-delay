@@ -18,7 +18,8 @@ export default defineConfig({
 			testMatch: '**/write-correctness.e2e.ts',
 			dependencies: ['authoring']
 		},
-		{ name: 'shell', testMatch: '**/shell.e2e.ts', dependencies: ['write-correctness'] }
+		{ name: 'shell', testMatch: '**/shell.e2e.ts', dependencies: ['write-correctness'] },
+		{ name: 'readability', testMatch: '**/readability.e2e.ts', dependencies: ['shell'] }
 	],
 	use: {
 		launchOptions: process.env.STUDIO_TEST_BROWSER

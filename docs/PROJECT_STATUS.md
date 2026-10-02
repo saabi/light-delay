@@ -1,5 +1,11 @@
 # Estado del proyecto
 
+## 2026-10-01 — Studio readability preferences (English source)
+
+- An "Aa" panel in the application bar sets text size (100–175%), secondary text contrast (normal, high, maximum), line spacing (125–185%) and the interface font (Inter, Atkinson Hyperlegible Next, OpenDyslexic; all OFL, bundled WOFF2, loaded only when chosen). Unset contrast follows `prefers-contrast`.
+- Preferences are stored in this browser only. One self-contained function applies them: inlined into the page head by `hooks.server.ts`, so the first paint already has the stored scale, contrast, spacing and face, and reused at runtime. The shell waits for the chosen face before its first measurement, and the sensors re-measure when the face or size changes.
+- The screenplay page keeps Courier Prime and single spacing; interface line heights are multiples of the preference. On phone and compact layouts at large sizes the bar's actions wrap to a second row instead of overflowing.
+
 ## 2026-10-01 — Studio shell and identity (Phase 2) (English source)
 
 - One application bar (2.75rem): a neutral "Studio" identity slot (name and mark still undecided), a `Project / Document · Cut ▾` breadcrumb with a keyboard-accessible cut menu, and a single save state. No second bar, no footer, no single-lens tab; the document title is a running header above the page.
