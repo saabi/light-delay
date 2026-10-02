@@ -1,6 +1,6 @@
 import { expect, test, type Page } from '@playwright/test';
 import { layoutFor, type LayoutId } from '../lib/layout';
-import { commit, commitCard, historyEntries, initialEntry, saveState } from './studio-e2e';
+import { commit, commitCard, el, historyEntries, initialEntry, saveState } from './studio-e2e';
 
 /*
 	Phase 2 (shell and identity), checked against STUDIO_DESIGN_SYSTEM.md: shell anatomy, layout from
@@ -11,7 +11,7 @@ import { commit, commitCard, historyEntries, initialEntry, saveState } from './s
 async function open(page: Page) {
 	await page.goto('/');
 	await expect(page.locator('.shell[data-layout]')).toBeVisible();
-	await expect(page.getByLabel('dialogue')).toBeVisible();
+	await expect(el(page, 'dialogue')).toBeVisible();
 	await expect(page.getByRole('button', { name: /^Cut: / })).toBeEnabled();
 }
 
@@ -52,7 +52,7 @@ test('one application bar with a fixed identity slot, no second bar and no foote
 
 test('the save state appears once, right after the breadcrumb', async ({ page }) => {
 	await open(page);
-	await page.getByLabel('dialogue').fill(`Shell save ${Date.now()}.`);
+	await el(page, 'dialogue').fill(`Shell save ${Date.now()}.`);
 	await expect(saveState(page)).toHaveText('Saving…');
 	await expect(page.getByRole('status')).toHaveCount(1);
 	const order = await page
@@ -138,7 +138,7 @@ test('raising the text scale steps the layout down and keeps Write usable', asyn
 	expect(after.maxChars).toBeLessThan(before.maxChars);
 	expect(after.layout).toBe(layoutFor(after));
 	expect(['narrow', 'phone', 'compact']).toContain(after.layout);
-	await expect(page.getByLabel('dialogue')).toBeVisible();
+	await expect(el(page, 'dialogue')).toBeVisible();
 	const overflow = await page
 		.locator('.app-bar')
 		.evaluate((node) => node.scrollWidth - node.clientWidth);
@@ -166,7 +166,7 @@ for (const [width, height] of [
 	test(`opening panels and menus never moves the document at ${width}px`, async ({ page }) => {
 		await page.setViewportSize({ width, height });
 		await open(page);
-		const dialogue = page.getByLabel('dialogue');
+		const dialogue = el(page, 'dialogue');
 		const before = await dialogue.boundingBox();
 		await page.getByRole('button', { name: 'History' }).click();
 		await expect(page.getByLabel('History')).toBeVisible();
@@ -194,9 +194,9 @@ test('screenplay page geometry is set in characters of the screenplay face', asy
 		const style = getComputedStyle(page);
 		const textLeft = pageBox.left + parseFloat(style.paddingLeft);
 		const box = (selector: string) => document.querySelector(selector)!.getBoundingClientRect();
-		const action = box('.element.action');
-		const dialogue = box('.element.dialogue');
-		const cue = box('.element.character textarea');
+		const action = box('.screenplay-editor .el[data-kind="action"]');
+		const dialogue = box('.screenplay-editor .el[data-kind="dialogue"]');
+		const cue = box('.screenplay-editor .el[data-kind="character"]');
 		return {
 			page: pageBox.width / ch,
 			left: parseFloat(style.paddingLeft) / ch,
@@ -229,7 +229,7 @@ test('normal surfaces use the plain vocabulary and never show IDs', async ({ pag
 	await open(page);
 	expect(await visibleText(page)).not.toMatch(forbidden);
 
-	await page.getByLabel('dialogue').fill(`Vocabulary line ${Date.now()}.`);
+	await el(page, 'dialogue').fill(`Vocabulary line ${Date.now()}.`);
 	expect(await visibleText(page)).not.toMatch(forbidden);
 
 	await page.getByRole('button', { name: 'Commit changes' }).click();
@@ -252,7 +252,7 @@ test('normal surfaces use the plain vocabulary and never show IDs', async ({ pag
 
 test('history reads newest first, in plain language', async ({ page }) => {
 	await open(page);
-	await page.getByLabel('dialogue').fill(`Newest ${Date.now()}.`);
+	await el(page, 'dialogue').fill(`Newest ${Date.now()}.`);
 	await commit(page);
 	await page.getByRole('button', { name: 'History' }).click();
 	const entries = historyEntries(page);

@@ -255,7 +255,7 @@ The resting Write surface must behave as a professional screenplay editor, not a
 
 - The screenplay is **one continuous editable document**. Elements are typed blocks within it, not separate input fields.
 - **Enter** ends the current element and starts the conventional next one: action → action, character cue → dialogue, dialogue → action, scene heading → action.
-- **Tab / Shift+Tab** on an empty or new element cycles its type (action → character → transition → scene heading …), following screenwriting-software convention.
+- **Tab / Shift+Tab** on an empty or new element cycles its type (action → character → transition → scene heading …), following screenwriting-software convention. Within speech, Tab swaps dialogue and parenthetical, so an empty line under a cue becomes a parenthetical with one Tab. Tab on an element with text moves focus on as usual, so the editor never traps the keyboard.
 - Every element type can be created from the keyboard. No element type depends on a button.
 - Selection, clipboard, undo and redo work across elements.
 - Each block keeps its stable element ID underneath. Splitting, merging and pasting must preserve or explicitly create IDs, so semantic anchors survive editing.

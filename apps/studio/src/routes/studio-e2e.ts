@@ -1,6 +1,12 @@
 import { expect, type Page } from '@playwright/test';
+import type { ScreenplayElementKind } from '@light-delay/v2-core';
 
 /* Shared selectors for the Studio Write browser tests. */
+
+/** The continuous screenplay editor, and its elements of one kind (Playwright fills them in place). */
+export const editor = (page: Page) => page.getByRole('textbox', { name: 'Screenplay text' });
+export const el = (page: Page, kind: ScreenplayElementKind) =>
+	editor(page).locator(`.el[data-kind="${kind}"]`);
 
 export const saveState = (page: Page) => page.getByRole('status');
 

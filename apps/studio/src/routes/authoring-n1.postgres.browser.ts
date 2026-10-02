@@ -7,6 +7,7 @@ import { expect, test } from '@playwright/test';
 import { authoringFixtureIds as ids } from '@light-delay/v2-core';
 import { migrateAuthoringDatabase } from '../../../../packages/v2-core/dist/postgres-migrations.js';
 import { postgresFaultProxy } from '../../../../packages/v2-core/test-support/postgres-fault-proxy';
+import { el } from './studio-e2e';
 
 const url = process.env.TEST_DATABASE_URL;
 if (!url) throw new Error('TEST_DATABASE_URL is required for PostgreSQL browser tests');
@@ -80,8 +81,8 @@ test('PostgreSQL N1: Accept and Restore show authoritative success after a late 
 	page
 }) => {
 	await page.goto(origin);
-	const dialogue = page.getByLabel('dialogue');
-	await expect(dialogue).toHaveValue('Leave the channel open.');
+	const dialogue = el(page, 'dialogue');
+	await expect(dialogue).toHaveText('Leave the channel open.');
 	await dialogue.fill('N1 browser accepted text.');
 	await expect(page.getByRole('status')).toHaveText('Saved');
 	/* Commit, step 1 (save and prepare) runs before the proxy is armed, so the held COMMIT is the accept. */
@@ -135,7 +136,7 @@ test('PostgreSQL N1: Accept and Restore show authoritative success after a late 
 		commitCard.getByRole('button', { name: 'Commit' }).click()
 	);
 	await expect(page.getByRole('status')).toHaveText('Committed');
-	await expect(dialogue).toHaveValue('N1 browser accepted text.');
+	await expect(dialogue).toHaveText('N1 browser accepted text.');
 	await expect(commitCard).toHaveCount(0);
 	await expect(page.getByText(/Couldn’t commit/)).toHaveCount(0);
 	await page.getByRole('button', { name: 'History' }).click();
@@ -149,7 +150,7 @@ test('PostgreSQL N1: Accept and Restore show authoritative success after a late 
 		page.getByRole('button', { name: 'Restore this version' }).click()
 	);
 	await expect(page.getByRole('status')).toHaveText('Restored');
-	await expect(dialogue).toHaveValue('Leave the channel open.');
+	await expect(dialogue).toHaveText('Leave the channel open.');
 	await expect(page.getByText(/Couldn’t restore/)).toHaveCount(0);
 	const history = await db.query(
 		'SELECT record FROM authoring_change_sets ORDER BY revision_number'

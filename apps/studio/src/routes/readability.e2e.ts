@@ -1,12 +1,13 @@
 import { expect, test, type Page } from '@playwright/test';
 import { layoutFor, type LayoutId } from '../lib/layout';
+import { el } from './studio-e2e';
 
 /* Readability preferences (STUDIO_DESIGN_SYSTEM.md § Readability preferences). */
 
 async function open(page: Page) {
 	await page.goto('/');
 	await expect(page.locator('.shell[data-layout]')).toBeVisible();
-	await expect(page.getByLabel('dialogue')).toBeVisible();
+	await expect(el(page, 'dialogue')).toBeVisible();
 }
 
 async function openPanel(page: Page) {
@@ -102,7 +103,7 @@ test('line spacing applies to the interface but not to the screenplay page', asy
 		};
 		return {
 			bar: ratio(document.querySelector('.save-state')!),
-			screenplay: ratio(document.querySelector('textarea')!)
+			screenplay: ratio(document.querySelector('.screenplay-editor .el')!)
 		};
 	});
 	expect(lineHeights.bar).toBeCloseTo(1.85, 2);
@@ -137,9 +138,9 @@ test('a reading-support face loads from Studio, re-measures the layout and spare
 	await expect.poll(async () => (await layoutState(page)).maxChars).toBeLessThan(before.maxChars);
 	const after = await layoutState(page);
 	expect(after.layout).toBe(layoutFor(after));
-	expect(
-		await page.getByLabel('dialogue').evaluate((node) => getComputedStyle(node).fontFamily)
-	).toMatch(/^"?Courier Prime/);
+	expect(await el(page, 'dialogue').evaluate((node) => getComputedStyle(node).fontFamily)).toMatch(
+		/^"?Courier Prime/
+	);
 	const origin = new URL(page.url()).origin;
 	expect(fontRequests.some((url) => url.includes('opendyslexic'))).toBe(true);
 	for (const url of fontRequests) {

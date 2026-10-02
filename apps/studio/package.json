@@ -32,6 +32,13 @@
     "@light-delay/v2-core": "*",
     "@sveltejs/adapter-node": "^5.5.0",
     "@sveltejs/kit": "^2.63.0",
+    "prosemirror-commands": "^1.7.2",
+    "prosemirror-history": "^1.5.1",
+    "prosemirror-keymap": "^1.2.3",
+    "prosemirror-model": "^1.25.12",
+    "prosemirror-state": "^1.4.4",
+    "prosemirror-transform": "^1.12.2",
+    "prosemirror-view": "^1.42.6",
     "svelte-glyph-capacity": "0.1.0"
   }
 }

@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-02 — Studio continuous screenplay editor (Phase 4)
+
+- Write's per-element text fields are replaced by one ProseMirror document of typed screenplay elements, with Enter/Tab conventions, Ctrl/⌘+Alt+1…6 and Alt+↑/↓ shortcuts, cross-element selection, paste and undo, and a gutter handle menu for element actions.
+- Element IDs are preserved through editing; a committed element whose type changes gets a derived identity and commits as removed plus added.
+- New editor unit tests and `editor` browser project; all existing browser tests migrated to the editor.
+
 ## 2026-10-02 — Screenplay element kinds
 
 - Added `parenthetical` and `transition` screenplay element kinds to the shared contract, with PostgreSQL migration `002_screenplay_element_kinds.sql` and a shared store test; element kind remains immutable per identity.
