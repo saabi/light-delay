@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-02 — Screenplay element kinds
+
+- Added `parenthetical` and `transition` screenplay element kinds to the shared contract, with PostgreSQL migration `002_screenplay_element_kinds.sql` and a shared store test; element kind remains immutable per identity.
+- Recorded the Phase 4 editor decision: ProseMirror, used directly.
+
 ## 2026-10-01 — Studio autosave and commit (Phase 3)
 
 - Write autosaves (typing pause, leaving the page, before switching cut or restoring); the Save button and the review step for the author's own edits are gone.

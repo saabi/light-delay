@@ -79,7 +79,7 @@ Implemented on `architecture/v2-domain-model`, with the foundation corrections o
 - separate Studio, legacy compatibility and project-data CI jobs;
 - protocol-2 staging finalization and activation helpers, with host installation still pending.
 - M2 async authoring application/store ports with per-command trusted execution context;
-- a TypeBox-authoritative screenplay model with stable element IDs and ordered scene-heading, action, character and dialogue elements;
+- a TypeBox-authoritative screenplay model with stable element IDs and ordered scene-heading, action, character, parenthetical, dialogue and transition elements;
 - durable-within-process Draft and Proposal records kept outside authoritative project history;
 - deterministic Draft-diff proposals with explicit rejection or human acceptance into complete ChangeSets and ProjectRevisions;
 - atomic conditional Proposal terminal transitions, so exactly one accept/reject winner can move `pending` work to a terminal state;

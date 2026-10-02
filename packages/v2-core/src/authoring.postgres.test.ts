@@ -114,9 +114,12 @@ describe('PostgreSQL authoring persistence', () => {
 	});
 
 	it('migrates an empty schema and records its version; rerun is safe', async () => {
-		expect(await migrateAuthoringDatabase(pool)).toEqual(['001_authoring.sql']);
-		const rows = await pool.query('SELECT version FROM authoring_schema_migrations');
-		expect(rows.rows).toEqual([{ version: '001_authoring.sql' }]);
+		const migrations = ['001_authoring.sql', '002_screenplay_element_kinds.sql'];
+		expect(await migrateAuthoringDatabase(pool)).toEqual(migrations);
+		const rows = await pool.query(
+			'SELECT version FROM authoring_schema_migrations ORDER BY version'
+		);
+		expect(rows.rows).toEqual(migrations.map((version) => ({ version })));
 	});
 
 	it('applies bounded server-side connection settings', async () => {

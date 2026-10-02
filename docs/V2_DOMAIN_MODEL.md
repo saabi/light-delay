@@ -238,7 +238,7 @@ A document can:
 
 ### M2 screenplay subset
 
-The first runtime subset is intentionally smaller than the complete document model. A screenplay has stable ordered elements of kind `scene-heading`, `action`, `character`, or `dialogue`. Authored wording lives on present element state. Semantic operations insert an element, update authored text, remove an element from a cut, move an element, or restore a document/version scope.
+The first runtime subset is intentionally smaller than the complete document model. A screenplay has stable ordered elements of kind `scene-heading`, `action`, `character`, `parenthetical`, `dialogue`, or `transition` (the last two added Oct 2, 2026, migration `002`). An element's kind is fixed for its stable identity; changing it means a new element. Authored wording lives on present element state. Semantic operations insert an element, update authored text, remove an element from a cut, move an element, or restore a document/version scope.
 
 The M2 version representation is materialized rather than inherited: each document × version scope has its own deterministic order and element states. The same element ID may be present in two cuts with different text, deliberately `removed` in one cut, or unknown because no state exists there. A project-scoped registry binds that stable screenplay-element identity to one owning document and one semantic kind for its entire history; another project has an independent registry. This does not decide future continuity, lineage or derivation-pin semantics.
 
