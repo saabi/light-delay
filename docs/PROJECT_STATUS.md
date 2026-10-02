@@ -1,5 +1,10 @@
 # Estado del proyecto
 
+## 2026-10-01 — Owner review gate on master (English source)
+
+- Landed `.github/CODEOWNERS` (`* @saabi`) and AGENTS.md **Review and merging** on `master` so the shared **Owner review** ruleset can include the default branch (same policy as `implementation/m2-authoring`: agent PRs via `saabi-agents`, owner approval only, dismiss stale reviews, admin PR bypass).
+- Ruleset extension is applied after this lands on `master`; `master` remains unprotected until that API update.
+
 ## 2026-09-16 - Scene 26 Seedance submitted and registered (English source)
 
 - Scene 26 (`077`) still approved `current`; Seedance I2V submitted and bound: job `689507db…`, **90 cr**, ~30.04 s / 480p. Movie mode plays the new clip on `take-02` (`needs_review`). Concurrent duplicate `57ef7d23…` not bound.
