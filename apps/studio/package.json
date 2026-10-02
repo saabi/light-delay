@@ -25,6 +25,8 @@
     "vitest": "^4.1.8"
   },
   "dependencies": {
+    "@fontsource-variable/inter": "^5.3.0",
+    "@fontsource/courier-prime": "^5.3.0",
     "@light-delay/v2-core": "*",
     "@sveltejs/adapter-node": "^5.5.0",
     "@sveltejs/kit": "^2.63.0"

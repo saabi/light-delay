@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-01 — Studio Write correctness fixes (U1–U8)
+
+- Screenplay elements grow with their text and have no resize grips; switching cut saves edits first and leaving with unsaved edits asks; Restore previews and confirms and is hidden for the current text; a pending proposal is reopened rather than duplicated.
+- Bundled Inter and Courier Prime (WOFF2, metric-matched fallbacks); type, target and contrast floors with an AA token test; the connectivity notice is an overlay that never moves the document.
+- Added Write correctness browser regressions and ran the Studio e2e projects serially against one in-memory store.
+
 ## 2026-10-01 — Studio Write UX guidelines
 
 - Recorded M2.5's acceptance and merge into `implementation/m2-authoring`.

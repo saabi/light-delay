@@ -1,5 +1,17 @@
 # Estado del proyecto
 
+## 2026-10-01 — Studio Write correctness fixes U1–U8 (English source)
+
+- Phase 1 of the [Write UX review](reviews/2026-10-01-studio-write-ux-review-claude.md) disposition. Each defect has a browser regression that fails on the previous page:
+  - U1/U4: screenplay elements grow to fit their text at any width; no resize grips.
+  - U2: switching cut saves unsaved edits first and stays put if the save fails (Retry now completes the switch); leaving the page with unsaved edits asks first. The outage notice no longer claims browser persistence ("held in this tab until they save").
+  - U3: Inter and Courier Prime are bundled as WOFF2 subsets (Fontsource, OFL) with metric-matched fallbacks; no remote font loads.
+  - U5: Restore previews the target text and asks for confirmation; it is not offered when a revision matches the current text.
+  - U6: a pending proposal is reopened ("Open review"), not proposed again.
+  - U7: type and target tokens (text ≥ 0.75rem, controls 0.875rem, targets ≥ 1.5rem), visible editor focus, muted text darkened to 5.4:1; a unit test checks every text token against AA.
+  - U8: the connectivity notice is a fixed overlay and no longer moves the document.
+- Deliberately not in this phase: vocabulary, the second bar, the app identity and the rem conversion of layout spacing (Phase 2); autosave and commit (Phase 3); the continuous editor (Phase 4), which replaces the per-element fields that U1/U4 patch.
+
 ## 2026-10-01 — Studio M2.5 merged; Write UX guidelines revised (English source)
 
 - M2.5 was accepted by the owner and PR #3 merged into `implementation/m2-authoring` (`164799d`, a merge commit preserving the reviewed SHAs). It has not reached `master`; no staging or Pages deployment was made.

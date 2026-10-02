@@ -138,8 +138,13 @@ test('PostgreSQL N1: Accept and Restore show authoritative success after a late 
 	await expect(page.getByRole('button', { name: 'Accept changes' })).toHaveCount(0);
 	await expect(page.getByText(/Proposal not accepted/)).toHaveCount(0);
 	await page.getByRole('button', { name: 'History' }).click();
+	await page
+		.getByRole('listitem')
+		.filter({ hasText: 'Initial screenplay' })
+		.getByRole('button', { name: 'Restore…' })
+		.click();
 	await delayedCommit('RestoreScreenplay', () =>
-		page.getByRole('listitem').filter({ hasText: 'Initial screenplay' }).getByRole('button').click()
+		page.getByRole('button', { name: 'Restore this version' }).click()
 	);
 	await expect(page.getByText('Restored as new project revision 2', { exact: true })).toBeVisible();
 	await expect(dialogue).toHaveValue('Leave the channel open.');
