@@ -1,5 +1,11 @@
 # Estado del proyecto
 
+## 2026-10-01 — svelte-glyph-capacity workspace package (English source)
+
+- `packages/svelte-glyph-capacity` is the owner's glyph-capacity sensor, imported from an untracked working copy (no prior history). light-delay is its temporary home until it is ready for release; it will then be extracted with its history and published to npm.
+- `glyph-area` capacity is the content box (borders, padding and scrollbars excluded; margins never count). The sensor publishes values only when a measured field changes, rejects invalid `breakpoints`, and warns once in development when capacity oscillates because the container is sized by its own content.
+- CI runs a separate `glyph-capacity` job: format, type check, package, publint, static demo build and 17 Playwright tests. Studio does not consume the package yet.
+
 ## 2026-10-01 — Owner review gate (English source)
 
 - Policy: shared machine account `saabi-agents` (Write, not Admin) opens agent PRs; only owner `saabi` approves. CODEOWNERS is `* @saabi`. Agents must not approve reviews and must not merge unless the owner asks for that PR in-session (`gh pr merge` only).
