@@ -37,6 +37,11 @@
 - An element's kind stays fixed for its stable identity (unchanged rule): the continuous editor (Phase 4, ProseMirror, owner decision) will give a committed element a new identity when its type changes.
 - A shared store test accepts both kinds and refuses retyping an accepted identity, against the in-memory and PostgreSQL stores.
 
+## 2026-10-01 — Owner review gate on master (English source)
+
+- Landed `.github/CODEOWNERS` (`* @saabi`) and AGENTS.md **Review and merging** on `master` so the shared **Owner review** ruleset can include the default branch (same policy as `implementation/m2-authoring`: agent PRs via `saabi-agents`, owner approval only, dismiss stale reviews, admin PR bypass).
+- Ruleset extension is applied after this lands on `master`; `master` remains unprotected until that API update.
+
 ## 2026-10-01 — Studio autosave and commit (Phase 3) (English source)
 
 - Write autosaves the Draft after a short pause in typing, when focus leaves the page, and before switching cut or restoring. There is no Save button. Saves run one at a time; edits made during a save are saved by a follow-up. The save state reads Saving…, Saved, Reconnecting…, Not saved — Retry or Couldn't confirm save — Retry. Automatic saves pause while Studio is unreachable; Retry saves the latest text.
