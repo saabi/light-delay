@@ -1,11 +1,17 @@
 # Estado del proyecto
 
+## 2026-10-02 — M3 redefined: story structure and story-time state from real material (English source)
+
+- Owner decision after reviewing the roadmap gap (Story → Version → Outline → Screenplay was named but never scheduled): M3 now covers story structure and story-time state together, built from the real Luz Tardía outline, whose meaning is mostly causal and epistemic (58 steps, 40 facts, 150 knowledge events, causal links, action requirements). Design note: [`V2_M3_STORY_STRUCTURE_DESIGN.md`](V2_M3_STORY_STRUCTURE_DESIGN.md); roadmap updated (M3 section, Write productization recorded, near-term queue, deferrals).
+- Authority stays with `data/outlines/` under ADR-0002: the Studio project will be a reviewable copy with provenance, never written back. Bounded exception to the bulk-import deferral: the master outline and its two active derived outlines only. The first importer reads the JSON, not the Markdown exports.
+- Next: integrate `implementation/m2-authoring` into `master`, human acceptance of Write, staging with an access boundary and an exercised backup/restore; then slice 3a from `master`. Documentation only.
+
 ## 2026-10-02 — Write polish (English source)
 
 - A pending proposal open for review is shown inline in the page, where it would apply (computed by applying its operations to the text it was made against); the side list jumps to each change and focuses it. Closing the review returns to the editor.
 - History's per-entry action is now "Preview", as in the reference states. Text size goes up to 200%; at 200% the layout steps down (through `layoutFor`) with nothing clipped and no horizontal overflow, at desktop and phone sizes.
 - A browser test checks that no `GlyphCapacitySensor` warning (oscillation or breakpoints) appears across five window sizes and text sizes 100–200%, with a panel opened and closed (checklist item 19).
-- Not done, with reasons: "Suggested changes · n" and a note on review-panel accepts. Drafts carry no author, so a proposal from elsewhere cannot be told from the author's own and every reviewable proposal today is the author's own commit that conflicted. Such a proposal can never be accepted (its precondition names a document version that has moved on), so the panel's Accept always fails for it; the author's way forward is not designed yet. Both belong with authored suggestions (agents, collaborators).
+- Not done, with reasons: "Suggested changes · n" and a note on review-panel accepts. Drafts and proposals do record an owner and proposer, but Studio runs as one fixture principal and opens drafts without regard to owner, so nothing produces a proposal from anyone else and every reviewable proposal today is the author's own commit that conflicted. *(Corrected Oct 2: an earlier version of this entry said Drafts carry no author.)* Such a proposal can never be accepted (its precondition names a document version that has moved on), so the panel's Accept always fails for it; the author's way forward is not designed yet. Both belong with authored suggestions (agents, collaborators).
 
 ## 2026-10-02 — Notes on committed versions (English source)
 

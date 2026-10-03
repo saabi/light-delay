@@ -25,6 +25,7 @@ Core UX principle:
 - `V2_ACCEPTANCE_SCENARIOS.md` — hard cases schemas/services must survive.
 - `V2_MIGRATION_PLAN.md` — staged migration.
 - `V2_IMPLEMENTATION_ROADMAP.md` — active build sequence, milestone exit criteria and architecture checkpoints.
+- `V2_M3_STORY_STRUCTURE_DESIGN.md` — M3 design: story structure and story-time state from the real Luz Tardía outline, imported as a reviewable copy.
 - `V2_REPOSITORY_STRUCTURE.md` — target monorepo/root structure and staged cleanup after the Milestone 0 baseline.
 - `V2_DOCUMENTATION_STRUCTURE.md` — target separation of Studio V2, repository-wide, Light Delay project and legacy/archive documentation.
 - `V2_DEPLOYMENT_AND_ENVIRONMENTS.md` — local/staging/festival environment separation and opt-in Linode staging deployments.
