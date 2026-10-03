@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-02 — Staging from master (protocol 3)
+
+- Staging deploys from `master`; an explicit, fixed backup → migrate → verify step runs as `studio` before activation; `/health` reports store and schema and fails closed with 503; releases include the backup tooling; CI smoke-tests the release on PostgreSQL.
+
 ## 2026-10-02 — Acceptance checklist and verified backup/restore
 
 - Human acceptance checklist for the integration candidate (gates vs observations, local PostgreSQL setup, outage scenarios).

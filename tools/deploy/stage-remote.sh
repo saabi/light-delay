@@ -28,7 +28,7 @@ release_dir=$release_root/.incoming/$sha
 temporary_dir=$(mktemp -d "$release_root/.incoming/.${sha}.install.XXXXXX")
 trap 'rm -rf "$temporary_dir"' EXIT
 
-[[ "$(sudo -n /usr/local/sbin/studio-stage-activate --protocol-version)" == 2 ]] || { echo 'Install the trusted protocol-2 host helpers before deploying' >&2; exit 1; }
+[[ "$(sudo -n /usr/local/sbin/studio-stage-activate --protocol-version)" == 3 ]] || { echo 'Install the trusted protocol-3 host helpers before deploying' >&2; exit 1; }
 if [[ ! -d "$release_root/$sha" ]]; then
 [[ ! -e "$release_dir" && ! -L "$release_dir" ]] || { echo 'Remove the previous unprivileged incoming attempt before retrying' >&2; exit 1; }
 mkdir -p "$temporary_dir"
@@ -44,6 +44,9 @@ else
 release_dir=$release_root/$sha
 fi
 previous=$(readlink "$studio_root/current" || true)
+# Back up and migrate first; a failure here stops the deployment before anything is activated.
+sudo -n /usr/local/sbin/studio-stage-activate --migrate "$release_dir" "$sha"
+release_dir=$release_root/$sha
 sudo -n /usr/local/sbin/studio-stage-activate "$release_dir" "$sha"
 
 if ! health=$(/usr/bin/curl --fail --silent --show-error --retry 15 --retry-delay 1 --retry-connrefused http://127.0.0.1:5100/health); then
@@ -53,7 +56,9 @@ fi
 if ! node - "$sha" "$health" <<'NODE'
 const [expected, body] = process.argv.slice(2);
 const payload = JSON.parse(body);
-if (payload.ok !== true || payload.service !== 'studio' || payload.revision !== expected) {
+// Staging serves authoring from PostgreSQL with a schema this release can use; never from memory.
+if (payload.ok !== true || payload.service !== 'studio' || payload.revision !== expected ||
+    payload.store !== 'postgres' || !['current', 'ahead'].includes(payload.schema)) {
   throw new Error(`unexpected health response: ${body}`);
 }
 NODE

@@ -185,3 +185,28 @@ test('PostgreSQL N1: Accept and Restore show authoritative success after a late 
 	).toBe('Leave the channel open.');
 	expect(serverLog).not.toContain('Unhandled');
 });
+
+test('health reports the schema this release needs, and fails closed when it does not match', async () => {
+	const healthy = await fetch(`${origin}/health`);
+	expect(healthy.status).toBe(200);
+	expect(await healthy.json()).toMatchObject({ ok: true, store: 'postgres', schema: 'current' });
+
+	const version = '002_screenplay_element_kinds.sql';
+	const row = (
+		await db.query('SELECT sha256 FROM authoring_schema_migrations WHERE version = $1', [version])
+	).rows[0];
+	await db.query('DELETE FROM authoring_schema_migrations WHERE version = $1', [version]);
+	try {
+		const behind = await fetch(`${origin}/health`);
+		expect(behind.status).toBe(503);
+		const body = await behind.json();
+		expect(body).toMatchObject({ ok: false, schema: 'behind', migrations: { missing: [version] } });
+		expect(JSON.stringify(body)).not.toMatch(/postgres(ql)?:\/\//);
+	} finally {
+		await db.query('INSERT INTO authoring_schema_migrations (version, sha256) VALUES ($1, $2)', [
+			version,
+			row.sha256
+		]);
+	}
+	expect((await fetch(`${origin}/health`)).status).toBe(200);
+});

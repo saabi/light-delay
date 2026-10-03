@@ -3,7 +3,7 @@ name: Deploy Studio to Linode staging
 on:
   push:
     branches:
-      - architecture/v2-domain-model
+      - master
   workflow_dispatch:
     inputs:
       revision:
@@ -19,12 +19,12 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  TRUSTED_STAGING_BRANCH: architecture/v2-domain-model
+  TRUSTED_STAGING_BRANCH: master
   TARGET_SHA: ${{ github.event_name == 'workflow_dispatch' && inputs.revision != '' && inputs.revision || github.sha }}
 
 jobs:
   build:
-    if: github.ref_name == 'architecture/v2-domain-model' && (github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[deploy:stage]'))
+    if: github.ref_name == 'master' && (github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[deploy:stage]'))
     runs-on: ubuntu-latest
     steps:
       - name: Checkout exact staging revision
@@ -60,6 +60,7 @@ jobs:
         run: |
           bash -n tools/deploy/stage-activate.sh
           bash -n tools/deploy/stage-remote.sh
+          bash -n tools/deploy/stage-migrate.sh
           npm run test:deploy
 
       - name: Build Studio Node application
@@ -81,7 +82,7 @@ jobs:
 
   deploy:
     needs: build
-    if: github.ref_name == 'architecture/v2-domain-model' && (github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[deploy:stage]'))
+    if: github.ref_name == 'master' && (github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[deploy:stage]'))
     runs-on: ubuntu-latest
     environment:
       name: staging
@@ -137,7 +138,8 @@ jobs:
           node - "$TARGET_SHA" "$body" <<'NODE'
           const [expected, body] = process.argv.slice(2);
           const payload = JSON.parse(body);
-          if (payload.ok !== true || payload.service !== 'studio' || payload.revision !== expected) {
+          if (payload.ok !== true || payload.service !== 'studio' || payload.revision !== expected ||
+              payload.store !== 'postgres' || !['current', 'ahead'].includes(payload.schema)) {
             throw new Error(`unexpected public health response: ${body}`);
           }
           NODE

@@ -63,14 +63,19 @@ def sha256(path):
 
 
 def summarize(url, out):
-    """Summary of a database through Studio's own code; returns (ok, summary)."""
+    """Summary of a database through Studio's own code; returns (ok, summary).
+
+    A backup may be taken just before migrating, so pending migrations are not a problem here.
+    """
     result = subprocess.run(
-        ['node', str(VERIFY), '--out', str(out)],
+        ['node', str(VERIFY), '--out', str(out), '--accept-pending-migrations'],
         env={**os.environ, 'DATABASE_URL': url},
         stderr=subprocess.PIPE,
         text=True,
     )
     sys.stderr.write(result.stderr)
+    if not Path(out).exists():
+        fail('could not read the database (see the error above)')
     return result.returncode == 0, json.loads(Path(out).read_text())
 
 
@@ -84,6 +89,10 @@ def backup(args):
     name = f'studio-{database}-{stamp}'
     dump = out / f'{name}.dump'
     before_ok, before = summarize(url, out / f'{name}.before.json')
+    if before['schema']['status'] == 'uninitialized':
+        (out / f'{name}.before.json').unlink()
+        print('no authoring schema yet: nothing to back up')
+        return
     if not before_ok:
         fail('the source database does not verify; fix it before relying on a backup of it')
     run(['pg_dump', '--format=custom', '--no-owner', '--no-privileges', '--file', str(dump)], env)
@@ -164,6 +173,8 @@ def main():
         args.handler(args)
     except subprocess.CalledProcessError as error:
         fail(f'{Path(error.cmd[0]).name} failed with exit status {error.returncode}')
+    except FileNotFoundError as error:
+        fail(f'{error.filename} is not installed or not on PATH')
 
 
 if __name__ == '__main__':

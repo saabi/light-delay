@@ -112,9 +112,14 @@ export async function summarizeAuthoringDatabase(pool: Pool): Promise<AuthoringD
 }
 
 /** Problems that make a database unfit to serve, independent of any comparison. */
-export function summaryProblems(summary: AuthoringDatabaseSummary): string[] {
+export function summaryProblems(
+	summary: AuthoringDatabaseSummary,
+	options: { acceptPendingMigrations?: boolean } = {}
+): string[] {
 	const problems: string[] = [];
-	if (summary.schema.status !== 'current' && summary.schema.status !== 'ahead')
+	const acceptable = ['current', 'ahead'];
+	if (options.acceptPendingMigrations) acceptable.push('behind', 'uninitialized');
+	if (!acceptable.includes(summary.schema.status))
 		problems.push(`schema is ${summary.schema.status}`);
 	for (const project of summary.projects)
 		if (!project.reconstructionMatches)

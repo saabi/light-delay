@@ -3,9 +3,19 @@ set -Eeuo pipefail
 export PATH=/usr/sbin:/usr/bin:/sbin:/bin
 unset NODE_OPTIONS PYTHONPATH PYTHONHOME
 [[ ${EUID:-$(id -u)} -eq 0 ]] || { echo 'stage-activate must run as root' >&2; exit 1; }
-if [[ $# -eq 1 && "$1" == --protocol-version ]]; then echo 2; exit 0; fi
-[[ $# -eq 2 && "$2" =~ ^[0-9a-f]{40}$ ]] || { echo 'usage: stage-activate <release-directory> <git-sha>' >&2; exit 2; }
-# This lock and both helpers must be installed by an administrator.
+if [[ $# -eq 1 && "$1" == --protocol-version ]]; then echo 3; exit 0; fi
+# Protocol 3: `--migrate <release-directory> <git-sha>` finalizes the release, then runs the
+# administrator-installed migration helper on it. It is a separate, explicit step before activation;
+# activation and rollback below never migrate.
+if [[ $# -eq 3 && "$1" == --migrate && "$3" =~ ^[0-9a-f]{40}$ ]]; then
+    exec 9>/run/studio-stage/stage-activate.lock
+    flock -x 9
+    release_dir=$(/usr/bin/python3 -I /usr/local/libexec/studio-stage-finalize.py "$2" "$3")
+    /usr/local/libexec/studio-stage-migrate "$release_dir"
+    exit 0
+fi
+[[ $# -eq 2 && "$2" =~ ^[0-9a-f]{40}$ ]] || { echo 'usage: stage-activate [--migrate] <release-directory> <git-sha>' >&2; exit 2; }
+# This lock and all three helpers must be installed by an administrator.
 exec 9>/run/studio-stage/stage-activate.lock
 flock -x 9
 release_dir=$(/usr/bin/python3 -I /usr/local/libexec/studio-stage-finalize.py "$1" "$2")

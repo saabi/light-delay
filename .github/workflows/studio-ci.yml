@@ -49,8 +49,11 @@ jobs:
           bash -n tools/deploy/stage-activate.sh
           bash -n tools/deploy/stage-remote.sh
           bash -n tools/deploy/package-stage.sh
+          bash -n tools/deploy/stage-migrate.sh
           npm run test:deploy
-      - name: Start the packaged release in isolation
+      - name: Start the packaged release in isolation, then on PostgreSQL
+        env:
+          SMOKE_DATABASE_URL: ${{ env.DATABASE_URL }}
         run: |
           bash tools/deploy/package-stage.sh "$GITHUB_SHA" "$RUNNER_TEMP/studio-release.tgz"
           bash tools/deploy/smoke-stage.sh "$RUNNER_TEMP/studio-release.tgz" "$GITHUB_SHA"

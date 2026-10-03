@@ -2,6 +2,7 @@ import { createHash } from 'node:crypto';
 import { readdir, readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import type { Pool, PoolClient } from 'pg';
+import { authoringMigrationManifest } from './generated/migration-manifest.js';
 
 const migrationsDirectory = fileURLToPath(new URL('../migrations/', import.meta.url));
 
@@ -70,14 +71,9 @@ export interface AuthoringSchemaStatus {
 export async function authoringSchemaStatus(
 	pool: Pick<Pool, 'query'>
 ): Promise<AuthoringSchemaStatus> {
-	const files = (await readdir(migrationsDirectory))
-		.filter((name) => /^\d{3}_[a-z0-9_]+\.sql$/.test(name))
-		.sort();
-	const hashes = new Map<string, string>();
-	for (const file of files) {
-		const sql = await readFile(new URL(`../migrations/${file}`, import.meta.url), 'utf8');
-		hashes.set(file, createHash('sha256').update(sql).digest('hex'));
-	}
+	/* From the generated manifest, not the directory: bundled code has no migrations directory. */
+	const files = authoringMigrationManifest.map((entry) => entry.version);
+	const hashes = new Map(authoringMigrationManifest.map((entry) => [entry.version, entry.sha256]));
 	const empty = { expected: files, applied: [], missing: files, unknown: [], changed: [] };
 	const table = await pool.query<{ name: string | null }>(
 		"SELECT to_regclass('authoring_schema_migrations')::text AS name"

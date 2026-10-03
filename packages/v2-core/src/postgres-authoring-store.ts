@@ -819,3 +819,5 @@ export function createPostgresPool(connectionString: string): Pool {
 	});
 	return pool;
 }
+
+export { authoringSchemaStatus, type AuthoringSchemaStatus } from './postgres-migrations.js';

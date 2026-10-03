@@ -9,6 +9,10 @@ import {
 
 /*
 	Usage: DATABASE_URL=... node dist/verify-authoring-database.js [--out summary.json] [--compare summary.json]
+	       [--accept-pending-migrations]
+
+	--accept-pending-migrations: a schema that is behind (or not created yet) is not a problem; used
+	for the backup taken just before migrating.
 
 	Reads the authoring database through Studio's application code and prints a summary. Exits 1 if
 	the database is unfit to serve (schema not current, history does not reconstruct the head) or,
@@ -27,7 +31,9 @@ try {
 	const out = option('--out');
 	if (out) await writeFile(out, `${JSON.stringify(summary, null, 2)}\n`, { mode: 0o600 });
 	else console.log(JSON.stringify(summary, null, 2));
-	const problems = summaryProblems(summary);
+	const problems = summaryProblems(summary, {
+		acceptPendingMigrations: args.includes('--accept-pending-migrations')
+	});
 	const compare = option('--compare');
 	if (compare) {
 		const expected = JSON.parse(await readFile(compare, 'utf8')) as AuthoringDatabaseSummary;

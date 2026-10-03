@@ -1,6 +1,6 @@
 # Deployment and Environments
 
-Status: **repository activation boundary corrected; protocol-2 host installation and verification are still required before deployment**.
+Status: **protocol 3 in the repository (Oct 2, 2026): staging deploys from `master`, with an explicit backup-and-migrate step before activation and schema-aware health. Protocol-3 host installation and verification are still required before deployment.**
 
 ## Environments
 
@@ -44,7 +44,9 @@ The implementation is split across:
 - `.github/workflows/studio-staging.yml` — trusted-branch trigger guard, checks, build, artifact upload, SSH transfer and public health verification;
 - `tools/deploy/package-stage.sh` — packages the Studio Node build, workspace manifests and exact revision metadata;
 - `tools/deploy/stage-remote.sh` — installs runtime dependencies and invokes the server activation helper;
-- `tools/deploy/stage-activate.sh` — administrator-installed activation/rollback helper; no package scripts or migrations.
+- `tools/deploy/stage-activate.sh` — administrator-installed activation/rollback helper. Protocol 3 adds one explicit verb, `--migrate`, which finalizes a release and hands it to the migration helper. Activation and rollback never migrate and never run package scripts.
+- `tools/deploy/stage-migrate.sh` — administrator-installed as `/usr/local/libexec/studio-stage-migrate`. It runs three fixed entry points inside the finalized release, as `studio` (never root): backup, migrate, verify.
+- `tools/db/studio_db.py` — backup/restore/verify tooling, packaged into every release ([`STUDIO_BACKUP_AND_RESTORE.md`](STUDIO_BACKUP_AND_RESTORE.md)).
 - `tools/deploy/stage-finalize.py` — administrator-installed, isolated Python helper that copies untrusted bytes into fresh root-owned inodes, validates JSON as data, and finalizes read-only releases.
 
 Studio uses `@sveltejs/adapter-node`. Its production entry point is `apps/studio/build/index.js`, and the service listens only on `127.0.0.1:5100`. The `/health` endpoint returns `ok`, `service`, `revision` and `builtAt`; the revision comes from the release's `release.json`.
@@ -76,8 +78,10 @@ It must not mean "deploy whatever happens to be latest when the job runs."
 The configured trusted staging branch is:
 
 ```text
-architecture/v2-domain-model
+master
 ```
+
+Until Oct 2, 2026 this was `architecture/v2-domain-model`. It moved to `master` with the integration of Studio V2, so staging only ever runs a commit that has been reviewed and merged into the main line.
 
 Do not allow a commit directive on arbitrary PR/fork branches to gain access to staging secrets. The workflow has no `pull_request` trigger; only pushes to this branch and manual dispatches from this branch can reach the deploy job/environment.
 
@@ -120,13 +124,13 @@ The implemented workflow uses:
 on:
   push:
     branches:
-      - architecture/v2-domain-model
+      - master
   workflow_dispatch:
 
 jobs:
   deploy:
     if: >
-      github.ref_name == 'architecture/v2-domain-model' &&
+      github.ref_name == 'master' &&
       (github.event_name == 'workflow_dispatch' ||
       contains(github.event.head_commit.message, '[deploy:stage]')
       )
@@ -201,7 +205,7 @@ The intended permission model does not touch the existing `node` user or PM2 ins
 - `studio-deploy` may run only the root-owned `/usr/local/sbin/studio-stage-activate` helper through sudo;
 - `/srv/studio/shared/studio-stage.env` remains VM-local and is readable by `studio` (not copied by GitHub Actions).
 
-An administrator must update BOTH helpers from a reviewed commit. This session has not installed or audited anything on Linode. Pause staging deployments during the host update. Python 3, util-linux (`flock`) and systemd are prerequisites. Preserve unrelated PM2/nginx applications. Install as root, then grant the narrow sudo rule:
+An administrator must update BOTH helpers from a reviewed commit. This session has not installed or audited anything on Linode. Pause staging deployments during the host update. Python 3, util-linux (`flock`), systemd (≥ 235, for `systemd-run --pipe`), Node at `/usr/bin/node` and the PostgreSQL client tools (`pg_dump`, `pg_restore`, `psql`, of the server's major version or newer) are prerequisites. Preserve unrelated PM2/nginx applications. Install as root, then grant the narrow sudo rule:
 
 ```sh
 id -u studio-deploy >/dev/null 2>&1 || useradd --system --home-dir /srv/studio --shell /bin/bash studio-deploy
@@ -210,7 +214,9 @@ install -d -o root -g root -m 0755 /run/studio-stage
 install -o root -g root -m 0644 tools/deploy/studio-stage-tmpfiles.conf /etc/tmpfiles.d/studio-stage.conf
 systemd-tmpfiles --create /etc/tmpfiles.d/studio-stage.conf
 install -o root -g root -m 0644 tools/deploy/stage-finalize.py /usr/local/libexec/studio-stage-finalize.py
+install -o root -g root -m 0755 tools/deploy/stage-migrate.sh /usr/local/libexec/studio-stage-migrate
 install -o root -g root -m 0755 tools/deploy/stage-activate.sh /usr/local/sbin/studio-stage-activate
+install -d -o studio -g studio -m 0700 /srv/studio/backups
 chown root:root /srv/studio /srv/studio/releases
 chmod 0755 /srv/studio /srv/studio/releases
 install -d -o studio-deploy -g studio-deploy -m 0750 /srv/studio/releases/.incoming
@@ -281,16 +287,47 @@ It must:
 - avoid executing arbitrary commands selected by release-controlled package scripts;
 - perform only the minimal ownership/finalization/symlink/service actions that actually require privilege.
 
-Finalization copies through directory descriptors with O_NOFOLLOW into fresh root-owned inodes; it never chowns a deployment-owned tree in place. This protects against open writable descriptors and source-path swaps. Special files and hardlinks are rejected. Only contained relative npm links under node_modules are permitted; manifests and the entrypoint cannot have symlink components. JSON validation happens in the protected copy. Files become 0444 and directories 0555 before publication. Repeat activation revalidates ownership and permissions and does not recopy the upload. Root activation is serialized with flock at /run/studio-stage/stage-activate.lock. The directory is root-owned and recreated after boot by systemd-tmpfiles; the repository includes tools/deploy/studio-stage-tmpfiles.conf. This session changed repository helpers only: protocol-2 host installation remains pending.
+Finalization copies through directory descriptors with O_NOFOLLOW into fresh root-owned inodes; it never chowns a deployment-owned tree in place. This protects against open writable descriptors and source-path swaps. Special files and hardlinks are rejected. Only contained relative npm links under node_modules are permitted; manifests and the entrypoint cannot have symlink components. JSON validation happens in the protected copy. Files become 0444 and directories 0555 before publication. Repeat activation revalidates ownership and permissions and does not recopy the upload. Root activation is serialized with flock at /run/studio-stage/stage-activate.lock. The directory is root-owned and recreated after boot by systemd-tmpfiles; the repository includes tools/deploy/studio-stage-tmpfiles.conf. Protocol 3 (Oct 2, 2026) adds the migration helper. Its host installation remains pending.
 
-After host installation, run `sudo -u studio-deploy sudo -n /usr/local/sbin/studio-stage-activate --protocol-version` and require exactly `2`. Review the installed helper checksums against the reviewed repository files. The remote workflow fails closed against an old helper. Existing mutable releases are NOT grandfathered in for rollback: an administrator must separately verify and finalize a fresh copy before it is eligible. Do not blindly chown existing releases and call them immutable. No staging deployment was performed in this implementation session.
+After host installation, run `sudo -u studio-deploy sudo -n /usr/local/sbin/studio-stage-activate --protocol-version` and require exactly `3`. Protocol 2 required `2`. Review the installed helper checksums against the reviewed repository files. The remote workflow fails closed against an old helper. Existing mutable releases are NOT grandfathered in for rollback: an administrator must separately verify and finalize a fresh copy before it is eligible. Do not blindly chown existing releases and call them immutable. No staging deployment was performed in this implementation session.
 
 ## Database migrations
 
 M2.5 adds the PostgreSQL adapter and committed authoring migrations for local development and CI.
 See [`V2_POSTGRES_PERSISTENCE.md`](V2_POSTGRES_PERSISTENCE.md). No host rollout has occurred.
 
-Do not make the root activation helper discover and execute a migration command from release-controlled `package.json`. For a later authorized rollout, an administrator-installed migration service must use a fixed reviewed entry point (for example `/usr/local/libexec/studio-stage-migrate`), a separately authorized finalized SHA, and `User=studio` or a dedicated migration identity. Wire that explicit step before activation; do not discover npm hooks, source release shell files, or add a generic sudo command runner. Activation/rollback should not implicitly rerun whichever migration hook happens to exist in the selected release.
+Migrations run in an explicit step before activation, as the earlier design required. That design called for:
+
+- a fixed, reviewed entry point;
+- a separately authorized finalized SHA;
+- release code running as `studio`;
+- no discovered npm hooks and no sourced shell files;
+- no implicit migrations on activation or rollback.
+
+`stage-remote.sh` calls `sudo studio-stage-activate --migrate <release> <sha>`. The root helper finalizes and validates the release exactly as for activation, then runs `/usr/local/libexec/studio-stage-migrate <finalized release>`.
+
+That helper runs three fixed paths inside the read-only release. Each runs through `systemd-run` as `studio`, with:
+
+- `EnvironmentFile=/srv/studio/shared/studio-stage.env`, so credentials are never on a command line and the file is never sourced;
+- `NoNewPrivileges`, `ProtectSystem=strict`, `PrivateTmp` and `ProtectHome`;
+- write access only to `/srv/studio/backups`.
+
+The three steps:
+
+1. **Back up.** `tools/db/studio_db.py backup --out /srv/studio/backups`, using the tools of the release that is running now, since it reads the database as it is. The new release's tools are used only when none is running yet. An empty database has nothing to back up. A failed backup stops the deployment.
+2. **Migrate.** `packages/v2-core/dist/migrate-postgres.js` applies the release's migrations in one transaction, under an advisory lock. It refuses changed or unknown migration files.
+3. **Verify.** `packages/v2-core/dist/verify-authoring-database.js` checks that the schema is current (or ahead) and that accepted history reconstructs every project's head.
+
+Only after all three succeed does `stage-remote.sh` activate. Rollback activates an older release without migrating. That is safe because migrations are additive (expand/migrate/contract), and an older release reports a newer schema as `ahead`, which is compatible.
+
+Simulated Oct 2, 2026 on a container standing in for the host. A test shim stood in for `systemd-run` (no systemd init) and used `runuser` with the same environment file. Results:
+
+- first deployment against an empty database: nothing to back up, migrated, verified;
+- redeployment with data and a current release: backup files owned by `studio` with mode 0600, migrate is a no-op, verified;
+- an unreachable database: stopped at the backup, exit 1;
+- a malformed release path: refused.
+
+The real host still has to be installed and verified.
 
 Rules:
 - migrations, when introduced, must be versioned in repository;
@@ -320,11 +357,16 @@ The workflow and remote script verify:
 - process/service is running;
 - `http://127.0.0.1:5100/health` responds;
 - `https://studio.ferreyrapons.com/health` responds;
-- deployed revision matches requested commit SHA.
+- deployed revision matches requested commit SHA;
+- the store is PostgreSQL (never the in-memory store) and the schema is `current` or `ahead`.
+
+`/health` reports `store` and, for PostgreSQL, `schema` (`current`, `ahead`, `behind`, `changed`, `uninitialized` or `unavailable`) with the migration names that differ. It answers **503** whenever this release cannot serve authoring:
+- the database cannot be reached;
+- a migration is missing or changed.
+
+So the deploy check fails closed, and `stage-remote.sh` reactivates the previous release. The expected migrations are a manifest generated into core at build time (`src/generated/migration-manifest.ts`, kept current by a unit test), because code bundled into Studio cannot read the migrations directory.
 
 Later add:
-- database connectivity;
-- migration/schema compatibility;
 - worker health;
 - queue/outbox health.
 
@@ -358,11 +400,11 @@ GitHub deployment/environment history can provide much of this.
 
 ## First deployment and manual redeploy
 
-After the one-time server setup and GitHub Environment configuration, push a commit whose HEAD message contains `[deploy:stage]` to `architecture/v2-domain-model`. A multi-commit push deploys only the push HEAD when that HEAD contains the directive; an older commit message is ignored.
+After the one-time server setup and GitHub Environment configuration, push a commit whose HEAD message contains `[deploy:stage]` to `master` (for a merged PR, put the directive in the merge commit message). A multi-commit push deploys only the push HEAD when that HEAD contains the directive; an older commit message is ignored.
 
-For a manual deploy, open **Actions → Deploy Studio to Linode staging → Run workflow**, select `architecture/v2-domain-model`, and optionally enter a 40-character SHA already reachable from that branch in `revision`. Leave it empty to deploy the selected workflow revision.
+For a manual deploy, open **Actions → Deploy Studio to Linode staging → Run workflow**, select `master`, and optionally enter a 40-character SHA already reachable from that branch in `revision`. Leave it empty to deploy the selected workflow revision.
 
-The first deployment prepares `/srv/studio/releases/.incoming/<sha>`, installs production dependencies there without lifecycle scripts, finalizes a fresh read-only `/srv/studio/releases/<sha>`, atomically creates `/srv/studio/current -> releases/<sha>`, restarts `studio-stage.service`, checks localhost health, then checks the public HTTPS health endpoint. A failed health or revision check fails the workflow.
+The first deployment prepares `/srv/studio/releases/.incoming/<sha>`, installs production dependencies there without lifecycle scripts, finalizes a fresh read-only `/srv/studio/releases/<sha>`, backs up and migrates the database (§ Database migrations; any failure stops here, before activation), atomically creates `/srv/studio/current -> releases/<sha>`, restarts `studio-stage.service`, checks localhost health, then checks the public HTTPS health endpoint. A failed health or revision check fails the workflow.
 
 ## Future path
 
@@ -388,7 +430,7 @@ The repository helper is corrected and has Linux filesystem tests. Host acceptan
 5. No directive means no automatic staging deployment.
 6. Manual staging deployment is possible.
 7. Host key verification is enabled.
-8. deployment user is unprivileged/minimally privileged and cannot cause the root helper to execute release-controlled code.
+8. deployment user is unprivileged/minimally privileged and cannot cause the root helper to execute release-controlled code as root. The migration step runs release code only as `studio`, through fixed entry points in a finalized read-only release, which is the privilege the service already runs it with.
 9. concurrent deployments cannot corrupt the environment.
 10. deployment performs a health check and records the deployed SHA.
 11. rollback to a prior application release is documented/testable.

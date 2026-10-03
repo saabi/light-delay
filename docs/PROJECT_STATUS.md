@@ -1,5 +1,22 @@
 # Estado del proyecto
 
+## 2026-10-02 — Staging from `master`, with backup-and-migrate before activation (English source)
+
+- **Workflow.** `studio-staging.yml` now trusts `master` (was `architecture/v2-domain-model`), so staging only runs reviewed, merged commits.
+- **Migration step (protocol 3).** It adds one explicit verb, `studio-stage-activate --migrate`, which finalizes the release and runs the administrator-installed `studio-stage-migrate`. That helper runs three fixed entry points in the read-only release, as `studio` (never root):
+  1. a backup with the running release's tools;
+  2. the migrations;
+  3. a verification.
+
+  Activation happens only after all three succeed. Activation and rollback never migrate.
+- **Health.** `/health` now reports the store and the schema, and returns 503 when the database is unreachable or a migration is missing or changed. Deploys therefore fail closed and roll back. They also refuse a staging service running on the in-memory store. Expected migrations come from a manifest generated into core, because Studio's bundle cannot read the migrations directory; that was found while testing.
+- **Releases** now include the backup tooling.
+- **Verified:**
+  - CI smoke-tests the packaged release's own entry points against PostgreSQL;
+  - the helper chain was simulated on a container standing in for the host (first deployment, redeployment with data, unreachable database, bad path);
+  - a PostgreSQL browser test covers health reporting 503 when the schema is behind.
+- **Pending (administrator):** install protocol-3 helpers, PostgreSQL client tools and `/srv/studio/backups` on the Linode; verify `--protocol-version` is 3; decide the access boundary. This lands only after the integration into `master` and the staging restore exercise.
+
 ## 2026-10-02 — Integration preparation: acceptance checklist and verified backup/restore (English source)
 
 - [`STUDIO_ACCEPTANCE_CHECKLIST.md`](STUDIO_ACCEPTANCE_CHECKLIST.md): how to run the candidate on a local PostgreSQL, 15 must-pass gates (writing, editing, autosave, cuts, commit, history and restore, retyping, database outage while typing and around a commit, two tabs with one offline, server restart, readability, small and large layouts, keyboard only) and non-blocking observations, with a record sheet. Its setup was followed as written and gates G9, G10 and G12 were probed by script against a local PostgreSQL: typed text kept through an outage and saved on reopening, one commit after an outage and Retry, typing kept across a server restart.

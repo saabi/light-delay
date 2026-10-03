@@ -17,7 +17,7 @@ if [[ ! "$sha" =~ ^[0-9a-f]{40}$ ]]; then
 	exit 2
 fi
 
-mkdir -p "$stage_dir/apps/light-delay" "$stage_dir/apps/studio" "$stage_dir/packages/v2-core"
+mkdir -p "$stage_dir/apps/light-delay" "$stage_dir/apps/studio" "$stage_dir/packages/v2-core" "$stage_dir/tools/db"
 cp -a "$root_dir/apps/studio/build" "$stage_dir/apps/studio/build"
 cp "$root_dir/apps/light-delay/package.json" "$stage_dir/apps/light-delay/package.json"
 cp "$root_dir/apps/studio/package.json" "$stage_dir/apps/studio/package.json"
@@ -25,6 +25,8 @@ cp -a "$root_dir/packages/v2-core/dist" "$stage_dir/packages/v2-core/dist"
 cp -a "$root_dir/packages/v2-core/migrations" "$stage_dir/packages/v2-core/migrations"
 cp "$root_dir/packages/v2-core/package.json" "$stage_dir/packages/v2-core/package.json"
 cp "$root_dir/package.json" "$root_dir/package-lock.json" "$stage_dir/"
+# Backup/restore/verify tooling, run by the migration step and by administrators (docs/STUDIO_BACKUP_AND_RESTORE.md).
+cp "$root_dir/tools/db/studio_db.py" "$stage_dir/tools/db/studio_db.py"
 
 node - "$stage_dir/release.json" "$sha" <<'NODE'
 const fs = require('node:fs');
