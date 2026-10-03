@@ -27,6 +27,11 @@
 - Added `parenthetical` and `transition` screenplay element kinds to the shared contract, with PostgreSQL migration `002_screenplay_element_kinds.sql` and a shared store test; element kind remains immutable per identity.
 - Recorded the Phase 4 editor decision: ProseMirror, used directly.
 
+## 2026-10-01 — Owner review gate on master (CODEOWNERS)
+
+- Added `.github/CODEOWNERS` (`* @saabi`) and an AGENTS.md **Review and merging** section on `master`, matching the agent-account policy already used on `implementation/m2-authoring`.
+- Prerequisite for extending the active **Owner review** ruleset to `refs/heads/master` so accidental direct pushes and unreviewed merges cannot land on the default branch.
+
 ## 2026-10-01 — Studio autosave and commit (Phase 3)
 
 - Write autosaves (typing pause, leaving the page, before switching cut or restoring); the Save button and the review step for the author's own edits are gone.
