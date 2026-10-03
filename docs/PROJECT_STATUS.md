@@ -1,5 +1,11 @@
 # Estado del proyecto
 
+## 2026-10-02 — Integration preparation: acceptance checklist and verified backup/restore (English source)
+
+- [`STUDIO_ACCEPTANCE_CHECKLIST.md`](STUDIO_ACCEPTANCE_CHECKLIST.md): how to run the candidate on a local PostgreSQL, 15 must-pass gates (writing, editing, autosave, cuts, commit, history and restore, retyping, database outage while typing and around a commit, two tabs with one offline, server restart, readability, small and large layouts, keyboard only) and non-blocking observations, with a record sheet. Its setup was followed as written and gates G9, G10 and G12 were probed by script against a local PostgreSQL: typed text kept through an outage and saved on reopening, one commit after an outage and Retry, typing kept across a server restart.
+- [`STUDIO_BACKUP_AND_RESTORE.md`](STUDIO_BACKUP_AND_RESTORE.md) with `tools/db/studio_db.py` (backup, restore, verify) and `verify-authoring-database` in core: a restore is accepted only when Studio's own reads of it (schema, history, projections, reconstruction, views, Drafts, Proposals) equal the backup's summary. Restores never target the active or a non-empty database. Exercised locally (record in the runbook) and covered by a PostgreSQL test in CI. The staging exercise remains a gate before staging holds real writing.
+- Core: `authoringSchemaStatus` (current / ahead / behind / changed / uninitialized), used by the summary and, next, by staging health.
+
 ## 2026-10-02 — Write polish (English source)
 
 - A pending proposal open for review is shown inline in the page, where it would apply (computed by applying its operations to the text it was made against); the side list jumps to each change and focuses it. Closing the review returns to the editor.

@@ -49,3 +49,57 @@ export async function migrateAuthoringDatabase(pool: Pool): Promise<readonly str
 		client.release();
 	}
 }
+
+export interface AuthoringSchemaStatus {
+	/**
+	 * `current`: every bundled migration is applied, unchanged, and nothing else is.
+	 * `ahead`: as current, plus migrations this build does not know (a newer release migrated;
+	 * additive migrations keep older builds compatible, so rollback stays possible).
+	 * `behind`: a bundled migration is not applied yet. `changed`: an applied migration's file
+	 * differs from this build's. `uninitialized`: no migrations table.
+	 */
+	status: 'current' | 'ahead' | 'behind' | 'changed' | 'uninitialized';
+	expected: string[];
+	applied: string[];
+	missing: string[];
+	unknown: string[];
+	changed: string[];
+}
+
+/** Compares the database's applied migrations with this build's, without changing anything. */
+export async function authoringSchemaStatus(
+	pool: Pick<Pool, 'query'>
+): Promise<AuthoringSchemaStatus> {
+	const files = (await readdir(migrationsDirectory))
+		.filter((name) => /^\d{3}_[a-z0-9_]+\.sql$/.test(name))
+		.sort();
+	const hashes = new Map<string, string>();
+	for (const file of files) {
+		const sql = await readFile(new URL(`../migrations/${file}`, import.meta.url), 'utf8');
+		hashes.set(file, createHash('sha256').update(sql).digest('hex'));
+	}
+	const empty = { expected: files, applied: [], missing: files, unknown: [], changed: [] };
+	const table = await pool.query<{ name: string | null }>(
+		"SELECT to_regclass('authoring_schema_migrations')::text AS name"
+	);
+	if (!table.rows[0]?.name) return { status: 'uninitialized', ...empty };
+	const rows = (
+		await pool.query<{ version: string; sha256: string }>(
+			'SELECT version, sha256 FROM authoring_schema_migrations ORDER BY version'
+		)
+	).rows;
+	const applied = rows.map((row) => row.version);
+	const missing = files.filter((file) => !applied.includes(file));
+	const unknown = applied.filter((version) => !hashes.has(version));
+	const changed = rows
+		.filter((row) => hashes.has(row.version) && hashes.get(row.version) !== row.sha256)
+		.map((row) => row.version);
+	const status = changed.length
+		? 'changed'
+		: missing.length
+			? 'behind'
+			: unknown.length
+				? 'ahead'
+				: 'current';
+	return { status, expected: files, applied, missing, unknown, changed };
+}

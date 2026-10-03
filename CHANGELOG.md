@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-02 — Acceptance checklist and verified backup/restore
+
+- Human acceptance checklist for the integration candidate (gates vs observations, local PostgreSQL setup, outage scenarios).
+- Backup/restore runbook and tooling (`tools/db/studio_db.py`, `verify-authoring-database`) that proves a restore through Studio's own reads; schema status in core; PostgreSQL test of backup, restore, refusals and drift detection.
+
 ## 2026-10-02 — Write polish
 
 - Pending proposals are reviewed inline in the page, with the side list jumping to each change; History's action reads "Preview"; text size up to 200%.

@@ -298,7 +298,7 @@ Rules:
 - migration failure stops deployment;
 - application changes should prefer backward-compatible expand/migrate/contract changes when zero/low downtime matters;
 - never point staging automatically at festival/production data;
-- backups/restore procedure must exist before destructive migrations are introduced.
+- backups/restore procedure must exist before destructive migrations are introduced (procedure and tooling: [`STUDIO_BACKUP_AND_RESTORE.md`](STUDIO_BACKUP_AND_RESTORE.md); the staging exercise in its §4 is still to be run).
 
 ## Concurrency
 
